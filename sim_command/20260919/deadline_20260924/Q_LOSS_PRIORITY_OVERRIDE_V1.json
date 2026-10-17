@@ -1,0 +1,43 @@
+{
+  "schema": "corrector_user_q_loss_priority_override_v1",
+  "status": "released",
+  "issued_at_utc": "2026-09-22T15:46:22.152064+00:00",
+  "authority": "User2026-09-22 cancels Random-multi and prioritizes complete Q loss ablation before selecting formal configuration",
+  "supersedes_scopes": [
+    "A Random_multi all H all branches",
+    "unstarted A legacy partial-Q E1 multi evaluations",
+    "new not-yet-entered B/C L11 Post/Velocity multi evaluations before loss selection"
+  ],
+  "cancel_Random_multi": true,
+  "Random_multi_planned_cancelled": 7500,
+  "Random_once_completed_preserved": true,
+  "A": {
+    "current_task": "A_D24_MULTI_PRIMARY_VALIDATION_V1",
+    "new_Random_multi_admissions": false,
+    "new_legacy_E1_episode_admissions": false,
+    "already_entered_episode": "finish naturally and preserve; if admission control is only per chunk, drain the minimum already handed-out bounded chunk and report",
+    "E6_completed": "preserve_no_rerun",
+    "after_drain": "close old chain and prioritize new full-Q fit/development/test; new detailed bounded task follows",
+    "CPU_preparation_now": true
+  },
+  "B": {
+    "existing_once": "finish current authorized recovery; retain historical evidence",
+    "multi_R": "unchanged_Q_free_may_continue",
+    "new_multi_Post_Velocity_admissions": false,
+    "already_entered_episode": "finish and preserve old configuration; do not hot swap",
+    "next": "prepare reuse of own collected data for selected loss; no recolllection or SFT"
+  },
+  "C": {
+    "existing_once": "completed_preserve",
+    "multi_R": "unchanged_Q_free_may_continue",
+    "new_multi_Post_Velocity_admissions": false,
+    "already_entered_episode": "finish and preserve old configuration; do not hot swap",
+    "next": "prepare reuse of own collected data for selected loss; no recollection or SFT"
+  },
+  "selection": "independent development outcome; no selecting loss or fit seed on revealed test results",
+  "no_new_permission_question": true,
+  "whole_wave_holders": "all_off_until_entire_formal_family_exit",
+  "preserve_all_original_failures_and_results": true,
+  "shared_data_weight_deletion": false,
+  "new_scientific_budget_from_this_override": 0
+}

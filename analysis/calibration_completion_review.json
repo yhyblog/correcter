@@ -1,0 +1,116 @@
+{
+  "status": "passed_bounded_completion_resource_scene_review",
+  "reviewed_utc": "2026-09-17T02:55:23.254345+00:00",
+  "scope": "Completion,resource ledger and sealed physical initial-scene identity metadata only. No success outcomes,proposal or trajectory payloads read; no model,simulator or test calls.",
+  "blockers": [],
+  "wave": {
+    "returncode": 0,
+    "wall_seconds": 615.9977179635316,
+    "wave_result_sha256": "db7feb35bee6988ccc6d1c05930ddb698b826f2d69bf243617ce1c1ccc4fb126",
+    "automatic_retry": false,
+    "attempts_preserved": true
+  },
+  "coverage": {
+    "workers": 32,
+    "actual_primary_slots": 100,
+    "unique_primary_slots": 100,
+    "registered_episode_ids_canonical_sha256": "d2b7ca3b17c322e28610735d871dc319e5e7f24439d2cb4c48c5d00ec705f44e",
+    "per_task_primary_slots": {
+      "disassemble-v3": 20,
+      "pick-place-wall-v3": 20,
+      "shelf-place-v3": 20,
+      "stick-pull-v3": 20,
+      "stick-push-v3": 20
+    },
+    "cut_sources": 96,
+    "common_sources": 4,
+    "bank_sources_match_branch_sources": true,
+    "method_repeat_pairs_per_cut_source": 10,
+    "actual_complete_collections": 100,
+    "opaque_worker_files_sha_checked": 164,
+    "worker_complete_seals_canonical_sha256": "760a0462f5921fb7953d7eb90955487a103b50735a0156335d1a35d1b3a48776"
+  },
+  "resources": {
+    "global_totals": {
+      "simulator_attempts": 46025,
+      "training_updates": 51200
+    },
+    "stage": "calibration",
+    "stage_simulator_attempts": 1156,
+    "stage_by_kind": {
+      "source_capture": 100,
+      "candidate_restore": 96,
+      "branch_including_restore": 960
+    },
+    "stage_optimizer_updates": 0,
+    "branch_attempts_by_method": {
+      "continue_native10": 192,
+      "velocity": 192,
+      "post": 192,
+      "direct": 192,
+      "alarm_replan10": 192
+    },
+    "technical_reserve_used": 0,
+    "initialization_replacements": 0,
+    "automatic_retries": 0,
+    "technical_failures_observed": 0,
+    "stage_cap": 1200,
+    "remaining_stage_cap": 44,
+    "old_ledger_rows": 96069,
+    "old_prefix_sha256": "8af52eeec7a34958d64205790010160cf04393f8db995c6b4707916c0f3dee2d",
+    "old_prefix_byte_preserved": true,
+    "new_unique_stage_identities": 1156,
+    "global_ledger_rows": 97225,
+    "ledger_sha256": "4f289c308a418803fcf291553823378ddefebf1714de1da19d9f0ea43274a7f5"
+  },
+  "physical_initial_scenes": {
+    "registry_path": "outputs/native10_training_20260916/scene_registry/entries.jsonl",
+    "registry_sha256": "313bd9bd1a9cd8e35919abf42609677b9e45b1058fe33f17abd2e9eabfaa0250",
+    "old_registry_rows": 700,
+    "old_prefix_bytes": 471628,
+    "old_prefix_sha256": "881f3f0b4e191175801c9ef76b22903af6e258e8a73ddf008bd82c44301d60f8",
+    "old_prefix_byte_preserved": true,
+    "new_accepted_calibration_rows": 100,
+    "new_unique_task_scene_fingerprints": 100,
+    "per_task_unique_initial_scenes": {
+      "shelf-place-v3": 20,
+      "stick-pull-v3": 20,
+      "pick-place-wall-v3": 20,
+      "disassemble-v3": 20,
+      "stick-push-v3": 20
+    },
+    "collision_with_prior_accepted_train_dev_same_task": 0,
+    "replacements": 0,
+    "duplicate_rejections": 0,
+    "sealed_identity_and_state_file_hashes_checked": 100,
+    "initial_state_file_bytes_checked": 623034,
+    "before_first_action_and_zero_control_step_metadata_all_passed": true,
+    "scene_manifest_canonical_sha256": "20be6411ff78271e79028842480935c0799da1a52fd790cc236533f6c7f14b33",
+    "evidence_limit": "Distinctness uses the registered metaworld physical fingerprint at frozen precision,linked to sealed initial states. No environment resets or independent numerical recomputation of fingerprints were performed."
+  },
+  "bindings": {
+    "config_sha256": "c04125ae474316783e7dd6ca74c799d5441299801f22cd0910889f98511d7382",
+    "freeze_sha256": "d181899e5ccf70177db5fee6267ec9f102f4aae6e437e42f7a0eb86dc9800d1e",
+    "ready_sha256": "5cec3558223d18ba9f2b160c478590b8d0ec9b161989f794e6dbcd7983f10138",
+    "protocol_sha256": "0fd2c62d311619915aae00a30c5bbe51cb49a50716ab0f92ca797f505da3a604",
+    "actual_launch_sha256": "3a906560b65fd1f6bd17a3ae303f18bf37bb0bcaee8d77a4ffa41d68a6f4b881",
+    "control_result_sha256": "ee6cc4f95984f5ede3765138863ddaca0f532eefcb318b198b7a3404c4d1155d",
+    "control_status_observed": "wave_complete_pending_full_audit"
+  },
+  "gpu_restoration": {
+    "saved_evidence_path": "outputs/native10_training_20260916/execution_control/calibration_v1/gpu_after_wave.json",
+    "sha256": "e5a4a1e2449e8170dd97e231fcd424164e829c1b3be3cf38f6dc78f0567c6d1d",
+    "all_eight_holders": true,
+    "live_gpu_inspection_performed": false
+  },
+  "technical_evidence_remaining_for_this_scope": [],
+  "not_authorized_or_reviewed": [
+    "calibration success statistics or global post/replan proposal",
+    "calibration selection seal",
+    "heldout initialization or execution"
+  ],
+  "full_trajectory_and_proposal_audit": "Executor-owned independent work; not repeated here. This PASS closes only the bounded resource/completion/scene scope.",
+  "selection_seal_created": false,
+  "heldout_started": false,
+  "new_model_simulator_optimizer_test_calls_by_review": 0
+}

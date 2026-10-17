@@ -1,0 +1,1 @@
+本机命令参数以保存的0.155.1 help和协议schema为准。官方依据：[App Server](https://learn.chatgpt.com/docs/app-server) 的 thread/read/status、thread/resume 与 turn/start；[非交互模式](https://learn.chatgpt.com/docs/non-interactive-mode#resume-a-non-interactive-session) 的固定session ID resume。文档能力不等于本机唤醒成功，必须有原会话ACK。

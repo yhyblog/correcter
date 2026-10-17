@@ -1,0 +1,494 @@
+{
+  "task_id": "standalone-ablation-20260918",
+  "task_document": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/STANDALONE_ABLATION_TASK_20260918.md",
+  "task_document_sha256": "363c50bedcb04d93a5904bf7ecf9873d691974e7e67d82f3a419af4c0065ff5e",
+  "standalone_ablation": {
+    "task_id": "standalone-ablation-20260918",
+    "inputs_hash": "bc4518d4107b9f841df1e01d4ca873f1e7b54beffcc336fe053168b2b69d4851",
+    "primary_ids_hash": "f05bbfeb92da78d8fb9242bd28b116cf6f5a4cff252b5ad0487506e0bd108afc",
+    "scientific_parameters": {
+      "source_horizon": 10,
+      "prefix_horizon": 10,
+      "suffix_horizon": 10,
+      "control_budget": 300,
+      "generated_horizon": 50,
+      "gate_threshold": 0.05,
+      "guidance": {
+        "alpha": 10.0,
+        "times": [
+          0.3,
+          0.2,
+          0.1
+        ],
+        "clip_derivative": "true clamp through same T",
+        "velocity": "v-alpha*tau*grad_u R(T(u))",
+        "direct": "v-alpha*grad_u R(T(u))",
+        "clean": "u=x_tau-tau*v; sampler Euler dt=-.1",
+        "no_step_backtracking": true
+      },
+      "matching": {
+        "xyz_rms": 0.05,
+        "gripper_rms": 0.1,
+        "xyz_linf": 0.15,
+        "gripper_linf": 0.4,
+        "boundary_clearance": 0.05,
+        "tolerance": 1e-06,
+        "zero_threshold": 1e-10,
+        "algorithm": "shared mask:1-abs(a0)>=.05; normalize each group direction to unit RMS; common radius=min(target, all direction feasible radii); bounds=min(group cap,1-abs(a0)); final float32 check",
+        "amplitude_can_expand_native": true,
+        "native_arms_separately_executed": false,
+        "post_metric": "environment grad times ((q99-q01)/2)^2, matching internal clean-action Euclidean gradient",
+        "random": "independent Gaussian three knots per action dimension, linear interpolation over ten steps",
+        "reverse": "negative of projected direct command delta",
+        "zero_group": "if any primary direction has zero norm, all matched arms use zero for that group; never drop source",
+        "shared_radius_dependencies": "Generate velocity/direct/post/reverse/random every source; reverse/random/native outputs are saved, not simulated."
+      },
+      "command_semantics": "raw native a0 + feasible matched delta; no replan-only clamp",
+      "cpu": {
+        "worker_threads": 4,
+        "critic_threads": 2
+      },
+      "seed_namespace": "corrector_native10_training_20260916_v1",
+      "critic_assets": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected"
+    },
+    "solo_rule": {
+      "radius": "own_symmetric_capacity",
+      "shrink": 0.999999,
+      "expand_native": true,
+      "other_direction_dependencies": false,
+      "each_method_regenerates_a0": true,
+      "random_fallback": false,
+      "q_acceptance_gate": false
+    },
+    "selected_model": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected",
+      "seal_sha256": "f40ff4f3356ee8f14d687348f9f9cc7addf1b1e93233b81645312973f7e02d6a",
+      "selection": {
+        "path": "A",
+        "step": 4000
+      },
+      "member_hashes": {
+        "0": "39bbbb9e2fa2cb14695c4ce31a9d91c806dfd690a888d2a9c44d9eb3bf0be129",
+        "1": "dab0dd69ad2bd4a132aede8c37ae4734cac2c12d7533d1c96cc058e1b52bad1d",
+        "2": "ce2a29d123d1c3eea25b90ba0999cacc793ad25346709a94d6b52cf92a8ffca2",
+        "3": "178c052783502646085fdb78be115e54d6d7ffc1225dac9af24d1cc64cafebf9"
+      },
+      "selected_training": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1",
+        "seal_sha256": "864c00cfa1cfcbcc8736a898ab22e5afa821f15afbe2b8dc687f7731f2eea83e",
+        "selected_seal_sha256": "f40ff4f3356ee8f14d687348f9f9cc7addf1b1e93233b81645312973f7e02d6a",
+        "selected_reload_audit_sha256": "b16b8183e6d6a69345375a266840afaffebf514873d62868f0327496bf795a92",
+        "model_review": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/final_trained_model_review.json",
+          "sha256": "51dc687f285e92c0b81032bad5694ebca7f649fba597e121943362871305a928"
+        }
+      }
+    },
+    "carry_in": {
+      "ledger": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_audits/heldout_v1/budget_snapshot.jsonl",
+        "sha256": "3f293430a26d7c0405c33b797788fdfd099f3b8d0a42aec7c37a89338a4ef552"
+      },
+      "legacy_ledger_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/budget/attempts.jsonl",
+      "simulator_attempts": 48183,
+      "optimizer_updates": 51200,
+      "global_simulator_limit": 50000,
+      "global_optimizer_limit": 51200
+    },
+    "budget": {
+      "hard_total": 1500,
+      "training_update_total": 0,
+      "count_failures": true,
+      "count_retries": true,
+      "stages": {
+        "standalone_preflight": {
+          "simulator_attempts": 60,
+          "training_updates": 0
+        },
+        "standalone_formal": {
+          "simulator_attempts": 1400,
+          "training_updates": 0
+        },
+        "standalone_technical_repair": {
+          "simulator_attempts": 40,
+          "training_updates": 0
+        }
+      }
+    },
+    "stage_release_scopes": {
+      "standalone_preflight": "standalone_preflight",
+      "standalone_formal": "standalone_formal",
+      "standalone_technical_repair": "standalone_technical_repair"
+    },
+    "execution_plans": {
+      "standalone_formal": {
+        "episode_ids": [
+          "disassemble-v3__2026111750",
+          "pick-place-wall-v3__2026111751",
+          "shelf-place-v3__2026111752",
+          "stick-pull-v3__2026111753",
+          "stick-push-v3__2026111754",
+          "disassemble-v3__2026111755",
+          "pick-place-wall-v3__2026111756",
+          "shelf-place-v3__2026111757",
+          "stick-pull-v3__2026111758",
+          "stick-push-v3__2026111759",
+          "disassemble-v3__2026111760",
+          "pick-place-wall-v3__2026111761",
+          "shelf-place-v3__2026111762",
+          "stick-pull-v3__2026111763",
+          "stick-push-v3__2026111764",
+          "disassemble-v3__2026111765",
+          "pick-place-wall-v3__2026111766",
+          "shelf-place-v3__2026111767",
+          "stick-pull-v3__2026111768",
+          "stick-push-v3__2026111769",
+          "disassemble-v3__2026111770",
+          "pick-place-wall-v3__2026111771",
+          "shelf-place-v3__2026111772",
+          "stick-pull-v3__2026111773",
+          "stick-push-v3__2026111774",
+          "disassemble-v3__2026111775",
+          "pick-place-wall-v3__2026111776",
+          "shelf-place-v3__2026111777",
+          "stick-pull-v3__2026111778",
+          "stick-push-v3__2026111779",
+          "disassemble-v3__2026111780",
+          "pick-place-wall-v3__2026111781",
+          "shelf-place-v3__2026111782",
+          "stick-pull-v3__2026111783",
+          "stick-push-v3__2026111784",
+          "disassemble-v3__2026111785",
+          "pick-place-wall-v3__2026111786",
+          "shelf-place-v3__2026111787",
+          "stick-pull-v3__2026111788",
+          "stick-push-v3__2026111789",
+          "disassemble-v3__2026111790",
+          "pick-place-wall-v3__2026111791",
+          "shelf-place-v3__2026111792",
+          "stick-pull-v3__2026111793",
+          "stick-push-v3__2026111794",
+          "disassemble-v3__2026111795",
+          "pick-place-wall-v3__2026111796",
+          "shelf-place-v3__2026111797",
+          "stick-pull-v3__2026111798",
+          "stick-push-v3__2026111799",
+          "disassemble-v3__2026111850",
+          "pick-place-wall-v3__2026111851",
+          "shelf-place-v3__2026111852",
+          "stick-pull-v3__2026111853",
+          "stick-push-v3__2026111854",
+          "disassemble-v3__2026111855",
+          "pick-place-wall-v3__2026111856",
+          "shelf-place-v3__2026111857",
+          "stick-pull-v3__2026111858",
+          "stick-push-v3__2026111859",
+          "disassemble-v3__2026111860",
+          "pick-place-wall-v3__2026111861",
+          "shelf-place-v3__2026111862",
+          "stick-pull-v3__2026111863",
+          "stick-push-v3__2026111864",
+          "disassemble-v3__2026111865",
+          "pick-place-wall-v3__2026111866",
+          "shelf-place-v3__2026111867",
+          "stick-pull-v3__2026111868",
+          "stick-push-v3__2026111869",
+          "disassemble-v3__2026111870",
+          "pick-place-wall-v3__2026111871",
+          "shelf-place-v3__2026111872",
+          "stick-pull-v3__2026111873",
+          "stick-push-v3__2026111874",
+          "disassemble-v3__2026111875",
+          "pick-place-wall-v3__2026111876",
+          "shelf-place-v3__2026111877",
+          "stick-pull-v3__2026111878",
+          "stick-push-v3__2026111879",
+          "disassemble-v3__2026111880",
+          "pick-place-wall-v3__2026111881",
+          "shelf-place-v3__2026111882",
+          "stick-pull-v3__2026111883",
+          "stick-push-v3__2026111884",
+          "disassemble-v3__2026111885",
+          "pick-place-wall-v3__2026111886",
+          "shelf-place-v3__2026111887",
+          "stick-pull-v3__2026111888",
+          "stick-push-v3__2026111889",
+          "disassemble-v3__2026111890",
+          "pick-place-wall-v3__2026111891",
+          "shelf-place-v3__2026111892",
+          "stick-pull-v3__2026111893",
+          "stick-push-v3__2026111894",
+          "disassemble-v3__2026111895",
+          "pick-place-wall-v3__2026111896",
+          "shelf-place-v3__2026111897",
+          "stick-pull-v3__2026111898",
+          "stick-push-v3__2026111899"
+        ],
+        "methods": [
+          "solo_post",
+          "solo_direct",
+          "solo_velocity"
+        ],
+        "repeats": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "bank_mode": "solo",
+        "expected_attempts": 1274,
+        "workers": 32
+      },
+      "standalone_preflight": {
+        "episode_ids": [
+          "disassemble-v3__2026111750",
+          "pick-place-wall-v3__2026111751",
+          "shelf-place-v3__2026111752",
+          "stick-pull-v3__2026111753",
+          "stick-push-v3__2026111754"
+        ],
+        "methods": [
+          "solo_post",
+          "solo_direct",
+          "solo_velocity"
+        ],
+        "repeats": [
+          0
+        ],
+        "reference_methods": [
+          "continue_native10",
+          "alarm_replan10",
+          "velocity",
+          "direct",
+          "post"
+        ],
+        "ref_repeats": [
+          0
+        ],
+        "bank_mode": "paired_reference",
+        "expected_attempts": 50,
+        "workers": 5
+      }
+    },
+    "statistics": {
+      "seed": 2026091801,
+      "draws": 10000,
+      "task_order": [
+        "disassemble-v3",
+        "pick-place-wall-v3",
+        "shelf-place-v3",
+        "stick-pull-v3",
+        "stick-push-v3"
+      ],
+      "source_order": [
+        "disassemble-v3__2026111750",
+        "pick-place-wall-v3__2026111751",
+        "shelf-place-v3__2026111752",
+        "stick-pull-v3__2026111753",
+        "stick-push-v3__2026111754",
+        "disassemble-v3__2026111755",
+        "pick-place-wall-v3__2026111756",
+        "shelf-place-v3__2026111757",
+        "stick-pull-v3__2026111758",
+        "stick-push-v3__2026111759",
+        "disassemble-v3__2026111760",
+        "pick-place-wall-v3__2026111761",
+        "shelf-place-v3__2026111762",
+        "stick-pull-v3__2026111763",
+        "stick-push-v3__2026111764",
+        "disassemble-v3__2026111765",
+        "pick-place-wall-v3__2026111766",
+        "shelf-place-v3__2026111767",
+        "stick-pull-v3__2026111768",
+        "stick-push-v3__2026111769",
+        "disassemble-v3__2026111770",
+        "pick-place-wall-v3__2026111771",
+        "shelf-place-v3__2026111772",
+        "stick-pull-v3__2026111773",
+        "stick-push-v3__2026111774",
+        "disassemble-v3__2026111775",
+        "pick-place-wall-v3__2026111776",
+        "shelf-place-v3__2026111777",
+        "stick-pull-v3__2026111778",
+        "stick-push-v3__2026111779",
+        "disassemble-v3__2026111780",
+        "pick-place-wall-v3__2026111781",
+        "shelf-place-v3__2026111782",
+        "stick-pull-v3__2026111783",
+        "stick-push-v3__2026111784",
+        "disassemble-v3__2026111785",
+        "pick-place-wall-v3__2026111786",
+        "shelf-place-v3__2026111787",
+        "stick-pull-v3__2026111788",
+        "stick-push-v3__2026111789",
+        "disassemble-v3__2026111790",
+        "pick-place-wall-v3__2026111791",
+        "shelf-place-v3__2026111792",
+        "stick-pull-v3__2026111793",
+        "stick-push-v3__2026111794",
+        "disassemble-v3__2026111795",
+        "pick-place-wall-v3__2026111796",
+        "shelf-place-v3__2026111797",
+        "stick-pull-v3__2026111798",
+        "stick-push-v3__2026111799",
+        "disassemble-v3__2026111850",
+        "pick-place-wall-v3__2026111851",
+        "shelf-place-v3__2026111852",
+        "stick-pull-v3__2026111853",
+        "stick-push-v3__2026111854",
+        "disassemble-v3__2026111855",
+        "pick-place-wall-v3__2026111856",
+        "shelf-place-v3__2026111857",
+        "stick-pull-v3__2026111858",
+        "stick-push-v3__2026111859",
+        "disassemble-v3__2026111860",
+        "pick-place-wall-v3__2026111861",
+        "shelf-place-v3__2026111862",
+        "stick-pull-v3__2026111863",
+        "stick-push-v3__2026111864",
+        "disassemble-v3__2026111865",
+        "pick-place-wall-v3__2026111866",
+        "shelf-place-v3__2026111867",
+        "stick-pull-v3__2026111868",
+        "stick-push-v3__2026111869",
+        "disassemble-v3__2026111870",
+        "pick-place-wall-v3__2026111871",
+        "shelf-place-v3__2026111872",
+        "stick-pull-v3__2026111873",
+        "stick-push-v3__2026111874",
+        "disassemble-v3__2026111875",
+        "pick-place-wall-v3__2026111876",
+        "shelf-place-v3__2026111877",
+        "stick-pull-v3__2026111878",
+        "stick-push-v3__2026111879",
+        "disassemble-v3__2026111880",
+        "pick-place-wall-v3__2026111881",
+        "shelf-place-v3__2026111882",
+        "stick-pull-v3__2026111883",
+        "stick-push-v3__2026111884",
+        "disassemble-v3__2026111885",
+        "pick-place-wall-v3__2026111886",
+        "shelf-place-v3__2026111887",
+        "stick-pull-v3__2026111888",
+        "stick-push-v3__2026111889",
+        "disassemble-v3__2026111890",
+        "pick-place-wall-v3__2026111891",
+        "shelf-place-v3__2026111892",
+        "stick-pull-v3__2026111893",
+        "stick-push-v3__2026111894",
+        "disassemble-v3__2026111895",
+        "pick-place-wall-v3__2026111896",
+        "shelf-place-v3__2026111897",
+        "stick-pull-v3__2026111898",
+        "stick-push-v3__2026111899"
+      ],
+      "quantile_method": "linear",
+      "unit": "whole_source_within_task",
+      "primary_methods": [
+        "solo_post",
+        "solo_direct",
+        "solo_velocity"
+      ],
+      "confidence_quantiles": [
+        0.025,
+        0.975
+      ],
+      "primary_family_quantiles": [
+        0.008333333333333333,
+        0.9916666666666667
+      ],
+      "posthoc_selection": false
+    },
+    "output_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/standalone_ablation_20260918",
+    "model_training_allowed": false,
+    "pca_allowed": false,
+    "capture_allowed": false,
+    "replacements_allowed": false,
+    "old_files_read_only": true,
+    "formal_requires_passed_preflight": true,
+    "hold_idle": false,
+    "automatic_retry": false,
+    "old_config": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_protocols/heldout_v1/config.json",
+      "sha256": "d86dc14afddf81a37587ff020cd36cc07e85869bf315502dc1778a97bda8f795"
+    },
+    "old_freeze": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_protocols/heldout_v1/freeze.json",
+      "sha256": "a2db97fd0c76650e730b58836b0cd6059d25c76f42e5da4e2ce06611784d11b8"
+    },
+    "old_audit": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_audits/heldout_v1",
+      "seal_sha256": "d776f54ceb94879bc1945a6e5e02736d04ba9d7e4652e02e06280be3a85a833e"
+    },
+    "scene_snapshot": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_audits/heldout_v1/scene_registry_snapshot.jsonl",
+      "sha256": "ac233e096e1d0a35454f6f3efe6e72ae2652ee83ab94f3555f8bd29727cd53df"
+    }
+  },
+  "standalone_preparation_binding": {
+    "pending_inputs": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/standalone_ablation_20260918/pending/task_document_v1",
+      "seal_sha256": "5b55146a6fb9999c28a57c9c618aa99b29b7eed9576b2b38b2c8fa4eca6679b9"
+    },
+    "ready_contract": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/standalone_ablation_20260918/pending/task_document_v1/ready_contract.json",
+      "sha256": "026767932d361373c303e3d6c746c4d78544dc42e5d8973a5906e046dc4e4735"
+    },
+    "cpu_evidence": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/standalone_ablation_20260918/preparation/cpu_v5",
+      "seal_sha256": "0244e95c3c564678f407666f27f751ddb6c8b846d621745be475bfbdb286c18e"
+    },
+    "code_sha256": {
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/__init__.py": "05aed7640f5a4e9828cf8bd846cb07f65d04878c5d61b7ed1b33da0a3ebb0596",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/audit.py": "8b20aaeb59631dc15e680783987e3845dc064b09231e61735c7314ce0852221c",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/candidates.py": "399f52e14f015d79cf529d3c16147ddc9fa2f8a96529549b2f428449657d0309",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/collection.py": "6dbbdc164b48e4ae53e5db4c79f8ea859f08ee048193ff17ee8c0247e4b3cb4d",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/diagnostics.py": "e5805ee2f95cdef5e5346093725673b1e5d23116fcaece00afb8b525d70728da",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/engine.py": "73b2a0758cf5e281ff5ec5288ae747abf6bd6c3181aa011e00a22307bd18adaf",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/prepare.py": "cfb9cd989da3b235a79ea10d0e6d9c9ac9d7e36ba292a519cbefe3de51ce8311",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/protocol.py": "c20302fbe365914e76178443568dd99d77cb1daaead0aa9cbac76265c8cf4818",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/reference_generation.py": "a87d634cad3553bf5643368912aa274a15f23479c3b9330f77457f5eac6ae939",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/run_gpu.sh": "a89a7228f2d43249dbf4f12301db6a08ebfce142e8f457bafe470c9126d95725",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/runner.py": "082d0ed21a769292c9b526662fb24ec497660ab914eb0a75e57658716350bd45",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/statistics.py": "7422b3b3e70c89db35bdc7a0a67069fd094e6a95ebed29fab632017b8c382c2a",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/storage.py": "5734c2d738b60d6c728ecc04c49ec4c6a7185b4632d6a142a8b45da0a29f7295",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/test_audit.py": "fa32a3294c94c091929dc689f16c928c3223032d87f26f189c6f7dd15dfc5566",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/test_candidates.py": "e8494d649e7e9ee99f583336127039b20f49c690c08768244c3242446ab7339e",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/test_collection.py": "d8dd26903680daeac25606bb51eabce7f822cf579d17797a5b1fd1b86fc3837f",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/test_diagnostics.py": "d6dcea78caab137858ad1754fa46259ff348b2adf5c2b42f914a7474ce000c36",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/test_engine.py": "e4883fc6d765e674e1965e38ceddbaf5628b89b67f738184e6eea7d65568a8cb",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/test_protocol_storage_prepare.py": "beaffb77617d2b22413e3742c3e8a1172a3b9c2323dfdb7191d33f4a1cdc2fcb",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/test_reference_generation.py": "6048c42103830bc14c23f958857fe379b29a0cd5e960a1f0caca82174a88d7a7",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/test_runner.py": "5ef6bb2aeadbb5b8250461da277af180a6af2dae18b6ea38621e9a93c1e641fb",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/test_statistics.py": "32cdcbc5b5db0563376bb6ae605c9a1d065fa842a4a0cbfd49089dd84137fd18"
+    },
+    "input_reviews": {
+      "method_review": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/STANDALONE_ABLATION_METHOD_REVIEW.md",
+        "sha256": "1931da3f463fe98260ed9c42a97c9b100415b28191384cbe1fda545e3caf1652"
+      },
+      "input_review": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/STANDALONE_ABLATION_INPUT_REVIEW.md",
+        "sha256": "05475f5d6c21945418b9cd33ae6bdde14bb4f1c2a20c84224f75530ee2b2d846"
+      }
+    }
+  },
+  "status": "approved",
+  "version": 3,
+  "created_utc": "2026-09-18T16:30:25.647063+00:00",
+  "approved_by": "analysis",
+  "released_scope": [
+    "standalone_preflight",
+    "standalone_formal"
+  ],
+  "analysis_decision": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/STANDALONE_ABLATION_RELEASE_V3_20260918.md",
+    "sha256": "06776c95d8deb0ef79849685a7994b500d94a374b7bd2e26ea4b34cb8eab44ae"
+  },
+  "supersedes": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/standalone_ready_history/ready_v2.json",
+    "sha256": "b023993688040473e3a8778dc2989c7d6c0041f4b3ee5fc2fca1639d83a2900c",
+    "previous_runtime_attempts": 0
+  },
+  "authorization_interpretation": "Fixed preflight 50; formal 1274 only after the same frozen preflight audit passed. Repair locked. Current exact READY supersedes delayed prior coordination messages; no additional engineering iteration requested. No retry or old-stage rerun."
+}

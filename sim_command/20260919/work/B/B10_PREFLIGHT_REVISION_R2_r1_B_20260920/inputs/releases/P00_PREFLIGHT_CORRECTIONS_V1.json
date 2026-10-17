@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "release_id": "P00_PREFLIGHT_CORRECTIONS_V1",
+  "campaign_id": "corrector-sim-20260919",
+  "issued_at_utc": "2026-09-19T16:09:02.305131+00:00",
+  "issuer": "analysis",
+  "kind": "cpu_preflight_corrections",
+  "task_ids": [
+    "A10_PREFLIGHT_REVISION_R2",
+    "B10_PREFLIGHT_REVISION_R2"
+  ],
+  "task_revision": 1,
+  "owner_hosts": {
+    "A10_PREFLIGHT_REVISION_R2": "trial-303224955-trialrun-303224955-worker-0",
+    "B10_PREFLIGHT_REVISION_R2": "trial-303225685-trialrun-303225685-worker-0"
+  },
+  "task_briefs": {
+    "A10_PREFLIGHT_REVISION_R2": {
+      "path": "tasks/A10_PREFLIGHT_REVISION_R2.md",
+      "sha256": "df45befebf30b27e151a4cb19c25dbc4b26c9fb0efeea78a3e32702cfa975936"
+    },
+    "B10_PREFLIGHT_REVISION_R2": {
+      "path": "tasks/B10_PREFLIGHT_REVISION_R2.md",
+      "sha256": "1ccfae618bd81257e6413df87939928c2f0080af76a3a172424a7a89fa6ab5ed"
+    }
+  },
+  "shared_supplement": {
+    "path": "tasks/STORAGE_DEPENDENCY_REVIEW_V1.md",
+    "sha256": "4ab644a826263d81ebbf597d7e20fdc4f0b417747fe8a01e9ac99ed95fbc282e"
+  },
+  "prerequisites": {
+    "A10_PREFLIGHT_REVISION_R2": "receipts/A/A10_RESULT.json",
+    "B10_PREFLIGHT_REVISION_R2": "receipts/B/B10_RESULT.json"
+  },
+  "limits": {
+    "model_gpu_inference_calls": 0,
+    "simulator_attempts": 0,
+    "environment_reset_calls": 0,
+    "optimizer_updates": 0
+  },
+  "allowed": [
+    "isolated_code_config_edits",
+    "targeted_cpu_static_synthetic_checks",
+    "read_only_GPU_identity_query",
+    "targeted_storage_dependency_review"
+  ],
+  "forbidden": [
+    "model_GPU_execution",
+    "simulator_execution_or_reset",
+    "training",
+    "deletion",
+    "historical_mutation"
+  ],
+  "completion": "new immutable proposal/code/command identity and brief CPU check/RESULT; no repeated full inventory"
+}

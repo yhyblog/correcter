@@ -1,0 +1,44 @@
+{
+  "job_id": "gaf_v1_member_9202",
+  "kind": "gaf_fit",
+  "proposal_only": true,
+  "seed": 9202,
+  "updates": 10000,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "batch_size": 256,
+  "evaluation_interval": 1000,
+  "timeout_seconds": 3600,
+  "retry_cap": 0,
+  "inputs": {
+    "train_view": null,
+    "development_view": null,
+    "common_data_manifest": null
+  },
+  "input_missing_reasons": {
+    "train_view": "Common real trajectory manifest and feature binding not published",
+    "development_view": "Same parent split and complete outcomes required",
+    "common_data_manifest": "To be frozen by analysis after A indexes actual data"
+  },
+  "limits": {
+    "simulator_attempts": 0,
+    "completed_rollouts": 0,
+    "vla_sampling_calls": 0,
+    "model_gpu_inference_calls": 400,
+    "optimizer_updates": 10000,
+    "optimizer_attempts": 10000,
+    "model_initializations": 1,
+    "training_forward_calls": 10000,
+    "backward_calls": 10000,
+    "array_loads": 2,
+    "checkpoint_loads": 0,
+    "feature_transform_calls": 0
+  },
+  "maximum_development_rows": 10240,
+  "maximum_training_rows": 1000000,
+  "device": "cuda:0",
+  "selection": "Development MSE; three independently seeded critics form one ensemble, not three full-system seeds",
+  "termination_grace_seconds": 20,
+  "authorization": "proposal_only_requires_once_frozen_stage",
+  "legacy_release_reusable": false
+}

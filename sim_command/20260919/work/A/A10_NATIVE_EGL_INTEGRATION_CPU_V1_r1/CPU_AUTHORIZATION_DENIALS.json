@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "command": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1/commands/check_authorization_cpu.sh",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P00_NATIVE_EGL_INTEGRATION_CPU_V1.json"
+      ],
+      "returncode": 2,
+      "stdout": "{\"status\": \"denied\", \"error_type\": \"ContractError\", \"error\": \"Formal compute is not released by current CONTROL\", \"CPU_only\": true, \"NVML_queried\": false, \"wave_started\": false}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1/commands/check_authorization_cpu.sh",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1/proposal/RELEASE_TEMPLATE.json"
+      ],
+      "returncode": 2,
+      "stdout": "{\"status\": \"denied\", \"error_type\": \"ContractError\", \"error\": \"Only a new release in this campaign can authorize work\", \"CPU_only\": true, \"NVML_queried\": false, \"wave_started\": false}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1/commands/check_authorization_cpu.sh",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1.json"
+      ],
+      "returncode": 2,
+      "stdout": "{\"status\": \"denied\", \"error_type\": \"ContractError\", \"error\": \"Formal compute is not released by current CONTROL\", \"CPU_only\": true, \"NVML_queried\": false, \"wave_started\": false}\n",
+      "stderr": ""
+    }
+  ],
+  "real_launcher_invocations": 0,
+  "NVML_calls": 0,
+  "GPU_CUDA_EGL_dlopen_calls": 0,
+  "large_model_hash_passes": 0,
+  "reason": "Each denied before frozen input hash loop",
+  "at_utc": "2026-09-19T19:22:21.037806+00:00"
+}

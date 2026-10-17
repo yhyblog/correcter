@@ -1,0 +1,65 @@
+{
+  "schema": "corrector_policy_specific_auxiliary_training_authorization_v1",
+  "status": "released",
+  "issued_at_utc": "2026-09-22T11:12:18.073636+00:00",
+  "authority": "user2026-09-22: SmolVLA/X-VLA辅助网络使用各自专门采集数据重新训练",
+  "protocol": {
+    "path": "deadline_20260924/PER_BASE_AUXILIARY_RETRAINING_V1.md",
+    "sha256": "c265d49f8b9e3cd223cc684549dd5b556a2ec1497bfbf0c2f910b5d922d816e9"
+  },
+  "scientific_priority": "own_method_adaptation_before_external_reproduction",
+  "no_second_approval": true,
+  "new_SFT_updates": 0,
+  "per_base": {
+    "MT50_tasks": 50,
+    "train_parents": 200,
+    "dev_parents": 50,
+    "collection_attempts_max": 2000,
+    "test_episodes_per_arm": 500,
+    "test_arms": [
+      "R",
+      "Post",
+      "Velocity"
+    ],
+    "new_test_first_entries": 1500,
+    "total_attempt_cap": 4000,
+    "small_network_optimizer_update_cap": 32000,
+    "fixed_cut_train": [
+      5,
+      15,
+      35,
+      55
+    ],
+    "test_baseline_reruns": 0
+  },
+  "nodes": {
+    "B": {
+      "task_id": "B_D24_SMOL_AUX_RETRAIN_V1",
+      "base": "SmolVLA",
+      "CPU_preparation_now": true,
+      "formal_start_after_own_task_family_exit": "B_D24_POST_TRIGGER_MODES_V1",
+      "previous_cumulative_attempt_cap": 16000,
+      "cumulative_attempt_cap": 20000,
+      "stage_attempt_cap": 4000,
+      "new_small_updates_cap": 32000,
+      "other_node_dependency": null
+    },
+    "C": {
+      "task_id": "C_D24_XVLA_AUX_RETRAIN_V1",
+      "base": "X-VLA",
+      "CPU_preparation_now": true,
+      "formal_start_after_own_task_family_exit": "C_D24_R_TRIGGER_MODES_V1",
+      "previous_cumulative_attempt_cap": 7900,
+      "cumulative_attempt_cap": 11900,
+      "stage_attempt_cap": 4000,
+      "new_small_updates_cap": 32000,
+      "other_node_dependency": null
+    }
+  },
+  "science_admissions_stop_utc": "2026-09-23T12:00:00Z",
+  "tables_due_utc": "2026-09-23T15:00:00Z",
+  "whole_wave_holders": "all_off_until_entire_process_family_exit",
+  "does_not_interrupt_current_waves": true,
+  "restoring475collection": false,
+  "shared_artifact_deletion": false
+}

@@ -1,0 +1,2661 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "revision": 126,
+  "owner": "analysis",
+  "tasks": [
+    {
+      "id": "A00",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [],
+      "brief": "tasks/A00.md",
+      "release": null,
+      "acknowledgement": "receipts/A/A00_ACK.json",
+      "accepted_at_utc": "2026-09-19T15:11:05.205789+00:00",
+      "result": "receipts/A/A00_RESULT.json"
+    },
+    {
+      "id": "B00",
+      "owner": "B",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [],
+      "brief": "tasks/B00.md",
+      "release": null,
+      "acknowledgement": "receipts/B/B00_ACK.json",
+      "accepted_at_utc": "2026-09-19T15:11:05.205789+00:00",
+      "result": "receipts/B/B00_RESULT.json"
+    },
+    {
+      "id": "P00",
+      "owner": "analysis",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [],
+      "brief": "MASTER_PLAN.md",
+      "release": "releases/P00_PREP_V1.json",
+      "artifact": "contracts/P00_PREPARATION_CONTRACT_V1.md"
+    },
+    {
+      "id": "A10",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "P00",
+        "A00"
+      ],
+      "brief": "tasks/A10_CORE_PREPARATION.md",
+      "release": "releases/P00_PREP_V1.json",
+      "dependency_receipt_suffices": true,
+      "prerequisites_verified_at_utc": "2026-09-19T15:11:05.205789+00:00",
+      "acknowledgement": "receipts/A/A10_ACK.json",
+      "published_interface": "manifests/PUBLIC_INTERFACE_V1.json",
+      "result": "receipts/A/A10_RESULT.json",
+      "acceptance": "manifests/P10_PREPARATION_ACCEPTANCE_V1.json"
+    },
+    {
+      "id": "B10",
+      "owner": "B",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "P00",
+        "B00"
+      ],
+      "brief": "tasks/B10_BASELINES_PREPARATION.md",
+      "release": "releases/P00_PREP_V1.json",
+      "dependency_receipt_suffices": true,
+      "prerequisites_verified_at_utc": "2026-09-19T15:11:05.205789+00:00",
+      "acknowledgement": "receipts/B/B10_ACK.json",
+      "interface_handoff": "tasks/B10_INTERFACE_V1_HANDOFF.md",
+      "interface_feedback": "receipts/B/A10_INTERFACE_FEEDBACK.md",
+      "result": "receipts/B/B10_RESULT.json",
+      "acceptance": "manifests/P10_PREPARATION_ACCEPTANCE_V1.json"
+    },
+    {
+      "id": "P10",
+      "owner": "analysis",
+      "status": "in_progress",
+      "revision": 1,
+      "dependencies": [
+        "A10",
+        "B10"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null,
+      "review": "contracts/P10_LIMITED_PREFLIGHT_REVIEW_V1.md",
+      "active_limited_preflight": "A11_COMMON_POOL_BATCH3_V1",
+      "last_preflight_result": "receipts/A/A10_CAUSAL_C10_PREFLIGHT_V2_RESULT.json",
+      "next_preparation_task": null,
+      "parallel_B_preparation_task": "B11_COMMON_POOL_VIEWS_CPU_V1",
+      "first_parent_engineering_accepted": true,
+      "current_scope_disposition": "historical_plan_superseded_by_D24_no_new_scientific_admission",
+      "status_field_is_historical": true
+    },
+    {
+      "id": "A11",
+      "owner": "A",
+      "status": "deferred_for_deadline",
+      "revision": 1,
+      "dependencies": [
+        "A_QUEUE_BOOTSTRAP_V1"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null,
+      "preparation_task": "A11_BATCH3_PREP_CPU_V1",
+      "collection_authorized": false,
+      "first_parent_task": "A11_COMMON_POOL_FIRST_PARENT_V4",
+      "first_parent_collection_authorized": false,
+      "scope": "25processed;23strict full4+1partial+1normal-only;475A pending with first8 independent compute release gate",
+      "accepted_parents": 23,
+      "parent_index": "manifests/COMMON_POOL_ACCEPTED_PARENTS_V4.json",
+      "active_batch_task": null,
+      "limited_batch_collection_authorized": false,
+      "processed_planned_sources": 25,
+      "remaining_unattempted_planned_slots": 475,
+      "source_dispositions": "manifests/COMMON_POOL_SOURCE_DISPOSITIONS_V3.json",
+      "queue_authorization": "persistent_queue/AUTHORIZATION_V2.json",
+      "queue_pending_sources": 475,
+      "queue_pending_owner": "A",
+      "historical_dependencies": [
+        "P10"
+      ],
+      "dependency_note": "Current legacyBatch3 already separately released; migrated collection uses V2 machine gates, not unresolved old joint P10",
+      "next_wave_directive": "persistent_queue/QUEUE8_NEXT_WAVE_V1.json",
+      "accepted_partial_target_parents": 1,
+      "accepted_any_target_parents": 24,
+      "accepted_G0_parents": 24,
+      "partial_target_parent_index": "manifests/COMMON_POOL_PARTIAL_TARGET_PARENTS_V1.json",
+      "next_preparation_task": "A_QUEUE8_ADMISSION_PREP_V1",
+      "remaining475_collection_authorized": false,
+      "deadline_reason": "User prioritizes September24 submission; use existing datasets, no500-source prerequisite",
+      "current_scope_disposition": "historical_plan_superseded_by_D24_no_new_scientific_admission",
+      "status_field_is_historical": true
+    },
+    {
+      "id": "B11",
+      "owner": "B",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "P10"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null,
+      "preparation_task": "B11_COMMON_POOL_VIEWS_CPU_V1",
+      "collection_authorized": false,
+      "current_scope_disposition": "historical_plan_superseded_by_D24_no_new_scientific_admission",
+      "status_field_is_historical": true
+    },
+    {
+      "id": "A12",
+      "owner": "A",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "A11",
+        "A_MAIN_PIPELINE_PREP_V1"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null,
+      "scope": "own D5/G0/Q views and MT50 main-method adaptation",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md",
+      "current_scope_disposition": "historical_plan_superseded_by_D24_no_new_scientific_admission",
+      "status_field_is_historical": true
+    },
+    {
+      "id": "B12",
+      "owner": "B",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "A11",
+        "B11",
+        "B_INDEPENDENT_PIPELINE_PREP_V1"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null,
+      "scope": "VLA-Corrector/GAF same final training pool as A",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md",
+      "current_scope_disposition": "historical_plan_superseded_by_D24_no_new_scientific_admission",
+      "status_field_is_historical": true
+    },
+    {
+      "id": "B13",
+      "owner": "B",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "B_INDEPENDENT_PIPELINE_PREP_V1"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null,
+      "scope": "five-task E1/E6 training from qualified historical inputs",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md",
+      "current_scope_disposition": "historical_plan_superseded_by_D24_no_new_scientific_admission",
+      "status_field_is_historical": true
+    },
+    {
+      "id": "P20",
+      "owner": "analysis",
+      "status": "superseded",
+      "revision": 1,
+      "dependencies": [],
+      "brief": "tasks/P20_EVALUATION_CONTRACT.md",
+      "release": null,
+      "superseded_by": [
+        "P20_A",
+        "P20_B_EXTERNAL",
+        "P20_B_MECHANISM"
+      ],
+      "scope": "historical joint freeze replaced with independent stage freezes; do not wait for B to release A"
+    },
+    {
+      "id": "A20",
+      "owner": "A",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "P20_A"
+      ],
+      "brief": "tasks/P20_EVALUATION_CONTRACT.md",
+      "release": null,
+      "scope": "all16 E4/E9 main cells and embedded E5",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md",
+      "current_scope_disposition": "historical_plan_superseded_by_D24_no_new_scientific_admission",
+      "status_field_is_historical": true
+    },
+    {
+      "id": "B20",
+      "owner": "B",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "P20_B_EXTERNAL"
+      ],
+      "brief": "tasks/P20_EVALUATION_CONTRACT.md",
+      "release": null,
+      "scope": "E3 external methods and E5; no A20 execution prerequisite",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md",
+      "current_scope_disposition": "historical_plan_superseded_by_D24_no_new_scientific_admission",
+      "status_field_is_historical": true
+    },
+    {
+      "id": "B21",
+      "owner": "B",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "P20_B_MECHANISM"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null,
+      "scope": "E1/E6 evaluations and E5; no complete MT50 pool prerequisite",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md",
+      "current_scope_disposition": "historical_plan_superseded_by_D24_no_new_scientific_admission",
+      "status_field_is_historical": true
+    },
+    {
+      "id": "A30",
+      "owner": "A",
+      "status": "superseded",
+      "revision": 1,
+      "dependencies": [],
+      "brief": "MASTER_PLAN.md",
+      "release": null,
+      "superseded_by": [
+        "B30"
+      ],
+      "scope": "all future applicability workload assigned B"
+    },
+    {
+      "id": "B30",
+      "owner": "B",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "B_INDEPENDENT_PIPELINE_PREP_V1"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null,
+      "scope": "E8 per-backbone/environment independently frozen recipes; missing one does not block others",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md",
+      "current_scope_disposition": "historical_plan_superseded_by_D24_no_new_scientific_admission",
+      "status_field_is_historical": true
+    },
+    {
+      "id": "P90",
+      "owner": "analysis",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "A20",
+        "B20",
+        "B21",
+        "B30"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null,
+      "scope": "final paper aggregation only; never a runtime barrier",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md",
+      "current_scope_disposition": "historical_plan_superseded_by_D24_no_new_scientific_admission",
+      "status_field_is_historical": true
+    },
+    {
+      "id": "A10_PREFLIGHT_REVISION_R2",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10"
+      ],
+      "brief": "tasks/A10_PREFLIGHT_REVISION_R2.md",
+      "release": "releases/P00_PREFLIGHT_CORRECTIONS_V1.json",
+      "acknowledgement": "receipts/A/A10_PREFLIGHT_REVISION_R2_ACK.json",
+      "result": "receipts/A/A10_PREFLIGHT_REVISION_R2_RESULT.json",
+      "acceptance": "manifests/A10_PREFLIGHT_V4_ACCEPTANCE.json"
+    },
+    {
+      "id": "B10_PREFLIGHT_REVISION_R2",
+      "owner": "B",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "B10"
+      ],
+      "brief": "tasks/B10_PREFLIGHT_REVISION_R2.md",
+      "release": "releases/P00_PREFLIGHT_CORRECTIONS_V1.json",
+      "storage_followup": "tasks/B_STORAGE_CLEARANCE_V1.md",
+      "result": "receipts/B/B10_PREFLIGHT_REVISION_R2_RESULT.json",
+      "acknowledgement": "receipts/B/B10_PREFLIGHT_REVISION_R2_ACK.json",
+      "acceptance": "manifests/B_PREFLIGHT_REVISION_R2_CPU_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-20T09:05:29.938522+00:00",
+      "acceptance_scope": "CPU_only_no_runtime_release"
+    },
+    {
+      "id": "A10_PREFLIGHT_NATIVE_V1",
+      "owner": "A",
+      "status": "failed",
+      "revision": 1,
+      "dependencies": [
+        "A10_PREFLIGHT_REVISION_R2"
+      ],
+      "brief": "tasks/A10_PREFLIGHT_NATIVE_V1.md",
+      "release": "releases/P10_A_NATIVE_PREFLIGHT_V1.json",
+      "wave_id": "corrector-sim-20260919-A-native-preflight-wave01",
+      "run_id": "A10_PREFLIGHT_NATIVE_V1_r1_A_v4_wave01",
+      "shard_id": "A-native-diagnostic-shelf-place-2026091900",
+      "acknowledgement": "receipts/A/A10_PREFLIGHT_NATIVE_V1_ACK.json",
+      "failure_class": "technical_EGL_render",
+      "result": "receipts/A/A10_PREFLIGHT_NATIVE_V1_RESULT.json",
+      "release_closed": "releases/P10_A_NATIVE_PREFLIGHT_V1_CLOSED.json",
+      "attempt_consumed": true
+    },
+    {
+      "id": "A10_EGL_CPU_REPAIR_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_PREFLIGHT_NATIVE_V1"
+      ],
+      "dependency_outcome_required": "failed_technical_and_release_closed",
+      "brief": "tasks/A10_EGL_CPU_REPAIR_V1.md",
+      "release": "releases/P00_EGL_CPU_REPAIR_V1.json",
+      "acknowledgement": "receipts/A/A10_EGL_CPU_REPAIR_V1_ACK.json",
+      "result": "receipts/A/A10_EGL_CPU_REPAIR_V1_RESULT.json",
+      "acceptance": "manifests/EGL_CPU_REPAIR_V1_ACCEPTANCE.json"
+    },
+    {
+      "id": "A10_EGL_GRAPHICS_PROBE_V1",
+      "owner": "A",
+      "status": "failed",
+      "revision": 1,
+      "dependencies": [
+        "A10_EGL_CPU_REPAIR_V1"
+      ],
+      "brief": "tasks/A10_EGL_GRAPHICS_PROBE_V1.md",
+      "release": "releases/P10_A_EGL_GRAPHICS_PROBE_V1.json",
+      "wave_id": "corrector-sim-20260919-A-graphics-probe-wave02",
+      "run_id": "A10_EGL_GRAPHICS_PROBE_V1_r1_A_wave02",
+      "shard_id": "A-EGL-static64-device17198167-once",
+      "acknowledgement": "receipts/A/A10_EGL_GRAPHICS_PROBE_V1_ACK.json",
+      "failure_class": "technical_EGL_device_mapping",
+      "result": "receipts/A/A10_EGL_GRAPHICS_PROBE_V1_RESULT.json",
+      "release_closed": "releases/P10_A_EGL_GRAPHICS_PROBE_V1_CLOSED.json",
+      "attempt_consumed": true
+    },
+    {
+      "id": "A10_EGL_CUDA_MAP_CPU_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_EGL_GRAPHICS_PROBE_V1"
+      ],
+      "dependency_outcome_required": "failed_mapping_and_release_closed",
+      "brief": "tasks/A10_EGL_CUDA_MAP_CPU_V1.md",
+      "release": "releases/P00_EGL_CUDA_MAP_CPU_V1.json",
+      "acknowledgement": "receipts/A/A10_EGL_CUDA_MAP_CPU_V1_ACK.json",
+      "result": "receipts/A/A10_EGL_CUDA_MAP_CPU_V1_RESULT.json",
+      "acceptance": "manifests/EGL_CUDA_MAP_CPU_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-19T18:39:42.896731+00:00"
+    },
+    {
+      "id": "A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_EGL_CUDA_MAP_CPU_V1"
+      ],
+      "brief": "tasks/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1.md",
+      "release": "releases/P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1.json",
+      "wave_id": "corrector-sim-20260919-A-CUDA-map-graphics-wave03",
+      "run_id": "A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1_A_wave03",
+      "shard_id": "A-EGL-CUDA-map-static64-device17198167-once",
+      "acknowledgement": "receipts/A/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_ACK.json",
+      "result": "receipts/A/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_RESULT.json",
+      "release_closed": "releases/P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_CLOSED.json",
+      "attempt_consumed": true,
+      "acceptance": "manifests/A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_FINAL_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-19T18:53:36.642494+00:00"
+    },
+    {
+      "id": "A10_NATIVE_EGL_INTEGRATION_CPU_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1"
+      ],
+      "dependency_outcome_required": "success_accepted_and_release_closed",
+      "brief": "tasks/A10_NATIVE_EGL_INTEGRATION_CPU_V1.md",
+      "release": "releases/P00_NATIVE_EGL_INTEGRATION_CPU_V1.json",
+      "acknowledgement": "receipts/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1_ACK.json",
+      "result": "receipts/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1_RESULT.json",
+      "acceptance": "manifests/NATIVE_EGL_INTEGRATION_CPU_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-19T19:33:46.649379+00:00"
+    },
+    {
+      "id": "A10_PREFLIGHT_NATIVE_V2",
+      "revision": 1,
+      "owner": "A",
+      "status": "failed",
+      "release": "releases/P10_A_NATIVE_PREFLIGHT_V2.json",
+      "dependencies": [
+        "A10_NATIVE_EGL_INTEGRATION_CPU_V1"
+      ],
+      "brief": "tasks/A10_PREFLIGHT_NATIVE_V2.md",
+      "wave_id": "corrector-sim-20260919-A-native-V2-wave04",
+      "run_id": "A10_PREFLIGHT_NATIVE_V2_r1_A_wave04",
+      "shard_id": "A-native-V2-shelf-place-once",
+      "acknowledgement": "receipts/A/A10_PREFLIGHT_NATIVE_V2_ACK.json",
+      "result": "receipts/A/A10_PREFLIGHT_NATIVE_V2_RESULT.json",
+      "failure_class": "technical_Torch_UUID_representation_contract",
+      "acceptance": "manifests/A_NATIVE_PREFLIGHT_V2_FINAL_ACCEPTANCE.json",
+      "release_closed": "releases/P10_A_NATIVE_PREFLIGHT_V2_CLOSED.json",
+      "attempt_consumed": true,
+      "diagnostic_attempts_entered": 0,
+      "accepted_at_utc": "2026-09-19T19:48:55.756697+00:00"
+    },
+    {
+      "id": "A10_TORCH_UUID_ABI_CPU_REPAIR_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_PREFLIGHT_NATIVE_V2"
+      ],
+      "dependency_outcome_required": "technical_failure_accepted_and_release_closed",
+      "brief": "tasks/A10_TORCH_UUID_ABI_CPU_REPAIR_V1.md",
+      "release": "releases/P00_TORCH_UUID_ABI_CPU_REPAIR_V1.json",
+      "acknowledgement": "receipts/A/A10_TORCH_UUID_ABI_CPU_REPAIR_V1_ACK.json",
+      "result": "receipts/A/A10_TORCH_UUID_ABI_CPU_REPAIR_V1_RESULT.json",
+      "acceptance": "manifests/TORCH_UUID_ABI_CPU_REPAIR_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-19T20:12:12.019548+00:00"
+    },
+    {
+      "id": "A10_PREFLIGHT_NATIVE_V3",
+      "revision": 1,
+      "owner": "A",
+      "status": "complete",
+      "release": "releases/P10_A_NATIVE_PREFLIGHT_V3.json",
+      "dependencies": [
+        "A10_TORCH_UUID_ABI_CPU_REPAIR_V1"
+      ],
+      "brief": "tasks/A10_PREFLIGHT_NATIVE_V3.md",
+      "wave_id": "corrector-sim-20260919-A-native-V3-wave05",
+      "run_id": "A10_PREFLIGHT_NATIVE_V3_r1_A_wave05",
+      "shard_id": "A-native-V3-shelf-place-once",
+      "acknowledgement": "receipts/A/A10_PREFLIGHT_NATIVE_V3_ACK.json",
+      "result": "receipts/A/A10_PREFLIGHT_NATIVE_V3_RESULT.json",
+      "acceptance": "manifests/A_NATIVE_PREFLIGHT_V3_FINAL_ACCEPTANCE.json",
+      "release_closed": "releases/P10_A_NATIVE_PREFLIGHT_V3_CLOSED.json",
+      "attempt_consumed": true,
+      "accepted_at_utc": "2026-09-19T20:33:57.487934+00:00"
+    },
+    {
+      "id": "A10_PV_OFFLINE_PREFLIGHT_CPU_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_PREFLIGHT_NATIVE_V3"
+      ],
+      "dependency_outcome_required": "finite_native_success_accepted_and_release_closed",
+      "brief": "tasks/A10_PV_OFFLINE_PREFLIGHT_CPU_V1.md",
+      "release": "releases/P00_PV_OFFLINE_PREFLIGHT_CPU_V1.json",
+      "acknowledgement": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1_ACK.json",
+      "result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1_RESULT.json",
+      "acceptance": "manifests/PV_OFFLINE_PREFLIGHT_CPU_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-19T21:16:20.283242+00:00"
+    },
+    {
+      "id": "A10_PV_OFFLINE_PREFLIGHT_V1",
+      "owner": "A",
+      "revision": 1,
+      "status": "failed",
+      "release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V1.json",
+      "dependencies": [
+        "A10_PV_OFFLINE_PREFLIGHT_CPU_V1"
+      ],
+      "brief": "tasks/A10_PV_OFFLINE_PREFLIGHT_V1.md",
+      "wave_id": "corrector-sim-20260919-A-PV-offline-wave06",
+      "run_id": "A10_PV_OFFLINE_PREFLIGHT_V1_r1_A_wave06",
+      "shard_id": "A-PV-offline-shelf-place-step0-cached-once",
+      "acknowledgement": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V1_ACK.json",
+      "result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V1_RESULT.json",
+      "acceptance": "manifests/A_PV_OFFLINE_PREFLIGHT_V1_FAILURE_ACCEPTANCE.json",
+      "closed_release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V1_CLOSED.json",
+      "command_opportunity_consumed": true,
+      "claim_consumed": false,
+      "compute_attempts": 0,
+      "accepted_at_utc": "2026-09-19T21:30:21.125418+00:00"
+    },
+    {
+      "id": "A10_PV_AUTH_METADATA_CPU_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_PV_OFFLINE_PREFLIGHT_V1"
+      ],
+      "dependency_outcome_required": "failure_evidence_accepted_and_release_closed_no_compute",
+      "brief": "tasks/A10_PV_AUTH_METADATA_CPU_V1.md",
+      "release": "releases/P00_PV_AUTH_METADATA_CPU_V1.json",
+      "expected_result": "receipts/A/A10_PV_AUTH_METADATA_CPU_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A10_PV_AUTH_METADATA_CPU_V1_ACK.json",
+      "result": "receipts/A/A10_PV_AUTH_METADATA_CPU_V1_RESULT.json",
+      "acceptance": "manifests/PV_AUTH_METADATA_CPU_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-19T21:50:48.118837+00:00"
+    },
+    {
+      "id": "A10_PV_OFFLINE_PREFLIGHT_V2",
+      "owner": "A",
+      "revision": 1,
+      "status": "failed",
+      "release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V2.json",
+      "dependencies": [
+        "A10_PV_AUTH_METADATA_CPU_V1"
+      ],
+      "dependency_outcome_required": "CPU_metadata_package_accepted_and_independent_compute_release_published",
+      "brief": "tasks/A10_PV_OFFLINE_PREFLIGHT_V2.md",
+      "wave_id": "corrector-sim-20260919-A-PV-offline-V2-wave07",
+      "run_id": "A10_PV_OFFLINE_PREFLIGHT_V2_r1_A_wave07",
+      "shard_id": "A-PV-offline-V2-shelf-place-step0-cached-once",
+      "acknowledgement": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V2_ACK.json",
+      "expected_result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V2_RESULT.json",
+      "result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V2_RESULT.json",
+      "acceptance": "manifests/A_PV_OFFLINE_PREFLIGHT_V2_FAILURE_ACCEPTANCE.json",
+      "closed_release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V2_CLOSED.json",
+      "claim_consumed": true,
+      "command_opportunity_consumed": true,
+      "offline_attempts": 0,
+      "accepted_at_utc": "2026-09-19T22:05:46.543488+00:00"
+    },
+    {
+      "id": "A10_PV_HANDOFF_CPU_REPAIR_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_PV_OFFLINE_PREFLIGHT_V2"
+      ],
+      "dependency_outcome_required": "handoff_failure_accepted_and_release_closed_occupancy_restored",
+      "brief": "tasks/A10_PV_HANDOFF_CPU_REPAIR_V1.md",
+      "release": "releases/P00_PV_HANDOFF_CPU_REPAIR_V1.json",
+      "expected_result": "receipts/A/A10_PV_HANDOFF_CPU_REPAIR_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A10_PV_HANDOFF_CPU_REPAIR_V1_ACK.json",
+      "result": "receipts/A/A10_PV_HANDOFF_CPU_REPAIR_V1_RESULT.json",
+      "acceptance": "manifests/PV_HANDOFF_CPU_REPAIR_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-19T22:34:29.684135+00:00"
+    },
+    {
+      "id": "A10_GUARD_HANDOFF_INSTALL_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_PV_HANDOFF_CPU_REPAIR_V1"
+      ],
+      "brief": "tasks/A10_GUARD_HANDOFF_INSTALL_V1.md",
+      "release": "releases/P00_A_GUARD_HANDOFF_INSTALL_V1.json",
+      "expected_result": "receipts/A/A10_GUARD_HANDOFF_INSTALL_V1_RESULT.json",
+      "scope": "one_guard_file_CPU_transition_no_compute_no_restart",
+      "acknowledgement": "receipts/A/A10_GUARD_HANDOFF_INSTALL_V1_ACK.json",
+      "result": "receipts/A/A10_GUARD_HANDOFF_INSTALL_V1_RESULT.json",
+      "acceptance": "manifests/GUARD_HANDOFF_INSTALL_V1_ACCEPTANCE.json",
+      "closed_release": "releases/P00_A_GUARD_HANDOFF_INSTALL_V1_CLOSED.json",
+      "accepted_at_utc": "2026-09-19T22:45:24.157387+00:00"
+    },
+    {
+      "id": "A10_PV_OFFLINE_PREFLIGHT_V3",
+      "owner": "A",
+      "revision": 1,
+      "status": "complete",
+      "release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V3.json",
+      "dependencies": [
+        "A10_PV_HANDOFF_CPU_REPAIR_V1"
+      ],
+      "dependency_outcome_required": "CPU_handoff_package_accepted_shared_patch_separately_installed_and_independent_compute_release_published",
+      "brief": "tasks/A10_PV_OFFLINE_PREFLIGHT_V3.md",
+      "wave_id": "corrector-sim-20260919-A-PV-offline-V3-wave08",
+      "run_id": "A10_PV_OFFLINE_PREFLIGHT_V3_r1_A_wave08",
+      "shard_id": "A-PV-offline-V3-shelf-place-step0-cached-once",
+      "acknowledgement": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V3_ACK.json",
+      "expected_result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V3_RESULT.json",
+      "result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V3_RESULT.json",
+      "acceptance": "manifests/A_PV_OFFLINE_PREFLIGHT_V3_FINAL_ACCEPTANCE.json",
+      "closed_release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V3_CLOSED.json",
+      "claim_consumed": true,
+      "offline_attempts": 1,
+      "accepted_at_utc": "2026-09-19T23:10:29.922093+00:00"
+    },
+    {
+      "id": "A10_CAUSAL_C10_CPU_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_PV_OFFLINE_PREFLIGHT_V3"
+      ],
+      "dependency_outcome_required": "cached_numeric_success_accepted_and_release_closed",
+      "brief": "tasks/A10_CAUSAL_C10_CPU_V1.md",
+      "release": "releases/P00_CAUSAL_C10_CPU_V1.json",
+      "expected_result": "receipts/A/A10_CAUSAL_C10_CPU_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A10_CAUSAL_C10_CPU_V1_ACK.json",
+      "result": "receipts/A/A10_CAUSAL_C10_CPU_V1_RESULT.json",
+      "acceptance": "manifests/CAUSAL_C10_CPU_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-19T23:57:32.184890+00:00"
+    },
+    {
+      "id": "A10_CAUSAL_C10_PREFLIGHT_V1",
+      "owner": "A",
+      "status": "failed",
+      "revision": 1,
+      "dependencies": [
+        "A10_CAUSAL_C10_CPU_V1"
+      ],
+      "brief": "tasks/A10_CAUSAL_C10_PREFLIGHT_V1.md",
+      "release": "releases/P10_A_CAUSAL_C10_PREFLIGHT_V1.json",
+      "expected_result": "receipts/A/A10_CAUSAL_C10_PREFLIGHT_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A10_CAUSAL_C10_PREFLIGHT_V1_ACK.json",
+      "result": "receipts/A/A10_CAUSAL_C10_PREFLIGHT_V1_RESULT.json",
+      "acceptance": "manifests/A_CAUSAL_C10_PREFLIGHT_V1_FAILURE_ACCEPTANCE.json",
+      "closed_release": "releases/P10_A_CAUSAL_C10_PREFLIGHT_V1_CLOSED.json",
+      "claim_consumed": true,
+      "command_opportunity_consumed": true,
+      "branch_attempts": 1,
+      "completed_C10_branches": [],
+      "accepted_at_utc": "2026-09-20T00:24:37.298423+00:00"
+    },
+    {
+      "id": "A10_CAUSAL_EVENT_CPU_REPAIR_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_CAUSAL_C10_PREFLIGHT_V1"
+      ],
+      "dependency_outcome_required": "technical_failure_accepted_closed_and_occupancy_restoration_evidence_accepted",
+      "brief": "tasks/A10_CAUSAL_EVENT_CPU_REPAIR_V1.md",
+      "release": "releases/P00_CAUSAL_EVENT_CPU_REPAIR_V1.json",
+      "expected_result": "receipts/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1_ACK.json",
+      "result": "receipts/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1_RESULT.json",
+      "acceptance": "manifests/CAUSAL_EVENT_CPU_REPAIR_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-20T00:51:32.052357+00:00"
+    },
+    {
+      "id": "A10_CAUSAL_C10_PREFLIGHT_V2",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_CAUSAL_EVENT_CPU_REPAIR_V1"
+      ],
+      "brief": "tasks/A10_CAUSAL_C10_PREFLIGHT_V2.md",
+      "release": "releases/P10_A_CAUSAL_C10_PREFLIGHT_V2.json",
+      "expected_result": "receipts/A/A10_CAUSAL_C10_PREFLIGHT_V2_RESULT.json",
+      "acknowledgement": "receipts/A/A10_CAUSAL_C10_PREFLIGHT_V2_ACK.json",
+      "result": "receipts/A/A10_CAUSAL_C10_PREFLIGHT_V2_RESULT.json",
+      "acceptance": "manifests/A_CAUSAL_C10_PREFLIGHT_V2_FINAL_ACCEPTANCE.json",
+      "closed_release": "releases/P10_A_CAUSAL_C10_PREFLIGHT_V2_CLOSED.json",
+      "claim_consumed": true,
+      "command_opportunity_consumed": true,
+      "actual_branch_attempts": 2,
+      "completed_C10_branches": [
+        "Post",
+        "Velocity"
+      ],
+      "accepted_at_utc": "2026-09-20T01:17:10.279014+00:00",
+      "acceptance_scope": "finite_forced_engineering_only_velocity_risk_open"
+    },
+    {
+      "id": "A10_PV_DIRECTION_CPU_ANALYSIS_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_CAUSAL_C10_PREFLIGHT_V2"
+      ],
+      "dependency_outcome_required": "finite_engineering_success_accepted_closed_and_velocity_risk_recorded",
+      "brief": "tasks/A10_PV_DIRECTION_CPU_ANALYSIS_V1.md",
+      "release": "releases/P00_PV_DIRECTION_CPU_ANALYSIS_V1.json",
+      "expected_result": "receipts/A/A10_PV_DIRECTION_CPU_ANALYSIS_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A10_PV_DIRECTION_CPU_ANALYSIS_V1_ACK.json",
+      "result": "receipts/A/A10_PV_DIRECTION_CPU_ANALYSIS_V1_RESULT.json",
+      "acceptance": "manifests/PV_DIRECTION_CPU_ANALYSIS_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-20T01:52:44.582113+00:00"
+    },
+    {
+      "id": "A11_COMMON_POOL_DESIGN_CPU_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_PV_DIRECTION_CPU_ANALYSIS_V1"
+      ],
+      "dependency_outcome_required": "saved_direction_analysis_accepted_no_new_diagnostic_required_now",
+      "brief": "tasks/A11_COMMON_POOL_DESIGN_CPU_V1.md",
+      "release": "releases/P00_COMMON_POOL_DESIGN_CPU_V1.json",
+      "expected_result": "receipts/A/A11_COMMON_POOL_DESIGN_CPU_V1_RESULT.json",
+      "result": "receipts/A/A11_COMMON_POOL_DESIGN_CPU_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A11_COMMON_POOL_DESIGN_CPU_V1_ACK.json",
+      "acceptance": "manifests/COMMON_POOL_DESIGN_CPU_V1_REVIEW.json",
+      "accepted_at_utc": "2026-09-20T08:27:50.624206+00:00",
+      "acceptance_scope": "CPU_design_draft_only_required_revisions_not_collection_ready"
+    },
+    {
+      "id": "A11_COMMON_POOL_REVISION_CPU_V2",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A11_COMMON_POOL_DESIGN_CPU_V1"
+      ],
+      "dependency_outcome_required": "CPU_draft_reviewed_and_mandatory_protocol_corrections_issued",
+      "brief": "tasks/A11_COMMON_POOL_REVISION_CPU_V2.md",
+      "release": "releases/P00_COMMON_POOL_REVISION_CPU_V2.json",
+      "expected_result": "receipts/A/A11_COMMON_POOL_REVISION_CPU_V2_RESULT.json",
+      "result": "receipts/A/A11_COMMON_POOL_REVISION_CPU_V2_RESULT.json",
+      "acknowledgement": "receipts/A/A11_COMMON_POOL_REVISION_CPU_V2_ACK.json",
+      "acceptance": "manifests/COMMON_POOL_REVISION_CPU_V2_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-20T09:05:29.938522+00:00",
+      "acceptance_scope": "CPU_only_no_runtime_release"
+    },
+    {
+      "id": "A11_COMMON_POOL_COLLECTOR_CPU_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A11_COMMON_POOL_REVISION_CPU_V2"
+      ],
+      "brief": "tasks/A11_COMMON_POOL_COLLECTOR_CPU_V1.md",
+      "release": "releases/P00_A_COMMON_POOL_COLLECTOR_CPU_V1.json",
+      "expected_result": "receipts/A/A11_COMMON_POOL_COLLECTOR_CPU_V1_RESULT.json",
+      "result": "receipts/A/A11_COMMON_POOL_COLLECTOR_CPU_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A11_COMMON_POOL_COLLECTOR_CPU_V1_ACK.json",
+      "acceptance": "manifests/COMMON_POOL_COLLECTOR_CPU_V1_REVIEW.json",
+      "accepted_at_utc": "2026-09-20T10:17:03.089823+00:00",
+      "acceptance_scope": "CPU_delivery_reviewed_contract_repairs_required_no_runtime_release"
+    },
+    {
+      "id": "B11_COMMON_POOL_VIEWS_CPU_V1",
+      "owner": "B",
+      "status": "ready",
+      "revision": 1,
+      "dependencies": [
+        "A11_COMMON_POOL_REVISION_CPU_V2",
+        "B10_PREFLIGHT_REVISION_R2"
+      ],
+      "brief": "tasks/B11_COMMON_POOL_VIEWS_CPU_V1.md",
+      "release": "releases/P00_B_COMMON_POOL_VIEWS_CPU_V1.json",
+      "expected_result": "receipts/B/B11_COMMON_POOL_VIEWS_CPU_V1_RESULT.json",
+      "real_data_handoff": "tasks/B11_FIRST_PARENT_REAL_DATA_HANDOFF_V1.md",
+      "batch1_real_data_handoff": "tasks/B11_BATCH1_REAL_DATA_HANDOFF_V1.md",
+      "batch2_real_data_handoff": "tasks/B11_BATCH2_REAL_DATA_HANDOFF_V1.md",
+      "current_scope_disposition": "historical_plan_superseded_by_D24_no_new_scientific_admission",
+      "status_field_is_historical": true
+    },
+    {
+      "id": "A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A11_COMMON_POOL_COLLECTOR_CPU_V1"
+      ],
+      "brief": "tasks/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1.md",
+      "release": "releases/P00_A_COLLECTOR_CONTRACT_CPU_REPAIR_V1.json",
+      "expected_result": "receipts/A/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1_RESULT.json",
+      "result": "receipts/A/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1_ACK.json",
+      "acceptance": "manifests/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1_REVIEW.json",
+      "accepted_at_utc": "2026-09-20T11:01:04.486306+00:00",
+      "acceptance_scope": "CPU_repairs_and_bounded_resource_design_accepted_shared_plan_and_intervention_flag_followup_required"
+    },
+    {
+      "id": "A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1"
+      ],
+      "brief": "tasks/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1.md",
+      "release": "releases/P00_A_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1.json",
+      "expected_result": "receipts/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1_RESULT.json",
+      "result": "receipts/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1_ACK.json",
+      "acceptance": "manifests/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-20T11:39:29.607200+00:00"
+    },
+    {
+      "id": "A11_COMMON_POOL_FIRST_PARENT_V3",
+      "owner": "A",
+      "release": "releases/P11_A_COMMON_POOL_FIRST_PARENT_V3.json",
+      "revision": 1,
+      "run_id": "PROPOSED_A11_shelf_train0000_parent_V3",
+      "shard_id": "PROPOSED_A11_shelf_train_cut5_parent0000_V3",
+      "status": "failed",
+      "wave_id": "PROPOSED_A11_first_parent_A_only_V3",
+      "brief": "tasks/A11_COMMON_POOL_FIRST_PARENT_V3.md",
+      "dependencies": [
+        "A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1"
+      ],
+      "expected_result": "receipts/A/A11_COMMON_POOL_FIRST_PARENT_V3_RESULT.json",
+      "scope": "first planned shelf parent only",
+      "result": "receipts/A/A11_COMMON_POOL_FIRST_PARENT_V3_RESULT.json",
+      "acknowledgement": "receipts/A/A11_COMMON_POOL_FIRST_PARENT_V3_ACK.json",
+      "acceptance": "manifests/A11_COMMON_POOL_FIRST_PARENT_V3_FAILURE_ACCEPTANCE.json",
+      "closed_release": "releases/P11_A_COMMON_POOL_FIRST_PARENT_V3_CLOSED.json",
+      "attempt_consumed": true,
+      "accepted_at_utc": "2026-09-20T12:03:23.635624+00:00",
+      "valid_training_samples": 0
+    },
+    {
+      "id": "A11_OBSERVATION_PHASE_CPU_REPAIR_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A11_COMMON_POOL_FIRST_PARENT_V3"
+      ],
+      "dependency_semantics": "accepted consumed failure diagnosis permits CPU repair",
+      "brief": "tasks/A11_OBSERVATION_PHASE_CPU_REPAIR_V1.md",
+      "release": "releases/P00_A_OBSERVATION_PHASE_CPU_REPAIR_V1.json",
+      "expected_result": "receipts/A/A11_OBSERVATION_PHASE_CPU_REPAIR_V1_RESULT.json",
+      "result": "receipts/A/A11_OBSERVATION_PHASE_CPU_REPAIR_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A11_OBSERVATION_PHASE_CPU_REPAIR_V1_ACK.json",
+      "acceptance": "manifests/A11_OBSERVATION_PHASE_CPU_REPAIR_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-20T12:24:05.373648+00:00"
+    },
+    {
+      "id": "A11_COMMON_POOL_FIRST_PARENT_V4",
+      "owner": "A",
+      "release": "releases/P11_A_COMMON_POOL_FIRST_PARENT_V4.json",
+      "revision": 1,
+      "run_id": "PROPOSED_A11_shelf_train0000_parent_V4",
+      "shard_id": "PROPOSED_A11_shelf_train_cut5_parent0000_V4",
+      "status": "complete",
+      "wave_id": "PROPOSED_A11_first_parent_A_only_V4",
+      "brief": "tasks/A11_COMMON_POOL_FIRST_PARENT_V4.md",
+      "dependencies": [
+        "A11_OBSERVATION_PHASE_CPU_REPAIR_V1"
+      ],
+      "expected_result": "receipts/A/A11_COMMON_POOL_FIRST_PARENT_V4_RESULT.json",
+      "scope": "same first planned parent only; independent V4 command and claim",
+      "result": "receipts/A/A11_COMMON_POOL_FIRST_PARENT_V4_RESULT.json",
+      "acknowledgement": "receipts/A/A11_COMMON_POOL_FIRST_PARENT_V4_ACK.json",
+      "acceptance": "manifests/A11_COMMON_POOL_FIRST_PARENT_V4_ACCEPTANCE.json",
+      "closed_release": "releases/P11_A_COMMON_POOL_FIRST_PARENT_V4_CLOSED.json",
+      "attempt_consumed": true,
+      "accepted_at_utc": "2026-09-20T14:00:48.070360+00:00",
+      "accepted_independent_parents": 1
+    },
+    {
+      "id": "A11_BATCH_SCALING_CPU_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A11_COMMON_POOL_FIRST_PARENT_V4"
+      ],
+      "brief": "tasks/A11_BATCH_SCALING_CPU_V1.md",
+      "release": "releases/P00_A_BATCH_SCALING_CPU_V1.json",
+      "expected_result": "receipts/A/A11_BATCH_SCALING_CPU_V1_RESULT.json",
+      "result": "receipts/A/A11_BATCH_SCALING_CPU_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A11_BATCH_SCALING_CPU_V1_ACK.json",
+      "acceptance": "manifests/A11_BATCH_SCALING_CPU_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-20T15:10:47.252184+00:00"
+    },
+    {
+      "dependencies": [
+        "A11_BATCH_SCALING_CPU_V1"
+      ],
+      "expected_result": "receipts/A/A11_COMMON_POOL_BATCH1_V1_RESULT.json",
+      "id": "A11_COMMON_POOL_BATCH1_V1",
+      "owner": "A",
+      "release": "releases/P11_A_COMMON_POOL_BATCH1_V1.json",
+      "revision": 1,
+      "run_id": "PROPOSED_A11_batch1_A_V1",
+      "shard_id": "PROPOSED_A11_batch1_A_shard_V1",
+      "status": "complete",
+      "wave_id": "PROPOSED_A11_batch1_A_wave_V1",
+      "brief": "tasks/A11_COMMON_POOL_BATCH1_V1.md",
+      "concurrency": 2,
+      "parent_count": 8,
+      "scope": "fixed8newtrain parent slots only",
+      "acknowledgement": "receipts/A/A11_COMMON_POOL_BATCH1_V1_ACK.json",
+      "acknowledgement_sha256": "df1c900f28781f67e586b83d87f2116e3dbcb36f74474b1780487884a09457cf",
+      "started_at_utc": "2026-09-20T15:19:33.555445+00:00",
+      "progress_review": "manifests/A11_BATCH1_ACK_RUNNING_V1/REVIEW.json",
+      "result": "receipts/A/A11_COMMON_POOL_BATCH1_V1_RESULT.json",
+      "acceptance": "manifests/A11_COMMON_POOL_BATCH1_V1_ACCEPTANCE.json",
+      "closure": "releases/P11_A_COMMON_POOL_BATCH1_V1_CLOSED.json",
+      "completed_at_utc": "2026-09-20T20:07:45.425665+00:00",
+      "raw_exit_code": 3,
+      "outcome_classification": "legal_pre_cut_success_exclusion_no_runtime_technical_failure",
+      "new_accepted_paired_parents": 7,
+      "normal_only_parent_count": 1,
+      "attempt_consumed": true
+    },
+    {
+      "id": "A11_MT50_CONTINUATION_CPU_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A11_COMMON_POOL_BATCH1_V1"
+      ],
+      "brief": "tasks/A11_MT50_CONTINUATION_CPU_V1.md",
+      "release": "releases/P00_A_MT50_CONTINUATION_CPU_V1.json",
+      "expected_result": "receipts/A/A11_MT50_CONTINUATION_CPU_V1_RESULT.json",
+      "scope": "CPU remaining45task initialization table and fixed8next_A_train0cut5 proposal; concurrency2; no runtime",
+      "acknowledgement": "receipts/A/A11_MT50_CONTINUATION_CPU_V1_ACK.json",
+      "result": "receipts/A/A11_MT50_CONTINUATION_CPU_V1_RESULT.json",
+      "acceptance": "manifests/A11_MT50_CONTINUATION_CPU_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-20T20:56:00.593331+00:00"
+    },
+    {
+      "dependencies": [
+        "A11_MT50_CONTINUATION_CPU_V1"
+      ],
+      "expected_result": "receipts/A/A11_COMMON_POOL_BATCH2_V1_RESULT.json",
+      "id": "A11_COMMON_POOL_BATCH2_V1",
+      "owner": "A",
+      "release": "releases/P11_A_COMMON_POOL_BATCH2_V1.json",
+      "revision": 1,
+      "run_id": "PROPOSED_A11_batch2_A_V1",
+      "shard_id": "PROPOSED_A11_batch2_A_shard_V1",
+      "status": "complete",
+      "wave_id": "PROPOSED_A11_batch2_A_wave_V1",
+      "brief": "tasks/A11_COMMON_POOL_BATCH2_V1.md",
+      "concurrency": 2,
+      "parent_count": 8,
+      "scope": "fixed8new_task_A_train0cut5 only",
+      "acknowledgement": "receipts/A/A11_COMMON_POOL_BATCH2_V1_ACK.json",
+      "acknowledgement_sha256": "1166de4721ee69d416f7dd139f0949395af4d3a21cc491ca631ef05d091c6e2b",
+      "started_at_utc": "2026-09-20T21:00:16.872577+00:00",
+      "progress_review": "manifests/A11_BATCH2_ACK_RUNNING_V1/REVIEW.json",
+      "result": "receipts/A/A11_COMMON_POOL_BATCH2_V1_RESULT.json",
+      "acceptance": "manifests/A11_COMMON_POOL_BATCH2_V1_ACCEPTANCE.json",
+      "closure": "releases/P11_A_COMMON_POOL_BATCH2_V1_CLOSED.json",
+      "completed_at_utc": "2026-09-21T01:38:15.100039+00:00",
+      "raw_exit_code": 0,
+      "new_accepted_paired_parents": 8,
+      "attempt_consumed": true
+    },
+    {
+      "id": "A11_BATCH3_PREP_CPU_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A11_COMMON_POOL_BATCH2_V1"
+      ],
+      "brief": "tasks/A11_BATCH3_PREP_CPU_V1.md",
+      "release": "releases/P00_A_BATCH3_PREP_CPU_V1.json",
+      "expected_result": "receipts/A/A11_BATCH3_PREP_CPU_V1_RESULT.json",
+      "scope": "CPU fixed8next sources/configs, existing50task table reuse; no runtime",
+      "acknowledgement": "receipts/A/A11_BATCH3_PREP_CPU_V1_ACK.json",
+      "result": "receipts/A/A11_BATCH3_PREP_CPU_V1_RESULT.json",
+      "acceptance": "manifests/A11_BATCH3_PREP_CPU_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-21T09:18:32.856990+00:00"
+    },
+    {
+      "dependencies": [
+        "A11_BATCH3_PREP_CPU_V1"
+      ],
+      "expected_result": "receipts/A/A11_COMMON_POOL_BATCH3_V1_RESULT.json",
+      "id": "A11_COMMON_POOL_BATCH3_V1",
+      "owner": "A",
+      "release": "releases/P11_A_COMMON_POOL_BATCH3_V1.json",
+      "revision": 1,
+      "run_id": "PROPOSED_A11_batch3_A_V1",
+      "shard_id": "PROPOSED_A11_batch3_A_shard_V1",
+      "status": "complete",
+      "wave_id": "PROPOSED_A11_batch3_A_wave_V1",
+      "brief": "tasks/A11_COMMON_POOL_BATCH3_V1.md",
+      "concurrency": 2,
+      "parent_count": 8,
+      "scope": "fixed8new_task_A_train0cut5_only",
+      "acknowledgement": "receipts/A/A11_COMMON_POOL_BATCH3_V1_ACK.json",
+      "acknowledged_at_utc": "2026-09-21T09:28:11.421592+00:00",
+      "command_started_at_utc": "2026-09-21T09:29:21.049730+00:00",
+      "command_entry": "results/A/A11_COMMON_POOL_BATCH3_V1/OUTER_COMMAND_ENTERED.json",
+      "progress_acceptance": "manifests/A11_BATCH3_COMMAND_START_r1/ACCEPTANCE.json",
+      "command_opportunity_consumed": true,
+      "command_invocations": 1,
+      "release_claims": 1,
+      "execution_stage": "complete_accepted_closed_target_specific_qualification",
+      "latest_progress": "manifests/A11_BATCH3_PROGRESS_20260921T114858Z/PROGRESS.json",
+      "latest_progress_at_utc": "2026-09-21T11:48:58.913901+00:00",
+      "result": "receipts/A/A11_COMMON_POOL_BATCH3_V1_RESULT.json",
+      "acceptance": "manifests/A11_COMMON_POOL_BATCH3_V1_ACCEPTANCE.json",
+      "closure": "releases/P11_A_COMMON_POOL_BATCH3_V1_CLOSED.json",
+      "accepted_at_utc": "2026-09-21T14:28:27.136705+00:00",
+      "accepted_full_target_parents": 7,
+      "accepted_partial_target_parents": 1,
+      "attempt_consumed": true,
+      "remaining_budget_reusable": false
+    },
+    {
+      "id": "A_QUEUE_BOOTSTRAP_V1",
+      "revision": 2,
+      "owner": "A",
+      "status": "ready",
+      "brief": "tasks/A_QUEUE_BOOTSTRAP_V1_r2.md",
+      "release": "persistent_queue/AUTHORIZATION_V2.json",
+      "dependencies": [],
+      "scope": "V2 independent roles and resource-admitted8GPU detached queue; no new training/evaluation GPU",
+      "activation": "per_queue_machine_gates_no_extra_manual_batch_approval",
+      "expected_result": "receipts/A/A_QUEUE_BOOTSTRAP_V1_r2_RESULT.json",
+      "expected_acknowledgement": "receipts/A/A_QUEUE_BOOTSTRAP_V1_r2_ACK.json",
+      "next_wave_directive": "persistent_queue/QUEUE8_NEXT_WAVE_V1.json",
+      "deadline_override": "Reuse CPU adapter as available; no generic queue migration or independent handshake verification before D24 science. No new scope or release.",
+      "occupancy_adapter_receipt": "receipts/A/A_QUEUE_BOOTSTRAP_V1_r2_OCCUPANCY_OVERRIDE_V1_RESULT.json",
+      "occupancy_adapter_analysis": "deadline_20260924/OCCUPANCY_ADAPTER_REVIEW.json",
+      "occupancy_adapter_delivery": "CPU_only_accepted; no new GPU deployment proven",
+      "generic_collection_deployment": "deferred_disabled"
+    },
+    {
+      "id": "B_QUEUE_JOIN_V1",
+      "revision": 2,
+      "owner": "B",
+      "status": "ready",
+      "brief": "tasks/B_QUEUE_JOIN_V1_r2.md",
+      "release": "persistent_queue/AUTHORIZATION_V2.json",
+      "dependencies": [],
+      "scope": "V2 independent roles and resource-admitted8GPU detached queue; no new training/evaluation GPU",
+      "activation": "per_queue_machine_gates_no_extra_manual_batch_approval",
+      "expected_result": "receipts/B/B_QUEUE_JOIN_V1_r2_RESULT.json",
+      "expected_acknowledgement": "receipts/B/B_QUEUE_JOIN_V1_r2_ACK.json",
+      "deadline_override": "Reusable implementation only; cannot block first scientific job. Full collector migration deferred."
+    },
+    {
+      "id": "A_MAIN_PIPELINE_PREP_V1",
+      "owner": "A",
+      "revision": 1,
+      "status": "ready",
+      "dependencies": [],
+      "brief": "tasks/A_MAIN_PIPELINE_PREP_V1.md",
+      "release": "persistent_queue/AUTHORIZATION_V2.json",
+      "scope": "isolated_CPU_only_stage_commands_and_budget_preparation",
+      "expected_result": "receipts/A/A_MAIN_PIPELINE_PREP_V1_RESULT.json",
+      "current_scope_disposition": "historical_plan_superseded_by_D24_no_new_scientific_admission",
+      "status_field_is_historical": true
+    },
+    {
+      "id": "B_INDEPENDENT_PIPELINE_PREP_V1",
+      "owner": "B",
+      "revision": 1,
+      "status": "ready",
+      "dependencies": [],
+      "brief": "tasks/B_INDEPENDENT_PIPELINE_PREP_V1.md",
+      "release": "persistent_queue/AUTHORIZATION_V2.json",
+      "scope": "isolated_CPU_only_stage_commands_and_budget_preparation",
+      "expected_result": "receipts/B/B_INDEPENDENT_PIPELINE_PREP_V1_RESULT.json",
+      "current_scope_disposition": "historical_plan_superseded_by_D24_no_new_scientific_admission",
+      "status_field_is_historical": true
+    },
+    {
+      "id": "P20_A",
+      "owner": "analysis",
+      "revision": 1,
+      "status": "planned",
+      "dependencies": [
+        "A12"
+      ],
+      "brief": "tasks/P20_EVALUATION_CONTRACT.md",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md",
+      "release": null,
+      "scope": "main16 cells evaluation recipe and immutable shared evaluation identity",
+      "current_scope_disposition": "historical_plan_superseded_by_D24_no_new_scientific_admission",
+      "status_field_is_historical": true
+    },
+    {
+      "id": "P20_B_EXTERNAL",
+      "owner": "analysis",
+      "revision": 1,
+      "status": "planned",
+      "dependencies": [
+        "B12",
+        "P20_A"
+      ],
+      "brief": "tasks/P20_EVALUATION_CONTRACT.md",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md",
+      "release": null,
+      "scope": "E3 external comparison stage recipe",
+      "current_scope_disposition": "historical_plan_superseded_by_D24_no_new_scientific_admission",
+      "status_field_is_historical": true
+    },
+    {
+      "id": "P20_B_MECHANISM",
+      "owner": "analysis",
+      "revision": 1,
+      "status": "planned",
+      "dependencies": [
+        "B13"
+      ],
+      "brief": "tasks/P20_EVALUATION_CONTRACT.md",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md",
+      "release": null,
+      "scope": "independent E1/E6 evaluation recipe",
+      "current_scope_disposition": "historical_plan_superseded_by_D24_no_new_scientific_admission",
+      "status_field_is_historical": true
+    },
+    {
+      "id": "A_QUEUE8_ADMISSION_PREP_V1",
+      "owner": "A",
+      "revision": 1,
+      "status": "deferred",
+      "dependencies": [],
+      "brief": "tasks/A_QUEUE8_ADMISSION_PREP_V1.md",
+      "release": "releases/P00_A_QUEUE8_ADMISSION_PREP_V1.json",
+      "scope": "explicit8_real_parent_resource_review_and_ready_entry; no_new_formal_compute",
+      "related_implementation_task": "A_QUEUE_BOOTSTRAP_V1",
+      "expected_result": "receipts/A/A_QUEUE8_ADMISSION_PREP_V1_RESULT.json",
+      "deadline_override": "Historical resource estimates retained. No new collector runner, hardware snapshots or release; existing D24 eight-worker evaluation unaffected.",
+      "execution_stage": "delayed_dispatch_reconciled; collector_migration_deferred_under_D24",
+      "result": "receipts/A/A_QUEUE8_ADMISSION_PREP_V1_RESULT_r2.json",
+      "analysis_disposition": "deadline_20260924/DELAYED_QUEUE8_PREP_DISPOSITION.json",
+      "no_further_current_sprint_work": true,
+      "collector_ready": false,
+      "supported_max": null
+    },
+    {
+      "id": "A_LONG_TASK_WAKEUP_V1",
+      "owner": "A",
+      "revision": 1,
+      "status": "running",
+      "dependencies": [],
+      "brief": "tasks/A_LONG_TASK_WAKEUP_V1.md",
+      "release": "persistent_queue/LONG_TASK_EVENT_WAKEUP_V1.json",
+      "scope": "background_completion_event_and_fixed_original_session_wakeup; install_and_bounded_real_callback_validation; no_experimental_GPU",
+      "expected_result": "receipts/A/A_LONG_TASK_WAKEUP_V1_RESULT.json",
+      "does_not_wait_other_node": true,
+      "execution_stage": "DEPLOYED_CALLBACK_PENDING",
+      "result": "receipts/A/A_LONG_TASK_WAKEUP_V1_RESULT.json",
+      "implementation_deployed": true,
+      "offline_original_thread_resume_verified": false,
+      "actual_callback_ACK_verified": false,
+      "observer_pid_snapshot": 1362117,
+      "observer_snapshot_utc": "2026-09-21T17:44:53.020154+00:00",
+      "accepted_scope": "deployment receipt only; final callback readiness pending",
+      "next_action": "existing bounded callback after original writer lock release; no LLM polling or added attempts",
+      "science_dependency": false
+    },
+    {
+      "id": "B_LONG_TASK_WAKEUP_V1",
+      "owner": "B",
+      "revision": 1,
+      "status": "ready",
+      "dependencies": [],
+      "brief": "tasks/B_LONG_TASK_WAKEUP_V1.md",
+      "release": "persistent_queue/LONG_TASK_EVENT_WAKEUP_V1.json",
+      "scope": "background_completion_event_and_fixed_original_session_wakeup; install_and_bounded_real_callback_validation; no_experimental_GPU",
+      "expected_result": "receipts/B/B_LONG_TASK_WAKEUP_V1_RESULT.json",
+      "does_not_wait_other_node": true
+    },
+    {
+      "id": "A_D24_SPRINT_V1",
+      "owner": "A",
+      "revision": 1,
+      "status": "complete",
+      "release_id": "D24_SPRINT_V1",
+      "release": {
+        "path": "deadline_20260924/AUTHORIZATION_V1.json",
+        "sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80"
+      },
+      "scope": "execute independent deadline plan including listed compute; no per-job approval or strict consistency audit",
+      "task": "deadline_20260924/PLAN.md",
+      "execution_stage": "MAIN16_COMPLETE_GROUP_EXITED_HOLDERS_RESTORED",
+      "running_receipt": "receipts/A/A_D24_MAIN_ONCE_V1_RESULT_r3.json",
+      "completed_episode_snapshot": 8000,
+      "snapshot_at_utc": "2026-09-21T18:46:23.408676+00:00",
+      "scope_note": "A main matrix complete; overall paper/B experiments not complete. Auxiliary-holder policy deviation disclosed; no rerun.",
+      "baseline_analysis": "deadline_20260924/N_BASELINE_ANALYSIS.json",
+      "main_method_intervention_cap": 1,
+      "design_decision": "deadline_20260924/MAIN_ONCE_CONTINUATION.md",
+      "remaining_planned_main_episodes": 0,
+      "start_acceptance": "deadline_20260924/MAIN_ONCE_START_ACCEPTANCE.json",
+      "main_running_snapshot_utc": null,
+      "actual_alive_workers_snapshot": 0,
+      "actual_model_ready_snapshot": 0,
+      "completed_main_cells": 16,
+      "total_main_cells": 16,
+      "remaining_count_scope": "all originally assigned main cells complete",
+      "h10_analysis": "deadline_20260924/H10_MAIN_ANALYSIS.json",
+      "h_sweep_results": "deadline_20260924/H_SWEEP_RESULTS.md",
+      "result": "receipts/A/A_D24_MAIN_ONCE_V1_RESULT_r4.json",
+      "acceptance": "deadline_20260924/MAIN_FINAL_ACCEPTANCE.json",
+      "no_further_main_execution": true,
+      "final_snapshot_utc": "2026-09-21T18:46:23.408676+00:00"
+    },
+    {
+      "id": "B_D24_SPRINT_V1",
+      "owner": "B",
+      "revision": 1,
+      "status": "complete",
+      "release_id": "D24_SPRINT_V1",
+      "release": {
+        "path": "deadline_20260924/AUTHORIZATION_V1.json",
+        "sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80"
+      },
+      "scope": "execute independent deadline plan including listed compute; no per-job approval or strict consistency audit",
+      "task": "deadline_20260924/PLAN.md",
+      "execution_stage": "all_assigned_sprint_and_extension_results_complete",
+      "running_receipt": "receipts/B/B_D24_SPRINT_V1_RESULT.json",
+      "snapshot_at_utc": "2026-09-22T03:56:53.824907+00:00",
+      "snapshot_is_not_current_runtime": true,
+      "science_snapshot": "deadline_20260924/B_SCIENTIFIC_STATUS_AT_MAIN_COMPLETION.json",
+      "continuation_task": "B_D24_EXTENSION_REMAINDER_V1",
+      "new_E6_E3_owner": "A",
+      "E1_final_summary": "results/B/B_D24_SPRINT_V1/r1/D24_E1_RENDER_REPAIR_r3/E1_COMPLETE_SUMMARY.md",
+      "result": "receipts/B/B_D24_SPRINT_V1_RESULT.json",
+      "latest_acceptance": "deadline_20260924/B_EXTENSION_COMPLETE_ACCEPTANCE_20260922.json"
+    },
+    {
+      "id": "A_D24_MULTI_INTERVENTION_PILOT_V1",
+      "owner": "A",
+      "revision": 2,
+      "status": "complete",
+      "release_id": "A_D24_MULTI_INTERVENTION_PILOT_V1_R2",
+      "release": {
+        "path": "deadline_20260924/MULTI_INTERVENTION_AUTHORIZATION_V2.json",
+        "sha256": "564a805e097b3206a3f81f0a3f478b5fd4e4eecef87af00f361ecde00cde4c80"
+      },
+      "scope": "20oldinitialstates only, repeat0; once/multi R/Post, optionalVelocity; zero new initial states",
+      "priority": 0,
+      "task": "deadline_20260924/MULTI_INTERVENTION_PILOT_V2.md",
+      "execution_stage": "120complete_accepted_group_exited_holders_restored",
+      "planned_episodes": 120,
+      "approval_sufficient": true,
+      "primary_receipt": "receipts/A/A_D24_MULTI_INTERVENTION_PILOT_V1_RESULT_r4.json",
+      "primary_analysis": "deadline_20260924/PILOT_PRIMARY_ANALYSIS.json",
+      "primary_completed_episodes": 80,
+      "primary_technical_failures": 0,
+      "completed_episodes": 120,
+      "technical_failures": 0,
+      "result": "receipts/A/A_D24_MULTI_INTERVENTION_PILOT_V1_RESULT_r5.json",
+      "acceptance": "deadline_20260924/PILOT_FINAL_ANALYSIS.json",
+      "accepted_at_utc": "2026-09-21T16:49:16.134125+00:00",
+      "no_further_execution": true
+    },
+    {
+      "id": "A_D24_CORE_REMAINDER_V1",
+      "owner": "A",
+      "revision": 1,
+      "status": "complete",
+      "dependencies": [],
+      "brief": "tasks/A_D24_CORE_REMAINDER_V1.md",
+      "task": "tasks/A_D24_CORE_REMAINDER_V1.md",
+      "release_id": "D24_CONTINUATION_20260922_V1",
+      "release": {
+        "path": "deadline_20260924/CONTINUATION_AUTHORIZATION_20260922_V1.json",
+        "sha256": "3e6a0aab7abe79365192c953d45b4e13b44139ab26ffadb6f7c3f82547107d8b"
+      },
+      "scope": "Direct necessary adaptation and authorized scientific continuation; no new approval/strict audit; preserve in-flight jobs",
+      "does_not_wait_other_node": true,
+      "expected_result": "receipts/A/A_D24_CORE_REMAINDER_V1_RESULT.json",
+      "execution_stage": "E6_E3_VLA_Corrector_GAF_all_complete",
+      "no_duplicate_completed_work": true,
+      "ack": "receipts/A/A_D24_CORE_REMAINDER_V1_ACK.json",
+      "compute_start_observed": true,
+      "E6_completed_episodes": 200,
+      "E3_original_sources": 500,
+      "E3_supplement": {
+        "path": "deadline_20260924/E3_UNSTARTED_CONTINUATION_AUTHORIZATION_V1.json",
+        "sha256": "3a6c62f0a40b4aa5eb08dafa9cef65d15717cb7edcbe505bc951ab37c40f79ad"
+      },
+      "GAF_internal_holdout_decision": {
+        "path": "deadline_20260924/GAF_INTERNAL_HOLDOUT_20260922_V1.json",
+        "sha256": "00164634bff4149593e0110c1bed6491eb0f042f94d2a599157b73a4912c18ec"
+      },
+      "E6_analysis": "deadline_20260924/E6_COMPLETED_ANALYSIS_20260922.md",
+      "result": "receipts/A/A_D24_CORE_REMAINDER_V1_RESULT_r4.json",
+      "partial_acceptance": "deadline_20260924/A_CORE_R1_RECEIPT_ACCEPTANCE.json",
+      "E3_log_derived_accepted": 8,
+      "scientific_background_running_at_receipt": false,
+      "continuation_start_observed": true,
+      "running_receipt": null,
+      "actual_model_ready_snapshot": 8,
+      "start_acceptance": "deadline_20260924/E3_UNSTARTED_STABLE_ACCEPTANCE_V1.json",
+      "next_stage": null,
+      "LLM_wait_required": false,
+      "latest_completed_stage_receipt": "receipts/A/A_D24_E3_UNSTARTED_CONTINUATION_V1_RESULT_r2.json",
+      "E3_VLA_Corrector_terminal": 500,
+      "E3_VLA_Corrector_successes": 319,
+      "E3_VLA_Corrector_complete": true,
+      "E3_remaining_first_entries": 0,
+      "E3_stage_completion": "deadline_20260924/E3_UNSTARTED_CONTINUATION_COMPLETE.json",
+      "GAF_fit_updates": 30000,
+      "GAF_eval_terminal_snapshot": 500,
+      "GAF_eval_snapshot_at_utc": "2026-09-22T05:26:14.158534+00:00",
+      "GAF_eval_start_acceptance": "deadline_20260924/GAF_FIT_COMPLETE_EVAL_START_ACCEPTANCE.json",
+      "prior_E3_progress_snapshot": {
+        "E3_entered": 47,
+        "E3_RESULTs": 39,
+        "E3_unstarted": 453,
+        "E3_accepted_terminal_total": 47,
+        "E3_accepted_successes": 20,
+        "E3_new_completed_snapshot": 243,
+        "E3_total_terminal_snapshot": 290,
+        "snapshot_at_utc": "2026-09-22T04:55:20.125418+00:00"
+      },
+      "completion": "deadline_20260924/A_CORE_REMAINDER_COMPLETE_20260922.json",
+      "completed_at_utc": "2026-09-22T05:48:13.470401+00:00",
+      "E3_accepted_terminal_total": 500,
+      "E3_accepted_successes": 319,
+      "GAF_eval_terminal": 500,
+      "GAF_eval_successes": 315,
+      "GAF_final_receipt": "receipts/A/A_D24_GAF_INTERNAL_HOLDOUT_V1_RESULT_r3.json",
+      "GAF_acceptance": "deadline_20260924/GAF_COMPLETE_ACCEPTANCE_20260922.json",
+      "final_receipt_alignment": "deadline_20260924/A_CORE_R4_RECEIPT_ALIGNMENT_20260922.json",
+      "E3_exact_cost_records": 492,
+      "E3_missing_cost_records": 8
+    },
+    {
+      "id": "B_D24_EXTENSION_REMAINDER_V1",
+      "owner": "B",
+      "revision": 1,
+      "status": "complete",
+      "dependencies": [],
+      "brief": "tasks/B_D24_EXTENSION_REMAINDER_V1.md",
+      "task": "tasks/B_D24_EXTENSION_REMAINDER_V1.md",
+      "release_id": "D24_CONTINUATION_20260922_V1",
+      "release": {
+        "path": "deadline_20260924/CONTINUATION_AUTHORIZATION_20260922_V1.json",
+        "sha256": "3e6a0aab7abe79365192c953d45b4e13b44139ab26ffadb6f7c3f82547107d8b"
+      },
+      "scope": "Direct necessary adaptation and authorized scientific continuation; no new approval/strict audit; preserve in-flight jobs",
+      "does_not_wait_other_node": true,
+      "expected_result": "receipts/B/B_D24_EXTENSION_REMAINDER_V1_RESULT.json",
+      "execution_stage": "E1_and_all_assigned_extensions_complete",
+      "no_duplicate_completed_work": true,
+      "ack": "receipts/B/B_D24_EXTENSION_REMAINDER_V1_ACK.json",
+      "running_receipt": "receipts/B/B_D24_EXTENSION_REMAINDER_V1_RUNNING.json",
+      "snapshot_source": "receipts/B/B_D24_EXTENSION_REMAINDER_V1_REPORT.md",
+      "remaining_LIBERO_Post_adaptation": true,
+      "Smol_X_Velocity_owner": "C",
+      "new_Smol_X_Velocity_admissions_allowed": false,
+      "current_scope": "LIBERO_Post_and_ready_LIBERO_Velocity; keep alreadyadmitted jobs",
+      "MW_Post_complete": true,
+      "MW_Post_episode_count": 1000,
+      "priority": "P0_ours_first",
+      "priority_override": {
+        "path": "deadline_20260924/OURS_FIRST_PRIORITY_V1.json",
+        "sha256": "f45e4048ff1da43328e5ac9576fbc4be9716e8778393e4ead3b731060e220ce8"
+      },
+      "progress_snapshot": "deadline_20260924/PROGRESS_SNAPSHOT_20260922_0752.json",
+      "result": "receipts/B/B_D24_EXTENSION_REMAINDER_V1_RESULT.json",
+      "acceptance": "deadline_20260924/B_EXTENSION_COMPLETE_ACCEPTANCE_20260922.json"
+    },
+    {
+      "id": "C_D24_MW_VELOCITY_V1",
+      "owner": "C",
+      "revision": 1,
+      "status": "complete",
+      "dependencies": [],
+      "brief": "tasks/C_D24_MW_VELOCITY_V1.md",
+      "task": "tasks/C_D24_MW_VELOCITY_V1.md",
+      "release_id": "D24_C_MW_VELOCITY_V1",
+      "release": {
+        "path": "deadline_20260924/C_AUTHORIZATION_V1.json",
+        "sha256": "11dddb6797ce174a03c9161a68658531902418699fa6e1ee07b5f1872a26378e"
+      },
+      "execution_stage": "1000_valid_complete_group_exited_occupancy_restored",
+      "scope": "necessary native Smol/X Velocity bridge and fixed500each MT50 evaluation; no SFT/N/Post rerun",
+      "expected_result": "receipts/C/C_D24_MW_VELOCITY_V1_RESULT_r1.json",
+      "does_not_wait_other_node": true,
+      "first_local_identity_registration_required": true,
+      "second_analysis_approval_required": false,
+      "priority": "P0_ours_first",
+      "priority_override": {
+        "path": "deadline_20260924/OURS_FIRST_PRIORITY_V1.json",
+        "sha256": "f45e4048ff1da43328e5ac9576fbc4be9716e8778393e4ead3b731060e220ce8"
+      },
+      "ack": "receipts/C/C_D24_MW_VELOCITY_V1_ACK.json",
+      "compute_start_observed": true,
+      "result": "receipts/C/C_D24_MW_VELOCITY_V1_RESULT_r3.json",
+      "acceptance": "deadline_20260924/C_MW_VELOCITY_COMPLETE_ACCEPTANCE_20260922.json",
+      "completed_at_utc": "2026-09-22T07:27:25.403910+00:00"
+    },
+    {
+      "id": "A_D24_OURS_E5_REPORT_V1",
+      "owner": "A",
+      "revision": 1,
+      "status": "complete",
+      "brief": "tasks/A_D24_OURS_E5_REPORT_V1.md",
+      "task": "tasks/A_D24_OURS_E5_REPORT_V1.md",
+      "dependencies": [],
+      "authorization": {
+        "path": "deadline_20260924/OURS_FIRST_PRIORITY_V1.json",
+        "sha256": "f45e4048ff1da43328e5ac9576fbc4be9716e8778393e4ead3b731060e220ce8"
+      },
+      "scope": "CPU-only E5 own-method reporting; no new experiments",
+      "priority": "P0_ours_first",
+      "expected_result": "receipts/A/A_D24_OURS_E5_REPORT_V1_RESULT.json",
+      "result": "receipts/A/A_D24_OURS_E5_REPORT_V1_RESULT.json",
+      "acceptance": "deadline_20260924/E5_OURS_COMPLETE_ACCEPTANCE_20260922.json",
+      "completed_at_utc": "2026-09-22T06:22:01.130589+00:00"
+    },
+    {
+      "id": "A_D24_LIBERO_FULL_NATIVE_V1",
+      "owner": "A",
+      "revision": 1,
+      "status": "closed_incomplete",
+      "priority": "P0_ours_first",
+      "brief": "tasks/A_D24_LIBERO_FULL_NATIVE_V1.md",
+      "task": "tasks/A_D24_LIBERO_FULL_NATIVE_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/IDLE_NODE_CONTINUATION_AUTHORIZATION_V1.json",
+        "sha256": "f9e3f3693b5b035a2a5498818f0068569c65b582bc85b9a08062233eab1bba97"
+      },
+      "dependencies": [],
+      "does_not_wait_other_node": true,
+      "expected_result": "receipts/A/A_D24_LIBERO_FULL_NATIVE_V1_RESULT_r1.json",
+      "execution_stage": "SCIENTIFIC_GAP_G0_targets_all_zero",
+      "ack": "receipts/A/A_D24_LIBERO_FULL_NATIVE_V1_ACK.json",
+      "result": "receipts/A/A_D24_LIBERO_FULL_NATIVE_V1_RESULT_r13.json",
+      "actual_new_episodes": 40,
+      "disposition": "deadline_20260924/A_LIBERO_START_FAILURE_DISPOSITION_V1.json",
+      "acceptance": "deadline_20260924/A_LIBERO_FULL_NATIVE_SCIENTIFIC_GAP_ACCEPTANCE.json",
+      "valid_development": 30,
+      "Full_test_episodes": 0,
+      "small_updates": 0,
+      "no_further_admissions": true
+    },
+    {
+      "id": "C_D24_BASELINE_GAPS_E8_TABLES_V1",
+      "owner": "C",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_ours_first",
+      "brief": "tasks/C_D24_BASELINE_GAPS_E8_TABLES_V1.md",
+      "task": "tasks/C_D24_BASELINE_GAPS_E8_TABLES_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/IDLE_NODE_CONTINUATION_AUTHORIZATION_V1.json",
+        "sha256": "f9e3f3693b5b035a2a5498818f0068569c65b582bc85b9a08062233eab1bba97"
+      },
+      "dependencies": [],
+      "does_not_wait_other_node": true,
+      "expected_result": "receipts/C/C_D24_BASELINE_GAPS_E8_TABLES_V1_RESULT_r1.json",
+      "execution_stage": "five_N_gaps_recovered_current_E8_published",
+      "ack": "receipts/C/C_D24_BASELINE_GAPS_E8_TABLES_V1_ACK.json",
+      "running_receipt": "receipts/C/C_D24_BASELINE_GAPS_E8_TABLES_V1_RUNNING.json",
+      "result": "receipts/C/C_D24_BASELINE_GAPS_E8_TABLES_V1_RESULT_r1.json",
+      "remaining_unknown": 5,
+      "actual_new_attempts": 5,
+      "new_valid": 5,
+      "new_successes": 5
+    },
+    {
+      "id": "B_D24_R_H20_H30_V1",
+      "owner": "B",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_user_requested_R_H_supplement",
+      "brief": "tasks/B_D24_R_H20_H30_V1.md",
+      "task": "tasks/B_D24_R_H20_H30_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/R_H_SWEEP_AUTHORIZATION_V1.json",
+        "sha256": "c9233a9b2f92fe97cd3b03515f18dde7f2803bb46ee07123a32881ff90b4a71a"
+      },
+      "dependencies": [],
+      "does_not_wait_other_node": true,
+      "H": [
+        20,
+        30
+      ],
+      "planned_episodes": 1000,
+      "execution_stage": "terminal_complete_accepted",
+      "expected_result": "receipts/B/B_D24_R_H20_H30_V1_RESULT.json",
+      "ack": "receipts/B/B_D24_R_H20_H30_V1_ACK.json",
+      "running_receipt": "receipts/B/B_D24_R_H20_H30_V1_RUNNING.json",
+      "stable_handoff": "receipts/B/B_D24_R_H20_H30_V1_STABLE_HANDOFF.json",
+      "result": "receipts/B/B_D24_R_H20_H30_V1_RESULT.json",
+      "acceptance": "deadline_20260924/MAIN20_AND_PAPER_ASSEMBLY_ACCEPTANCE_20260922.json",
+      "no_further_admissions": true
+    },
+    {
+      "id": "C_D24_R_H40_H50_V1",
+      "owner": "C",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_user_requested_R_H_supplement",
+      "brief": "tasks/C_D24_R_H40_H50_V1.md",
+      "task": "tasks/C_D24_R_H40_H50_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/R_H_SWEEP_AUTHORIZATION_V1.json",
+        "sha256": "c9233a9b2f92fe97cd3b03515f18dde7f2803bb46ee07123a32881ff90b4a71a"
+      },
+      "dependencies": [],
+      "does_not_wait_other_node": true,
+      "H": [
+        40,
+        50
+      ],
+      "planned_episodes": 1000,
+      "execution_stage": "terminal_complete_accepted",
+      "expected_result": "receipts/C/C_D24_R_H40_H50_V1_RESULT.json",
+      "ack": "receipts/C/C_D24_R_H40_H50_V1_ACK.json",
+      "result": "receipts/C/C_D24_R_H40_H50_V1_RESULT.json",
+      "acceptance": "deadline_20260924/MAIN20_AND_PAPER_ASSEMBLY_ACCEPTANCE_20260922.json",
+      "no_further_admissions": true
+    },
+    {
+      "id": "A_D24_PAPER_RESULTS_ASSEMBLY_V1",
+      "owner": "A",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_paper_results_our_method_first",
+      "brief": "tasks/A_D24_PAPER_RESULTS_ASSEMBLY_V1.md",
+      "task": "tasks/A_D24_PAPER_RESULTS_ASSEMBLY_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/A_PAPER_RESULTS_AUTHORIZATION_V1.json",
+        "sha256": "6f0d7eea491696782df115e9cf1f326e542fcfc66f8cb0317cffa2eb2c5e36a1"
+      },
+      "dependencies": [],
+      "execution_stage": "terminal_complete_accepted",
+      "scope": "CPU statistics and figures only; new scientific compute0",
+      "expected_result": "receipts/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1_RESULT_r1.json",
+      "result": "receipts/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1_RESULT_r1.json",
+      "acceptance": "deadline_20260924/MAIN20_AND_PAPER_ASSEMBLY_ACCEPTANCE_20260922.json",
+      "no_further_admissions": true
+    },
+    {
+      "id": "A_D24_VELOCITY_TRIGGER_MODES_V1",
+      "owner": "A",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_user_requested_trigger_modes",
+      "brief": "tasks/A_D24_VELOCITY_TRIGGER_MODES_V1.md",
+      "task": "tasks/A_D24_VELOCITY_TRIGGER_MODES_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/TRIGGER_TIMING_MULTIPLICITY_AUTHORIZATION_V1.json",
+        "sha256": "a205ddbea9443793d47fd0c38f589ff0d2779a4eaabbf8485b0ce5930ba1177a"
+      },
+      "dependencies": [],
+      "branch": "Velocity",
+      "modes": [
+        "Random-once",
+        "G0-multi"
+      ],
+      "H": [
+        10,
+        20,
+        30,
+        40,
+        50
+      ],
+      "planned_episodes": 5000,
+      "execution_stage": "5000_valid_final_results_analysis_accepted",
+      "expected_result": "receipts/A/A_D24_VELOCITY_TRIGGER_MODES_V1_RESULT.json",
+      "ack": "receipts/A/A_D24_VELOCITY_TRIGGER_MODES_V1_ACK.json",
+      "result": "receipts/A/A_D24_VELOCITY_TRIGGER_MODES_V1_RESULT_r5.json",
+      "valid_terminal_episodes": 5000,
+      "technical_interruptions": 8,
+      "unstarted": 0,
+      "recovery_directive": {
+        "path": "deadline_20260924/A_TRIGGER_PUBLICATION_REPAIR_CONTINUATION_V1.md",
+        "sha256": "fa42cd650ec8171bc4a831c338494bc6bd06319b013d8e45d4537f24cb8cfece"
+      },
+      "scientific_background_running": false,
+      "acceptance": {
+        "path": "deadline_20260924/TRIGGER_MODES_FINAL_ANALYSIS_ACCEPTANCE_20260922.json",
+        "sha256": "d6d4140ae3eda364e0797e255762cfc2606281f4f05690c131137ebc0a0b7cf2"
+      },
+      "technical_interruptions_historical": 16,
+      "unresolved_failed_units": 0
+    },
+    {
+      "id": "B_D24_POST_TRIGGER_MODES_V1",
+      "owner": "B",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_user_requested_trigger_modes",
+      "brief": "tasks/B_D24_POST_TRIGGER_MODES_V1.md",
+      "task": "tasks/B_D24_POST_TRIGGER_MODES_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/TRIGGER_TIMING_MULTIPLICITY_AUTHORIZATION_V1.json",
+        "sha256": "a205ddbea9443793d47fd0c38f589ff0d2779a4eaabbf8485b0ce5930ba1177a"
+      },
+      "dependencies": [],
+      "branch": "Post",
+      "modes": [
+        "Random-once",
+        "G0-multi"
+      ],
+      "H": [
+        10,
+        20,
+        30,
+        40,
+        50
+      ],
+      "planned_episodes": 5000,
+      "execution_stage": "5000_valid_final_results_analysis_accepted",
+      "expected_result": "receipts/B/B_D24_POST_TRIGGER_MODES_V1_RESULT.json",
+      "ack": "receipts/B/B_D24_POST_TRIGGER_MODES_V1_ACK.json",
+      "result": "receipts/B/B_D24_POST_TRIGGER_MODES_V1_RESULT.json",
+      "acceptance": {
+        "path": "deadline_20260924/TRIGGER_MODES_FINAL_ANALYSIS_ACCEPTANCE_20260922.json",
+        "sha256": "d6d4140ae3eda364e0797e255762cfc2606281f4f05690c131137ebc0a0b7cf2"
+      },
+      "valid_terminal_episodes": 5000,
+      "technical_interruptions_historical": 9,
+      "unstarted": 0,
+      "unresolved_failed_units": 0,
+      "scientific_background_running": false
+    },
+    {
+      "id": "C_D24_R_TRIGGER_MODES_V1",
+      "owner": "C",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_user_requested_trigger_modes",
+      "brief": "tasks/C_D24_R_TRIGGER_MODES_V1.md",
+      "task": "tasks/C_D24_R_TRIGGER_MODES_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/TRIGGER_TIMING_MULTIPLICITY_AUTHORIZATION_V1.json",
+        "sha256": "a205ddbea9443793d47fd0c38f589ff0d2779a4eaabbf8485b0ce5930ba1177a"
+      },
+      "dependencies": [],
+      "branch": "R",
+      "modes": [
+        "Random-once",
+        "G0-multi"
+      ],
+      "H": [
+        10,
+        20,
+        30,
+        40,
+        50
+      ],
+      "planned_episodes": 5000,
+      "execution_stage": "5000_valid_final_results_analysis_accepted",
+      "expected_result": "receipts/C/C_D24_R_TRIGGER_MODES_V1_RESULT.json",
+      "ack": "receipts/C/C_D24_R_TRIGGER_MODES_V1_ACK.json",
+      "result": "receipts/C/C_D24_R_TRIGGER_MODES_V1_RESULT.json",
+      "acceptance": {
+        "path": "deadline_20260924/TRIGGER_MODES_FINAL_ANALYSIS_ACCEPTANCE_20260922.json",
+        "sha256": "d6d4140ae3eda364e0797e255762cfc2606281f4f05690c131137ebc0a0b7cf2"
+      },
+      "valid_terminal_episodes": 5000,
+      "technical_interruptions_historical": 0,
+      "unstarted": 0,
+      "unresolved_failed_units": 0,
+      "scientific_background_running": false
+    },
+    {
+      "id": "C_TASK_DISCOVERY_SERVICE_V1",
+      "owner": "C",
+      "revision": 1,
+      "status": "complete",
+      "priority": "CPU_control_followup_no_scientific_block",
+      "brief": "tasks/C_TASK_DISCOVERY_SERVICE_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/C_TASK_DISCOVERY_AUTHORIZATION_V1.json",
+        "sha256": "eea53f22757c4976bb54b9995d79cc2abcb16d769adb4003d7ebf3ebb6583a5a"
+      },
+      "dependencies": [],
+      "science_compute_added": 0,
+      "expected_result": "receipts/C/C_TASK_DISCOVERY_SERVICE_V1_RESULT.json",
+      "execution_stage": "deployed_actual_new_task_original_thread_ACK_verified",
+      "result": "receipts/C/C_TASK_DISCOVERY_SERVICE_V1_RESULT.json",
+      "offline_resume_verified": false
+    },
+    {
+      "id": "B_D24_SMOL_AUX_RETRAIN_V1",
+      "revision": 1,
+      "owner": "B",
+      "status": "complete",
+      "priority": "P0_own_method_policy_specific_adaptation",
+      "brief": "tasks/B_D24_SMOL_AUX_RETRAIN_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/PER_BASE_AUXILIARY_TRAINING_AUTHORIZATION_V1.json",
+        "sha256": "6024320bc4b05cbdaa6e96062403c0d3f5fd1fc632c4f73872d3524cf7a4fdc3"
+      },
+      "CPU_preparation_now": true,
+      "formal_dependencies": [
+        "B_D24_POST_TRIGGER_MODES_V1_process_family_exit"
+      ],
+      "dependencies": [],
+      "planned_train_parents": 200,
+      "planned_dev_parents": 50,
+      "collection_attempt_cap": 2000,
+      "new_test_first_entries": 1500,
+      "stage_attempt_cap": 4000,
+      "small_network_update_cap": 32000,
+      "expected_result": "receipts/B/B_D24_SMOL_AUX_RETRAIN_V1_RESULT_r1.json",
+      "execution_stage": "dedicated_fit_and_once1500_complete; original_failures_preserved",
+      "ack": "receipts/B/B_D24_SMOL_AUX_RETRAIN_V1_ACK.json",
+      "runtime_receipt": "receipts/B/B_D24_SMOL_AUX_RETRAIN_V1_RUNNING.json",
+      "scientific_background_running": true,
+      "observed_at_utc": "2026-09-22T13:44:26.322539+00:00",
+      "fit_or_new_test_complete": false,
+      "result": "receipts/B/B_D24_SMOL_AUX_RETRAIN_V1_RESULT_r3.json"
+    },
+    {
+      "id": "C_D24_XVLA_AUX_RETRAIN_V1",
+      "revision": 1,
+      "owner": "C",
+      "status": "complete",
+      "priority": "P0_own_method_policy_specific_adaptation",
+      "brief": "tasks/C_D24_XVLA_AUX_RETRAIN_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/PER_BASE_AUXILIARY_TRAINING_AUTHORIZATION_V1.json",
+        "sha256": "6024320bc4b05cbdaa6e96062403c0d3f5fd1fc632c4f73872d3524cf7a4fdc3"
+      },
+      "CPU_preparation_now": true,
+      "formal_dependencies": [
+        "C_D24_R_TRIGGER_MODES_V1_process_family_exit"
+      ],
+      "dependencies": [],
+      "planned_train_parents": 200,
+      "planned_dev_parents": 50,
+      "collection_attempt_cap": 2000,
+      "new_test_first_entries": 1500,
+      "stage_attempt_cap": 4000,
+      "small_network_update_cap": 32000,
+      "expected_result": "receipts/C/C_D24_XVLA_AUX_RETRAIN_V1_RESULT_r1.json",
+      "execution_stage": "dedicated_fit_and_once1500_complete",
+      "ack": "receipts/C/C_D24_XVLA_AUX_RETRAIN_V1_ACK.json",
+      "runtime_receipt": "receipts/C/C_D24_XVLA_AUX_RETRAIN_V1_RESULT_r1.json",
+      "scientific_background_running": true,
+      "observed_at_utc": "2026-09-22T13:44:26.322539+00:00",
+      "fit_or_new_test_complete": false,
+      "result": "receipts/C/C_D24_XVLA_AUX_RETRAIN_V1_RESULT_r1.json"
+    },
+    {
+      "id": "A_D24_MULTI_PRIMARY_VALIDATION_V1",
+      "owner": "A",
+      "revision": 1,
+      "status": "cancelled_partial",
+      "priority": "P0_user_multi_primary_validation",
+      "brief": "tasks/A_D24_MULTI_PRIMARY_VALIDATION_V1.md",
+      "task": "tasks/A_D24_MULTI_PRIMARY_VALIDATION_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/MULTI_PRIMARY_VALIDATION_AUTHORIZATION_V1.json",
+        "sha256": "767685a6fd14840f1f04001e14cf01980a17810be5d044dd0db9d665d7d05699"
+      },
+      "dependencies": [],
+      "formal_dependencies": [],
+      "CPU_prepare_now": true,
+      "planned_episodes": 8800,
+      "stage_attempt_cap": 9500,
+      "new_updates": 0,
+      "execution_stage": "user_cancelled_random_and_legacy_E1; own_family_exited",
+      "expected_result": "receipts/A/A_D24_MULTI_PRIMARY_VALIDATION_V1_RESULT_r1.json",
+      "admission_override": {
+        "path": "deadline_20260924/Q_LOSS_PRIORITY_OVERRIDE_V1.json",
+        "sha256": "7e7c84f47284a71dee130bae1239ee3d18f04b176bbea7ad5a66e06da792b5a7"
+      },
+      "pending_scope_revision": "cancel_random_multi_and_prioritize_fresh_full_Q_selection",
+      "result": "results/A/A_D24_MULTI_PRIMARY_VALIDATION_V1/RESULT.json",
+      "E6_valid_preserved": 100,
+      "legacy_E1_valid_preserved": 420,
+      "legacy_E1_unstarted_cancelled": 780,
+      "Random_multi_entered": 0,
+      "Random_multi_cancelled": 7500
+    },
+    {
+      "id": "B_D24_SMOL_MULTI_EVAL_V1",
+      "owner": "B",
+      "revision": 1,
+      "status": "partial",
+      "priority": "P0_user_multi_primary_validation",
+      "brief": "tasks/B_D24_SMOL_MULTI_EVAL_V1.md",
+      "task": "tasks/B_D24_SMOL_MULTI_EVAL_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/MULTI_PRIMARY_VALIDATION_AUTHORIZATION_V1.json",
+        "sha256": "767685a6fd14840f1f04001e14cf01980a17810be5d044dd0db9d665d7d05699"
+      },
+      "dependencies": [],
+      "formal_dependencies": [
+        "B_D24_SMOL_AUX_RETRAIN_V1_process_family_exit"
+      ],
+      "CPU_prepare_now": true,
+      "planned_episodes": 1500,
+      "stage_attempt_cap": 1650,
+      "new_updates": 0,
+      "execution_stage": "R476_valid_24_user_cancelled; old_Q_PV_scope_superseded",
+      "expected_result": "receipts/B/B_D24_SMOL_MULTI_EVAL_V1_RESULT_r1.json",
+      "admission_override": {
+        "path": "deadline_20260924/Q_LOSS_PRIORITY_OVERRIDE_V1.json",
+        "sha256": "7e7c84f47284a71dee130bae1239ee3d18f04b176bbea7ad5a66e06da792b5a7"
+      },
+      "pending_scope_revision": "cancel_random_multi_and_prioritize_fresh_full_Q_selection",
+      "result": "receipts/B/B_D24_SMOL_MULTI_EVAL_V1_R_UNSTARTED_RESULT_r2.json",
+      "final_R_only_resolution": {
+        "path": "results/B/B_D24_PI05_SELECTED_H20_H30_V1/R_cancelled_r3/FINAL_SUMMARY.json",
+        "sha256": "c848087e45fb47347a243f1ef88bde811b7e1264c6d6494611afae18f290652f"
+      },
+      "old_Q_PV_cancelled_scope_not_reopened": true
+    },
+    {
+      "id": "C_D24_XVLA_MULTI_EVAL_V1",
+      "owner": "C",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_user_multi_primary_validation",
+      "brief": "tasks/C_D24_XVLA_MULTI_EVAL_V1.md",
+      "task": "tasks/C_D24_XVLA_MULTI_EVAL_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/MULTI_PRIMARY_VALIDATION_AUTHORIZATION_V1.json",
+        "sha256": "767685a6fd14840f1f04001e14cf01980a17810be5d044dd0db9d665d7d05699"
+      },
+      "dependencies": [],
+      "formal_dependencies": [
+        "C_D24_XVLA_AUX_RETRAIN_V1_process_family_exit"
+      ],
+      "CPU_prepare_now": true,
+      "planned_episodes": 1500,
+      "stage_attempt_cap": 1650,
+      "new_updates": 0,
+      "execution_stage": "old_configuration1500_complete; cancellation_did_not_take_effect",
+      "expected_result": "receipts/C/C_D24_XVLA_MULTI_EVAL_V1_RESULT_r1.json",
+      "admission_override": {
+        "path": "deadline_20260924/Q_LOSS_PRIORITY_OVERRIDE_V1.json",
+        "sha256": "7e7c84f47284a71dee130bae1239ee3d18f04b176bbea7ad5a66e06da792b5a7"
+      },
+      "pending_scope_revision": "cancel_random_multi_and_prioritize_fresh_full_Q_selection",
+      "result": "receipts/C/C_D24_XVLA_MULTI_EVAL_V1_RESULT_r1.json"
+    },
+    {
+      "id": "A_D24_FULL_Q_LOSS_SELECTION_V1",
+      "owner": "A",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_user_full_Q_selection_before_formal_configuration",
+      "brief": "tasks/A_D24_FULL_Q_LOSS_SELECTION_V1.md",
+      "task": "tasks/A_D24_FULL_Q_LOSS_SELECTION_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/FULL_Q_LOSS_SELECTION_AUTHORIZATION_V1.json",
+        "sha256": "8fc0bf2c7c0c761d9fba424fb7fb127af8a9c505668fccd7231126535c6422c1"
+      },
+      "admission_override": {
+        "path": "deadline_20260924/Q_LOSS_PRIORITY_OVERRIDE_V1.json",
+        "sha256": "7e7c84f47284a71dee130bae1239ee3d18f04b176bbea7ad5a66e06da792b5a7"
+      },
+      "evaluation_concurrency_policy": {
+        "path": "deadline_20260924/EVALUATION_CONCURRENCY_24_V1.md",
+        "sha256": "8b13ba1b96d286b1be68f6d96c300017af95ae637120bb7c34c69ac943e33b29"
+      },
+      "CPU_prepare_now": true,
+      "formal_dependencies": [
+        "own_current_formal_family_exit"
+      ],
+      "dependencies": [],
+      "planned_episodes": 9600,
+      "new_optimizer_updates": 192000,
+      "stage_attempt_cap": 10100,
+      "expected_result": "receipts/A/A_D24_FULL_Q_LOSS_SELECTION_V1_RESULT_r1.json",
+      "execution_stage": "original_9600_scope_fulfilled_by_A5600_plus_BC_transferred4000; raw_partial_V1_unchanged",
+      "release": {
+        "path": "deadline_20260924/FULL_Q_LOSS_SELECTION_AUTHORIZATION_V1.json",
+        "sha256": "8fc0bf2c7c0c761d9fba424fb7fb127af8a9c505668fccd7231126535c6422c1"
+      },
+      "release_id": "FULL_Q_LOSS_SELECTION_V1",
+      "ack": "receipts/A/A_D24_FULL_Q_LOSS_SELECTION_V1_ACK.json",
+      "runtime_receipt": "receipts/A/A_D24_FULL_Q_LOSS_SELECTION_V1_TRAINING_COMPLETE_RESULT.json",
+      "reallocation": {
+        "path": "deadline_20260924/FULL_Q_AUTORUN_AUTHORIZATION_V2.json",
+        "sha256": "fb15e23ad4ed75eaa1b9490784d58dc9dc925e440194e99cab066ae11af6414f"
+      },
+      "selection_rule_override": {
+        "path": "deadline_20260924/POST_LED_SELECTION_OVERRIDE_V1.json",
+        "sha256": "fa907477112320e7f8356282c5ba64742452172dee998e9efc20a82b92b9c4b1"
+      },
+      "Velocity_paper_scope": "other_work_only_still_execute",
+      "result": "results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/RESULT.json",
+      "status_before_final_rollup": "partial",
+      "analysis_final_acceptance": {
+        "path": "deadline_20260924/FULL_Q_FINAL_COMPLETION_20260923.json",
+        "sha256": "9608d94ca4a888fac06d5edf2cfaa0fe1118702ecede69529d1f90dd85b56305"
+      },
+      "final_aggregate_result": "results/A/A_D24_FULL_Q_AUTORUN_POST_LED_V1/RESULT.json"
+    },
+    {
+      "id": "B_D24_FULL_Q_LOSS_REFRESH_V1",
+      "owner": "B",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_user_full_Q_selection_before_formal_configuration",
+      "brief": "tasks/B_D24_FULL_Q_LOSS_REFRESH_V1.md",
+      "task": "tasks/B_D24_FULL_Q_LOSS_REFRESH_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/FULL_Q_LOSS_SELECTION_AUTHORIZATION_V1.json",
+        "sha256": "8fc0bf2c7c0c761d9fba424fb7fb127af8a9c505668fccd7231126535c6422c1"
+      },
+      "admission_override": {
+        "path": "deadline_20260924/Q_LOSS_PRIORITY_OVERRIDE_V1.json",
+        "sha256": "7e7c84f47284a71dee130bae1239ee3d18f04b176bbea7ad5a66e06da792b5a7"
+      },
+      "evaluation_concurrency_policy": {
+        "path": "deadline_20260924/EVALUATION_CONCURRENCY_24_V1.md",
+        "sha256": "8b13ba1b96d286b1be68f6d96c300017af95ae637120bb7c34c69ac943e33b29"
+      },
+      "CPU_prepare_now": true,
+      "formal_dependencies": [
+        "own_current_formal_family_exit"
+      ],
+      "dependencies": [],
+      "planned_episodes": 1000,
+      "new_optimizer_updates": 64000,
+      "stage_attempt_cap": 1100,
+      "expected_result": "receipts/B/B_D24_FULL_Q_LOSS_REFRESH_V1_RESULT_r1.json",
+      "execution_stage": "complete_in_assigned_scope; originals_and_historical_failures_preserved",
+      "release": {
+        "path": "deadline_20260924/FULL_Q_LOSS_SELECTION_AUTHORIZATION_V1.json",
+        "sha256": "8fc0bf2c7c0c761d9fba424fb7fb127af8a9c505668fccd7231126535c6422c1"
+      },
+      "release_id": "FULL_Q_LOSS_SELECTION_V1",
+      "reallocation": {
+        "path": "deadline_20260924/FULL_Q_AUTORUN_AUTHORIZATION_V2.json",
+        "sha256": "fb15e23ad4ed75eaa1b9490784d58dc9dc925e440194e99cab066ae11af6414f"
+      },
+      "selection_rule_override": {
+        "path": "deadline_20260924/POST_LED_SELECTION_OVERRIDE_V1.json",
+        "sha256": "fa907477112320e7f8356282c5ba64742452172dee998e9efc20a82b92b9c4b1"
+      },
+      "Velocity_paper_scope": "other_work_only_still_execute",
+      "status_before_final_rollup": "running",
+      "analysis_final_acceptance": {
+        "path": "deadline_20260924/FULL_Q_FINAL_COMPLETION_20260923.json",
+        "sha256": "9608d94ca4a888fac06d5edf2cfaa0fe1118702ecede69529d1f90dd85b56305"
+      },
+      "final_aggregate_result": "receipts/B/B_D24_FULL_Q_LOSS_REFRESH_V1_EVAL_RESULT_r1.json"
+    },
+    {
+      "id": "C_D24_FULL_Q_LOSS_REFRESH_V1",
+      "owner": "C",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_user_full_Q_selection_before_formal_configuration",
+      "brief": "tasks/C_D24_FULL_Q_LOSS_REFRESH_V1.md",
+      "task": "tasks/C_D24_FULL_Q_LOSS_REFRESH_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/FULL_Q_LOSS_SELECTION_AUTHORIZATION_V1.json",
+        "sha256": "8fc0bf2c7c0c761d9fba424fb7fb127af8a9c505668fccd7231126535c6422c1"
+      },
+      "admission_override": {
+        "path": "deadline_20260924/Q_LOSS_PRIORITY_OVERRIDE_V1.json",
+        "sha256": "7e7c84f47284a71dee130bae1239ee3d18f04b176bbea7ad5a66e06da792b5a7"
+      },
+      "evaluation_concurrency_policy": {
+        "path": "deadline_20260924/EVALUATION_CONCURRENCY_24_V1.md",
+        "sha256": "8b13ba1b96d286b1be68f6d96c300017af95ae637120bb7c34c69ac943e33b29"
+      },
+      "CPU_prepare_now": true,
+      "formal_dependencies": [
+        "own_current_formal_family_exit"
+      ],
+      "dependencies": [],
+      "planned_episodes": 1000,
+      "new_optimizer_updates": 64000,
+      "stage_attempt_cap": 1100,
+      "expected_result": "receipts/C/C_D24_FULL_Q_LOSS_REFRESH_V1_RESULT_r1.json",
+      "execution_stage": "complete_in_assigned_scope; originals_and_historical_failures_preserved",
+      "release": {
+        "path": "deadline_20260924/FULL_Q_LOSS_SELECTION_AUTHORIZATION_V1.json",
+        "sha256": "8fc0bf2c7c0c761d9fba424fb7fb127af8a9c505668fccd7231126535c6422c1"
+      },
+      "release_id": "FULL_Q_LOSS_SELECTION_V1",
+      "reallocation": {
+        "path": "deadline_20260924/FULL_Q_AUTORUN_AUTHORIZATION_V2.json",
+        "sha256": "fb15e23ad4ed75eaa1b9490784d58dc9dc925e440194e99cab066ae11af6414f"
+      },
+      "selection_rule_override": {
+        "path": "deadline_20260924/POST_LED_SELECTION_OVERRIDE_V1.json",
+        "sha256": "fa907477112320e7f8356282c5ba64742452172dee998e9efc20a82b92b9c4b1"
+      },
+      "Velocity_paper_scope": "other_work_only_still_execute",
+      "status_before_final_rollup": "running",
+      "analysis_final_acceptance": {
+        "path": "deadline_20260924/FULL_Q_FINAL_COMPLETION_20260923.json",
+        "sha256": "9608d94ca4a888fac06d5edf2cfaa0fe1118702ecede69529d1f90dd85b56305"
+      },
+      "final_aggregate_result": "results/C/C_D24_FULL_Q_LOSS_REFRESH_V1/FINAL_SUMMARY.json"
+    },
+    {
+      "id": "A_D24_FULL_Q_AUTORUN_HANDOFF_V2",
+      "owner": "A",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_user_automatic_serial_stages_selection_first",
+      "brief": "tasks/A_D24_FULL_Q_AUTORUN_HANDOFF_V2.md",
+      "task": "tasks/A_D24_FULL_Q_AUTORUN_HANDOFF_V2.md",
+      "authorization": {
+        "path": "deadline_20260924/FULL_Q_AUTORUN_AUTHORIZATION_V2.json",
+        "sha256": "fb15e23ad4ed75eaa1b9490784d58dc9dc925e440194e99cab066ae11af6414f"
+      },
+      "release": {
+        "path": "deadline_20260924/FULL_Q_AUTORUN_AUTHORIZATION_V2.json",
+        "sha256": "fb15e23ad4ed75eaa1b9490784d58dc9dc925e440194e99cab066ae11af6414f"
+      },
+      "release_id": "FULL_Q_AUTORUN_V2",
+      "CPU_prepare_now": true,
+      "dependencies": [],
+      "scientific_selection_required": true,
+      "original_scope_only": true,
+      "expected_result": "receipts/A/A_D24_FULL_Q_AUTORUN_HANDOFF_V2_RESULT_r1.json",
+      "execution_stage": "complete_in_assigned_scope; originals_and_historical_failures_preserved",
+      "selection_rule_override": {
+        "path": "deadline_20260924/POST_LED_SELECTION_OVERRIDE_V1.json",
+        "sha256": "fa907477112320e7f8356282c5ba64742452172dee998e9efc20a82b92b9c4b1"
+      },
+      "Velocity_paper_scope": "other_work_only_still_execute",
+      "runtime_compatibility_directive": {
+        "path": "deadline_20260924/AUTORUN_LIVE_CHAIN_COMPATIBILITY_V1.json",
+        "sha256": "2ae5a001cec168399a9733d038ed56d1ebeefd311081999f45429dc75e24ac16"
+      },
+      "remaining_DEV_first_evaluations": 854,
+      "new_continuation_first_maximum": 4054,
+      "stage_attempt_cap": 4500,
+      "ack": "receipts/A/A_D24_FULL_Q_AUTORUN_HANDOFF_V2_ACK.json",
+      "result": "results/A/A_D24_FULL_Q_AUTORUN_POST_LED_V1/RESULT.json",
+      "analysis_decision": "results/A/A_D24_AUTORECOVERY_QUEUE_RULE_V1/outbox/A_D24_AUTORECOVERY_QUEUE_RULE_V1_no_runnable.decision.json",
+      "status_before_final_rollup": "complete",
+      "analysis_final_acceptance": {
+        "path": "deadline_20260924/FULL_Q_FINAL_COMPLETION_20260923.json",
+        "sha256": "9608d94ca4a888fac06d5edf2cfaa0fe1118702ecede69529d1f90dd85b56305"
+      },
+      "final_aggregate_result": "results/A/A_D24_FULL_Q_AUTORUN_POST_LED_V1/RESULT.json"
+    },
+    {
+      "id": "B_D24_PI05_SELECTED_H20_H30_V1",
+      "owner": "B",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_user_automatic_serial_stages_selection_first",
+      "brief": "tasks/B_D24_PI05_SELECTED_H20_H30_V1.md",
+      "task": "tasks/B_D24_PI05_SELECTED_H20_H30_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/FULL_Q_AUTORUN_AUTHORIZATION_V2.json",
+        "sha256": "fb15e23ad4ed75eaa1b9490784d58dc9dc925e440194e99cab066ae11af6414f"
+      },
+      "release": {
+        "path": "deadline_20260924/FULL_Q_AUTORUN_AUTHORIZATION_V2.json",
+        "sha256": "fb15e23ad4ed75eaa1b9490784d58dc9dc925e440194e99cab066ae11af6414f"
+      },
+      "release_id": "FULL_Q_AUTORUN_V2",
+      "CPU_prepare_now": true,
+      "dependencies": [],
+      "scientific_selection_required": true,
+      "original_scope_only": true,
+      "expected_result": "receipts/B/B_D24_PI05_SELECTED_H20_H30_V1_RESULT_r1.json",
+      "execution_stage": "complete_in_assigned_scope; originals_and_historical_failures_preserved",
+      "selection_rule_override": {
+        "path": "deadline_20260924/POST_LED_SELECTION_OVERRIDE_V1.json",
+        "sha256": "fa907477112320e7f8356282c5ba64742452172dee998e9efc20a82b92b9c4b1"
+      },
+      "Velocity_paper_scope": "other_work_only_still_execute",
+      "status_before_final_rollup": "ready",
+      "analysis_final_acceptance": {
+        "path": "deadline_20260924/FULL_Q_FINAL_COMPLETION_20260923.json",
+        "sha256": "9608d94ca4a888fac06d5edf2cfaa0fe1118702ecede69529d1f90dd85b56305"
+      },
+      "final_aggregate_result": "receipts/B/B_D24_PI05_SELECTED_H20_H30_V1_RESULT_r2.json"
+    },
+    {
+      "id": "C_D24_PI05_SELECTED_H40_H50_V1",
+      "owner": "C",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_user_automatic_serial_stages_selection_first",
+      "brief": "tasks/C_D24_PI05_SELECTED_H40_H50_V1.md",
+      "task": "tasks/C_D24_PI05_SELECTED_H40_H50_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/FULL_Q_AUTORUN_AUTHORIZATION_V2.json",
+        "sha256": "fb15e23ad4ed75eaa1b9490784d58dc9dc925e440194e99cab066ae11af6414f"
+      },
+      "release": {
+        "path": "deadline_20260924/FULL_Q_AUTORUN_AUTHORIZATION_V2.json",
+        "sha256": "fb15e23ad4ed75eaa1b9490784d58dc9dc925e440194e99cab066ae11af6414f"
+      },
+      "release_id": "FULL_Q_AUTORUN_V2",
+      "CPU_prepare_now": true,
+      "dependencies": [],
+      "scientific_selection_required": true,
+      "original_scope_only": true,
+      "expected_result": "receipts/C/C_D24_PI05_SELECTED_H40_H50_V1_RESULT_r1.json",
+      "execution_stage": "complete_in_assigned_scope; originals_and_historical_failures_preserved",
+      "selection_rule_override": {
+        "path": "deadline_20260924/POST_LED_SELECTION_OVERRIDE_V1.json",
+        "sha256": "fa907477112320e7f8356282c5ba64742452172dee998e9efc20a82b92b9c4b1"
+      },
+      "Velocity_paper_scope": "other_work_only_still_execute",
+      "ack": "receipts/C/C_D24_PI05_SELECTED_H40_H50_V1_ACK.json",
+      "status_before_final_rollup": "running",
+      "analysis_final_acceptance": {
+        "path": "deadline_20260924/FULL_Q_FINAL_COMPLETION_20260923.json",
+        "sha256": "9608d94ca4a888fac06d5edf2cfaa0fe1118702ecede69529d1f90dd85b56305"
+      },
+      "final_aggregate_result": "results/C/C_D24_PI05_SELECTED_H40_H50_V1/FINAL_SUMMARY.json"
+    },
+    {
+      "id": "A_D24_AUTORECOVERY_QUEUE_RULE_V1",
+      "owner": "A",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_user_operational_companion_do_not_replace_science",
+      "brief": "tasks/A_D24_AUTORECOVERY_QUEUE_RULE_V1.md",
+      "task": "tasks/A_D24_AUTORECOVERY_QUEUE_RULE_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V1.json",
+        "sha256": "87878b0e2019048935904d639d1d15a1af9f0778047171a508054fecaadd4ab0"
+      },
+      "release": {
+        "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V1.json",
+        "sha256": "87878b0e2019048935904d639d1d15a1af9f0778047171a508054fecaadd4ab0"
+      },
+      "release_id": "AUTONOMOUS_RECOVERY_AND_SKIP_V1",
+      "CPU_prepare_now": true,
+      "dependencies": [],
+      "does_not_replace_primary_task": true,
+      "new_scientific_units": 0,
+      "expected_result": "receipts/A/A_D24_AUTORECOVERY_QUEUE_RULE_V1_RESULT.json",
+      "execution_stage": "complete_in_assigned_scope; originals_and_historical_failures_preserved",
+      "result": "receipts/A/A_D24_AUTORECOVERY_QUEUE_RULE_V1_RESULT.json",
+      "status_before_final_rollup": "complete",
+      "analysis_final_acceptance": {
+        "path": "deadline_20260924/FULL_Q_FINAL_COMPLETION_20260923.json",
+        "sha256": "9608d94ca4a888fac06d5edf2cfaa0fe1118702ecede69529d1f90dd85b56305"
+      },
+      "final_aggregate_result": "receipts/A/A_D24_AUTORECOVERY_QUEUE_RULE_V1_RESULT.json"
+    },
+    {
+      "id": "B_D24_AUTORECOVERY_QUEUE_RULE_V1",
+      "owner": "B",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_user_operational_companion_do_not_replace_science",
+      "brief": "tasks/B_D24_AUTORECOVERY_QUEUE_RULE_V1.md",
+      "task": "tasks/B_D24_AUTORECOVERY_QUEUE_RULE_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V1.json",
+        "sha256": "87878b0e2019048935904d639d1d15a1af9f0778047171a508054fecaadd4ab0"
+      },
+      "release": {
+        "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V1.json",
+        "sha256": "87878b0e2019048935904d639d1d15a1af9f0778047171a508054fecaadd4ab0"
+      },
+      "release_id": "AUTONOMOUS_RECOVERY_AND_SKIP_V1",
+      "CPU_prepare_now": true,
+      "dependencies": [],
+      "does_not_replace_primary_task": true,
+      "new_scientific_units": 0,
+      "expected_result": "receipts/B/B_D24_AUTORECOVERY_QUEUE_RULE_V1_RESULT.json",
+      "execution_stage": "complete_in_assigned_scope; originals_and_historical_failures_preserved",
+      "ack": "receipts/B/B_D24_AUTORECOVERY_QUEUE_RULE_V1_ACK.json",
+      "status_before_final_rollup": "complete",
+      "analysis_final_acceptance": {
+        "path": "deadline_20260924/FULL_Q_FINAL_COMPLETION_20260923.json",
+        "sha256": "9608d94ca4a888fac06d5edf2cfaa0fe1118702ecede69529d1f90dd85b56305"
+      },
+      "final_aggregate_result": "receipts/B/B_D24_AUTORECOVERY_QUEUE_RULE_V1_RESULT.json"
+    },
+    {
+      "id": "C_D24_AUTORECOVERY_QUEUE_RULE_V1",
+      "owner": "C",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_user_operational_companion_do_not_replace_science",
+      "brief": "tasks/C_D24_AUTORECOVERY_QUEUE_RULE_V1.md",
+      "task": "tasks/C_D24_AUTORECOVERY_QUEUE_RULE_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V2.json",
+        "sha256": "0e0c6a309bf90c1d79d75d34a7d96470704c60e084c9b05b76621115341f82f7"
+      },
+      "release": {
+        "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V2.json",
+        "sha256": "0e0c6a309bf90c1d79d75d34a7d96470704c60e084c9b05b76621115341f82f7"
+      },
+      "release_id": "AUTONOMOUS_RECOVERY_AND_SKIP_V1",
+      "CPU_prepare_now": true,
+      "dependencies": [],
+      "does_not_replace_primary_task": true,
+      "new_scientific_units": 0,
+      "expected_result": "receipts/C/C_D24_AUTORECOVERY_QUEUE_RULE_V1_RESULT.json",
+      "execution_stage": "complete_in_assigned_scope; originals_and_historical_failures_preserved",
+      "discovery_metadata_compatibility": {
+        "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V2.json",
+        "sha256": "0e0c6a309bf90c1d79d75d34a7d96470704c60e084c9b05b76621115341f82f7"
+      },
+      "ack": "receipts/C/C_D24_AUTORECOVERY_QUEUE_RULE_V1_ACK.json",
+      "status_before_final_rollup": "running",
+      "analysis_final_acceptance": {
+        "path": "deadline_20260924/FULL_Q_FINAL_COMPLETION_20260923.json",
+        "sha256": "9608d94ca4a888fac06d5edf2cfaa0fe1118702ecede69529d1f90dd85b56305"
+      },
+      "final_aggregate_result": "receipts/C/C_D24_AUTORECOVERY_QUEUE_RULE_V1_RESULT.json"
+    },
+    {
+      "id": "A_D24_QUOTA_INDEPENDENT_QUEUE_V1",
+      "owner": "A",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_prepare_all_remaining_stages_before_LLM_quota_exhaustion",
+      "brief": "tasks/A_D24_QUOTA_INDEPENDENT_QUEUE_V1.md",
+      "task": "tasks/A_D24_QUOTA_INDEPENDENT_QUEUE_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+        "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+      },
+      "release": {
+        "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+        "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+      },
+      "CPU_prepare_now": true,
+      "dependencies": [],
+      "does_not_replace_primary_task": true,
+      "new_scientific_units": 0,
+      "expected_result": "receipts/A/A_D24_QUOTA_INDEPENDENT_QUEUE_V1_RESULT.json",
+      "execution_stage": "complete_in_assigned_scope; originals_and_historical_failures_preserved",
+      "result": "receipts/A/A_D24_QUOTA_INDEPENDENT_QUEUE_V1_RESULT.json",
+      "status_before_final_rollup": "complete",
+      "analysis_final_acceptance": {
+        "path": "deadline_20260924/FULL_Q_FINAL_COMPLETION_20260923.json",
+        "sha256": "9608d94ca4a888fac06d5edf2cfaa0fe1118702ecede69529d1f90dd85b56305"
+      },
+      "final_aggregate_result": "receipts/A/A_D24_QUOTA_INDEPENDENT_QUEUE_V1_RESULT.json"
+    },
+    {
+      "id": "B_D24_QUOTA_INDEPENDENT_QUEUE_V1",
+      "owner": "B",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_prepare_all_remaining_stages_before_LLM_quota_exhaustion",
+      "brief": "tasks/B_D24_QUOTA_INDEPENDENT_QUEUE_V1.md",
+      "task": "tasks/B_D24_QUOTA_INDEPENDENT_QUEUE_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+        "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+      },
+      "release": {
+        "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+        "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+      },
+      "CPU_prepare_now": true,
+      "dependencies": [],
+      "does_not_replace_primary_task": true,
+      "new_scientific_units": 0,
+      "expected_result": "receipts/B/B_D24_QUOTA_INDEPENDENT_QUEUE_V1_RESULT.json",
+      "status_before_final_rollup": "ready",
+      "analysis_final_acceptance": {
+        "path": "deadline_20260924/FULL_Q_FINAL_COMPLETION_20260923.json",
+        "sha256": "9608d94ca4a888fac06d5edf2cfaa0fe1118702ecede69529d1f90dd85b56305"
+      },
+      "final_aggregate_result": "receipts/B/B_D24_QUOTA_INDEPENDENT_QUEUE_V1_RESULT_r2.json",
+      "execution_stage": "complete_in_assigned_scope; originals_and_historical_failures_preserved"
+    },
+    {
+      "id": "C_D24_QUOTA_INDEPENDENT_QUEUE_V1",
+      "owner": "C",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_prepare_all_remaining_stages_before_LLM_quota_exhaustion",
+      "brief": "tasks/C_D24_QUOTA_INDEPENDENT_QUEUE_V1.md",
+      "task": "tasks/C_D24_QUOTA_INDEPENDENT_QUEUE_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+        "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+      },
+      "release": {
+        "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+        "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+      },
+      "CPU_prepare_now": true,
+      "dependencies": [],
+      "does_not_replace_primary_task": true,
+      "new_scientific_units": 0,
+      "expected_result": "receipts/C/C_D24_QUOTA_INDEPENDENT_QUEUE_V1_RESULT.json",
+      "status_before_final_rollup": "ready",
+      "analysis_final_acceptance": {
+        "path": "deadline_20260924/FULL_Q_FINAL_COMPLETION_20260923.json",
+        "sha256": "9608d94ca4a888fac06d5edf2cfaa0fe1118702ecede69529d1f90dd85b56305"
+      },
+      "final_aggregate_result": "receipts/C/C_D24_QUOTA_INDEPENDENT_QUEUE_V1_RESULT.json",
+      "execution_stage": "complete_in_assigned_scope; originals_and_historical_failures_preserved"
+    },
+    {
+      "id": "B_D24_PUBLICATION_MODULE_REPAIR_V1",
+      "owner": "B",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_known_fault_repair_before_quota_exhaustion",
+      "brief": "tasks/B_D24_PUBLICATION_MODULE_REPAIR_V1.md",
+      "task": "tasks/B_D24_PUBLICATION_MODULE_REPAIR_V1.md",
+      "release": {
+        "path": "deadline_20260924/B_H20_PUBLICATION_MODULE_REPAIR_DECISION_V1.json",
+        "sha256": "b09d76aa5932ee0bcab6aa3f57d86d1270dcdfd1416824de92f85dfb222217f1"
+      },
+      "authorization": {
+        "path": "deadline_20260924/B_H20_PUBLICATION_MODULE_REPAIR_DECISION_V1.json",
+        "sha256": "b09d76aa5932ee0bcab6aa3f57d86d1270dcdfd1416824de92f85dfb222217f1"
+      },
+      "CPU_prepare_now": true,
+      "dependencies": [],
+      "does_not_replace_primary_task": true,
+      "expected_result": "receipts/B/B_D24_PUBLICATION_MODULE_REPAIR_V1_RESULT.json",
+      "status_before_final_rollup": "ready",
+      "analysis_final_acceptance": {
+        "path": "deadline_20260924/FULL_Q_FINAL_COMPLETION_20260923.json",
+        "sha256": "9608d94ca4a888fac06d5edf2cfaa0fe1118702ecede69529d1f90dd85b56305"
+      },
+      "final_aggregate_result": "receipts/B/B_D24_PI05_SELECTED_H20_H30_V1_RESULT_r2.json",
+      "execution_stage": "complete_in_assigned_scope; originals_and_historical_failures_preserved"
+    },
+    {
+      "id": "A_D24_L11_RETEST_V1",
+      "owner": "A",
+      "revision": 1,
+      "status": "quality_hold",
+      "priority": "P0_user_L11_formal_retest",
+      "brief": "tasks/A_D24_L11_RETEST_V1.md",
+      "task": "tasks/A_D24_L11_RETEST_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/L11_RETEST_V1/AUTHORIZATION.json",
+        "sha256": "a978519ba24dfb3aba22cf5ce8472d9b855e788e44266a28e0d006be876d5e87"
+      },
+      "release": {
+        "path": "deadline_20260924/L11_RETEST_V1/AUTHORIZATION.json",
+        "sha256": "a978519ba24dfb3aba22cf5ce8472d9b855e788e44266a28e0d006be876d5e87"
+      },
+      "CPU_prepare_now": true,
+      "dependencies": [],
+      "selection_satisfied": {
+        "path": "deadline_20260924/L11_RETEST_V1/L11_SELECTION_OVERRIDE.json",
+        "sha256": "2006bc5818911d80a7b325bc91699c789675bb62b75647a4abcc8012119dffe2"
+      },
+      "expected_result": "receipts/A/A_D24_L11_RETEST_V1_RESULT_r1.json",
+      "planned_new_episodes": 2900,
+      "concurrency_target": 192,
+      "branches_per_GPU_target": 24,
+      "previous_valid_units_not_duplicated": true,
+      "execution_stage": "historical_original_quality_disposition_preserved;scientific_scope_completed_by_independent_recovery",
+      "acknowledgement": {
+        "path": "receipts/A/A_D24_L11_RETEST_V1_ACK.json",
+        "sha256": "52ec3640d45b2b94ce286b17bd689fef18b5a358830e8f0e195ec24a6643b99e"
+      },
+      "scientific_launch_observed": false,
+      "actual_192_concurrency_observed": false,
+      "analysis_review": {
+        "path": "deadline_20260924/L11_RECOVERY_V1/STATUS_AT_REVIEW.json",
+        "sha256": "d828b322b35f57aaa8fd08efa3895e6b9545bd38c7e4889d01eed4cad4741014"
+      },
+      "historical_status_preserved": "quality_hold",
+      "scope_completion": {
+        "path": "deadline_20260924/L11_FINAL_ROLLUP_20260923/FINAL_ACCEPTANCE.json",
+        "sha256": "6cb70c5ae875b632d14c11d346acdd667c99f0cc1ae57ae8b673aca1f05306e3"
+      },
+      "remaining_scientific_units": 0
+    },
+    {
+      "id": "B_D24_L11_RETEST_V1",
+      "owner": "B",
+      "revision": 1,
+      "status": "complete",
+      "priority": "P0_user_L11_formal_retest",
+      "brief": "tasks/B_D24_L11_RETEST_V1.md",
+      "task": "tasks/B_D24_L11_RETEST_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/L11_RETEST_V1/AUTHORIZATION.json",
+        "sha256": "a978519ba24dfb3aba22cf5ce8472d9b855e788e44266a28e0d006be876d5e87"
+      },
+      "release": {
+        "path": "deadline_20260924/L11_RETEST_V1/AUTHORIZATION.json",
+        "sha256": "a978519ba24dfb3aba22cf5ce8472d9b855e788e44266a28e0d006be876d5e87"
+      },
+      "CPU_prepare_now": true,
+      "dependencies": [],
+      "selection_satisfied": {
+        "path": "deadline_20260924/L11_RETEST_V1/L11_SELECTION_OVERRIDE.json",
+        "sha256": "2006bc5818911d80a7b325bc91699c789675bb62b75647a4abcc8012119dffe2"
+      },
+      "expected_result": "receipts/B/B_D24_L11_RETEST_V1_RESULT_r1.json",
+      "planned_new_episodes": 2500,
+      "concurrency_target": 192,
+      "branches_per_GPU_target": 24,
+      "previous_valid_units_not_duplicated": true,
+      "execution_stage": "2500_valid_complete",
+      "acknowledgement": {
+        "path": "receipts/B/B_D24_L11_RETEST_V1_ACK.json",
+        "sha256": "e6457e8beb137a42aac0a0eef4f96973835d5ecb43d965f2e5f1cc05cfce10e6"
+      },
+      "scientific_launch_observed": false,
+      "actual_192_concurrency_observed": false,
+      "analysis_review": {
+        "path": "deadline_20260924/L11_RECOVERY_V1/STATUS_AT_REVIEW.json",
+        "sha256": "d828b322b35f57aaa8fd08efa3895e6b9545bd38c7e4889d01eed4cad4741014"
+      }
+    },
+    {
+      "id": "C_D24_L11_RETEST_V1",
+      "owner": "C",
+      "revision": 1,
+      "status": "partial",
+      "priority": "P0_user_L11_formal_retest",
+      "brief": "tasks/C_D24_L11_RETEST_V1.md",
+      "task": "tasks/C_D24_L11_RETEST_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/L11_RETEST_V1/AUTHORIZATION.json",
+        "sha256": "a978519ba24dfb3aba22cf5ce8472d9b855e788e44266a28e0d006be876d5e87"
+      },
+      "release": {
+        "path": "deadline_20260924/L11_RETEST_V1/AUTHORIZATION.json",
+        "sha256": "a978519ba24dfb3aba22cf5ce8472d9b855e788e44266a28e0d006be876d5e87"
+      },
+      "CPU_prepare_now": true,
+      "dependencies": [],
+      "selection_satisfied": {
+        "path": "deadline_20260924/L11_RETEST_V1/L11_SELECTION_OVERRIDE.json",
+        "sha256": "2006bc5818911d80a7b325bc91699c789675bb62b75647a4abcc8012119dffe2"
+      },
+      "expected_result": "receipts/C/C_D24_L11_RETEST_V1_RESULT_r1.json",
+      "planned_new_episodes": 2500,
+      "concurrency_target": 192,
+      "branches_per_GPU_target": 24,
+      "previous_valid_units_not_duplicated": true,
+      "execution_stage": "historical_original_quality_disposition_preserved;scientific_scope_completed_by_independent_recovery",
+      "acknowledgement": {
+        "path": "receipts/C/C_D24_L11_RETEST_V1_ACK.json",
+        "sha256": "41df875c95c7cb24e4cdcb5ab97648629bd09fcaa806943f2c3efcef930fa10c"
+      },
+      "scientific_launch_observed": false,
+      "actual_192_concurrency_observed": false,
+      "analysis_review": {
+        "path": "deadline_20260924/L11_RECOVERY_V1/STATUS_AT_REVIEW.json",
+        "sha256": "d828b322b35f57aaa8fd08efa3895e6b9545bd38c7e4889d01eed4cad4741014"
+      },
+      "historical_status_preserved": "partial",
+      "scope_completion": {
+        "path": "deadline_20260924/L11_FINAL_ROLLUP_20260923/FINAL_ACCEPTANCE.json",
+        "sha256": "6cb70c5ae875b632d14c11d346acdd667c99f0cc1ae57ae8b673aca1f05306e3"
+      },
+      "remaining_scientific_units": 0
+    },
+    {
+      "id": "A_D24_L11_RENDER_RECOVERY_V1",
+      "owner": "A",
+      "revision": 1,
+      "status": "complete",
+      "brief": "tasks/A_D24_L11_RENDER_RECOVERY_V1.md",
+      "task": "tasks/A_D24_L11_RENDER_RECOVERY_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/L11_RECOVERY_V1/AUTHORIZATION.json",
+        "sha256": "ca6f92258260815495a016d8c25eb079e9e0949a38a2c5ece6b836c2ef6d0ccc"
+      },
+      "release": {
+        "path": "deadline_20260924/L11_RECOVERY_V1/AUTHORIZATION.json",
+        "sha256": "ca6f92258260815495a016d8c25eb079e9e0949a38a2c5ece6b836c2ef6d0ccc"
+      },
+      "expected_result": "receipts/A/A_D24_L11_RENDER_RECOVERY_V1_RESULT_r1.json",
+      "priority": "P0_L11_execution_recovery",
+      "dependencies": [],
+      "execution_stage": "analysis_accepted_complete_family_exited_no_followup",
+      "acknowledgement": {
+        "path": "receipts/A/A_D24_L11_RENDER_RECOVERY_V1_ACK.json",
+        "sha256": "74278cfc4416d1b8f01e10983e031d681dd1fa5c784c179de8cd23f5ed08047b"
+      },
+      "scientific_launch_observed": true,
+      "analysis_final_acceptance": {
+        "path": "deadline_20260924/L11_FINAL_ROLLUP_20260923/FINAL_ACCEPTANCE.json",
+        "sha256": "6cb70c5ae875b632d14c11d346acdd667c99f0cc1ae57ae8b673aca1f05306e3"
+      },
+      "remaining_scientific_units": 0,
+      "unused_allowance_closed": true
+    },
+    {
+      "id": "B_D24_L11_RENDER_RECOVERY_V1",
+      "owner": "B",
+      "revision": 1,
+      "status": "complete",
+      "brief": "tasks/B_D24_L11_RENDER_RECOVERY_V1.md",
+      "task": "tasks/B_D24_L11_RENDER_RECOVERY_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/L11_RECOVERY_V1/AUTHORIZATION.json",
+        "sha256": "ca6f92258260815495a016d8c25eb079e9e0949a38a2c5ece6b836c2ef6d0ccc"
+      },
+      "release": {
+        "path": "deadline_20260924/L11_RECOVERY_V1/AUTHORIZATION.json",
+        "sha256": "ca6f92258260815495a016d8c25eb079e9e0949a38a2c5ece6b836c2ef6d0ccc"
+      },
+      "expected_result": "receipts/B/B_D24_L11_RENDER_RECOVERY_V1_RESULT_r1.json",
+      "priority": "P0_L11_execution_recovery",
+      "dependencies": [],
+      "execution_stage": "analysis_accepted_complete_family_exited_no_followup",
+      "scientific_launch_observed": true,
+      "analysis_final_acceptance": {
+        "path": "deadline_20260924/L11_FINAL_ROLLUP_20260923/FINAL_ACCEPTANCE.json",
+        "sha256": "6cb70c5ae875b632d14c11d346acdd667c99f0cc1ae57ae8b673aca1f05306e3"
+      },
+      "remaining_scientific_units": 0,
+      "unused_allowance_closed": true
+    },
+    {
+      "id": "C_D24_L11_RENDER_RECOVERY_V1",
+      "owner": "C",
+      "revision": 1,
+      "status": "complete",
+      "brief": "tasks/C_D24_L11_RENDER_RECOVERY_V1.md",
+      "task": "tasks/C_D24_L11_RENDER_RECOVERY_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/L11_RECOVERY_V1/AUTHORIZATION.json",
+        "sha256": "ca6f92258260815495a016d8c25eb079e9e0949a38a2c5ece6b836c2ef6d0ccc"
+      },
+      "release": {
+        "path": "deadline_20260924/L11_RECOVERY_V1/AUTHORIZATION.json",
+        "sha256": "ca6f92258260815495a016d8c25eb079e9e0949a38a2c5ece6b836c2ef6d0ccc"
+      },
+      "expected_result": "receipts/C/C_D24_L11_RENDER_RECOVERY_V1_RESULT_r1.json",
+      "priority": "P0_L11_execution_recovery",
+      "dependencies": [],
+      "execution_stage": "analysis_accepted_complete_family_exited_no_followup",
+      "acknowledgement": {
+        "path": "receipts/C/C_D24_L11_RENDER_RECOVERY_V1_ACK.json",
+        "sha256": "6288c8dbb8b6c481f0e8707898d27dd61551ac6352edddefcd9e77377a450617"
+      },
+      "scientific_launch_observed": true,
+      "analysis_final_acceptance": {
+        "path": "deadline_20260924/L11_FINAL_ROLLUP_20260923/FINAL_ACCEPTANCE.json",
+        "sha256": "6cb70c5ae875b632d14c11d346acdd667c99f0cc1ae57ae8b673aca1f05306e3"
+      },
+      "remaining_scientific_units": 0,
+      "unused_allowance_closed": true
+    },
+    {
+      "id": "A_D24_CROSSBASE_H_SWEEP_V1",
+      "owner": "A",
+      "revision": 1,
+      "status": "ready",
+      "brief": "tasks/A_D24_CROSSBASE_H_SWEEP_V1.md",
+      "task": "tasks/A_D24_CROSSBASE_H_SWEEP_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/AUTHORIZATION.json",
+        "sha256": "4f8406e67e2d0b73beda277b3bc633749060f30e8420e8513285780a06952c5f"
+      },
+      "release": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/AUTHORIZATION.json",
+        "sha256": "4f8406e67e2d0b73beda277b3bc633749060f30e8420e8513285780a06952c5f"
+      },
+      "expected_result": "receipts/A/A_D24_CROSSBASE_H_SWEEP_V1_RESULT_r1.json",
+      "priority": "P0_user_crossbase_H_sweep",
+      "dependencies": [],
+      "remaining_scientific_units": 4000,
+      "execution_stage": "authorized_waiting_executor_ACK",
+      "scientific_launch_observed": false
+    },
+    {
+      "id": "B_D24_CROSSBASE_H_SWEEP_V1",
+      "owner": "B",
+      "revision": 1,
+      "status": "running",
+      "brief": "tasks/B_D24_CROSSBASE_H_SWEEP_V1.md",
+      "task": "tasks/B_D24_CROSSBASE_H_SWEEP_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/AUTHORIZATION.json",
+        "sha256": "4f8406e67e2d0b73beda277b3bc633749060f30e8420e8513285780a06952c5f"
+      },
+      "release": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/AUTHORIZATION.json",
+        "sha256": "4f8406e67e2d0b73beda277b3bc633749060f30e8420e8513285780a06952c5f"
+      },
+      "expected_result": "receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_RESULT_r3.json",
+      "priority": "P0_user_crossbase_H_sweep",
+      "dependencies": [],
+      "remaining_scientific_units": 945,
+      "execution_stage": "velocity_r3_running",
+      "scientific_launch_observed": true,
+      "analysis_decision_ref": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/B_RECOVERY_DECISION_V2.json",
+        "sha256": "111cb271708540bf10cd3dddc17b95cc3f8017f0dc6fd6c202a2db6e5115c415"
+      },
+      "ACK_received": true
+    },
+    {
+      "id": "C_D24_CROSSBASE_H_SWEEP_V1",
+      "owner": "C",
+      "revision": 1,
+      "status": "ready",
+      "brief": "tasks/C_D24_CROSSBASE_H_SWEEP_V1.md",
+      "task": "tasks/C_D24_CROSSBASE_H_SWEEP_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/AUTHORIZATION.json",
+        "sha256": "4f8406e67e2d0b73beda277b3bc633749060f30e8420e8513285780a06952c5f"
+      },
+      "release": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/AUTHORIZATION.json",
+        "sha256": "4f8406e67e2d0b73beda277b3bc633749060f30e8420e8513285780a06952c5f"
+      },
+      "expected_result": "receipts/C/C_D24_CROSSBASE_H_SWEEP_V1_RESULT_r1.json",
+      "priority": "P0_user_crossbase_H_sweep",
+      "dependencies": [],
+      "remaining_scientific_units": 4000,
+      "execution_stage": "authorized_waiting_executor_ACK",
+      "scientific_launch_observed": false
+    }
+  ],
+  "updated_at_utc": "2026-09-23T13:49:12.931494+00:00",
+  "current_scientific_scope_summary": {
+    "status": "all_assigned_L11_scientific_units_complete",
+    "acceptance": {
+      "path": "deadline_20260924/L11_FINAL_ROLLUP_20260923/FINAL_ACCEPTANCE.json",
+      "sha256": "6cb70c5ae875b632d14c11d346acdd667c99f0cc1ae57ae8b673aca1f05306e3"
+    },
+    "formal_tasks_remaining": 0,
+    "new_experiment_admissions": false,
+    "CPU_observers_may_remain_active": true,
+    "legacy_planning_statuses_are_not_current_compute_authority": true,
+    "remaining_scope_document": "../../docs/EXPERIMENT_STATUS_AND_REMAINING_20260923.md"
+  }
+}

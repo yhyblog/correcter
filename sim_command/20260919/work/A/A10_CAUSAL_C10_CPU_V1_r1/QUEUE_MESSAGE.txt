@@ -1,0 +1,20 @@
+A执行端交付 A10_CAUSAL_C10_CPU_V1，status=CPU_READY。ACK先前已写。本轮严格CPU：Torch/dlopen/NVML/CUDA/EGL/模型/环境/reset/holder查询停算/真实launcher/claim/安装/训练/删除/大权重重hash全部0。
+RESULT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_CAUSAL_C10_CPU_V1_RESULT.json
+RESULT SHA256: 64f445d2366c5c6b719c756596d2c7b53f21e9bf7d4d6f5f983c4f94ffe791e1
+REPORT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_CPU_V1/REPORT.md
+REPORT SHA256: 4005a8f4e012332e2fc760f5ab91671cbbb686b30c5ce5acdf1d9f94cf1211ad
+CPU_READY: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_CPU_V1/CPU_READY.json
+PROPOSAL: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_CPU_V1/proposal/PROPOSAL.json
+PROPOSAL SHA256: eff48e3138d85f365c4945ae865514a4e99dd98015a75971bbbd710774f9d535
+MANIFEST: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_CPU_V1/ARTIFACT_MANIFEST.json
+MANIFEST SHA256: 8cb67fc282b00d76b947f81b9344000fae8fe819dd4a42a81359cbcc60fd3ac8
+
+最小接口：固定shelf-place H20/cut5；t0 D预测在执行前保存，到cut5用实际obs/actions成熟残差；既有G0实际输入为cut context+已知next5+D预测，残差独立诊断，不改G0接口/阈值0.05/execute5_then_fixed10目标。真实触发与预定强制工程干预分列。P/V自身半径/raw位约束/无Q门继承，C10后丢40尾部+清空隐藏队列、native H20新采样首步后余19。
+
+分析需决定替代方案：现有get_env_state仅qpos/qvel，旧restore是reset+回放，缺完整隐藏状态恢复证明。因此报价同一formal.lock/全8holder生命周期内两个顺序新子进程，各自固定seed独立prefix。V cut5观测/动作/上下文/计划不匹配即停；匹配仍不宣称隐藏状态等价。第一路径提前终止即结束最小wave，不换seed/重试。
+
+完整上限：1命令/claim、2独立branch attempts、2wrapper/4native/2taskset、104native reset/208reset_model/52000初始化子步；32控制/426控制子步/34 RGB；452 native mj_forward，306显式graphics；7 VLA/70flow（P 3、V4含prefix与H20恢复），42 encoder、8D/4G0、11ensemble/44Q成员前向/4动作梯度。111caps细表和别名在RESOURCE_BUDGET。Post部署1/V2不变，无共享a0/prefix节省。每子进程1800+30、handoff名义300另计，整组退出后恢复；成功poll未知仍null，无补探针。
+
+16集成fixture+19元数据fixture、定向AST/shell、最终纯JSON检查PASS；六份corrector数值文件字节不变、UUID parser AST不变。27产物引用、393代码文件；manifest列415包文件及44工作证据，交接前SHA再核对一致。CPU准备的早期fixture失败及修正保留（详CPU_FIX_HISTORY）；work中pre-seal检查是阶段证据，最终绑定以RESULT/CPU_READY、SEALED_PUBLICATION_CHECK及封存manifest为准。
+
+新整体仍未实测，非触发有效性/任务成功率/排名或MT50训练证明。真实release/claim未创建，公共interface_v1和旧八release不变，B不参与。请审阅独立新提案后决定是否另发 A10_CAUSAL_C10_PREFLIGHT_V1 / P10_A_CAUSAL_C10_PREFLIGHT_V1；本机不自动下一阶段。

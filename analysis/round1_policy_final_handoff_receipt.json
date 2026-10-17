@@ -1,0 +1,56 @@
+{
+  "status": "passed_supplemental_handoff_no_change_to_stage_decision",
+  "checked_at_utc": "2026-09-16T21:34:02.932280+00:00",
+  "evidence": {
+    "executor_handoff": {
+      "path": "coordination/NATIVE10_ROUND1_POLICY5_EXECUTOR_HANDOFF_V2.md",
+      "sha256": "b2a99d54a87f3eb03e5c8814b0546cb1f5b4265995cbd98242d0111b48440b81"
+    },
+    "delivery_seal": {
+      "path": "outputs/native10_training_20260916/policy_reports/round1_policy_v2/complete.json",
+      "sha256": "394fb10022f98ff950214e0ba8d2ed6e85e75f12dcc2b316535396fabb18a270"
+    },
+    "independent_reaggregation_seal": {
+      "path": "outputs/native10_training_20260916/policy5_independent_audits/round1_policy_v1_independent/complete.json",
+      "sha256": "7f11a12d453ba8071ef9ccf07bb9bbf0d150f2925f166cb8f90190087c5e4f1a"
+    },
+    "raw_q_cost_seal": {
+      "path": "outputs/native10_training_20260916/policy5_cost_diagnostics/round1_policy_v1/complete.json",
+      "sha256": "2794a827e559ee8782dd540462e583d0bf8c38eefe49ceed75259c45de8ad595"
+    }
+  },
+  "bounded_verification": {
+    "new_seals": 3,
+    "associated_files": 12,
+    "associated_bytes": 22527758,
+    "all_hashes_matched": true,
+    "full_rollout_audit_repeated": false
+  },
+  "findings": {
+    "success_counts_normal_replan_velocity_direct_post": [
+      221,
+      257,
+      265,
+      268,
+      267
+    ],
+    "denominator_per_arm": 400,
+    "additional_sealed_evidence_agrees_with_existing_independent_reviews": true,
+    "suffix_audit_scope": "24857 actual suffix records in new round1_policy_v1 only; no historical round1_labels branch artifacts. Does not establish full old/new cross-stage suffix/noise equivalence.",
+    "correlation_interpretation": "Pearson .116/.050/.020 is descriptive on 95 reached sources with four noisy paired suffix outcomes each; not causal proof of the sole failure mechanism.",
+    "timing_interpretation": "Worker initialization includes input checks and torch/CUDA/model setup; post gradient substep is not full policy inference cost."
+  },
+  "resources": {
+    "total_simulator_attempts": 25474,
+    "total_optimizer_updates": 19200,
+    "this_review_simulator_attempts": 0,
+    "this_review_optimizer_updates": 0,
+    "this_review_model_inference_calls": 0
+  },
+  "decision": {
+    "ready_version": 8,
+    "ready_sha256": "decbf30a364e1cc8e56bdc225bc99cce9fe1a5d810aaa1a869604bb3aeb89ec5",
+    "new_blockers": [],
+    "action": "Proceed under existing READY v8 conditional round2 collection release; do not repeat round1 or revise frozen models/methods. No new approval or READY revision required for this supplemental handoff."
+  }
+}

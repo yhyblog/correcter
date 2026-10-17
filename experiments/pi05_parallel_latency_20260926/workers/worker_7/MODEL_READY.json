@@ -1,0 +1,62 @@
+{
+  "status": "ready",
+  "pid": 3904698,
+  "device": "cuda:0",
+  "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model",
+  "NFE": 10,
+  "raw_horizon": 50,
+  "natural_H": 10,
+  "nominal_execution_Hz": 30,
+  "nominal_natural_queries_Hz": 3,
+  "D": [
+    4474116,
+    4474116
+  ],
+  "G0": [
+    1468033,
+    1468033
+  ],
+  "Q": [
+    3781122,
+    3781122,
+    3781122,
+    3781122
+  ],
+  "Q_device": "cpu",
+  "Q_dtype": "float32",
+  "Q_cpu_threads": 2,
+  "Q_initialization": "random untrained MLPs; original per-member preprocessing buffers",
+  "q_reference_assets": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/ensembles/L11_s9101",
+  "DG0_assets": [
+    {
+      "D_member": 241,
+      "G0_member": 341,
+      "D_checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241/finetune_400.pt",
+      "D_normalization": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241/normalization.json",
+      "D_selection_metadata": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241/complete.json",
+      "G0_checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_341/selected.pt",
+      "D_constructor": "ac_tmil.future_aware.models.WorldModel(norm,width=256)",
+      "G0_constructor": "ac_tmil.future_aware.models.BenefitModel(norm,future=True,width=128)",
+      "load_interface": "load_state_dict(torch.load(checkpoint,map_location=device,weights_only=True),strict=True); eval().requires_grad_(False)"
+    },
+    {
+      "D_member": 242,
+      "G0_member": 342,
+      "D_checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242/finetune_400.pt",
+      "D_normalization": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242/normalization.json",
+      "D_selection_metadata": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242/complete.json",
+      "G0_checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_342/selected.pt",
+      "D_constructor": "ac_tmil.future_aware.models.WorldModel(norm,width=256)",
+      "G0_constructor": "ac_tmil.future_aware.models.BenefitModel(norm,future=True,width=128)",
+      "load_interface": "load_state_dict(torch.load(checkpoint,map_location=device,weights_only=True),strict=True); eval().requires_grad_(False)"
+    }
+  ],
+  "shared_frozen_PI05": true,
+  "separate_preprocessors": true,
+  "plan_cuda_stream": 94753871910560,
+  "feedback_cuda_stream": 94753871912704,
+  "velocity_hook": false,
+  "per_query_hashes": false,
+  "per_query_device_synchronize": false,
+  "load_seconds": 135.5728681869805
+}

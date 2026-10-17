@@ -1,0 +1,202 @@
+{
+  "document": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/docs/EXPERIMENT_RESULTS_MASTER.md",
+  "updated_at_utc": "2026-09-23T01:54:01.371871+00:00",
+  "purpose": "single rolling paper-results document; future results replace corresponding blank cells",
+  "source_snapshots": {
+    "E4_main": "deadline_20260924/MAIN_FINAL_CELLS_WITH_COSTS.csv",
+    "E4_pairs": "deadline_20260924/MAIN_FINAL_PAIRED_COMPARISONS.csv",
+    "E1": "results/B/B_D24_SPRINT_V1/r1/D24_E1_RENDER_REPAIR_r3/E1_COMPLETE_CELLS.csv",
+    "E6": "results/A/A_D24_CORE_REMAINDER_V1/E6_PER_TASK_CELLS.csv",
+    "E3": "deadline_20260924/E3_H10_EXTERNAL_FINAL_20260922.md",
+    "E8": "results/C/C_D24_BASELINE_GAPS_E8_TABLES_V1/E8_TABLE.csv",
+    "E8_pairs": "results/C/C_D24_BASELINE_GAPS_E8_TABLES_V1/E8_PAIRED.csv",
+    "E5": "results/A/A_D24_OURS_E5_REPORT_V1/PAPER_COST_TABLE.csv",
+    "E5_timing": "results/A/A_D24_OURS_E5_REPORT_V1/TIMING_TABLE.csv",
+    "E5_entry_timing": "results/A/A_D24_OURS_E5_REPORT_V1/ENTRY_TIMING_TABLE.csv",
+    "E5_parameters": "results/A/A_D24_OURS_E5_REPORT_V1/PARAMETER_COUNTS.json",
+    "pilot": "deadline_20260924/PILOT_FINAL_RESULTS.csv",
+    "standalone": "../../docs/STANDALONE_CORRECTOR_ABLATION_20260918.md",
+    "E4_primary_multi": "deadline_20260924/analysis_20260922_current/trigger/TRIGGER_SUCCESS_TABLE.csv",
+    "E5_primary_multi": "deadline_20260924/analysis_20260922_current/trigger/TRIGGER_CELLS_AND_COSTS.csv",
+    "current_selected_Q_Post_pairs": "deadline_20260924/analysis_20260923_claims/main_pairs.json",
+    "current_selected_Q_Post_costs": "deadline_20260924/analysis_20260923_claims/costs.json",
+    "current_selected_Q_Velocity_and_E6_costs": "deadline_20260924/analysis_20260923_claims/master_costs_e6_addendum.json",
+    "current_selected_Q_E3_pairs": "results/A/A_D24_FULL_Q_AUTORUN_POST_LED_V1/E3_PAIRED.csv",
+    "current_selected_Q_Smol_pairs": "results/B/B_D24_FULL_Q_LOSS_REFRESH_V1/evaluation_r1/PAIRED.json",
+    "current_selected_Q_X_pairs": "results/C/C_D24_FULL_Q_LOSS_REFRESH_V1/PAIRED.json"
+  },
+  "pending_tables": {
+    "F1": {
+      "owner": "A",
+      "task": "A_D24_LIBERO_FULL_NATIVE_V1",
+      "scope": "native Full Post/Velocity success per suite",
+      "planned_per_method": 400,
+      "fill_only_final_method_outcomes": true
+    },
+    "F2": {
+      "owner": "C",
+      "task": "C_D24_BASELINE_GAPS_E8_TABLES_V1",
+      "scope": "original N gap dispositions and updated valid subset",
+      "unknown_is_not_failure": true
+    },
+    "F3": {
+      "owner": "A",
+      "scope": "new Full paired/cost/parameters; cannot copy operator values"
+    },
+    "F4": {
+      "owner": "user",
+      "scope": "one real-world setting, actual episode count not prescribed"
+    }
+  },
+  "missing_semantics": {
+    "blank": "pending_result",
+    "NR": "completed_but_unrecorded_or_not_reliably_recoverable",
+    "not_planned": "not_a_future_work_item"
+  },
+  "no_new_experiments_or_weights_copied": true,
+  "R_supplement": {
+    "task_B": "B_D24_R_H20_H30_V1",
+    "task_C": "C_D24_R_H40_H50_V1",
+    "table": "F5",
+    "new_episodes": 2000,
+    "unique_existing_sources": 500,
+    "new_sources": 0,
+    "H": [
+      20,
+      30,
+      40,
+      50
+    ],
+    "status": "complete_2000_valid"
+  },
+  "trigger_modes_supplement": {
+    "protocol": "deadline_20260924/TRIGGER_TIMING_AND_MULTIPLICITY_V1.md",
+    "authorization": "deadline_20260924/TRIGGER_TIMING_MULTIPLICITY_AUTHORIZATION_V1.json",
+    "random_schedule": "deadline_20260924/RANDOM_ONCE_SCHEDULE_V1.json",
+    "source_subset": "deadline_20260924/TRIGGER_MODE_SOURCES_V1.json",
+    "status": "complete_15000_valid_15025_attempts",
+    "A_branch": "Velocity",
+    "B_branch": "Post",
+    "C_branch": "R",
+    "new_modes": [
+      "Random-once",
+      "G0-multi"
+    ],
+    "new_cells": 30,
+    "new_episodes": 15000,
+    "existing_source_identities": 500,
+    "new_initial_states": 0,
+    "new_training": 0,
+    "tables": [
+      "F6",
+      "F7"
+    ]
+  },
+  "latest_analysis": "../../docs/POST_PAPER_CLAIMS_20260923.md",
+  "latest_valid_main_trigger_cells": 50,
+  "latest_valid_main_trigger_episodes": 25000,
+  "trigger_modes_final_acceptance": "deadline_20260924/TRIGGER_MODES_FINAL_ANALYSIS_ACCEPTANCE_20260922.json",
+  "per_base_auxiliary_stage": "Smol_and_X_specialized_heads_complete_selected_full_Q_each_64000_updates_and_PV1000_valid",
+  "primary_protocol": "G0-multi; no total intervention count cap; other trigger and commitment rules unchanged",
+  "primary_cells": 20,
+  "primary_valid_episodes": 10000,
+  "historical_once_preserved": true,
+  "multi_primary_validation": {
+    "plan": "deadline_20260924/MULTI_PRIMARY_VALIDATION_PLAN_V1.md",
+    "authorization": "deadline_20260924/MULTI_PRIMARY_VALIDATION_AUTHORIZATION_V1.json",
+    "new_first_evaluations": 11800,
+    "A": 8800,
+    "B": 1500,
+    "C": 1500,
+    "new_training_updates": 0,
+    "new_collection": 0,
+    "status": "superseded_in_part_by_user_full_Q_selection; completed_E6_and_old_partial_E1_preserved",
+    "tables": [
+      "F8-multi",
+      "F9",
+      "F10",
+      "F11"
+    ]
+  },
+  "scientific_configuration_status": "complete_selected_L01_Post_only_dev_fixed_fit9101_multi",
+  "full_Q_selection": {
+    "authorization": {
+      "path": "deadline_20260924/FULL_Q_LOSS_SELECTION_AUTHORIZATION_V1.json",
+      "sha256": "8fc0bf2c7c0c761d9fba424fb7fb127af8a9c505668fccd7231126535c6422c1"
+    },
+    "new_first_evaluations": 11600,
+    "new_optimizer_updates": 320000,
+    "selection": "Post-only development; Velocity selection weight0; fixed deployment fit9101",
+    "test_used_for_selection": false,
+    "status": "complete_11600_valid",
+    "chosen_loss": "L01",
+    "valid": 11600,
+    "remaining": 0
+  },
+  "Random_multi": {
+    "status": "cancelled_by_user",
+    "planned_cancelled": 7500,
+    "actual_entered_at_A_cancellation": 0,
+    "Random_once_preserved": true
+  },
+  "evaluation_concurrency": {
+    "target_total_workers": 24,
+    "per_GPU": 3,
+    "GPUs": 8,
+    "resource_fallback_requires_local_evidence": true,
+    "rule": {
+      "path": "deadline_20260924/EVALUATION_CONCURRENCY_24_V1.md",
+      "sha256": "8b13ba1b96d286b1be68f6d96c300017af95ae637120bb7c34c69ac943e33b29"
+    }
+  },
+  "current_selection_rule": {
+    "path": "deadline_20260924/POST_LED_SELECTION_OVERRIDE_V1.json",
+    "sha256": "fa907477112320e7f8356282c5ba64742452172dee998e9efc20a82b92b9c4b1"
+  },
+  "current_paper_branch": "Post",
+  "Velocity_scope": "continue_authorized_experiments_other_work_not_current_paper_tables_figures",
+  "autonomous_recovery_policy": {
+    "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V1.json",
+    "sha256": "87878b0e2019048935904d639d1d15a1af9f0778047171a508054fecaadd4ab0"
+  },
+  "latest_completion": {
+    "path": "deadline_20260924/FULL_Q_FINAL_COMPLETION_20260923.json",
+    "sha256": "9608d94ca4a888fac06d5edf2cfaa0fe1118702ecede69529d1f90dd85b56305"
+  },
+  "current_scientific_matrix_valid": 11600,
+  "current_scientific_matrix_remaining": 0,
+  "latest_transcription": {
+    "utc": "2026-09-23T01:27:03.348026+00:00",
+    "source": "deadline_20260924/analysis_20260923_claims/MASTER_TRANSCRIPTION_20260923.json",
+    "scientific_matrix_valid_unchanged": 11600,
+    "new_scientific_operations": 0,
+    "LIBERO": "not_processed_this_update",
+    "historical_Q_preserved": true
+  },
+  "current_table_anchors": {
+    "full_Q_multi_loss": "../../docs/EXPERIMENT_RESULTS_MASTER.md#current-multi-loss",
+    "F8_selected_Q": "../../docs/EXPERIMENT_RESULTS_MASTER.md#current-f8"
+  },
+  "historical_pending_snapshots": "../../docs/archive/EXPERIMENT_RESULTS_MASTER_OLD_PENDING_SNAPSHOTS_20260923.md",
+  "paper_document": "../../docs/EXPERIMENT_FOR_PAPER.md",
+  "section_order": [
+    "main_H_scan",
+    "external_comparison",
+    "loss_ablation",
+    "trigger",
+    "adaptation",
+    "cost",
+    "historical_pilot",
+    "historical_standalone",
+    "other_scope",
+    "update_rules",
+    "history",
+    "definitions"
+  ],
+  "configuration_discussion": {
+    "proposal": "L11",
+    "status": "user_question_only_not_executed",
+    "recorded_results_configuration": "L01/fit9101",
+    "no_relabeling": true
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "status": "ACK_and_saved_start_evidence_accepted_wave_running",
+  "task_id": "A11_COMMON_POOL_BATCH2_V1",
+  "revision": 1,
+  "at_utc": "2026-09-20T21:04:47.797414+00:00",
+  "references": {
+    "ack": {
+      "source_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A11_COMMON_POOL_BATCH2_V1_ACK.json",
+      "snapshot_path": "manifests/A11_BATCH2_ACK_RUNNING_V1/ack.json",
+      "sha256": "1166de4721ee69d416f7dd139f0949395af4d3a21cc491ca631ef05d091c6e2b",
+      "size_bytes": 9640,
+      "observed_at_utc": "2026-09-20T21:04:47.797414+00:00"
+    },
+    "command": {
+      "source_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_commands/P11_A_COMMON_POOL_BATCH2_V1.json",
+      "snapshot_path": "manifests/A11_BATCH2_ACK_RUNNING_V1/command.json",
+      "sha256": "23ff8011f391a8bab6feeb2939349d852aa576af212c7a75be903874253e6008",
+      "size_bytes": 156,
+      "observed_at_utc": "2026-09-20T21:04:47.797414+00:00"
+    },
+    "claim": {
+      "source_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_claims/P11_A_COMMON_POOL_BATCH2_V1.json",
+      "snapshot_path": "manifests/A11_BATCH2_ACK_RUNNING_V1/claim.json",
+      "sha256": "e756b870d971ec4ca2b9ad1c8be3f079cb53069c1d606d9a50996ac8f4ef5c73",
+      "size_bytes": 205,
+      "observed_at_utc": "2026-09-20T21:04:47.797414+00:00"
+    },
+    "scheduler_snapshot": {
+      "source_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/reserved/SCHEDULER_EVENTS.jsonl",
+      "snapshot_path": "manifests/A11_BATCH2_ACK_RUNNING_V1/scheduler_snapshot.jsonl",
+      "sha256": "ec6b9a1a1e19fcfa081adcd64e4f1c988d39814a1a791db2d593bf58b683d678",
+      "size_bytes": 1594,
+      "observed_at_utc": "2026-09-20T21:04:47.797414+00:00"
+    },
+    "storage_admission": {
+      "source_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/launcher/STORAGE_ADMISSION.json",
+      "snapshot_path": "manifests/A11_BATCH2_ACK_RUNNING_V1/storage_admission.json",
+      "sha256": "d741baf82b1c7b995d1fd4596b59c36efe66601d204f413b12e84af3b2405562",
+      "size_bytes": 1782,
+      "observed_at_utc": "2026-09-20T21:04:47.797414+00:00"
+    },
+    "lifecycle_request": {
+      "source_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/launcher/LIFECYCLE_REQUESTED.json",
+      "snapshot_path": "manifests/A11_BATCH2_ACK_RUNNING_V1/lifecycle_request.json",
+      "sha256": "a25af23d84e6f523ce0264eaec629fa59708689bf68bc4e1b220011d064b1fe1",
+      "size_bytes": 141,
+      "observed_at_utc": "2026-09-20T21:04:47.797414+00:00"
+    },
+    "p00_assembly_train0000_cut5_START": {
+      "source_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/reserved/normal_START.json",
+      "snapshot_path": "manifests/A11_BATCH2_ACK_RUNNING_V1/p00_assembly_train0000_cut5_START.json",
+      "sha256": "ee48d40c7062419a64a2d665672e1f25d588f7d9635a36fef7507ff35a73fb7e",
+      "size_bytes": 734,
+      "observed_at_utc": "2026-09-20T21:04:47.797414+00:00"
+    },
+    "p01_basketball_train0000_cut5_START": {
+      "source_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/reserved/normal_START.json",
+      "snapshot_path": "manifests/A11_BATCH2_ACK_RUNNING_V1/p01_basketball_train0000_cut5_START.json",
+      "sha256": "6e67e53531e6c8f55f8e130bbd971f49a02f159cff2c1971e3518aac81e3fb6d",
+      "size_bytes": 738,
+      "observed_at_utc": "2026-09-20T21:04:47.797414+00:00"
+    }
+  },
+  "authorization_refs_current_and_snapshots_verified": 9,
+  "command_script_verified": true,
+  "all116caps_match": true,
+  "command_invocations": 1,
+  "release_claims": 1,
+  "command_started_at_utc": "2026-09-20T21:00:16.872577+00:00",
+  "started_branches_in_saved_snapshot": [
+    {
+      "schema": "private_causal_event_v1",
+      "branch": "batch_manager",
+      "source_id": "PROPOSED_A11_batch2_A_V1",
+      "parent_source_id": "not_applicable:batch",
+      "episode_id": "not_applicable:batch__batch_manager",
+      "split": "train",
+      "synthetic": false,
+      "event_id": 3,
+      "event": "branch_started",
+      "parent_key": "p00_assembly_train0000_cut5",
+      "attempt_role": "normal",
+      "gpu_uuid": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe"
+    },
+    {
+      "schema": "private_causal_event_v1",
+      "branch": "batch_manager",
+      "source_id": "PROPOSED_A11_batch2_A_V1",
+      "parent_source_id": "not_applicable:batch",
+      "episode_id": "not_applicable:batch__batch_manager",
+      "split": "train",
+      "synthetic": false,
+      "event_id": 4,
+      "event": "branch_started",
+      "parent_key": "p01_basketball_train0000_cut5",
+      "attempt_role": "normal",
+      "gpu_uuid": "GPU-64240b2e-5845-da58-e703-61322f21cbf6"
+    }
+  ],
+  "branch_exit_result_in_saved_snapshot": false,
+  "final_actual_resource_counts": null,
+  "new_accepted_parents": 0,
+  "accepted_paired_parent_count": 8,
+  "processed_plan_slots_before_batch_acceptance": 9,
+  "remaining_unattempted_plan_slots_before_batch_acceptance": 491,
+  "CONTROL_revision": 48,
+  "TASK_BOARD_revision_before": 56,
+  "TASK_BOARD_revision_after": 57,
+  "no_runtime_or_hardware_probe": true,
+  "release_remains_active_for_existing_wave_only": true,
+  "no_retry_or_new_authorization": true
+}

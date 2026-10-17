@@ -1,0 +1,164 @@
+{
+  "schema": "native10_calibration_entry_independent_review_v1",
+  "status": "passed",
+  "created_utc": "2026-09-17T02:28:45.821983+00:00",
+  "reviewer": "analysis/critic_data_audit",
+  "blockers": [],
+  "assessment": "Conditional release of the planned calibration collection is supported. Requires exact new READY and independent config/freeze; does not release a selection seal, heldout, retraining or any additional policy wave.",
+  "bindings": {
+    "handoff_sha256": "1fec5140e1ffadbb8dafca0bc32645b24582a6c4aca49f19f1d5df4e58e45302",
+    "handoff_complete_sha256": "640a19453ee0d1bc4c5c99212d0db5fb86113cbbc782c00611f3b7890e1dfadc",
+    "future_ready_fields_sha256": "c4cb7324710212133750c2121ffb959be92bd29b83bd06d81e2cdc21e486e200",
+    "pending_complete_sha256": "fa6cc1a31d91e7229d00fc4dcbddc110aae83a725aae5a39a8c625fa5f4a8e77",
+    "pending_config_sha256": "a4149b8d75b4ff58290bf230d2adb6eb4a2b17cdf68801985751deb482a965e1",
+    "ready_contract_sha256": "9fd6256ba1cf9e0b043f26fef9621586530c047d4c76c3502442b0b2c98a812e",
+    "cpu_complete_sha256": "7a907837ff2b46f11caf9b23d1bafcc1120733d54608eb46f40228e05bfbf04d",
+    "cpu_result_sha256": "a270757ac4a9d1120b4bd204fabe186bbbb7f280e5c432488e2bae6503689bd3",
+    "selected_complete_sha256": "f40ff4f3356ee8f14d687348f9f9cc7addf1b1e93233b81645312973f7e02d6a",
+    "model_review_sha256": "51dc687f285e92c0b81032bad5694ebca7f649fba597e121943362871305a928"
+  },
+  "registration": {
+    "primary_slots": 100,
+    "per_task": 20,
+    "ordered_backups": 200,
+    "two_ordered_backups_per_primary": true,
+    "primary_ids_sha256": "d2b7ca3b17c322e28610735d871dc319e5e7f24439d2cb4c48c5d00ec705f44e",
+    "replacement_candidates_sha256": "0289494c9cd4cc15e1a967fc36a86e4fda6a5715f427b34c8ffcf254647984dc",
+    "primary_and_backup_rows_match_original_registration": true,
+    "first_alarm_only": true,
+    "no_training_fallback": true,
+    "replicates": 2,
+    "per_arm_outcome_denominator": 200,
+    "new_capture_required": true,
+    "old_development_anchor_or_guided_reuse": false,
+    "actual_physical_scene_uniqueness_not_yet_established": true
+  },
+  "scientific_method": {
+    "fixed_model": "A4000 four members",
+    "primary_injection": "post",
+    "physical_arms": [
+      "continue_native10",
+      "alarm_replan10",
+      "velocity",
+      "direct",
+      "post"
+    ],
+    "global_choice_applied_during_collection": false,
+    "acceptance": {
+      "primary_method": "post",
+      "fallback_method": "alarm_replan10",
+      "rule": "mean_paired_post_minus_replan_strictly_positive",
+      "source_denominator": 100,
+      "replicates": 2,
+      "no_cut_difference": 0
+    },
+    "proposal_semantics": "Only after all100 complete records pass artifact/scene/resolution audit: integer total post successes minus replan successes >0 proposes post; zero or negative proposes original same-a0 replan. No Q/CI/task gate or threshold search. Statistics is pure and has no selection-seal or heldout writer.",
+    "no_cut": "Known common outcome broadcast to all5 arms and2 suffix slots, zero difference and complete100 denominator.",
+    "technical_missing": "Missing/exhausted-backup slots prevent a proposal; not converted to failure or zero.",
+    "source_replacement": "Only registered ordered backup chain, duplicate_initial_scene or initialization_failed before first action. Never replace based on outcome."
+  },
+  "actual_entry_chain": [
+    "calibration_prepare_v1.freeze checks both precise release scopes, exact pending/contract/CPU9-code binding and captured immutable READY bytes; independent config/freeze is required.",
+    "calibration_runner_v1.verify_frozen calls actual validate_calibration_inputs(require_release=True) and verify_authorization_inventory before worker construction.",
+    "worker uses create_calibration_collector then collect_calibration_slot, whose only resolution path is the existing guarded ordered pre-action resolve_slot.",
+    "CalibrationCollector verifies actual A4000 selector path/four hashes/tensor immutability; only the original100 calibration primaries and200 specified backups can be authorized.",
+    "New source and new bank use the frozen first legal alarm/native10/raw protocol. Before branches, the guarded bank checks source/cut/seed/noise identity, own raw50 a0, C(raw), mask/tail, existing matched amplitudes and finite gradient metadata. No equality against old development a0 is imposed.",
+    "_CalibrationLedger permits only primary capture in calibration, backup capture in shared technical_reserve, and this new calibration bank/five arms/two repeats; other splits, resources and identities rejected.",
+    "Full32-worker8-GPU wave uses lifecycle, hold_idle=false; owned failures preserve attempts and do not auto-retry, auto-select or advance to heldout."
+  ],
+  "freeze_and_append_boundaries": {
+    "absolute_relative_nested_refs": "authorization_references recursively recognizes path/SHA and *_path pairs, directory/seal pairs and file-to-SHA maps. Every original and snapshot is added to freeze.files and checked by the actual runner inventory.",
+    "scope_of_recursion": "Nested values in READY itself; not arbitrary recursive contents of every referenced JSON. Referenced seals retain their separate dependency semantics.",
+    "ready_race_guard": "Freeze captures READY bytes, checks them after release/CPU binding and before final freeze, copies those exact bytes; changed READY is rejected.",
+    "live_logs": "Direct SHA-bound references to live budget/attempts.jsonl or scene_registry/entries.jsonl are rejected. Future READY must use the provided sealed budget snapshot.",
+    "scene_prefix": "700 existing records/471628 bytes are sealed; live registry is verified only against that unchanged prefix and may legitimately append. Original authorized prefix binding is preserved when snapshot is copied into the new protocol.",
+    "actual_scenes": "Registration alone does not establish20 unique real scenes per task. The original pre-action scene fingerprint/registry check must establish them during capture."
+  },
+  "resources": {
+    "calibration_stage_simulator_limit": 1200,
+    "calibration_stage_optimizer_limit": 0,
+    "primary_capture_limit": 100,
+    "bank_restore_upper_bound": 100,
+    "physical_branch_upper_bound": 1000,
+    "reserve_stage": "technical_reserve",
+    "reserve_scope": "calibration_initialization_replacements",
+    "reserve_shared_workflow_limit": 1200,
+    "reserve_not_new_allocation": true,
+    "global_simulator_limit": 50000,
+    "global_optimizer_limit": 51200,
+    "global_recorded_before": {
+      "ledger": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_independent_audits/round2_policy_v1_independent/budget_snapshot.jsonl",
+      "ledger_sha256": "8af52eeec7a34958d64205790010160cf04393f8db995c6b4707916c0f3dee2d",
+      "optimizer_updates": 51200,
+      "simulator_attempts": 44869,
+      "technical_reserve_used": 0
+    }
+  },
+  "cpu_evidence": {
+    "tests_passed": 79,
+    "pytest_seconds": 4.53,
+    "outer_wall_seconds": 6.674337467178702,
+    "shell_returncode": 0,
+    "code_file_count": 9,
+    "before_after_current_code_identity_matches": true,
+    "old96_code_unchanged_reported": true,
+    "preparation_ledger_unchanged": true,
+    "synthetic_only": true,
+    "no_tests_rerun": true
+  },
+  "required_before_collection": [
+    "New READY must copy the exact future calibration and calibration_preparation_binding objects and release both calibration and calibration_initialization_replacements.",
+    "Bind this entry review and replace inherited live-ledger hash reference with the proposed immutable snapshot; let new recursive inventory verify all absolute/relative/nested refs.",
+    "Generate and verify the isolated freeze with the actual v2 CPU evidence; then one lifecycle launch.",
+    "After all100 valid sources finish, perform actual artifact/suffix/scene/budget audit before statistics proposal; proposal does not itself authorize or write final choice/heldout."
+  ],
+  "verified_small_files": {
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_preparations/calibration_pending_v1/config.json": "a4149b8d75b4ff58290bf230d2adb6eb4a2b17cdf68801985751deb482a965e1",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_preparations/calibration_pending_v1/input_validation.json": "27ddd5b4134dbe6255b736090f4adbbd26ee36f7d9d3101df467d825e5e2cef0",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_preparations/calibration_pending_v1/primary_manifest.json": "0c111f44ea26bc23596cce7fbce5501fdf655bdd4a9c63426892a7d23742b9d4",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_preparations/calibration_pending_v1/ready_contract.json": "9fd6256ba1cf9e0b043f26fef9621586530c047d4c76c3502442b0b2c98a812e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_preparations/calibration_pending_v1/result.json": "bd933096cf40dd009d95e733fbd86c64ba348aee159a50c607e191112e88be69",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_preparations/calibration_pending_v1/scene_registry_before.jsonl": "881f3f0b4e191175801c9ef76b22903af6e258e8a73ddf008bd82c44301d60f8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/calibration_cpu_20260917_v2/code_before.json": "443cb6abae4e18e04dfc6eb440caa091aff1928efab5e04bcf4e2ebb06e2d1b8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/calibration_cpu_20260917_v2/command.json": "884803e8c8c45f4779bb808b2c5bfa265497830f5c42d7a9594f52a17297f4b6",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/calibration_cpu_20260917_v2/junit.xml": "3672651bb4a2f20a0dbeae44a2e745f9d25090e6d82fa1d61b797434b08b78ab",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/calibration_cpu_20260917_v2/previous_evidence.json": "40b138fde61283c809084e0d35a085873524c0f6a90a93125c8a63f1d2f8f235",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/calibration_cpu_20260917_v2/pytest.log": "053648fa1fb1aee01d99c6c155bd6d98b8105e3c290ea798a98cdb69a13cfad0",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/calibration_cpu_20260917_v2/resources_before.json": "76bcf053b0c6aa1ec8e8e241b1973c5a37062338aa84a17a438d16e265cf0b5d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/calibration_cpu_20260917_v2/result.json": "a270757ac4a9d1120b4bd204fabe186bbbb7f280e5c432488e2bae6503689bd3",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/calibration_cpu_20260917_v2/shell.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_preparation_handoffs/calibration_v1/code_sha256.json": "443cb6abae4e18e04dfc6eb440caa091aff1928efab5e04bcf4e2ebb06e2d1b8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_preparation_handoffs/calibration_v1/cpu_and_input_checks.json": "578ef25e678f5cd2e3e1208f3cc4869804679b9499755ce7fcc940ed90ce4497",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_preparation_handoffs/calibration_v1/future_ready_fields.json": "c4cb7324710212133750c2121ffb959be92bd29b83bd06d81e2cdc21e486e200",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_preparation_handoffs/calibration_v1/gpu_status.json": "39679d5b735c0356d54980d7ca155648425278008b6b068d31e0eca3423b34fd",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_preparation_handoffs/calibration_v1/report.md": "1fec5140e1ffadbb8dafca0bc32645b24582a6c4aca49f19f1d5df4e58e45302",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_preparation_handoffs/calibration_v1/summary.json": "cbaa013b0701e23b66e38c9c821eb2953ed4404eb6df129996d311dccdc10279"
+  },
+  "tested_current_code_sha256": {
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/calibration_collection_v1.py": "50cb00e7cca75e25268700c18cd61c6c246a24ae53c379f19a659113307622d2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/calibration_prepare_v1.py": "1c092dd5239339ad3d7927aa2fd1679c7559258848da82c1a28983727c212b2d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/calibration_runner_v1.py": "82401ae6aea810513d54f4e193216b690177a472c054fdd1b9c0f3216b01b6cd",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/calibration_statistics_v1.py": "3fcbf7d925a7097352ec77cd804f2705f1010ee2528c93e33c549d12e24103be",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/run_calibration_gpu_v1.sh": "1bca1b2b631b130df539a4b39b131183c706c05b450374f2c59d78e35fc83299",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/test_calibration_collection_v1.py": "117a3b5429ea33d648b5cc8050ad110dc1ebebe8c6b8be3a6a694347794dfea4",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/test_calibration_prepare_v1.py": "42c411361607d9285bea8baadb77ff18ab8b23564ef75d989a3c069a62d25714",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/test_calibration_runner_v1.py": "98500051fc0f6682a3e8a484a09593432d90d1d5ee8dcea871a4cafdecbe6888",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/test_calibration_statistics_v1.py": "f2fc53d8b1a9d8d04bc2e18abdfa22c54af9b22a22a7b1ecb41f4cde8c5e4593"
+  },
+  "operations_performed": {
+    "model_calls": 0,
+    "weights_loaded": 0,
+    "simulator_calls": 0,
+    "optimizer_updates": 0,
+    "tests_rerun": 0,
+    "freeze_calls": 0,
+    "calibration_outcomes_read": 0,
+    "heldout_reads_or_initializations": 0,
+    "READY_mutations": 0
+  },
+  "limits": [
+    "Bounded static entry/method inspection and sealed79-test reuse; real calibration has not been validated by this review.",
+    "No repeated training/model audit or700-source raw trajectory review.",
+    "Actual global selection remains a later proposal and separately approved seal; no method efficacy claim follows from preparation."
+  ]
+}

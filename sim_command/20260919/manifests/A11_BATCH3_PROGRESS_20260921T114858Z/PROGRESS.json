@@ -1,0 +1,148 @@
+{
+  "observed_at_utc": "2026-09-21T11:48:58.913901+00:00",
+  "scope": "Saved metadata and finite scheduler-log snapshot only; no hardware or runtime probe",
+  "task_id": "A11_COMMON_POOL_BATCH3_V1",
+  "release_id": "P11_A_COMMON_POOL_BATCH3_V1",
+  "command_invocations": 1,
+  "release_claims": 1,
+  "claim_release_identity_checked": true,
+  "scheduler_snapshot": "manifests/A11_BATCH3_PROGRESS_20260921T114858Z/SCHEDULER_EVENTS_SNAPSHOT.jsonl",
+  "scheduler_snapshot_sha256": "6493a4080c9b8f94f83d523b29e996c66b539c633ddc6354832165e388ccf957",
+  "complete_scheduler_events": 125,
+  "trailing_partial_event_ignored": false,
+  "planned_parents": 8,
+  "admitted_parents_with_branch_start": 5,
+  "branch_starts": 61,
+  "branch_compute_exits": 59,
+  "branch_nonzero_exits": 0,
+  "started_without_saved_exit": 2,
+  "active_by_saved_events": [
+    {
+      "parent": "p03_dial_turn_train0000_cut5",
+      "role": "G0_fresh2_r0"
+    },
+    {
+      "parent": "p04_door_close_train0000_cut5",
+      "role": "Q_a0_r0"
+    }
+  ],
+  "parents_all15_compute_exited_zero_pending_acceptance": 3,
+  "per_parent": {
+    "p00_coffee_button_train0000_cut5": {
+      "started": 15,
+      "exited": 15,
+      "return_codes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "p01_coffee_pull_train0000_cut5": {
+      "started": 15,
+      "exited": 15,
+      "return_codes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "p02_coffee_push_train0000_cut5": {
+      "started": 15,
+      "exited": 15,
+      "return_codes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "p03_dial_turn_train0000_cut5": {
+      "started": 14,
+      "exited": 13,
+      "return_codes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "p04_door_close_train0000_cut5": {
+      "started": 2,
+      "exited": 1,
+      "return_codes": [
+        0
+      ]
+    },
+    "p05_door_lock_train0000_cut5": {
+      "started": 0,
+      "exited": 0,
+      "return_codes": []
+    },
+    "p06_door_open_train0000_cut5": {
+      "started": 0,
+      "exited": 0,
+      "return_codes": []
+    },
+    "p07_door_unlock_train0000_cut5": {
+      "started": 0,
+      "exited": 0,
+      "return_codes": []
+    }
+  },
+  "wave_complete": false,
+  "data_published_or_qualified_in_this_review": false,
+  "new_accepted_parents": 0,
+  "accepted_pool": {
+    "train_parents": 16,
+    "dev_parents": 0,
+    "tasks": 13,
+    "processed_closed_slots": 17,
+    "plan_slots": 500
+  },
+  "B11_ACK_exists": false,
+  "B11_RESULT_exists": false
+}

@@ -1,0 +1,197 @@
+{
+  "at_utc": "2026-09-23T04:22:19.038218+00:00",
+  "original_planned_new": 7900,
+  "reused_original_L11": 100,
+  "A": {
+    "raw_new_completed": 2900,
+    "status": "execution_complete_quality_hold",
+    "new_accepted": 0,
+    "raw_successes": {
+      "L11_Post_G0-multi_H10": 81,
+      "L11_Post_G0-multi_H30": 61,
+      "L11_Post_G0-once_H10": 49,
+      "L11_Velocity_G0-multi_H10": 81,
+      "L11_Velocity_G0-multi_H30": 65,
+      "L11_Velocity_G0-once_H10": 56
+    },
+    "prior_reused100_remain_valid": true,
+    "quality_basis": "Three saved same-source episodes have identical initial noise, step0 G0 and first5 actions/rewards but diverging pre-Q step5 G0; GL0x506 warnings. Root cause not yet runtime confirmed."
+  },
+  "B": {
+    "valid": 2500,
+    "remaining": 0,
+    "status": "complete",
+    "cells": [
+      {
+        "model": "SmolVLA",
+        "method": "Post",
+        "H": 10,
+        "successes": 250,
+        "valid": 500
+      },
+      {
+        "model": "SmolVLA",
+        "method": "Velocity",
+        "H": 10,
+        "successes": 247,
+        "valid": 500
+      },
+      {
+        "model": "pi05",
+        "method": "Post",
+        "H": 20,
+        "successes": 336,
+        "valid": 500
+      },
+      {
+        "model": "pi05",
+        "method": "Post",
+        "H": 50,
+        "successes": 326,
+        "valid": 500
+      },
+      {
+        "model": "pi05",
+        "method": "Velocity",
+        "H": 20,
+        "successes": 328,
+        "valid": 500
+      }
+    ]
+  },
+  "C": {
+    "valid": 736,
+    "execution_hold": 1500,
+    "render_hold": 22,
+    "technical_missing": 211,
+    "unknown": 31,
+    "remaining_acceptable_results": 1764,
+    "status": "budget_consumed_and_quality_gaps",
+    "cells": [
+      {
+        "H": 10,
+        "cell_id": "X-VLA_Post_H10_L11",
+        "current_paper": true,
+        "execution_integrity_unverified": 0,
+        "full500_success_rate": null,
+        "method": "Post",
+        "model": "X-VLA",
+        "not_entered": 0,
+        "paired_L01": 236,
+        "paired_difference_pp": 0.847457627118644,
+        "paper_eligible": false,
+        "planned": 500,
+        "raw_recorded_successes": 220,
+        "render_integrity_unverified": 22,
+        "success_rate_among_valid": 0.8389830508474576,
+        "successes": 198,
+        "technical_missing": 211,
+        "unknown_entered": 31,
+        "valid": 236
+      },
+      {
+        "H": 10,
+        "cell_id": "X-VLA_Velocity_H10_L11",
+        "current_paper": false,
+        "execution_integrity_unverified": 0,
+        "full500_success_rate": 0.814,
+        "method": "Velocity",
+        "model": "X-VLA",
+        "not_entered": 0,
+        "paired_L01": 500,
+        "paired_difference_pp": -1.0,
+        "paper_eligible": false,
+        "planned": 500,
+        "raw_recorded_successes": 407,
+        "render_integrity_unverified": 0,
+        "success_rate_among_valid": 0.814,
+        "successes": 407,
+        "technical_missing": 0,
+        "unknown_entered": 0,
+        "valid": 500
+      },
+      {
+        "H": 40,
+        "cell_id": "pi05_Post_H40_L11",
+        "current_paper": true,
+        "execution_integrity_unverified": 500,
+        "full500_success_rate": null,
+        "method": "Post",
+        "model": "pi05",
+        "not_entered": 0,
+        "paired_L01": 0,
+        "paired_difference_pp": null,
+        "paper_eligible": false,
+        "planned": 500,
+        "raw_recorded_successes": 49,
+        "render_integrity_unverified": 0,
+        "success_rate_among_valid": null,
+        "successes": 0,
+        "technical_missing": 0,
+        "unknown_entered": 0,
+        "valid": 0
+      },
+      {
+        "H": 40,
+        "cell_id": "pi05_Velocity_H40_L11",
+        "current_paper": false,
+        "execution_integrity_unverified": 500,
+        "full500_success_rate": null,
+        "method": "Velocity",
+        "model": "pi05",
+        "not_entered": 0,
+        "paired_L01": 0,
+        "paired_difference_pp": null,
+        "paper_eligible": false,
+        "planned": 500,
+        "raw_recorded_successes": 40,
+        "render_integrity_unverified": 0,
+        "success_rate_among_valid": null,
+        "successes": 0,
+        "technical_missing": 0,
+        "unknown_entered": 0,
+        "valid": 0
+      },
+      {
+        "H": 50,
+        "cell_id": "pi05_Velocity_H50_L11",
+        "current_paper": false,
+        "execution_integrity_unverified": 500,
+        "full500_success_rate": null,
+        "method": "Velocity",
+        "model": "pi05",
+        "not_entered": 0,
+        "paired_L01": 0,
+        "paired_difference_pp": null,
+        "paper_eligible": false,
+        "planned": 500,
+        "raw_recorded_successes": 38,
+        "render_integrity_unverified": 0,
+        "success_rate_among_valid": null,
+        "successes": 0,
+        "technical_missing": 0,
+        "unknown_entered": 0,
+        "valid": 0
+      }
+    ]
+  },
+  "accepted_new": 3236,
+  "accepted_including_reused": 3336,
+  "pending_quality_or_recovery": 4664,
+  "low_success_alone_is_not_invalidity": true,
+  "scientific_launches_by_analysis": 0,
+  "sources": {
+    "A": {
+      "path": "receipts/A/A_D24_L11_RETEST_V1_RESULT_r1.json",
+      "sha256": "2230f3355096bf1778039633913b1ed5c4c4cfaa57907d33226df014d50a6470"
+    },
+    "B": {
+      "path": "receipts/B/B_D24_L11_RETEST_V1_RESULT_r2.json",
+      "sha256": "a14e36f85be6b4af5e616a1102a04c8906096d4b35ec819e5937139d33945ec4"
+    },
+    "C": {
+      "path": "results/C/C_D24_L11_RETEST_V1/task_summary/SUMMARY.json",
+      "sha256": "e3991245a92c0174bb3183b696c6aae35ea6a6f5c72f9f9eb3e46d4a99aef31e"
+    }
+  }
+}

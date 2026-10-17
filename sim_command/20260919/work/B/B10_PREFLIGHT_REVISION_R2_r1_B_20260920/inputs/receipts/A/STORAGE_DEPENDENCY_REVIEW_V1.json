@@ -1,0 +1,646 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "supplement": "STORAGE_DEPENDENCY_REVIEW_V1",
+  "role": "A",
+  "hostname": "trial-303224955-trialrun-303224955-worker-0",
+  "status": "complete_A_targeted_review_B_clearance_pending",
+  "finished_at_utc": "2026-09-19T16:55:21.051889+00:00",
+  "analysis_decision_source": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/STORAGE_DECISIONS_V2.json",
+    "sha256": "06b3139de311bc0544ca41dd8f4a5e076511df761b9121f00f33ff31a2b7af89"
+  },
+  "candidates": [
+    {
+      "candidate_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/005000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/005000",
+      "current_analysis_decision": "defer",
+      "origin_inventory": "receipts/A/STORAGE_CANDIDATES_r2.json",
+      "origin_inventory_sha256": "5af7b99f741ebc71e334982b140d74b1bbbc75d9e730c63bc92c67b09c6fa083",
+      "original_logical_bytes": 1610506291,
+      "project": "VLA-baselines SmolVLA",
+      "proposed_large_payloads_only": [
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/005000/pretrained_model/model.safetensors",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/005000/pretrained_model/model.safetensors",
+          "purpose": "Smol_intermediate_large_payload",
+          "bytes": 1197789224,
+          "mtime_ns": 1789239046831546000,
+          "device": 1048775,
+          "inode": 5910974545015122,
+          "nlink": 1,
+          "sha256": "b8327a70a9f5758fc0a86e9fec04685898e97adbf828f095b5209dc8b1405007",
+          "changed_during_hash": false
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/005000/training_state/optimizer_state.safetensors",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/005000/training_state/optimizer_state.safetensors",
+          "purpose": "Smol_intermediate_large_payload",
+          "bytes": 412659164,
+          "mtime_ns": 1789239047548989000,
+          "device": 1048775,
+          "inode": 5910974545015132,
+          "nlink": 1,
+          "sha256": "a65fa6a5ee203f564ff6bd36781dafaa8aa9f1dcdf62d9f5134d8af1910eabbf",
+          "changed_during_hash": false
+        }
+      ],
+      "proposed_payload_bytes": 1610448388,
+      "A_active_or_selected_or_resume_dependencies_found": false,
+      "evidence": [
+        "This round selects050000; no checkpoint sweep or old100k queue restart",
+        "108 scoped references: no qualified runtime dependency on this checkpoint; inventory mentions and creation logs are provenance",
+        "050000 retains its complete model, optimizer, RNG, scheduler, processor/configs; pinned loader consumes only the selected checkpoint training_state"
+      ],
+      "retained_alternative": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "retained_small_evidence": "all configs/processors/RNG/scheduler/training_step/logs/lineage; no directory-level cleanup",
+      "B_current_usage_and_writer_clearance": null,
+      "B_missing_reason": "receipts/B/STORAGE_DEPENDENCY_REVIEW_V1.json not yet published at review",
+      "executor_recommendation": "Listed payloads are not needed by the reviewed A/current/sealed selected model or recovery chain; eligible for analysis decision after B clearance. This is not delete authorization.",
+      "deleted": false
+    },
+    {
+      "candidate_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/010000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/010000",
+      "current_analysis_decision": "defer",
+      "origin_inventory": "receipts/A/STORAGE_CANDIDATES_r2.json",
+      "origin_inventory_sha256": "5af7b99f741ebc71e334982b140d74b1bbbc75d9e730c63bc92c67b09c6fa083",
+      "original_logical_bytes": 1610506294,
+      "project": "VLA-baselines SmolVLA",
+      "proposed_large_payloads_only": [
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/010000/pretrained_model/model.safetensors",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/010000/pretrained_model/model.safetensors",
+          "purpose": "Smol_intermediate_large_payload",
+          "bytes": 1197789224,
+          "mtime_ns": 1789243133718807000,
+          "device": 1048775,
+          "inode": 5910974545015955,
+          "nlink": 1,
+          "sha256": "55889d44c8b24485c52b42b0b05af9d1cb0f2957baecc45b883dff77e00a0f1c",
+          "changed_during_hash": false
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/010000/training_state/optimizer_state.safetensors",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/010000/training_state/optimizer_state.safetensors",
+          "purpose": "Smol_intermediate_large_payload",
+          "bytes": 412659164,
+          "mtime_ns": 1789243134429343000,
+          "device": 1048775,
+          "inode": 5910974545015964,
+          "nlink": 1,
+          "sha256": "4640d384f8388e3704c09e6be05e66b5794a5520a361b4de64aa6de030c713bb",
+          "changed_during_hash": false
+        }
+      ],
+      "proposed_payload_bytes": 1610448388,
+      "A_active_or_selected_or_resume_dependencies_found": false,
+      "evidence": [
+        "This round selects050000; no checkpoint sweep or old100k queue restart",
+        "108 scoped references: no qualified runtime dependency on this checkpoint; inventory mentions and creation logs are provenance",
+        "050000 retains its complete model, optimizer, RNG, scheduler, processor/configs; pinned loader consumes only the selected checkpoint training_state"
+      ],
+      "retained_alternative": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "retained_small_evidence": "all configs/processors/RNG/scheduler/training_step/logs/lineage; no directory-level cleanup",
+      "B_current_usage_and_writer_clearance": null,
+      "B_missing_reason": "receipts/B/STORAGE_DEPENDENCY_REVIEW_V1.json not yet published at review",
+      "executor_recommendation": "Listed payloads are not needed by the reviewed A/current/sealed selected model or recovery chain; eligible for analysis decision after B clearance. This is not delete authorization.",
+      "deleted": false
+    },
+    {
+      "candidate_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/015000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/015000",
+      "current_analysis_decision": "defer",
+      "origin_inventory": "receipts/A/STORAGE_CANDIDATES_r2.json",
+      "origin_inventory_sha256": "5af7b99f741ebc71e334982b140d74b1bbbc75d9e730c63bc92c67b09c6fa083",
+      "original_logical_bytes": 1610506294,
+      "project": "VLA-baselines SmolVLA",
+      "proposed_large_payloads_only": [
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/015000/pretrained_model/model.safetensors",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/015000/pretrained_model/model.safetensors",
+          "purpose": "Smol_intermediate_large_payload",
+          "bytes": 1197789224,
+          "mtime_ns": 1789247256509329000,
+          "device": 1048775,
+          "inode": 5910974545016894,
+          "nlink": 1,
+          "sha256": "ea274c03ef88e29267b822f2e1375c6e1b3a3fda8f2d44a0dafbfcb1766375e2",
+          "changed_during_hash": false
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/015000/training_state/optimizer_state.safetensors",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/015000/training_state/optimizer_state.safetensors",
+          "purpose": "Smol_intermediate_large_payload",
+          "bytes": 412659164,
+          "mtime_ns": 1789247257155630000,
+          "device": 1048775,
+          "inode": 5910974545016903,
+          "nlink": 1,
+          "sha256": "3572d21d05a6335bb703010b1fbe5a7cee56ec9e1395d4ce87959aaecb3c03b0",
+          "changed_during_hash": false
+        }
+      ],
+      "proposed_payload_bytes": 1610448388,
+      "A_active_or_selected_or_resume_dependencies_found": false,
+      "evidence": [
+        "This round selects050000; no checkpoint sweep or old100k queue restart",
+        "108 scoped references: no qualified runtime dependency on this checkpoint; inventory mentions and creation logs are provenance",
+        "050000 retains its complete model, optimizer, RNG, scheduler, processor/configs; pinned loader consumes only the selected checkpoint training_state"
+      ],
+      "retained_alternative": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "retained_small_evidence": "all configs/processors/RNG/scheduler/training_step/logs/lineage; no directory-level cleanup",
+      "B_current_usage_and_writer_clearance": null,
+      "B_missing_reason": "receipts/B/STORAGE_DEPENDENCY_REVIEW_V1.json not yet published at review",
+      "executor_recommendation": "Listed payloads are not needed by the reviewed A/current/sealed selected model or recovery chain; eligible for analysis decision after B clearance. This is not delete authorization.",
+      "deleted": false
+    },
+    {
+      "candidate_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/020000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/020000",
+      "current_analysis_decision": "defer",
+      "origin_inventory": "receipts/A/STORAGE_CANDIDATES_r2.json",
+      "origin_inventory_sha256": "5af7b99f741ebc71e334982b140d74b1bbbc75d9e730c63bc92c67b09c6fa083",
+      "original_logical_bytes": 1610506292,
+      "project": "VLA-baselines SmolVLA",
+      "proposed_large_payloads_only": [
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/020000/pretrained_model/model.safetensors",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/020000/pretrained_model/model.safetensors",
+          "purpose": "Smol_intermediate_large_payload",
+          "bytes": 1197789224,
+          "mtime_ns": 1789251347846792000,
+          "device": 1048775,
+          "inode": 5910974545017741,
+          "nlink": 1,
+          "sha256": "1d5857e5a3c4423b29fa62f0af14d7551a8b32c8b7d8bf535dd5ea2317da7370",
+          "changed_during_hash": false
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/020000/training_state/optimizer_state.safetensors",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/020000/training_state/optimizer_state.safetensors",
+          "purpose": "Smol_intermediate_large_payload",
+          "bytes": 412659164,
+          "mtime_ns": 1789251348507466000,
+          "device": 1048775,
+          "inode": 5910974545017750,
+          "nlink": 1,
+          "sha256": "dbb9f4c589d91e7bbe7bd762d809fd8e813bb57dcb02c549ea8252e76bf3b1a5",
+          "changed_during_hash": false
+        }
+      ],
+      "proposed_payload_bytes": 1610448388,
+      "A_active_or_selected_or_resume_dependencies_found": false,
+      "evidence": [
+        "This round selects050000; no checkpoint sweep or old100k queue restart",
+        "108 scoped references: no qualified runtime dependency on this checkpoint; inventory mentions and creation logs are provenance",
+        "050000 retains its complete model, optimizer, RNG, scheduler, processor/configs; pinned loader consumes only the selected checkpoint training_state"
+      ],
+      "retained_alternative": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "retained_small_evidence": "all configs/processors/RNG/scheduler/training_step/logs/lineage; no directory-level cleanup",
+      "B_current_usage_and_writer_clearance": null,
+      "B_missing_reason": "receipts/B/STORAGE_DEPENDENCY_REVIEW_V1.json not yet published at review",
+      "executor_recommendation": "Listed payloads are not needed by the reviewed A/current/sealed selected model or recovery chain; eligible for analysis decision after B clearance. This is not delete authorization.",
+      "deleted": false
+    },
+    {
+      "candidate_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/025000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/025000",
+      "current_analysis_decision": "defer",
+      "origin_inventory": "receipts/A/STORAGE_CANDIDATES_r2.json",
+      "origin_inventory_sha256": "5af7b99f741ebc71e334982b140d74b1bbbc75d9e730c63bc92c67b09c6fa083",
+      "original_logical_bytes": 1610506294,
+      "project": "VLA-baselines SmolVLA",
+      "proposed_large_payloads_only": [
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/025000/pretrained_model/model.safetensors",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/025000/pretrained_model/model.safetensors",
+          "purpose": "Smol_intermediate_large_payload",
+          "bytes": 1197789224,
+          "mtime_ns": 1789255413722318000,
+          "device": 1048775,
+          "inode": 5910974545018579,
+          "nlink": 1,
+          "sha256": "1bd24c4ae8be114bf8b888d3032ade7bd7516e9f5a25609f2becd619d17f42b2",
+          "changed_during_hash": false
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/025000/training_state/optimizer_state.safetensors",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/025000/training_state/optimizer_state.safetensors",
+          "purpose": "Smol_intermediate_large_payload",
+          "bytes": 412659164,
+          "mtime_ns": 1789255414423606000,
+          "device": 1048775,
+          "inode": 5910974545018588,
+          "nlink": 1,
+          "sha256": "6510af5af54a800c515dae83f5f21dffe358c46682c696ed45f1d9698726f0df",
+          "changed_during_hash": false
+        }
+      ],
+      "proposed_payload_bytes": 1610448388,
+      "A_active_or_selected_or_resume_dependencies_found": false,
+      "evidence": [
+        "This round selects050000; no checkpoint sweep or old100k queue restart",
+        "108 scoped references: no qualified runtime dependency on this checkpoint; inventory mentions and creation logs are provenance",
+        "050000 retains its complete model, optimizer, RNG, scheduler, processor/configs; pinned loader consumes only the selected checkpoint training_state"
+      ],
+      "retained_alternative": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "retained_small_evidence": "all configs/processors/RNG/scheduler/training_step/logs/lineage; no directory-level cleanup",
+      "B_current_usage_and_writer_clearance": null,
+      "B_missing_reason": "receipts/B/STORAGE_DEPENDENCY_REVIEW_V1.json not yet published at review",
+      "executor_recommendation": "Listed payloads are not needed by the reviewed A/current/sealed selected model or recovery chain; eligible for analysis decision after B clearance. This is not delete authorization.",
+      "deleted": false
+    },
+    {
+      "candidate_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/030000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/030000",
+      "current_analysis_decision": "defer",
+      "origin_inventory": "receipts/A/STORAGE_CANDIDATES_r2.json",
+      "origin_inventory_sha256": "5af7b99f741ebc71e334982b140d74b1bbbc75d9e730c63bc92c67b09c6fa083",
+      "original_logical_bytes": 1610506294,
+      "project": "VLA-baselines SmolVLA",
+      "proposed_large_payloads_only": [
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/030000/pretrained_model/model.safetensors",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/030000/pretrained_model/model.safetensors",
+          "purpose": "Smol_intermediate_large_payload",
+          "bytes": 1197789224,
+          "mtime_ns": 1789259516664112000,
+          "device": 1048775,
+          "inode": 5910974545019489,
+          "nlink": 1,
+          "sha256": "8bcc6da17b233fd5168d3de9c3e5bc18b93f2f43afbbb6266b3e28aa5a986c2f",
+          "changed_during_hash": false
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/030000/training_state/optimizer_state.safetensors",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/030000/training_state/optimizer_state.safetensors",
+          "purpose": "Smol_intermediate_large_payload",
+          "bytes": 412659164,
+          "mtime_ns": 1789259517387544000,
+          "device": 1048775,
+          "inode": 5910974545019498,
+          "nlink": 1,
+          "sha256": "45a911961aae0bc957099f3edaca64bce238ea94866ab5fef49781012308c1f9",
+          "changed_during_hash": false
+        }
+      ],
+      "proposed_payload_bytes": 1610448388,
+      "A_active_or_selected_or_resume_dependencies_found": false,
+      "evidence": [
+        "This round selects050000; no checkpoint sweep or old100k queue restart",
+        "108 scoped references: no qualified runtime dependency on this checkpoint; inventory mentions and creation logs are provenance",
+        "050000 retains its complete model, optimizer, RNG, scheduler, processor/configs; pinned loader consumes only the selected checkpoint training_state"
+      ],
+      "retained_alternative": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "retained_small_evidence": "all configs/processors/RNG/scheduler/training_step/logs/lineage; no directory-level cleanup",
+      "B_current_usage_and_writer_clearance": null,
+      "B_missing_reason": "receipts/B/STORAGE_DEPENDENCY_REVIEW_V1.json not yet published at review",
+      "executor_recommendation": "Listed payloads are not needed by the reviewed A/current/sealed selected model or recovery chain; eligible for analysis decision after B clearance. This is not delete authorization.",
+      "deleted": false
+    },
+    {
+      "candidate_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/035000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/035000",
+      "current_analysis_decision": "defer",
+      "origin_inventory": "receipts/A/STORAGE_CANDIDATES_r2.json",
+      "origin_inventory_sha256": "5af7b99f741ebc71e334982b140d74b1bbbc75d9e730c63bc92c67b09c6fa083",
+      "original_logical_bytes": 1610506292,
+      "project": "VLA-baselines SmolVLA",
+      "proposed_large_payloads_only": [
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/035000/pretrained_model/model.safetensors",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/035000/pretrained_model/model.safetensors",
+          "purpose": "Smol_intermediate_large_payload",
+          "bytes": 1197789224,
+          "mtime_ns": 1789263608178940000,
+          "device": 1048775,
+          "inode": 5910974545020333,
+          "nlink": 1,
+          "sha256": "571412a52696e8d1a346dcb4be218c51127d4785e81832e14238e72259c50f8e",
+          "changed_during_hash": false
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/035000/training_state/optimizer_state.safetensors",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/035000/training_state/optimizer_state.safetensors",
+          "purpose": "Smol_intermediate_large_payload",
+          "bytes": 412659164,
+          "mtime_ns": 1789263608882071000,
+          "device": 1048775,
+          "inode": 5910974545020342,
+          "nlink": 1,
+          "sha256": "79e1fb527f9b814a0c06f5d1d04708e400e891a26288772cbbaf57f1b14037f5",
+          "changed_during_hash": false
+        }
+      ],
+      "proposed_payload_bytes": 1610448388,
+      "A_active_or_selected_or_resume_dependencies_found": false,
+      "evidence": [
+        "This round selects050000; no checkpoint sweep or old100k queue restart",
+        "108 scoped references: no qualified runtime dependency on this checkpoint; inventory mentions and creation logs are provenance",
+        "050000 retains its complete model, optimizer, RNG, scheduler, processor/configs; pinned loader consumes only the selected checkpoint training_state"
+      ],
+      "retained_alternative": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "retained_small_evidence": "all configs/processors/RNG/scheduler/training_step/logs/lineage; no directory-level cleanup",
+      "B_current_usage_and_writer_clearance": null,
+      "B_missing_reason": "receipts/B/STORAGE_DEPENDENCY_REVIEW_V1.json not yet published at review",
+      "executor_recommendation": "Listed payloads are not needed by the reviewed A/current/sealed selected model or recovery chain; eligible for analysis decision after B clearance. This is not delete authorization.",
+      "deleted": false
+    },
+    {
+      "candidate_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/040000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/040000",
+      "current_analysis_decision": "defer",
+      "origin_inventory": "receipts/A/STORAGE_CANDIDATES_r2.json",
+      "origin_inventory_sha256": "5af7b99f741ebc71e334982b140d74b1bbbc75d9e730c63bc92c67b09c6fa083",
+      "original_logical_bytes": 1610506294,
+      "project": "VLA-baselines SmolVLA",
+      "proposed_large_payloads_only": [
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/040000/pretrained_model/model.safetensors",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/040000/pretrained_model/model.safetensors",
+          "purpose": "Smol_intermediate_large_payload",
+          "bytes": 1197789224,
+          "mtime_ns": 1789267748671249000,
+          "device": 1048775,
+          "inode": 5910974545021188,
+          "nlink": 1,
+          "sha256": "a5129771536e4870106e659fadcdeea26d547b01de769ede3a0613fe98f036ae",
+          "changed_during_hash": false
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/040000/training_state/optimizer_state.safetensors",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/040000/training_state/optimizer_state.safetensors",
+          "purpose": "Smol_intermediate_large_payload",
+          "bytes": 412659164,
+          "mtime_ns": 1789267749397526000,
+          "device": 1048775,
+          "inode": 5910974545021197,
+          "nlink": 1,
+          "sha256": "2ff79700ca0a6685eae4cf80006b5153ba5c43c7749fa248d10f4a5c3b2758b8",
+          "changed_during_hash": false
+        }
+      ],
+      "proposed_payload_bytes": 1610448388,
+      "A_active_or_selected_or_resume_dependencies_found": false,
+      "evidence": [
+        "This round selects050000; no checkpoint sweep or old100k queue restart",
+        "108 scoped references: no qualified runtime dependency on this checkpoint; inventory mentions and creation logs are provenance",
+        "050000 retains its complete model, optimizer, RNG, scheduler, processor/configs; pinned loader consumes only the selected checkpoint training_state"
+      ],
+      "retained_alternative": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "retained_small_evidence": "all configs/processors/RNG/scheduler/training_step/logs/lineage; no directory-level cleanup",
+      "B_current_usage_and_writer_clearance": null,
+      "B_missing_reason": "receipts/B/STORAGE_DEPENDENCY_REVIEW_V1.json not yet published at review",
+      "executor_recommendation": "Listed payloads are not needed by the reviewed A/current/sealed selected model or recovery chain; eligible for analysis decision after B clearance. This is not delete authorization.",
+      "deleted": false
+    },
+    {
+      "candidate_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/045000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/045000",
+      "current_analysis_decision": "defer",
+      "origin_inventory": "receipts/A/STORAGE_CANDIDATES_r2.json",
+      "origin_inventory_sha256": "5af7b99f741ebc71e334982b140d74b1bbbc75d9e730c63bc92c67b09c6fa083",
+      "original_logical_bytes": 1610506294,
+      "project": "VLA-baselines SmolVLA",
+      "proposed_large_payloads_only": [
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/045000/pretrained_model/model.safetensors",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/045000/pretrained_model/model.safetensors",
+          "purpose": "Smol_intermediate_large_payload",
+          "bytes": 1197789224,
+          "mtime_ns": 1789271903711843000,
+          "device": 1048775,
+          "inode": 5910974545022103,
+          "nlink": 1,
+          "sha256": "424088a5fbe0085debf68414681782a877f118fb37bee7f2b188b3b0062685cf",
+          "changed_during_hash": false
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/045000/training_state/optimizer_state.safetensors",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/045000/training_state/optimizer_state.safetensors",
+          "purpose": "Smol_intermediate_large_payload",
+          "bytes": 412659164,
+          "mtime_ns": 1789271904485777000,
+          "device": 1048775,
+          "inode": 5910974545022112,
+          "nlink": 1,
+          "sha256": "1b7bc513202d064a4d35644284f4d618bc60dd0087000e7b44126905561351c4",
+          "changed_during_hash": false
+        }
+      ],
+      "proposed_payload_bytes": 1610448388,
+      "A_active_or_selected_or_resume_dependencies_found": false,
+      "evidence": [
+        "This round selects050000; no checkpoint sweep or old100k queue restart",
+        "108 scoped references: no qualified runtime dependency on this checkpoint; inventory mentions and creation logs are provenance",
+        "050000 retains its complete model, optimizer, RNG, scheduler, processor/configs; pinned loader consumes only the selected checkpoint training_state"
+      ],
+      "retained_alternative": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "retained_small_evidence": "all configs/processors/RNG/scheduler/training_step/logs/lineage; no directory-level cleanup",
+      "B_current_usage_and_writer_clearance": null,
+      "B_missing_reason": "receipts/B/STORAGE_DEPENDENCY_REVIEW_V1.json not yet published at review",
+      "executor_recommendation": "Listed payloads are not needed by the reviewed A/current/sealed selected model or recovery chain; eligible for analysis decision after B clearance. This is not delete authorization.",
+      "deleted": false
+    },
+    {
+      "candidate_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts",
+      "current_analysis_decision": "defer",
+      "origin_inventory": "receipts/A/STORAGE_CANDIDATES_r2.json",
+      "origin_inventory_sha256": "5af7b99f741ebc71e334982b140d74b1bbbc75d9e730c63bc92c67b09c6fa083",
+      "original_logical_bytes": 1044434332,
+      "project": "VLA-baselines X-VLA",
+      "proposed_large_payloads_only": [
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/2474639360-2608857088.part",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/2474639360-2608857088.part",
+          "purpose": "X_download_fragment",
+          "bytes": 134217728,
+          "mtime_ns": 1789142019542622000,
+          "device": 1048775,
+          "inode": 5910974544984009,
+          "nlink": 1,
+          "sha256": "99b0eec7d99bd11b15b800efd0ebd4c3ad380766790121a51b3037bb5de817c2",
+          "changed_during_hash": false
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/2608857088-2743074816.part",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/2608857088-2743074816.part",
+          "purpose": "X_download_fragment",
+          "bytes": 134217728,
+          "mtime_ns": 1789142017917006000,
+          "device": 1048775,
+          "inode": 5910974544984011,
+          "nlink": 1,
+          "sha256": "48551125b63ff7e7dc34418300e29c780990c78630c606220383d6bfcbb14ec3",
+          "changed_during_hash": false
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/2743074816-2877292544.part",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/2743074816-2877292544.part",
+          "purpose": "X_download_fragment",
+          "bytes": 134217728,
+          "mtime_ns": 1789142011737258000,
+          "device": 1048775,
+          "inode": 5910974544984008,
+          "nlink": 1,
+          "sha256": "9ba38136c1c591cbf1020bc994ec637ec272a67782bd3299eb850f5620711dcb",
+          "changed_during_hash": false
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/2877292544-3011510272.part",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/2877292544-3011510272.part",
+          "purpose": "X_download_fragment",
+          "bytes": 134217728,
+          "mtime_ns": 1789142014149092000,
+          "device": 1048775,
+          "inode": 5910974544984005,
+          "nlink": 1,
+          "sha256": "065d4ee413b9b07adee9d8c9c82a5925e6624397019c827cd0e810f6b8deb546",
+          "changed_during_hash": false
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/3011510272-3145728000.part",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/3011510272-3145728000.part",
+          "purpose": "X_download_fragment",
+          "bytes": 134217728,
+          "mtime_ns": 1789142015988380000,
+          "device": 1048775,
+          "inode": 5910974544984007,
+          "nlink": 1,
+          "sha256": "b441a7655401a384bf3a333b65fbad646aa58207a2a852d505b53a12eef30a0f",
+          "changed_during_hash": false
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/3145728000-3279945728.part",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/3145728000-3279945728.part",
+          "purpose": "X_download_fragment",
+          "bytes": 134217728,
+          "mtime_ns": 1789142019376181000,
+          "device": 1048775,
+          "inode": 5910974544984006,
+          "nlink": 1,
+          "sha256": "6dfaaacc36a5d49c10318a9c5dc16ddc7f6d6a58cf429514cd98f5f9220f5d90",
+          "changed_during_hash": false
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/3279945728-3414163456.part",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/3279945728-3414163456.part",
+          "purpose": "X_download_fragment",
+          "bytes": 134217728,
+          "mtime_ns": 1789142011731586000,
+          "device": 1048775,
+          "inode": 5910974544984004,
+          "nlink": 1,
+          "sha256": "fb6e6ab3dbf346f3f74628baf38bde5d0fa0afdf398c252a780f728e6fb07909",
+          "changed_during_hash": false
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/3414163456-3519073692.part",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/3414163456-3519073692.part",
+          "purpose": "X_download_fragment",
+          "bytes": 104910236,
+          "mtime_ns": 1789142011770219000,
+          "device": 1048775,
+          "inode": 5910974544984010,
+          "nlink": 1,
+          "sha256": "58cfd8c5666da60cdd8ddd6653a2b32838664148ab242383a56cf7125a7f6c73",
+          "changed_during_hash": false
+        }
+      ],
+      "proposed_payload_bytes": 1044434332,
+      "A_active_or_selected_or_resume_dependencies_found": false,
+      "evidence": [
+        "Current full retained model SHA equals pinned revision/download LFS SHA",
+        "Range-resume source aborts when final model exists; completed final does not read old fragments",
+        "No local reader/writer/possible downloader in visible60processes"
+      ],
+      "retained_alternative": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/model.safetensors",
+      "retained_small_evidence": "complete base weight, configs, metadata and download/initialization manifests",
+      "B_current_usage_and_writer_clearance": null,
+      "B_missing_reason": "receipts/B/STORAGE_DEPENDENCY_REVIEW_V1.json not yet published at review",
+      "executor_recommendation": "Listed payloads are not needed by the reviewed A/current/sealed selected model or recovery chain; eligible for analysis decision after B clearance. This is not delete authorization.",
+      "deleted": false
+    },
+    {
+      "candidate_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.cache/huggingface/download/xGOKKLRSlIhH692hSVvI1-gpoa8=.f05bc0fab1c9523d7f5d6b41a651313641ca2227a88822249845da8e20e036c9.incomplete",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.cache/huggingface/download/xGOKKLRSlIhH692hSVvI1-gpoa8=.f05bc0fab1c9523d7f5d6b41a651313641ca2227a88822249845da8e20e036c9.incomplete",
+      "current_analysis_decision": "defer",
+      "origin_inventory": "receipts/A/STORAGE_CANDIDATES_r2.json",
+      "origin_inventory_sha256": "5af7b99f741ebc71e334982b140d74b1bbbc75d9e730c63bc92c67b09c6fa083",
+      "original_logical_bytes": 2474639360,
+      "project": "VLA-baselines X-VLA",
+      "proposed_large_payloads_only": [
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.cache/huggingface/download/xGOKKLRSlIhH692hSVvI1-gpoa8=.f05bc0fab1c9523d7f5d6b41a651313641ca2227a88822249845da8e20e036c9.incomplete",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.cache/huggingface/download/xGOKKLRSlIhH692hSVvI1-gpoa8=.f05bc0fab1c9523d7f5d6b41a651313641ca2227a88822249845da8e20e036c9.incomplete",
+          "purpose": "X_download_fragment",
+          "bytes": 2474639360,
+          "mtime_ns": 1789141955369930000,
+          "device": 1048775,
+          "inode": 5910974544451586,
+          "nlink": 1,
+          "sha256": "01436598540007ef9c7193b97e3b419e8a1b06bad604eb28a29ba034ca5f3303",
+          "changed_during_hash": false
+        }
+      ],
+      "proposed_payload_bytes": 2474639360,
+      "A_active_or_selected_or_resume_dependencies_found": false,
+      "evidence": [
+        "Current full retained model SHA equals pinned revision/download LFS SHA",
+        "Range-resume source aborts when final model exists; completed final does not read old fragments",
+        "No local reader/writer/possible downloader in visible60processes"
+      ],
+      "retained_alternative": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/model.safetensors",
+      "retained_small_evidence": "complete base weight, configs, metadata and download/initialization manifests",
+      "B_current_usage_and_writer_clearance": null,
+      "B_missing_reason": "receipts/B/STORAGE_DEPENDENCY_REVIEW_V1.json not yet published at review",
+      "executor_recommendation": "Listed payloads are not needed by the reviewed A/current/sealed selected model or recovery chain; eligible for analysis decision after B clearance. This is not delete authorization.",
+      "deleted": false
+    }
+  ],
+  "candidate_payload_file_count": 27,
+  "candidate_payload_logical_bytes": 18013109184,
+  "findings": [
+    "No current or sealed selected-model/resume-chain dependency on Smol005000..045000 found in108 bounded files; keep all050000 recovery assets and small provenance",
+    "Latest persisted Smolcheckpoint50000; largest observed oldtraining logprogress54580, not100kcomplete",
+    "Retained Xbase current fullSHA matches pinned source; oldparts not required for completed base",
+    "No local readers/writers observed; crossnodeB specific clearance pending",
+    "Only analysis decides delete/keep/defer; active deletion release remainsnull"
+  ],
+  "evidence": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_REVISION_R2_r1/storage_dependency/PAYLOAD_IDENTITIES.json",
+      "sha256": "6e09ff97a89d8dbdd4b1ad054665df28e2224eca2f3a450f42c39908dc443555"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_REVISION_R2_r1/storage_dependency/REFERENCE_AND_LINEAGE_REVIEW.json",
+      "sha256": "962e9779ed0cf82e213c19122bca553349830a8a0aa2fbf58fa657a549fcdf36"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_REVISION_R2_r1/storage_dependency/LOCAL_ACTIVE_USERS.json",
+      "sha256": "dd90cbf9e822629b6c839ccedfdd76efdbd8dc27aa10311d65f13c09df59fe8d"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/STORAGE_DEPENDENCY_REVIEW_V1.md",
+      "sha256": "2cc6d78c35e16c2196b33f71cda97a03506f33e4d41df925ad1588b2b953d369"
+    }
+  ],
+  "cross_node": {
+    "B_receipt": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/STORAGE_DEPENDENCY_REVIEW_V1.json",
+    "exists": false,
+    "clearance": null
+  },
+  "scope_limit": "This container process namespace at one instant only; not proof of no future opens or cross-node writers. Recheck before an exact deletion release executes.",
+  "active_deletion_release": null,
+  "resource_counts": {
+    "simulator_attempts": 0,
+    "environment_reset_calls": 0,
+    "vla_sampling_calls": 0,
+    "optimizer_updates": 0,
+    "gpu_seconds": 0,
+    "deleted_paths": 0,
+    "deleted_bytes": 0
+  },
+  "current_task_artifacts_retained": "All this task work/code/test artifacts retained. No temporary outputs removed; new retention decisions remain analysis-owned."
+}

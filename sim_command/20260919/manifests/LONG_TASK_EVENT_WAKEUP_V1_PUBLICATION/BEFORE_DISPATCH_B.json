@@ -1,0 +1,182 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "target_role": "B",
+  "target_hostname": "trial-303225685-trialrun-303225685-worker-0",
+  "target_session": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+  "issued_at_utc": "2026-09-19T15:11:05.205789+00:00",
+  "delivery": "shared_files_only",
+  "task_id": "B11_COMMON_POOL_VIEWS_CPU_V1",
+  "task_revision": 1,
+  "release": "releases/P00_B_COMMON_POOL_VIEWS_CPU_V1.json",
+  "prerequisites": "B00 complete accepted; no wait for A00 needed",
+  "status": "published_awaiting_ack",
+  "storage_side_task": "Read contracts/STORAGE_RETENTION_V1.md; inventory candidates only, analysis makes all delete/keep/defer decisions",
+  "instruction": "Apply revision2 to existing V1 join-waiter before any package/claim; no B common-pool collection. Existing B11 and independent CPU preparation may proceed now.",
+  "ack": "receipts/B/B11_COMMON_POOL_VIEWS_CPU_V1_ACK.json",
+  "analysis_decisions": "contracts/INVENTORY_DECISIONS_V1.md",
+  "acknowledged_at_utc": "2026-09-19T15:09:56Z",
+  "last_checked_at_utc": "2026-09-20T09:05:29.938522+00:00",
+  "latest_instruction_at_utc": "2026-09-21T12:06:03.995391+00:00",
+  "interface_handoff": {
+    "message_id": "B10_INTERFACE_V1_READY",
+    "status": "published_awaiting_consumer_confirmation",
+    "manifest": "manifests/PUBLIC_INTERFACE_V1.json",
+    "ready_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/interface_v1/INTERFACE_READY.json",
+    "schema_sha256": "7d52f22e9d2e622a18a9a71fdac822ed50413aa3838aa3ad40d98e0bee10500f",
+    "instruction": "A interface v1 is available now; verify all published file SHAs, read README/schema/examples and adapt isolated B views/events. Record consumed version/SHA and compatibility checks or concrete blockers in receipts/B/A10_INTERFACE_FEEDBACK.md. Do not change immutable A v1 or begin GPU work.",
+    "task_supplement": "tasks/B10_INTERFACE_V1_HANDOFF.md"
+  },
+  "next_task": {
+    "task_id": "B11_COMMON_POOL_VIEWS_CPU_V1",
+    "task_revision": 1,
+    "task": "tasks/B11_COMMON_POOL_VIEWS_CPU_V1.md",
+    "release": "releases/P00_B_COMMON_POOL_VIEWS_CPU_V1.json",
+    "published_at_utc": "2026-09-20T09:05:29.938522+00:00",
+    "status": "published_awaiting_ack"
+  },
+  "previous_task": "B10_PREFLIGHT_REVISION_R2",
+  "task": "tasks/B11_COMMON_POOL_VIEWS_CPU_V1.md",
+  "storage_decisions": "manifests/STORAGE_DECISIONS_V2.json",
+  "current_control_note": {
+    "updated_at_utc": "2026-09-21T09:18:32.856990+00:00",
+    "A_only_compute_release": "releases/P11_A_COMMON_POOL_BATCH3_V1.json",
+    "B_compute_authorized": false,
+    "active_A_only_guard_installation_release": null,
+    "instruction": "CONTROL50/TASK_BOARD59 only A Batch3 fixed8 train0cut5 tasks/concurrency2. B original CPU view task and Batch2 accepted-data handoff remain available; no B compute/joined wave."
+  },
+  "storage_clearance_request": {
+    "task_supplement": "tasks/B_STORAGE_CLEARANCE_V1.md",
+    "input_manifest": "manifests/STORAGE_PAYLOAD_REVIEW_V1.json",
+    "receipt": "receipts/B/STORAGE_DEPENDENCY_REVIEW_V1.json",
+    "status": "complete_accepted",
+    "scope": "CPU/read-only27 exact files; no deletion; do not wait for GPU release",
+    "acceptance": "manifests/B_STORAGE_CLEARANCE_ACCEPTANCE_V1.json",
+    "accepted_at_utc": "2026-09-20T09:05:29.938522+00:00"
+  },
+  "dispatch_history": [
+    {
+      "task_id": "B10_PREFLIGHT_REVISION_R2",
+      "status": "CPU_complete_accepted",
+      "acceptance": "manifests/B_PREFLIGHT_REVISION_R2_CPU_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-20T09:05:29.938522+00:00"
+    }
+  ],
+  "sidecar_handoff": {
+    "published_at_utc": "2026-09-20T10:17:03.089823+00:00",
+    "ready": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_COLLECTOR_CPU_V1/sidecar_v1/READY.json",
+    "ready_sha256": "56adfa1657553af79e0b740c643ddcc0616520c62c50983594e0cfa72e9650d9",
+    "schema_sha256": "5d6fe452b64766a540aa325938dc5ed5e50659d4a6f973cfda0d9fa47123b3ae",
+    "supplement": "contracts/COMMON_POOL_COLLECTOR_REPAIR_DECISIONS_V1.md",
+    "supplement_sha256": "28d94f8d38fe598ae1ca10eca402c0b036ce781e53b2acf01950b9d70964777d",
+    "B_task_unchanged": "B11_COMMON_POOL_VIEWS_CPU_V1",
+    "instruction": "v1 immutable; implement existing CPU consumer now. A producer is under targeted repair; await independent aggregate-index explanation and test actual producer fixture before claiming end-to-end compatibility. No need to wait for GPU release.",
+    "consumer_feedback": "not_received"
+  },
+  "collector_supplement_handoff": {
+    "published_at_utc": "2026-09-20T11:39:29.607200+00:00",
+    "ready": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1/supplement_v2/READY.json",
+    "ready_sha256": "c73874783581af0b0de9becc3b8b47c398f34231cc16545db808cab40b040b87",
+    "acceptance": "manifests/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1_ACCEPTANCE.json",
+    "status": "producer_CPU_accepted_awaiting_B_consumption",
+    "B_task_unchanged": "B11_COMMON_POOL_VIEWS_CPU_V1",
+    "instruction": "Consume immutable supplement_v2 plus original sidecar/public v1. Same-parent verified BANK chunk references allowed; obs remain physical-branch local; forced collection is not online G0. No B GPU/collection. A first-parent release does not authorize B. Record compatibility in existing CPU task receipt."
+  },
+  "real_parent_handoff": {
+    "published_at_utc": "2026-09-20T14:00:48.070360+00:00",
+    "instruction": {
+      "path": "tasks/B11_FIRST_PARENT_REAL_DATA_HANDOFF_V1.md",
+      "sha256": "2395860c8874162f531b940a5a9035dd01c6f02ba9ec6b80be7f270bc7169753"
+    },
+    "parent_index": {
+      "path": "manifests/COMMON_POOL_ACCEPTED_PARENTS_V1.json",
+      "sha256": "89b80f3ba0111d772fbe2479941b144bc7a5a7d35de0c23fcc5cfc15fc8d38ba"
+    },
+    "runtime_manifest": {
+      "path": "results/A/A11_COMMON_POOL_FIRST_PARENT_V4/RUNTIME_FILE_MANIFEST.json",
+      "sha256": "6f68b72cfdc78d66719497c80bf07bb9c346f77c0e7e67fd382691977b64ed9f"
+    },
+    "status": "published_awaiting_B_ACK_and_compatibility",
+    "task_unchanged": "B11_COMMON_POOL_VIEWS_CPU_V1",
+    "compute_authorized": false
+  },
+  "batch1_real_data_handoff": {
+    "published_at_utc": "2026-09-20T20:07:45.425665+00:00",
+    "instruction": {
+      "path": "tasks/B11_BATCH1_REAL_DATA_HANDOFF_V1.md",
+      "sha256": "7e4359c54bf65a372b3836ce9ab846e694b3c1b1b0dbb3ca227ed5a461422a2b"
+    },
+    "parent_index": {
+      "path": "manifests/COMMON_POOL_ACCEPTED_PARENTS_V2.json",
+      "sha256": "460d8144bbd82057673613541aa7a53beb6fb4be5831e43b0016beb9d3b146a0"
+    },
+    "source_dispositions": {
+      "path": "manifests/COMMON_POOL_SOURCE_DISPOSITIONS_V1.json",
+      "sha256": "6df22e9b29a43daab80dc1daa99af042157774b6b1766550fed010717a4e586a"
+    },
+    "status": "published_awaiting_B_ACK_and_compatibility",
+    "task_unchanged": "B11_COMMON_POOL_VIEWS_CPU_V1",
+    "compute_authorized": false
+  },
+  "batch2_real_data_handoff": {
+    "published_at_utc": "2026-09-21T01:38:15.100039+00:00",
+    "instruction": {
+      "path": "tasks/B11_BATCH2_REAL_DATA_HANDOFF_V1.md",
+      "sha256": "0b099f4ff5598b930cd9d6054a9255f6501a8aa2d0ad73de5e3ab1da128b5895"
+    },
+    "parent_index": {
+      "path": "manifests/COMMON_POOL_ACCEPTED_PARENTS_V3.json",
+      "sha256": "62fdb2d17a7b43be4ab5861671b80557ce7213a65326102689ac821d97fc37ad"
+    },
+    "source_dispositions": {
+      "path": "manifests/COMMON_POOL_SOURCE_DISPOSITIONS_V2.json",
+      "sha256": "a9507f9d917a071d1865e70bed537c97c46f61c08ee87433f6f99d6bcfd43007"
+    },
+    "status": "published_awaiting_B_ACK_and_compatibility",
+    "task_unchanged": "B11_COMMON_POOL_VIEWS_CPU_V1",
+    "compute_authorized": false
+  },
+  "persistent_queue_join": {
+    "task_id": "B_QUEUE_JOIN_V1",
+    "revision": 2,
+    "task": "tasks/B_QUEUE_JOIN_V1_r2.md",
+    "authorization": {
+      "path": "persistent_queue/AUTHORIZATION_V2.json",
+      "sha256": "d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928"
+    },
+    "status": "published_pending_revision2_dispatch",
+    "expected_result": "receipts/B/B_QUEUE_JOIN_V1_r2_RESULT.json",
+    "instruction": "A475 common-pool/main results; B external/ablation/applicability only; A never waits B; target8 actual usefulGPU; keep currentBatch3 unchanged"
+  },
+  "priority_task": "B_QUEUE_JOIN_V1",
+  "persistent_queue_history": [
+    {
+      "task_id": "B_QUEUE_JOIN_V1",
+      "revision": 1,
+      "task": "tasks/B_QUEUE_JOIN_V1.md",
+      "authorization": {
+        "path": "persistent_queue/AUTHORIZATION_V1.json",
+        "sha256": "f0790bbfdbe263be1044ef9ce3773d4ab0b3a63616edf04feda2e86103edf7b5"
+      },
+      "status": "shared_published_awaiting_one_time_B_activation",
+      "instruction": "One-time queue join has priority; preserve B11 CPU view task; create detached join-waiter if package not ready, then service auto-run own frozen plan."
+    }
+  ],
+  "independent_pipeline_preparation": {
+    "task_id": "B_INDEPENDENT_PIPELINE_PREP_V1",
+    "scope": "CPU_only_authorized_now",
+    "authorization": {
+      "path": "persistent_queue/AUTHORIZATION_V2.json",
+      "sha256": "d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928"
+    }
+  },
+  "updated_at_utc": "2026-09-21T13:02:20.635181+00:00",
+  "occupancy_policy_override": {
+    "authorization": {
+      "path": "persistent_queue/OCCUPANCY_OVERRIDE_V1.json",
+      "sha256": "0e896062a9c69dc51e6d1332eca5413c683d2c9bbed113b9346f8dba27310916"
+    },
+    "task_supplement": "persistent_queue/OCCUPANCY_OVERRIDE_V1.md",
+    "status": "published",
+    "instruction": "User supersedes idle-subset prohibition. Preserve V2 source/scientific grants and currentBatch3; apply formal-job-priority handoff and separate occupancy accounting in existing bootstrap/join tasks."
+  }
+}

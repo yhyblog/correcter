@@ -1,0 +1,18 @@
+{
+  "stage": "outer CPU saved-artifact audit only",
+  "first_reader_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PV_OFFLINE_PREFLIGHT_V3_r1/AUDIT_SAVED_EVIDENCE.py",
+  "first_reader_sha256": "2f36cd28dd4dcd5f470262b4bb2c5273c94acdfb78dc7eccafdef142522a39c4",
+  "first_exit_code": 1,
+  "first_error": {
+    "type": "KeyError",
+    "message": "'|u1'",
+    "location": "npy parser requested all source observation ZIP entries, including uint8 RGB, while only proprioception was needed"
+  },
+  "first_error_source": "captured exec_command tool output, not a diagnostic failure",
+  "already_saved_audit": "PRIVATE_LEDGER_AUDIT.json; verified byte-equivalent JSON in R2, not overwritten",
+  "new_reader_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PV_OFFLINE_PREFLIGHT_V3_r1/AUDIT_SAVED_EVIDENCE_R2.py",
+  "correction": "Read only existing proprioception.npy entry from source observation. No image, model, GPU, gradient, projection or hardware call.",
+  "formal_command_retries": 0,
+  "numeric_reexecution": false,
+  "old_runtime_artifacts_modified": false
+}

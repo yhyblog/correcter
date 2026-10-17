@@ -1,0 +1,88 @@
+{
+  "status": "latest_assigned_scientific_matrix_complete",
+  "observed_at_utc": "2026-09-23T00:53:27.864803+00:00",
+  "current_paper_branch": "Post",
+  "Velocity_scope": "completed_authorized_experiments_other_work_only",
+  "configuration": {
+    "chosen_loss": "L01",
+    "fit_seed": 9101,
+    "criterion": "complete_Post_development_only",
+    "test_selection_used": false
+  },
+  "training": {
+    "full_Q_fits": 80,
+    "optimizer_updates": 320000,
+    "completed": true
+  },
+  "latest_matrix": {
+    "planned_evaluations": 11600,
+    "valid": 11600,
+    "remaining": 0,
+    "not_independent_initial_states": true,
+    "A": 5600,
+    "B": 3000,
+    "C": 3000
+  },
+  "separate_old_R_gap": {
+    "B_newly_completed_slots": 24,
+    "merged_R_valid": 500,
+    "included_in_11600": false
+  },
+  "process_evidence": "All three assigned scientific families report exit and occupancy handoff; lightweight CPU monitoring/export services may remain alive. No extra hardware probe.",
+  "historical_failures": "B H20 original24 valid preserved; missing976 continued. Original publication failures and partial receipts remain, replaced only for final aggregate interpretation. No assertion that historical technical failures never occurred.",
+  "remaining_paper_items": [
+    {
+      "item": "LIBERO Full D/G0 + corrector",
+      "status": "closed_incomplete_scientific_gap",
+      "detail": "Operator-only P/V completed previously; Full training/test not completed after inadequate gain supervision. Not silently marked complete or automatically recollected."
+    },
+    {
+      "item": "real_world_single_group",
+      "status": "awaiting_user_results",
+      "detail": "No real-world delivery observed in this shared campaign."
+    },
+    {
+      "item": "final_paper_tables_figures_and_claims",
+      "status": "CPU_editorial_consolidation",
+      "detail": "New results now available; final paired/cost/figures only where source-backed. Old N unknown slots remain unknown, not failures."
+    }
+  ],
+  "sources": {
+    "A": {
+      "path": "results/A/A_D24_FULL_Q_AUTORUN_POST_LED_V1/RESULT.json",
+      "sha256": "08d0046c341a643b5cab4fd033810ed5df8b91c66e8ed05d1209c166c4e19337"
+    },
+    "B_native": {
+      "path": "receipts/B/B_D24_FULL_Q_LOSS_REFRESH_V1_EVAL_RESULT_r1.json",
+      "sha256": "5279b097cc590b2e9e448c1b18ea92eea56e28c1630c274e55492b158ea2f5a4"
+    },
+    "B_main": {
+      "path": "receipts/B/B_D24_PI05_SELECTED_H20_H30_V1_RESULT_r2.json",
+      "sha256": "5af658125475e864d7663afc5a667dad4f7f539dffc7a1a7a53988b57324b3d7"
+    },
+    "B_queue": {
+      "path": "receipts/B/B_D24_QUOTA_INDEPENDENT_QUEUE_V1_RESULT_r2.json",
+      "sha256": "46f1c5cf62d0f974f0c5dc6a7009a162a877b9e69441efa8b8c3d1d037333d4a"
+    },
+    "B_R": {
+      "path": "results/B/B_D24_PI05_SELECTED_H20_H30_V1/R_cancelled_r3/FINAL_SUMMARY.json",
+      "sha256": "c848087e45fb47347a243f1ef88bde811b7e1264c6d6494611afae18f290652f"
+    },
+    "C_native": {
+      "path": "results/C/C_D24_FULL_Q_LOSS_REFRESH_V1/FINAL_SUMMARY.json",
+      "sha256": "ccbac03c05e28a5d057ed8762e681256a0a6a9e855f6c30507cac45de362b3f6"
+    },
+    "C_main": {
+      "path": "results/C/C_D24_PI05_SELECTED_H40_H50_V1/FINAL_SUMMARY.json",
+      "sha256": "cf7bfc5dfcc3dedb54cd30bfaf8d9f74a48c3d79ca62e0fee42ffa18d9a2833d"
+    },
+    "C_exit": {
+      "path": "receipts/C/C_D24_PI05_SELECTED_H40_H50_V1_RESULT_r1.json",
+      "sha256": "c8a9ce56d8369683544483c750c3fce4dfd72b3de48d1f929a60e84909b37f4a"
+    },
+    "selection": {
+      "path": "results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/SELECTION.json",
+      "sha256": "0678690bdeebf7bfe6d4293f959916c25c70dc5628779e3daea4303f3065f910"
+    }
+  }
+}

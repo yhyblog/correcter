@@ -1,0 +1,172 @@
+{
+  "source_type": "existing runtime logs/configuration; derived arithmetic explicitly named",
+  "libero": {
+    "Q_rollout_files": [
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/jobs/pi05official_Post_libero_10_s0_r1/development.jsonl",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/jobs/pi05official_Post_libero_10_s1_r1/development.jsonl",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/jobs/pi05official_Post_libero_goal_s0_r1/development.jsonl",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/jobs/pi05official_Post_libero_goal_s1_r1/development.jsonl",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/jobs/pi05official_Post_libero_object_s0_r1/development.jsonl",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/jobs/pi05official_Post_libero_object_s1_r1/development.jsonl",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/jobs/pi05official_Post_libero_spatial_s0_r1/development.jsonl",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/jobs/pi05official_Post_libero_spatial_s1_r1/development.jsonl"
+    ],
+    "Q_config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_LIBERO_POST_V1_r1/configs/pi05official_Post_libero_10_s0_r1.json",
+    "Q_fit_receipt": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/D24_E8_LIBERO_POST_r1/FIT_RESULT.json",
+    "full_data_status": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_LIBERO_FULL_NATIVE_V1/launch_r6/DATA_STATUS.json",
+    "full_resource_summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_LIBERO_FULL_NATIVE_V1/launch_r6/RESOURCE_SUMMARY.json",
+    "Q_parent_count": 32,
+    "Q_candidate_count_per_parent": 5,
+    "Q_repeat_count": 1,
+    "Q_attempts": 160,
+    "Q_control_steps": 24825,
+    "Q_prefix_control_steps_derived": 3200,
+    "Q_settle_steps_derived_from_completed_runs_and_config": 1600,
+    "Q_summed_episode_seconds": 5988.882170708384,
+    "Q_episode_span_seconds_derived": 966.354695,
+    "Q_span_scope": "first logged episode start to last end; excludes first model/env initialization",
+    "DG_new_attempts": 40,
+    "DG_complete": 30,
+    "DG_technical_failures": 10,
+    "DG_control_steps": 4499,
+    "DG_summed_saved_episode_seconds": 9305.158598803915,
+    "total_registered_attempts": 200,
+    "total_recorded_control_steps": 29324,
+    "total_environment_steps_including_all_reset_and_initialization": null,
+    "full_collection_wall_seconds_including_failed_initialization": null,
+    "D_two_step_window_rows": {
+      "train": 681,
+      "historical_validation": 225
+    },
+    "G_pairs": {
+      "train": 7,
+      "historical_validation": 4
+    },
+    "G_repeat_count": [
+      1
+    ],
+    "G_target_values": [
+      0.0
+    ],
+    "Q_L11_parent_filter": {
+      "utc": "2026-09-22T08:21:03.411187+00:00",
+      "source_attempts": 160,
+      "valid_parents": 30,
+      "train_parents": 22,
+      "validation_parents": 8,
+      "actual_train_successes": 105,
+      "actual_train_outcomes": 110,
+      "nonzero_train_gain_labels": 8,
+      "nonzero_train_pair_labels": 4,
+      "invalid": [
+        {
+          "parent": "D24_LIBERO_DEV_v1_libero_10_t03",
+          "reason": "actual candidate cut/reference does not align"
+        },
+        {
+          "parent": "D24_LIBERO_DEV_v1_libero_spatial_t04",
+          "reason": "actual candidate cut/reference does not align"
+        }
+      ],
+      "label_repeat_count": 1,
+      "old_fresh_G0_labels_provided": false,
+      "test_read": false,
+      "Q_L11_supervision_ready": true
+    },
+    "Q_BCE_fit_configuration": {
+      "feature_version": "official-LIBERO-prefix-mean-fixed-RP329-v1",
+      "feature_projection_seed": 9221701,
+      "feature_description": "native SigLIP token means per camera projected to64; native prompt embedding mean to128; own norm state8; remaining fraction1; zero-mask padded camera",
+      "intervention_step": 20,
+      "intervention_rule": "once at fixed natural replan after20 executed policy commands; five XYZ/gripper commands, native K5 thereafter; no trigger/replan extra call",
+      "metric": "official LIBERO action quantiles: S=(q99-q01)/2, physical-command direction S^2 grad_Q",
+      "post_xyz_command_rms": 0.02,
+      "post_xyz_command_cap": 0.06,
+      "post_xyz_metres_rms": 0.001,
+      "post_xyz_metres_cap": 0.003,
+      "post_grip_command_rms": 0.1,
+      "post_grip_command_cap": 0.2,
+      "boundary_margin": 0.02,
+      "dev_xyz_command_amplitude": 0.6,
+      "dev_candidates": "a0 and two parent-seeded antithetic xyz directions; second pair also commands opposite gripper signs; rotations and tail unchanged",
+      "fit_seeds": [
+        9301,
+        9302,
+        9303,
+        9304
+      ],
+      "fit_steps": 4000,
+      "fit_batch_size": 64,
+      "fit_lr": 0.0003,
+      "fit_weight_decay": 0.001,
+      "fit_architecture": [
+        399,
+        128,
+        64,
+        1
+      ],
+      "fit_loss": "BCE logits with train-only class weight",
+      "train_tasks_per_suite": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "validation_tasks_per_suite": [
+        6,
+        7
+      ],
+      "test_guided_selection": false,
+      "fixed_train_feature_standardization": "train parents only; min feature std .05",
+      "missing_contrast": "block fitting/test if fewer than40 valid rows/8 train parents or only one true train outcome class",
+      "label": "Post-operator-transfer-native-LIBERO; no D/G0; not Full",
+      "inherited_MW_features_or_weights": false,
+      "base_model_fitting": false,
+      "rotation_correction": false
+    },
+    "Q_BCE_actual_updates": 16000,
+    "Q_BCE_epochs_per_member_derived": 2133.3333333333335,
+    "Q_BCE_fit_seconds": 19.770698091946542,
+    "full_small_network_updates": 0,
+    "full_physical_state_equivalence_proven": null
+  },
+  "real_robot": {
+    "archived_user_evaluation_summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/analysis_20260923_master_completion/HISTORICAL_PAIR_AND_REAL_DATA.json",
+    "summary_origin": "user aggregate evaluation counts; not raw collection/training logs",
+    "aggregate_evaluation_counts": {
+      "platform": "AgileX PiPER",
+      "tasks": [
+        "Pick-place",
+        "Alignment",
+        "Disturbance"
+      ],
+      "trials_per_task_per_method": 60,
+      "baseline_successes": [
+        41,
+        29,
+        26
+      ],
+      "ours_successes": [
+        49,
+        40,
+        39
+      ],
+      "ours_branch": null,
+      "Q_configuration": null,
+      "intervention_count_mode": null,
+      "per_trial_pairing": null,
+      "source": "User confirmed per-task60; existing DATA_VELOCITY.md section4"
+    },
+    "total_evaluation_trials_derived": 360,
+    "D_Q_G_training_manifest": null,
+    "recovery_protocol_configuration": null,
+    "pairing_threshold_configuration": null,
+    "mismatch_replay_log": null,
+    "Q_repeat_count": null,
+    "G_repeat_count": null,
+    "auxiliary_collection_attempts": null,
+    "auxiliary_training_updates": null
+  }
+}

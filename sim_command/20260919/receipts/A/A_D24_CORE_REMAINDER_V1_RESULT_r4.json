@@ -1,0 +1,56 @@
+{
+  "task_id": "A_D24_CORE_REMAINDER_V1",
+  "revision": 4,
+  "status": "EXECUTOR_COMPLETE_PENDING_ANALYSIS",
+  "utc": "2026-09-22T05:30:36.847715+00:00",
+  "E6": {
+    "status": "analysis_accepted_complete",
+    "episodes": 200,
+    "rerun": false
+  },
+  "E3": {
+    "valid": 500,
+    "successes": 319,
+    "success_rate": 0.638,
+    "direct_original": 39,
+    "log_derived_accepted": 8,
+    "continuation": 453,
+    "old_publication_failures_preserved": 8,
+    "cost_denominator": 492,
+    "missing_cost_records": 8,
+    "receipt": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_E3_UNSTARTED_CONTINUATION_V1_RESULT_r2.json",
+      "sha256": "8ece9e51100cb534ebd9c7f055e996ace6d2ece1aed44c1a1c6bff850f29e6cb"
+    },
+    "accepted_log8": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_CORE_REMAINDER_V1_LOG_RECOVERY_ACCEPTANCE_ACK.json",
+      "sha256": "9523226e9799654d61341078bd949070734a4a2bac4a0b4fd4bc5476bda2b4e8"
+    },
+    "cost_coverage": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_E3_UNSTARTED_CONTINUATION_V1/EXACT_COST_COVERAGE_ACCEPTED_LOG8.json",
+      "sha256": "7e7e8f78e0bee8e2ef984efc411238088ee21157fc33a820d3422df99f7c70dd"
+    }
+  },
+  "GAF": {
+    "valid": 500,
+    "successes": 315,
+    "success_rate": 0.63,
+    "technical_failures": 0,
+    "small_network_updates": 30000,
+    "receipt": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_GAF_INTERNAL_HOLDOUT_V1_RESULT_r3.json",
+      "sha256": "d77f0237338d6ba57ca588efcd5618b31eee376167975dd43181c482654a6198"
+    }
+  },
+  "final_holder_restoration": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/chain/RESTORATION.json",
+    "sha256": "e70963582b7cc2bab083e06e2bc299a316886a8f9cfdc01dc3b90351707e94f4"
+  },
+  "new_launches_this_handler": 0,
+  "new_claims_this_handler": 0,
+  "scientific_compute_this_handler": 0,
+  "next_actions": [
+    "Await analysis acceptance/aggregation; no same-unit launch or old475 collection",
+    "Existing idle occupancy guard continues; no pending formal compute in these three units"
+  ]
+}

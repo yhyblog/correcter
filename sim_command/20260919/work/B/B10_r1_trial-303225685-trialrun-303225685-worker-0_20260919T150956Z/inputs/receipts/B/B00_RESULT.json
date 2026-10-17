@@ -1,0 +1,408 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "B00",
+  "revision": 1,
+  "role": "B",
+  "hostname": "trial-303225685-trialrun-303225685-worker-0",
+  "session_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+  "run_id": "B00_r1_trial-303225685-trialrun-303225685-worker-0_20260919T145623Z",
+  "status": "complete",
+  "started_at_utc": "2026-09-19T14:56:23Z",
+  "finished_at_utc": "2026-09-19T15:08:21Z",
+  "input_identity": {
+    "protocol": [
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/README.md",
+        "snapshot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B00_r1_trial-303225685-trialrun-303225685-worker-0_20260919T145623Z/inputs/README.md",
+        "sha256": "307342c3c9b1d3bca983b40c7a43ffcc3e52b409dfccf3e36636eb2a2b22d594"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/START_SERVER_B.md",
+        "snapshot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B00_r1_trial-303225685-trialrun-303225685-worker-0_20260919T145623Z/inputs/START_SERVER_B.md",
+        "sha256": "0f7a46db3b7f6a1db131a188926c0d80b1543ea3d30c5473cc3118da5aab2087"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/CONTROL.json",
+        "snapshot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B00_r1_trial-303225685-trialrun-303225685-worker-0_20260919T145623Z/inputs/CONTROL.json",
+        "sha256": "499085da1bd55abdd34030f8702a4d083899014500c655a154af58089cdc43f9"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/TASK_BOARD.json",
+        "snapshot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B00_r1_trial-303225685-trialrun-303225685-worker-0_20260919T145623Z/inputs/TASK_BOARD.json",
+        "sha256": "d8fab1e95cb9709360da86659e0704d263769c90cb11868839e869c0cb623a7b"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/MASTER_PLAN.md",
+        "snapshot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B00_r1_trial-303225685-trialrun-303225685-worker-0_20260919T145623Z/inputs/MASTER_PLAN.md",
+        "sha256": "9e1a07d62302559f6e4c02c58b37dd5e19e10b53a76366378c6be1f9dc8229e5"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/tasks/B00.md",
+        "snapshot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B00_r1_trial-303225685-trialrun-303225685-worker-0_20260919T145623Z/inputs/tasks/B00.md",
+        "sha256": "032e8372b5f6be3a15ce23bd7c0a48ee567dac1d84ef8e4e7a182d7ac15e10a7"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/REPORT_CONTRACT.md",
+        "snapshot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B00_r1_trial-303225685-trialrun-303225685-worker-0_20260919T145623Z/inputs/contracts/REPORT_CONTRACT.md",
+        "sha256": "d14bdfecf3b669946ddad77e37650ce5786253e071e45c6c6900c38cf11aac16"
+      }
+    ],
+    "control_revision_at_finish": 3,
+    "code": [
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/src/siglip_dynamics/inference/safety_module.py",
+        "exists": true,
+        "symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/src/siglip_dynamics/inference/safety_module.py",
+        "bytes": 3090,
+        "readable": true,
+        "sha256": "cea5879debe62429132e5ee6a5b5725f38bcb1fa9c9229993b679fe9994c6a4b",
+        "ast_parse": "pass"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/src/siglip_dynamics/inference/circuit_breaker.py",
+        "exists": true,
+        "symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/src/siglip_dynamics/inference/circuit_breaker.py",
+        "bytes": 2119,
+        "readable": true,
+        "sha256": "0a88c882fe8f9f6977cbe1957d6d988b1f2b91927a53086d864e2bbf7423b0fe",
+        "ast_parse": "pass"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/src/lerobot/safety/siglip_dynamics_mlp.py",
+        "exists": true,
+        "symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/src/lerobot/safety/siglip_dynamics_mlp.py",
+        "bytes": 21472,
+        "readable": true,
+        "sha256": "1bce7e98a0c948d033dd654d9032074d2fdf59db926234a13e67d5cfcaed1618",
+        "ast_parse": "pass"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/src/corrector/guidance.py",
+        "exists": true,
+        "symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/src/corrector/guidance.py",
+        "bytes": 17137,
+        "readable": true,
+        "sha256": "788bd844c14df521f931bd1e3f962fdc61e36f2d9f9519505e242660f8d41c9b",
+        "ast_parse": "pass"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/eval_metaworld.py",
+        "exists": true,
+        "symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/eval_metaworld.py",
+        "bytes": 8179,
+        "readable": true,
+        "sha256": "80af61614c7bcd0c9f8bb82828f8a9a3ec025827f7b1c3e420293b7a40e5ed33",
+        "ast_parse": "pass"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/serve_pi05.py",
+        "exists": true,
+        "symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/serve_pi05.py",
+        "bytes": 1698,
+        "readable": true,
+        "sha256": "d0faa47e3887a27d6ccb3ed70263f6f5ab9780bb0fcd6424a20150b57aff7e1b",
+        "ast_parse": "pass"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/eval_libero.py",
+        "exists": true,
+        "symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/eval_libero.py",
+        "bytes": 6434,
+        "readable": true,
+        "sha256": "755b4cdb06b66db1b6e24898fb49db736b8a4d9d1f752f2c775578c31602a210",
+        "ast_parse": "pass"
+      }
+    ],
+    "git_heads": {
+      "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector": {
+        "command": [
+          "git",
+          "-C",
+          "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector",
+          "rev-parse",
+          "HEAD"
+        ],
+        "exit_code": 0,
+        "stdout": "9d23a0ba6fad562d3ed1a68fc52c8a12459abb41\n",
+        "stderr": ""
+      },
+      "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/lerobot-smolvla-8fff0fd": {
+        "command": [
+          "git",
+          "-C",
+          "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/lerobot-smolvla-8fff0fd",
+          "rev-parse",
+          "HEAD"
+        ],
+        "exit_code": 0,
+        "stdout": "8fff0fde7c79f23a93d845d1a50e985de01f8b8a\n",
+        "stderr": ""
+      },
+      "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/lerobot-xvla-8fff0fd": {
+        "command": [
+          "git",
+          "-C",
+          "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/lerobot-xvla-8fff0fd",
+          "rev-parse",
+          "HEAD"
+        ],
+        "exit_code": 0,
+        "stdout": "8fff0fde7c79f23a93d845d1a50e985de01f8b8a\n",
+        "stderr": ""
+      },
+      "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/openpi-215abfb": {
+        "command": [
+          "git",
+          "-C",
+          "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/openpi-215abfb",
+          "rev-parse",
+          "HEAD"
+        ],
+        "exit_code": 0,
+        "stdout": "215abfb217dbac7d5f1273282331b9b1866c0479\n",
+        "stderr": ""
+      }
+    },
+    "config": [
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/configs/experiments.json",
+        "sha256": "1df82ec10b71ee32b7a72719fad598ec45080384c0facd88d0998dabd7448b19",
+        "bytes": 1748
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/vla-corrector-h1-k10/config.json",
+        "sha256": "4f7cc842b2e17bb5ff526dfcdfd7e94a680d1431bd9cf7af1b9f88373bc0b232",
+        "bytes": 981
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/docs/Experiment_plam.md",
+        "sha256": "14b2b67e03ae18d8c6b2e55fa64227c35af33cfdb9d580e7dcd4f17d665b6d79",
+        "bytes": 41102
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/docs/NATIVE10_CORRECTOR_ALGORITHM_ZH.md",
+        "sha256": "c9eabfdd342c8584c8040b9088cdbadbaeac7f4cadd95113f13d71a5c8cc9469",
+        "bytes": 40638
+      }
+    ],
+    "data": [
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+        "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+        "bytes": 2942
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/libero/physical-intelligence-v2/a4336d589d589045d1c56423ffdf3b88a0e19b1f/meta/info.json",
+        "sha256": "77c0da93c67960bac803a8ea25dabf380d752c26c1d91c54151121dd10e7d82f",
+        "bytes": 2131
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/input_bundles/final_train600_input_v1/manifest.json",
+        "sha256": "f32ddac963181f01db740817cf8bdc990d3a04ab131a8c90689c42c40941e496",
+        "bytes": 3320443
+      }
+    ],
+    "model": [
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/vla-corrector-h1-k10/best_cosine_model.pt",
+        "sha256": "0efadcfdfde814fc4e929d007ed0b95894de33f0d51e3d3cae512605e223d168"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/vla-sft-030000/model.safetensors",
+        "sha256": null,
+        "reason": "Inventory checked size/safetensors structure; full large-weight digest not recomputed."
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model/model.safetensors",
+        "sha256": null,
+        "reason": "Size/header and checkpoint step checked; full payload digest not recomputed."
+      }
+    ],
+    "remote_baselines": {
+      "commit": null,
+      "reason": "Read-only upstream main and paper review; immutable code freeze belongs to B10."
+    }
+  },
+  "artifacts": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B00_REPORT.md",
+      "sha256": "910982370cc7eef96990fac1b8ddcb5a2f7e3a98cbe9753e63eefc70dbc1f34c",
+      "bytes": 10955
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B00_ASSETS.json",
+      "sha256": "7e8763fe729a8f8502c6edf87b9fc82c72f20cfae1e78fade9f7c15e49968ad9",
+      "bytes": 67418
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/nodes/B/identity.json",
+      "sha256": "3559dfd852ce20661b402743e2703c465e3c5a40c3ccb61a7e12001c420219d1",
+      "bytes": 20279
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B00_r1_trial-303225685-trialrun-303225685-worker-0_20260919T145623Z/host_inventory.json",
+      "sha256": "1184832c4be377fd5c8afa24a101baf4a0ded1baaa99d23aa2e39df73ce4a32f",
+      "bytes": 10391
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B00_r1_trial-303225685-trialrun-303225685-worker-0_20260919T145623Z/environments.json",
+      "sha256": "09ba7d40c0bed3f35e9f5232c2b7788b9d0cca4b694ea9db6941be5f2274d977",
+      "bytes": 21370
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B00_r1_trial-303225685-trialrun-303225685-worker-0_20260919T145623Z/physical_paths.json",
+      "sha256": "5e5ec81ab62b0025dc9a5efd779e6fd533d744e7adaec3c73382c29637ccd1bb",
+      "bytes": 27902
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B00_r1_trial-303225685-trialrun-303225685-worker-0_20260919T145623Z/asset_verification.json",
+      "sha256": "b78c9b4838794e96faad1ce1ba616ae8fb913aef9092fd7425f0656d63960c67",
+      "bytes": 24400
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B00_r1_trial-303225685-trialrun-303225685-worker-0_20260919T145623Z/extra_asset_verification.json",
+      "sha256": "29490c95b5658d7e7eed3f5559483ae3a2ac3a9e816ec1367f641b07fcb9133a",
+      "bytes": 2554
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B00_r1_trial-303225685-trialrun-303225685-worker-0_20260919T145623Z/publication_CONTROL.json",
+      "sha256": "6a148d9104961b6de92a63c9439cb1ce10e0c584e57a53655029a4d02a6c72f5",
+      "bytes": 1596
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B00_r1_trial-303225685-trialrun-303225685-worker-0_20260919T145623Z/publication_TASK_BOARD.json",
+      "sha256": "c79b28f3847450350b3ca9c9a1ba32280162f2e45d005c55a6e290bfb85cfbfc",
+      "bytes": 4312
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B00_r1_trial-303225685-trialrun-303225685-worker-0_20260919T145623Z/inventory.py",
+      "sha256": "91e381afa5c85aeb6de76eeb564abb4b09a3e64d5d3570b9666321c5b2f0caac",
+      "bytes": 7376
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B00_r1_trial-303225685-trialrun-303225685-worker-0_20260919T145623Z/verify_assets.py",
+      "sha256": "59e899180c8903bdd04746473b2cca3ceb9921c32b031de44041d50243816e66",
+      "bytes": 7150
+    }
+  ],
+  "resource_counts": {
+    "simulator_attempts": 0,
+    "completed_rollouts": 0,
+    "vla_sampling_calls": 0,
+    "optimizer_updates": 0,
+    "gpu_seconds": 0,
+    "model_gpu_inference_calls": 0
+  },
+  "resource_scope_note": "Formal B00 experiment counts only; existing occupancy holders continued as required. CPU checkpoint deserialization was not a model inference.",
+  "failures_and_retries": [
+    {
+      "command": "cat vla-corrector/reproduction/README.md",
+      "exit_code": 1,
+      "recovery": "Located and read reproduction/metaworld_very_hard/HANDOFF.md and README.md; no compute launched."
+    },
+    {
+      "command": "rg against guessed vla-corrector/src/lerobot/policies/safety* and corrector* paths",
+      "exit_code": 2,
+      "recovery": "Used rg --files and located actual src/siglip_dynamics/inference and src/lerobot/safety paths."
+    }
+  ],
+  "findings": [
+    "B is distinct from A; 8 H100 80GB holders active, shared B marker roundtrip passed.",
+    "Five pinned runtime prefixes launch CPU metadata inspection; legacy CPU torch weight read passed; no simulator/model inference ran.",
+    "3219 manifest entries passed size checks and 955 small-file hashes matched; large payloads were not fully rehashed.",
+    "Shared pi05-MT50 and VLA-Corrector weights exist; Corrector full SHA and 42509568 finite CPU parameters verified, original latent cache missing.",
+    "SmolVLA MT50 has step50000 intermediate checkpoint; completed X-VLA MT50 checkpoint was not found in authoritative workspace.",
+    "Official and final-SFT pi05-LIBERO inference assets and four-suite assets exist; final SFT optimizer payloads were previously removed.",
+    "Train600 has five tasks and candidate/terminal-label features, not a complete critic transition dataset.",
+    "Recommend GAF-v1 MSE/success-to-go adaptation; no local clone/locked critic and no auto-deployment; QGF chunk IQL is an alternative.",
+    "E6 can prepare one causal D5 residual detector sharing R; LVM k10 requires explicit monitoring-delay alignment.",
+    "Historical /tmp checkpoint references are absent on B; two shared processor replacements match old SHAs; later work awaits release."
+  ],
+  "blockers": [
+    {
+      "id": "X_MT50_MISSING",
+      "affects": [
+        "B10",
+        "B30"
+      ],
+      "gap": "No completed MT50 X-VLA run in authoritative workspace; only base/initialization.",
+      "resolution": "Controller supplies a completed checkpoint or assigns a separately budgeted SFT task."
+    },
+    {
+      "id": "SMOL_PARTIAL",
+      "affects": [
+        "B10",
+        "B30"
+      ],
+      "gap": "Latest visible MT50 checkpoint is 50000/100000; historical queue interrupted.",
+      "resolution": "Freeze 50k with declared training history or explicitly assign continuation; do not auto-resume."
+    },
+    {
+      "id": "LATENT_CACHE_MISSING",
+      "affects": [
+        "B10",
+        "B12"
+      ],
+      "gap": "Original VLA-Corrector latent directory no longer exists.",
+      "resolution": "Prepare shared demonstration view, then release new feature extraction or provide compatible cache."
+    },
+    {
+      "id": "CRITIC_DATA_FIELDS",
+      "affects": [
+        "P00",
+        "B10",
+        "B12"
+      ],
+      "gap": "Train600 arrays lack continuous next observations/rewards/termination/first-success timing.",
+      "resolution": "Audit original trajectory references; fields absent there must be recorded in the planned common collection pool."
+    },
+    {
+      "id": "PUBLIC_BASELINE_VERSION",
+      "affects": [
+        "B10",
+        "B12"
+      ],
+      "gap": "No local GAF/QGF clone or locked commit/critic.",
+      "resolution": "B10 pin GAF-v1 and adapters; no bulk data/dependency installation needed for B00."
+    },
+    {
+      "id": "NEW_RELEASE_PENDING",
+      "affects": [
+        "B10",
+        "B11",
+        "B12",
+        "B13",
+        "B20",
+        "B21",
+        "B30"
+      ],
+      "gap": "At publication only A00/B00 are allowed; no subsequent release.",
+      "resolution": "Wait for controller P00/dependencies and node-specific release."
+    }
+  ],
+  "next_task_proposal": {
+    "task_id": "B10",
+    "scope": "public data views, one critic interface, E6/E1/E8 CPU preparation and compute quotation",
+    "requires": [
+      "P00 frozen interface",
+      "CONTROL allow",
+      "B-specific release"
+    ],
+    "dispatch_state_at_finish": "waiting"
+  },
+  "checks": {
+    "cuda_initialized_during_cpu_check": false,
+    "new_training_started": false,
+    "model_inference_started": false,
+    "simulator_started": false,
+    "shared_code_or_environments_modified": false,
+    "report_lines": 72
+  }
+}

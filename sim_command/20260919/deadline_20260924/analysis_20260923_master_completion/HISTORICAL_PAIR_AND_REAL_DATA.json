@@ -1,0 +1,121 @@
+{
+  "updated_utc": "2026-09-23T17:05:25.444157+00:00",
+  "method": "Pair by source_id; match task, env_seed, policy_seed; 50 fixed tasks, 10 sources/task; within-task source paired percentile bootstrap5000, numpy default_rng seed20260923; two-sided exact McNemar. No training-seed/new-task uncertainty. Historical external comparisons Holm family4; L01 V once/multi unadjusted.",
+  "sources": {
+    "old_velocity_multi": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_VELOCITY_TRIGGER_MODES_V1_RECOVERY_r3/FINAL_EPISODES.csv",
+      "sha256": "3e3ac41ec0cd270664c4e1a1939af4af33fd9a48c96d32fda0b736f59bb81f99"
+    },
+    "old_post_multi": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_POST_TRIGGER_MODES_V1/recovery_r3/FINAL_EPISODES.csv",
+      "sha256": "9505165b218c3ca52cddfddba06e8b6dc0d3b2f32a0163d6678538326d9fdedd"
+    },
+    "vla_corrector": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_E3_UNSTARTED_CONTINUATION_V1/COMBINED_EPISODES.json",
+      "sha256": "6a7b15877973d8444c8cfdef83f624373142cd25822db79b79d742cb946b9ed6"
+    },
+    "gaf": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/EPISODES.json",
+      "sha256": "7ed2bc972030db8a67f89483496bd8d6c6a4e4224e5360bbac7d257b88030b00"
+    },
+    "l01_all_methods": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_AUTORUN_POST_LED_V1/TECHNICAL_EPISODES_ALL_METHODS.csv",
+      "sha256": "97fd4c7e32f541b7a8accb71ae15545696146af31a205d10892afd79f4538478"
+    }
+  },
+  "historical_old_Q_multi_external_pairs": [
+    {
+      "left": "old_post_multi",
+      "right": "vla_corrector",
+      "paired_valid": 500,
+      "left_successes": 355,
+      "right_successes": 319,
+      "rescued": 68,
+      "harmed": 32,
+      "difference_pp": 7.199999999999999,
+      "CI95_low_pp": 3.8,
+      "CI95_high_pp": 10.6,
+      "McNemar_exact_p": 0.00040877716742681523,
+      "four_comparison_Holm_p": 0.0012263315022804457
+    },
+    {
+      "left": "old_velocity_multi",
+      "right": "vla_corrector",
+      "paired_valid": 500,
+      "left_successes": 346,
+      "right_successes": 319,
+      "rescued": 61,
+      "harmed": 34,
+      "difference_pp": 5.4,
+      "CI95_low_pp": 2.0,
+      "CI95_high_pp": 8.6,
+      "McNemar_exact_p": 0.007313123139453616,
+      "four_comparison_Holm_p": 0.007313123139453616
+    },
+    {
+      "left": "old_post_multi",
+      "right": "gaf",
+      "paired_valid": 500,
+      "left_successes": 355,
+      "right_successes": 315,
+      "rescued": 68,
+      "harmed": 28,
+      "difference_pp": 8.0,
+      "CI95_low_pp": 4.6,
+      "CI95_high_pp": 11.200000000000001,
+      "McNemar_exact_p": 5.4591543577114465e-05,
+      "four_comparison_Holm_p": 0.00021836617430845786
+    },
+    {
+      "left": "old_velocity_multi",
+      "right": "gaf",
+      "paired_valid": 500,
+      "left_successes": 346,
+      "right_successes": 315,
+      "rescued": 62,
+      "harmed": 31,
+      "difference_pp": 6.2,
+      "CI95_low_pp": 2.8000000000000003,
+      "CI95_high_pp": 9.6,
+      "McNemar_exact_p": 0.0017127644224002388,
+      "four_comparison_Holm_p": 0.0034255288448004776
+    }
+  ],
+  "historical_L01_Velocity_multi_minus_once": {
+    "left": "l01_v_G0-multi",
+    "right": "l01_v_G0-once",
+    "paired_valid": 500,
+    "left_successes": 340,
+    "right_successes": 336,
+    "rescued": 11,
+    "harmed": 7,
+    "difference_pp": 0.8,
+    "CI95_low_pp": -0.8,
+    "CI95_high_pp": 2.4,
+    "McNemar_exact_p": 0.480682373046875
+  },
+  "real_world_user_counts": {
+    "platform": "AgileX PiPER",
+    "tasks": [
+      "Pick-place",
+      "Alignment",
+      "Disturbance"
+    ],
+    "trials_per_task_per_method": 60,
+    "baseline_successes": [
+      41,
+      29,
+      26
+    ],
+    "ours_successes": [
+      49,
+      40,
+      39
+    ],
+    "ours_branch": null,
+    "Q_configuration": null,
+    "intervention_count_mode": null,
+    "per_trial_pairing": null,
+    "source": "User confirmed per-task60; existing DATA_VELOCITY.md section4"
+  }
+}

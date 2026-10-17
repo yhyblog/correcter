@@ -1,0 +1,80 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A11_BATCH3_PREP_CPU_V1",
+  "revision": 1,
+  "accepted_at_utc": "2026-09-21T09:18:32.856990+00:00",
+  "status": "CPU_BATCH3_FIXED_SCOPE_PREPARATION_ACCEPTED",
+  "receipt": {
+    "path": "receipts/A/A11_BATCH3_PREP_CPU_V1_RESULT.json",
+    "sha256": "c27709e17c5cab640434ad3bb2ccac51462789a4019a649ddcfcfdaad68b192a"
+  },
+  "report": {
+    "path": "results/A/A11_BATCH3_PREP_CPU_V1/REPORT.md",
+    "sha256": "098266a2e67f27eaee88617d3723db2a62ef95956d4771f51c291d9c5b04cbff"
+  },
+  "evidence_manifest": {
+    "path": "results/A/A11_BATCH3_PREP_CPU_V1/EVIDENCE_MANIFEST.json",
+    "sha256": "f182172c6800fe4c2367222d2ccc488aef0ead5f1cf33c4cfd910c3f761a4f37"
+  },
+  "proposal": {
+    "path": "results/A/A11_BATCH3_PREP_CPU_V1/proposal/PROPOSAL.json",
+    "sha256": "6e568f44bd084852ef52bdba6e4535e5ce84d8baaf5d75b5a1cd095d4dcc346d"
+  },
+  "root_verification": {
+    "path": "manifests/A11_BATCH3_PUBLICATION/ROOT_VERIFICATION.json",
+    "sha256": "f196c1c78ad9303851c0795c0f8688623046289732de87d80c9afbd379778ca0"
+  },
+  "initialization_review": {
+    "path": "manifests/A11_BATCH3_PUBLICATION/INITIALIZATION_REVIEW.json",
+    "sha256": "93f4893ef2e74cc21a1d01daeb23369e8db38fade087c128bf1c6ef0ad05e618"
+  },
+  "science_review": {
+    "path": "manifests/A11_BATCH3_PUBLICATION/SCIENCE_REVIEW.json",
+    "sha256": "721e602905025f4c8d44369347604f0bbd3e41f4eb8dc2ed276efd06e7e3258a"
+  },
+  "resource_review": {
+    "path": "manifests/A11_BATCH3_PUBLICATION/RESOURCE_REVIEW.json",
+    "sha256": "e7cbd8cc220dee1c7b13ef53acfad3a0032d5944e5518632169e758a44082375"
+  },
+  "changes": "Only3 runtime identity/risk string files changed;25 code files byte-identical. Existing50task static table/source evidence reused. No scientific, initializer hook, state, scheduler or lifecycle change.",
+  "actual_new_task_initializations_validated": 0,
+  "actual_new_paired_samples": 0,
+  "targeted_CPU_checks_reported": 70,
+  "shell_checks_reported": 2,
+  "selected_batch_extra_init_substeps": 7800,
+  "batch_init_physics_cap": 3127800,
+  "batch_init_forward_cap": 9600,
+  "door_lock_actual_qualification": null,
+  "branch_semantics": {
+    "non_normal_comparisons": 112,
+    "candidate_replacement_branches": 96,
+    "G0_old_control_branches": 16,
+    "G0_old_intervened": false,
+    "G0_old_plan_replaced": false,
+    "online_G0_calls": 0
+  },
+  "task_index_note": "Current8 A/train0/cut5 ASCII selection and deterministic seeds verified excluding17processed slots including normal-only. Future dev real-task ordinal-to-owner map still requires freezing.",
+  "new_batch_risk_acceptance": {
+    "path": "contracts/BATCH3_RISK_AND_SCOPE_V1.md",
+    "sha256": "dc3177169ee2171385c7ba272f6b094fd75d40c52deaaec82629a7e3a238dd0a",
+    "mode": "bounded_batch3",
+    "parent_count": 8,
+    "concurrency": 2,
+    "accepts_monitoring_gaps": true,
+    "project_quota_known": false,
+    "exclusive_reservation": false,
+    "required_available_bytes": 93952475136,
+    "minimum_available_inodes": 564096
+  },
+  "physical_equality_proven": null,
+  "next_task": "A11_COMMON_POOL_BATCH3_V1",
+  "no_claim_of_MT50_training_or_method_performance": true,
+  "accepted_pool_unchanged": {
+    "paired_train_parents": 16,
+    "dev_parents": 0,
+    "processed_slots": 17,
+    "normal_only": 1,
+    "remaining_unattempted_slots": 483,
+    "covered_tasks": 13
+  }
+}

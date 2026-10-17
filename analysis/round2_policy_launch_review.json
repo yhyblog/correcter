@@ -1,0 +1,86 @@
+{
+  "status": "actual_launch_binding_review_passed",
+  "reviewed_at_utc": "2026-09-17T01:32:18.279266+00:00",
+  "launch": {
+    "started_utc": "2026-09-17T01:30:18.196490+00:00",
+    "pid": 460687,
+    "controller_pid": 460465,
+    "command": [
+      "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+      "-u",
+      "-m",
+      "experiments.native10_training_20260916.policy5_round2_runner_v1",
+      "launch",
+      "--config",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_protocols/round2_policy_v1/config.json",
+      "--freeze",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_protocols/round2_policy_v1/freeze.json",
+      "--stage",
+      "round2_development_policy",
+      "--bank-version",
+      "round2_policy_v1",
+      "--wave-id",
+      "round2_policy_v1_01",
+      "--workers",
+      "32"
+    ],
+    "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_protocols/round2_policy_v1/config.json",
+    "config_sha256": "d2a60785fc84063e02fee965fa8ba009b3880783ac58adf5dc9ce4011c819dc0",
+    "freeze": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_protocols/round2_policy_v1/freeze.json",
+    "freeze_sha256": "cdbb364de29b44fea522f3740c185ccc97337f9123662e720e2f7903def5f292",
+    "expected_simulator_attempts": 1995,
+    "stage_cap": 2100,
+    "optimizer_updates": 0,
+    "lifecycle_owned_by_runner": true
+  },
+  "actual_launch_record_sha256": "e60af704684f3a94ddba689938002f399b6da3a553f783d7c870d0bbcd73d8a8",
+  "ready_version": 11,
+  "ready_sha256": "7af5045a44944894cc8c89eb10f8110c2098d7458718fe0550d03a42fe30b953",
+  "independent_binding_review": {
+    "reviewer": "critic_data_audit",
+    "passed": true,
+    "differences": [],
+    "checks": [
+      "exact config/freeze/immutable READY",
+      "A4000 selected seal and four weights",
+      "original ordered100 source slots and95cut+5common",
+      "stage2100sim/0optimizer",
+      "actual new runner32worker",
+      "new41CPU evidence and five operational entry SHA match freeze"
+    ]
+  },
+  "resources_before": {
+    "global_totals": {
+      "simulator_attempts": 42874,
+      "training_updates": 51200
+    },
+    "stage": {},
+    "by_kind": {},
+    "records": 94074,
+    "ledger_sha256": "ef493c95d51a77eae82cdec142f63d0f63cb6805a9b676588274684e40213bee"
+  },
+  "technical_progress_snapshot": {
+    "utc": "2026-09-17T01:31:49.656535+00:00",
+    "phase": "running",
+    "loaded_worker_count": 0,
+    "completed_worker_count": 0,
+    "completed_source_count": 0,
+    "total_sources": 100,
+    "failures": [],
+    "resources": {
+      "global_totals": {
+        "simulator_attempts": 42874,
+        "training_updates": 51200
+      },
+      "stage": {},
+      "by_kind": {},
+      "records": 94074
+    },
+    "wall_seconds": 91.87289947643876
+  },
+  "scientific_results_read": false,
+  "root_new_simulator_calls": 0,
+  "root_new_optimizer_updates": 0,
+  "scope": "Confirm launch and immutable bindings only;actual bank identity and full outcome audits remain runtime/final evidence. No new READY or duplicate launch.",
+  "next_analysis": "After full wave completion and audit,assess correction gain versus replan,rescues/harms,task/source concentration,Q-realized alignment and split costs. Calibration/heldout remain locked."
+}

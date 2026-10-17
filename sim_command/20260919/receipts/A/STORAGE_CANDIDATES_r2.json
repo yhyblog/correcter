@@ -1,0 +1,1310 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "revision": 2,
+  "role": "A",
+  "hostname": "trial-303224955-trialrun-303224955-worker-0",
+  "checked_at_utc": "2026-09-19T16:13:12.195399+00:00",
+  "scope": "existing required VLA inputs plus exact A preparation artifacts; no historical inventory rerun",
+  "supersedes_by_append_only_reference": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/STORAGE_CANDIDATES.json",
+    "sha256": "d144c41ab9b82b2204881654a4b083f6b0c9b24281c5a6a099d9dc41b44316b5"
+  },
+  "analysis_decision_source": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+    "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+  },
+  "required_input_keep_entries": [
+    {
+      "asset_id": "pi05_mt50_sft_030000",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/vla-sft-030000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model",
+      "project": "vla-corrector",
+      "type": "directory",
+      "logical_bytes": 9354084596,
+      "size_evidence": "prior published STORAGE_CANDIDATES inventory",
+      "purpose": "MT50 frozen policy; complete processor/normalizer inference bundle",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "pi05_mt50_sft_030000",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "mt50_demonstrations",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+      "project": "vla-corrector",
+      "type": "directory",
+      "logical_bytes": 45864144489,
+      "size_evidence": "sum of previously inventoried manifest-listed files; not whole-directory rescan",
+      "purpose": "Original MT50 demonstrations; common normal-data source",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "mt50_demonstrations",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "vla_corrector_best_cosine",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/corrector_pi05_mt50/h1_k10/best_cosine_model.pt",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/corrector_pi05_mt50/h1_k10/best_cosine_model.pt",
+      "project": "vla-corrector",
+      "type": "file",
+      "logical_bytes": 170051647,
+      "size_evidence": "prior published STORAGE_CANDIDATES inventory",
+      "purpose": "Selected external baseline; proposed B limited probe input",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "vla_corrector_best_cosine",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "spatial_pair_241",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241/finetune_400.pt",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241/finetune_400.pt",
+      "project": "ACT-RECAP",
+      "type": "file",
+      "logical_bytes": 17956415,
+      "size_evidence": "single-file current stat",
+      "purpose": "Frozen D member241",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "spatial_pair_241",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "spatial_pair_242",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242/finetune_400.pt",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242/finetune_400.pt",
+      "project": "ACT-RECAP",
+      "type": "file",
+      "logical_bytes": 17956415,
+      "size_evidence": "single-file current stat",
+      "purpose": "Frozen D member242",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "spatial_pair_242",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "gate_341",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_341/selected.pt",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_341/selected.pt",
+      "project": "ACT-RECAP",
+      "type": "file",
+      "logical_bytes": 5930357,
+      "size_evidence": "single-file current stat",
+      "purpose": "Frozen G0 member341",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "gate_341",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "gate_342",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_342/selected.pt",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_342/selected.pt",
+      "project": "ACT-RECAP",
+      "type": "file",
+      "logical_bytes": 5930357,
+      "size_evidence": "single-file current stat",
+      "purpose": "Frozen G0 member342",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "gate_342",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "Q_selected_bundle",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected",
+      "project": "Corrector",
+      "type": "directory",
+      "logical_bytes": 6037665,
+      "size_evidence": "prior published STORAGE_CANDIDATES inventory",
+      "purpose": "Selected A4000 ensemble and bundled PCA/preprocessing/selection identity",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "Q_selected_bundle",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "final_B_PCA_fit_audit",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/pca_fit_audit.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/pca_fit_audit.json",
+      "project": "Corrector",
+      "type": "file",
+      "logical_bytes": 57261,
+      "size_evidence": "single-file current stat",
+      "purpose": "PCA provenance; distinct from selected A-member preprocessing",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "final_B_PCA_fit_audit",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "train600_input_bundle",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/input_bundles/final_train600_input_v1/manifest.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/input_bundles/final_train600_input_v1/manifest.json",
+      "project": "Corrector",
+      "type": "file",
+      "logical_bytes": 3320443,
+      "size_evidence": "single-file current stat",
+      "purpose": "Immutable existing600 source supervision; no recollection",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "train600_input_bundle",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "round1_train_full_v1",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_train_full_v1",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_train_full_v1",
+      "project": "Corrector",
+      "type": "directory",
+      "logical_bytes": null,
+      "size_evidence": "not re-enumerated; A00 identity retained; directory inode size is not payload size",
+      "purpose": "Existing round1 training arrays",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "round1_train_full_v1",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "round2_train_full_v1",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round2_train_full_v1",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round2_train_full_v1",
+      "project": "Corrector",
+      "type": "directory",
+      "logical_bytes": null,
+      "size_evidence": "not re-enumerated; A00 identity retained; directory inode size is not payload size",
+      "purpose": "Existing round2 training arrays",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "round2_train_full_v1",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "round1_development_full_v1",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_development_full_v1",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_development_full_v1",
+      "project": "Corrector",
+      "type": "directory",
+      "logical_bytes": null,
+      "size_evidence": "not re-enumerated; A00 identity retained; directory inode size is not payload size",
+      "purpose": "Existing development arrays",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "round1_development_full_v1",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "native10_sources",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/sources",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/sources",
+      "project": "Corrector",
+      "type": "directory",
+      "logical_bytes": null,
+      "size_evidence": "not re-enumerated; A00 identity retained; directory inode size is not payload size",
+      "purpose": "Original source trajectories/state and source seals",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "native10_sources",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "native10_banks",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/banks",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/banks",
+      "project": "Corrector",
+      "type": "directory",
+      "logical_bytes": null,
+      "size_evidence": "not re-enumerated; A00 identity retained; directory inode size is not payload size",
+      "purpose": "Original candidate banks and label provenance",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "native10_banks",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "native10_rollouts",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/rollouts",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/rollouts",
+      "project": "Corrector",
+      "type": "directory",
+      "logical_bytes": null,
+      "size_evidence": "not re-enumerated; A00 identity retained; directory inode size is not payload size",
+      "purpose": "Original real suffix trajectories/outcomes",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "native10_rollouts",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "native10_episode_split",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/config.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/config.json",
+      "project": "Corrector",
+      "type": "file",
+      "logical_bytes": 1249434,
+      "size_evidence": "single-file current stat",
+      "purpose": "Frozen parent/source/split assignments",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "native10_episode_split",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "smolvla_partial_50000",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "project": "embodied-ai-workspace / named VLA experiment asset",
+      "type": "directory",
+      "logical_bytes": 1610506270,
+      "size_evidence": "prior published STORAGE_CANDIDATES inventory",
+      "purpose": "E8 candidate at50000, including its actual recovery state; no resume100k",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "smolvla_partial_50000",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "smolvla_initialization",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/initializations/smolvla-mt50-s42",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/initializations/smolvla-mt50-s42",
+      "project": "embodied-ai-workspace / named VLA experiment asset",
+      "type": "directory",
+      "logical_bytes": 1800286439,
+      "size_evidence": "sum of previously inventoried manifest-listed files; not whole-directory rescan",
+      "purpose": "Retained initialization and inherited training lineage",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "smolvla_initialization",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "xvla_initialization",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/initializations/xvla-mt50-s42",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/initializations/xvla-mt50-s42",
+      "project": "embodied-ai-workspace / named VLA experiment asset",
+      "type": "directory",
+      "logical_bytes": 3519105784,
+      "size_evidence": "sum of previously inventoried manifest-listed files; not whole-directory rescan",
+      "purpose": "Initialization only; trained MT50 model still absent",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "xvla_initialization",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "pi05_libero_final",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/libero/pi05/pi05_libero/libero-pi05-s42-ma-20260912-v1/29999",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/libero/pi05/pi05_libero/libero-pi05-s42-ma-20260912-v1/29999",
+      "project": "embodied-ai-workspace / named VLA experiment asset",
+      "type": "directory",
+      "logical_bytes": 12439132442,
+      "size_evidence": "sum of previously inventoried manifest-listed files; not whole-directory rescan",
+      "purpose": "Final29999/30k retained inference files and own normalization",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "pi05_libero_final",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "asset_id": "libero_demonstrations",
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/libero/physical-intelligence-v2/a4336d589d589045d1c56423ffdf3b88a0e19b1f",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/libero/physical-intelligence-v2/a4336d589d589045d1c56423ffdf3b88a0e19b1f",
+      "project": "embodied-ai-workspace / named VLA experiment asset",
+      "type": "directory",
+      "logical_bytes": null,
+      "size_evidence": "not re-enumerated; A00 identity retained; directory inode size is not payload size",
+      "purpose": "Original LIBERO demonstrations for planned applicability work",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required by the explicit analysis retention decision",
+      "dependency_check": {
+        "prior_inventory": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A00_ASSETS.json",
+          "sha256": "0af6eccd96e1237bd86bf25a84fb68d64b5cca74c29efe17831736211bd34d83"
+        },
+        "asset_id": "libero_demonstrations",
+        "referenced_dependencies_must_also_be_retained": true
+      },
+      "replacement_retained_asset": null,
+      "cross_node_note": "common A/B input; deletion is not permitted by this preparation release"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/corrector_pi05_mt50/h1_k10/config.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/corrector_pi05_mt50/h1_k10/config.json",
+      "project": "vla-corrector",
+      "type": "file",
+      "logical_bytes": 981,
+      "size_evidence": "single-file metadata; large protected directory not rescanned",
+      "purpose": "Selected baseline model configuration",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required input/support or completed sealed evidence",
+      "dependency_check": "keep complete configuration/normalization and referenced seals; future exact cleanup exceptions require analysis decision",
+      "replacement_retained_asset": null,
+      "cross_node_note": "shared input/evidence; do not delete under P00"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/standalone_ablation_20260918",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/standalone_ablation_20260918",
+      "project": "Corrector",
+      "type": "directory",
+      "logical_bytes": null,
+      "size_evidence": "single-file metadata; large protected directory not rescanned",
+      "purpose": "Completed standalone results, seals and transitive references",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required input/support or completed sealed evidence",
+      "dependency_check": "keep complete configuration/normalization and referenced seals; future exact cleanup exceptions require analysis decision",
+      "replacement_retained_asset": null,
+      "cross_node_note": "shared input/evidence; do not delete under P00"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916",
+      "project": "Corrector",
+      "type": "directory",
+      "logical_bytes": null,
+      "size_evidence": "single-file metadata; large protected directory not rescanned",
+      "purpose": "Completed native10 audit evidence and required dependency closure",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required input/support or completed sealed evidence",
+      "dependency_check": "keep complete configuration/normalization and referenced seals; future exact cleanup exceptions require analysis decision",
+      "replacement_retained_asset": null,
+      "cross_node_note": "shared input/evidence; do not delete under P00"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241",
+      "project": "ACT-RECAP",
+      "type": "directory",
+      "logical_bytes": null,
+      "size_evidence": "single-file metadata; large protected directory not rescanned",
+      "purpose": "D241 configuration/normalization support for retained checkpoint",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required input/support or completed sealed evidence",
+      "dependency_check": "keep complete configuration/normalization and referenced seals; future exact cleanup exceptions require analysis decision",
+      "replacement_retained_asset": null,
+      "cross_node_note": "shared input/evidence; do not delete under P00"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242",
+      "project": "ACT-RECAP",
+      "type": "directory",
+      "logical_bytes": null,
+      "size_evidence": "single-file metadata; large protected directory not rescanned",
+      "purpose": "D242 configuration/normalization support for retained checkpoint",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required input/support or completed sealed evidence",
+      "dependency_check": "keep complete configuration/normalization and referenced seals; future exact cleanup exceptions require analysis decision",
+      "replacement_retained_asset": null,
+      "cross_node_note": "shared input/evidence; do not delete under P00"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_341",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_341",
+      "project": "ACT-RECAP",
+      "type": "directory",
+      "logical_bytes": null,
+      "size_evidence": "single-file metadata; large protected directory not rescanned",
+      "purpose": "G0341 configuration/normalization support",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required input/support or completed sealed evidence",
+      "dependency_check": "keep complete configuration/normalization and referenced seals; future exact cleanup exceptions require analysis decision",
+      "replacement_retained_asset": null,
+      "cross_node_note": "shared input/evidence; do not delete under P00"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_342",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_342",
+      "project": "ACT-RECAP",
+      "type": "directory",
+      "logical_bytes": null,
+      "size_evidence": "single-file metadata; large protected directory not rescanned",
+      "purpose": "G0342 configuration/normalization support",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required input/support or completed sealed evidence",
+      "dependency_check": "keep complete configuration/normalization and referenced seals; future exact cleanup exceptions require analysis decision",
+      "replacement_retained_asset": null,
+      "cross_node_note": "shared input/evidence; do not delete under P00"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/model.safetensors",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/model.safetensors",
+      "project": "embodied-ai-workspace / X-VLA base",
+      "type": "file",
+      "logical_bytes": 3519073692,
+      "size_evidence": "single-file metadata; large protected directory not rescanned",
+      "purpose": "Required base inference/processor file; distinct from download fragments",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required input/support or completed sealed evidence",
+      "dependency_check": "keep complete configuration/normalization and referenced seals; future exact cleanup exceptions require analysis decision",
+      "replacement_retained_asset": null,
+      "cross_node_note": "shared input/evidence; do not delete under P00"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/config.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/config.json",
+      "project": "embodied-ai-workspace / X-VLA base",
+      "type": "file",
+      "logical_bytes": 5463,
+      "size_evidence": "single-file metadata; large protected directory not rescanned",
+      "purpose": "Required base inference/processor file; distinct from download fragments",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required input/support or completed sealed evidence",
+      "dependency_check": "keep complete configuration/normalization and referenced seals; future exact cleanup exceptions require analysis decision",
+      "replacement_retained_asset": null,
+      "cross_node_note": "shared input/evidence; do not delete under P00"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/policy_preprocessor.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/policy_preprocessor.json",
+      "project": "embodied-ai-workspace / X-VLA base",
+      "type": "file",
+      "logical_bytes": 2078,
+      "size_evidence": "single-file metadata; large protected directory not rescanned",
+      "purpose": "Required base inference/processor file; distinct from download fragments",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required input/support or completed sealed evidence",
+      "dependency_check": "keep complete configuration/normalization and referenced seals; future exact cleanup exceptions require analysis decision",
+      "replacement_retained_asset": null,
+      "cross_node_note": "shared input/evidence; do not delete under P00"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/policy_postprocessor.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/policy_postprocessor.json",
+      "project": "embodied-ai-workspace / X-VLA base",
+      "type": "file",
+      "logical_bytes": 575,
+      "size_evidence": "single-file metadata; large protected directory not rescanned",
+      "purpose": "Required base inference/processor file; distinct from download fragments",
+      "analysis_decision": "keep",
+      "decision_source": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+        "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d"
+      },
+      "unused_evidence": "required input/support or completed sealed evidence",
+      "dependency_check": "keep complete configuration/normalization and referenced seals; future exact cleanup exceptions require analysis decision",
+      "replacement_retained_asset": null,
+      "cross_node_note": "shared input/evidence; do not delete under P00"
+    }
+  ],
+  "earlier_nonprotected_candidates": [
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/005000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/005000",
+      "project": "vla-baselines/SmolVLA (ownership needs explicit cleanup-manifest inclusion)",
+      "type": "directory",
+      "logical_bytes": 1610506291,
+      "purpose": "Historical intermediate SmolVLA step5000",
+      "completed_or_unused_evidence": "Checkpoint exists; queue previously stopped at 50000. Continued selection/recovery or B dependencies not ruled out.",
+      "dependency_checks": [
+        "Final step50000 selected as E8 candidate by analysis",
+        "Not proven absent from historical seals or B references; no delete recommendation"
+      ],
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "recommendation": "defer",
+      "risk": "Must check recovery/selection and historical manifest references on both nodes before analysis can approve deletion"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/010000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/010000",
+      "project": "vla-baselines/SmolVLA (ownership needs explicit cleanup-manifest inclusion)",
+      "type": "directory",
+      "logical_bytes": 1610506294,
+      "purpose": "Historical intermediate SmolVLA step10000",
+      "completed_or_unused_evidence": "Checkpoint exists; queue previously stopped at 50000. Continued selection/recovery or B dependencies not ruled out.",
+      "dependency_checks": [
+        "Final step50000 selected as E8 candidate by analysis",
+        "Not proven absent from historical seals or B references; no delete recommendation"
+      ],
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "recommendation": "defer",
+      "risk": "Must check recovery/selection and historical manifest references on both nodes before analysis can approve deletion"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/015000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/015000",
+      "project": "vla-baselines/SmolVLA (ownership needs explicit cleanup-manifest inclusion)",
+      "type": "directory",
+      "logical_bytes": 1610506294,
+      "purpose": "Historical intermediate SmolVLA step15000",
+      "completed_or_unused_evidence": "Checkpoint exists; queue previously stopped at 50000. Continued selection/recovery or B dependencies not ruled out.",
+      "dependency_checks": [
+        "Final step50000 selected as E8 candidate by analysis",
+        "Not proven absent from historical seals or B references; no delete recommendation"
+      ],
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "recommendation": "defer",
+      "risk": "Must check recovery/selection and historical manifest references on both nodes before analysis can approve deletion"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/020000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/020000",
+      "project": "vla-baselines/SmolVLA (ownership needs explicit cleanup-manifest inclusion)",
+      "type": "directory",
+      "logical_bytes": 1610506292,
+      "purpose": "Historical intermediate SmolVLA step20000",
+      "completed_or_unused_evidence": "Checkpoint exists; queue previously stopped at 50000. Continued selection/recovery or B dependencies not ruled out.",
+      "dependency_checks": [
+        "Final step50000 selected as E8 candidate by analysis",
+        "Not proven absent from historical seals or B references; no delete recommendation"
+      ],
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "recommendation": "defer",
+      "risk": "Must check recovery/selection and historical manifest references on both nodes before analysis can approve deletion"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/025000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/025000",
+      "project": "vla-baselines/SmolVLA (ownership needs explicit cleanup-manifest inclusion)",
+      "type": "directory",
+      "logical_bytes": 1610506294,
+      "purpose": "Historical intermediate SmolVLA step25000",
+      "completed_or_unused_evidence": "Checkpoint exists; queue previously stopped at 50000. Continued selection/recovery or B dependencies not ruled out.",
+      "dependency_checks": [
+        "Final step50000 selected as E8 candidate by analysis",
+        "Not proven absent from historical seals or B references; no delete recommendation"
+      ],
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "recommendation": "defer",
+      "risk": "Must check recovery/selection and historical manifest references on both nodes before analysis can approve deletion"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/030000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/030000",
+      "project": "vla-baselines/SmolVLA (ownership needs explicit cleanup-manifest inclusion)",
+      "type": "directory",
+      "logical_bytes": 1610506294,
+      "purpose": "Historical intermediate SmolVLA step30000",
+      "completed_or_unused_evidence": "Checkpoint exists; queue previously stopped at 50000. Continued selection/recovery or B dependencies not ruled out.",
+      "dependency_checks": [
+        "Final step50000 selected as E8 candidate by analysis",
+        "Not proven absent from historical seals or B references; no delete recommendation"
+      ],
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "recommendation": "defer",
+      "risk": "Must check recovery/selection and historical manifest references on both nodes before analysis can approve deletion"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/035000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/035000",
+      "project": "vla-baselines/SmolVLA (ownership needs explicit cleanup-manifest inclusion)",
+      "type": "directory",
+      "logical_bytes": 1610506292,
+      "purpose": "Historical intermediate SmolVLA step35000",
+      "completed_or_unused_evidence": "Checkpoint exists; queue previously stopped at 50000. Continued selection/recovery or B dependencies not ruled out.",
+      "dependency_checks": [
+        "Final step50000 selected as E8 candidate by analysis",
+        "Not proven absent from historical seals or B references; no delete recommendation"
+      ],
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "recommendation": "defer",
+      "risk": "Must check recovery/selection and historical manifest references on both nodes before analysis can approve deletion"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/040000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/040000",
+      "project": "vla-baselines/SmolVLA (ownership needs explicit cleanup-manifest inclusion)",
+      "type": "directory",
+      "logical_bytes": 1610506294,
+      "purpose": "Historical intermediate SmolVLA step40000",
+      "completed_or_unused_evidence": "Checkpoint exists; queue previously stopped at 50000. Continued selection/recovery or B dependencies not ruled out.",
+      "dependency_checks": [
+        "Final step50000 selected as E8 candidate by analysis",
+        "Not proven absent from historical seals or B references; no delete recommendation"
+      ],
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "recommendation": "defer",
+      "risk": "Must check recovery/selection and historical manifest references on both nodes before analysis can approve deletion"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/045000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/045000",
+      "project": "vla-baselines/SmolVLA (ownership needs explicit cleanup-manifest inclusion)",
+      "type": "directory",
+      "logical_bytes": 1610506294,
+      "purpose": "Historical intermediate SmolVLA step45000",
+      "completed_or_unused_evidence": "Checkpoint exists; queue previously stopped at 50000. Continued selection/recovery or B dependencies not ruled out.",
+      "dependency_checks": [
+        "Final step50000 selected as E8 candidate by analysis",
+        "Not proven absent from historical seals or B references; no delete recommendation"
+      ],
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "recommendation": "defer",
+      "risk": "Must check recovery/selection and historical manifest references on both nodes before analysis can approve deletion"
+    }
+  ],
+  "peer_candidates": [
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts",
+      "resolved_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts",
+      "project": "embodied-ai-workspace VLA-baselines X-VLA base download",
+      "type": "directory",
+      "logical_bytes": 1044434332,
+      "files": [
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/2474639360-2608857088.part",
+          "bytes": 134217728
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/2608857088-2743074816.part",
+          "bytes": 134217728
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/2743074816-2877292544.part",
+          "bytes": 134217728
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/2877292544-3011510272.part",
+          "bytes": 134217728
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/3011510272-3145728000.part",
+          "bytes": 134217728
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/3145728000-3279945728.part",
+          "bytes": 134217728
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/3279945728-3414163456.part",
+          "bytes": 134217728
+        },
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.range-parts/3414163456-3519073692.part",
+          "bytes": 104910236
+        }
+      ],
+      "use": "Historical partial download/range assembly cache",
+      "completed_evidence": "Completed model.safetensors exists, manifest size checked in B00; completed payload not rehashed here",
+      "dependency_check": "Not a named protected inference filename. Other-node writers and all retained manifest references not proven absent. A must check exact paths before any deletion.",
+      "replacement_retained": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/model.safetensors",
+      "recommendation": "defer",
+      "risk": "Partial file may support a retained downloader/resume; no deletion approval/release; B cannot delete shared historical assets"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.cache/huggingface/download/xGOKKLRSlIhH692hSVvI1-gpoa8=.f05bc0fab1c9523d7f5d6b41a651313641ca2227a88822249845da8e20e036c9.incomplete",
+      "resolved_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.cache/huggingface/download/xGOKKLRSlIhH692hSVvI1-gpoa8=.f05bc0fab1c9523d7f5d6b41a651313641ca2227a88822249845da8e20e036c9.incomplete",
+      "project": "embodied-ai-workspace VLA-baselines X-VLA base download",
+      "type": "file",
+      "logical_bytes": 2474639360,
+      "files": [
+        {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/.cache/huggingface/download/xGOKKLRSlIhH692hSVvI1-gpoa8=.f05bc0fab1c9523d7f5d6b41a651313641ca2227a88822249845da8e20e036c9.incomplete",
+          "bytes": 2474639360
+        }
+      ],
+      "use": "Historical partial download/range assembly cache",
+      "completed_evidence": "Completed model.safetensors exists, manifest size checked in B00; completed payload not rehashed here",
+      "dependency_check": "Not a named protected inference filename. Other-node writers and all retained manifest references not proven absent. A must check exact paths before any deletion.",
+      "replacement_retained": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/xvla-cdb7964/model.safetensors",
+      "recommendation": "defer",
+      "risk": "Partial file may support a retained downloader/resume; no deletion approval/release; B cannot delete shared historical assets"
+    }
+  ],
+  "peer_reference_check": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/STORAGE_REFERENCE_CHECK_r1.json",
+    "sha256": "bb28d51ddbdb955e38b4bc44f638e2f06d1962728f64b78f1bca6db5b9e3c2b5"
+  },
+  "own_preparation_candidates": [
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_r1/test_artifacts_1",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_r1/test_artifacts_1",
+      "project": "Corrector current campaign / owner A",
+      "type": "directory",
+      "logical_bytes": 98613,
+      "file_count": 12,
+      "purpose": "completed CPU synthetic test payload",
+      "completion_evidence": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_RESULT.json",
+        "sha256": "c2fe9e32551eedc24ba4b52f25513e977470856dabe4e84c850db7226e612b35"
+      },
+      "unused_evidence": "not established; published audit/provenance references still exist",
+      "dependency_check": "CPU validation command records name test directories; unique audit payload requirements not cleared",
+      "cross_node_check": "B consumed interface_v1 and an earlier accounting snapshot; original inputs remain read-only; no cross-node deletion assumed",
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/evidence_v1/FINAL_CPU_VALIDATION.json",
+      "analysis_decision": null,
+      "decision_status": "pending_analysis",
+      "executor_recommendation": "defer",
+      "risk": "Deleting referenced evidence without a reviewed retention decision can break reproducibility"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_r1/test_artifacts_2",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_r1/test_artifacts_2",
+      "project": "Corrector current campaign / owner A",
+      "type": "directory",
+      "logical_bytes": 105591,
+      "file_count": 13,
+      "purpose": "completed CPU synthetic test payload",
+      "completion_evidence": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_RESULT.json",
+        "sha256": "c2fe9e32551eedc24ba4b52f25513e977470856dabe4e84c850db7226e612b35"
+      },
+      "unused_evidence": "not established; published audit/provenance references still exist",
+      "dependency_check": "CPU validation command records name test directories; unique audit payload requirements not cleared",
+      "cross_node_check": "B consumed interface_v1 and an earlier accounting snapshot; original inputs remain read-only; no cross-node deletion assumed",
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/evidence_v1/FINAL_CPU_VALIDATION.json",
+      "analysis_decision": null,
+      "decision_status": "pending_analysis",
+      "executor_recommendation": "defer",
+      "risk": "Deleting referenced evidence without a reviewed retention decision can break reproducibility"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_r1/test_artifacts_final_runtime",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_r1/test_artifacts_final_runtime",
+      "project": "Corrector current campaign / owner A",
+      "type": "directory",
+      "logical_bytes": 105592,
+      "file_count": 13,
+      "purpose": "completed CPU synthetic test payload",
+      "completion_evidence": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_RESULT.json",
+        "sha256": "c2fe9e32551eedc24ba4b52f25513e977470856dabe4e84c850db7226e612b35"
+      },
+      "unused_evidence": "not established; published audit/provenance references still exist",
+      "dependency_check": "CPU validation command records name test directories; unique audit payload requirements not cleared",
+      "cross_node_check": "B consumed interface_v1 and an earlier accounting snapshot; original inputs remain read-only; no cross-node deletion assumed",
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/evidence_v1/FINAL_CPU_VALIDATION.json",
+      "analysis_decision": null,
+      "decision_status": "pending_analysis",
+      "executor_recommendation": "defer",
+      "risk": "Deleting referenced evidence without a reviewed retention decision can break reproducibility"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_r1/test_artifacts_final_system",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_r1/test_artifacts_final_system",
+      "project": "Corrector current campaign / owner A",
+      "type": "directory",
+      "logical_bytes": 105587,
+      "file_count": 13,
+      "purpose": "completed CPU synthetic test payload",
+      "completion_evidence": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_RESULT.json",
+        "sha256": "c2fe9e32551eedc24ba4b52f25513e977470856dabe4e84c850db7226e612b35"
+      },
+      "unused_evidence": "not established; published audit/provenance references still exist",
+      "dependency_check": "CPU validation command records name test directories; unique audit payload requirements not cleared",
+      "cross_node_check": "B consumed interface_v1 and an earlier accounting snapshot; original inputs remain read-only; no cross-node deletion assumed",
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/evidence_v1/FINAL_CPU_VALIDATION.json",
+      "analysis_decision": null,
+      "decision_status": "pending_analysis",
+      "executor_recommendation": "defer",
+      "risk": "Deleting referenced evidence without a reviewed retention decision can break reproducibility"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_r1/test_artifacts_runtime_1",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_r1/test_artifacts_runtime_1",
+      "project": "Corrector current campaign / owner A",
+      "type": "directory",
+      "logical_bytes": 105581,
+      "file_count": 13,
+      "purpose": "completed CPU synthetic test payload",
+      "completion_evidence": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_RESULT.json",
+        "sha256": "c2fe9e32551eedc24ba4b52f25513e977470856dabe4e84c850db7226e612b35"
+      },
+      "unused_evidence": "not established; published audit/provenance references still exist",
+      "dependency_check": "CPU validation command records name test directories; unique audit payload requirements not cleared",
+      "cross_node_check": "B consumed interface_v1 and an earlier accounting snapshot; original inputs remain read-only; no cross-node deletion assumed",
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/evidence_v1/FINAL_CPU_VALIDATION.json",
+      "analysis_decision": null,
+      "decision_status": "pending_analysis",
+      "executor_recommendation": "defer",
+      "risk": "Deleting referenced evidence without a reviewed retention decision can break reproducibility"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_r1/test_artifacts_v3_runtime",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_r1/test_artifacts_v3_runtime",
+      "project": "Corrector current campaign / owner A",
+      "type": "directory",
+      "logical_bytes": 105581,
+      "file_count": 13,
+      "purpose": "completed CPU synthetic test payload",
+      "completion_evidence": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_RESULT.json",
+        "sha256": "c2fe9e32551eedc24ba4b52f25513e977470856dabe4e84c850db7226e612b35"
+      },
+      "unused_evidence": "not established; published audit/provenance references still exist",
+      "dependency_check": "CPU validation command records name test directories; unique audit payload requirements not cleared",
+      "cross_node_check": "B consumed interface_v1 and an earlier accounting snapshot; original inputs remain read-only; no cross-node deletion assumed",
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/evidence_v1/FINAL_CPU_VALIDATION.json",
+      "analysis_decision": null,
+      "decision_status": "pending_analysis",
+      "executor_recommendation": "defer",
+      "risk": "Deleting referenced evidence without a reviewed retention decision can break reproducibility"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_r1/test_artifacts_v3_system",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_r1/test_artifacts_v3_system",
+      "project": "Corrector current campaign / owner A",
+      "type": "directory",
+      "logical_bytes": 105593,
+      "file_count": 13,
+      "purpose": "completed CPU synthetic test payload",
+      "completion_evidence": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_RESULT.json",
+        "sha256": "c2fe9e32551eedc24ba4b52f25513e977470856dabe4e84c850db7226e612b35"
+      },
+      "unused_evidence": "not established; published audit/provenance references still exist",
+      "dependency_check": "CPU validation command records name test directories; unique audit payload requirements not cleared",
+      "cross_node_check": "B consumed interface_v1 and an earlier accounting snapshot; original inputs remain read-only; no cross-node deletion assumed",
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/evidence_v1/FINAL_CPU_VALIDATION.json",
+      "analysis_decision": null,
+      "decision_status": "pending_analysis",
+      "executor_recommendation": "defer",
+      "risk": "Deleting referenced evidence without a reviewed retention decision can break reproducibility"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_cpu_checks_1789833114087744258",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_cpu_checks_1789833114087744258",
+      "project": "Corrector current campaign / owner A",
+      "type": "directory",
+      "logical_bytes": 105591,
+      "file_count": 13,
+      "purpose": "completed CPU synthetic test payload",
+      "completion_evidence": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_RESULT.json",
+        "sha256": "c2fe9e32551eedc24ba4b52f25513e977470856dabe4e84c850db7226e612b35"
+      },
+      "unused_evidence": "not established; published audit/provenance references still exist",
+      "dependency_check": "CPU validation command records name test directories; unique audit payload requirements not cleared",
+      "cross_node_check": "B consumed interface_v1 and an earlier accounting snapshot; original inputs remain read-only; no cross-node deletion assumed",
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/evidence_v1/FINAL_CPU_VALIDATION.json",
+      "analysis_decision": null,
+      "decision_status": "pending_analysis",
+      "executor_recommendation": "defer",
+      "risk": "Deleting referenced evidence without a reviewed retention decision can break reproducibility"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v1",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v1",
+      "project": "Corrector current campaign / owner A",
+      "type": "directory",
+      "logical_bytes": 4583689,
+      "file_count": 409,
+      "purpose": "superseded published preparation artifact",
+      "completion_evidence": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_RESULT.json",
+        "sha256": "c2fe9e32551eedc24ba4b52f25513e977470856dabe4e84c850db7226e612b35"
+      },
+      "unused_evidence": "not established; published audit/provenance references still exist",
+      "dependency_check": "A10 ARTIFACT_MANIFEST explicitly retains these revisions",
+      "cross_node_check": "B consumed interface_v1 and an earlier accounting snapshot; original inputs remain read-only; no cross-node deletion assumed",
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v3",
+      "analysis_decision": null,
+      "decision_status": "pending_analysis",
+      "executor_recommendation": "keep_audit_reference",
+      "risk": "Deleting referenced evidence without a reviewed retention decision can break reproducibility"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/preflight_v1",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/preflight_v1",
+      "project": "Corrector current campaign / owner A",
+      "type": "directory",
+      "logical_bytes": 11519,
+      "file_count": 3,
+      "purpose": "superseded published preparation artifact",
+      "completion_evidence": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_RESULT.json",
+        "sha256": "c2fe9e32551eedc24ba4b52f25513e977470856dabe4e84c850db7226e612b35"
+      },
+      "unused_evidence": "not established; published audit/provenance references still exist",
+      "dependency_check": "A10 ARTIFACT_MANIFEST explicitly retains these revisions",
+      "cross_node_check": "B consumed interface_v1 and an earlier accounting snapshot; original inputs remain read-only; no cross-node deletion assumed",
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v3",
+      "analysis_decision": null,
+      "decision_status": "pending_analysis",
+      "executor_recommendation": "keep_audit_reference",
+      "risk": "Deleting referenced evidence without a reviewed retention decision can break reproducibility"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/commands_v1",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/commands_v1",
+      "project": "Corrector current campaign / owner A",
+      "type": "directory",
+      "logical_bytes": 1913,
+      "file_count": 3,
+      "purpose": "superseded published preparation artifact",
+      "completion_evidence": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_RESULT.json",
+        "sha256": "c2fe9e32551eedc24ba4b52f25513e977470856dabe4e84c850db7226e612b35"
+      },
+      "unused_evidence": "not established; published audit/provenance references still exist",
+      "dependency_check": "A10 ARTIFACT_MANIFEST explicitly retains these revisions",
+      "cross_node_check": "B consumed interface_v1 and an earlier accounting snapshot; original inputs remain read-only; no cross-node deletion assumed",
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v3",
+      "analysis_decision": null,
+      "decision_status": "pending_analysis",
+      "executor_recommendation": "keep_audit_reference",
+      "risk": "Deleting referenced evidence without a reviewed retention decision can break reproducibility"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v2",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v2",
+      "project": "Corrector current campaign / owner A",
+      "type": "directory",
+      "logical_bytes": 4585216,
+      "file_count": 409,
+      "purpose": "superseded published preparation artifact",
+      "completion_evidence": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_RESULT.json",
+        "sha256": "c2fe9e32551eedc24ba4b52f25513e977470856dabe4e84c850db7226e612b35"
+      },
+      "unused_evidence": "not established; published audit/provenance references still exist",
+      "dependency_check": "A10 ARTIFACT_MANIFEST explicitly retains these revisions",
+      "cross_node_check": "B consumed interface_v1 and an earlier accounting snapshot; original inputs remain read-only; no cross-node deletion assumed",
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v3",
+      "analysis_decision": null,
+      "decision_status": "pending_analysis",
+      "executor_recommendation": "keep_audit_reference",
+      "risk": "Deleting referenced evidence without a reviewed retention decision can break reproducibility"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/preflight_v2",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/preflight_v2",
+      "project": "Corrector current campaign / owner A",
+      "type": "directory",
+      "logical_bytes": 11519,
+      "file_count": 3,
+      "purpose": "superseded published preparation artifact",
+      "completion_evidence": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_RESULT.json",
+        "sha256": "c2fe9e32551eedc24ba4b52f25513e977470856dabe4e84c850db7226e612b35"
+      },
+      "unused_evidence": "not established; published audit/provenance references still exist",
+      "dependency_check": "A10 ARTIFACT_MANIFEST explicitly retains these revisions",
+      "cross_node_check": "B consumed interface_v1 and an earlier accounting snapshot; original inputs remain read-only; no cross-node deletion assumed",
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v3",
+      "analysis_decision": null,
+      "decision_status": "pending_analysis",
+      "executor_recommendation": "keep_audit_reference",
+      "risk": "Deleting referenced evidence without a reviewed retention decision can break reproducibility"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/commands_v2",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/commands_v2",
+      "project": "Corrector current campaign / owner A",
+      "type": "directory",
+      "logical_bytes": 1913,
+      "file_count": 3,
+      "purpose": "superseded published preparation artifact",
+      "completion_evidence": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_RESULT.json",
+        "sha256": "c2fe9e32551eedc24ba4b52f25513e977470856dabe4e84c850db7226e612b35"
+      },
+      "unused_evidence": "not established; published audit/provenance references still exist",
+      "dependency_check": "A10 ARTIFACT_MANIFEST explicitly retains these revisions",
+      "cross_node_check": "B consumed interface_v1 and an earlier accounting snapshot; original inputs remain read-only; no cross-node deletion assumed",
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v3",
+      "analysis_decision": null,
+      "decision_status": "pending_analysis",
+      "executor_recommendation": "keep_audit_reference",
+      "risk": "Deleting referenced evidence without a reviewed retention decision can break reproducibility"
+    }
+  ],
+  "active_deletion_release": null,
+  "deleted_bytes": 0,
+  "deleted_paths": [],
+  "decision_authority": "analysis alone decides delete/keep/defer; executor recommendations are not decisions",
+  "historical_refs": "Any protected root above includes its sealed referenced dependencies; overlapping keep rows must not be summed as unique disk usage",
+  "non_vla_scanned": false,
+  "outside_workspace_targets": false,
+  "runtime_environment_and_shared_cache_policy": "retained; not cleanup candidates; no broad environment/cache scan"
+}

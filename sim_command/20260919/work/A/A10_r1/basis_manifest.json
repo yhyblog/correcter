@@ -1,0 +1,74 @@
+{
+  "files": [
+    {
+      "source": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/candidates.py",
+      "snapshot_relative": "legacy_basis/Corrector/experiments/standalone_ablation_20260918/candidates.py",
+      "bytes": 5213,
+      "sha256": "399f52e14f015d79cf529d3c16147ddc9fa2f8a96529549b2f428449657d0309"
+    },
+    {
+      "source": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/engine.py",
+      "snapshot_relative": "legacy_basis/Corrector/experiments/standalone_ablation_20260918/engine.py",
+      "bytes": 23180,
+      "sha256": "73b2a0758cf5e281ff5ec5288ae747abf6bd6c3181aa011e00a22307bd18adaf"
+    },
+    {
+      "source": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/commands.py",
+      "snapshot_relative": "legacy_basis/Corrector/experiments/native10_training_20260916/commands.py",
+      "bytes": 1443,
+      "sha256": "191eb5504582091c002eb7fbc930859652264272dad09e182d50c22e6146e736"
+    },
+    {
+      "source": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/src/corrector/candidates.py",
+      "snapshot_relative": "legacy_basis/Corrector/src/corrector/candidates.py",
+      "bytes": 3117,
+      "sha256": "0ce76f48652e2388056381a61959a4242bae41b1f8ebab7ce0c7a0a1621150f5"
+    },
+    {
+      "source": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/src/corrector/guidance.py",
+      "snapshot_relative": "legacy_basis/Corrector/src/corrector/guidance.py",
+      "bytes": 17137,
+      "sha256": "788bd844c14df521f931bd1e3f962fdc61e36f2d9f9519505e242660f8d41c9b"
+    },
+    {
+      "source": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/src/corrector/actions.py",
+      "snapshot_relative": "legacy_basis/Corrector/src/corrector/actions.py",
+      "bytes": 1437,
+      "sha256": "ca89b253b1a7e34e1253ee0a5e944957be5775ec03f70123140ad4501081bfa5"
+    },
+    {
+      "source": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/src/corrector/critic.py",
+      "snapshot_relative": "legacy_basis/Corrector/src/corrector/critic.py",
+      "bytes": 6418,
+      "sha256": "e2517850279c800a0ea073c6ccc7732d42fb64e456dd99cab5d9034cc2f03269"
+    },
+    {
+      "source": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/src/ac_tmil/collection/metaworld_pi05.py",
+      "snapshot_relative": "legacy_basis/ACT-RECAP/src/ac_tmil/collection/metaworld_pi05.py",
+      "bytes": 23961,
+      "sha256": "cd19fee52fd10db3df2859c867e7ba47b2a1115195c4e758aafefd87f0aa59af"
+    },
+    {
+      "source": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/src/ac_tmil/idea3/metaworld_runtime.py",
+      "snapshot_relative": "legacy_basis/ACT-RECAP/src/ac_tmil/idea3/metaworld_runtime.py",
+      "bytes": 3373,
+      "sha256": "120fa038ad4d62a42baa30f137c09d42214bbedda9e7bdbb8a1dd01c20eb9d32"
+    }
+  ],
+  "exact_function_extractions": [
+    {
+      "source": "Corrector/experiments/native10_training_20260916/commands.py",
+      "function": "preserve_raw_anchor",
+      "start_line": 5,
+      "source_fragment_sha256": "66cf7d5b999791bec43b5045b56eee199fde6ae9262668411f8a49982e19cd80"
+    },
+    {
+      "source": "Corrector/src/corrector/candidates.py",
+      "function": "radii",
+      "start_line": 7,
+      "source_fragment_sha256": "3027592d0728d5f1c4e66dda07989f94921b5538f09da57720fef1439fec460f"
+    }
+  ],
+  "candidate_change": "Only two dependency import statements replaced by isolated numpy helper imports",
+  "historical_engine": "reference only; never imports historical protocol/release gates or executes old runs"
+}

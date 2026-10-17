@@ -1,0 +1,122 @@
+{
+  "schema": "native10_round1_policy_launch_review_v1",
+  "reviewed_utc": "2026-09-16T21:09:24.719926+00:00",
+  "status": "passed",
+  "pass_scope": "Deployment READY/freeze/small CPU evidence bindings and actual launch-spec/guarded-entrypoint structure. No interim outcomes or full rollout audit reviewed.",
+  "reviewer": "analysis/critic_data_audit",
+  "new_simulator_calls": 0,
+  "new_optimizer_updates": 0,
+  "new_model_calls": 0,
+  "review_operations": "Read selected small metadata and necessary new entrypoint source excerpts; hash small evidence and entrypoint files. Did not rerun tests/freeze/input validator/inference or hash the1101-file freeze inventory.",
+  "blocking_items": [],
+  "policy_protocol": {
+    "directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_protocols/round1_policy_v1",
+    "config_sha256": "56d0d31f1722f0cc1a974303219953e7340e7887f94c6d760c90739f3b64b06e",
+    "freeze_sha256": "54600fd9210fbb6cea17b4d67c6687d4da5c35476870331121ce6ab9819b6eb0",
+    "config_and_input_validation_and_ready_bound": true,
+    "stage": "round1_development_policy",
+    "scope": "round1_development_policy",
+    "budget": {
+      "simulator_attempts": 2100,
+      "training_updates": 0
+    },
+    "ready_version": 7,
+    "ready_sha256": "f389390cfe8f05b83a00be66c7b823e2d4ba1c2f3247298b4e5ffa8487220f76",
+    "ready_scope_present": true
+  },
+  "cpu_evidence": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/policy5_runner_cpu_20260916_v1",
+      "seal_sha256": "a7c1e190f76e863e94e37a2b7613a5075449d5b3c74dcd0355c5d6aeedec7da0",
+      "tests_passed": 48,
+      "returncode": 0,
+      "seal_file_hashes_match": true,
+      "code_unchanged_during_test": true,
+      "current_tested_code_matches": true,
+      "small_evidence_bound_in_policy_freeze": true
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/policy5_prepare_cpu_20260916_v1",
+      "seal_sha256": "87d3b28547ddcbcc77eb6c634258fa9f0391f473001fadb4b321433fddb8a43e",
+      "tests_passed": 13,
+      "returncode": 0,
+      "seal_file_hashes_match": true,
+      "code_unchanged_during_test": true,
+      "current_tested_code_matches": true,
+      "small_evidence_bound_in_policy_freeze": true
+    }
+  ],
+  "entrypoint_bindings": {
+    "policy5_runner_v1.py": {
+      "sha256": "904a652e5d4ff95a9148f7411f0e0b6dd39108417c84feae9899027c6a88cec3",
+      "matches_policy_freeze": true
+    },
+    "policy5_prepare_v1.py": {
+      "sha256": "6b422ab2c6109d88843debf9ab1f42b96a9dcda7cc9ce6f51631666d78b2992e",
+      "matches_policy_freeze": true
+    },
+    "policy_deployment_v1.py": {
+      "sha256": "2f1a758c6bdff1266fda78840ffd0fc684dace03e527c15b03ba0ff381476b01",
+      "matches_policy_freeze": true
+    },
+    "run_policy5_gpu_v1.sh": {
+      "sha256": "fa8212083ea3131fda290ac31f77ab18d57f623fc0a56b733820edb7ebb125d0",
+      "matches_policy_freeze": true
+    },
+    "engine.py": {
+      "sha256": "43bfe0799c3815e29b06be26475dfbb6c70df7bf431cedc630d9eb7622dd65ea",
+      "matches_policy_freeze": true
+    }
+  },
+  "launch": {
+    "wave_id": "round1_policy_v1_01",
+    "wave_spec_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/wave_spec.json",
+    "wave_spec_sha256": "ae28285b1a36d6d0d20a792f4f5c5a8df6d91087deda9ecd46201cb54cbc4363",
+    "observed_contract": {
+      "spec_config_sha_matches": true,
+      "spec_freeze_sha_matches": true,
+      "jobs": 8,
+      "all_jobs_use_policy5_shell": true,
+      "all_jobs_bind_same_config": true,
+      "all_jobs_bind_same_freeze": true,
+      "workers": 32,
+      "guard_factory": "create_policy_collector",
+      "source_capture_allowed": false,
+      "replacement_allowed": false,
+      "hold_idle": false
+    },
+    "execution_chain": "Frozen wave jobs invoke run_policy5_gpu_v1.sh -> policy5_runner_v1 supervisor/worker -> verify_frozen -> create_policy_collector -> collect_existing_slot. The collector creates the engine from this config; FrozenSelector reads its critic_assets.",
+    "source_capture_path": "Guarded collector capture raises; worker uses existing-slot path rather than main_runner.resolve_slot; no source replacement permitted.",
+    "gpu_lifecycle_structure": "Launch wraps the whole wave in gpu_occupancy_lifecycle.sh; workers require lifecycle; hold_idle=false. Live GPU/runtime counters separately reviewed by root."
+  },
+  "selected_model": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected",
+    "selection": "B,step200",
+    "selected_seal_sha256": "931c6f6043db92b5d9003eb2833dfc8edd0ab6c860a1979db3983cd7d893725f",
+    "training_seal_sha256": "ff460f12c598a34a15a28ed7619ed071a60be195a3dd2f0c1c963a202ee22287",
+    "model_hashes": {
+      "0": "bc93c9035409cd2b7e413dffd0e0f9f3053ac34add4b47fc5cd57be9a5cdceb3",
+      "1": "639e78888f9ef9657cef73da4f21f0676593a58ec4bfa0f8f098d0885432fb2f",
+      "2": "e1f06c0214243ec9fd8952cab93139feafafbc8e84a74e432e9498d68d422df3",
+      "3": "ae18f18e36b878b37b1085778136f6faf62f7146ad0d4ca015076671b2a074eb"
+    },
+    "selected_model_seal_and_registration_hashes_match": true,
+    "selection_identity_evidence": "Previously passed analysis/round1_selected_model_review.json; no new model evaluation performed."
+  },
+  "static_source_contract": {
+    "registered_ids": 100,
+    "input_validation_same_order": true,
+    "unique_ids": 100,
+    "per_task_planned": 20,
+    "cut_sources": 95,
+    "common_sources": 5,
+    "denominator_per_arm": 400,
+    "expected_simulator_attempts_without_failures": 1995,
+    "guarded_stage_training_updates": 0
+  },
+  "scientific_limits": [
+    "Guarded launch preserves original first-alarm/native10/raw/guidance/matching/G0 contract; detailed numerical configuration and runtime counters separately checked by root.",
+    "Future bank guard checks raw a0/seed/noise/mask and final-command matching before branch execution. This review does not claim every pending bank has already passed.",
+    "Full100-source policy outcome/paired suffix/attempt closure audit remains pending; no interim success rates were read."
+  ]
+}

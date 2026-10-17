@@ -1,0 +1,249 @@
+{
+  "schema": "corrector_L11_formal_retest_authorization_v1",
+  "revision": 1,
+  "status": "released",
+  "issued_at_utc": "2026-09-23T02:12:16.334459+00:00",
+  "authority": "Explicit current user authorization: three servers formally retest L11;24 branches per GPU on8 GPUs/node; selected-paper data separate from all-experiments master.",
+  "selection": {
+    "path": "deadline_20260924/L11_RETEST_V1/L11_SELECTION_OVERRIDE.json",
+    "sha256": "2006bc5818911d80a7b325bc91699c789675bb62b75647a4abcc8012119dffe2"
+  },
+  "assignment": {
+    "path": "deadline_20260924/L11_RETEST_V1/ASSIGNMENT.md",
+    "sha256": "d4414af22e7ff85ab557cd071126b91658dbae39da62fb1709132d6bd6189b1e"
+  },
+  "concurrency_rule": {
+    "path": "deadline_20260924/L11_RETEST_V1/CONCURRENCY_192.md",
+    "sha256": "b87c88e9feb678b657b6d404a5c715f27eb7c52077f49f63e122d45cfb6f18eb"
+  },
+  "nodes": {
+    "A": {
+      "task_id": "A_D24_L11_RETEST_V1",
+      "owner": "A",
+      "revision": 1,
+      "task_revision": 1,
+      "host": "trial-303224955-trialrun-303224955-worker-0",
+      "thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+      "original_thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+      "brief": {
+        "path": "tasks/A_D24_L11_RETEST_V1.md",
+        "sha256": "e7306ba30441f9c90827558419c7da544f1f459779e1903a66f78ae9e4fb629f"
+      },
+      "units": {
+        "path": "deadline_20260924/L11_RETEST_V1/prepared_by_analysis/NEW_UNITS_A.jsonl",
+        "sha256": "0309898d184d664770ae62fc61ae11f9104374c3859447a5c4f1ac1a9debdc86"
+      },
+      "planned_new_episodes": 2900,
+      "reused_episodes": 100,
+      "stage_attempt_cap": 3200,
+      "cumulative_attempt_cap": 30200,
+      "branches_per_GPU_target": 24,
+      "GPU_count": 8,
+      "logical_concurrency_target": 192,
+      "model_replicas_per_GPU": "capacity_verified_not_forced_24",
+      "enabled": true,
+      "CPU_prepare_now": true,
+      "new_formal_evaluation_authorized": true,
+      "formal_gpu_runs_enabled": true,
+      "expected_result": "receipts/A/A_D24_L11_RETEST_V1_RESULT_r1.json"
+    },
+    "B": {
+      "task_id": "B_D24_L11_RETEST_V1",
+      "owner": "B",
+      "revision": 1,
+      "task_revision": 1,
+      "host": "trial-303225685-trialrun-303225685-worker-0",
+      "thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+      "original_thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+      "brief": {
+        "path": "tasks/B_D24_L11_RETEST_V1.md",
+        "sha256": "b027c76bcd2987771a1f46048ce97b77d3ff0e9d33b0b3477053a62470e351d9"
+      },
+      "units": {
+        "path": "deadline_20260924/L11_RETEST_V1/prepared_by_analysis/NEW_UNITS_B.jsonl",
+        "sha256": "d361005183f1b070f57649c1988c9d368a8568280e1a3101047c5923e88df46e"
+      },
+      "planned_new_episodes": 2500,
+      "reused_episodes": 0,
+      "stage_attempt_cap": 2750,
+      "cumulative_attempt_cap": 24750,
+      "branches_per_GPU_target": 24,
+      "GPU_count": 8,
+      "logical_concurrency_target": 192,
+      "model_replicas_per_GPU": "capacity_verified_not_forced_24",
+      "enabled": true,
+      "CPU_prepare_now": true,
+      "new_formal_evaluation_authorized": true,
+      "formal_gpu_runs_enabled": true,
+      "expected_result": "receipts/B/B_D24_L11_RETEST_V1_RESULT_r1.json"
+    },
+    "C": {
+      "task_id": "C_D24_L11_RETEST_V1",
+      "owner": "C",
+      "revision": 1,
+      "task_revision": 1,
+      "host": "trial-303269581-trialrun-303269581-worker-0",
+      "thread_id": "01a0c793-10d2-7791-a250-fd65d88e1ccb",
+      "original_thread_id": "01a0c793-10d2-7791-a250-fd65d88e1ccb",
+      "brief": {
+        "path": "tasks/C_D24_L11_RETEST_V1.md",
+        "sha256": "20534b6c0523e699291c7bd3c0fbda49d22f4c2cf35f9f34e40a9bb1c2a9da50"
+      },
+      "units": {
+        "path": "deadline_20260924/L11_RETEST_V1/prepared_by_analysis/NEW_UNITS_C.jsonl",
+        "sha256": "3a10369107ac2c9a57c30099158e21b7c5879026dc27bfa3b171f2cc61778715"
+      },
+      "planned_new_episodes": 2500,
+      "reused_episodes": 0,
+      "stage_attempt_cap": 2750,
+      "cumulative_attempt_cap": 18750,
+      "branches_per_GPU_target": 24,
+      "GPU_count": 8,
+      "logical_concurrency_target": 192,
+      "model_replicas_per_GPU": "capacity_verified_not_forced_24",
+      "enabled": true,
+      "CPU_prepare_now": true,
+      "new_formal_evaluation_authorized": true,
+      "formal_gpu_runs_enabled": true,
+      "expected_result": "receipts/C/C_D24_L11_RETEST_V1_RESULT_r1.json"
+    }
+  },
+  "tasks": {
+    "A": {
+      "task_id": "A_D24_L11_RETEST_V1",
+      "owner": "A",
+      "revision": 1,
+      "task_revision": 1,
+      "host": "trial-303224955-trialrun-303224955-worker-0",
+      "thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+      "original_thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+      "brief": {
+        "path": "tasks/A_D24_L11_RETEST_V1.md",
+        "sha256": "e7306ba30441f9c90827558419c7da544f1f459779e1903a66f78ae9e4fb629f"
+      },
+      "units": {
+        "path": "deadline_20260924/L11_RETEST_V1/prepared_by_analysis/NEW_UNITS_A.jsonl",
+        "sha256": "0309898d184d664770ae62fc61ae11f9104374c3859447a5c4f1ac1a9debdc86"
+      },
+      "planned_new_episodes": 2900,
+      "reused_episodes": 100,
+      "stage_attempt_cap": 3200,
+      "cumulative_attempt_cap": 30200,
+      "branches_per_GPU_target": 24,
+      "GPU_count": 8,
+      "logical_concurrency_target": 192,
+      "model_replicas_per_GPU": "capacity_verified_not_forced_24",
+      "enabled": true,
+      "CPU_prepare_now": true,
+      "new_formal_evaluation_authorized": true,
+      "formal_gpu_runs_enabled": true,
+      "expected_result": "receipts/A/A_D24_L11_RETEST_V1_RESULT_r1.json"
+    },
+    "B": {
+      "task_id": "B_D24_L11_RETEST_V1",
+      "owner": "B",
+      "revision": 1,
+      "task_revision": 1,
+      "host": "trial-303225685-trialrun-303225685-worker-0",
+      "thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+      "original_thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+      "brief": {
+        "path": "tasks/B_D24_L11_RETEST_V1.md",
+        "sha256": "b027c76bcd2987771a1f46048ce97b77d3ff0e9d33b0b3477053a62470e351d9"
+      },
+      "units": {
+        "path": "deadline_20260924/L11_RETEST_V1/prepared_by_analysis/NEW_UNITS_B.jsonl",
+        "sha256": "d361005183f1b070f57649c1988c9d368a8568280e1a3101047c5923e88df46e"
+      },
+      "planned_new_episodes": 2500,
+      "reused_episodes": 0,
+      "stage_attempt_cap": 2750,
+      "cumulative_attempt_cap": 24750,
+      "branches_per_GPU_target": 24,
+      "GPU_count": 8,
+      "logical_concurrency_target": 192,
+      "model_replicas_per_GPU": "capacity_verified_not_forced_24",
+      "enabled": true,
+      "CPU_prepare_now": true,
+      "new_formal_evaluation_authorized": true,
+      "formal_gpu_runs_enabled": true,
+      "expected_result": "receipts/B/B_D24_L11_RETEST_V1_RESULT_r1.json"
+    },
+    "C": {
+      "task_id": "C_D24_L11_RETEST_V1",
+      "owner": "C",
+      "revision": 1,
+      "task_revision": 1,
+      "host": "trial-303269581-trialrun-303269581-worker-0",
+      "thread_id": "01a0c793-10d2-7791-a250-fd65d88e1ccb",
+      "original_thread_id": "01a0c793-10d2-7791-a250-fd65d88e1ccb",
+      "brief": {
+        "path": "tasks/C_D24_L11_RETEST_V1.md",
+        "sha256": "20534b6c0523e699291c7bd3c0fbda49d22f4c2cf35f9f34e40a9bb1c2a9da50"
+      },
+      "units": {
+        "path": "deadline_20260924/L11_RETEST_V1/prepared_by_analysis/NEW_UNITS_C.jsonl",
+        "sha256": "3a10369107ac2c9a57c30099158e21b7c5879026dc27bfa3b171f2cc61778715"
+      },
+      "planned_new_episodes": 2500,
+      "reused_episodes": 0,
+      "stage_attempt_cap": 2750,
+      "cumulative_attempt_cap": 18750,
+      "branches_per_GPU_target": 24,
+      "GPU_count": 8,
+      "logical_concurrency_target": 192,
+      "model_replicas_per_GPU": "capacity_verified_not_forced_24",
+      "enabled": true,
+      "CPU_prepare_now": true,
+      "new_formal_evaluation_authorized": true,
+      "formal_gpu_runs_enabled": true,
+      "expected_result": "receipts/C/C_D24_L11_RETEST_V1_RESULT_r1.json"
+    }
+  },
+  "new_GPU_claims": 3,
+  "new_GPU_claims_semantics": "one finite root chain per node; documented technical resumes inside same owned unit budget, never duplicate valid units",
+  "new_unique_scientific_units": 7900,
+  "reused_valid_scientific_units": 100,
+  "merged_planned_units": 8000,
+  "new_training_updates": 0,
+  "new_data_collection": 0,
+  "full_Q_selection_gate_required": true,
+  "selection_already_satisfied_by_explicit_user_L11_override": true,
+  "no_second_analysis_or_user_approval": true,
+  "new_scientific_loss_fit_threshold_selection_allowed": false,
+  "user_requested_configuration_switch": true,
+  "old_L01_results_remain_historical": true,
+  "cross_node_runtime_exit_barrier": false,
+  "whole_wave_holder_policy": "all_off_until_entire_own_formal_family_exit",
+  "routine_private_engineering_repair_and_resume_authorized": true,
+  "same_fault_max_restarts_after_documented_fix": 2,
+  "unchanged_blind_retry_allowed": false,
+  "analysis_wait_timeout_seconds": 1800,
+  "advance_independent_eligible_task_without_waiting_1800_seconds": true,
+  "science_admission_cutoff_utc": "2026-09-23T12:00:00Z",
+  "tables_due_utc": "2026-09-23T15:00:00Z",
+  "stage_max_hours": 12,
+  "no_separate_GPU_preflights": true,
+  "no_strict_consistency_audits": true,
+  "Random_multi_admissions_enabled": false,
+  "remaining475_collection_enabled": false,
+  "LIBERO_admissions_enabled": false,
+  "new_units": {
+    "path": "deadline_20260924/L11_RETEST_V1/prepared_by_analysis/NEW_UNITS.jsonl",
+    "sha256": "ab4762dc7309b513a9eb09d5a1ca17667c66c303274df90d74249055263db45e"
+  },
+  "reused_units": {
+    "path": "deadline_20260924/L11_RETEST_V1/prepared_by_analysis/REUSED_UNITS.jsonl",
+    "sha256": "0f79379ece125bbc16b1c5a1eeed2abbe4aa4e09ed2f5cb8fb3f6c72884c0327"
+  },
+  "unit_inventory": {
+    "path": "deadline_20260924/L11_RETEST_V1/prepared_by_analysis/MANIFEST.json",
+    "sha256": "09495e0ff9a8f5aa55862ad23d86b2b41b3de0cc91fbb5cf62d1ee38701f460b"
+  },
+  "assets": {
+    "path": "deadline_20260924/L11_RETEST_V1/prepared_by_analysis/ASSET_REFERENCES.json",
+    "sha256": "cf1eef7bd8e08536b692b10cf06866d364da95c256648390eed9ff87d0238b6b"
+  },
+  "results_master": "Corrector/docs/EXPERIMENT_RESULTS_MASTER.md",
+  "paper_curated": "Corrector/docs/EXPERIMENT_FOR_PAPER.md"
+}

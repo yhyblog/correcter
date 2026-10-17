@@ -1,0 +1,7 @@
+# B11 Batch2 CPU数据交接
+
+B任务与原CPU release保持，不授予B计算。新配对索引 `manifests/COMMON_POOL_ACCEPTED_PARENTS_V3.json` SHA=62fdb2d17a7b43be4ab5861671b80557ce7213a65326102689ac821d97fc37ad，16train/dev0；处置表 `manifests/COMMON_POOL_SOURCE_DISPOSITIONS_V2.json` SHA=a9507f9d917a071d1865e70bed537c97c46f61c08ee87433f6f99d6bcfd43007，17已处理、1个normal-only、483未执行。此次新增8任务源全配对合格，V1/V2旧索引不改，原public/sidecar/supplement_v2不变。
+
+按B原任务建立现有数据的CPU引用视图，追加覆盖新8任务、box-close实际初始化证据及正负gain/零target；所有16条G0_old是old_queue_control/plan_replaced=false/intervened=false，不作为实际纠偏或在线G0触发。数据按parent/source去重，partial硬链接不重复计样本。C10/C5不共享结局；short-window/missing-token按资格mask。normal policy rollout不是LVM demonstration positive，禁止伪造token/next或为消费另跑encoder。旧Batch1交接继续适用。
+
+只用已保存JSON/小数组和canonical索引；不重hash14.5GB输出、重编码全库或调用模型。请为B11原任务写自己的ACK，交兼容/窗口资格RESULT；历史ACK时间不替代本任务。当前训练、采集、GPU提案均未放行。

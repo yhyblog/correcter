@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "experiment_id": "efficiency20260925",
+  "created_utc": "2026-09-25T19:18:26.262554+00:00",
+  "worker_id": 0,
+  "base": "SmolVLA",
+  "model": "SmolVLA",
+  "model_kind": "smolvla",
+  "kind": "smolvla",
+  "gpu_index": 0,
+  "gpu_uuid": "GPU-7f71438a-f878-bc66-8a4e-569afc9e059e",
+  "host": "trial-303269581-trialrun-303269581-worker-0",
+  "original_thread": "01a0d6d5-d777-7ca1-afaf-6dd2f1aa27a1",
+  "assets_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/assets.json",
+  "model_assets": {
+    "native_checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model",
+    "native_environment_id": "mw-smolvla-lr044",
+    "native_python": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-smolvla-lr044/bin/python",
+    "native_repository": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/lerobot-smolvla-8fff0fd",
+    "native_policy_class": "smolvla",
+    "raw_horizon": 50,
+    "NFE": 10,
+    "base_chunk_n_action_steps": 10,
+    "dtype_context": "torch.autocast(cuda,bfloat16)",
+    "auxiliary_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1",
+    "normalization": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/dataset/NORMALIZATION.json",
+    "D": [
+      {
+        "seed": 1241,
+        "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/fits/D_1241/final.pt"
+      },
+      {
+        "seed": 1242,
+        "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/fits/D_1242/final.pt"
+      }
+    ],
+    "G0": [
+      {
+        "seed": 1341,
+        "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/fits/G0_1341/final.pt"
+      },
+      {
+        "seed": 1342,
+        "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/fits/G0_1342/final.pt"
+      }
+    ],
+    "Q": {
+      "loss": "L11",
+      "fit_seed": 9101,
+      "assets": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_FULL_Q_LOSS_REFRESH_V1/models/L11",
+      "ranking": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_FULL_Q_LOSS_REFRESH_V1/models/L11/ranking.json",
+      "members": [
+        {
+          "member": 1041,
+          "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_FULL_Q_LOSS_REFRESH_V1/fit_r1/fits/L11_fit9101_member1041/final.pt"
+        },
+        {
+          "member": 1042,
+          "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_FULL_Q_LOSS_REFRESH_V1/fit_r1/fits/L11_fit9101_member1042/final.pt"
+        },
+        {
+          "member": 1043,
+          "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_FULL_Q_LOSS_REFRESH_V1/fit_r1/fits/L11_fit9101_member1043/final.pt"
+        },
+        {
+          "member": 1044,
+          "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_FULL_Q_LOSS_REFRESH_V1/fit_r1/fits/L11_fit9101_member1044/final.pt"
+        }
+      ]
+    },
+    "policy_factory": "lerobot.policies.factory.get_policy_class(kind).from_pretrained(checkpoint,local_files_only=True,strict=True); make_pre_post_processors(policy.config,pretrained_path=checkpoint)",
+    "query_input": {
+      "observation.image": "RGB uint8 -> CHW float32 /255",
+      "observation.state": "agent_pos float32[4]",
+      "task": "environment task_description"
+    },
+    "query_output": "predict_action_chunk(pre(sample)) -> native[1,50,4]; post(native[:,i]) for each step -> raw float32[50,4]",
+    "native_sample_rng": "natural RNG stream; candidate queries in fork_rng with fixed seed so they do not advance the natural stream",
+    "source_manifest_reference": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E8_POST_V1_r1/POST_SOURCES.json",
+    "external_base_config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E8_POST_V1_r1/BASE.json",
+    "engine_config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E8_POST_V1_r1/ENGINE_CONFIG.json",
+    "native_query_reference": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/code/smol_server.py:19-27,49-62",
+    "external_reference": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/code/encoder_server.py:22-29,30-76",
+    "environment_reference": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_L11_RENDER_RECOVERY_V1/code/native_client.py:54-60,127",
+    "projector": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/standalone_ablation_20260918/candidates.py",
+    "post_direction": "Q bounded-environment action gradient times native postprocessor derivative squared; derivative from autograd(post(zeros[10,4]).sum(),leaf); no Velocity/Direct call",
+    "policy_settings": {
+      "n_action_steps": 10,
+      "num_steps": 10
+    },
+    "h10_weight_reference": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_L11_RETEST_V1/config/CONFIG.json"
+  },
+  "common_assets": {
+    "external_checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model",
+    "projection": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/projection.npy",
+    "external_environment_id": "mw-pi05-legacy",
+    "external_python": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/bin/python",
+    "external_policy_repository": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector",
+    "external_feature_code": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_COLLECTOR_CPU_V1/code",
+    "external_vendored_lerobot_src": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_COLLECTOR_CPU_V1/code/vendor_vla/src",
+    "runtime_launcher": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/runtime.sh",
+    "project_repository": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines",
+    "matching": {
+      "xyz_rms": 0.05,
+      "gripper_rms": 0.1,
+      "xyz_linf": 0.15,
+      "gripper_linf": 0.4,
+      "boundary_clearance": 0.05,
+      "tolerance": 1e-06,
+      "zero_threshold": 1e-10
+    },
+    "environment": {
+      "class": "lerobot.envs.metaworld.MetaworldEnv",
+      "constructor_kwargs": {
+        "task": "<task-name>",
+        "obs_type": "pixels_agent_pos"
+      },
+      "construction": "seed Python random and NumPy before construction; use task-description from env.task_description",
+      "reset": "random.seed(reset_seed); numpy.random.seed(reset_seed); env._env.seed(reset_seed); obs,_=env.reset(seed=reset_seed)",
+      "renderer": "Mesa llvmpipe",
+      "camera": "corner2",
+      "rgb_shape": [
+        480,
+        480,
+        3
+      ],
+      "rgb_dtype": "uint8",
+      "proprio_key": "agent_pos",
+      "proprio_shape": [
+        4
+      ],
+      "model_timestep": 0.0025,
+      "frame_skip": 5,
+      "action_scale": 0.01,
+      "normal_H": 10,
+      "commitment_C": 10,
+      "max_steps": 300
+    },
+    "feature_bridge": "Frozen external pi05 visual/language encoder; canonical_decode + spatial_tokens with fixed projection -> 4096 visual features; half precision save then float32 cpu_batch, five actual observations, last four actual bounded commands, remaining budget; language encoded once per task. Native embeddings are not substituted.",
+    "no_old_runtime_identity_reuse": true
+  },
+  "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model",
+  "base_config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E8_POST_V1_r1/BASE.json",
+  "artifact_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1",
+  "q_assets": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_FULL_Q_LOSS_REFRESH_V1/models/L11",
+  "matching": {
+    "xyz_rms": 0.05,
+    "gripper_rms": 0.1,
+    "xyz_linf": 0.15,
+    "gripper_linf": 0.4,
+    "boundary_clearance": 0.05,
+    "tolerance": 1e-06,
+    "zero_threshold": 1e-10
+  },
+  "native_environment_id": "mw-smolvla-lr044",
+  "native_python": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-smolvla-lr044/bin/python",
+  "encoder_environment_id": "mw-pi05-legacy",
+  "encoder_python": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/bin/python",
+  "runtime_launcher": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/runtime.sh",
+  "sources": [
+    {
+      "source_id": "efficiency20260925_smolvla_t00",
+      "split": "timing_only",
+      "selection_ordinal": 0,
+      "task": "assembly-v3",
+      "task_index": 0,
+      "task_ascii_index": 0,
+      "task_id": 0,
+      "instruction": "Pick up a nut and place it onto a peg",
+      "constructor_seed": 198492045,
+      "reset_seed": 1653639235,
+      "env_seed": 1653639235,
+      "policy_seed": 741025753,
+      "candidate_seed": 964562022,
+      "warmup_seed": 75590994,
+      "measurement_seeds": [
+        16827303,
+        1059440047,
+        199350498,
+        670029240,
+        1287494712
+      ],
+      "cut": 5,
+      "H": 10
+    },
+    {
+      "source_id": "efficiency20260925_smolvla_t10",
+      "split": "timing_only",
+      "selection_ordinal": 4,
+      "task": "coffee-push-v3",
+      "task_index": 10,
+      "task_ascii_index": 10,
+      "task_id": 10,
+      "instruction": "Push a mug under a coffee machine",
+      "constructor_seed": 399828987,
+      "reset_seed": 1176469478,
+      "env_seed": 1176469478,
+      "policy_seed": 1000327602,
+      "candidate_seed": 346508588,
+      "warmup_seed": 788270006,
+      "measurement_seeds": [
+        1800622738,
+        987180746,
+        2106520969,
+        1392783854,
+        667160179
+      ],
+      "cut": 5,
+      "H": 10
+    },
+    {
+      "source_id": "efficiency20260925_smolvla_t21",
+      "split": "timing_only",
+      "selection_ordinal": 8,
+      "task": "hammer-v3",
+      "task_index": 21,
+      "task_ascii_index": 21,
+      "task_id": 21,
+      "instruction": "Hammer a screw on the wall",
+      "constructor_seed": 1011609854,
+      "reset_seed": 212196236,
+      "env_seed": 212196236,
+      "policy_seed": 854334687,
+      "candidate_seed": 1581189604,
+      "warmup_seed": 1897182394,
+      "measurement_seeds": [
+        2088054879,
+        1419324770,
+        404299787,
+        812342284,
+        1130306891
+      ],
+      "cut": 5,
+      "H": 10
+    },
+    {
+      "source_id": "efficiency20260925_smolvla_t31",
+      "split": "timing_only",
+      "selection_ordinal": 12,
+      "task": "pick-place-v3",
+      "task_index": 31,
+      "task_ascii_index": 31,
+      "task_id": 31,
+      "instruction": "Pick and place a puck to a goal",
+      "constructor_seed": 641156929,
+      "reset_seed": 1397050019,
+      "env_seed": 1397050019,
+      "policy_seed": 2091180851,
+      "candidate_seed": 655877186,
+      "warmup_seed": 1137884061,
+      "measurement_seeds": [
+        498943081,
+        1343841306,
+        2064527605,
+        1103460537,
+        428521021
+      ],
+      "cut": 5,
+      "H": 10
+    },
+    {
+      "source_id": "efficiency20260925_smolvla_t41",
+      "split": "timing_only",
+      "selection_ordinal": 16,
+      "task": "reach-wall-v3",
+      "task_index": 41,
+      "task_ascii_index": 41,
+      "task_id": 41,
+      "instruction": "Bypass a wall and reach a goal",
+      "constructor_seed": 890789316,
+      "reset_seed": 2080633567,
+      "env_seed": 2080633567,
+      "policy_seed": 580807773,
+      "candidate_seed": 486101328,
+      "warmup_seed": 1202678864,
+      "measurement_seeds": [
+        229934417,
+        302872069,
+        5496509,
+        671959912,
+        1356944221
+      ],
+      "cut": 5,
+      "H": 10
+    }
+  ],
+  "sources_planned": 5,
+  "source_selection": "20 task names uniformly spaced over ASCII-sorted MT50; strided into four workers per base; no outcome selection",
+  "H": 10,
+  "cut": 5,
+  "commitment_C": 10,
+  "methods": [
+    "N",
+    "R",
+    "Post"
+  ],
+  "warmups": 1,
+  "repetitions": 5,
+  "warmup_queries": 1,
+  "measured_queries": 5,
+  "monitor_separately": true,
+  "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_0",
+  "local_dir": "/tmp/corrector_efficiency_20260925/worker_0",
+  "socket_path": "/tmp/corrector_efficiency_20260925/worker_0.sock",
+  "ipc_auth": "c2b99d77505f0047f636242d256765b7",
+  "max_wall_seconds": 3600,
+  "model_load_timeout_seconds": 1200,
+  "model_timeout_seconds": 1200,
+  "cpu_threads": 2,
+  "renderer": "mesa",
+  "old_weights_unchanged": true,
+  "new_training": false,
+  "start_file": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/START_MEASUREMENT.json"
+}

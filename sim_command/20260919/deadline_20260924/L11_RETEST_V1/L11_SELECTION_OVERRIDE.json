@@ -1,0 +1,44 @@
+{
+  "schema": "corrector_user_L11_selection_override_v1",
+  "status": "accepted_user_directive",
+  "issued_at_utc": "2026-09-23T02:12:16.334459+00:00",
+  "chosen_loss": "L11",
+  "fit_seed": 9101,
+  "members": [
+    1041,
+    1042,
+    1043,
+    1044
+  ],
+  "coefficients": {
+    "BCE": 1,
+    "gain": 1,
+    "pair": 0.5
+  },
+  "selection_branch": "Post",
+  "Velocity_inherits": true,
+  "Velocity_in_current_paper": false,
+  "authority": "User rejected L01 preference, selected L11 based on ablation mean/stability, and explicitly requested formal retesting on A/B/C.",
+  "basis": "Post multi complete three-fit ablation: L00/L11 tied highest mean72%; L11 SD2.00pp < L00 SD3.46pp. L10 global smallest SD1.15pp has lower mean69.33%.",
+  "prior_accepted_selection": {
+    "chosen_loss": "L01",
+    "fit_seed": 9101,
+    "Post_only": true,
+    "Velocity_inherits": true,
+    "selection": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/SELECTION.json",
+      "sha256": "0678690bdeebf7bfe6d4293f959916c25c70dc5628779e3daea4303f3065f910"
+    }
+  },
+  "prior_selection_file_unchanged": true,
+  "selection_involved_previously_revealed_50_sources": true,
+  "same50_overlap_main500": true,
+  "new_unseen_test_claim_permitted": false,
+  "new_test_based_retuning_permitted": false,
+  "further_loss_fit_threshold_selection_permitted": false,
+  "assets": {
+    "path": "deadline_20260924/L11_RETEST_V1/prepared_by_analysis/ASSET_REFERENCES.json",
+    "sha256": "cf1eef7bd8e08536b692b10cf06866d364da95c256648390eed9ff87d0238b6b"
+  },
+  "new_training_updates": 0
+}

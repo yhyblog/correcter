@@ -1,0 +1,1112 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "revision": 64,
+  "owner": "analysis",
+  "tasks": [
+    {
+      "id": "A00",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [],
+      "brief": "tasks/A00.md",
+      "release": null,
+      "acknowledgement": "receipts/A/A00_ACK.json",
+      "accepted_at_utc": "2026-09-19T15:11:05.205789+00:00",
+      "result": "receipts/A/A00_RESULT.json"
+    },
+    {
+      "id": "B00",
+      "owner": "B",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [],
+      "brief": "tasks/B00.md",
+      "release": null,
+      "acknowledgement": "receipts/B/B00_ACK.json",
+      "accepted_at_utc": "2026-09-19T15:11:05.205789+00:00",
+      "result": "receipts/B/B00_RESULT.json"
+    },
+    {
+      "id": "P00",
+      "owner": "analysis",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [],
+      "brief": "MASTER_PLAN.md",
+      "release": "releases/P00_PREP_V1.json",
+      "artifact": "contracts/P00_PREPARATION_CONTRACT_V1.md"
+    },
+    {
+      "id": "A10",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "P00",
+        "A00"
+      ],
+      "brief": "tasks/A10_CORE_PREPARATION.md",
+      "release": "releases/P00_PREP_V1.json",
+      "dependency_receipt_suffices": true,
+      "prerequisites_verified_at_utc": "2026-09-19T15:11:05.205789+00:00",
+      "acknowledgement": "receipts/A/A10_ACK.json",
+      "published_interface": "manifests/PUBLIC_INTERFACE_V1.json",
+      "result": "receipts/A/A10_RESULT.json",
+      "acceptance": "manifests/P10_PREPARATION_ACCEPTANCE_V1.json"
+    },
+    {
+      "id": "B10",
+      "owner": "B",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "P00",
+        "B00"
+      ],
+      "brief": "tasks/B10_BASELINES_PREPARATION.md",
+      "release": "releases/P00_PREP_V1.json",
+      "dependency_receipt_suffices": true,
+      "prerequisites_verified_at_utc": "2026-09-19T15:11:05.205789+00:00",
+      "acknowledgement": "receipts/B/B10_ACK.json",
+      "interface_handoff": "tasks/B10_INTERFACE_V1_HANDOFF.md",
+      "interface_feedback": "receipts/B/A10_INTERFACE_FEEDBACK.md",
+      "result": "receipts/B/B10_RESULT.json",
+      "acceptance": "manifests/P10_PREPARATION_ACCEPTANCE_V1.json"
+    },
+    {
+      "id": "P10",
+      "owner": "analysis",
+      "status": "in_progress",
+      "revision": 1,
+      "dependencies": [
+        "A10",
+        "B10"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null,
+      "review": "contracts/P10_LIMITED_PREFLIGHT_REVIEW_V1.md",
+      "active_limited_preflight": "A11_COMMON_POOL_BATCH3_V1",
+      "last_preflight_result": "receipts/A/A10_CAUSAL_C10_PREFLIGHT_V2_RESULT.json",
+      "next_preparation_task": null,
+      "parallel_B_preparation_task": "B11_COMMON_POOL_VIEWS_CPU_V1",
+      "first_parent_engineering_accepted": true
+    },
+    {
+      "id": "A11",
+      "owner": "A",
+      "status": "in_progress",
+      "revision": 1,
+      "dependencies": [
+        "A_QUEUE_BOOTSTRAP_V1"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null,
+      "preparation_task": "A11_BATCH3_PREP_CPU_V1",
+      "collection_authorized": true,
+      "first_parent_task": "A11_COMMON_POOL_FIRST_PARENT_V4",
+      "first_parent_collection_authorized": false,
+      "scope": "17 terminal and8 currentBatch3 reserved unchanged;475 remaining sources A-only automatic queue after machine gates; no B runtime dependency",
+      "accepted_parents": 16,
+      "parent_index": "manifests/COMMON_POOL_ACCEPTED_PARENTS_V3.json",
+      "active_batch_task": "A11_COMMON_POOL_BATCH3_V1",
+      "limited_batch_collection_authorized": true,
+      "processed_planned_sources": 17,
+      "remaining_unattempted_planned_slots": 483,
+      "source_dispositions": "manifests/COMMON_POOL_SOURCE_DISPOSITIONS_V2.json",
+      "queue_authorization": "persistent_queue/AUTHORIZATION_V2.json",
+      "queue_pending_sources": 475,
+      "queue_pending_owner": "A",
+      "historical_dependencies": [
+        "P10"
+      ],
+      "dependency_note": "Current legacyBatch3 already separately released; migrated collection uses V2 machine gates, not unresolved old joint P10",
+      "next_wave_directive": "persistent_queue/QUEUE8_NEXT_WAVE_V1.json"
+    },
+    {
+      "id": "B11",
+      "owner": "B",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "P10"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null,
+      "preparation_task": "B11_COMMON_POOL_VIEWS_CPU_V1",
+      "collection_authorized": false
+    },
+    {
+      "id": "A12",
+      "owner": "A",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "A11",
+        "A_MAIN_PIPELINE_PREP_V1"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null,
+      "scope": "own D5/G0/Q views and MT50 main-method adaptation",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md"
+    },
+    {
+      "id": "B12",
+      "owner": "B",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "A11",
+        "B11",
+        "B_INDEPENDENT_PIPELINE_PREP_V1"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null,
+      "scope": "VLA-Corrector/GAF same final training pool as A",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md"
+    },
+    {
+      "id": "B13",
+      "owner": "B",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "B_INDEPENDENT_PIPELINE_PREP_V1"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null,
+      "scope": "five-task E1/E6 training from qualified historical inputs",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md"
+    },
+    {
+      "id": "P20",
+      "owner": "analysis",
+      "status": "superseded",
+      "revision": 1,
+      "dependencies": [],
+      "brief": "tasks/P20_EVALUATION_CONTRACT.md",
+      "release": null,
+      "superseded_by": [
+        "P20_A",
+        "P20_B_EXTERNAL",
+        "P20_B_MECHANISM"
+      ],
+      "scope": "historical joint freeze replaced with independent stage freezes; do not wait for B to release A"
+    },
+    {
+      "id": "A20",
+      "owner": "A",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "P20_A"
+      ],
+      "brief": "tasks/P20_EVALUATION_CONTRACT.md",
+      "release": null,
+      "scope": "all16 E4/E9 main cells and embedded E5",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md"
+    },
+    {
+      "id": "B20",
+      "owner": "B",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "P20_B_EXTERNAL"
+      ],
+      "brief": "tasks/P20_EVALUATION_CONTRACT.md",
+      "release": null,
+      "scope": "E3 external methods and E5; no A20 execution prerequisite",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md"
+    },
+    {
+      "id": "B21",
+      "owner": "B",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "P20_B_MECHANISM"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null,
+      "scope": "E1/E6 evaluations and E5; no complete MT50 pool prerequisite",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md"
+    },
+    {
+      "id": "A30",
+      "owner": "A",
+      "status": "superseded",
+      "revision": 1,
+      "dependencies": [],
+      "brief": "MASTER_PLAN.md",
+      "release": null,
+      "superseded_by": [
+        "B30"
+      ],
+      "scope": "all future applicability workload assigned B"
+    },
+    {
+      "id": "B30",
+      "owner": "B",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "B_INDEPENDENT_PIPELINE_PREP_V1"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null,
+      "scope": "E8 per-backbone/environment independently frozen recipes; missing one does not block others",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md"
+    },
+    {
+      "id": "P90",
+      "owner": "analysis",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "A20",
+        "B20",
+        "B21",
+        "B30"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null,
+      "scope": "final paper aggregation only; never a runtime barrier",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md"
+    },
+    {
+      "id": "A10_PREFLIGHT_REVISION_R2",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10"
+      ],
+      "brief": "tasks/A10_PREFLIGHT_REVISION_R2.md",
+      "release": "releases/P00_PREFLIGHT_CORRECTIONS_V1.json",
+      "acknowledgement": "receipts/A/A10_PREFLIGHT_REVISION_R2_ACK.json",
+      "result": "receipts/A/A10_PREFLIGHT_REVISION_R2_RESULT.json",
+      "acceptance": "manifests/A10_PREFLIGHT_V4_ACCEPTANCE.json"
+    },
+    {
+      "id": "B10_PREFLIGHT_REVISION_R2",
+      "owner": "B",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "B10"
+      ],
+      "brief": "tasks/B10_PREFLIGHT_REVISION_R2.md",
+      "release": "releases/P00_PREFLIGHT_CORRECTIONS_V1.json",
+      "storage_followup": "tasks/B_STORAGE_CLEARANCE_V1.md",
+      "result": "receipts/B/B10_PREFLIGHT_REVISION_R2_RESULT.json",
+      "acknowledgement": "receipts/B/B10_PREFLIGHT_REVISION_R2_ACK.json",
+      "acceptance": "manifests/B_PREFLIGHT_REVISION_R2_CPU_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-20T09:05:29.938522+00:00",
+      "acceptance_scope": "CPU_only_no_runtime_release"
+    },
+    {
+      "id": "A10_PREFLIGHT_NATIVE_V1",
+      "owner": "A",
+      "status": "failed",
+      "revision": 1,
+      "dependencies": [
+        "A10_PREFLIGHT_REVISION_R2"
+      ],
+      "brief": "tasks/A10_PREFLIGHT_NATIVE_V1.md",
+      "release": "releases/P10_A_NATIVE_PREFLIGHT_V1.json",
+      "wave_id": "corrector-sim-20260919-A-native-preflight-wave01",
+      "run_id": "A10_PREFLIGHT_NATIVE_V1_r1_A_v4_wave01",
+      "shard_id": "A-native-diagnostic-shelf-place-2026091900",
+      "acknowledgement": "receipts/A/A10_PREFLIGHT_NATIVE_V1_ACK.json",
+      "failure_class": "technical_EGL_render",
+      "result": "receipts/A/A10_PREFLIGHT_NATIVE_V1_RESULT.json",
+      "release_closed": "releases/P10_A_NATIVE_PREFLIGHT_V1_CLOSED.json",
+      "attempt_consumed": true
+    },
+    {
+      "id": "A10_EGL_CPU_REPAIR_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_PREFLIGHT_NATIVE_V1"
+      ],
+      "dependency_outcome_required": "failed_technical_and_release_closed",
+      "brief": "tasks/A10_EGL_CPU_REPAIR_V1.md",
+      "release": "releases/P00_EGL_CPU_REPAIR_V1.json",
+      "acknowledgement": "receipts/A/A10_EGL_CPU_REPAIR_V1_ACK.json",
+      "result": "receipts/A/A10_EGL_CPU_REPAIR_V1_RESULT.json",
+      "acceptance": "manifests/EGL_CPU_REPAIR_V1_ACCEPTANCE.json"
+    },
+    {
+      "id": "A10_EGL_GRAPHICS_PROBE_V1",
+      "owner": "A",
+      "status": "failed",
+      "revision": 1,
+      "dependencies": [
+        "A10_EGL_CPU_REPAIR_V1"
+      ],
+      "brief": "tasks/A10_EGL_GRAPHICS_PROBE_V1.md",
+      "release": "releases/P10_A_EGL_GRAPHICS_PROBE_V1.json",
+      "wave_id": "corrector-sim-20260919-A-graphics-probe-wave02",
+      "run_id": "A10_EGL_GRAPHICS_PROBE_V1_r1_A_wave02",
+      "shard_id": "A-EGL-static64-device17198167-once",
+      "acknowledgement": "receipts/A/A10_EGL_GRAPHICS_PROBE_V1_ACK.json",
+      "failure_class": "technical_EGL_device_mapping",
+      "result": "receipts/A/A10_EGL_GRAPHICS_PROBE_V1_RESULT.json",
+      "release_closed": "releases/P10_A_EGL_GRAPHICS_PROBE_V1_CLOSED.json",
+      "attempt_consumed": true
+    },
+    {
+      "id": "A10_EGL_CUDA_MAP_CPU_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_EGL_GRAPHICS_PROBE_V1"
+      ],
+      "dependency_outcome_required": "failed_mapping_and_release_closed",
+      "brief": "tasks/A10_EGL_CUDA_MAP_CPU_V1.md",
+      "release": "releases/P00_EGL_CUDA_MAP_CPU_V1.json",
+      "acknowledgement": "receipts/A/A10_EGL_CUDA_MAP_CPU_V1_ACK.json",
+      "result": "receipts/A/A10_EGL_CUDA_MAP_CPU_V1_RESULT.json",
+      "acceptance": "manifests/EGL_CUDA_MAP_CPU_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-19T18:39:42.896731+00:00"
+    },
+    {
+      "id": "A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_EGL_CUDA_MAP_CPU_V1"
+      ],
+      "brief": "tasks/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1.md",
+      "release": "releases/P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1.json",
+      "wave_id": "corrector-sim-20260919-A-CUDA-map-graphics-wave03",
+      "run_id": "A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1_A_wave03",
+      "shard_id": "A-EGL-CUDA-map-static64-device17198167-once",
+      "acknowledgement": "receipts/A/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_ACK.json",
+      "result": "receipts/A/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_RESULT.json",
+      "release_closed": "releases/P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_CLOSED.json",
+      "attempt_consumed": true,
+      "acceptance": "manifests/A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_FINAL_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-19T18:53:36.642494+00:00"
+    },
+    {
+      "id": "A10_NATIVE_EGL_INTEGRATION_CPU_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1"
+      ],
+      "dependency_outcome_required": "success_accepted_and_release_closed",
+      "brief": "tasks/A10_NATIVE_EGL_INTEGRATION_CPU_V1.md",
+      "release": "releases/P00_NATIVE_EGL_INTEGRATION_CPU_V1.json",
+      "acknowledgement": "receipts/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1_ACK.json",
+      "result": "receipts/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1_RESULT.json",
+      "acceptance": "manifests/NATIVE_EGL_INTEGRATION_CPU_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-19T19:33:46.649379+00:00"
+    },
+    {
+      "id": "A10_PREFLIGHT_NATIVE_V2",
+      "revision": 1,
+      "owner": "A",
+      "status": "failed",
+      "release": "releases/P10_A_NATIVE_PREFLIGHT_V2.json",
+      "dependencies": [
+        "A10_NATIVE_EGL_INTEGRATION_CPU_V1"
+      ],
+      "brief": "tasks/A10_PREFLIGHT_NATIVE_V2.md",
+      "wave_id": "corrector-sim-20260919-A-native-V2-wave04",
+      "run_id": "A10_PREFLIGHT_NATIVE_V2_r1_A_wave04",
+      "shard_id": "A-native-V2-shelf-place-once",
+      "acknowledgement": "receipts/A/A10_PREFLIGHT_NATIVE_V2_ACK.json",
+      "result": "receipts/A/A10_PREFLIGHT_NATIVE_V2_RESULT.json",
+      "failure_class": "technical_Torch_UUID_representation_contract",
+      "acceptance": "manifests/A_NATIVE_PREFLIGHT_V2_FINAL_ACCEPTANCE.json",
+      "release_closed": "releases/P10_A_NATIVE_PREFLIGHT_V2_CLOSED.json",
+      "attempt_consumed": true,
+      "diagnostic_attempts_entered": 0,
+      "accepted_at_utc": "2026-09-19T19:48:55.756697+00:00"
+    },
+    {
+      "id": "A10_TORCH_UUID_ABI_CPU_REPAIR_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_PREFLIGHT_NATIVE_V2"
+      ],
+      "dependency_outcome_required": "technical_failure_accepted_and_release_closed",
+      "brief": "tasks/A10_TORCH_UUID_ABI_CPU_REPAIR_V1.md",
+      "release": "releases/P00_TORCH_UUID_ABI_CPU_REPAIR_V1.json",
+      "acknowledgement": "receipts/A/A10_TORCH_UUID_ABI_CPU_REPAIR_V1_ACK.json",
+      "result": "receipts/A/A10_TORCH_UUID_ABI_CPU_REPAIR_V1_RESULT.json",
+      "acceptance": "manifests/TORCH_UUID_ABI_CPU_REPAIR_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-19T20:12:12.019548+00:00"
+    },
+    {
+      "id": "A10_PREFLIGHT_NATIVE_V3",
+      "revision": 1,
+      "owner": "A",
+      "status": "complete",
+      "release": "releases/P10_A_NATIVE_PREFLIGHT_V3.json",
+      "dependencies": [
+        "A10_TORCH_UUID_ABI_CPU_REPAIR_V1"
+      ],
+      "brief": "tasks/A10_PREFLIGHT_NATIVE_V3.md",
+      "wave_id": "corrector-sim-20260919-A-native-V3-wave05",
+      "run_id": "A10_PREFLIGHT_NATIVE_V3_r1_A_wave05",
+      "shard_id": "A-native-V3-shelf-place-once",
+      "acknowledgement": "receipts/A/A10_PREFLIGHT_NATIVE_V3_ACK.json",
+      "result": "receipts/A/A10_PREFLIGHT_NATIVE_V3_RESULT.json",
+      "acceptance": "manifests/A_NATIVE_PREFLIGHT_V3_FINAL_ACCEPTANCE.json",
+      "release_closed": "releases/P10_A_NATIVE_PREFLIGHT_V3_CLOSED.json",
+      "attempt_consumed": true,
+      "accepted_at_utc": "2026-09-19T20:33:57.487934+00:00"
+    },
+    {
+      "id": "A10_PV_OFFLINE_PREFLIGHT_CPU_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_PREFLIGHT_NATIVE_V3"
+      ],
+      "dependency_outcome_required": "finite_native_success_accepted_and_release_closed",
+      "brief": "tasks/A10_PV_OFFLINE_PREFLIGHT_CPU_V1.md",
+      "release": "releases/P00_PV_OFFLINE_PREFLIGHT_CPU_V1.json",
+      "acknowledgement": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1_ACK.json",
+      "result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1_RESULT.json",
+      "acceptance": "manifests/PV_OFFLINE_PREFLIGHT_CPU_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-19T21:16:20.283242+00:00"
+    },
+    {
+      "id": "A10_PV_OFFLINE_PREFLIGHT_V1",
+      "owner": "A",
+      "revision": 1,
+      "status": "failed",
+      "release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V1.json",
+      "dependencies": [
+        "A10_PV_OFFLINE_PREFLIGHT_CPU_V1"
+      ],
+      "brief": "tasks/A10_PV_OFFLINE_PREFLIGHT_V1.md",
+      "wave_id": "corrector-sim-20260919-A-PV-offline-wave06",
+      "run_id": "A10_PV_OFFLINE_PREFLIGHT_V1_r1_A_wave06",
+      "shard_id": "A-PV-offline-shelf-place-step0-cached-once",
+      "acknowledgement": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V1_ACK.json",
+      "result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V1_RESULT.json",
+      "acceptance": "manifests/A_PV_OFFLINE_PREFLIGHT_V1_FAILURE_ACCEPTANCE.json",
+      "closed_release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V1_CLOSED.json",
+      "command_opportunity_consumed": true,
+      "claim_consumed": false,
+      "compute_attempts": 0,
+      "accepted_at_utc": "2026-09-19T21:30:21.125418+00:00"
+    },
+    {
+      "id": "A10_PV_AUTH_METADATA_CPU_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_PV_OFFLINE_PREFLIGHT_V1"
+      ],
+      "dependency_outcome_required": "failure_evidence_accepted_and_release_closed_no_compute",
+      "brief": "tasks/A10_PV_AUTH_METADATA_CPU_V1.md",
+      "release": "releases/P00_PV_AUTH_METADATA_CPU_V1.json",
+      "expected_result": "receipts/A/A10_PV_AUTH_METADATA_CPU_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A10_PV_AUTH_METADATA_CPU_V1_ACK.json",
+      "result": "receipts/A/A10_PV_AUTH_METADATA_CPU_V1_RESULT.json",
+      "acceptance": "manifests/PV_AUTH_METADATA_CPU_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-19T21:50:48.118837+00:00"
+    },
+    {
+      "id": "A10_PV_OFFLINE_PREFLIGHT_V2",
+      "owner": "A",
+      "revision": 1,
+      "status": "failed",
+      "release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V2.json",
+      "dependencies": [
+        "A10_PV_AUTH_METADATA_CPU_V1"
+      ],
+      "dependency_outcome_required": "CPU_metadata_package_accepted_and_independent_compute_release_published",
+      "brief": "tasks/A10_PV_OFFLINE_PREFLIGHT_V2.md",
+      "wave_id": "corrector-sim-20260919-A-PV-offline-V2-wave07",
+      "run_id": "A10_PV_OFFLINE_PREFLIGHT_V2_r1_A_wave07",
+      "shard_id": "A-PV-offline-V2-shelf-place-step0-cached-once",
+      "acknowledgement": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V2_ACK.json",
+      "expected_result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V2_RESULT.json",
+      "result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V2_RESULT.json",
+      "acceptance": "manifests/A_PV_OFFLINE_PREFLIGHT_V2_FAILURE_ACCEPTANCE.json",
+      "closed_release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V2_CLOSED.json",
+      "claim_consumed": true,
+      "command_opportunity_consumed": true,
+      "offline_attempts": 0,
+      "accepted_at_utc": "2026-09-19T22:05:46.543488+00:00"
+    },
+    {
+      "id": "A10_PV_HANDOFF_CPU_REPAIR_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_PV_OFFLINE_PREFLIGHT_V2"
+      ],
+      "dependency_outcome_required": "handoff_failure_accepted_and_release_closed_occupancy_restored",
+      "brief": "tasks/A10_PV_HANDOFF_CPU_REPAIR_V1.md",
+      "release": "releases/P00_PV_HANDOFF_CPU_REPAIR_V1.json",
+      "expected_result": "receipts/A/A10_PV_HANDOFF_CPU_REPAIR_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A10_PV_HANDOFF_CPU_REPAIR_V1_ACK.json",
+      "result": "receipts/A/A10_PV_HANDOFF_CPU_REPAIR_V1_RESULT.json",
+      "acceptance": "manifests/PV_HANDOFF_CPU_REPAIR_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-19T22:34:29.684135+00:00"
+    },
+    {
+      "id": "A10_GUARD_HANDOFF_INSTALL_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_PV_HANDOFF_CPU_REPAIR_V1"
+      ],
+      "brief": "tasks/A10_GUARD_HANDOFF_INSTALL_V1.md",
+      "release": "releases/P00_A_GUARD_HANDOFF_INSTALL_V1.json",
+      "expected_result": "receipts/A/A10_GUARD_HANDOFF_INSTALL_V1_RESULT.json",
+      "scope": "one_guard_file_CPU_transition_no_compute_no_restart",
+      "acknowledgement": "receipts/A/A10_GUARD_HANDOFF_INSTALL_V1_ACK.json",
+      "result": "receipts/A/A10_GUARD_HANDOFF_INSTALL_V1_RESULT.json",
+      "acceptance": "manifests/GUARD_HANDOFF_INSTALL_V1_ACCEPTANCE.json",
+      "closed_release": "releases/P00_A_GUARD_HANDOFF_INSTALL_V1_CLOSED.json",
+      "accepted_at_utc": "2026-09-19T22:45:24.157387+00:00"
+    },
+    {
+      "id": "A10_PV_OFFLINE_PREFLIGHT_V3",
+      "owner": "A",
+      "revision": 1,
+      "status": "complete",
+      "release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V3.json",
+      "dependencies": [
+        "A10_PV_HANDOFF_CPU_REPAIR_V1"
+      ],
+      "dependency_outcome_required": "CPU_handoff_package_accepted_shared_patch_separately_installed_and_independent_compute_release_published",
+      "brief": "tasks/A10_PV_OFFLINE_PREFLIGHT_V3.md",
+      "wave_id": "corrector-sim-20260919-A-PV-offline-V3-wave08",
+      "run_id": "A10_PV_OFFLINE_PREFLIGHT_V3_r1_A_wave08",
+      "shard_id": "A-PV-offline-V3-shelf-place-step0-cached-once",
+      "acknowledgement": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V3_ACK.json",
+      "expected_result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V3_RESULT.json",
+      "result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V3_RESULT.json",
+      "acceptance": "manifests/A_PV_OFFLINE_PREFLIGHT_V3_FINAL_ACCEPTANCE.json",
+      "closed_release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V3_CLOSED.json",
+      "claim_consumed": true,
+      "offline_attempts": 1,
+      "accepted_at_utc": "2026-09-19T23:10:29.922093+00:00"
+    },
+    {
+      "id": "A10_CAUSAL_C10_CPU_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_PV_OFFLINE_PREFLIGHT_V3"
+      ],
+      "dependency_outcome_required": "cached_numeric_success_accepted_and_release_closed",
+      "brief": "tasks/A10_CAUSAL_C10_CPU_V1.md",
+      "release": "releases/P00_CAUSAL_C10_CPU_V1.json",
+      "expected_result": "receipts/A/A10_CAUSAL_C10_CPU_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A10_CAUSAL_C10_CPU_V1_ACK.json",
+      "result": "receipts/A/A10_CAUSAL_C10_CPU_V1_RESULT.json",
+      "acceptance": "manifests/CAUSAL_C10_CPU_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-19T23:57:32.184890+00:00"
+    },
+    {
+      "id": "A10_CAUSAL_C10_PREFLIGHT_V1",
+      "owner": "A",
+      "status": "failed",
+      "revision": 1,
+      "dependencies": [
+        "A10_CAUSAL_C10_CPU_V1"
+      ],
+      "brief": "tasks/A10_CAUSAL_C10_PREFLIGHT_V1.md",
+      "release": "releases/P10_A_CAUSAL_C10_PREFLIGHT_V1.json",
+      "expected_result": "receipts/A/A10_CAUSAL_C10_PREFLIGHT_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A10_CAUSAL_C10_PREFLIGHT_V1_ACK.json",
+      "result": "receipts/A/A10_CAUSAL_C10_PREFLIGHT_V1_RESULT.json",
+      "acceptance": "manifests/A_CAUSAL_C10_PREFLIGHT_V1_FAILURE_ACCEPTANCE.json",
+      "closed_release": "releases/P10_A_CAUSAL_C10_PREFLIGHT_V1_CLOSED.json",
+      "claim_consumed": true,
+      "command_opportunity_consumed": true,
+      "branch_attempts": 1,
+      "completed_C10_branches": [],
+      "accepted_at_utc": "2026-09-20T00:24:37.298423+00:00"
+    },
+    {
+      "id": "A10_CAUSAL_EVENT_CPU_REPAIR_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_CAUSAL_C10_PREFLIGHT_V1"
+      ],
+      "dependency_outcome_required": "technical_failure_accepted_closed_and_occupancy_restoration_evidence_accepted",
+      "brief": "tasks/A10_CAUSAL_EVENT_CPU_REPAIR_V1.md",
+      "release": "releases/P00_CAUSAL_EVENT_CPU_REPAIR_V1.json",
+      "expected_result": "receipts/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1_ACK.json",
+      "result": "receipts/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1_RESULT.json",
+      "acceptance": "manifests/CAUSAL_EVENT_CPU_REPAIR_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-20T00:51:32.052357+00:00"
+    },
+    {
+      "id": "A10_CAUSAL_C10_PREFLIGHT_V2",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_CAUSAL_EVENT_CPU_REPAIR_V1"
+      ],
+      "brief": "tasks/A10_CAUSAL_C10_PREFLIGHT_V2.md",
+      "release": "releases/P10_A_CAUSAL_C10_PREFLIGHT_V2.json",
+      "expected_result": "receipts/A/A10_CAUSAL_C10_PREFLIGHT_V2_RESULT.json",
+      "acknowledgement": "receipts/A/A10_CAUSAL_C10_PREFLIGHT_V2_ACK.json",
+      "result": "receipts/A/A10_CAUSAL_C10_PREFLIGHT_V2_RESULT.json",
+      "acceptance": "manifests/A_CAUSAL_C10_PREFLIGHT_V2_FINAL_ACCEPTANCE.json",
+      "closed_release": "releases/P10_A_CAUSAL_C10_PREFLIGHT_V2_CLOSED.json",
+      "claim_consumed": true,
+      "command_opportunity_consumed": true,
+      "actual_branch_attempts": 2,
+      "completed_C10_branches": [
+        "Post",
+        "Velocity"
+      ],
+      "accepted_at_utc": "2026-09-20T01:17:10.279014+00:00",
+      "acceptance_scope": "finite_forced_engineering_only_velocity_risk_open"
+    },
+    {
+      "id": "A10_PV_DIRECTION_CPU_ANALYSIS_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_CAUSAL_C10_PREFLIGHT_V2"
+      ],
+      "dependency_outcome_required": "finite_engineering_success_accepted_closed_and_velocity_risk_recorded",
+      "brief": "tasks/A10_PV_DIRECTION_CPU_ANALYSIS_V1.md",
+      "release": "releases/P00_PV_DIRECTION_CPU_ANALYSIS_V1.json",
+      "expected_result": "receipts/A/A10_PV_DIRECTION_CPU_ANALYSIS_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A10_PV_DIRECTION_CPU_ANALYSIS_V1_ACK.json",
+      "result": "receipts/A/A10_PV_DIRECTION_CPU_ANALYSIS_V1_RESULT.json",
+      "acceptance": "manifests/PV_DIRECTION_CPU_ANALYSIS_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-20T01:52:44.582113+00:00"
+    },
+    {
+      "id": "A11_COMMON_POOL_DESIGN_CPU_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A10_PV_DIRECTION_CPU_ANALYSIS_V1"
+      ],
+      "dependency_outcome_required": "saved_direction_analysis_accepted_no_new_diagnostic_required_now",
+      "brief": "tasks/A11_COMMON_POOL_DESIGN_CPU_V1.md",
+      "release": "releases/P00_COMMON_POOL_DESIGN_CPU_V1.json",
+      "expected_result": "receipts/A/A11_COMMON_POOL_DESIGN_CPU_V1_RESULT.json",
+      "result": "receipts/A/A11_COMMON_POOL_DESIGN_CPU_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A11_COMMON_POOL_DESIGN_CPU_V1_ACK.json",
+      "acceptance": "manifests/COMMON_POOL_DESIGN_CPU_V1_REVIEW.json",
+      "accepted_at_utc": "2026-09-20T08:27:50.624206+00:00",
+      "acceptance_scope": "CPU_design_draft_only_required_revisions_not_collection_ready"
+    },
+    {
+      "id": "A11_COMMON_POOL_REVISION_CPU_V2",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A11_COMMON_POOL_DESIGN_CPU_V1"
+      ],
+      "dependency_outcome_required": "CPU_draft_reviewed_and_mandatory_protocol_corrections_issued",
+      "brief": "tasks/A11_COMMON_POOL_REVISION_CPU_V2.md",
+      "release": "releases/P00_COMMON_POOL_REVISION_CPU_V2.json",
+      "expected_result": "receipts/A/A11_COMMON_POOL_REVISION_CPU_V2_RESULT.json",
+      "result": "receipts/A/A11_COMMON_POOL_REVISION_CPU_V2_RESULT.json",
+      "acknowledgement": "receipts/A/A11_COMMON_POOL_REVISION_CPU_V2_ACK.json",
+      "acceptance": "manifests/COMMON_POOL_REVISION_CPU_V2_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-20T09:05:29.938522+00:00",
+      "acceptance_scope": "CPU_only_no_runtime_release"
+    },
+    {
+      "id": "A11_COMMON_POOL_COLLECTOR_CPU_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A11_COMMON_POOL_REVISION_CPU_V2"
+      ],
+      "brief": "tasks/A11_COMMON_POOL_COLLECTOR_CPU_V1.md",
+      "release": "releases/P00_A_COMMON_POOL_COLLECTOR_CPU_V1.json",
+      "expected_result": "receipts/A/A11_COMMON_POOL_COLLECTOR_CPU_V1_RESULT.json",
+      "result": "receipts/A/A11_COMMON_POOL_COLLECTOR_CPU_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A11_COMMON_POOL_COLLECTOR_CPU_V1_ACK.json",
+      "acceptance": "manifests/COMMON_POOL_COLLECTOR_CPU_V1_REVIEW.json",
+      "accepted_at_utc": "2026-09-20T10:17:03.089823+00:00",
+      "acceptance_scope": "CPU_delivery_reviewed_contract_repairs_required_no_runtime_release"
+    },
+    {
+      "id": "B11_COMMON_POOL_VIEWS_CPU_V1",
+      "owner": "B",
+      "status": "ready",
+      "revision": 1,
+      "dependencies": [
+        "A11_COMMON_POOL_REVISION_CPU_V2",
+        "B10_PREFLIGHT_REVISION_R2"
+      ],
+      "brief": "tasks/B11_COMMON_POOL_VIEWS_CPU_V1.md",
+      "release": "releases/P00_B_COMMON_POOL_VIEWS_CPU_V1.json",
+      "expected_result": "receipts/B/B11_COMMON_POOL_VIEWS_CPU_V1_RESULT.json",
+      "real_data_handoff": "tasks/B11_FIRST_PARENT_REAL_DATA_HANDOFF_V1.md",
+      "batch1_real_data_handoff": "tasks/B11_BATCH1_REAL_DATA_HANDOFF_V1.md",
+      "batch2_real_data_handoff": "tasks/B11_BATCH2_REAL_DATA_HANDOFF_V1.md"
+    },
+    {
+      "id": "A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A11_COMMON_POOL_COLLECTOR_CPU_V1"
+      ],
+      "brief": "tasks/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1.md",
+      "release": "releases/P00_A_COLLECTOR_CONTRACT_CPU_REPAIR_V1.json",
+      "expected_result": "receipts/A/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1_RESULT.json",
+      "result": "receipts/A/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1_ACK.json",
+      "acceptance": "manifests/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1_REVIEW.json",
+      "accepted_at_utc": "2026-09-20T11:01:04.486306+00:00",
+      "acceptance_scope": "CPU_repairs_and_bounded_resource_design_accepted_shared_plan_and_intervention_flag_followup_required"
+    },
+    {
+      "id": "A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1"
+      ],
+      "brief": "tasks/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1.md",
+      "release": "releases/P00_A_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1.json",
+      "expected_result": "receipts/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1_RESULT.json",
+      "result": "receipts/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1_ACK.json",
+      "acceptance": "manifests/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-20T11:39:29.607200+00:00"
+    },
+    {
+      "id": "A11_COMMON_POOL_FIRST_PARENT_V3",
+      "owner": "A",
+      "release": "releases/P11_A_COMMON_POOL_FIRST_PARENT_V3.json",
+      "revision": 1,
+      "run_id": "PROPOSED_A11_shelf_train0000_parent_V3",
+      "shard_id": "PROPOSED_A11_shelf_train_cut5_parent0000_V3",
+      "status": "failed",
+      "wave_id": "PROPOSED_A11_first_parent_A_only_V3",
+      "brief": "tasks/A11_COMMON_POOL_FIRST_PARENT_V3.md",
+      "dependencies": [
+        "A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1"
+      ],
+      "expected_result": "receipts/A/A11_COMMON_POOL_FIRST_PARENT_V3_RESULT.json",
+      "scope": "first planned shelf parent only",
+      "result": "receipts/A/A11_COMMON_POOL_FIRST_PARENT_V3_RESULT.json",
+      "acknowledgement": "receipts/A/A11_COMMON_POOL_FIRST_PARENT_V3_ACK.json",
+      "acceptance": "manifests/A11_COMMON_POOL_FIRST_PARENT_V3_FAILURE_ACCEPTANCE.json",
+      "closed_release": "releases/P11_A_COMMON_POOL_FIRST_PARENT_V3_CLOSED.json",
+      "attempt_consumed": true,
+      "accepted_at_utc": "2026-09-20T12:03:23.635624+00:00",
+      "valid_training_samples": 0
+    },
+    {
+      "id": "A11_OBSERVATION_PHASE_CPU_REPAIR_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A11_COMMON_POOL_FIRST_PARENT_V3"
+      ],
+      "dependency_semantics": "accepted consumed failure diagnosis permits CPU repair",
+      "brief": "tasks/A11_OBSERVATION_PHASE_CPU_REPAIR_V1.md",
+      "release": "releases/P00_A_OBSERVATION_PHASE_CPU_REPAIR_V1.json",
+      "expected_result": "receipts/A/A11_OBSERVATION_PHASE_CPU_REPAIR_V1_RESULT.json",
+      "result": "receipts/A/A11_OBSERVATION_PHASE_CPU_REPAIR_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A11_OBSERVATION_PHASE_CPU_REPAIR_V1_ACK.json",
+      "acceptance": "manifests/A11_OBSERVATION_PHASE_CPU_REPAIR_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-20T12:24:05.373648+00:00"
+    },
+    {
+      "id": "A11_COMMON_POOL_FIRST_PARENT_V4",
+      "owner": "A",
+      "release": "releases/P11_A_COMMON_POOL_FIRST_PARENT_V4.json",
+      "revision": 1,
+      "run_id": "PROPOSED_A11_shelf_train0000_parent_V4",
+      "shard_id": "PROPOSED_A11_shelf_train_cut5_parent0000_V4",
+      "status": "complete",
+      "wave_id": "PROPOSED_A11_first_parent_A_only_V4",
+      "brief": "tasks/A11_COMMON_POOL_FIRST_PARENT_V4.md",
+      "dependencies": [
+        "A11_OBSERVATION_PHASE_CPU_REPAIR_V1"
+      ],
+      "expected_result": "receipts/A/A11_COMMON_POOL_FIRST_PARENT_V4_RESULT.json",
+      "scope": "same first planned parent only; independent V4 command and claim",
+      "result": "receipts/A/A11_COMMON_POOL_FIRST_PARENT_V4_RESULT.json",
+      "acknowledgement": "receipts/A/A11_COMMON_POOL_FIRST_PARENT_V4_ACK.json",
+      "acceptance": "manifests/A11_COMMON_POOL_FIRST_PARENT_V4_ACCEPTANCE.json",
+      "closed_release": "releases/P11_A_COMMON_POOL_FIRST_PARENT_V4_CLOSED.json",
+      "attempt_consumed": true,
+      "accepted_at_utc": "2026-09-20T14:00:48.070360+00:00",
+      "accepted_independent_parents": 1
+    },
+    {
+      "id": "A11_BATCH_SCALING_CPU_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A11_COMMON_POOL_FIRST_PARENT_V4"
+      ],
+      "brief": "tasks/A11_BATCH_SCALING_CPU_V1.md",
+      "release": "releases/P00_A_BATCH_SCALING_CPU_V1.json",
+      "expected_result": "receipts/A/A11_BATCH_SCALING_CPU_V1_RESULT.json",
+      "result": "receipts/A/A11_BATCH_SCALING_CPU_V1_RESULT.json",
+      "acknowledgement": "receipts/A/A11_BATCH_SCALING_CPU_V1_ACK.json",
+      "acceptance": "manifests/A11_BATCH_SCALING_CPU_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-20T15:10:47.252184+00:00"
+    },
+    {
+      "dependencies": [
+        "A11_BATCH_SCALING_CPU_V1"
+      ],
+      "expected_result": "receipts/A/A11_COMMON_POOL_BATCH1_V1_RESULT.json",
+      "id": "A11_COMMON_POOL_BATCH1_V1",
+      "owner": "A",
+      "release": "releases/P11_A_COMMON_POOL_BATCH1_V1.json",
+      "revision": 1,
+      "run_id": "PROPOSED_A11_batch1_A_V1",
+      "shard_id": "PROPOSED_A11_batch1_A_shard_V1",
+      "status": "complete",
+      "wave_id": "PROPOSED_A11_batch1_A_wave_V1",
+      "brief": "tasks/A11_COMMON_POOL_BATCH1_V1.md",
+      "concurrency": 2,
+      "parent_count": 8,
+      "scope": "fixed8newtrain parent slots only",
+      "acknowledgement": "receipts/A/A11_COMMON_POOL_BATCH1_V1_ACK.json",
+      "acknowledgement_sha256": "df1c900f28781f67e586b83d87f2116e3dbcb36f74474b1780487884a09457cf",
+      "started_at_utc": "2026-09-20T15:19:33.555445+00:00",
+      "progress_review": "manifests/A11_BATCH1_ACK_RUNNING_V1/REVIEW.json",
+      "result": "receipts/A/A11_COMMON_POOL_BATCH1_V1_RESULT.json",
+      "acceptance": "manifests/A11_COMMON_POOL_BATCH1_V1_ACCEPTANCE.json",
+      "closure": "releases/P11_A_COMMON_POOL_BATCH1_V1_CLOSED.json",
+      "completed_at_utc": "2026-09-20T20:07:45.425665+00:00",
+      "raw_exit_code": 3,
+      "outcome_classification": "legal_pre_cut_success_exclusion_no_runtime_technical_failure",
+      "new_accepted_paired_parents": 7,
+      "normal_only_parent_count": 1,
+      "attempt_consumed": true
+    },
+    {
+      "id": "A11_MT50_CONTINUATION_CPU_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A11_COMMON_POOL_BATCH1_V1"
+      ],
+      "brief": "tasks/A11_MT50_CONTINUATION_CPU_V1.md",
+      "release": "releases/P00_A_MT50_CONTINUATION_CPU_V1.json",
+      "expected_result": "receipts/A/A11_MT50_CONTINUATION_CPU_V1_RESULT.json",
+      "scope": "CPU remaining45task initialization table and fixed8next_A_train0cut5 proposal; concurrency2; no runtime",
+      "acknowledgement": "receipts/A/A11_MT50_CONTINUATION_CPU_V1_ACK.json",
+      "result": "receipts/A/A11_MT50_CONTINUATION_CPU_V1_RESULT.json",
+      "acceptance": "manifests/A11_MT50_CONTINUATION_CPU_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-20T20:56:00.593331+00:00"
+    },
+    {
+      "dependencies": [
+        "A11_MT50_CONTINUATION_CPU_V1"
+      ],
+      "expected_result": "receipts/A/A11_COMMON_POOL_BATCH2_V1_RESULT.json",
+      "id": "A11_COMMON_POOL_BATCH2_V1",
+      "owner": "A",
+      "release": "releases/P11_A_COMMON_POOL_BATCH2_V1.json",
+      "revision": 1,
+      "run_id": "PROPOSED_A11_batch2_A_V1",
+      "shard_id": "PROPOSED_A11_batch2_A_shard_V1",
+      "status": "complete",
+      "wave_id": "PROPOSED_A11_batch2_A_wave_V1",
+      "brief": "tasks/A11_COMMON_POOL_BATCH2_V1.md",
+      "concurrency": 2,
+      "parent_count": 8,
+      "scope": "fixed8new_task_A_train0cut5 only",
+      "acknowledgement": "receipts/A/A11_COMMON_POOL_BATCH2_V1_ACK.json",
+      "acknowledgement_sha256": "1166de4721ee69d416f7dd139f0949395af4d3a21cc491ca631ef05d091c6e2b",
+      "started_at_utc": "2026-09-20T21:00:16.872577+00:00",
+      "progress_review": "manifests/A11_BATCH2_ACK_RUNNING_V1/REVIEW.json",
+      "result": "receipts/A/A11_COMMON_POOL_BATCH2_V1_RESULT.json",
+      "acceptance": "manifests/A11_COMMON_POOL_BATCH2_V1_ACCEPTANCE.json",
+      "closure": "releases/P11_A_COMMON_POOL_BATCH2_V1_CLOSED.json",
+      "completed_at_utc": "2026-09-21T01:38:15.100039+00:00",
+      "raw_exit_code": 0,
+      "new_accepted_paired_parents": 8,
+      "attempt_consumed": true
+    },
+    {
+      "id": "A11_BATCH3_PREP_CPU_V1",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [
+        "A11_COMMON_POOL_BATCH2_V1"
+      ],
+      "brief": "tasks/A11_BATCH3_PREP_CPU_V1.md",
+      "release": "releases/P00_A_BATCH3_PREP_CPU_V1.json",
+      "expected_result": "receipts/A/A11_BATCH3_PREP_CPU_V1_RESULT.json",
+      "scope": "CPU fixed8next sources/configs, existing50task table reuse; no runtime",
+      "acknowledgement": "receipts/A/A11_BATCH3_PREP_CPU_V1_ACK.json",
+      "result": "receipts/A/A11_BATCH3_PREP_CPU_V1_RESULT.json",
+      "acceptance": "manifests/A11_BATCH3_PREP_CPU_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-21T09:18:32.856990+00:00"
+    },
+    {
+      "dependencies": [
+        "A11_BATCH3_PREP_CPU_V1"
+      ],
+      "expected_result": "receipts/A/A11_COMMON_POOL_BATCH3_V1_RESULT.json",
+      "id": "A11_COMMON_POOL_BATCH3_V1",
+      "owner": "A",
+      "release": "releases/P11_A_COMMON_POOL_BATCH3_V1.json",
+      "revision": 1,
+      "run_id": "PROPOSED_A11_batch3_A_V1",
+      "shard_id": "PROPOSED_A11_batch3_A_shard_V1",
+      "status": "running",
+      "wave_id": "PROPOSED_A11_batch3_A_wave_V1",
+      "brief": "tasks/A11_COMMON_POOL_BATCH3_V1.md",
+      "concurrency": 2,
+      "parent_count": 8,
+      "scope": "fixed8new_task_A_train0cut5_only",
+      "acknowledgement": "receipts/A/A11_COMMON_POOL_BATCH3_V1_ACK.json",
+      "acknowledged_at_utc": "2026-09-21T09:28:11.421592+00:00",
+      "command_started_at_utc": "2026-09-21T09:29:21.049730+00:00",
+      "command_entry": "results/A/A11_COMMON_POOL_BATCH3_V1/OUTER_COMMAND_ENTERED.json",
+      "progress_acceptance": "manifests/A11_BATCH3_COMMAND_START_r1/ACCEPTANCE.json",
+      "command_opportunity_consumed": true,
+      "command_invocations": 1,
+      "release_claims": 1,
+      "execution_stage": "formal_branch_compute_in_progress_saved_scheduler_evidence",
+      "latest_progress": "manifests/A11_BATCH3_PROGRESS_20260921T114858Z/PROGRESS.json",
+      "latest_progress_at_utc": "2026-09-21T11:48:58.913901+00:00"
+    },
+    {
+      "id": "A_QUEUE_BOOTSTRAP_V1",
+      "revision": 2,
+      "owner": "A",
+      "status": "ready",
+      "brief": "tasks/A_QUEUE_BOOTSTRAP_V1_r2.md",
+      "release": "persistent_queue/AUTHORIZATION_V2.json",
+      "dependencies": [],
+      "scope": "V2 independent roles and resource-admitted8GPU detached queue; no new training/evaluation GPU",
+      "activation": "per_queue_machine_gates_no_extra_manual_batch_approval",
+      "expected_result": "receipts/A/A_QUEUE_BOOTSTRAP_V1_r2_RESULT.json",
+      "expected_acknowledgement": "receipts/A/A_QUEUE_BOOTSTRAP_V1_r2_ACK.json",
+      "next_wave_directive": "persistent_queue/QUEUE8_NEXT_WAVE_V1.json"
+    },
+    {
+      "id": "B_QUEUE_JOIN_V1",
+      "revision": 2,
+      "owner": "B",
+      "status": "ready",
+      "brief": "tasks/B_QUEUE_JOIN_V1_r2.md",
+      "release": "persistent_queue/AUTHORIZATION_V2.json",
+      "dependencies": [],
+      "scope": "V2 independent roles and resource-admitted8GPU detached queue; no new training/evaluation GPU",
+      "activation": "per_queue_machine_gates_no_extra_manual_batch_approval",
+      "expected_result": "receipts/B/B_QUEUE_JOIN_V1_r2_RESULT.json",
+      "expected_acknowledgement": "receipts/B/B_QUEUE_JOIN_V1_r2_ACK.json"
+    },
+    {
+      "id": "A_MAIN_PIPELINE_PREP_V1",
+      "owner": "A",
+      "revision": 1,
+      "status": "ready",
+      "dependencies": [],
+      "brief": "tasks/A_MAIN_PIPELINE_PREP_V1.md",
+      "release": "persistent_queue/AUTHORIZATION_V2.json",
+      "scope": "isolated_CPU_only_stage_commands_and_budget_preparation",
+      "expected_result": "receipts/A/A_MAIN_PIPELINE_PREP_V1_RESULT.json"
+    },
+    {
+      "id": "B_INDEPENDENT_PIPELINE_PREP_V1",
+      "owner": "B",
+      "revision": 1,
+      "status": "ready",
+      "dependencies": [],
+      "brief": "tasks/B_INDEPENDENT_PIPELINE_PREP_V1.md",
+      "release": "persistent_queue/AUTHORIZATION_V2.json",
+      "scope": "isolated_CPU_only_stage_commands_and_budget_preparation",
+      "expected_result": "receipts/B/B_INDEPENDENT_PIPELINE_PREP_V1_RESULT.json"
+    },
+    {
+      "id": "P20_A",
+      "owner": "analysis",
+      "revision": 1,
+      "status": "planned",
+      "dependencies": [
+        "A12"
+      ],
+      "brief": "tasks/P20_EVALUATION_CONTRACT.md",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md",
+      "release": null,
+      "scope": "main16 cells evaluation recipe and immutable shared evaluation identity"
+    },
+    {
+      "id": "P20_B_EXTERNAL",
+      "owner": "analysis",
+      "revision": 1,
+      "status": "planned",
+      "dependencies": [
+        "B12",
+        "P20_A"
+      ],
+      "brief": "tasks/P20_EVALUATION_CONTRACT.md",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md",
+      "release": null,
+      "scope": "E3 external comparison stage recipe"
+    },
+    {
+      "id": "P20_B_MECHANISM",
+      "owner": "analysis",
+      "revision": 1,
+      "status": "planned",
+      "dependencies": [
+        "B13"
+      ],
+      "brief": "tasks/P20_EVALUATION_CONTRACT.md",
+      "assignment_contract": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md",
+      "release": null,
+      "scope": "independent E1/E6 evaluation recipe"
+    },
+    {
+      "id": "A_QUEUE8_ADMISSION_PREP_V1",
+      "owner": "A",
+      "revision": 1,
+      "status": "ready",
+      "dependencies": [],
+      "brief": "tasks/A_QUEUE8_ADMISSION_PREP_V1.md",
+      "release": "releases/P00_A_QUEUE8_ADMISSION_PREP_V1.json",
+      "scope": "explicit8_real_parent_resource_review_and_ready_entry; no_new_formal_compute",
+      "related_implementation_task": "A_QUEUE_BOOTSTRAP_V1",
+      "expected_result": "receipts/A/A_QUEUE8_ADMISSION_PREP_V1_RESULT.json"
+    }
+  ],
+  "updated_at_utc": "2026-09-21T13:22:19.724377+00:00"
+}

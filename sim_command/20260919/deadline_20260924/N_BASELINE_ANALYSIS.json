@@ -1,0 +1,81 @@
+{
+  "at_utc": "2026-09-21T16:38:04.955046+00:00",
+  "status": "N_baseline_complete_accepted_for_result_table",
+  "scope": "lightweight aggregate count review only; no strict consistency audit",
+  "receipt": "receipts/A/A_D24_SPRINT_V1_RESULT_r4.json",
+  "saved_summary": "deadline_20260924/A/SUMMARY.json",
+  "table": "deadline_20260924/N_BASELINE_RESULTS.csv",
+  "actual_attempts": 2500,
+  "completed_episodes": 2500,
+  "technical_failures": 0,
+  "rows": [
+    {
+      "method": "N",
+      "H": 10,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 308,
+      "success_rate_percent": 61.6,
+      "delta_vs_H10_pp": 0.0
+    },
+    {
+      "method": "N",
+      "H": 20,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 240,
+      "success_rate_percent": 48.0,
+      "delta_vs_H10_pp": -13.6
+    },
+    {
+      "method": "N",
+      "H": 30,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 205,
+      "success_rate_percent": 41.0,
+      "delta_vs_H10_pp": -20.6
+    },
+    {
+      "method": "N",
+      "H": 40,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 205,
+      "success_rate_percent": 41.0,
+      "delta_vs_H10_pp": -20.6
+    },
+    {
+      "method": "N",
+      "H": 50,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 196,
+      "success_rate_percent": 39.2,
+      "delta_vs_H10_pp": -22.4
+    }
+  ],
+  "main_matrix_cells_complete": 5,
+  "main_matrix_cells_planned": 16,
+  "remaining_main_cells": [
+    "R_H10",
+    "Post_H10",
+    "Post_H20",
+    "Post_H30",
+    "Post_H40",
+    "Post_H50",
+    "Velocity_H10",
+    "Velocity_H20",
+    "Velocity_H30",
+    "Velocity_H40",
+    "Velocity_H50"
+  ],
+  "no_H_selection_or_hyperparameter_tuning_from_these_test_outcomes": true,
+  "node_resources": "N group exited and holders restored per saved receipt; pilot is a separate authorized runtime",
+  "overall_D24_authorization_closed": false,
+  "pilot": "revision2 only20oldrepeat0, sixarms120plans; current approval sufficient, no newrelease",
+  "once_control_choice": "new once controls in current NVIDIA EGL protocol; old Mesa results historical only, no bitwise reconciliation required",
+  "paired_analysis": "deadline_20260924/N_BASELINE_PAIRED_ANALYSIS.json",
+  "per_task_results": "deadline_20260924/N_BASELINE_PAIRED_ANALYSIS.csv",
+  "human_readable_results": "deadline_20260924/N_BASELINE_RESULTS.md"
+}

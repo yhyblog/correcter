@@ -1,0 +1,106 @@
+{
+  "updated_at_utc": "2026-09-22T08:38:23.422752+00:00",
+  "A": {
+    "main16cells_8000": "complete",
+    "old20pilot_120": "complete",
+    "E6_200": "complete_accepted",
+    "E3": {
+      "status": "VLA_Corrector_and_GAF_complete",
+      "VLA_Corrector": {
+        "receipt": "receipts/A/A_D24_E3_UNSTARTED_CONTINUATION_V1_RESULT_r2.json",
+        "combined_terminal": 500,
+        "successes": 319,
+        "success_rate": 0.638,
+        "exact_costs_missing": 8,
+        "old_failures_preserved": true,
+        "final_result": true,
+        "exact_cost_records_available": 492
+      }
+    },
+    "GAF": {
+      "status": "complete_accepted",
+      "receipt": "receipts/A/A_D24_GAF_INTERNAL_HOLDOUT_V1_RESULT_r3.json",
+      "fit_updates": 30000,
+      "terminal": 500,
+      "successes": 315,
+      "success_rate": 0.63,
+      "technical_failures": 0,
+      "target": 500,
+      "final_result": true,
+      "result_utc": "2026-09-22T05:26:14.158534+00:00",
+      "acceptance": "deadline_20260924/GAF_COMPLETE_ACCEPTANCE_20260922.json"
+    },
+    "core_remainder": {
+      "status": "complete",
+      "completion": "deadline_20260924/A_CORE_REMAINDER_COMPLETE_20260922.json",
+      "receipt": "receipts/A/A_D24_CORE_REMAINDER_V1_RESULT_r4.json",
+      "final_receipt_alignment": "deadline_20260924/A_CORE_R4_RECEIPT_ALIGNMENT_20260922.json"
+    },
+    "next_task": {
+      "task": "A_D24_LIBERO_FULL_NATIVE_V1",
+      "status": "startup_failed_before_science_executor_repair_required",
+      "receipt": "receipts/A/A_D24_LIBERO_FULL_NATIVE_V1_RESULT_r2.json",
+      "actual_new_episodes": 0,
+      "disposition": "deadline_20260924/A_LIBERO_START_FAILURE_DISPOSITION_V1.json"
+    },
+    "E5": "complete_accepted"
+  },
+  "B": {
+    "last_saved_handoff": "receipts/B/B_D24_EXTENSION_REMAINDER_V1_RESULT.json",
+    "E1": "final1200_complete",
+    "Smol_Post_X_Post": "complete1000_technical0_per05:24savedreceipt",
+    "LIBERO_Post": {
+      "status": "complete",
+      "valid": 400,
+      "successes": 387,
+      "full_method": false,
+      "summary": "results/B/B_D24_EXTENSION_REMAINDER_V1/r1/D24_E8_LIBERO_POST_r1/N_POST_SUMMARY.json"
+    },
+    "Smol_X_Velocity_owner": "C",
+    "LIBERO_Velocity": {
+      "status": "complete",
+      "valid": 400,
+      "successes": 387,
+      "full_method": false,
+      "final_result": true,
+      "technical_failures": 0
+    },
+    "current_assignment": "complete_accepted",
+    "acceptance": "deadline_20260924/B_EXTENSION_COMPLETE_ACCEPTANCE_20260922.json"
+  },
+  "next_permission_required": false,
+  "remaining475_collection": false,
+  "C": {
+    "status": "complete_accepted",
+    "task": "C_D24_MW_VELOCITY_V1",
+    "identity": "nodes/C/identity.json",
+    "planned_test_episodes": 1000,
+    "authorization": {
+      "path": "deadline_20260924/C_AUTHORIZATION_V1.json",
+      "sha256": "11dddb6797ce174a03c9161a68658531902418699fa6e1ee07b5f1872a26378e"
+    },
+    "ack": "receipts/C/C_D24_MW_VELOCITY_V1_ACK.json",
+    "receipt": "receipts/C/C_D24_MW_VELOCITY_V1_RESULT_r3.json",
+    "acceptance": "deadline_20260924/C_MW_VELOCITY_COMPLETE_ACCEPTANCE_20260922.json",
+    "terminal": 1000,
+    "Smol_successes": 247,
+    "X_successes": 403,
+    "remaining_episodes": 0,
+    "next_task": {
+      "task": "C_D24_BASELINE_GAPS_E8_TABLES_V1",
+      "status": "ACK_and_limited_launch_observed_results_pending",
+      "receipt": "receipts/C/C_D24_BASELINE_GAPS_E8_TABLES_V1_RUNNING.json",
+      "eligible_slots": 5,
+      "unknown_slots_kept": 5
+    }
+  },
+  "priority_policy": {
+    "path": "deadline_20260924/OURS_FIRST_PRIORITY_V1.json",
+    "sha256": "f45e4048ff1da43328e5ac9576fbc4be9716e8778393e4ead3b731060e220ce8"
+  },
+  "latest_snapshot": "deadline_20260924/PROGRESS_SNAPSHOT_20260922_0752.json",
+  "current_assignment": {
+    "path": "deadline_20260924/ABC_ASSIGNMENT_V3_IDLE_CONTINUATION.md",
+    "sha256": "642b13df769a2986499db67fb0d7cccf09ac222bf92a33c2f319eff333feff3d"
+  }
+}

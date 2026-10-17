@@ -1,0 +1,42 @@
+{
+  "schema": "corrector_operational_override_v1",
+  "id": "OCCUPANCY_OVERRIDE_V1",
+  "status": "authorized_by_latest_explicit_user_instruction",
+  "issued_at_utc": "2026-09-21T13:02:20.635181+00:00",
+  "nodes": [
+    "A",
+    "B"
+  ],
+  "base_queue_authorization": {
+    "path": "persistent_queue/AUTHORIZATION_V2.json",
+    "sha256": "d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928"
+  },
+  "contract": {
+    "path": "persistent_queue/OCCUPANCY_OVERRIDE_V1.md",
+    "sha256": "f43c1c2041429155ca8191e6e64e5638cff715e8f4305e016b2f9086689c8f11"
+  },
+  "scope": "auxiliary_idle_GPU_occupancy_and_task_priority_handoff_only",
+  "precedence": "supersedes_all_holder_off_and_idle_subset_prohibition; preserves_scientific_grants_and_node_independence",
+  "allow_idle_subset_holders_during_formal_wave": true,
+  "useful_formal_tasks_have_priority": true,
+  "user_reported_shutdown_threshold_percent": 50,
+  "platform_aggregation_window": null,
+  "formal_compute_on_same_GPU_with_holder_authorized": false,
+  "same_GPU_handoff_confirmation_required_for_future_queue": true,
+  "current_Batch3_frozen_launcher_unchanged": true,
+  "science_budget_or_retry_expansion": false,
+  "extra_training_or_evaluation_authorized": false,
+  "separate_auxiliary_accounting_required": true,
+  "time_comparison_requires_occupancy_conditions_disclosed": true,
+  "executor_evidence": [
+    {
+      "path": "work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/USER_AUTHORIZATION.json",
+      "sha256": "fd8f5b74cbb22b8f1597c1062febb9528d588a113047c2706f593e3cdefd43d0"
+    },
+    {
+      "path": "work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/SPAWN.json",
+      "sha256": "7899bd8814e807cb6a909de088f6740142ea4c689f083bc704610a7204a46779"
+    }
+  ],
+  "execution_truth": "saved startup report only; no root hardware inspection; final_exit_and_threshold_not_yet_accepted"
+}

@@ -1,0 +1,408 @@
+{
+  "status": "passed",
+  "reviewed_at_utc": "2026-09-16T21:22:21.162594+00:00",
+  "scope": "Bounded read-only resource, closure and next-stage contract review. Existing sealed full trajectory audit is bound but not rerun. No simulator, training, GPU work, READY or execution-code changes.",
+  "checks_passed": 232,
+  "blockers": [],
+  "resources": {
+    "journal_rows": 44674,
+    "simulator_attempts_total": 25474,
+    "optimizer_updates_total": 19200,
+    "round1_policy_simulator_attempts": 1995,
+    "candidate_restores": 95,
+    "branch_attempts": 1900,
+    "source_captures": 0,
+    "retries": 0,
+    "technical_failures": 0,
+    "optimizer_updates_added": 0,
+    "stage_limit": 2100,
+    "unused_stage_attempts": 105,
+    "ledger_sha256": "9bfb286467094c4c5fd6b26385b857b550febb854aa349827336baff4da74586",
+    "pre_policy_ledger_prefix_unchanged": true,
+    "accounting_rule": "Use resource-specific amounts; journal rows mix simulator attempts and optimizer updates."
+  },
+  "completion": {
+    "planned_sources": 100,
+    "reached_cut_sources": 95,
+    "common_outcome_sources": 5,
+    "paired_suffixes": 4,
+    "per_arm_outcome_denominator": 400,
+    "completed_workers": 32,
+    "exit_code": 0,
+    "holders_restored": 8,
+    "next_stage_started": false,
+    "stage_closed": true
+  },
+  "primary_audit": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_audits/round1_policy_v1",
+    "seal_sha256": "4bfadd48f1ee23b8a9e616d8517364ec69e3d96efe22c59d8ff3d2a0322cf701",
+    "result_sha256": "0e991c13d624a34b397a4cbba60b7c8d84882d7140566b235a4388c5eb73e4e4",
+    "status": "passed",
+    "full_artifact_entries_bound_not_rehashed": 9519
+  },
+  "protocol": {
+    "config_sha256": "56d0d31f1722f0cc1a974303219953e7340e7887f94c6d760c90739f3b64b06e",
+    "freeze_sha256": "54600fd9210fbb6cea17b4d67c6687d4da5c35476870331121ce6ab9819b6eb0",
+    "ready_sha256": "f389390cfe8f05b83a00be66c7b823e2d4ba1c2f3247298b4e5ffa8487220f76",
+    "model_seal_sha256": "ff460f12c598a34a15a28ed7619ed071a60be195a3dd2f0c1c963a202ee22287",
+    "selected_seal_sha256": "931c6f6043db92b5d9003eb2833dfc8edd0ab6c860a1979db3983cd7d893725f",
+    "selected_members_hash_verified": 4
+  },
+  "bounded_hash_verification": {
+    "files": 59,
+    "bytes": 10344326,
+    "all_matched": true
+  },
+  "next_round_contract": {
+    "released_by_this_review": false,
+    "scope": "round2_labels only, next READY/config required",
+    "registered_primary_slots": 300,
+    "per_task": {
+      "disassemble-v3": 60,
+      "pick-place-wall-v3": 60,
+      "shelf-place-v3": 60,
+      "stick-pull-v3": 60,
+      "stick-push-v3": 60
+    },
+    "seed_range": [
+      2026111300,
+      2026111599
+    ],
+    "ordered_episode_ids_sha256": "9c1891d17b8c438162c4c2ab4ba245864e743b42cd4aa8b813baf298c922f78a",
+    "primary_manifest": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/main_registration_v2/primary_manifest.json",
+    "primary_manifest_sha256": "991e13f37117d3bc41b904554602be413e281a4ae1f80f6c05c00d70d6433886",
+    "generation_critic": "Frozen four-member B200 selected export; immutable during all round2 generation",
+    "candidate_schema": "same13 candidate family including a0 plus separately continued native10 control, four suffixes each",
+    "simulator_attempts_limit": 17400,
+    "limit_arithmetic": "300 x (1 source_capture +1 candidate_restore +14 arms x4 suffixes) =17400",
+    "optimizer_updates_limit": 0,
+    "cut_counts": {
+      "first_alarm": 150,
+      "scheduled": 150
+    },
+    "scheduled_targets": {
+      "15": 50,
+      "45": 50,
+      "95": 50
+    },
+    "effective_cut_selection_policy": "analysis_lead_v1, identical to frozen round1: scheduled15->5,45->15->5,95->45->15->5; no-alarm training fallback15->5; retain no-legal-cut sources without outcome-based replacement",
+    "global_resources_before": {
+      "simulator_attempts": 25474,
+      "optimizer_updates": 19200
+    },
+    "global_simulator_if_full_round2": 42874,
+    "workflow_simulator_hard_limit": 50000,
+    "workflow_training_update_hard_limit": 51200,
+    "explicit_next_ready_items": [
+      "Use primary300, not combined900 including600 pre-registered replacement candidates. Preserve original registrations and closed freezes.",
+      "Explicitly override historical manifest fallback=none_pending_analysis_review through effective analysis_lead_v1 cut policy; do not disable the previously approved fallback.",
+      "New round2 collection allows primary source capture, unlike closed policy5 no-capture scope. If registered pre-action duplicate/initialization replacement remains permitted, name its technical_reserve scope and limit explicitly; never replace on outcomes or no cut.",
+      "Freeze B200 full four-member export and train-only preprocessing hashes,13-candidate labels13 bank,raw/mask/matching/random stream parameters,round2IDs,code/config/new READY before simulation. Do not reuse five-arm deployment scope as training bank scope.",
+      "Complete isolated preparation and necessary CPU checks of actual round2 entrypoint, selected-model loading,cut fallback,13-candidate schema/action invariants/resource stage,then immutable freeze; use validated32-worker lifecycle.",
+      "Do not release final training,second policy development,calibration or heldout automatically; collection completion and audit precede their separate stage decisions."
+    ],
+    "per_task_cut_registration": {
+      "disassemble-v3": {
+        "first_alarm": 30,
+        "scheduled": 30,
+        "scheduled15": 10,
+        "scheduled45": 10,
+        "scheduled95": 10
+      },
+      "pick-place-wall-v3": {
+        "first_alarm": 30,
+        "scheduled": 30,
+        "scheduled15": 10,
+        "scheduled45": 10,
+        "scheduled95": 10
+      },
+      "shelf-place-v3": {
+        "first_alarm": 30,
+        "scheduled": 30,
+        "scheduled15": 10,
+        "scheduled45": 10,
+        "scheduled95": 10
+      },
+      "stick-pull-v3": {
+        "first_alarm": 30,
+        "scheduled": 30,
+        "scheduled15": 10,
+        "scheduled45": 10,
+        "scheduled95": 10
+      },
+      "stick-push-v3": {
+        "first_alarm": 30,
+        "scheduled": 30,
+        "scheduled15": 10,
+        "scheduled45": 10,
+        "scheduled95": 10
+      }
+    },
+    "primary_manifest_bound_to_original_collection_config": true
+  },
+  "governing_documents": {
+    "NATIVE10_TRAINING_TASK.md": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_TRAINING_TASK.md",
+      "sha256": "682c3aa13611afd21ee01ed1d934543aed45a8cad8714f660b5f171b9281d45a"
+    },
+    "NATIVE10_TRAINING_ADDENDUM.md": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_TRAINING_ADDENDUM.md",
+      "sha256": "a0f499e388a3c09619cd5042901b8fcd919a670503e58835069f2a5fdab467df"
+    },
+    "NATIVE10_ANALYSIS_LEAD.md": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_ANALYSIS_LEAD.md",
+      "sha256": "e39d35a046ab9058c9539cae876a3168d98fe2900b580ea0cc042eed1479e833"
+    },
+    "NATIVE10_RAW_BUDGET_AMENDMENT.md": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_RAW_BUDGET_AMENDMENT.md",
+      "sha256": "26dc21b69348e3ba90e5554b838efe9b6d610c2cef55ed0e0962fb99df89900d"
+    },
+    "NATIVE10_EVAL20_AMENDMENT.md": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_EVAL20_AMENDMENT.md",
+      "sha256": "a4e43217a062c1918e44984ef557bc17001df02e9e712dc9929fe11e31ce5076"
+    }
+  },
+  "verified_files": {
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_audits/round1_policy_v1/complete.json": {
+      "sha256": "4bfadd48f1ee23b8a9e616d8517364ec69e3d96efe22c59d8ff3d2a0322cf701",
+      "bytes": 229
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_audits/round1_policy_v1/result.json": {
+      "sha256": "0e991c13d624a34b397a4cbba60b7c8d84882d7140566b235a4388c5eb73e4e4",
+      "bytes": 4118240
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/policy5_execution_v1/command.sh": {
+      "sha256": "a5637d9939af1b139890051bd3a0305a1dadd3888cb909bd74d145b0f4f5a77a",
+      "bytes": 420
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/policy5_execution_v1/holders_after_wave.json": {
+      "sha256": "5b57125214474c2e83c5b40f244e9e89a5ec352987073432263788dfccb4382d",
+      "bytes": 1027
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/policy5_execution_v1/registration.json": {
+      "sha256": "bb2527850bbb94cd2cf68589278c77295ac843ae0f5f69dec257e4a1c9db80b2",
+      "bytes": 1145
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/policy5_execution_v1/result.json": {
+      "sha256": "1654fcc35de728f979a783ab1c316ac2b356a0117a89fbaa72ea9a67014be9a1",
+      "bytes": 1379
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/policy5_execution_v1/run.log": {
+      "sha256": "18f0dd056d3cba9b417361160336dc609c078c02c5c33d397ca38cfd235a96d2",
+      "bytes": 5812
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/policy5_audit_execution_v1/command.json": {
+      "sha256": "5daeb9eb4c20852b6f423fd6b07cf6947ad041fb6151fc83fb865a9f3adfef0c",
+      "bytes": 460
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/policy5_audit_execution_v1/registration.json": {
+      "sha256": "0111efd64ee97a4fde7189d29750bf3854f0c2d07804a4fda277281bf996915d",
+      "bytes": 317
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/policy5_audit_execution_v1/result.json": {
+      "sha256": "80b5fe5398ed2553151b2894e4fcf25f7962e02b34838ef9694ec7746c218190",
+      "bytes": 378
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/policy5_audit_execution_v1/run.log": {
+      "sha256": "84a55a2d8fed9736ad363f5878a0b1f593d3a27b77fd9676a1c765c49b189276",
+      "bytes": 4176
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_protocols/round1_policy_v1/config.json": {
+      "sha256": "56d0d31f1722f0cc1a974303219953e7340e7887f94c6d760c90739f3b64b06e",
+      "bytes": 1264847
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_protocols/round1_policy_v1/freeze.json": {
+      "sha256": "54600fd9210fbb6cea17b4d67c6687d4da5c35476870331121ce6ab9819b6eb0",
+      "bytes": 335680
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_protocols/round1_policy_v1/coordination/NATIVE10_ANALYSIS_READY.json": {
+      "sha256": "f389390cfe8f05b83a00be66c7b823e2d4ba1c2f3247298b4e5ffa8487220f76",
+      "bytes": 28363
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/launch_result.json": {
+      "sha256": "a281b4d957c14e23544b9a7e8bbdc704ec5cbf81d30f00c3aec5328927e02544",
+      "bytes": 746
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/complete.json": {
+      "sha256": "ff460f12c598a34a15a28ed7619ed071a60be195a3dd2f0c1c963a202ee22287",
+      "bytes": 17908
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/complete.json": {
+      "sha256": "931c6f6043db92b5d9003eb2833dfc8edd0ab6c860a1979db3983cd7d893725f",
+      "bytes": 1026
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/config.json": {
+      "sha256": "0fe942a745d8ad31b055ce670647da71799a78f622ca5f98175109efa24b47a6",
+      "bytes": 15927
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/models/refit/member_0/selected.pt": {
+      "sha256": "bc93c9035409cd2b7e413dffd0e0f9f3053ac34add4b47fc5cd57be9a5cdceb3",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/models/refit/member_1/selected.pt": {
+      "sha256": "639e78888f9ef9657cef73da4f21f0676593a58ec4bfa0f8f098d0885432fb2f",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/models/refit/member_2/selected.pt": {
+      "sha256": "e1f06c0214243ec9fd8952cab93139feafafbc8e84a74e432e9498d68d422df3",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/models/refit/member_3/selected.pt": {
+      "sha256": "ae18f18e36b878b37b1085778136f6faf62f7146ad0d4ca015076671b2a074eb",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/ranking.json": {
+      "sha256": "6b0a7e4530bfbbadafabb9546a891fbe4bf64a6d3774df62515f9ccd9aae242d",
+      "bytes": 16402
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/config.json": {
+      "sha256": "f68b59f279ae4d03094ebe70f0185e29d7a65a8ce20903aed92ac4392f1e4fd2",
+      "bytes": 1254357
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/freeze.json": {
+      "sha256": "f46dda706607bf8ed52281d33a203471c2854b6c09f83e6d26d3b216a509d893",
+      "bytes": 137527
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/freeze.json": {
+      "sha256": "d688d581e87ef9b8c0649aa12ca2d31030c0c4da376370d363210785e034c9c7",
+      "bytes": 10148
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_00/status.json": {
+      "sha256": "10c8fb9b4332ab0205161b2738b7d28d01a9c4213788cad8ebabe32e1f08eddf",
+      "bytes": 1090
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_01/status.json": {
+      "sha256": "9332e54bd307b7b502b04e5295b220924964e3de0b071d8f1fa4c722207d87d9",
+      "bytes": 1089
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_02/status.json": {
+      "sha256": "d314a0aa88aed1440c29de791bd941c616c9f14368d7ad3e71dce160d8190c80",
+      "bytes": 1087
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_03/status.json": {
+      "sha256": "15dc7c1121474a28bebfae579cda6c551a8fe894145e45314694079fcd979eb2",
+      "bytes": 1085
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_04/status.json": {
+      "sha256": "37e39c50af43f496bfb686e1a48ab2ea10fd998c7d269d2575339a49223af255",
+      "bytes": 1055
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_05/status.json": {
+      "sha256": "92c600fd3803593a339dc3f4984bf7cb4703c9de0df52aef57930c358b5dee58",
+      "bytes": 1052
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_06/status.json": {
+      "sha256": "de5dab624ee773a31f27a989c367ccbeed8e715f8bf3f63f24950fbcac38ec9a",
+      "bytes": 1056
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_07/status.json": {
+      "sha256": "8fb3d17e42b6a9b611ce9c02ef1e9c242986e42942778cea3b7ba4cd0d3d51b1",
+      "bytes": 1057
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_08/status.json": {
+      "sha256": "7f7e8e9d2ad0cc8d8a78805e7fc1dd8bc8f4628f54560a807e0b574516a9726d",
+      "bytes": 1052
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_09/status.json": {
+      "sha256": "bc53b5fa83c20d30e1736bb44a1b2446c7746db0e343988319ba0c49b63aa123",
+      "bytes": 1055
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_10/status.json": {
+      "sha256": "6d110ed4bec177f1c1bd1e4bd39162646c81bae681046fe3c0c53e07f7f45ce5",
+      "bytes": 1050
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_11/status.json": {
+      "sha256": "d16b7c81841d211dde592d6ee737fc1faa3d72b5f6b6e571289b42be144832ef",
+      "bytes": 1058
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_12/status.json": {
+      "sha256": "5356c651066176df07177fdd110fe77326f5fa90a946cd0bb76cae04f1df0002",
+      "bytes": 1057
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_13/status.json": {
+      "sha256": "ee267b25e59104c461d75bf1654a3f8835371644c4b14bf00be1fd6eb709023d",
+      "bytes": 1053
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_14/status.json": {
+      "sha256": "9b650e36db5cf2f122c1a81ddeeecde3744ea431f6d6ade85c0efff91c7ae275",
+      "bytes": 1055
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_15/status.json": {
+      "sha256": "2395800664824a162a66bd225e3dfaf6246b661dd916f18982a89c2da4d189eb",
+      "bytes": 1053
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_16/status.json": {
+      "sha256": "07ec7dd54719ae35bc57e92e597516e1f2e98df476daa5d23d05887eb0e10283",
+      "bytes": 1057
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_17/status.json": {
+      "sha256": "af617f0a838b2c6fb5e6e194abb6372bba643e8b28b24c005dca09f022835b0c",
+      "bytes": 1058
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_18/status.json": {
+      "sha256": "e14b2664da199eb8795a36f4d8b532fe54a4749a6e2da2f12a8d293285e6525a",
+      "bytes": 1053
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_19/status.json": {
+      "sha256": "f5abafb534151e5cd8f4de7a4bf76c6431f96812c30b79dafeedbd190d0ab6cc",
+      "bytes": 1056
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_20/status.json": {
+      "sha256": "582511d5cac2456a1ec0dcb38f116146ae953715c94efccb30f2ffc1434b4ba1",
+      "bytes": 1053
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_21/status.json": {
+      "sha256": "c297bd64090bc2a77ae802ce53bc8bc1cc17d7c1575a175860d89bd796bea792",
+      "bytes": 1057
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_22/status.json": {
+      "sha256": "9a72ec3513964f9a10d6edfce66eb7a12e9c0b0da4be7d16d6380462c2453a41",
+      "bytes": 1057
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_23/status.json": {
+      "sha256": "4120fd8c5b80cb4d0670a0ef09fdce5084b736204fbc3a7e014f4e2c66e8cf1c",
+      "bytes": 1052
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_24/status.json": {
+      "sha256": "5511ebe10118aa3679976abc9042f5e6985f286cb8e4a6411de3f69b88c03a8a",
+      "bytes": 1055
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_25/status.json": {
+      "sha256": "a7d0ab2245870e72c3c73c5eb1978ddccbf3d08a1a20cf334263310d7ee0484b",
+      "bytes": 1053
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_26/status.json": {
+      "sha256": "f80baf4f46d5e6e45eecb7743ccec03bcabfe284a262855f33ce0a17bd7d3c93",
+      "bytes": 1057
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_27/status.json": {
+      "sha256": "6a2cb1052fb31ed79821192736e80e60ec37a4711ae6545e01dd6cee2519bca8",
+      "bytes": 1057
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_28/status.json": {
+      "sha256": "b9969d5b875b8c32db3e4a735f34d6a797a26405ef68161e4c0d9a9d5e7f61eb",
+      "bytes": 1053
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_29/status.json": {
+      "sha256": "0fc4239b7efba7a9d183462383f50f74ce36cc341726a4ed5536567a9690f5db",
+      "bytes": 1054
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_30/status.json": {
+      "sha256": "592346a3e6e65b51cb7a0dbd371d965b13434d67cdbd718e4acb5e9c3d718537",
+      "bytes": 1053
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_execution/round1_development_policy/round1_policy_v1/round1_policy_v1_01/workers/worker_31/status.json": {
+      "sha256": "f910045fa20962c91b4aba95e4bf5b5f1415f332c59f0c3ffae2614bd98a1dbf",
+      "bytes": 1056
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/main_registration_v2/primary_manifest.json": {
+      "sha256": "991e13f37117d3bc41b904554602be413e281a4ae1f80f6c05c00d70d6433886",
+      "bytes": 292727
+    }
+  },
+  "operational_status_note": {
+    "recorded_state": "complete_audited",
+    "sealed_audit_passed": true,
+    "note": "Operational status consistent with complete sealed stage."
+  }
+}

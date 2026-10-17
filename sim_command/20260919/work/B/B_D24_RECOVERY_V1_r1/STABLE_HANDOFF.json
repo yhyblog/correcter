@@ -1,0 +1,495 @@
+{
+  "schema": "corrector_B_stable_handoff_v1",
+  "at_utc": "2026-09-21T16:16:49.572181+00:00",
+  "task_id": "B_D24_SPRINT_V1",
+  "event_id": "B_422445bd68021930284fe3fd62016937",
+  "status": "stable_detached_recovery_with_registered_terminal_triggers",
+  "host": "trial-303225685-trialrun-303225685-worker-0",
+  "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+  "control": {
+    "queue_revision": 10,
+    "root_revision": 54,
+    "global_stop": false,
+    "stop_requested": false,
+    "B_enabled": true,
+    "scientific_authorization": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/AUTHORIZATION_V1.json",
+      "sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80"
+    }
+  },
+  "observer": {
+    "process": {
+      "hostname": "trial-303225685-trialrun-303225685-worker-0",
+      "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+      "pid": 452085,
+      "start_ticks": 91710679,
+      "session_id": 452085
+    },
+    "alive": true,
+    "heartbeat": {
+      "at_utc": "2026-09-21T16:16:38.112612+00:00",
+      "cycles": 389,
+      "event_states": {
+        "B_226aaaad83007274bf5ab893d5e6b0ac": "another event awaiting original-handler ACK",
+        "B_422445bd68021930284fe3fd62016937": "transport_accepted",
+        "B_720b05f54224e945fc8df00ea6e171c3": "another event awaiting original-handler ACK",
+        "B_99ff50dfc5242547a4f45ca077bc485b": "another event awaiting original-handler ACK",
+        "B_b19457ac2e48eb664d4cc3c842a4f42b": "another event awaiting original-handler ACK",
+        "B_d7421c534b86bcdc0a5f8337058fe7eb": "another event awaiting original-handler ACK",
+        "B_e23469d0140e993de8cdc5b045fd0c3e": "another event awaiting original-handler ACK"
+      },
+      "identity": {
+        "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+        "hostname": "trial-303225685-trialrun-303225685-worker-0",
+        "pid": 452085,
+        "session_id": 452085,
+        "start_ticks": 91710679
+      },
+      "original_turn": {
+        "completed_at": null,
+        "started_at": 1790006290,
+        "status": "inProgress",
+        "turn_id": "01a0c4b0-6936-7830-9021-d0b28aa0c80b"
+      },
+      "scientific_model_calls": 0,
+      "state": "supervising",
+      "wakeup_readiness": "original_thread_ACK_verified_offline_pending",
+      "writer_locked": true
+    }
+  },
+  "original_guard_process": {
+    "hostname": "trial-303225685-trialrun-303225685-worker-0",
+    "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+    "pid": 35861,
+    "start_ticks": 73879295,
+    "session_id": 35861
+  },
+  "formal_GPU_jobs_at_snapshot": 8,
+  "auxiliary_GPU_holders_at_snapshot": 0,
+  "queues": [
+    {
+      "run_id": "D24_N_CONTROL_REPAIR_r2",
+      "process": {
+        "hostname": "trial-303225685-trialrun-303225685-worker-0",
+        "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+        "pid": 481853,
+        "start_ticks": 92237773,
+        "session_id": 481853
+      },
+      "process_alive": true,
+      "claim": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_N_CONTROL_REPAIR_r2/CLAIM.json",
+        "sha256": "cde7a7e1014c761306fd46468e64d5da6eb794e99ac0216807354b2d805f7157"
+      },
+      "configuration": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/BASELINE_BATCH.json",
+        "sha256": "5fe5b705ed26845a7f6ce8b13b75c47b3c0fc4b6d92419ea77ba4acd6b1dc6c8"
+      },
+      "progress": {
+        "at_utc": "2026-09-21T16:16:48.080084+00:00",
+        "status": "running",
+        "active": [
+          "smol50k_N_control_r2_shard0",
+          "smol50k_N_control_r2_shard1",
+          "smol50k_N_control_r2_shard2",
+          "smol50k_N_control_r2_shard3",
+          "smol50k_N_control_r2_shard4",
+          "smol50k_N_control_r2_shard5",
+          "smol50k_N_control_r2_shard6",
+          "pi05official_N_libero_spatial_control_r2"
+        ],
+        "queued": 0,
+        "completed": 0,
+        "resolved": 0,
+        "auxiliary_gpus": []
+      },
+      "completion_trigger": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_N_CONTROL_REPAIR_r2__D24_N_CONTROL_REPAIR_r2__1.json",
+        "sha256": "c74f718cc79543da79170880ce8fb60ed8f67ab5118daea18fc3548b2ee8fb4a"
+      },
+      "after_batches": [
+        "D24_LIBERO_REPAIR_r2"
+      ],
+      "job_count": 8,
+      "jobs": [
+        {
+          "job_id": "smol50k_N_control_r2_shard0",
+          "gpus": [
+            0
+          ],
+          "process": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 482103,
+            "start_ticks": 92245868,
+            "session_id": 482103
+          },
+          "process_alive": true,
+          "status": {
+            "status": "running",
+            "job_id": "smol50k_N_control_r2_shard0",
+            "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/configs/smol50k_N_control_r2_shard0.json",
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model",
+            "H": 50,
+            "K": 10,
+            "method": "N",
+            "planned_episodes": 40,
+            "completed_episodes": 24,
+            "technical_failures": 0,
+            "load_seconds": 43.13562609197106,
+            "latest_source": "D24_MW_t26_e09",
+            "at_utc": "2026-09-21T16:16:22.033517+00:00"
+          }
+        },
+        {
+          "job_id": "smol50k_N_control_r2_shard1",
+          "gpus": [
+            1
+          ],
+          "process": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 482107,
+            "start_ticks": 92245869,
+            "session_id": 482107
+          },
+          "process_alive": true,
+          "status": {
+            "status": "running",
+            "job_id": "smol50k_N_control_r2_shard1",
+            "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/configs/smol50k_N_control_r2_shard1.json",
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model",
+            "H": 50,
+            "K": 10,
+            "method": "N",
+            "planned_episodes": 40,
+            "completed_episodes": 24,
+            "technical_failures": 0,
+            "load_seconds": 43.02924339205492,
+            "latest_source": "D24_MW_t30_e00",
+            "at_utc": "2026-09-21T16:16:43.655049+00:00"
+          }
+        },
+        {
+          "job_id": "smol50k_N_control_r2_shard2",
+          "gpus": [
+            2
+          ],
+          "process": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 482113,
+            "start_ticks": 92245871,
+            "session_id": 482113
+          },
+          "process_alive": true,
+          "status": {
+            "status": "running",
+            "job_id": "smol50k_N_control_r2_shard2",
+            "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/configs/smol50k_N_control_r2_shard2.json",
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model",
+            "H": 50,
+            "K": 10,
+            "method": "N",
+            "planned_episodes": 40,
+            "completed_episodes": 20,
+            "technical_failures": 0,
+            "load_seconds": 43.01106040098239,
+            "latest_source": "D24_MW_t18_e03",
+            "at_utc": "2026-09-21T16:16:23.283878+00:00"
+          }
+        },
+        {
+          "job_id": "smol50k_N_control_r2_shard3",
+          "gpus": [
+            3
+          ],
+          "process": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 482118,
+            "start_ticks": 92245872,
+            "session_id": 482118
+          },
+          "process_alive": true,
+          "status": {
+            "status": "running",
+            "job_id": "smol50k_N_control_r2_shard3",
+            "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/configs/smol50k_N_control_r2_shard3.json",
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model",
+            "H": 50,
+            "K": 10,
+            "method": "N",
+            "planned_episodes": 40,
+            "completed_episodes": 23,
+            "technical_failures": 0,
+            "load_seconds": 43.16387119097635,
+            "latest_source": "D24_MW_t26_e05",
+            "at_utc": "2026-09-21T16:16:49.521023+00:00"
+          }
+        },
+        {
+          "job_id": "smol50k_N_control_r2_shard4",
+          "gpus": [
+            4
+          ],
+          "process": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 482124,
+            "start_ticks": 92245873,
+            "session_id": 482124
+          },
+          "process_alive": true,
+          "status": {
+            "status": "running",
+            "job_id": "smol50k_N_control_r2_shard4",
+            "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/configs/smol50k_N_control_r2_shard4.json",
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model",
+            "H": 50,
+            "K": 10,
+            "method": "N",
+            "planned_episodes": 40,
+            "completed_episodes": 20,
+            "technical_failures": 0,
+            "load_seconds": 42.825566982035525,
+            "latest_source": "D24_MW_t18_e05",
+            "at_utc": "2026-09-21T16:16:15.340600+00:00"
+          }
+        },
+        {
+          "job_id": "smol50k_N_control_r2_shard5",
+          "gpus": [
+            5
+          ],
+          "process": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 482129,
+            "start_ticks": 92245874,
+            "session_id": 482129
+          },
+          "process_alive": true,
+          "status": {
+            "status": "running",
+            "job_id": "smol50k_N_control_r2_shard5",
+            "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/configs/smol50k_N_control_r2_shard5.json",
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model",
+            "H": 50,
+            "K": 10,
+            "method": "N",
+            "planned_episodes": 40,
+            "completed_episodes": 19,
+            "technical_failures": 0,
+            "load_seconds": 42.57078962610103,
+            "latest_source": "D24_MW_t49_e07",
+            "at_utc": "2026-09-21T16:16:43.638513+00:00"
+          }
+        },
+        {
+          "job_id": "smol50k_N_control_r2_shard6",
+          "gpus": [
+            6
+          ],
+          "process": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 482134,
+            "start_ticks": 92245876,
+            "session_id": 482134
+          },
+          "process_alive": true,
+          "status": {
+            "status": "running",
+            "job_id": "smol50k_N_control_r2_shard6",
+            "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/configs/smol50k_N_control_r2_shard6.json",
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model",
+            "H": 50,
+            "K": 10,
+            "method": "N",
+            "planned_episodes": 40,
+            "completed_episodes": 26,
+            "technical_failures": 0,
+            "load_seconds": 43.01715046504978,
+            "latest_source": "D24_MW_t34_e09",
+            "at_utc": "2026-09-21T16:16:23.649886+00:00"
+          }
+        },
+        {
+          "job_id": "pi05official_N_libero_spatial_control_r2",
+          "gpus": [
+            7
+          ],
+          "process": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 482139,
+            "start_ticks": 92245877,
+            "session_id": 482139
+          },
+          "process_alive": true,
+          "status": {
+            "status": "running",
+            "job_id": "pi05official_N_libero_spatial_control_r2",
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+            "suite": "libero_spatial",
+            "H": 10,
+            "K": 5,
+            "method": "N",
+            "source_policy": "new deterministic task randomization from frozen seeds; save pre-settle simulator state for paired comparisons; distinct from official 50-init-state benchmark protocol",
+            "planned_episodes": 73,
+            "completed_episodes": 15,
+            "technical_failures": 0,
+            "server": {
+              "model": "pi05",
+              "config": "pi05_libero",
+              "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+              "H": 10,
+              "NFE": 10,
+              "policy_rng": "fixed per source, reset before first query",
+              "load_seconds": 7.697176123969257,
+              "job_id": "pi05official_N_libero_spatial_control_r2",
+              "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479"
+            },
+            "latest_source": "D24_LIBERO_libero_spatial_t04_e01",
+            "at_utc": "2026-09-21T16:16:08.289714+00:00"
+          }
+        }
+      ],
+      "completed_episodes_at_snapshot": 171,
+      "latest_gpu_metrics": {
+        "at_utc": "2026-09-21T16:16:35.908422+00:00",
+        "rows": "0, GPU-4143840e-6c2e-d4c4-8c60-4005cfa1f917, 30, 1969\n1, GPU-6d43b200-7592-1feb-46e0-6e6a0aadce30, 21, 1969\n2, GPU-16b17920-fc5b-e353-dfa5-6a98646e4cae, 0, 1969\n3, GPU-d0942bf0-fce5-5cef-1df9-cd9b085ee9b7, 21, 1969\n4, GPU-33015720-ddc5-fbd4-bb56-7c337282eb10, 30, 1969\n5, GPU-4062899a-e02c-36e6-9370-21f286817092, 23, 1969\n6, GPU-540de68c-d698-47c6-443e-4bc0d281534e, 30, 1969\n7, GPU-940192c8-5e85-1fb0-967b-d3c037ad6464, 0, 8823",
+        "exit_code": 0,
+        "active_jobs": [
+          "smol50k_N_control_r2_shard0",
+          "smol50k_N_control_r2_shard1",
+          "smol50k_N_control_r2_shard2",
+          "smol50k_N_control_r2_shard3",
+          "smol50k_N_control_r2_shard4",
+          "smol50k_N_control_r2_shard5",
+          "smol50k_N_control_r2_shard6",
+          "pi05official_N_libero_spatial_control_r2"
+        ],
+        "auxiliary_gpus": []
+      }
+    },
+    {
+      "run_id": "D24_XVLA_r2",
+      "process": {
+        "hostname": "trial-303225685-trialrun-303225685-worker-0",
+        "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+        "pid": 481854,
+        "start_ticks": 92237779,
+        "session_id": 481854
+      },
+      "process_alive": true,
+      "claim": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_XVLA_r2/CLAIM.json",
+        "sha256": "190714febeda2161ea632276f0904c0fe731350f501ca6cc105fcff5fb7d6d8a"
+      },
+      "configuration": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/XVLA_BATCH.json",
+        "sha256": "7a62921156cc8951a19125120889ef159f60bba17f3fb5cd934c9cf8f3fddb84"
+      },
+      "progress": {
+        "status": "waiting_for_predecessor",
+        "predecessor": "D24_N_CONTROL_REPAIR_r2",
+        "at_utc": "2026-09-21T16:16:47.582186+00:00",
+        "scientific_operations": 0
+      },
+      "completion_trigger": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_XVLA_r2__D24_XVLA_r2__1.json",
+        "sha256": "b3658b9e5131995271309919e750549b0273777d8accd6b12c794b07f7aa8178"
+      },
+      "after_batches": [
+        "D24_LIBERO_REPAIR_r2",
+        "D24_N_CONTROL_REPAIR_r2"
+      ],
+      "job_count": 1
+    },
+    {
+      "run_id": "D24_LIBERO_UNSTARTED_r3",
+      "process": {
+        "hostname": "trial-303225685-trialrun-303225685-worker-0",
+        "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+        "pid": 485196,
+        "start_ticks": 92263845,
+        "session_id": 485196
+      },
+      "process_alive": true,
+      "claim": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_LIBERO_UNSTARTED_r3/CLAIM.json",
+        "sha256": "d97099bb2bec92d46b82eb8667c77d03a1f13eab165e2b350b76d87a7b64d9e6"
+      },
+      "configuration": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/LIBERO_UNSTARTED_BATCH.json",
+        "sha256": "064bbf8fed3bacaa041514071b1b007fc564491df6f79c37da77a7a52d727f14"
+      },
+      "progress": {
+        "status": "waiting_for_predecessor",
+        "predecessor": "D24_N_CONTROL_REPAIR_r2",
+        "at_utc": "2026-09-21T16:16:47.581934+00:00",
+        "scientific_operations": 0
+      },
+      "completion_trigger": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_LIBERO_UNSTARTED_r3__D24_LIBERO_UNSTARTED_r3__1.json",
+        "sha256": "b6ed9b1bab5226fdaec6b62867d894dee078551ce441e6edaee832fcd599a597"
+      },
+      "after_batches": [
+        "D24_N_CONTROL_REPAIR_r2",
+        "D24_XVLA_r2"
+      ],
+      "job_count": 8
+    }
+  ],
+  "old_terminal_batches": [
+    {
+      "run_id": "D24_GPU_N_r1",
+      "result": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_GPU_N_r1/RESULT.json",
+        "sha256": "403f277380ce13650e1562a1aa38686a2f2b07213f346901aa4febe127c400f5"
+      },
+      "status": "partial",
+      "all_owned_descendants_exited": true
+    },
+    {
+      "run_id": "D24_LIBERO_REPAIR_r2",
+      "result": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_LIBERO_REPAIR_r2/RESULT.json",
+        "sha256": "4a82594177d30a9f4070935b1e624a05aa9e6ffddd803e3b75c7f533a84a018d"
+      },
+      "status": "failed",
+      "all_owned_descendants_exited": true
+    }
+  ],
+  "source_accounting": {
+    "previous_completed_episodes_retained": 258,
+    "previous_unknown_consumed_not_replayed": 5,
+    "second_interruption_technical_failed_sources_excluded": 5,
+    "baseline_recovery_planned_attempts": 353,
+    "libero_unstarted_queued_attempts": 279,
+    "baseline_recovery_corrected_spatial_retry": 1
+  },
+  "source_reconciliation": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/SOURCE_RECONCILIATION.json",
+      "sha256": "5f7e241978c5cb5001c6d8f327683552cb33d51b03d3a7352f448764ef4bbefe"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/LIBERO_SECOND_INTERRUPTION.json",
+      "sha256": "f2469ffc0333c631753869d5fa68c44ea24466ff0507e5ce6b635d542cfe2dd6"
+    }
+  ],
+  "repair_checks": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/REPAIR_CHECKS.json",
+    "sha256": "49f6388e279386b4179cfa29adb00ba4ad52ff4358ee198423a56bad64e25cd6"
+  },
+  "code_snapshot": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/CODE_SNAPSHOT.json",
+    "sha256": "7fae25de73137c7e1fd3d652a06c7790a1d2b83017ef0cd7fecd141d3e1d83e2"
+  },
+  "A_waits_for_B": false,
+  "no_new_LL\u041c_polling_required": true,
+  "completion_delivery_limit": "Original live TUI callback and handler ACK verified; unattended headless resume remains unverified and does not gate D24 science."
+}

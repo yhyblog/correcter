@@ -1,0 +1,227 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "revision": 7,
+  "owner": "analysis",
+  "tasks": [
+    {
+      "id": "A00",
+      "owner": "A",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [],
+      "brief": "tasks/A00.md",
+      "release": null,
+      "acknowledgement": "receipts/A/A00_ACK.json",
+      "accepted_at_utc": "2026-09-19T15:11:05.205789+00:00",
+      "result": "receipts/A/A00_RESULT.json"
+    },
+    {
+      "id": "B00",
+      "owner": "B",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [],
+      "brief": "tasks/B00.md",
+      "release": null,
+      "acknowledgement": "receipts/B/B00_ACK.json",
+      "accepted_at_utc": "2026-09-19T15:11:05.205789+00:00",
+      "result": "receipts/B/B00_RESULT.json"
+    },
+    {
+      "id": "P00",
+      "owner": "analysis",
+      "status": "complete",
+      "revision": 1,
+      "dependencies": [],
+      "brief": "MASTER_PLAN.md",
+      "release": "releases/P00_PREP_V1.json",
+      "artifact": "contracts/P00_PREPARATION_CONTRACT_V1.md"
+    },
+    {
+      "id": "A10",
+      "owner": "A",
+      "status": "running",
+      "revision": 1,
+      "dependencies": [
+        "P00",
+        "A00"
+      ],
+      "brief": "tasks/A10_CORE_PREPARATION.md",
+      "release": "releases/P00_PREP_V1.json",
+      "dependency_receipt_suffices": true,
+      "prerequisites_verified_at_utc": "2026-09-19T15:11:05.205789+00:00",
+      "acknowledgement": "receipts/A/A10_ACK.json",
+      "published_interface": "manifests/PUBLIC_INTERFACE_V1.json"
+    },
+    {
+      "id": "B10",
+      "owner": "B",
+      "status": "running",
+      "revision": 1,
+      "dependencies": [
+        "P00",
+        "B00"
+      ],
+      "brief": "tasks/B10_BASELINES_PREPARATION.md",
+      "release": "releases/P00_PREP_V1.json",
+      "dependency_receipt_suffices": true,
+      "prerequisites_verified_at_utc": "2026-09-19T15:11:05.205789+00:00",
+      "acknowledgement": "receipts/B/B10_ACK.json",
+      "interface_handoff": "tasks/B10_INTERFACE_V1_HANDOFF.md",
+      "interface_feedback": "receipts/B/A10_INTERFACE_FEEDBACK.md"
+    },
+    {
+      "id": "P10",
+      "owner": "analysis",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "A10",
+        "B10"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null
+    },
+    {
+      "id": "A11",
+      "owner": "A",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "P10"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null
+    },
+    {
+      "id": "B11",
+      "owner": "B",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "P10"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null
+    },
+    {
+      "id": "A12",
+      "owner": "A",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "A11",
+        "B11"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null
+    },
+    {
+      "id": "B12",
+      "owner": "B",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "A11",
+        "B11"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null
+    },
+    {
+      "id": "B13",
+      "owner": "B",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "P10"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null
+    },
+    {
+      "id": "P20",
+      "owner": "analysis",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "A12",
+        "B12",
+        "B13"
+      ],
+      "brief": "tasks/P20_EVALUATION_CONTRACT.md",
+      "release": null
+    },
+    {
+      "id": "A20",
+      "owner": "A",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "P20"
+      ],
+      "brief": "tasks/P20_EVALUATION_CONTRACT.md",
+      "release": null
+    },
+    {
+      "id": "B20",
+      "owner": "B",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "P20"
+      ],
+      "brief": "tasks/P20_EVALUATION_CONTRACT.md",
+      "release": null
+    },
+    {
+      "id": "B21",
+      "owner": "B",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "P20"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null
+    },
+    {
+      "id": "A30",
+      "owner": "A",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "P20"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null
+    },
+    {
+      "id": "B30",
+      "owner": "B",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "P20"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null
+    },
+    {
+      "id": "P90",
+      "owner": "analysis",
+      "status": "planned",
+      "revision": 1,
+      "dependencies": [
+        "A20",
+        "B20",
+        "B21",
+        "A30",
+        "B30"
+      ],
+      "brief": "MASTER_PLAN.md",
+      "release": null
+    }
+  ],
+  "updated_at_utc": "2026-09-19T15:21:26.509244+00:00"
+}

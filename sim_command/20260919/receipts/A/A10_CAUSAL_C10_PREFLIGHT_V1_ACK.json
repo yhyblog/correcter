@@ -1,0 +1,101 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A10_CAUSAL_C10_PREFLIGHT_V1",
+  "revision": 1,
+  "role": "A",
+  "status": "ACK",
+  "hostname": "trial-303224955-trialrun-303224955-worker-0",
+  "session_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+  "at_utc": "2026-09-20T00:07:47.684050+00:00",
+  "release": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_CAUSAL_C10_PREFLIGHT_V1.json",
+    "sha256": "71b1ddc1d214f564988551b0c6138b953ae3d43a3140e76b05d2c684b40b9cd8",
+    "size_bytes": 18754
+  },
+  "CONTROL": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/CONTROL.json",
+    "sha256": "fac7c13f4492e56faf7d5910a8cc519c0709d766c0a18ebd4a09a807f0e0b956",
+    "size_bytes": 29219
+  },
+  "TASK_BOARD": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/TASK_BOARD.json",
+    "sha256": "7f66298c1de2b42d566d3f77e4daa58caafcfae65532d9ca3a36ca0b177f9333",
+    "size_bytes": 20733
+  },
+  "task_brief": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/tasks/A10_CAUSAL_C10_PREFLIGHT_V1.md",
+    "sha256": "e63ee17a153b6bc7b151eb987ac1e6cc049ee7b17770577929120bf52c597f10",
+    "size_bytes": 6971
+  },
+  "board_entry": {
+    "id": "A10_CAUSAL_C10_PREFLIGHT_V1",
+    "owner": "A",
+    "status": "ready",
+    "revision": 1,
+    "dependencies": [
+      "A10_CAUSAL_C10_CPU_V1"
+    ],
+    "brief": "tasks/A10_CAUSAL_C10_PREFLIGHT_V1.md",
+    "release": "releases/P10_A_CAUSAL_C10_PREFLIGHT_V1.json",
+    "expected_result": "receipts/A/A10_CAUSAL_C10_PREFLIGHT_V1_RESULT.json"
+  },
+  "dependency_acceptance": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/CAUSAL_C10_CPU_V1_ACCEPTANCE.json",
+    "sha256": "01e3083d5a89e456cc7c13ff5df063f6bcb3015f29d45c41fdb9a89760b9d7e0",
+    "size_bytes": 6398
+  },
+  "preexisting_execution_checks": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_release_claims/P10_A_CAUSAL_C10_PREFLIGHT_V1.json",
+      "exists": false
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09",
+      "exists": false
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/P10_CAUSAL_C10_V1_runtime_cache/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09",
+      "exists": false
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_CAUSAL_C10_PREFLIGHT_V1_r1",
+      "exists": false
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_PREFLIGHT_V1",
+      "exists": false
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_CAUSAL_C10_PREFLIGHT_V1_ACK.json",
+      "exists": false
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_CAUSAL_C10_PREFLIGHT_V1_RESULT.json",
+      "exists": false
+    }
+  ],
+  "command": [
+    "bash",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_CPU_V1/commands/run_proposed_causal_c10.sh",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_CAUSAL_C10_PREFLIGHT_V1.json"
+  ],
+  "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_CPU_V1",
+  "command_invocations_max": 1,
+  "claim_max": 1,
+  "branch_attempts_max": 2,
+  "existing_claim": false,
+  "existing_command_record": false,
+  "no_extra_checker_or_probe": true,
+  "per_branch_coverage_required": [
+    "actual_start",
+    "legal_cut",
+    "C10_steps",
+    "tail_discard",
+    "H20_restore",
+    "completed_C10_branches"
+  ],
+  "occupancy": "one continuous all-eight reservation and formal process group until full exit, including failures",
+  "B_participates": false,
+  "automatic_retry": false,
+  "automatic_next_stage": false
+}

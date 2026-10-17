@@ -1,0 +1,160 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A10_PREFLIGHT_NATIVE_V3",
+  "task_revision": 1,
+  "node_role": "A",
+  "hostname": "trial-303224955-trialrun-303224955-worker-0",
+  "executor_session_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+  "started_at_utc": "2026-09-19T20:14:09.400448+00:00",
+  "control_revision": 19,
+  "task_board_revision": 26,
+  "status": "acknowledged",
+  "allowed_scope": [
+    "one_frozen_native_V3_command",
+    "CPU_saved_artifact_audit",
+    "CPU_lossless_RGB_views"
+  ],
+  "inputs_checked": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/CONTROL.json",
+      "sha256": "7e2928080c7dd35052cc89e706ff5f4b5509e568d5cddd7d8edb0292be877b5c",
+      "snapshot_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V3_r1/inputs/CONTROL.json"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/TASK_BOARD.json",
+      "sha256": "e0af33c0bd053f1b9d35d81c0be46d0006b98ef40923bc5433ff9560c6ee0aa6",
+      "snapshot_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V3_r1/inputs/TASK_BOARD.json"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/tasks/A10_PREFLIGHT_NATIVE_V3.md",
+      "sha256": "fdecfa52e25f50f6c837c16b273faf9be9ce19c9de57a412d5b319d9122dc424",
+      "snapshot_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V3_r1/inputs/tasks__A10_PREFLIGHT_NATIVE_V3.md"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_NATIVE_PREFLIGHT_V3.json",
+      "sha256": "5c431d7d44e10630354d3349cf7c8d5c2367da1c25826dd9f2de5df0fe088f5f",
+      "snapshot_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V3_r1/inputs/releases__P10_A_NATIVE_PREFLIGHT_V3.json"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/TORCH_UUID_ABI_CPU_REPAIR_V1_ACCEPTANCE.json",
+      "sha256": "e6e163b22247541b12b81a40f90d6699c9db5be000355273386c726395701de4",
+      "snapshot_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V3_r1/inputs/manifests__TORCH_UUID_ABI_CPU_REPAIR_V1_ACCEPTANCE.json"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_TORCH_UUID_ABI_CPU_REPAIR_V1/proposal/PROPOSAL.json",
+      "sha256": "a8659f3d89f34a9cdc4741f3ef222220f3bf773273cf2e67104f4b71f5732c88",
+      "source": "accepted frozen package; metadata checked, no extra weight hash"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_TORCH_UUID_ABI_CPU_REPAIR_V1/code/CODE_MANIFEST.json",
+      "sha256": "6ffc03eee6a4fc661bc00f4babfd55532ba6def847d9cf75a2abfa188b7d6fca",
+      "source": "accepted frozen package; metadata checked, no extra weight hash"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_TORCH_UUID_ABI_CPU_REPAIR_V1/INTEGRATION_MANIFEST.json",
+      "sha256": "d387d4e92050decf6cb9e1186d8d356f833a4a2025ce70c75d60161ccb42d2b2",
+      "source": "accepted frozen package; metadata checked, no extra weight hash"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_TORCH_UUID_ABI_CPU_REPAIR_V1/CPU_READY.json",
+      "sha256": "94fddf1fcc4e363bc5e06a99fad091d9d2f53ad8eab214f2ae7ed982668dade9",
+      "source": "accepted frozen package; metadata checked, no extra weight hash"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_TORCH_UUID_ABI_CPU_REPAIR_V1/commands/run_proposed_native_preflight.sh",
+      "sha256": "df874decdb676581e4a4c0f034a394e427452c2de368525be4e62cd6059b77d4",
+      "source": "accepted frozen package; metadata checked, no extra weight hash"
+    }
+  ],
+  "release_sha256": "5c431d7d44e10630354d3349cf7c8d5c2367da1c25826dd9f2de5df0fe088f5f",
+  "claim_absent_at_ack": true,
+  "closure_absent_at_ack": true,
+  "real_command": [
+    "bash",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_TORCH_UUID_ABI_CPU_REPAIR_V1/commands/run_proposed_native_preflight.sh",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_NATIVE_PREFLIGHT_V3.json"
+  ],
+  "working_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_TORCH_UUID_ABI_CPU_REPAIR_V1",
+  "caps": {
+    "public": {
+      "simulator_attempts": 1,
+      "env_steps": 1,
+      "vla_sampling_calls": 5,
+      "flow_forward_calls": 50,
+      "vla_backward_calls": 0,
+      "critic_forward_calls": 0,
+      "critic_backward_calls": 0,
+      "monitor_calls": 0,
+      "optimizer_updates": 0
+    },
+    "initialization": {
+      "model_initializations": 1,
+      "environment_instances": 2,
+      "wrapper_instances": 1,
+      "taskset_constructions": 1,
+      "taskset_reset_calls": 50,
+      "wrapper_initialization_reset_calls": 1,
+      "initialization_reset_calls": 51,
+      "diagnostic_reset_calls": 1,
+      "environment_reset_calls": 52,
+      "reset_model_calls": 104,
+      "initialization_do_simulation_calls": 5200,
+      "initialization_physics_substeps": 26000,
+      "policy_do_simulation_calls": 1,
+      "policy_physics_substeps": 13
+    },
+    "graphics": {
+      "egl_device_enumerations": 1,
+      "egl_device_string_queries": 8,
+      "probe_explicit_egl_get_proc_address_calls": 5,
+      "egl_device_attribute_queries": 8,
+      "cuda_driver_initializations": 1,
+      "cuda_device_pci_queries": 8,
+      "egl_error_queries": 35,
+      "probe_explicit_driver_library_loads": 2,
+      "probe_explicit_cuda_symbol_lookups": 2,
+      "probe_explicit_egl_core_symbol_lookups": 11,
+      "cuda_device_count_queries": 0,
+      "cuda_uuid_queries": 0,
+      "cuda_error_string_queries": 0,
+      "egl_device_binary_queries": 0,
+      "egl_drm_string_queries": 0,
+      "egl_platform_display_calls": 1,
+      "egl_initialize_calls": 1,
+      "egl_choose_config_calls": 1,
+      "egl_bind_api_calls": 1,
+      "graphics_context_creations": 1,
+      "egl_make_current_calls": 2,
+      "egl_query_string_calls": 2,
+      "probe_explicit_gl_string_queries": 3,
+      "static_scene_constructions": 0,
+      "static_scene_data_constructions": 0,
+      "explicit_mj_forward_calls": 0,
+      "mujoco_render_context_creations": 1,
+      "mujoco_render_context_frees": 1,
+      "mujoco_scene_updates": 2,
+      "render_calls": 2,
+      "rgb_readback_calls": 2,
+      "egl_destroy_context_calls": 1,
+      "egl_terminate_calls": 1,
+      "egl_release_thread_calls": 1,
+      "mujoco_set_buffer_calls": 1,
+      "offscreen_viewer_creations": 1,
+      "policy_device_selections": 1,
+      "policy_device_property_queries": 1
+    },
+    "observations": {
+      "diagnostic_native_resets_returned": 1,
+      "diagnostic_observations_returned": 1,
+      "post_control_observations_returned": 1,
+      "complete_observations_returned": 2,
+      "usable_observation_artifacts": 2
+    }
+  },
+  "no_extra_CPU_checker_or_UUID_probe": true,
+  "max_invocations": 1,
+  "max_retries": 0,
+  "deletions": 0,
+  "old_V2_runtime_uuid_type": "unknown",
+  "occupancy_policy": "Frozen internal lifecycle; all A8 holders paused until complete process group exits, including failure; then restore"
+}

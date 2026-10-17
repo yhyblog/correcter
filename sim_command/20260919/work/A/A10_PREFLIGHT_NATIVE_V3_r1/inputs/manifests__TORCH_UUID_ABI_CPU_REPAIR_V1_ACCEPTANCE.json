@@ -1,0 +1,79 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "accepted_at_utc": "2026-09-19T20:12:12.019548+00:00",
+  "status": "CPU_UUID_repair_accepted_for_one_native_V3_preflight",
+  "task_id": "A10_TORCH_UUID_ABI_CPU_REPAIR_V1",
+  "receipt": {
+    "path": "receipts/A/A10_TORCH_UUID_ABI_CPU_REPAIR_V1_RESULT.json",
+    "sha256": "18f45b9804269f9bcffdcaf8200470e22a33bc6bd30a1efc2e2b016f3cc4df29"
+  },
+  "report": {
+    "path": "receipts/A/A10_TORCH_UUID_ABI_CPU_REPAIR_V1_REPORT.md",
+    "sha256": "29acb0144fdac695d0dec602714319ebee6cdbd4fed06bc0e6128ccd05d1e86f"
+  },
+  "CPU_READY": {
+    "path": "results/A/A10_TORCH_UUID_ABI_CPU_REPAIR_V1/CPU_READY.json",
+    "sha256": "94fddf1fcc4e363bc5e06a99fad091d9d2f53ad8eab214f2ae7ed982668dade9"
+  },
+  "proposal": {
+    "path": "results/A/A10_TORCH_UUID_ABI_CPU_REPAIR_V1/proposal/PROPOSAL.json",
+    "sha256": "a8659f3d89f34a9cdc4741f3ef222220f3bf773273cf2e67104f4b71f5732c88"
+  },
+  "code_manifest": {
+    "path": "results/A/A10_TORCH_UUID_ABI_CPU_REPAIR_V1/code/CODE_MANIFEST.json",
+    "sha256": "6ffc03eee6a4fc661bc00f4babfd55532ba6def847d9cf75a2abfa188b7d6fca"
+  },
+  "integration_manifest": {
+    "path": "results/A/A10_TORCH_UUID_ABI_CPU_REPAIR_V1/INTEGRATION_MANIFEST.json",
+    "sha256": "d387d4e92050decf6cb9e1186d8d356f833a4a2025ce70c75d60161ccb42d2b2"
+  },
+  "source_review": {
+    "path": "results/A/A10_TORCH_UUID_ABI_CPU_REPAIR_V1/ABI_SOURCE_REVIEW.json",
+    "sha256": "16e5f853e3fd750f4ef5c4e0d11e55556c230a6651e1c55b94139c6692ab6ab5"
+  },
+  "root_verification": {
+    "RESULT_artifact_references_SHA_and_size": 20,
+    "code_manifest_files_SHA_and_size": 419,
+    "integration_references_SHA_and_size": 27,
+    "changed_code_files": [
+      "core/native_egl.py",
+      "core/release.py"
+    ],
+    "unchanged_code_files": 417,
+    "native_V2_to_V3_source_seed_all_budgets_device_visibility_timeout_equal": true,
+    "runtime_probes": 0,
+    "tests_rerun": 0,
+    "large_model_hash_passes": 0
+  },
+  "executor_CPU_evidence": {
+    "targeted_cases": 50,
+    "passed": 50,
+    "retained_evidence_file_count": 483,
+    "real_entry_invocations": 0
+  },
+  "independent_review": {
+    "agent": "/root/native_v3_uuid_release_review",
+    "blocking_findings": [],
+    "recommendation": "one independently released native V3"
+  },
+  "accepted_changes": [
+    "Exact native str or actual Torch _CUuuid class identity; strict canonical ASCII text and fixed UUID equality",
+    "Trusted non-string conversion once and existing properties query once",
+    "Original type durably recorded before conversion; conversion/error/format/target evidence recorded before decision",
+    "V3 task identity only; existing mapping, data, sample, rendering, claim and holder scope unchanged"
+  ],
+  "limitations": [
+    "Old V2 exact UUID object type remains unknown",
+    "Real V3 UUID guard and post-Torch loader identity remain unvalidated",
+    "Native two RGB observations, five samples and one transition remain unvalidated",
+    "No D/G0/Q/Post/Velocity, full rollout or task-performance evidence"
+  ],
+  "success_requires": [
+    "Runtime original UUID type and conversion/identity decision evidence",
+    "Both native RGB images visually checked; reset/full observation/artifact counts separated",
+    "Five-H paired noise/raw50 queue checks and one transition",
+    "Initialization/resource/graphics ledgers, cleanup, process-group exit and8holder restoration"
+  ],
+  "new_release": "releases/P10_A_NATIVE_PREFLIGHT_V3.json",
+  "old_releases_reusable": false
+}

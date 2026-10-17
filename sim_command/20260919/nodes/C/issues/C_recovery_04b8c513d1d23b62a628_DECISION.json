@@ -1,0 +1,44 @@
+{
+  "schema": "corrector_analysis_issue_decision_v1",
+  "issue_id": "C_recovery_04b8c513d1d23b62a628",
+  "task_id": "C_D24_L11_RETEST_V1",
+  "node": "C",
+  "status": "actionable",
+  "action": "repair_then_resume_exact_nonvalid_units_under_new_authorization",
+  "issued_at_utc": "2026-09-23T04:23:07.754155+00:00",
+  "reported_at": "2026-09-23T04:11:31.210855+00:00",
+  "analysis_response_due_at": "2026-09-23T04:41:31.210845+00:00",
+  "reset_issue_deadline": false,
+  "authorization": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/L11_RECOVERY_V1/AUTHORIZATION.json",
+    "sha256": "ca6f92258260815495a016d8c25eb079e9e0949a38a2c5ece6b836c2ef6d0ccc"
+  },
+  "next_task": "C_D24_L11_RENDER_RECOVERY_V1",
+  "decision": "Keep old pi05 raw1500 on scientific quality hold; preserve valid736. Scope expressly extends to exact1764 nonvalid units (1500 execution +22 render +211 technical +31unknown). Recover unknowns from logs first; then only still-nonvalid original units after targeted rendering/observation fix. No loss/fit/threshold/source tuning.",
+  "additional_attempt_cap": 2000,
+  "old_attempts_consumed": 2750,
+  "old_attempts_not_reset": true,
+  "replay_valid736_allowed": false,
+  "new_scientific_units": 0,
+  "no_extra_approval_required": true,
+  "unit_manifest": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/L11_RECOVERY_V1/RECOVERY_UNITS_C.jsonl",
+  "executable_actions": [
+    {
+      "order": 1,
+      "action": "ack_new_task_and_prepare_private_repair",
+      "brief": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/tasks/C_D24_L11_RENDER_RECOVERY_V1.md"
+    },
+    {
+      "order": 2,
+      "action": "run_finite_recovery_only_after_engineering_fix",
+      "authorization": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/L11_RECOVERY_V1/AUTHORIZATION.json",
+        "sha256": "ca6f92258260815495a016d8c25eb079e9e0949a38a2c5ece6b836c2ef6d0ccc"
+      }
+    },
+    {
+      "order": 3,
+      "action": "publish_unique_valid_results_all_raw_costs_and_original_thread_terminal_event"
+    }
+  ]
+}

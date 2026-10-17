@@ -1,0 +1,84 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A10_PV_HANDOFF_CPU_REPAIR_V1",
+  "accepted_at_utc": "2026-09-19T22:34:29.684135+00:00",
+  "status": "CPU_patch_and_V3_preparation_accepted_installation_only_released",
+  "receipt": {
+    "path": "receipts/A/A10_PV_HANDOFF_CPU_REPAIR_V1_RESULT.json",
+    "sha256": "957916c789aea9e546460c0ce5392274410b1f8f232c4d0d47b68bf05dc81ae1"
+  },
+  "report": {
+    "path": "receipts/A/A10_PV_HANDOFF_CPU_REPAIR_V1_REPORT.md",
+    "sha256": "de4cc0e47267b092a0a81c795d37c715343f3f4a8b04fa18ad0ae457dcb9972b"
+  },
+  "CPU_READY": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/CPU_READY.json",
+    "sha256": "4c26378048ba8e264bccf7536338c8861304d44d37524fd88ba5a945bd7263dc"
+  },
+  "proposal": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/proposal/PROPOSAL.json",
+    "sha256": "c07750be489911e2d7363729d8ed186605f8792337c9f4118677e20a3af1ca2a"
+  },
+  "installation_proposal": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/guard_patch/INSTALLATION_PROPOSAL.json",
+    "sha256": "28bcda15f95a949bd513a42cd4d9803a721f14da1bf1546abb7749740d741eb8"
+  },
+  "patch_identity": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/guard_patch/PATCH_IDENTITY.json",
+    "sha256": "7b67f2bf815958cf0d518f76b0c939b816c8611dbaeff92ed43b87c48502c32a"
+  },
+  "root_verification": {
+    "result_artifact_refs_SHA_size": 35,
+    "evidence_files_SHA_size": 79,
+    "runtime_code_files_SHA_size": 381,
+    "diagnostic_run_source_byte_identical": true,
+    "only_input_external_row_changed": "gpu_occupancy_guard.py",
+    "only_config_key_changed": "occupancy_handoff",
+    "66_caps_and_numeric_device_noise_timeout_unchanged": true,
+    "shared_target_still_original_SHA": true,
+    "future_V3_claim_output_cache_absent": true,
+    "root_model_or_hardware_or_install_calls": 0
+  },
+  "reviews": [
+    {
+      "agent": "/root/pv_guard_patch_review",
+      "blocking_findings": []
+    },
+    {
+      "agent": "/root/pv_guard_install_review",
+      "blocking_findings": []
+    }
+  ],
+  "executor_CPU_checks": {
+    "guard_fakes": 26,
+    "metadata_cases": 10,
+    "installation_metadata_cases": 6,
+    "targeted_env_manifest_AST_shell_and_publication_CLI": "passed"
+  },
+  "accepted_scope": [
+    "Strict ASCII timeout1..300 default90, futureV3explicit300",
+    "Existing daemon/query/stop/start and run spawn/signal/wait/lock tail unchanged",
+    "Late empty/error/occupied/deadline refuse launch, one bounded last-poll diagnostic record without extra query",
+    "Same lock and inherited reservation FD, no nested lifecycle",
+    "Exact one-file CPU transition with original-byte backup and before/afterSHA; no live guard invocation"
+  ],
+  "limits": [
+    "300seconds nominal handoff deadline only; in-flight query/lock/group drain/restoration not bounded by it",
+    "CONTROL is coordination not OS deployment lock; analysis serializes installation",
+    "No evidence of successful runtime handoff or P/V numeric result yet",
+    "Installation must be separately verified before any V3 release"
+  ],
+  "installation_release": "releases/P00_A_GUARD_HANDOFF_INSTALL_V1.json",
+  "V3_compute_release_published": false,
+  "runtime_validation_pending": [
+    "real encoder outputs at step0",
+    "runtime noise hash equality",
+    "Q/P/V finite numerical behavior on this snapshot",
+    "MT50 Q adaptation",
+    "D/G0 triggers",
+    "C10 execution and complete task outcomes"
+  ],
+  "old_compute_release_count_closed": 7,
+  "B_compute_authorized": false,
+  "deletion_authorized": false
+}

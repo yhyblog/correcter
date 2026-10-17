@@ -1,0 +1,9 @@
+{
+  "status": "delivered",
+  "finished_at_utc": "2026-09-19T16:57:17.606785+00:00",
+  "target_session": "01a0b91f-355f-7cd1-ae36-412500534ffb",
+  "returncode": 0,
+  "stdout": "Queued message 01a0ba99-cfe1-77c2-ae6f-74d003016517 for thread 01a0b91f-355f-7cd1-ae36-412500534ffb.\n",
+  "stderr": "",
+  "message": "A 存储定向依赖核查完成，删除0。回执：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/STORAGE_DEPENDENCY_REVIEW_V1.json；短报告同名.md。\n1. 仅原11 defer候选：9个Smol中间checkpoint中的18个大payload=14,494,035,492bytes；X的8range+1incomplete=3,519,073,692bytes。共27候选文件，逐文件path/realpath/大小/SHA/mtime/inode已列，全部nlink1。建议只决策这些payload，小配置/processor/RNG/日志/沿革保留。\n2. 108份定向引用中未发现9个中间checkpoint用于本轮选模、封存选定模型或恢复链；库存/保存日志不是永久依赖。050000完整权重及训练状态自包含，last指向050000。B当前依赖/写入专项回执仍缺，不能据A结论直接删除。\n3. 口径补充：旧Smol日志最大进度54580/100000，但最后完整保存为50000；本轮候选仍50k，不把未保存步数算入选定底座。\n4. X保留完整3,519,073,692-byte权重全量SHA=f05bc0fab1c9523d7f5d6b41a651313641ca2227a88822249845da8e20e036c9，匹配固定源cdb7964...和下载metadata/LFS SHA；下载已完成，旧片不用于当前完整底座。\n5. 本机16:53:21 UTC只读检查60进程，对28文件无FD/映射/相关训练下载进程、无权限缺口；仅本机时点证据。待B回执后由分析决定精确delete/keep/defer，执行前需再核身份/使用者；当前无删除release。\n6. 已发现并核对CONTROL7/P10_A_NATIVE_PREFLIGHT_V1唯一A-only计算release，A10_PREFLIGHT_NATIVE_V1_ACK.json已写。接下来按任务书只执行一次v4原生预检；旧P00、B和其他项目不获计算权限。"
+}

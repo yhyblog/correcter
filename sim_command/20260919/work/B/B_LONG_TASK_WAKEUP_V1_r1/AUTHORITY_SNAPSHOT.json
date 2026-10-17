@@ -1,0 +1,124 @@
+{
+  "control": {
+    "schema": "corrector_queue_control_v1",
+    "revision": 5,
+    "updated_at_utc": "2026-09-21T14:14:59.452622+00:00",
+    "authorization": {
+      "path": "persistent_queue/AUTHORIZATION_V2.json",
+      "sha256": "d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928"
+    },
+    "global_stop": false,
+    "desired_state": "independent_node_pipelines",
+    "nodes": {
+      "A": {
+        "desired_state": "implement_and_resource_verify_formal8_then_independent_first8_release",
+        "enabled": true,
+        "actual_state": "awaiting_executor_deployment",
+        "control_plane_task": "A_QUEUE_BOOTSTRAP_V1",
+        "control_plane_task_revision": 2,
+        "next_formal_concurrency": 8,
+        "first_formal_wave_release_required": "P11_A_COMMON_POOL_QUEUE8_FIRST_V1",
+        "resource_preparation_task": "A_QUEUE8_ADMISSION_PREP_V1",
+        "completion_event_task": "A_LONG_TASK_WAKEUP_V1"
+      },
+      "B": {
+        "desired_state": "migrate_join_toV2_and_prepare_independent_stages_no_collection",
+        "enabled": true,
+        "actual_state": "V1_join_waiter_observed_waiting_for_package",
+        "control_plane_task": "B_QUEUE_JOIN_V1",
+        "control_plane_task_revision": 2,
+        "collection_source_limit": 0,
+        "completion_event_task": "B_LONG_TASK_WAKEUP_V1"
+      }
+    },
+    "shared_package_state": "not_yet_implemented",
+    "automatic_batch_advance": true,
+    "human_review_per_normal_batch": false,
+    "previous_authorization": {
+      "path": "persistent_queue/AUTHORIZATION_V1.json",
+      "sha256": "f0790bbfdbe263be1044ef9ce3773d4ab0b3a63616edf04feda2e86103edf7b5"
+    },
+    "only_current_authorization_valid_for_new_admission": true,
+    "operational_overrides": [
+      {
+        "path": "persistent_queue/OCCUPANCY_OVERRIDE_V1.json",
+        "sha256": "0e896062a9c69dc51e6d1332eca5413c683d2c9bbed113b9346f8dba27310916"
+      }
+    ],
+    "effective_holder_policy": "real_jobs_priority; supervised_idle_card_fill_allowed_during_wave; no_holder_on_active_formal_GPU",
+    "scheduling_directives": [
+      {
+        "path": "persistent_queue/QUEUE8_NEXT_WAVE_V1.json",
+        "sha256": "3f1c12d9acc944ad976ca860f91743c31bc3989d3832bd872cbd97f2fd1da3e4"
+      }
+    ],
+    "completion_event_policy": {
+      "path": "persistent_queue/LONG_TASK_EVENT_WAKEUP_V1.json",
+      "sha256": "6cd1233b0e345bbea2a8320f6126897364c89c6964e92975be4d80c1291766f6"
+    },
+    "conversation_wait_policy": "after_stable_handoff_end_turn; original_executor_woken_by_persisted_terminal_event; no_LLM_polling"
+  },
+  "authorization": {
+    "schema": "corrector_long_task_event_wakeup_authorization_v1",
+    "release_id": "LONG_TASK_EVENT_WAKEUP_V1",
+    "status": "authorized",
+    "issued_at_utc": "2026-09-21T14:14:59.452622+00:00",
+    "authority": "explicit_user_request_20260921_stable_tasks_end_conversation_wait_then_event_wake_original_executor",
+    "contract": {
+      "path": "persistent_queue/LONG_TASK_EVENT_WAKEUP_V1.md",
+      "sha256": "3c042de26c0f5d80168c4ac53e07046724619bf5d9b2ff1605749aabf1be7b27"
+    },
+    "base_scientific_authorization": {
+      "path": "persistent_queue/AUTHORIZATION_V2.json",
+      "sha256": "d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928"
+    },
+    "nodes": {
+      "A": {
+        "hostname": "trial-303224955-trialrun-303224955-worker-0",
+        "executor_thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+        "task": "A_LONG_TASK_WAKEUP_V1"
+      },
+      "B": {
+        "hostname": "trial-303225685-trialrun-303225685-worker-0",
+        "executor_thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+        "task": "B_LONG_TASK_WAKEUP_V1"
+      }
+    },
+    "task_briefs": {
+      "A": {
+        "path": "tasks/A_LONG_TASK_WAKEUP_V1.md",
+        "sha256": "bb7ab0ea3e5f8d1e0146aa678012c1d62ee6ff19eb857735a74a675c3885933e"
+      },
+      "B": {
+        "path": "tasks/B_LONG_TASK_WAKEUP_V1.md",
+        "sha256": "a25f41f68ed92441e29bc70d57148f6d5ea6b2ce9275190f3b3aed7729437ef2"
+      }
+    },
+    "implementation_install_and_activation_authorized": true,
+    "live_synthetic_callback_events_per_node_max": 2,
+    "live_synthetic_callback_scope": "original_thread_small_ACK_only_no_experiments",
+    "notification_for_existing_and_future_authorized_jobs": true,
+    "default_notification_scope": "batch_or_wave_terminal; urgent_fault_or_new_dependency_ready_event_coalesced",
+    "default_transport_attempts_per_event_max": 3,
+    "notification_transport_retries_never_authorize_compute_retry": true,
+    "fixed_original_thread_required": true,
+    "same_thread_single_writer_required": true,
+    "handler_ACK_required_to_claim_woken": true,
+    "long_running_LLM_polling_disallowed_after_stable_handoff": true,
+    "background_lifecycle_timeout_and_occupancy_supervision_retained": true,
+    "formal_experimental_compute_increment": 0,
+    "new_scientific_source_or_budget_or_retry_permission": false,
+    "first_QUEUE8_independent_release_gate_unchanged": true,
+    "B_blocks_A": false,
+    "deletion_authorized": false,
+    "actual_wakeup_deployed_or_tested_claimed": false,
+    "technical_basis": {
+      "local_help_checked": [
+        "codex queue --help",
+        "codex exec resume --help"
+      ],
+      "official_resume_documentation": "https://learn.chatgpt.com/docs/non-interactive-mode#resume-a-non-interactive-session",
+      "queue_receipt_is_not_offline_wakeup_proof": true
+    }
+  }
+}

@@ -1,0 +1,806 @@
+{
+  "observed_at_utc": "2026-09-19T15:02:26Z",
+  "torch_version": "2.7.1+cu126",
+  "cuda_initialized": false,
+  "manifest_checks": [
+    {
+      "manifest": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/legacy-pi05-mt50.files.json",
+        "exists": true,
+        "symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/legacy-pi05-mt50.files.json",
+        "bytes": 1505,
+        "readable": true,
+        "sha256": "8a6b66be01901284f8a3280b4ce847b248329866c25b761ff253680770eb5383"
+      },
+      "declared_files": 7,
+      "size_checked": 7,
+      "small_sha_checked": 6,
+      "large_sha_not_rechecked": 1,
+      "missing": [],
+      "mismatches": [],
+      "bytes": 9354084596
+    },
+    {
+      "manifest": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/metaworld-raw-and-local-stats.files.json",
+        "exists": true,
+        "symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/metaworld-raw-and-local-stats.files.json",
+        "bytes": 84959,
+        "readable": true,
+        "sha256": "7a1736a084cdeba4cabf22022649e75e15638538042f9e2fb22c997794087c8a"
+      },
+      "declared_files": 497,
+      "size_checked": 497,
+      "small_sha_checked": 4,
+      "large_sha_not_rechecked": 493,
+      "missing": [],
+      "mismatches": [],
+      "bytes": 45864144489
+    },
+    {
+      "manifest": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/libero-evaluation-assets.files.json",
+        "exists": true,
+        "symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/libero-evaluation-assets.files.json",
+        "bytes": 202393,
+        "readable": true,
+        "sha256": "4ca6aae51018fc5a3a671ef802d65d4e625d77a9a42ab7287e6ac78ecc1c407f"
+      },
+      "declared_files": 970,
+      "size_checked": 970,
+      "small_sha_checked": 909,
+      "large_sha_not_rechecked": 61,
+      "missing": [],
+      "mismatches": [],
+      "bytes": 435239420
+    },
+    {
+      "manifest": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/xvla-initialization.files.json",
+        "exists": true,
+        "symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/xvla-initialization.files.json",
+        "bytes": 1335,
+        "readable": true,
+        "sha256": "b963551e8d9db5dfa6971ab50a958bf99e4df50e68bbb2e70a611acf72bb762b"
+      },
+      "declared_files": 6,
+      "size_checked": 6,
+      "small_sha_checked": 5,
+      "large_sha_not_rechecked": 1,
+      "missing": [],
+      "mismatches": [],
+      "bytes": 3519105784
+    },
+    {
+      "manifest": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/smolvla-initialization.files.json",
+        "exists": true,
+        "symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/smolvla-initialization.files.json",
+        "bytes": 1341,
+        "readable": true,
+        "sha256": "61ab00c01a0d6f278a5a233953e01b3c27c4eab3b82f2bdf94a42b7bc5296361"
+      },
+      "declared_files": 6,
+      "size_checked": 6,
+      "small_sha_checked": 5,
+      "large_sha_not_rechecked": 1,
+      "missing": [],
+      "mismatches": [],
+      "bytes": 1800286439
+    },
+    {
+      "manifest": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/storage-cleanup/20260914-act-vla/libero-retention/immediate/retained-inference-files.json",
+        "exists": true,
+        "symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/storage-cleanup/20260914-act-vla/libero-retention/immediate/retained-inference-files.json",
+        "bytes": 5817,
+        "readable": true,
+        "sha256": "96f363c4abfc3ac806e03e0034592703d8e61031d6d5f690f53104aa441405cb"
+      },
+      "declared_files": 18,
+      "size_checked": 18,
+      "small_sha_checked": 11,
+      "large_sha_not_rechecked": 7,
+      "missing": [],
+      "mismatches": [],
+      "bytes": 12439132442
+    }
+  ],
+  "safetensors_headers": [
+    {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/vla-sft-030000/model.safetensors",
+        "exists": true,
+        "symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model/model.safetensors",
+        "bytes": 9354050752,
+        "readable": true,
+        "sha256": null,
+        "hash_note": "Large payload not rehashed during inventory; size/readability only."
+      },
+      "header_sha256": "99c4725c68efaecec30e3cd7d5a9cce73ff3a7be3095fa666c7b2caa0442975e",
+      "tensor_count": 813,
+      "elements": 4143404816,
+      "dtype_counts": {
+        "F32": 558,
+        "BF16": 255
+      },
+      "file_extent_matches": true
+    },
+    {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/initializations/xvla-mt50-s42/model.safetensors",
+        "exists": true,
+        "symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/initializations/xvla-mt50-s42/model.safetensors",
+        "bytes": 3519073692,
+        "readable": true,
+        "sha256": null,
+        "hash_note": "Large payload not rehashed during inventory; size/readability only."
+      },
+      "header_sha256": "d7087b70acfa96800c1693ba48f54c8d419a389f11d0582af154f50711fdfc52",
+      "tensor_count": 903,
+      "elements": 879738545,
+      "dtype_counts": {
+        "F32": 903
+      },
+      "file_extent_matches": true
+    },
+    {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model/model.safetensors",
+        "exists": true,
+        "symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model/model.safetensors",
+        "bytes": 1197789224,
+        "readable": true,
+        "sha256": null,
+        "hash_note": "Large payload not rehashed during inventory; size/readability only."
+      },
+      "header_sha256": "699f23194e176b27956a5d4d3336ab26eac008ed4b2953733c6b428c90cf9b85",
+      "tensor_count": 500,
+      "elements": 450046176,
+      "dtype_counts": {
+        "F32": 225,
+        "BF16": 275
+      },
+      "file_extent_matches": true
+    }
+  ],
+  "corrector_cpu_weight_check": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/vla-corrector-h1-k10/best_cosine_model.pt",
+    "sha256": "0efadcfdfde814fc4e929d007ed0b95894de33f0d51e3d3cae512605e223d168",
+    "tensor_count": 32,
+    "elements": 42509568,
+    "all_finite": true,
+    "device_types": [
+      "cpu"
+    ],
+    "config": {
+      "dataset_path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/latents_pi05_mt50",
+      "checkpoint_dir": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/corrector_pi05_mt50/h1_k10",
+      "device": "cuda",
+      "model": {
+        "token_dim": 2048,
+        "action_dim": 4,
+        "action_embed_dim": 256,
+        "dropout": 0.0,
+        "rope_theta": 10000.0,
+        "ada_rmsnorm_eps": 1e-06,
+        "scale": "20m",
+        "custom_widths": [
+          2048,
+          2048,
+          2048,
+          2048
+        ]
+      },
+      "model_type": "mlp",
+      "h_window": 1,
+      "batch_size": 512,
+      "epochs": 30,
+      "lr": 0.0003,
+      "weight_decay": 0.0001,
+      "val_ratio": 0.1,
+      "num_workers": 8,
+      "seed": 42,
+      "grad_clip_norm": 1.0,
+      "patience": 5,
+      "train_loss_type": "cosine",
+      "cosine_loss_weight": 1.0,
+      "log_shapes_every_epoch": true,
+      "k_step": 10,
+      "max_samples": 0,
+      "wandb_project": "siglip-dynamics",
+      "wandb_entity": "",
+      "wandb_group": "",
+      "wandb_run_name": ""
+    },
+    "inference_performed": false
+  },
+  "dataset_schemas": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50",
+      "info_file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+        "exists": true,
+        "symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50/meta/info.json",
+        "bytes": 2942,
+        "readable": true,
+        "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5"
+      },
+      "totals": {
+        "total_episodes": 2500,
+        "total_frames": 204806,
+        "total_tasks": 49
+      },
+      "features": {
+        "observation.state": {
+          "dtype": "float32",
+          "shape": [
+            4
+          ],
+          "names": {
+            "axes": null
+          },
+          "fps": 80
+        },
+        "action": {
+          "dtype": "float32",
+          "shape": [
+            4
+          ],
+          "names": {
+            "axes": [
+              "x",
+              "y",
+              "z",
+              "gripper"
+            ]
+          },
+          "fps": 80
+        },
+        "next.reward": {
+          "dtype": "float32",
+          "shape": [
+            1
+          ],
+          "names": null,
+          "fps": 80
+        },
+        "next.success": {
+          "dtype": "bool",
+          "shape": [
+            1
+          ],
+          "names": null,
+          "fps": 80
+        },
+        "observation.environment_state": {
+          "dtype": "float32",
+          "shape": [
+            39
+          ],
+          "names": [
+            "keypoints"
+          ],
+          "fps": 80
+        },
+        "observation.image": {
+          "dtype": "image",
+          "shape": [
+            3,
+            480,
+            480
+          ],
+          "names": [
+            "channels",
+            "height",
+            "width"
+          ],
+          "fps": 80
+        },
+        "task_id": {
+          "dtype": "int16",
+          "shape": [
+            1
+          ],
+          "names": null,
+          "fps": 80
+        },
+        "timestamp": {
+          "dtype": "float32",
+          "shape": [
+            1
+          ],
+          "names": null,
+          "fps": 80
+        },
+        "frame_index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ],
+          "names": null,
+          "fps": 80
+        },
+        "episode_index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ],
+          "names": null,
+          "fps": 80
+        },
+        "index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ],
+          "names": null,
+          "fps": 80
+        },
+        "task_index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ],
+          "names": null,
+          "fps": 80
+        }
+      },
+      "parquet_count": 492,
+      "sample_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/data/chunk-000/file-000.parquet",
+      "sample_schema": "observation.state: list<element: float>\n  child 0, element: float\naction: list<element: float>\n  child 0, element: float\nnext.reward: float\nnext.success: bool\nobservation.environment_state: list<element: float>\n  child 0, element: float\nobservation.image: struct<bytes: binary, path: string>\n  child 0, bytes: binary\n  child 1, path: string\ntask_id: int16\ntimestamp: float\nframe_index: int64\nepisode_index: int64\nindex: int64\ntask_index: int64\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"observation.state\": {\"feature\": {\"d' + 709\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 1568",
+      "sample_rows": 437
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/libero/physical-intelligence-v2/a4336d589d589045d1c56423ffdf3b88a0e19b1f",
+      "info_file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/libero/physical-intelligence-v2/a4336d589d589045d1c56423ffdf3b88a0e19b1f/meta/info.json",
+        "exists": true,
+        "symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/libero/physical-intelligence-v2/a4336d589d589045d1c56423ffdf3b88a0e19b1f/meta/info.json",
+        "bytes": 2131,
+        "readable": true,
+        "sha256": "77c0da93c67960bac803a8ea25dabf380d752c26c1d91c54151121dd10e7d82f"
+      },
+      "totals": {
+        "total_episodes": 1693,
+        "total_frames": 273465,
+        "total_tasks": 40,
+        "total_videos": 0,
+        "total_chunks": 2
+      },
+      "features": {
+        "image": {
+          "dtype": "image",
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "names": [
+            "height",
+            "width",
+            "channel"
+          ]
+        },
+        "wrist_image": {
+          "dtype": "image",
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "names": [
+            "height",
+            "width",
+            "channel"
+          ]
+        },
+        "state": {
+          "dtype": "float32",
+          "shape": [
+            8
+          ],
+          "names": [
+            "state"
+          ]
+        },
+        "actions": {
+          "dtype": "float32",
+          "shape": [
+            7
+          ],
+          "names": [
+            "actions"
+          ]
+        },
+        "timestamp": {
+          "dtype": "float32",
+          "shape": [
+            1
+          ],
+          "names": null
+        },
+        "frame_index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ],
+          "names": null
+        },
+        "episode_index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ],
+          "names": null
+        },
+        "index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ],
+          "names": null
+        },
+        "task_index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ],
+          "names": null
+        }
+      },
+      "parquet_count": 1693,
+      "sample_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/libero/physical-intelligence-v2/a4336d589d589045d1c56423ffdf3b88a0e19b1f/data/chunk-000/episode_000000.parquet",
+      "sample_schema": "image: struct<bytes: binary, path: string>\n  child 0, bytes: binary\n  child 1, path: string\nwrist_image: struct<bytes: binary, path: string>\n  child 0, bytes: binary\n  child 1, path: string\nstate: fixed_size_list<element: float>[8]\n  child 0, element: float\nactions: fixed_size_list<element: float>[7]\n  child 0, element: float\ntimestamp: float\nframe_index: int64\nepisode_index: int64\nindex: int64\ntask_index: int64\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"image\": {\"_type\": \"Image\"}, \"wrist_' + 483",
+      "sample_rows": 214
+    }
+  ],
+  "train600_bank": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/input_bundles/final_train600_input_v1/train",
+    "fields": {
+      "control_outcomes.npy": {
+        "shape": [
+          600,
+          4
+        ],
+        "dtype": "bool"
+      },
+      "control_valid.npy": {
+        "shape": [
+          600,
+          4
+        ],
+        "dtype": "bool"
+      },
+      "candidate_weights.npy": {
+        "shape": [
+          600,
+          13
+        ],
+        "dtype": "float32"
+      },
+      "actions.npy": {
+        "shape": [
+          600,
+          13,
+          10,
+          4
+        ],
+        "dtype": "float32"
+      },
+      "episode_id.npy": {
+        "shape": [
+          600
+        ],
+        "dtype": "<U30"
+      },
+      "alias_indices.npy": {
+        "shape": [
+          600,
+          13
+        ],
+        "dtype": "int64"
+      },
+      "task.npy": {
+        "shape": [
+          600
+        ],
+        "dtype": "<U18"
+      },
+      "history.npy": {
+        "shape": [
+          600,
+          5,
+          4096
+        ],
+        "dtype": "float32"
+      },
+      "history_mask.npy": {
+        "shape": [
+          600,
+          5
+        ],
+        "dtype": "bool"
+      },
+      "round.npy": {
+        "shape": [
+          600
+        ],
+        "dtype": "int64"
+      },
+      "pair_weights.npy": {
+        "shape": [
+          600,
+          5
+        ],
+        "dtype": "float32"
+      },
+      "split.npy": {
+        "shape": [
+          600
+        ],
+        "dtype": "<U5"
+      },
+      "group_ids.npy": {
+        "shape": [
+          600,
+          13
+        ],
+        "dtype": "int64"
+      },
+      "physical_attempt_ids.npy": {
+        "shape": [
+          600,
+          13,
+          4
+        ],
+        "dtype": "int64"
+      },
+      "proprio_mask.npy": {
+        "shape": [
+          600,
+          5
+        ],
+        "dtype": "bool"
+      },
+      "language.npy": {
+        "shape": [
+          600,
+          2048
+        ],
+        "dtype": "float32"
+      },
+      "remaining.npy": {
+        "shape": [
+          600
+        ],
+        "dtype": "float32"
+      },
+      "proprio.npy": {
+        "shape": [
+          600,
+          5,
+          4
+        ],
+        "dtype": "float32"
+      },
+      "outcomes.npy": {
+        "shape": [
+          600,
+          13,
+          4
+        ],
+        "dtype": "bool"
+      },
+      "planned_slot_id.npy": {
+        "shape": [
+          600
+        ],
+        "dtype": "<U30"
+      },
+      "gain_weights.npy": {
+        "shape": [
+          600,
+          13
+        ],
+        "dtype": "float32"
+      },
+      "pair_indices.npy": {
+        "shape": [
+          600,
+          5,
+          2
+        ],
+        "dtype": "int64"
+      },
+      "past_actions.npy": {
+        "shape": [
+          600,
+          4,
+          4
+        ],
+        "dtype": "float32"
+      },
+      "raw_actions.npy": {
+        "shape": [
+          600,
+          13,
+          10,
+          4
+        ],
+        "dtype": "float32"
+      },
+      "cut_step.npy": {
+        "shape": [
+          600
+        ],
+        "dtype": "int64"
+      },
+      "raw_deltas.npy": {
+        "shape": [
+          600,
+          13,
+          10,
+          4
+        ],
+        "dtype": "float32"
+      }
+    },
+    "source_count": 600,
+    "task_counts": {
+      "disassemble-v3": 120,
+      "pick-place-wall-v3": 120,
+      "shelf-place-v3": 120,
+      "stick-pull-v3": 120,
+      "stick-push-v3": 120
+    },
+    "row_example": {
+      "episode_id": "disassemble-v3__2026111000",
+      "case_id": "disassemble-v3__2026111000",
+      "task": "disassemble-v3",
+      "env_seed": 2026111000,
+      "split": "train",
+      "round": 1,
+      "source_horizon": 10,
+      "cut_rule": {
+        "kind": "first_alarm"
+      },
+      "planned_slot_id": "disassemble-v3__2026111000"
+    },
+    "limitation": "Array/schema audit only; no full historical trajectory reconstruction."
+  },
+  "code": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/src/siglip_dynamics/inference/safety_module.py",
+      "exists": true,
+      "symlink": false,
+      "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/src/siglip_dynamics/inference/safety_module.py",
+      "bytes": 3090,
+      "readable": true,
+      "sha256": "cea5879debe62429132e5ee6a5b5725f38bcb1fa9c9229993b679fe9994c6a4b",
+      "ast_parse": "pass"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/src/siglip_dynamics/inference/circuit_breaker.py",
+      "exists": true,
+      "symlink": false,
+      "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/src/siglip_dynamics/inference/circuit_breaker.py",
+      "bytes": 2119,
+      "readable": true,
+      "sha256": "0a88c882fe8f9f6977cbe1957d6d988b1f2b91927a53086d864e2bbf7423b0fe",
+      "ast_parse": "pass"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/src/lerobot/safety/siglip_dynamics_mlp.py",
+      "exists": true,
+      "symlink": false,
+      "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/src/lerobot/safety/siglip_dynamics_mlp.py",
+      "bytes": 21472,
+      "readable": true,
+      "sha256": "1bce7e98a0c948d033dd654d9032074d2fdf59db926234a13e67d5cfcaed1618",
+      "ast_parse": "pass"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/src/corrector/guidance.py",
+      "exists": true,
+      "symlink": false,
+      "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/src/corrector/guidance.py",
+      "bytes": 17137,
+      "readable": true,
+      "sha256": "788bd844c14df521f931bd1e3f962fdc61e36f2d9f9519505e242660f8d41c9b",
+      "ast_parse": "pass"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/eval_metaworld.py",
+      "exists": true,
+      "symlink": false,
+      "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/eval_metaworld.py",
+      "bytes": 8179,
+      "readable": true,
+      "sha256": "80af61614c7bcd0c9f8bb82828f8a9a3ec025827f7b1c3e420293b7a40e5ed33",
+      "ast_parse": "pass"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/serve_pi05.py",
+      "exists": true,
+      "symlink": false,
+      "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/serve_pi05.py",
+      "bytes": 1698,
+      "readable": true,
+      "sha256": "d0faa47e3887a27d6ccb3ed70263f6f5ab9780bb0fcd6424a20150b57aff7e1b",
+      "ast_parse": "pass"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/eval_libero.py",
+      "exists": true,
+      "symlink": false,
+      "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/eval_libero.py",
+      "bytes": 6434,
+      "readable": true,
+      "sha256": "755b4cdb06b66db1b6e24898fb49db736b8a4d9d1f752f2c775578c31602a210",
+      "ast_parse": "pass"
+    }
+  ],
+  "git_heads": {
+    "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector": {
+      "command": [
+        "git",
+        "-C",
+        "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "9d23a0ba6fad562d3ed1a68fc52c8a12459abb41\n",
+      "stderr": ""
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/lerobot-smolvla-8fff0fd": {
+      "command": [
+        "git",
+        "-C",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/lerobot-smolvla-8fff0fd",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "8fff0fde7c79f23a93d845d1a50e985de01f8b8a\n",
+      "stderr": ""
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/lerobot-xvla-8fff0fd": {
+      "command": [
+        "git",
+        "-C",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/lerobot-xvla-8fff0fd",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "8fff0fde7c79f23a93d845d1a50e985de01f8b8a\n",
+      "stderr": ""
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/openpi-215abfb": {
+      "command": [
+        "git",
+        "-C",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/openpi-215abfb",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "215abfb217dbac7d5f1273282331b9b1866c0479\n",
+      "stderr": ""
+    }
+  },
+  "cuda_initialized_after": false
+}

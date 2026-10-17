@@ -1,0 +1,23 @@
+{
+  "inspected_at_utc": "2026-09-19T18:45:23.753559+00:00",
+  "method": "Executor viewed RGB_VIEW.png at original64x64, a pixel-identical lossless copy of the saved PPM; CPU integrity check also matched saved NPY payload",
+  "source_scene": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/scene.xml",
+  "source_scene_sha256": "f82da007b1c54685280718d8f2787c59ea3c82a1f97e8e124f910ee18de2c3ae",
+  "image": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1/RGB_VIEW.png",
+  "image_sha256": "a7f903ce48654667a643fe6a5c0afee8214736ed3e6fa98ab28b507320ed2633",
+  "observed": [
+    "One red-orange sphere with visible light/dark shading near the center",
+    "Blue-grey plane with perspective edges below the sphere",
+    "Black background outside the plane"
+  ],
+  "expected_from_frozen_XML": [
+    "One sphere radius0.3 at(0,0,0.3), rgba(0.8,0.2,0.1,1)",
+    "One plane size(2,2,0.1), rgba(0.3,0.4,0.5,1)",
+    "Fixed oblique camera and overhead light"
+  ],
+  "scene_consistency": "visually_consistent",
+  "not_just_nonempty_or_nonconstant": true,
+  "runtime_frame_count": 1,
+  "additional_render_or_readback": 0,
+  "scope": "Executor qualitative scene inspection plus pixel-identity evidence; analysis acceptance remains pending. This is no MetaWorld/VLA/task-success validation."
+}

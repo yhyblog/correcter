@@ -1,0 +1,77 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1",
+  "task_revision": 1,
+  "accepted_at_utc": "2026-09-20T11:39:29.607200+00:00",
+  "status": "CPU_repair_accepted_for_same_planned_first_parent",
+  "receipt": {
+    "path": "receipts/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1_RESULT.json",
+    "sha256": "58544db99b903ec6407759eec3ff8a5b1369922fe3741a72d0facaf2f455143f"
+  },
+  "report": {
+    "path": "results/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1/REPORT.md",
+    "sha256": "e01d0ef20260c95e9d13775d7d2954ebd0e38317587b0db374d12e592d3c091c"
+  },
+  "evidence_manifest": {
+    "path": "results/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1/EVIDENCE_MANIFEST.json",
+    "sha256": "934bc7aae3f505468e08756e35d17b2158b5ea42baeaae5756b944251b45602e"
+  },
+  "proposal": {
+    "path": "results/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1/proposal/PROPOSAL.json",
+    "sha256": "fd8df97f301d9d2d8c436ca79d571dc6fcbce97bb42ed3dbf0476d44b2e1e671"
+  },
+  "supplement": {
+    "path": "results/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1/supplement_v2/READY.json",
+    "sha256": "c73874783581af0b0de9becc3b8b47c398f34231cc16545db808cab40b040b87"
+  },
+  "root_identity_verification": {
+    "status": "PASS",
+    "artifact_refs": 25,
+    "manifest_files": 1494,
+    "unique_checked": 1495,
+    "errors": [],
+    "immutable_resource_source_storage_timeouts": {
+      "resource_caps": true,
+      "source": true,
+      "storage": true,
+      "timeouts": true
+    },
+    "real_counts": 130,
+    "real_operations_zero": true,
+    "future_paths_absent": true,
+    "receipt_sha_verified": true,
+    "unique_including_receipt": 1496
+  },
+  "reported_checks": {
+    "final_JSON_shell_entry_checks": 2,
+    "narrow_numerical_AST_checks": 3,
+    "old104_suite_run": false,
+    "old133_suite_run": false,
+    "old_actual_failure_reproduced": true,
+    "status": "PASS",
+    "targeted_assertions": 80
+  },
+  "independent_reviews": {
+    "interface_v1_semantics_review": "actual loader/publisher same-parent BANK whitelist and local obs boundary accepted; no deterministic remaining blocker in reviewed path",
+    "pv_v3_numeric_acceptance_review": "actual replaced-plan/returned-commit intervened evidence accepted; normal/precut/G0_old false; numeric/source/caps unchanged",
+    "b_pending_receipts_review": "release/CONTROL/BOARD templates and 116 caps/source/storage/timeouts consistent; future paths absent"
+  },
+  "previous_findings_resolved": [
+    "SHARED_BANK_REF",
+    "PRECUT_INTERVENED"
+  ],
+  "B_consumer_status": "supplement_v2 published for existing CPU task; no B ACK/RESULT yet",
+  "resource_decision_inherited": {
+    "path": "manifests/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1_REVIEW.json",
+    "sha256": "ede9a4857ed27149048e158ca520cef2ac5e5d837052ab8cf99515dee105aa3e"
+  },
+  "scope": "CPU integration accepted; separate V3 release permits exactly the first planned shelf parent, not batch collection or training",
+  "remaining_runtime_gates": [
+    "actual MJB/full-state qualification in planned parent",
+    "fresh bounded storage check before NVML/holders",
+    "fixed host/driver/UUID and full input checks"
+  ],
+  "no_method_performance_claim": true,
+  "old_compute_releases_reusable": false,
+  "next_task": "A11_COMMON_POOL_FIRST_PARENT_V3"
+}

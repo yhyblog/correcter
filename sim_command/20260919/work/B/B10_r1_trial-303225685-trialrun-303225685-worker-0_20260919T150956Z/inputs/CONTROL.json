@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "campaign_id": "corrector-sim-20260919",
+  "revision": 4,
+  "updated_at_utc": "2026-09-19T15:09:19.073900+00:00",
+  "mode": "prepare",
+  "stop_requested": false,
+  "allowed_task_ids": [
+    "A00",
+    "B00",
+    "A10",
+    "B10"
+  ],
+  "formal_gpu_runs_enabled": false,
+  "preparation_scope": [
+    "read_only_inventory",
+    "cpu_static_checks",
+    "node_receipts",
+    "existing_gpu_guard_policy",
+    "isolated_code_and_config_edits",
+    "cpu_static_synthetic_checks"
+  ],
+  "current_compute_limits": {
+    "training_updates": 0,
+    "model_gpu_inference_calls": 0,
+    "simulator_attempts": 0
+  },
+  "scope": {
+    "external_method_comparison": "pi05_metaworld_simulation_only",
+    "metaworld_main_tasks": 50,
+    "mechanism_tasks": 5,
+    "keep_smolvla_xvla_metaworld": true,
+    "keep_pi05_libero": true,
+    "real_world_owner": "user",
+    "real_world_external_baselines": false
+  },
+  "roles": {
+    "A": {
+      "hostname": "trial-303224955-trialrun-303224955-worker-0",
+      "executor_session_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13"
+    },
+    "B": {
+      "hostname": "trial-303225685-trialrun-303225685-worker-0",
+      "executor_session_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2"
+    },
+    "analysis": {
+      "session_id": "01a0b91f-355f-7cd1-ae36-412500534ffb"
+    }
+  },
+  "historical_runs": "completed_read_only_no_restart",
+  "note": "A00/B00是本次已分配准备任务；后续正式计算由分析端据回执冻结本轮新协议及限额后发布，不复用旧READY。",
+  "active_preparation_release": "releases/P00_PREP_V1.json",
+  "storage_policy": "contracts/STORAGE_RETENTION_V1.md",
+  "storage_cleanup": {
+    "inventory_by": [
+      "A",
+      "B"
+    ],
+    "decisions_by": "analysis",
+    "shared_historical_deletion_by": "A",
+    "deletion_requires_exact_path_analysis_manifest": true,
+    "active_deletion_release": null,
+    "non_vla_projects_excluded": true
+  }
+}

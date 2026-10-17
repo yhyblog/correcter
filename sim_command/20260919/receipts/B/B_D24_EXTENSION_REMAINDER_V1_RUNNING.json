@@ -1,0 +1,296 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "B_D24_EXTENSION_REMAINDER_V1",
+  "revision": 1,
+  "role": "B",
+  "hostname": "trial-303225685-trialrun-303225685-worker-0",
+  "session_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+  "status": "complete",
+  "at_utc": "2026-09-22T08:12:39.065799+00:00",
+  "execution_stage": "complete_current_B_assignment",
+  "authorization": "deadline_20260924/CONTINUATION_AUTHORIZATION_20260922_V1.json",
+  "current_run": null,
+  "E1": {
+    "status": "complete1200valid",
+    "final_table": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_E1_RENDER_REPAIR_r3/E1_COMPLETE_SUMMARY.json",
+    "cost_and_paired_supplement": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/E1_final/E1_COST_AND_PAIR_SUMMARY.json",
+    "cells": 24,
+    "paired_comparisons": 30,
+    "reruns": 0
+  },
+  "E6": {
+    "owner": "A",
+    "B_started": false,
+    "asset_handoff": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E6_V1_r1/OWNERSHIP_HANDOFF.json"
+  },
+  "N": {
+    "reused_only": true,
+    "Smol_valid": 496,
+    "Smol_unknown": 4,
+    "X_valid": 500,
+    "LIBERO_valid": 394,
+    "LIBERO_technical": 5,
+    "LIBERO_unknown": 1
+  },
+  "resource_counts": {
+    "cumulative_B_physical_attempts": 5687,
+    "B_attempt_cap": 16000,
+    "continuation_physical_attempts": 1960,
+    "continuation_attempt_cap": 6000,
+    "continuation_breakdown": {
+      "MW_Post_test": 1000,
+      "LIBERO_development": 160,
+      "LIBERO_Post_test": 400,
+      "LIBERO_Velocity_test": 400
+    },
+    "continuation_small_network_updates": 16000,
+    "continuation_update_cap": 100000,
+    "cumulative_recorded_update_budget_counter": 238000,
+    "cumulative_update_cap": 500000,
+    "update_counter_breakdown": {
+      "E1_small_heads": 192000,
+      "LIBERO_small_heads": 16000,
+      "X_VLA_prior_base_SFT": 30000
+    },
+    "update_counter_note": "Legacy budget counter conservatively includes prior X-VLA SFT; actual small-head updates sum to208000. No additional base SFT in this continuation.",
+    "new_scientific_operations_this_audit": 0,
+    "completed_science_replayed": 0
+  },
+  "occupancy": {
+    "state": "all8holders_restored",
+    "runtime_snapshot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/events/B_ff0f2cb2920bcbc3def455857cd04a52_RUNTIME.json",
+    "policy": "all holders off whole formal group; restored after full drain"
+  },
+  "pending": [],
+  "stable_handoff": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/D24_E8_LIBERO_VELOCITY_r1/STABLE_HANDOFF.json",
+  "A_waits_for_B": false,
+  "whole_task_complete": true,
+  "observed_completed_Post_episodes": 1400,
+  "observed_technical_failures": 0,
+  "observed_actual_post_interventions": 1078,
+  "latest_dependency_event_audit": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/events/B_12d1228a11936292fb938086adeb9d5a_AUDIT.json",
+  "latest_event_audit": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/events/B_ff0f2cb2920bcbc3def455857cd04a52_AUDIT.json",
+  "MW_Post_summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/D24_E8_MW_POST_r1/N_POST_SUMMARY.json",
+  "MW_paired_uncertainty": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/D24_E8_MW_POST_r1/PAIRED_UNCERTAINTY.json",
+  "current_batch": null,
+  "current_claim": null,
+  "completion_trigger": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_E8_LIBERO_VELOCITY_r1__D24_E8_LIBERO_VELOCITY_r1__1.json",
+  "scientific_progress_verified": true,
+  "planned_development_rollouts": 160,
+  "planned_Post_test_rollouts": 400,
+  "planned_development_parents": 32,
+  "planned_small_head_updates": 16000,
+  "base_model_SFT_updates": 0,
+  "method": "Velocity-operator-transfer-native-LIBERO; no D/G0; not Full",
+  "source_split": "24 train and8 descriptive-validation new parents; fixed400 test sources",
+  "whole_wave_holder_policy": "all8 holders off for loading, development, CPU-fit barrier and test; restore only after whole wave drain",
+  "current_method_document": null,
+  "actual_GPU_workers": 0,
+  "actual_completed_development": 160,
+  "technical_failures": 0,
+  "next_action": "Maintain all8 occupancy and existing original-thread dependency observer; admit only a later B assignment after CONTROL/claim/live-queue checks.",
+  "current_scope": "LIBERO_Post_and_ready_LIBERO_Velocity",
+  "Smol_X_Velocity_owner": "C",
+  "new_Smol_X_Velocity_admissions_allowed": false,
+  "actual_completed_LIBERO_Post": 400,
+  "observed_actual_post_interventions_scope": "all three completed Post settings",
+  "scientific_priority": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/OURS_FIRST_PRIORITY_V1.json",
+    "sha256": "f45e4048ff1da43328e5ac9576fbc4be9716e8778393e4ead3b731060e220ce8"
+  },
+  "new_external_reproduction_admissions_allowed": false,
+  "native_head_fit": {
+    "result_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/D24_E8_LIBERO_POST_r1/FIT_RESULT.json",
+    "model_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/D24_E8_LIBERO_POST_r1/native_head.npz",
+    "model_sha256": "cf2f210de335324e74da7dad9e1c5acb9d9dbe11c9c530f8ac048d36c0bce62c",
+    "train_rows": 120,
+    "train_parents": 24,
+    "train_successes": 115,
+    "validation_rows": 40,
+    "validation_parents": 8,
+    "validation_successes": 40,
+    "optimizer_updates": 16000,
+    "base_model_updates": 0,
+    "selection": "all fixed final-step members; validation is descriptive only; no test input",
+    "limitation": "Only5 negative training candidates; all40 validation candidates succeeded, so validation accuracy does not measure failure discrimination. No outcome-driven change or superiority claim."
+  },
+  "LIBERO_Post_summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/D24_E8_LIBERO_POST_r1/N_POST_SUMMARY.json",
+  "LIBERO_Post_paired_summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/D24_E8_LIBERO_POST_r1/PAIRED_UNCERTAINTY.json",
+  "actual_completed_LIBERO_Velocity": 400,
+  "last_completed_run": "D24_E8_LIBERO_VELOCITY_r1",
+  "last_completed_claim": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/D24_E8_LIBERO_VELOCITY_r1/CLAIM.json",
+  "active_queues": [],
+  "completed_settings": [
+    {
+      "setting": "smolvla_MW",
+      "method": "Full-Post-transfer",
+      "variant": "Post",
+      "valid": 500,
+      "successes": 240,
+      "technical_failures": 0,
+      "execution_unknown": 0,
+      "N_valid": 496,
+      "N_successes": 234,
+      "paired_valid": 496,
+      "paired_candidate_successes": 239,
+      "paired_N_successes": 234,
+      "paired_difference_pp": 1.0080645161290323,
+      "normal95_CI_pp": [
+        -2.080083101621005,
+        4.096212133879069
+      ],
+      "exact_McNemar_two_sided_p": 0.6089207154048287,
+      "nonzero_interventions": 420,
+      "summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/D24_E8_MW_POST_r1/N_POST_SUMMARY.json"
+    },
+    {
+      "setting": "xvla_MW",
+      "method": "Full-Post-transfer",
+      "variant": "Post",
+      "valid": 500,
+      "successes": 407,
+      "technical_failures": 0,
+      "execution_unknown": 0,
+      "N_valid": 500,
+      "N_successes": 403,
+      "paired_valid": 500,
+      "paired_candidate_successes": 407,
+      "paired_N_successes": 403,
+      "paired_difference_pp": 0.8,
+      "normal95_CI_pp": [
+        -2.0287124244008825,
+        3.628712424400883
+      ],
+      "exact_McNemar_two_sided_p": 0.6778086391424605,
+      "nonzero_interventions": 411,
+      "summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/D24_E8_MW_POST_r1/N_POST_SUMMARY.json"
+    },
+    {
+      "setting": "official_pi05_LIBERO",
+      "method": "Post-operator-transfer-native-LIBERO; no D/G0; not Full",
+      "variant": "Post",
+      "valid": 400,
+      "successes": 387,
+      "technical_failures": 0,
+      "execution_unknown": 0,
+      "N_valid": 394,
+      "N_successes": 382,
+      "paired_valid": 394,
+      "paired_candidate_successes": 381,
+      "paired_N_successes": 382,
+      "paired_difference_pp": -0.25380710659898476,
+      "normal95_CI_pp": [
+        -1.9056088450755078,
+        1.397994631877538
+      ],
+      "exact_McNemar_two_sided_p": 1.0,
+      "nonzero_interventions": 247,
+      "summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/D24_E8_LIBERO_POST_r1/N_POST_SUMMARY.json"
+    },
+    {
+      "setting": "official_pi05_LIBERO",
+      "method": "Velocity-operator-transfer-native-LIBERO",
+      "variant": "Velocity",
+      "valid": 400,
+      "successes": 387,
+      "technical_failures": 0,
+      "execution_unknown": 0,
+      "N_valid": 394,
+      "N_successes": 382,
+      "paired_valid": 394,
+      "paired_candidate_successes": 381,
+      "paired_N_successes": 382,
+      "paired_difference_pp": -0.25380710659898476,
+      "normal95_CI_pp": [
+        -1.9056088450755078,
+        1.397994631877538
+      ],
+      "exact_McNemar_two_sided_p": 1.0,
+      "nonzero_interventions": 43,
+      "summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/D24_E8_LIBERO_VELOCITY_r1/N_POST_VELOCITY_SUMMARY.json"
+    }
+  ],
+  "current_B_scope_complete": true,
+  "whole_campaign_complete": false,
+  "result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_EXTENSION_REMAINDER_V1_RESULT.json",
+  "summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/E8_B_COMPLETE_SUMMARY.json",
+  "background": {
+    "status": "stable_idle_occupancy",
+    "all8holders": true,
+    "guard_snapshot": {
+      "pid": 35861,
+      "updated": 1790064599.4745786,
+      "gpus": {
+        "0": {
+          "state": "holder",
+          "manager_pid": 768016,
+          "driver_pids": [
+            610144
+          ]
+        },
+        "1": {
+          "state": "holder",
+          "manager_pid": 768017,
+          "driver_pids": [
+            610146
+          ]
+        },
+        "2": {
+          "state": "holder",
+          "manager_pid": 768018,
+          "driver_pids": [
+            610150
+          ]
+        },
+        "3": {
+          "state": "holder",
+          "manager_pid": 768019,
+          "driver_pids": [
+            610149
+          ]
+        },
+        "4": {
+          "state": "holder",
+          "manager_pid": 768020,
+          "driver_pids": [
+            610154
+          ]
+        },
+        "5": {
+          "state": "holder",
+          "manager_pid": 768021,
+          "driver_pids": [
+            610153
+          ]
+        },
+        "6": {
+          "state": "holder",
+          "manager_pid": 768022,
+          "driver_pids": [
+            610156
+          ]
+        },
+        "7": {
+          "state": "holder",
+          "manager_pid": 768023,
+          "driver_pids": [
+            610158
+          ]
+        }
+      }
+    },
+    "observer_alive": true,
+    "observer": {
+      "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+      "hostname": "trial-303225685-trialrun-303225685-worker-0",
+      "pid": 452085,
+      "session_id": 452085,
+      "start_ticks": 91710679
+    },
+    "heartbeat_at_utc": "2026-09-22T08:09:58.539123+00:00",
+    "service_registration": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/SERVICE_REGISTRATION.json",
+    "dependencies": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/DEPENDENCIES.json",
+    "retained_completion_trigger": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_E8_LIBERO_VELOCITY_r1__D24_E8_LIBERO_VELOCITY_r1__1.json",
+    "automatic_headless_resume_status": "original_thread_ACK_verified_offline_pending"
+  }
+}

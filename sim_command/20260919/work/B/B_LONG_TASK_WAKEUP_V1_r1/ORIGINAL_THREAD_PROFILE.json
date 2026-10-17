@@ -1,0 +1,75 @@
+{
+  "id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "max",
+  "cwd": "/mnt/bn/arnold-recommend/yaohaoyang",
+  "sandbox_policy": {
+    "type": "managed",
+    "file_system": {
+      "type": "restricted",
+      "entries": [
+        {
+          "path": {
+            "type": "special",
+            "value": {
+              "kind": "root"
+            }
+          },
+          "access": "read"
+        },
+        {
+          "path": {
+            "type": "path",
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang"
+          },
+          "access": "write"
+        },
+        {
+          "path": {
+            "type": "special",
+            "value": {
+              "kind": "slash_tmp"
+            }
+          },
+          "access": "write"
+        },
+        {
+          "path": {
+            "type": "special",
+            "value": {
+              "kind": "tmpdir"
+            }
+          },
+          "access": "write"
+        },
+        {
+          "path": {
+            "type": "path",
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/.git"
+          },
+          "access": "read",
+          "missing_path_behavior": "skip"
+        },
+        {
+          "path": {
+            "type": "path",
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/.agents"
+          },
+          "access": "read",
+          "missing_path_behavior": "skip"
+        },
+        {
+          "path": {
+            "type": "path",
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/.codex"
+          },
+          "access": "read",
+          "missing_path_behavior": "skip"
+        }
+      ]
+    },
+    "network": "restricted"
+  },
+  "approval_mode": "on-request",
+  "cli_version": "0.155.1"
+}

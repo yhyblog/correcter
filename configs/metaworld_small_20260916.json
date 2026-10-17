@@ -1,0 +1,288 @@
+{
+  "experiment": "corrector_small_five_arm_comparison",
+  "cases": [
+    {
+      "case_id": "disassemble-v3__2026105900",
+      "task": "disassemble-v3",
+      "env_seed": 2026105900,
+      "split": "preflight",
+      "source_horizon": 50,
+      "cut_steps": []
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026105901",
+      "task": "pick-place-wall-v3",
+      "env_seed": 2026105901,
+      "split": "preflight",
+      "source_horizon": 50,
+      "cut_steps": []
+    },
+    {
+      "case_id": "shelf-place-v3__2026105902",
+      "task": "shelf-place-v3",
+      "env_seed": 2026105902,
+      "split": "preflight",
+      "source_horizon": 50,
+      "cut_steps": []
+    },
+    {
+      "case_id": "stick-pull-v3__2026105903",
+      "task": "stick-pull-v3",
+      "env_seed": 2026105903,
+      "split": "preflight",
+      "source_horizon": 50,
+      "cut_steps": []
+    },
+    {
+      "case_id": "stick-push-v3__2026105904",
+      "task": "stick-push-v3",
+      "env_seed": 2026105904,
+      "split": "preflight",
+      "source_horizon": 50,
+      "cut_steps": []
+    },
+    {
+      "case_id": "disassemble-v3__2026106000",
+      "task": "disassemble-v3",
+      "env_seed": 2026106000,
+      "split": "development",
+      "source_horizon": 50,
+      "cut_steps": []
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026106001",
+      "task": "pick-place-wall-v3",
+      "env_seed": 2026106001,
+      "split": "development",
+      "source_horizon": 50,
+      "cut_steps": []
+    },
+    {
+      "case_id": "shelf-place-v3__2026106002",
+      "task": "shelf-place-v3",
+      "env_seed": 2026106002,
+      "split": "development",
+      "source_horizon": 50,
+      "cut_steps": []
+    },
+    {
+      "case_id": "stick-pull-v3__2026106003",
+      "task": "stick-pull-v3",
+      "env_seed": 2026106003,
+      "split": "development",
+      "source_horizon": 50,
+      "cut_steps": []
+    },
+    {
+      "case_id": "stick-push-v3__2026106004",
+      "task": "stick-push-v3",
+      "env_seed": 2026106004,
+      "split": "development",
+      "source_horizon": 50,
+      "cut_steps": []
+    },
+    {
+      "case_id": "disassemble-v3__2026106005",
+      "task": "disassemble-v3",
+      "env_seed": 2026106005,
+      "split": "development",
+      "source_horizon": 50,
+      "cut_steps": []
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026106006",
+      "task": "pick-place-wall-v3",
+      "env_seed": 2026106006,
+      "split": "development",
+      "source_horizon": 50,
+      "cut_steps": []
+    },
+    {
+      "case_id": "shelf-place-v3__2026106007",
+      "task": "shelf-place-v3",
+      "env_seed": 2026106007,
+      "split": "development",
+      "source_horizon": 50,
+      "cut_steps": []
+    },
+    {
+      "case_id": "stick-pull-v3__2026106008",
+      "task": "stick-pull-v3",
+      "env_seed": 2026106008,
+      "split": "development",
+      "source_horizon": 50,
+      "cut_steps": []
+    },
+    {
+      "case_id": "stick-push-v3__2026106009",
+      "task": "stick-push-v3",
+      "env_seed": 2026106009,
+      "split": "development",
+      "source_horizon": 50,
+      "cut_steps": []
+    },
+    {
+      "case_id": "disassemble-v3__2026106010",
+      "task": "disassemble-v3",
+      "env_seed": 2026106010,
+      "split": "development",
+      "source_horizon": 50,
+      "cut_steps": []
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026106011",
+      "task": "pick-place-wall-v3",
+      "env_seed": 2026106011,
+      "split": "development",
+      "source_horizon": 50,
+      "cut_steps": []
+    },
+    {
+      "case_id": "shelf-place-v3__2026106012",
+      "task": "shelf-place-v3",
+      "env_seed": 2026106012,
+      "split": "development",
+      "source_horizon": 50,
+      "cut_steps": []
+    },
+    {
+      "case_id": "stick-pull-v3__2026106013",
+      "task": "stick-pull-v3",
+      "env_seed": 2026106013,
+      "split": "development",
+      "source_horizon": 50,
+      "cut_steps": []
+    },
+    {
+      "case_id": "stick-push-v3__2026106014",
+      "task": "stick-push-v3",
+      "env_seed": 2026106014,
+      "split": "development",
+      "source_horizon": 50,
+      "cut_steps": []
+    }
+  ],
+  "methods": [
+    "replan",
+    "velocity_matched",
+    "direct_matched",
+    "post_matched",
+    "continue_old"
+  ],
+  "prefix_steps": 10,
+  "replicates": 8,
+  "preflight_replicates": 1,
+  "control_budget": 300,
+  "source": "first frozen G0 alarm threshold .05, same v3 observation path, source horizon50",
+  "no_alarm": "retain all 15 planned fresh sources with common observed outcome for every arm",
+  "objective": "mean member sigmoid probability(candidate; fixed state,a0) minus probability(a0; fixed state,a0)",
+  "anchor": "slot0 always detached specified a0; only slot1 candidate differentiable",
+  "guidance": {
+    "alpha": 10.0,
+    "times": [
+      0.3,
+      0.2,
+      0.1
+    ],
+    "clip_derivative": "true clamp through same T",
+    "velocity": "v-alpha*tau*grad_u R(T(u))",
+    "direct": "v-alpha*grad_u R(T(u))",
+    "clean": "u=x_tau-tau*v; sampler Euler dt=-.1",
+    "no_step_backtracking": true
+  },
+  "matching": {
+    "xyz_rms": 0.05,
+    "gripper_rms": 0.1,
+    "xyz_linf": 0.15,
+    "gripper_linf": 0.4,
+    "boundary_clearance": 0.05,
+    "tolerance": 1e-06,
+    "zero_threshold": 1e-10,
+    "algorithm": "shared mask:1-abs(a0)>=.05; normalize each group direction to unit RMS; common radius=min(target, all direction feasible radii); bounds=min(group cap,1-abs(a0)); final float32 check",
+    "amplitude_can_expand_native": true,
+    "native_arms_separately_executed": false,
+    "post_metric": "environment grad times ((q99-q01)/2)^2, matching internal clean-action Euclidean gradient",
+    "random": "independent Gaussian three knots per action dimension, linear interpolation over ten steps",
+    "reverse": "negative of projected direct command delta",
+    "zero_group": "if any primary direction has zero norm, all matched arms use zero for that group; never drop source",
+    "shared_radius_dependencies": "Generate velocity/direct/post/reverse/random every source; reverse/random/native outputs are saved, not simulated."
+  },
+  "fallbacks": "nonfinite guidance: same-seed a0 via inherited Engine; matching retains source and zero group; report all fallback counts",
+  "candidate_seed_namespace": "corrector_small_replan",
+  "suffix_seed_namespace": "corrector_small_suffix",
+  "random_seed_namespace": "corrector_small_random",
+  "branch_order_seed_namespace": "corrector_small_branch_order",
+  "suffix_pairing": "source,cut,replicate,decision_index",
+  "continuation": "Four intervention arms: execute10 then clear queue/fixed10; continue_old: original queue to natural exhaustion, then native50 with no G0 interruption; all end by300.",
+  "budget": {
+    "hard_maximum": 700,
+    "development_max": 600,
+    "preflight_max": 25,
+    "concurrency_checks": 8,
+    "source_captures": 20,
+    "planned_total": 653,
+    "failed_attempts_count": true,
+    "remaining_is_failure_reserve_not_outcome_search": true
+  },
+  "jacobian": {
+    "enabled": false,
+    "reason": "focus fixed eight arms; no conditional addition based on development outcomes"
+  },
+  "primary_comparisons": [
+    [
+      "velocity_matched",
+      "replan"
+    ],
+    [
+      "direct_matched",
+      "replan"
+    ],
+    [
+      "post_matched",
+      "replan"
+    ],
+    [
+      "direct_matched",
+      "velocity_matched"
+    ],
+    [
+      "post_matched",
+      "velocity_matched"
+    ],
+    [
+      "post_matched",
+      "direct_matched"
+    ],
+    [
+      "replan",
+      "continue_old"
+    ]
+  ],
+  "inference": {
+    "unit": "complete source",
+    "bootstrap": 10000,
+    "bootstrap_seed": 29015,
+    "stratified_by": "task",
+    "paired_suffixes": 8,
+    "interpretation": "Small fresh-source comparison in the same five MetaWorld tasks; nominal source-cluster intervals are exploratory and do not establish a stable winner or broad validation."
+  },
+  "formal_freeze": "separate formal_freeze.json after preflight commands audit and before any development source capture",
+  "generated_methods": [
+    "replan",
+    "velocity_matched",
+    "direct_matched",
+    "post_matched",
+    "reverse_matched",
+    "random_matched",
+    "velocity_native",
+    "direct_native"
+  ],
+  "continue_old": {
+    "definition": "No G0-triggered interruption: finish original source 50-step queue; then generate and naturally exhaust normal 50-step chunks to total300.",
+    "suffix_horizon": 50,
+    "no_forced_clear_after_ten": true,
+    "comparison": "versus replan includes interruption and 50-versus10 execution cadence, not isolated correction.",
+    "random_pairing": "same source/cut/replicate/decision-index namespace; sampling times/counts differ from fixed10 arms; no claim of same flow noise at all decision states."
+  },
+  "selection_rule": "Report point estimates, source intervals, paired harms/rescues and costs; no outcome-triggered parameter changes or additional sources. Prefer a method only as a provisional candidate if meaningful improvement is consistent; do not force a winner."
+}

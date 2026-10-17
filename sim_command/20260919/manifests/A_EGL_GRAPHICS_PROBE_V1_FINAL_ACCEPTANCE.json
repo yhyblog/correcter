@@ -1,0 +1,75 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "reviewed_at_utc": "2026-09-19T18:14:53.700344+00:00",
+  "status": "technical_mapping_failure_evidence_accepted",
+  "receipt": {
+    "path": "receipts/A/A10_EGL_GRAPHICS_PROBE_V1_RESULT.json",
+    "sha256": "52e8e824ce208ce879c5aa5b8869f27387eee60703123860d2cd656e3547d4a5"
+  },
+  "audit": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_GRAPHICS_PROBE_V1_r1/FINAL_AUDIT.json",
+    "sha256": "570403ca7c49a0d4e0652bc6ee1aeccca1bd611db7f2e9516fa91d332e355494",
+    "bytes": 19152
+  },
+  "LAUNCH_RESULT": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/EGL_graphics_runs/A10_EGL_GRAPHICS_PROBE_V1_r1_A_wave02/LAUNCH_RESULT.json",
+    "sha256": "9eed335e93c26b0b45e91523c01c87f7c703e7bf69191ea385d81727c92690bd",
+    "bytes": 4010
+  },
+  "resource_counts": {
+    "graphics_probe_attempts": 1,
+    "egl_device_enumerations": 1,
+    "egl_device_string_queries": 24,
+    "probe_explicit_egl_get_proc_address_calls": 3,
+    "egl_platform_display_calls": 0,
+    "egl_initialize_calls": 0,
+    "egl_choose_config_calls": 0,
+    "egl_bind_api_calls": 0,
+    "graphics_context_creations": 0,
+    "egl_make_current_calls": 0,
+    "egl_query_string_calls": 0,
+    "probe_explicit_gl_string_queries": 0,
+    "static_scene_constructions": 0,
+    "static_scene_data_constructions": 0,
+    "explicit_mj_forward_calls": 0,
+    "mujoco_render_context_creations": 0,
+    "mujoco_render_context_frees": 0,
+    "mujoco_scene_updates": 0,
+    "render_calls": 0,
+    "rgb_readback_calls": 0,
+    "egl_destroy_context_calls": 0,
+    "egl_terminate_calls": 0,
+    "egl_release_thread_calls": 1,
+    "model_initializations": 0,
+    "model_gpu_inference_calls": 0,
+    "vla_sampling_calls": 0,
+    "flow_forward_calls": 0,
+    "simulator_attempts": 0,
+    "metaworld_environment_instances": 0,
+    "environment_reset_calls": 0,
+    "physics_steps": 0,
+    "env_steps": 0,
+    "completed_rollouts": 0,
+    "optimizer_updates": 0,
+    "gpu_seconds": null
+  },
+  "events": {
+    "entered": 30,
+    "returned": 29,
+    "failed": 1,
+    "incomplete": 0
+  },
+  "accepted_findings": [
+    "One EGL enumeration returned8devices using the frozen isolation stack",
+    "No usable physical mapping from24 extension/DRM string queries",
+    "Stopped before display initialization/context/render",
+    "No VLA/MetaWorld/reset/physical advancement/training",
+    "Cleanup complete and8holders restored per audited executor evidence"
+  ],
+  "raw_query_limit": "Original NULL/empty not distinguished; no retrospective error code inferred",
+  "holder_restored_count": 8,
+  "closure": "releases/P10_A_EGL_GRAPHICS_PROBE_V1_CLOSED.json",
+  "retry_authorized": false,
+  "unspent_budget_reusable": false,
+  "next_CPU_route": "EGL_NV_device_cuda handle -> CUDA PCI query -> fixed kernel/NVML UUID; no ordinal assumption"
+}

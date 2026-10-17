@@ -1,0 +1,111 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "accepted_at_utc": "2026-09-19T21:52:17.648858+00:00",
+  "task_id": "A10_PV_AUTH_METADATA_CPU_V1",
+  "status": "CPU_metadata_revision_accepted_for_one_V2_numeric_diagnostic",
+  "receipt": {
+    "path": "receipts/A/A10_PV_AUTH_METADATA_CPU_V1_RESULT.json",
+    "sha256": "aabf9f9782d4ad3e6bfbcf445415621a5a15b91cacfef9e139a11256e48368e5"
+  },
+  "report": {
+    "path": "receipts/A/A10_PV_AUTH_METADATA_CPU_V1_REPORT.md",
+    "sha256": "b03a96a8e48967c0784704c476271b32379f5ef83fb8b1805a1822bd322cbf79"
+  },
+  "CPU_READY": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/CPU_READY.json",
+    "sha256": "a60c06d72cad7f8c09aac97f6a2096f671e1554c777d53c80c67b1b87a09bbd1"
+  },
+  "proposal": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/proposal/PROPOSAL.json",
+    "sha256": "9e7a80a211eba6a4e3c65bd2fb3764fe0fbd974c4190c9f2e77091c04a62e02c"
+  },
+  "root_verification": {
+    "RESULT_artifact_refs_SHA_size": 25,
+    "evidence_files_SHA_size": 82,
+    "runtime_code_files_SHA_size": 380,
+    "unchanged_runtime_files": 377,
+    "changed_identity_path_files": [
+      "core/contracts.py",
+      "diagnostic.py",
+      "launch.py"
+    ],
+    "unchanged_inputs_config_external_manifests": true,
+    "unchanged_resource_cap_entries": 66,
+    "runtime_checker_or_GPU_calls": 0,
+    "large_weight_hashes": 0,
+    "pure_publication_metadata_checks": 1,
+    "new_claim_output_cache_absent": true
+  },
+  "independent_review": {
+    "agent": "/root/pv_v2_publication_review",
+    "blocking_findings": [],
+    "scope": "identity/path diff and safe pure JSON publication checker"
+  },
+  "executor_checks": {
+    "metadata_fixtures": 41,
+    "closure_exclusive_protection": 3,
+    "publication_checker_cases": 2,
+    "real_launcher_or_claim": 0
+  },
+  "publication_metadata_check": {
+    "path": "manifests/PV_V2_PUBLICATION_STAGE/PUBLICATION_CHECK.json",
+    "sha256": "2e2041879b717293e03010d8884c937b15b08ffeae0a79995524207e37b65bc2",
+    "status": "PASS_METADATA_ONLY_NOT_AUTHORIZATION"
+  },
+  "published_sources": {
+    "CONTROL.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/PV_V2_PUBLICATION_STAGE/CONTROL.json",
+      "sha256": "cb99743a845835e85978f78ec830631605b64e8cdce2602ec7f710cf2b3a2d12"
+    },
+    "TASK_BOARD.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/PV_V2_PUBLICATION_STAGE/TASK_BOARD.json",
+      "sha256": "7febc275edcee9ed7186251c550676534c7f950c8935805e337ea3995ad03cbf"
+    },
+    "RELEASE.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/PV_V2_PUBLICATION_STAGE/RELEASE.json",
+      "sha256": "b7baf846254e9c63dca4efef354e56f56c0afcb69bfee88754e8eddc20db8522"
+    },
+    "TASK_BRIEF.md": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/PV_V2_PUBLICATION_STAGE/TASK_BRIEF.md",
+      "sha256": "3bc19a344ec3ac59346945257404e6444b02008d5be8ccff565fb84ab32fea47"
+    }
+  },
+  "state_contract": {
+    "board_status": "ready",
+    "release_status": "released",
+    "board_template_copied_exactly": true
+  },
+  "old_release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V1_CLOSED.json",
+  "old_attempt_facts": {
+    "command_invocations": 1,
+    "claim_count": 0,
+    "compute_count": 0,
+    "reusable": false
+  },
+  "new_release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V2.json",
+  "new_release_sha256": "b7baf846254e9c63dca4efef354e56f56c0afcb69bfee88754e8eddc20db8522",
+  "runtime_validated": false,
+  "runtime_validation_pending": [
+    "real encoder outputs at step0",
+    "runtime noise hash equality",
+    "Q/P/V finite numerical behavior on this snapshot",
+    "MT50 Q adaptation",
+    "D/G0 triggers",
+    "C10 execution and complete task outcomes"
+  ],
+  "cost_semantics": {
+    "kind": "cached single-snapshot numerical diagnostic",
+    "deployment_samples": {
+      "Post": 1,
+      "Velocity": 2
+    },
+    "diagnostic_samples": {
+      "Post": 0,
+      "Velocity": 1
+    },
+    "deployment_cost_comparison": false
+  },
+  "task_success_rate_sample": false,
+  "B_compute_authorized": false,
+  "deletions_authorized": false
+}

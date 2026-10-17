@@ -1,0 +1,121 @@
+{
+  "at_utc": "2026-09-21T17:51:00.643000+00:00",
+  "status": "H10_FOUR_CELLS_COMPLETE_ACCEPTED",
+  "receipt": "receipts/A/A_D24_MAIN_ONCE_V1_RESULT_r2.json",
+  "snapshot_utc": "2026-09-21T17:48:05.932045+00:00",
+  "review": "saved completed-cell counts; no strict consistency audit, hardware query or new experimental compute",
+  "rows": [
+    {
+      "method": "N",
+      "H": 10,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 308,
+      "success_rate_percent": 61.6,
+      "delta_vs_N_pp": 0.0,
+      "delta_vs_R_pp": null,
+      "technical_failures": 0
+    },
+    {
+      "method": "R",
+      "H": 10,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 336,
+      "success_rate_percent": 67.2,
+      "delta_vs_N_pp": 5.6,
+      "delta_vs_R_pp": 0.0,
+      "technical_failures": 0
+    },
+    {
+      "method": "Post",
+      "H": 10,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 345,
+      "success_rate_percent": 69.0,
+      "delta_vs_N_pp": 7.4,
+      "delta_vs_R_pp": 1.8,
+      "technical_failures": 0
+    },
+    {
+      "method": "Velocity",
+      "H": 10,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 340,
+      "success_rate_percent": 68.0,
+      "delta_vs_N_pp": 6.4,
+      "delta_vs_R_pp": 0.8,
+      "technical_failures": 0
+    }
+  ],
+  "comparison_protocol": "same50tasks x10fixednewtest sources, frozenpi05SFT030000, once intervention cap1; frozen historical5task D/G0/Q transferred acrossMT50",
+  "interpretation": {
+    "system_vs_base": "R+5.6pp,Post+7.4pp,Velocity+6.4pp",
+    "correction_vs_replan": "Post+1.8pp95%CI[-0.2,3.8];Velocity+0.8pp95%CI[-1.4,3.0]. Both include0; not conclusive evidence of improvement overR atH10.",
+    "innovation_limits": "R-N does not establish G0 superiority to anomaly trigger (E6); P/V success alone does not establish gain/pair loss contribution (E1). No inference of all-MT50 module training."
+  },
+  "paired_statistics": {
+    "status": "complete",
+    "json": "deadline_20260924/H10_PAIRED_ANALYSIS.json",
+    "csv": "deadline_20260924/H10_PAIRED_RESULTS.csv",
+    "replicates": 2000,
+    "seed": 20260921,
+    "scope": "fixed50task within-task paired bootstrap; pointwise intervals, excludes training-seed/task-population uncertainty"
+  },
+  "main_matrix_cells_complete": 8,
+  "main_matrix_cells_total": 16,
+  "episodes_in_completed_cells": 4000,
+  "pending_complete_cells": [
+    "Post_H20",
+    "Post_H30",
+    "Post_H40",
+    "Post_H50",
+    "Velocity_H20",
+    "Velocity_H30",
+    "Velocity_H40",
+    "Velocity_H50"
+  ],
+  "episodes_planned_in_pending_cells": 4000,
+  "partial_H30_excluded_from_complete_table": true,
+  "runtime": "same existing8residentworkers automatically runningH30 per saved heartbeat; no new command or approval",
+  "notification_ACK_mode": "active_original_session_read; offline_wakeup_not_proven",
+  "human_readable_results": "deadline_20260924/H10_MAIN_RESULTS.md",
+  "all_completed_cells_csv": "deadline_20260924/MAIN_RESULTS_COMPLETED_CELLS.csv",
+  "corrector_training_tasks": [
+    "disassemble-v3",
+    "pick-place-wall-v3",
+    "shelf-place-v3",
+    "stick-pull-v3",
+    "stick-push-v3"
+  ],
+  "coverage_note": "These are D/G0/Q training tasks, not the pi05 backbone training coverage. Any5-vs45 analysis is descriptive only.",
+  "coverage_evidence": [
+    "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_vla_expert_full_retrain_diagnostic_20260909/config.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/config.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/docs/NATIVE10_CORRECTOR_ALGORITHM_ZH.md",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_MAIN_ONCE_V1/config/CONFIG.json"
+  ],
+  "descriptive_training_coverage": {
+    "historical_corrector5_tasks": {
+      "episodes": 50,
+      "N": 56.0,
+      "R": 64.0,
+      "Post": 72.0,
+      "Velocity": 66.0,
+      "Post_minus_R_pp": 8.0,
+      "Velocity_minus_R_pp": 2.0
+    },
+    "other45_tasks": {
+      "episodes": 450,
+      "N": 62.222222,
+      "R": 67.555556,
+      "Post": 68.666667,
+      "Velocity": 68.222222,
+      "Post_minus_R_pp": 1.111111,
+      "Velocity_minus_R_pp": 0.666667
+    },
+    "note": "post-hoc descriptive grouping by pre-existing module training coverage; no new hypothesis test, task selection or model tuning; not backbone training coverage"
+  }
+}

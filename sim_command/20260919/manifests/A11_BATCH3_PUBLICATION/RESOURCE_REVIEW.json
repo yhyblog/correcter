@@ -1,0 +1,496 @@
+{
+  "schema_version": 1,
+  "task_id": "A11_BATCH3_PREP_CPU_V1",
+  "reviewed_proposal_task_id": "A11_COMMON_POOL_BATCH3_V1",
+  "status": "PASS_CONTRACT_NO_IMPLEMENTATION_BLOCKER_PUBLICATION_PENDING",
+  "sources": {
+    "CPU_READY.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/CPU_READY.json",
+      "sha256": "ed344810b014323505812200d939cb700a097079ceca8160194947202c0be943",
+      "size_bytes": 7548
+    },
+    "MINIMAL_DIFF.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/MINIMAL_DIFF.json",
+      "sha256": "3cb4b6ec2f7733c5ef44229456c1e9ea4012c3b93c4634b75ec3108bc5eba595",
+      "size_bytes": 27106
+    },
+    "PROPOSED_COMMAND.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/PROPOSED_COMMAND.json",
+      "sha256": "5110c1ca530cb63aa30d1523dd1df9eb6e3ccbc87ef202314d6b924bd4659c7a",
+      "size_bytes": 1847
+    },
+    "RESOURCE_AND_STORAGE_QUOTE.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/RESOURCE_AND_STORAGE_QUOTE.json",
+      "sha256": "b6859c0d6d842faf309cf2083bf5a3cbc5f7e9ae94d476736972f5fc553bc115",
+      "size_bytes": 86774
+    },
+    "proposal/PROPOSAL.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/proposal/PROPOSAL.json",
+      "sha256": "6e568f44bd084852ef52bdba6e4535e5ce84d8baaf5d75b5a1cd095d4dcc346d",
+      "size_bytes": 73780
+    },
+    "proposal/RELEASE_TEMPLATE.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/proposal/RELEASE_TEMPLATE.json",
+      "sha256": "c566e5369b62ace6faf59b2350caa3daeb157901750812ac90279d704fb0b6f6",
+      "size_bytes": 69520
+    },
+    "proposal/CONTROL_TEMPLATE.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/proposal/CONTROL_TEMPLATE.json",
+      "sha256": "7deb2812d94cfb7543f21db19d41b5ac1bd198574d6e6cfa2893ae32146bd20e",
+      "size_bytes": 117825
+    },
+    "proposal/BOARD_TEMPLATE.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/proposal/BOARD_TEMPLATE.json",
+      "sha256": "de111d43b27b8d99be765dabf130ebab590030c6c7062e080638d2f00f6dde9d",
+      "size_bytes": 413
+    },
+    "proposal/CANDIDATE_PUBLICATION_DOCUMENTS.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/proposal/CANDIDATE_PUBLICATION_DOCUMENTS.json",
+      "sha256": "72ef057b338edf35987f05e09345dad4fc73a953ef68c20375ce9573fb27755d",
+      "size_bytes": 230896
+    },
+    "code/authorization.py": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/code/authorization.py",
+      "sha256": "154104565533ff50c1bb2ed70d22326b68de7f3e65a1e6ab6c0dd33166de278e",
+      "size_bytes": 9204
+    },
+    "code/batch_storage.py": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/code/batch_storage.py",
+      "sha256": "50f7e070ce662330a2d8d179d0868cf86f80fdaa56130ae313e03500d4bd745e",
+      "size_bytes": 3286
+    },
+    "code/publication_check.py": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/code/publication_check.py",
+      "sha256": "0f1ec6dff4e5bddb734bbb071fd36b28c5e07c514d418da7a0f494c381deb362",
+      "size_bytes": 934
+    },
+    "commands/run_proposed_batch3.sh": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/commands/run_proposed_batch3.sh",
+      "sha256": "c0f39aa405fd0387b61baa65b54a946315e6090f3c55151a28b859c26f7cb743",
+      "size_bytes": 493
+    },
+    "commands/check_publication_metadata.sh": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/commands/check_publication_metadata.sh",
+      "sha256": "2d13f24d1cb473b036c0560b7585644070ac6e0f38f15a258a4e44fe64c10f73",
+      "size_bytes": 370
+    },
+    "authority_snapshot/CONTROL.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/CONTROL.json",
+      "sha256": "3a2fac981d0bc974bb07967c4ddd323ba2b382fac29d0a3d6929d35859a0ae21",
+      "size_bytes": 107896
+    },
+    "authority_snapshot/TASK_BOARD.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/TASK_BOARD.json",
+      "sha256": "af70be7ae3fb85e00db47e52ffc8f5f79628795fe2d72a08798fafbe332cd4d6",
+      "size_bytes": 37720
+    },
+    "accepted_Batch2_proposal": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_MT50_CONTINUATION_CPU_V1/proposal/PROPOSAL.json",
+      "sha256": "41a153424343940f6f224a79c5e8558dea4d11d6ee2438fcaaef2005eb223416",
+      "size_bytes": 74266
+    }
+  },
+  "checks": {
+    "live_prepare_CONTROL49_BOARD58": true,
+    "8_fixed_A_train0_cut5": true,
+    "each_parent15_cold_full120": true,
+    "concurrency2": true,
+    "all116_caps": true,
+    "8_parent_sum_equals116_caps": true,
+    "caps_proposal_release_CONTROL_quote_match": true,
+    "scheduler_Batch2_inherited": true,
+    "all_timeouts_Batch2_inherited": true,
+    "storage_match": true,
+    "storage_only_mode_diff_from_Batch2": true,
+    "admission_bytes_exact": true,
+    "admission_arithmetic": true,
+    "inode_threshold_exact": true,
+    "risk_template_default_false_exact_other_fields": true,
+    "frozen_proposal_SHA": true,
+    "command_digest_bound": true,
+    "candidate_matches_templates": true,
+    "one_A_command_claim_no_retry": true,
+    "no_current_compute_authorization": true
+  },
+  "blocking_implementation_issues": [],
+  "required_before_real_compute": [
+    "Analysis CPU acceptance of this package.",
+    "Independent Batch3 storage-risk decision and correctly frozen final release; unchanged templates intentionally remain unauthorized.",
+    "Complete current authority metadata and pure-JSON staged publication validation; checker not executed in this review.",
+    "A ACK binding final documents, followed only by the one separately authorized frozen command."
+  ],
+  "file_name_resolution": {
+    "requested_CONTROL_REQUIRED": "Actual delivered filename is proposal/CONTROL_TEMPLATE.json with proposed_runtime_fields wrapper.",
+    "requested_BOARD_TASK_TEMPLATE": "Actual delivered filename is proposal/BOARD_TEMPLATE.json, a single task row.",
+    "combined_template": "proposal/CANDIDATE_PUBLICATION_DOCUMENTS.json contains CONTROL/RELEASE/TASK_BOARD objects for staging; it is not installed authority."
+  },
+  "frozen_identity": {
+    "node_role": "A",
+    "release_id": "P11_A_COMMON_POOL_BATCH3_V1",
+    "run_id": "PROPOSED_A11_batch3_A_V1",
+    "shard_id": "PROPOSED_A11_batch3_A_shard_V1",
+    "task_id": "A11_COMMON_POOL_BATCH3_V1",
+    "wave_id": "PROPOSED_A11_batch3_A_wave_V1"
+  },
+  "owner_host": "trial-303224955-trialrun-303224955-worker-0",
+  "parents": [
+    {
+      "parent_key": "p00_coffee_button_train0000_cut5",
+      "task": "coffee-button-v3",
+      "ordinal": 0,
+      "cut": 5,
+      "split": "train",
+      "cold_model_load_cap": 15
+    },
+    {
+      "parent_key": "p01_coffee_pull_train0000_cut5",
+      "task": "coffee-pull-v3",
+      "ordinal": 0,
+      "cut": 5,
+      "split": "train",
+      "cold_model_load_cap": 15
+    },
+    {
+      "parent_key": "p02_coffee_push_train0000_cut5",
+      "task": "coffee-push-v3",
+      "ordinal": 0,
+      "cut": 5,
+      "split": "train",
+      "cold_model_load_cap": 15
+    },
+    {
+      "parent_key": "p03_dial_turn_train0000_cut5",
+      "task": "dial-turn-v3",
+      "ordinal": 0,
+      "cut": 5,
+      "split": "train",
+      "cold_model_load_cap": 15
+    },
+    {
+      "parent_key": "p04_door_close_train0000_cut5",
+      "task": "door-close-v3",
+      "ordinal": 0,
+      "cut": 5,
+      "split": "train",
+      "cold_model_load_cap": 15
+    },
+    {
+      "parent_key": "p05_door_lock_train0000_cut5",
+      "task": "door-lock-v3",
+      "ordinal": 0,
+      "cut": 5,
+      "split": "train",
+      "cold_model_load_cap": 15
+    },
+    {
+      "parent_key": "p06_door_open_train0000_cut5",
+      "task": "door-open-v3",
+      "ordinal": 0,
+      "cut": 5,
+      "split": "train",
+      "cold_model_load_cap": 15
+    },
+    {
+      "parent_key": "p07_door_unlock_train0000_cut5",
+      "task": "door-unlock-v3",
+      "ordinal": 0,
+      "cut": 5,
+      "split": "train",
+      "cold_model_load_cap": 15
+    }
+  ],
+  "resource_summary": {
+    "concurrency": 2,
+    "parents": 8,
+    "cold_branches_per_parent": 15,
+    "total_branches_cap": 120,
+    "operation_cap_keys": 116,
+    "sampling_calls": 3624,
+    "flow_calls": 36240,
+    "control_calls": 36000,
+    "observation_calls": 36120,
+    "initialization_physics_substeps": 3127800,
+    "initialization_mj_forward_calls": 9600,
+    "scheduler_caps": {
+      "branch_process_starts": 120,
+      "maximum_active_parents": 2,
+      "maximum_physical_GPU_assignments": 8,
+      "ownership_scans": 1678980,
+      "parent_admissions": 8,
+      "parent_publications": 8,
+      "poll_iterations": 559660,
+      "publication_group_scans": 8,
+      "reservation_requests": 1,
+      "restoration_observations": 1
+    },
+    "full120_not_reduced_for_past_early_outcomes": true
+  },
+  "storage": {
+    "mode": "bounded_batch3",
+    "admission_bytes": 93415604224,
+    "remaining_floor_bytes": 536870912,
+    "admission_plus_floor_bytes": 93952475136,
+    "minimum_available_inodes": 564096,
+    "RAM_planning_bytes": 137438953472,
+    "per_child_payload_cap_bytes": 536870912,
+    "per_parent_private_cache_cap_bytes": 2147483648,
+    "monitor_interval_seconds": 5,
+    "monitor_max_polls": 22456,
+    "accepts_monitoring_gaps_in_unpublished_template": false,
+    "project_quota_known": false,
+    "exclusive_reservation": false,
+    "current_capacity_queried_in_review": false,
+    "unknown": [
+      "actual current available capacity",
+      "project quota",
+      "container/RAM hard limit",
+      "RSS/VRAM peaks",
+      "actual physicalIO",
+      "outside-root/unlinked temporary bytes",
+      "monitoring overshoot",
+      "global peak"
+    ],
+    "scope": "Independent bounded Batch3 eight-parent admission only; not prior Batch1/2 risk reuse, future quota or500-parent capacity guarantee."
+  },
+  "final_RELEASE_required": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P11_A_COMMON_POOL_BATCH3_V1.json",
+    "status": "released",
+    "release_id": "P11_A_COMMON_POOL_BATCH3_V1",
+    "task_ids": [
+      "A11_COMMON_POOL_BATCH3_V1"
+    ],
+    "task_revision": 1,
+    "owner_host": "trial-303224955-trialrun-303224955-worker-0",
+    "wave_participants": [
+      "A"
+    ],
+    "max_commands": 1,
+    "max_claims": 1,
+    "max_retries": 0,
+    "proposal_sha256": "6e568f44bd084852ef52bdba6e4535e5ce84d8baaf5d75b5a1cd095d4dcc346d",
+    "copy_exactly_from_proposal": [
+      "authorization_identity",
+      "parents",
+      "concurrency",
+      "resource_caps",
+      "scheduler_caps",
+      "paths",
+      "timeouts",
+      "storage"
+    ],
+    "storage_admission_exact_after_independent_acceptance": {
+      "mode": "bounded_batch3",
+      "run_id": "PROPOSED_A11_batch3_A_V1",
+      "parent_keys": [
+        "p00_coffee_button_train0000_cut5",
+        "p01_coffee_pull_train0000_cut5",
+        "p02_coffee_push_train0000_cut5",
+        "p03_dial_turn_train0000_cut5",
+        "p04_door_close_train0000_cut5",
+        "p05_door_lock_train0000_cut5",
+        "p06_door_open_train0000_cut5",
+        "p07_door_unlock_train0000_cut5"
+      ],
+      "project_quota_known": false,
+      "exclusive_reservation": false,
+      "accepts_monitoring_gaps": true,
+      "acceptance_scope": "this_Batch3_eight_parent_wave_only_not_Batch1_Batch2_or_500_parent_quota"
+    },
+    "publication_metadata_to_add": {
+      "issuer": "analysis",
+      "issued_at_utc": "actual publication timestamp",
+      "kind": "bounded_eight_parent_A_only_batch_concurrency2",
+      "task_brief": {
+        "path": "tasks/A11_COMMON_POOL_BATCH3_V1.md",
+        "sha256": "freeze actual final task brief"
+      },
+      "acceptance": {
+        "path": "manifests/A11_BATCH3_PREP_CPU_V1_ACCEPTANCE.json",
+        "sha256": "freeze actual CPU acceptance"
+      },
+      "analysis_risk_acceptance": {
+        "path": "contracts/BATCH3_RISK_AND_SCOPE_V1.md",
+        "sha256": "freeze actual independent Batch3 risk decision"
+      }
+    },
+    "risk_reference_placement": "Risk memo reference belongs at release top level; do not add any field to storage_admission because runtime compares its seven fields exactly.",
+    "risk_reference_verification": "check_documents validates embedded admission but does not read/hash the external analysis_risk_acceptance memo. Analysis publication/ACK must verify the memo SHA; final release SHA freezes its reference."
+  },
+  "final_CONTROL_required": {
+    "required_fields": {
+      "mode": "run",
+      "stop_requested": false,
+      "formal_gpu_runs_enabled": true,
+      "active_compute_release_id": "P11_A_COMMON_POOL_BATCH3_V1",
+      "active_compute_release": "releases/P11_A_COMMON_POOL_BATCH3_V1.json",
+      "active_compute_task_ids": [
+        "A11_COMMON_POOL_BATCH3_V1"
+      ],
+      "active_common_pool_batch_preparation_release": null,
+      "active_batch_risk_acceptance": "contracts/BATCH3_RISK_AND_SCOPE_V1.md"
+    },
+    "append_allowed_task_id": "A11_COMMON_POOL_BATCH3_V1",
+    "current_compute_limits": "Copy all116 exact values from PROPOSAL.resource_caps",
+    "per_task_compute_limits.A11_COMMON_POOL_BATCH3_V1": "Same116 exact values",
+    "revision": "increment from then-current authority49; staged template is50",
+    "updated_at_utc": "actual publication timestamp",
+    "note": "Replace CPU-only/all real runtime0 note with bounded Batch3 A-only fixed8/concurrency2 authority; explicitly keep full500 collection unreleased.",
+    "preserve": "Closed14 old releases, accepted train16/dev0, processed17/unattempted483, B CPU-only scope and unrelated authority history."
+  },
+  "final_TASK_BOARD_required": {
+    "new_unique_task_row": {
+      "dependencies": [
+        "A11_BATCH3_PREP_CPU_V1"
+      ],
+      "expected_result": "receipts/A/A11_COMMON_POOL_BATCH3_V1_RESULT.json",
+      "id": "A11_COMMON_POOL_BATCH3_V1",
+      "owner": "A",
+      "release": "releases/P11_A_COMMON_POOL_BATCH3_V1.json",
+      "revision": 1,
+      "run_id": "PROPOSED_A11_batch3_A_V1",
+      "shard_id": "PROPOSED_A11_batch3_A_shard_V1",
+      "status": "ready",
+      "wave_id": "PROPOSED_A11_batch3_A_wave_V1",
+      "brief": "tasks/A11_COMMON_POOL_BATCH3_V1.md",
+      "concurrency": 2,
+      "parent_count": 8,
+      "scope": "fixed8 A/train ordinal0/cut5 parents only;15 sequential cold branches per parent; no500-parent release"
+    },
+    "revision": "increment from then-current authority58; staged template is59",
+    "updated_at_utc": "actual publication timestamp",
+    "A11_BATCH3_PREP_CPU_V1": "Upon analysis acceptance mark CPU task completed/accepted using existing board status convention and attach acceptance/result references; candidate still says ready.",
+    "P10": "Set active_limited_preflight=A11_COMMON_POOL_BATCH3_V1; clear completed next_preparation_task as appropriate.",
+    "A11": "Set active_batch_task=A11_COMMON_POOL_BATCH3_V1 and limited_batch_collection_authorized=true; clear completed preparation pointer and update fixed8 scope. Keep broad collection_authorized=false and accepted/processed counts unchanged until results are accepted."
+  },
+  "template_staleness": {
+    "CONTROL_note": "Batch2 completed and closed;8new paired parents accepted, total16paired/17processed/483unattempted,13tasks. Only A Batch3 fixedconfig CPU preparation and existing B CPU views authorized; all real runtime0;14 closed compute releases.",
+    "CONTROL_active_batch_risk_acceptance": null,
+    "CONTROL_updated_at_utc": "2026-09-21T01:38:15.100039+00:00",
+    "description": "Templates express intended runtime core fields but retain pre-publication notes/timestamps/parent task states. Merge exact targeted changes into current authority rather than blindly replacing authority with the candidate snapshot."
+  },
+  "entry_order": {
+    "verified_launch_line_numbers": {
+      "record_command": 19,
+      "claim": 20,
+      "full_CPU_reference_check": 28,
+      "capacity_admission": 30,
+      "hardware_identity": 35,
+      "guard_active": 37,
+      "single_lifecycle": 50
+    },
+    "capacity_before_hardware": true,
+    "claim_before_capacity": true,
+    "meaning": "One command record and claim are consumed before full CPU reference checking and capacity admission. Capacity admission precedes NVML identity, guard active query and single lifecycle. A failure before hardware still does not authorize retry."
+  },
+  "timeouts": {
+    "GPU_compute_seconds_cap": null,
+    "branch_grace_seconds": 30,
+    "branch_seconds": 1800,
+    "child_grace_seconds": 30,
+    "child_seconds": 1800,
+    "drain_TERM_seconds": 30,
+    "drain_poll_seconds": 0.2,
+    "end_to_end_hard_bound_seconds": null,
+    "handoff_seconds": 300,
+    "lock_wait_seconds": null,
+    "parent_seconds": 27900,
+    "preparation_seconds": 900,
+    "publication_seconds": 300,
+    "reserved_wave_grace_seconds": 30,
+    "reserved_wave_seconds": 111900,
+    "restoration_observation_seconds": 120,
+    "scheduler_poll_seconds": 0.2
+  },
+  "timeout_interpretation": "preparation900, handoff300, child1800+30,parent27900,reserved111900+30,shared publication300,restoration observation120; lock wait/full drain/final cleanup/end-to-end/GPU-seconds hard bounds remain null or unknown.",
+  "inherited_lifecycle": {
+    "verified_byte_equal_files": [
+      {
+        "file": "launch.py",
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/code/launch.py",
+        "reference": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_MT50_CONTINUATION_CPU_V1/code/launch.py",
+        "size_bytes": 5337,
+        "sha256": "f47638e8492ed6a449a544d7494621b154478ae5edc17d899fc4adbe7efd2b38",
+        "byte_equal": true
+      },
+      {
+        "file": "reserved.py",
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/code/reserved.py",
+        "reference": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_MT50_CONTINUATION_CPU_V1/code/reserved.py",
+        "size_bytes": 2640,
+        "sha256": "d1ff7df9584a4d50e0f9f53b8bb2631eb697bdc37227c1523e1812ca50fb6bd5",
+        "byte_equal": true
+      },
+      {
+        "file": "batch_scheduler.py",
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/code/batch_scheduler.py",
+        "reference": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_MT50_CONTINUATION_CPU_V1/code/batch_scheduler.py",
+        "size_bytes": 7230,
+        "sha256": "0a3e8f47107b5083383be03c472f8ba4ef2d647d4fceda1222e1110b64242b65",
+        "byte_equal": true
+      },
+      {
+        "file": "batch_publication.py",
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/code/batch_publication.py",
+        "reference": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_MT50_CONTINUATION_CPU_V1/code/batch_publication.py",
+        "size_bytes": 2408,
+        "sha256": "9eda30d1825045e5075d2e0652b801f155578d8c46b844b5d953b18679edffec",
+        "byte_equal": true
+      },
+      {
+        "file": "process_backend.py",
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/code/process_backend.py",
+        "reference": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_MT50_CONTINUATION_CPU_V1/code/process_backend.py",
+        "size_bytes": 7380,
+        "sha256": "a785ddb1241dad461c79c50d5eac179fef008ef0b8e7cb324b54d2f86c202f15",
+        "byte_equal": true
+      },
+      {
+        "file": "execution.py",
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/code/execution.py",
+        "reference": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_MT50_CONTINUATION_CPU_V1/code/execution.py",
+        "size_bytes": 1662,
+        "sha256": "3754eefa4bd82006b04a3184505d5d003de57b453ebca77263869b1870a5e5f1",
+        "byte_equal": true
+      }
+    ],
+    "semantics": "One all8 reservation; two concurrent parent slots with15 sequential cold branches each; all formal descendants exit before whole-wave data/cost publication; reservation remains held until publication returns; then one restoration observation. No per-parent/idle-subset holder restart, model reuse, retries or extra probe.",
+    "review_scope": "Selected inherited code files only; no full-code audit or historical test suite rerun."
+  },
+  "commands": {
+    "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1",
+    "pure_JSON_staged_checker_argv": [
+      "bash",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/commands/check_publication_metadata.sh",
+      "--control",
+      "/tmp/BATCH3_STAGED_CONTROL.json",
+      "--board",
+      "/tmp/BATCH3_STAGED_TASK_BOARD.json",
+      "--release",
+      "/tmp/BATCH3_STAGED_RELEASE.json",
+      "--proposal",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/proposal/PROPOSAL.json"
+    ],
+    "checker_input_shape": "Three complete JSON objects; extract CONTROL_TEMPLATE.proposed_runtime_fields, merge BOARD_TEMPLATE row into full TASK_BOARD, and create final RELEASE after independent risk acceptance. Bare wrapper/single-row/combined candidate files cannot be passed as final inputs.",
+    "checker_semantics": "Static source inspection confirms JSON checks plus local hostname; no claim/launch/full weight verification. It returns grants_authorization=false; templates default reject. Checker was not executed.",
+    "future_single_real_command_argv": [
+      "bash",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/commands/run_proposed_batch3.sh",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P11_A_COMMON_POOL_BATCH3_V1.json"
+    ],
+    "future_command_sha256": "c0f39aa405fd0387b61baa65b54a946315e6090f3c55151a28b859c26f7cb743",
+    "command_executions_in_review": 0,
+    "future_command_authorized_by_review": false
+  },
+  "review_operations": {
+    "metadata_reads_only": true,
+    "model_imports": 0,
+    "hardware_probes": 0,
+    "process_probes": 0,
+    "GPU_experiments": 0,
+    "launcher_or_checker_executions": 0,
+    "large_weight_reads_or_hashes": 0,
+    "authority_writes": 0,
+    "only_output": "/tmp/batch3_publication_contract_review.json"
+  },
+  "conclusion": "No implementation or resource-contract blocker found in the requested scope. Keep fixed8/concurrency2 and inherited collector/lifecycle. Publication requires normal CPU acceptance, fresh exact Batch3 risk acceptance and the explicit metadata updates above; this review does not grant compute."
+}

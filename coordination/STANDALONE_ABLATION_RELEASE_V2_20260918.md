@@ -1,0 +1,19 @@
+# Standalone READY v2：仅重绑已完成的异常处理修复
+
+2026-09-18 UTC，分析端。
+
+此前READY v1已发布时，执行端已开始对新隔离入口作异常处理修复。v1的旧代码绑定被freeze入口正确拒绝；没有生成运行freeze，没有模型或仿真调用。原v1许可与阶段判断作为历史保留。
+
+现采用preparation/handoff_v2/future_ready_fields.json，SHA58561a03c7710ad04edc81ae917fa2d7e24b59af3a05d23ed4c8c8e84654be0a。相对v1，仅standalone_preparation_binding中的CPU与两个新代码SHA改变；完整科学契约逐字段相同。
+
+CPU v4为136 passed、0失败/错误/跳过，22文件before=after=current；seal b014ced62ba7f2f086caa3db565140a47c6f449cd1668b72ef16f76b9a33855f。变动只在engine.py与test_engine.py。
+
+独立窄审确认：GuidanceError在当次采样失败后立即停止，不再作内部无引导重采；除了这个异常handler外，成功propose的AST与原实现一致。Post/V/D成功路径1/2/2采样、梯度、种子、raw、自身半径等科学语义未变。
+
+已知GuidanceError记录失败的采样与部分引导证据；无法确定计数的其他异常显式记录actual_policy_calls=null及已知下界，不能伪报完整次数。所有此类异常仍须停止，不产生有效候选、不得自动重试或进入完整效果统计。恢复已计费。该有限异常诊断口径不阻断有效路径的验证。
+
+重绑后继续原条件放行：固定50次技术预检；同freeze完整预检passed后进入唯一正式波次，计划1274；随后全量只读审计及统计。release仅standalone_preflight和standalone_formal，repair保持锁定。新增cap1500、0优化，carry-in48183/51200；累计最多49683仿真。所有30次预检旧消息作废。
+
+原100/98cut+2common、五任务各20初态、4后缀、A4000、三solo-R主要比较、源bootstrap与家族区间均不变。旧matching文本用于旧参照与固定数值参数，新正式生成严格由solo_rule和bank_mode=solo决定。
+
+执行端读当前精确READY并核SHA后直接freeze、lifecycle预检与条件正式运行，不再等用户或分析端重复许可。后续迟到的日志修复/旧READY消息不得导致改动冻结代码或重复启动。旧native10全部只读，整波退出恢复8卡holder。

@@ -1,0 +1,194 @@
+{
+  "schema": "native10_calibration_launch_executor_check_v1",
+  "status": "passed",
+  "created_utc": "2026-09-17T02:43:27.918960+00:00",
+  "blockers": [],
+  "role": "Bounded independent read-only launch-binding evidence; not an additional permission gate",
+  "bindings": {
+    "ready_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_protocols/calibration_v1/coordination/NATIVE10_ANALYSIS_READY.json",
+    "ready_sha256": "5cec3558223d18ba9f2b160c478590b8d0ec9b161989f794e6dbcd7983f10138",
+    "ready_version": 12,
+    "config_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_protocols/calibration_v1/config.json",
+    "config_sha256": "c04125ae474316783e7dd6ca74c799d5441299801f22cd0910889f98511d7382",
+    "freeze_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_protocols/calibration_v1/freeze.json",
+    "freeze_sha256": "d181899e5ccf70177db5fee6267ec9f102f4aae6e437e42f7a0eb86dc9800d1e",
+    "pending": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_preparations/calibration_pending_v1",
+      "seal_sha256": "fa6cc1a31d91e7229d00fc4dcbddc110aae83a725aae5a39a8c625fa5f4a8e77"
+    },
+    "cpu": [
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/calibration_cpu_20260917_v2",
+        "seal_sha256": "7a907837ff2b46f11caf9b23d1bafcc1120733d54608eb46f40228e05bfbf04d"
+      }
+    ],
+    "authorization_inventory": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_protocols/calibration_v1/authorization_inventory.json",
+      "sha256": "2fa2872113179d009ac7338cf80712fef83693bacb8636ebcd03ea1e77698ec9"
+    },
+    "independent_entry_review": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/calibration_entry_review.json",
+      "sha256": "15558c09e5d4ed42052e93b9738ee24f25fe7471a0b6f040d156ab572c211c37"
+    }
+  },
+  "ready_compatibility": {
+    "initial_v12_sha256": "35600a62b81e4a131d56b880d6a89650fce3261822c662af46a73deb708ba521",
+    "initial_attempt_failed_before_destination": true,
+    "initial_model_calls": 0,
+    "initial_simulator_calls": 0,
+    "initial_optimizer_updates": 0,
+    "correction": "Analysis republished v12 with explicit path=to for two immutable historical references; science/budgets/code unchanged",
+    "republished_sha256": "5cec3558223d18ba9f2b160c478590b8d0ec9b161989f794e6dbcd7983f10138"
+  },
+  "active_stage_scopes": {
+    "calibration": "calibration",
+    "technical_reserve": "calibration_initialization_replacements"
+  },
+  "registration": {
+    "primary_ids": 100,
+    "primary_ids_canonical_sha256": "d2b7ca3b17c322e28610735d871dc319e5e7f24439d2cb4c48c5d00ec705f44e",
+    "per_task": {
+      "disassemble-v3": 20,
+      "pick-place-wall-v3": 20,
+      "shelf-place-v3": 20,
+      "stick-pull-v3": 20,
+      "stick-push-v3": 20
+    },
+    "paired_suffixes": 2,
+    "physical_arms": [
+      "continue_native10",
+      "alarm_replan10",
+      "velocity",
+      "direct",
+      "post"
+    ],
+    "backup_ids": 200,
+    "original_full_manifest_retained": true,
+    "case_round": null,
+    "generation_round": 2,
+    "generation_phase": "calibration",
+    "new_capture_allowed": true,
+    "old_development_anchor_reuse_allowed": false,
+    "actual_calibration_scene_uniqueness_not_inferred_from_registration": true
+  },
+  "selected_critic": {
+    "path": "A",
+    "step": 4000,
+    "selected_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected",
+    "selected_seal_sha256": "f40ff4f3356ee8f14d687348f9f9cc7addf1b1e93233b81645312973f7e02d6a",
+    "member_hashes": {
+      "0": "39bbbb9e2fa2cb14695c4ce31a9d91c806dfd690a888d2a9c44d9eb3bf0be129",
+      "1": "dab0dd69ad2bd4a132aede8c37ae4734cac2c12d7533d1c96cc058e1b52bad1d",
+      "2": "ce2a29d123d1c3eea25b90ba0999cacc793ad25346709a94d6b52cf92a8ffca2",
+      "3": "178c052783502646085fdb78be115e54d6d7ffc1225dac9af24d1cc64cafebf9"
+    },
+    "actual_loading_guard_still_required": true
+  },
+  "budgets": {
+    "calibration_simulator_limit": 1200,
+    "calibration_optimizer_limit": 0,
+    "primary_capture_upper_bound": 100,
+    "bank_restore_upper_bound": 100,
+    "branch_upper_bound": 1000,
+    "shared_initialization_reserve_limit": 1200,
+    "reserve_scope": "calibration_initialization_replacements",
+    "global_simulator_limit": 50000,
+    "global_optimizer_limit": 51200,
+    "before": {
+      "ledger_sha256": "8af52eeec7a34958d64205790010160cf04393f8db995c6b4707916c0f3dee2d",
+      "optimizer_updates": 51200,
+      "reserve_used": 0,
+      "simulator_attempts": 44869
+    }
+  },
+  "scene_prefix": {
+    "records": 700,
+    "bytes": 471628,
+    "sha256": "881f3f0b4e191175801c9ef76b22903af6e258e8a73ddf008bd82c44301d60f8",
+    "original_snapshot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_preparations/calibration_pending_v1/scene_registry_before.jsonl",
+    "frozen_snapshot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_protocols/calibration_v1/scene_registry_before.jsonl",
+    "live_prefix_matches": true,
+    "live_append_allowed": true,
+    "live_scene_and_ledger_not_in_freeze": true
+  },
+  "authorization_inventory": {
+    "references": 163,
+    "original_and_snapshot_hashes_checked": 326,
+    "all_nested_ready_references_present": true,
+    "absolute_and_relative_refs_in_same_freeze": true,
+    "referenced_npz_files_hashed_only": 2,
+    "model_checkpoint_payloads_deserialized": 0,
+    "inherited_entries_preserved": 1124
+  },
+  "checks": {
+    "cpu_v2_tests": 79,
+    "cpu_errors": 0,
+    "cpu_failures": 0,
+    "current_tested_code_files": 9,
+    "ready_snapshot_same_bytes": true,
+    "pending_contract_exact": true,
+    "preparation_binding_exact": true,
+    "original_scientific_parameters_unchanged": true,
+    "only_calibration_and_scoped_initialization_reserve_active": true,
+    "explicit_global_acceptance": {
+      "fallback_method": "alarm_replan10",
+      "no_cut_difference": 0,
+      "primary_method": "post",
+      "replicates": 2,
+      "rule": "mean_paired_post_minus_replan_strictly_positive",
+      "source_denominator": 100
+    },
+    "selection_seal_authorized": false,
+    "heldout_authorized": false
+  },
+  "launch_metadata_available": true,
+  "launch_metadata": {
+    "started_utc": "2026-09-17T02:41:18.830118+00:00",
+    "pid": 582068,
+    "controller_pid": 581890,
+    "command": [
+      "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+      "-u",
+      "-m",
+      "experiments.native10_training_20260916.calibration_runner_v1",
+      "launch",
+      "--config",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_protocols/calibration_v1/config.json",
+      "--freeze",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_protocols/calibration_v1/freeze.json",
+      "--stage",
+      "calibration",
+      "--bank-version",
+      "calibration_policy_v1",
+      "--wave-id",
+      "calibration_v1_01",
+      "--workers",
+      "32"
+    ],
+    "config_sha256": "c04125ae474316783e7dd6ca74c799d5441299801f22cd0910889f98511d7382",
+    "freeze_sha256": "d181899e5ccf70177db5fee6267ec9f102f4aae6e437e42f7a0eb86dc9800d1e",
+    "ready_sha256": "5cec3558223d18ba9f2b160c478590b8d0ec9b161989f794e6dbcd7983f10138",
+    "stage_cap": 1200,
+    "optimizer_updates": 0,
+    "primary_capture_limit": 100,
+    "bank_restore_limit": 100,
+    "branch_limit": 1000,
+    "lifecycle_owned_by_runner": true,
+    "loaded_workers_at_launch": 0
+  },
+  "operations_performed": {
+    "model_calls": 0,
+    "weight_deserializations": 0,
+    "simulator_calls": 0,
+    "optimizer_updates": 0,
+    "tests_run": 0,
+    "policy_outcome_reads": 0,
+    "job_launches": 0,
+    "existing_file_edits": 0
+  },
+  "limitations": [
+    "Authorization refs and their immutable snapshots were byte-hashed; no entire legacy model stack or trajectory collection was re-audited.",
+    "Registration/prefix binding does not establish uniqueness or success of newly captured calibration scenes; runtime guards perform those checks.",
+    "No calibration outcomes or selection proposal were read or computed. Selection sealing and heldout remain separately locked."
+  ]
+}

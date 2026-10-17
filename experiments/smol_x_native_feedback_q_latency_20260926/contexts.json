@@ -1,0 +1,689 @@
+{
+  "created_utc": "2026-09-26T03:29:20.261911+00:00",
+  "scope": "Shared real RGB/proprio/action snapshots for native SmolVLA and X-VLA timing; no new collection or closed-loop evaluation",
+  "count": 20,
+  "per_base_context_count": 20,
+  "unique_physical_snapshots": 20,
+  "shared_across_bases": [
+    "SmolVLA",
+    "X-VLA"
+  ],
+  "tasks": [
+    "disassemble-v3",
+    "pick-place-wall-v3",
+    "shelf-place-v3",
+    "stick-pull-v3",
+    "stick-push-v3"
+  ],
+  "all_cut5": true,
+  "selection": "Reuse exactly the 20 predeclared real snapshots in pi05_parallel_latency_20260926/contexts.json, same set for both bases; no score/outcome selection",
+  "source_manifest": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/pi05_parallel_latency_20260926/contexts.json",
+  "source_trajectory_policy": "pi05, not the previous native 20260925 rollout sources",
+  "source_environment": {
+    "suite": "MetaWorld",
+    "control_hz": 30,
+    "action_scale": 0.015,
+    "camera": "corner2",
+    "input_only_no_env_step": true
+  },
+  "allowed_npz_keys": [
+    "pixels",
+    "agent_pos",
+    "frames",
+    "props",
+    "prefix",
+    "raw",
+    "age",
+    "H"
+  ],
+  "forbidden_cached_feature_keys": [
+    "observed__history",
+    "observed__history_mask",
+    "observed__language",
+    "observed__past_actions",
+    "observed__proprio",
+    "observed__proprio_mask",
+    "observed__remaining"
+  ],
+  "data_access_policy": "Read only allowed keys; recompute visual/language with the current native backbone. Do not read cached pi05 observed__history/language or other pi05 features.",
+  "input_mapping": {
+    "rgb_history": "frames [5,480,480,3] uint8",
+    "proprio_history": "props [5,4]",
+    "past_actions": "clip(prefix[-4:],-1,1), original environment commands",
+    "known_next_five": "clip(raw[age:age+5],-1,1), pi05 source queue used as shared numerical timing input",
+    "current_rgb": "pixels",
+    "current_proprio": "agent_pos",
+    "language": "instruction, native tokenization and input embeddings only"
+  },
+  "npz_schema": {
+    "pixels": {
+      "shape": [
+        480,
+        480,
+        3
+      ],
+      "dtype": "|u1"
+    },
+    "agent_pos": {
+      "shape": [
+        4
+      ],
+      "dtype": "<f8"
+    },
+    "frames": {
+      "shape": [
+        5,
+        480,
+        480,
+        3
+      ],
+      "dtype": "|u1"
+    },
+    "props": {
+      "shape": [
+        5,
+        4
+      ],
+      "dtype": "<f8"
+    },
+    "prefix": {
+      "shape": [
+        5,
+        4
+      ],
+      "dtype": "<f4"
+    },
+    "raw": {
+      "shape": [
+        50,
+        4
+      ],
+      "dtype": "<f4"
+    },
+    "age": {
+      "shape": [],
+      "dtype": "<i8"
+    },
+    "H": {
+      "shape": [],
+      "dtype": "<i8"
+    }
+  },
+  "old_20260925_contexts": {
+    "SmolVLA": {
+      "source_count": 20,
+      "saved_rgb_snapshots": 0,
+      "records": [
+        {
+          "source_id": "efficiency20260925_smolvla_t00",
+          "task": "assembly-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_0/sources/efficiency20260925_smolvla_t00/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_smolvla_t10",
+          "task": "coffee-push-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_0/sources/efficiency20260925_smolvla_t10/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_smolvla_t21",
+          "task": "hammer-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_0/sources/efficiency20260925_smolvla_t21/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_smolvla_t31",
+          "task": "pick-place-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_0/sources/efficiency20260925_smolvla_t31/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_smolvla_t41",
+          "task": "reach-wall-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_0/sources/efficiency20260925_smolvla_t41/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_smolvla_t03",
+          "task": "box-close-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_1/sources/efficiency20260925_smolvla_t03/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_smolvla_t13",
+          "task": "door-close-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_1/sources/efficiency20260925_smolvla_t13/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_smolvla_t23",
+          "task": "handle-press-side-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_1/sources/efficiency20260925_smolvla_t23/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_smolvla_t34",
+          "task": "plate-slide-back-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_1/sources/efficiency20260925_smolvla_t34/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_smolvla_t44",
+          "task": "stick-pull-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_1/sources/efficiency20260925_smolvla_t44/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_smolvla_t05",
+          "task": "button-press-topdown-wall-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_2/sources/efficiency20260925_smolvla_t05/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_smolvla_t15",
+          "task": "door-open-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_2/sources/efficiency20260925_smolvla_t15/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_smolvla_t26",
+          "task": "handle-pull-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_2/sources/efficiency20260925_smolvla_t26/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_smolvla_t36",
+          "task": "plate-slide-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_2/sources/efficiency20260925_smolvla_t36/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_smolvla_t46",
+          "task": "sweep-into-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_2/sources/efficiency20260925_smolvla_t46/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_smolvla_t08",
+          "task": "coffee-button-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_3/sources/efficiency20260925_smolvla_t08/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_smolvla_t18",
+          "task": "drawer-open-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_3/sources/efficiency20260925_smolvla_t18/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_smolvla_t28",
+          "task": "peg-insert-side-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_3/sources/efficiency20260925_smolvla_t28/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_smolvla_t39",
+          "task": "push-wall-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_3/sources/efficiency20260925_smolvla_t39/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_smolvla_t49",
+          "task": "window-open-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_3/sources/efficiency20260925_smolvla_t49/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        }
+      ]
+    },
+    "X-VLA": {
+      "source_count": 20,
+      "saved_rgb_snapshots": 0,
+      "records": [
+        {
+          "source_id": "efficiency20260925_xvla_t00",
+          "task": "assembly-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_4/sources/efficiency20260925_xvla_t00/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_xvla_t10",
+          "task": "coffee-push-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_4/sources/efficiency20260925_xvla_t10/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_xvla_t21",
+          "task": "hammer-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_4/sources/efficiency20260925_xvla_t21/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_xvla_t31",
+          "task": "pick-place-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_4/sources/efficiency20260925_xvla_t31/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_xvla_t41",
+          "task": "reach-wall-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_4/sources/efficiency20260925_xvla_t41/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_xvla_t03",
+          "task": "box-close-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_5/sources/efficiency20260925_xvla_t03/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_xvla_t13",
+          "task": "door-close-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_5/sources/efficiency20260925_xvla_t13/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_xvla_t23",
+          "task": "handle-press-side-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_5/sources/efficiency20260925_xvla_t23/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_xvla_t34",
+          "task": "plate-slide-back-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_5/sources/efficiency20260925_xvla_t34/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_xvla_t44",
+          "task": "stick-pull-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_5/sources/efficiency20260925_xvla_t44/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_xvla_t05",
+          "task": "button-press-topdown-wall-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_6/sources/efficiency20260925_xvla_t05/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_xvla_t15",
+          "task": "door-open-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_6/sources/efficiency20260925_xvla_t15/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_xvla_t26",
+          "task": "handle-pull-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_6/sources/efficiency20260925_xvla_t26/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_xvla_t36",
+          "task": "plate-slide-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_6/sources/efficiency20260925_xvla_t36/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_xvla_t46",
+          "task": "sweep-into-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_6/sources/efficiency20260925_xvla_t46/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_xvla_t08",
+          "task": "coffee-button-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_7/sources/efficiency20260925_xvla_t08/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_xvla_t18",
+          "task": "drawer-open-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_7/sources/efficiency20260925_xvla_t18/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_xvla_t28",
+          "task": "peg-insert-side-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_7/sources/efficiency20260925_xvla_t28/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_xvla_t39",
+          "task": "push-wall-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_7/sources/efficiency20260925_xvla_t39/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        },
+        {
+          "source_id": "efficiency20260925_xvla_t49",
+          "task": "window-open-v3",
+          "metadata_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_7/sources/efficiency20260925_xvla_t49/CONTEXT.json",
+          "eligible": true,
+          "cut": 5,
+          "saved_rgb_snapshot": false
+        }
+      ]
+    }
+  },
+  "old_context_limit": "Old native benchmark persisted metadata/timings only, not RGB history. Exact old40 cut snapshots unavailable without new collection. New shared pi05-origin RGB set differs and must be disclosed.",
+  "contexts": [
+    {
+      "context_index": 0,
+      "source_id": "MECH1_test_disassemble-v3_000",
+      "task": "disassemble-v3",
+      "instruction": "Pick a nut out of a peg",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_disassemble-v3_000/cut005/snapshot/state.npz",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_disassemble-v3_000/cut005/snapshot/STATE.json",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295
+    },
+    {
+      "context_index": 1,
+      "source_id": "MECH1_test_disassemble-v3_001",
+      "task": "disassemble-v3",
+      "instruction": "Pick a nut out of a peg",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_disassemble-v3_001/cut005/snapshot/state.npz",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_disassemble-v3_001/cut005/snapshot/STATE.json",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295
+    },
+    {
+      "context_index": 2,
+      "source_id": "MECH1_test_disassemble-v3_002",
+      "task": "disassemble-v3",
+      "instruction": "Pick a nut out of a peg",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_disassemble-v3_002/cut005/snapshot/state.npz",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_disassemble-v3_002/cut005/snapshot/STATE.json",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295
+    },
+    {
+      "context_index": 3,
+      "source_id": "MECH1_test_disassemble-v3_003",
+      "task": "disassemble-v3",
+      "instruction": "Pick a nut out of a peg",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_disassemble-v3_003/cut005/snapshot/state.npz",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_disassemble-v3_003/cut005/snapshot/STATE.json",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295
+    },
+    {
+      "context_index": 4,
+      "source_id": "MECH1_test_pick-place-wall-v3_000",
+      "task": "pick-place-wall-v3",
+      "instruction": "Pick a puck, bypass a wall and place the puck",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_pick-place-wall-v3_000/cut005/snapshot/state.npz",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_pick-place-wall-v3_000/cut005/snapshot/STATE.json",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295
+    },
+    {
+      "context_index": 5,
+      "source_id": "MECH1_test_pick-place-wall-v3_001",
+      "task": "pick-place-wall-v3",
+      "instruction": "Pick a puck, bypass a wall and place the puck",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_pick-place-wall-v3_001/cut005/snapshot/state.npz",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_pick-place-wall-v3_001/cut005/snapshot/STATE.json",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295
+    },
+    {
+      "context_index": 6,
+      "source_id": "MECH1_test_pick-place-wall-v3_002",
+      "task": "pick-place-wall-v3",
+      "instruction": "Pick a puck, bypass a wall and place the puck",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_pick-place-wall-v3_002/cut005/snapshot/state.npz",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_pick-place-wall-v3_002/cut005/snapshot/STATE.json",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295
+    },
+    {
+      "context_index": 7,
+      "source_id": "MECH1_test_pick-place-wall-v3_003",
+      "task": "pick-place-wall-v3",
+      "instruction": "Pick a puck, bypass a wall and place the puck",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_pick-place-wall-v3_003/cut005/snapshot/state.npz",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_pick-place-wall-v3_003/cut005/snapshot/STATE.json",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295
+    },
+    {
+      "context_index": 8,
+      "source_id": "MECH1_test_shelf-place-v3_000",
+      "task": "shelf-place-v3",
+      "instruction": "Pick and place a puck onto a shelf",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_shelf-place-v3_000/cut005/snapshot/state.npz",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_shelf-place-v3_000/cut005/snapshot/STATE.json",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295
+    },
+    {
+      "context_index": 9,
+      "source_id": "MECH1_test_shelf-place-v3_001",
+      "task": "shelf-place-v3",
+      "instruction": "Pick and place a puck onto a shelf",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_shelf-place-v3_001/cut005/snapshot/state.npz",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_shelf-place-v3_001/cut005/snapshot/STATE.json",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295
+    },
+    {
+      "context_index": 10,
+      "source_id": "MECH1_test_shelf-place-v3_002",
+      "task": "shelf-place-v3",
+      "instruction": "Pick and place a puck onto a shelf",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_shelf-place-v3_002/cut005/snapshot/state.npz",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_shelf-place-v3_002/cut005/snapshot/STATE.json",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295
+    },
+    {
+      "context_index": 11,
+      "source_id": "MECH1_test_shelf-place-v3_003",
+      "task": "shelf-place-v3",
+      "instruction": "Pick and place a puck onto a shelf",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_shelf-place-v3_003/cut005/snapshot/state.npz",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_shelf-place-v3_003/cut005/snapshot/STATE.json",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295
+    },
+    {
+      "context_index": 12,
+      "source_id": "MECH1_test_stick-pull-v3_000",
+      "task": "stick-pull-v3",
+      "instruction": "Grasp a stick and pull a box with the stick",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-pull-v3_000/cut005/snapshot/state.npz",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-pull-v3_000/cut005/snapshot/STATE.json",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295
+    },
+    {
+      "context_index": 13,
+      "source_id": "MECH1_test_stick-pull-v3_001",
+      "task": "stick-pull-v3",
+      "instruction": "Grasp a stick and pull a box with the stick",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-pull-v3_001/cut005/snapshot/state.npz",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-pull-v3_001/cut005/snapshot/STATE.json",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295
+    },
+    {
+      "context_index": 14,
+      "source_id": "MECH1_test_stick-pull-v3_002",
+      "task": "stick-pull-v3",
+      "instruction": "Grasp a stick and pull a box with the stick",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-pull-v3_002/cut005/snapshot/state.npz",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-pull-v3_002/cut005/snapshot/STATE.json",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295
+    },
+    {
+      "context_index": 15,
+      "source_id": "MECH1_test_stick-pull-v3_003",
+      "task": "stick-pull-v3",
+      "instruction": "Grasp a stick and pull a box with the stick",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-pull-v3_003/cut005/snapshot/state.npz",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-pull-v3_003/cut005/snapshot/STATE.json",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295
+    },
+    {
+      "context_index": 16,
+      "source_id": "MECH1_test_stick-push-v3_000",
+      "task": "stick-push-v3",
+      "instruction": "Grasp a stick and push a box using the stick",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-push-v3_000/cut005/snapshot/state.npz",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-push-v3_000/cut005/snapshot/STATE.json",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295
+    },
+    {
+      "context_index": 17,
+      "source_id": "MECH1_test_stick-push-v3_001",
+      "task": "stick-push-v3",
+      "instruction": "Grasp a stick and push a box using the stick",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-push-v3_001/cut005/snapshot/state.npz",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-push-v3_001/cut005/snapshot/STATE.json",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295
+    },
+    {
+      "context_index": 18,
+      "source_id": "MECH1_test_stick-push-v3_002",
+      "task": "stick-push-v3",
+      "instruction": "Grasp a stick and push a box using the stick",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-push-v3_002/cut005/snapshot/state.npz",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-push-v3_002/cut005/snapshot/STATE.json",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295
+    },
+    {
+      "context_index": 19,
+      "source_id": "MECH1_test_stick-push-v3_003",
+      "task": "stick-push-v3",
+      "instruction": "Grasp a stick and push a box using the stick",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-push-v3_003/cut005/snapshot/state.npz",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-push-v3_003/cut005/snapshot/STATE.json",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "schema": "corrector_executor_result_v1",
+  "task_id": "A_LONG_TASK_WAKEUP_V1",
+  "task_revision": 1,
+  "node": "A",
+  "utc": "2026-09-21T17:44:53.020154+00:00",
+  "status": "DEPLOYED_CALLBACK_PENDING",
+  "implementation_deployed": true,
+  "actual_callback_ACK_verified": false,
+  "offline_original_thread_resume_verified": false,
+  "physical_window_closed_test": null,
+  "host_reboot_survival": false,
+  "synthetic_events_registered_total": 2,
+  "synthetic_events_limit": 2,
+  "original_ACK": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_LONG_TASK_WAKEUP_V1_ACK.json",
+    "sha256": "9a720150667374b78a7fc86ce636f876b9c85a2c49771e5b29fcfc6398c8adcc"
+  },
+  "continuation_ACK": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_LONG_TASK_WAKEUP_V1_ACK_r2.json",
+    "sha256": "e6e1e7db9dc03bed61781a9b2e0efa33726eb7bd4aabf2484d3c544a2d41d270"
+  },
+  "report": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_LONG_TASK_WAKEUP_V1_REPORT.md",
+    "sha256": "cf6d6777c0223c4938d378cc1b9f784aae7cdbea74872eb11c0cb0d3147ec17e"
+  },
+  "authorization": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/LONG_TASK_EVENT_WAKEUP_V1.json",
+    "sha256": "6cd1233b0e345bbea2a8320f6126897364c89c6964e92975be4d80c1291766f6"
+  },
+  "code_manifest": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/wakeup_adapter_v1/CODE_MANIFEST.json",
+    "sha256": "252b907bb1edd5857c61661593d2add99ee80f35d902b5f8517ee012e3963662"
+  },
+  "cpu_checks": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/wakeup_adapter_v1/CPU_CHECK_RESULT.json",
+    "sha256": "6a4dfd56a9ac4fca50e1bce7b7e22d96af5aeaa84474b8054e3f62a81866e004"
+  },
+  "deployment": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/A/wakeup_adapter_v1/DEPLOYMENT_VERIFICATION.json",
+    "sha256": "62f2f445c46063266eabd0a79bc9875300b80fc85f4476d6ad3e25f52955cf25"
+  },
+  "registration": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/A/wakeup_adapter_v1/REGISTRATION.json",
+    "sha256": "e538de1d6b2a0c9f695bc027ecdc67cd2e7f52508ac7b54b3c79bc4c304b7983"
+  },
+  "stable_handoff": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_MAIN_ONCE_V1/STABLE_HANDOFF.json",
+    "sha256": "eef9cef43aa8e7ff61a89ee8388741cd5d6f3e14a19357c01a158f056e697a1c"
+  },
+  "callback_event": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/A/wakeup_adapter_v1/outbox/A_CONTROL_ONLY_DETACHED_WAKEUP_TEST_2/EVENT.json",
+    "sha256": "b9941d6a7799cc4d31ecae164087527a72606642223f9701798e1b479746168f"
+  },
+  "future_wakeup_ready": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/A/wakeup_adapter_v1/WAKEUP_READY.json",
+  "callback_ack_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/A/wakeup_adapter_v1/outbox/A_CONTROL_ONLY_DETACHED_WAKEUP_TEST_2/HANDLER_ACK.json",
+  "observer": {
+    "pid": 1362117,
+    "start_ticks": 405240198,
+    "pgid": 1362117,
+    "ppid": 1,
+    "state": "R",
+    "host": "trial-303224955-trialrun-303224955-worker-0",
+    "boot_id": "9011c00c-6953-4cb3-a724-1a6f90d196d4"
+  },
+  "formal_chain_continues": true,
+  "formal_code_or_commands_modified": false,
+  "formal_launches_in_this_task": 0,
+  "hardware_queries_in_this_task": 0,
+  "actual_event_startup_ACK_mode": "active_session_manual_read; not unattended proof",
+  "limitations": [
+    "Default local app-server proxy socket absent; no replacement server started.",
+    "Native resume requires original session writer release; observed busy at registration.",
+    "Normal main-chain events retain existing frozen notifier ownership and finite attempts; sidecar does not reset their budgets.",
+    "Host/container restart startup is not verified; persistent event/ACK reconciliation required."
+  ],
+  "next": "end current turn; do not wait/poll for own callback; ACK-only callback will permit background READY evidence",
+  "no_automatic_scientific_retry": true
+}

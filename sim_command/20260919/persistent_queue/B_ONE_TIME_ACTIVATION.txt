@@ -1,0 +1,8 @@
+请在服务器B执行端读取并落实：
+/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/tasks/B_QUEUE_JOIN_V1_r2.md
+
+当前分工和授权以 persistent_queue/CONTROL.json 指向的 AUTHORIZATION_V2.json 为准。已有V1 join-waiter只能等待旧包，不能自动升级；本次已授权核对自有PID身份后迁移到V2，保留旧日志、不碰无关进程或guard。完成独立后台部署后无需保持对话窗口。
+
+B不再领取共同池源，475剩余源全部A；B负责外部基线、E1/E6消融和E8适用性。继续B11并立即执行 tasks/B_INDEPENDENT_PIPELINE_PREP_V1.md 的CPU准备，已有输入的阶段先交可执行提案，不等待全部数据。正式模型计算待各自一次阶段冻结，之后自动批次运行。目标8卡真实任务；工作期间全holder停算，真正无可执行任务且进程/发布排空后恢复。B故障不得暂停A。
+
+A公共包未到可保留后台等待；这不是DAEMON_READY。回执写r2新路径，不覆盖r1；本次只需一次接入迁移，不要求用户逐批打开对话。

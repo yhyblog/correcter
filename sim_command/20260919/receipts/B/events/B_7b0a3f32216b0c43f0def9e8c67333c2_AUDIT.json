@@ -1,0 +1,92 @@
+{
+  "schema": "B_dependency_event_audit_v1",
+  "event_id": "B_7b0a3f32216b0c43f0def9e8c67333c2",
+  "task_id": "B_QUEUE_JOIN_V1",
+  "run_id": "91917217539fdbee62da10698a63accc2864ce6c6c83ff414006d316c7984f32",
+  "node": "B",
+  "hostname": "trial-303225685-trialrun-303225685-worker-0",
+  "executor_thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+  "at_utc": "2026-09-22T11:07:53.637093+00:00",
+  "outcome": "audited_complete",
+  "audit_scope": "dependency handled; new authorized task started and corrected recovery stably running; science not yet terminal",
+  "event_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/outbox/B_7b0a3f32216b0c43f0def9e8c67333c2.json",
+  "dependency_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/dependency_changes/91917217539fdbee62da10698a63accc2864ce6c6c83ff414006d316c7984f32.json",
+  "current_control": {
+    "revision": 69,
+    "queue_revision": 37,
+    "task_board_revision": 102,
+    "active_B_tasks": [
+      "B_D24_POST_TRIGGER_MODES_V1"
+    ],
+    "stop_requested": false,
+    "legacy_dependency_ready_tasks": [],
+    "note": "Current CONTROL and explicit task board release govern admission even though legacy ready filter is empty."
+  },
+  "authorization": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/TRIGGER_TIMING_MULTIPLICITY_AUTHORIZATION_V1.json",
+    "sha256": "a205ddbea9443793d47fd0c38f589ff0d2779a4eaabbf8485b0ce5930ba1177a"
+  },
+  "execution": {
+    "new_task": "B_D24_POST_TRIGGER_MODES_V1",
+    "initial_run": "D24_B_POST_TRIGGER_MODES_r1",
+    "initial_terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_POST_TRIGGER_MODES_V1/RESULT.json",
+    "initial_attempts": 46,
+    "initial_valid_retained": 39,
+    "initial_interrupted_technical_attempts": 7,
+    "initial_failure": "transient FileNotFoundError reading concurrently updated CONTROL.json caused orderly whole-group abort",
+    "correction": "retry only transient authority file I/O/JSON read errors for bounded30s; do not reuse cached authorization or ignore stop/change",
+    "recovery_run": "D24_B_POST_TRIGGER_MODES_r2",
+    "recovery_claim": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_POST_TRIGGER_MODES_V1/recovery_r2/CLAIM.json",
+    "recovery_plan": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_POST_TRIGGER_MODES_V1/recovery_r2/config/RECOVERY_PLAN.json",
+    "recovery_entries": 4961,
+    "first_entries_remaining": 4954,
+    "corrected_retry_entries": 7,
+    "valid_replays": 0,
+    "automatic_duplicate_launches": 0,
+    "independent_GPU_preflights": 0,
+    "new_training_updates": 0,
+    "original_wall_deadline_preserved": 1790102926.704207,
+    "prior_node_counter_preserved": 6687
+  },
+  "validation": {
+    "CPU_trigger_checks": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_POST_TRIGGER_MODES_V1/evidence/CPU_TRIGGER_CHECKS.json",
+    "CPU_publication_checks": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_POST_TRIGGER_MODES_V1/evidence/CPU_PUBLICATION_CHECKS.json",
+    "CPU_recovery_checks": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_POST_TRIGGER_MODES_V1/recovery_r2/evidence/RECOVERY_CPU_CHECKS.json",
+    "science_and_schedule_unchanged_during_repair": true,
+    "actual_models_ready": 8,
+    "actual_worker_GPU_UUIDs_unique": 8,
+    "recovery_formal_samples_returned": 162,
+    "corrected_retry_returns": 7,
+    "recovery_technical_failures_snapshot": 0,
+    "job_advance_observed": true
+  },
+  "background": {
+    "status": "stable_formal_compute",
+    "supervisor": {
+      "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+      "hostname": "trial-303225685-trialrun-303225685-worker-0",
+      "pid": 846670,
+      "session_id": 846670,
+      "start_ticks": 99054979
+    },
+    "manager": {
+      "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+      "host": "trial-303225685-trialrun-303225685-worker-0",
+      "pgid": 846928,
+      "pid": 846928,
+      "ppid": 846696,
+      "start_ticks": 99057052,
+      "state": "R"
+    },
+    "whole_wave_holders_off": true,
+    "restoration": "existing guard restores occupancy after entire formal family exits, including failure",
+    "terminal_trigger_registered": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_B_POST_TRIGGER_MODES_r2__D24_B_POST_TRIGGER_MODES_r2__1.json",
+    "observer_alive": true,
+    "observer_pid": 452085,
+    "runtime_evidence": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/events/B_7b0a3f32216b0c43f0def9e8c67333c2_RUNTIME.json",
+    "stable_handoff": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_POST_TRIGGER_MODES_V1/recovery_r2/STABLE_HANDOFF.json",
+    "wakeup_readiness": "original_thread_ACK_verified_offline_pending"
+  },
+  "decision": "Continue the finite eight-worker corrected queue automatically, aggregate retained results and new attempts with technical history preserved, publish cells, and handle terminal events in original B thread. A/C independent.",
+  "A_waits_for_B": false
+}

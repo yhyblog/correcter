@@ -1,0 +1,193 @@
+{
+  "batch_id": "D24_C_MW_VELOCITY_r2",
+  "run_id": "D24_C_MW_VELOCITY_r2",
+  "kind": "gpu",
+  "max_workers": 8,
+  "jobs": [
+    {
+      "job_id": "smol50k_Velocity_shard0_r2",
+      "kind": "smolvla",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/configs/smol50k_Velocity_shard0_r2.json",
+      "gpus": [
+        0
+      ],
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/smol50k_Velocity_shard0_r2",
+      "timeout_seconds": 43200,
+      "argv": [
+        "/usr/bin/python",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/post_job.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/configs/smol50k_Velocity_shard0_r2.json"
+      ],
+      "env": {
+        "XDG_RUNTIME_DIR": "/tmp/corrector_C_D24_xdg/smol50k_Velocity_shard0_r2",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    {
+      "job_id": "smol50k_Velocity_shard1_r2",
+      "kind": "smolvla",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/configs/smol50k_Velocity_shard1_r2.json",
+      "gpus": [
+        1
+      ],
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/smol50k_Velocity_shard1_r2",
+      "timeout_seconds": 43200,
+      "argv": [
+        "/usr/bin/python",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/post_job.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/configs/smol50k_Velocity_shard1_r2.json"
+      ],
+      "env": {
+        "XDG_RUNTIME_DIR": "/tmp/corrector_C_D24_xdg/smol50k_Velocity_shard1_r2",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    {
+      "job_id": "smol50k_Velocity_shard2_r2",
+      "kind": "smolvla",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/configs/smol50k_Velocity_shard2_r2.json",
+      "gpus": [
+        2
+      ],
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/smol50k_Velocity_shard2_r2",
+      "timeout_seconds": 43200,
+      "argv": [
+        "/usr/bin/python",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/post_job.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/configs/smol50k_Velocity_shard2_r2.json"
+      ],
+      "env": {
+        "XDG_RUNTIME_DIR": "/tmp/corrector_C_D24_xdg/smol50k_Velocity_shard2_r2",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    {
+      "job_id": "smol50k_Velocity_shard3_r2",
+      "kind": "smolvla",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/configs/smol50k_Velocity_shard3_r2.json",
+      "gpus": [
+        3
+      ],
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/smol50k_Velocity_shard3_r2",
+      "timeout_seconds": 43200,
+      "argv": [
+        "/usr/bin/python",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/post_job.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/configs/smol50k_Velocity_shard3_r2.json"
+      ],
+      "env": {
+        "XDG_RUNTIME_DIR": "/tmp/corrector_C_D24_xdg/smol50k_Velocity_shard3_r2",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    {
+      "job_id": "xvla30k_Velocity_shard0_r2",
+      "kind": "xvla",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/configs/xvla30k_Velocity_shard0_r2.json",
+      "gpus": [
+        4
+      ],
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/xvla30k_Velocity_shard0_r2",
+      "timeout_seconds": 43200,
+      "argv": [
+        "/usr/bin/python",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/post_job.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/configs/xvla30k_Velocity_shard0_r2.json"
+      ],
+      "env": {
+        "XDG_RUNTIME_DIR": "/tmp/corrector_C_D24_xdg/xvla30k_Velocity_shard0_r2",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    {
+      "job_id": "xvla30k_Velocity_shard1_r2",
+      "kind": "xvla",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/configs/xvla30k_Velocity_shard1_r2.json",
+      "gpus": [
+        5
+      ],
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/xvla30k_Velocity_shard1_r2",
+      "timeout_seconds": 43200,
+      "argv": [
+        "/usr/bin/python",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/post_job.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/configs/xvla30k_Velocity_shard1_r2.json"
+      ],
+      "env": {
+        "XDG_RUNTIME_DIR": "/tmp/corrector_C_D24_xdg/xvla30k_Velocity_shard1_r2",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    {
+      "job_id": "xvla30k_Velocity_shard2_r2",
+      "kind": "xvla",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/configs/xvla30k_Velocity_shard2_r2.json",
+      "gpus": [
+        6
+      ],
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/xvla30k_Velocity_shard2_r2",
+      "timeout_seconds": 43200,
+      "argv": [
+        "/usr/bin/python",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/post_job.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/configs/xvla30k_Velocity_shard2_r2.json"
+      ],
+      "env": {
+        "XDG_RUNTIME_DIR": "/tmp/corrector_C_D24_xdg/xvla30k_Velocity_shard2_r2",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    {
+      "job_id": "xvla30k_Velocity_shard3_r2",
+      "kind": "xvla",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/configs/xvla30k_Velocity_shard3_r2.json",
+      "gpus": [
+        7
+      ],
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/xvla30k_Velocity_shard3_r2",
+      "timeout_seconds": 43200,
+      "argv": [
+        "/usr/bin/python",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/post_job.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/configs/xvla30k_Velocity_shard3_r2.json"
+      ],
+      "env": {
+        "XDG_RUNTIME_DIR": "/tmp/corrector_C_D24_xdg/xvla30k_Velocity_shard3_r2",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    }
+  ],
+  "hold_idle": false,
+  "formal_holder_policy": "whole formal wave all holders off",
+  "handoff_timeout_seconds": 300,
+  "baseline_index": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/VALID_N_INDEX.json",
+  "post_batch": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E8_POST_V1_r1/MW_POST_BATCH.json",
+  "budget": {
+    "planned_test": 1000,
+    "development": 0,
+    "total_C_cap": 2400,
+    "optimizer_updates": 0,
+    "automatic_retry": false,
+    "prior_physical_attempts": 8,
+    "authorized_corrected_retries": 8,
+    "first_test_units_remaining": 992,
+    "planned_physical_attempts_this_wave": 1000,
+    "total_after_wave_max": 1008
+  }
+}

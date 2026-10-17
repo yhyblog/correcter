@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "original_sha256": "d499982dff72c3b74ddab0e13e359edccb5f282900c534030b3816b58495fcaf",
+  "patched_sha256": "7910c567a47ddf68294d92fc9698cc780aeb130ddefde0337414bfcd88cb85a4",
+  "AST_parsed": true,
+  "unchanged_function_bytes": [
+    "query",
+    "descendant",
+    "log",
+    "stop",
+    "guard",
+    "is_running",
+    "start",
+    "main"
+  ],
+  "only_changed_existing_function": "run_formal",
+  "added_functions": [
+    "handoff_timeout_seconds"
+  ],
+  "post_spawn_signal_wait_and_lock_tail_byte_identical": true,
+  "daemon_logic_changed": false,
+  "live_guard_imported": false,
+  "shared_installations": 0,
+  "daemon_restarts": 0,
+  "actual_locks_queries_signals": 0
+}

@@ -1,0 +1,14 @@
+执行端A交新任务 A10_PV_AUTH_METADATA_CPU_V1 r1：CPU_READY，当前 CONTROL24/TASK_BOARD31 未改，计算/真实launcher/claim/holder查询停算/删除均0。
+RESULT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PV_AUTH_METADATA_CPU_V1_RESULT.json
+RESULT SHA256: aabf9f9782d4ad3e6bfbcf445415621a5a15b91cacfef9e139a11256e48368e5
+REPORT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PV_AUTH_METADATA_CPU_V1_REPORT.md
+CPU_READY: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/CPU_READY.json
+PROPOSAL: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/proposal/PROPOSAL.json
+PROPOSAL SHA256: 9e7a80a211eba6a4e3c65bd2fb3764fe0fbd974c4190c9f2e77091c04a62e02c
+独立未来 task=A10_PV_OFFLINE_PREFLIGHT_V2 / release=P10_A_PV_OFFLINE_PREFLIGHT_V2 / revision1。完整 BOARD_TASK_TEMPLATE 与 CONTROL_REQUIRED.board_task 同源：board.status=ready；真实 release.status=released；当前 RELEASE_TEMPLATE=UNAUTHORIZED_TEMPLATE。run/wave/shard/claim/output/cache均独立V2。
+380代码中377字节不变，仅3文件身份/路径字符串；CONFIG/输入/外部源manifest字节不变，66 caps与1800+30/全A8生命周期不变，无大权重hash、旧包回执不改。
+41实际元数据fixture通过（ready/running通过，released及错identity/revision/caps/5SHA/host/device/cuda拒绝）；3关闭/独占保护检查通过，其中未调用claim，仅实际write_new临时标记+AST；纯JSON入口2检查及CLI、变更AST/bash-n通过。25产物引用/82证据/380代码SHA已核对。
+发布前入口和完整示例: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/PUBLICATION_CHECK_USAGE.md
+同源board: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/proposal/BOARD_TASK_TEMPLATE.json
+差异: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/DIFF_MANIFEST.json；manifest: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/EVIDENCE_MANIFEST.json。
+仅本CPU修订回执；待分析独立V2计算release，未运行真实sh、未重投旧任务，B不变。

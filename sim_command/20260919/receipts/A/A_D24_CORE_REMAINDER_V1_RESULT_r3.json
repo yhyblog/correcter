@@ -1,0 +1,53 @@
+{
+  "task_id": "A_D24_CORE_REMAINDER_V1",
+  "revision": 3,
+  "utc": "2026-09-22T05:24:53.038845+00:00",
+  "status": "E6_ACCEPTED_E3_COMPLETE_GAF_ALREADY_RUNNING",
+  "supersedes_next_actions_only_of_old_r1": true,
+  "old_receipts_unchanged": true,
+  "redelivery_ack": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_CORE_REMAINDER_V1_DECISION_REDELIVERY_ACK_20260922.json",
+    "sha256": "f25bd8770535d4eafc7279b008c0b4b8db16776aaedb8f861698d75c73bf920d"
+  },
+  "E3_final_receipt": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_E3_UNSTARTED_CONTINUATION_V1_RESULT_r2.json",
+    "sha256": "8ece9e51100cb534ebd9c7f055e996ace6d2ece1aed44c1a1c6bff850f29e6cb"
+  },
+  "E3_combined_summary": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_E3_UNSTARTED_CONTINUATION_V1/COMBINED_FINAL_SUMMARY.json",
+    "sha256": "f993b15bda1b202bb48aa0582c22737a89ddc0c77a24127ec03a02b6cab3809d"
+  },
+  "GAF_actual_running_receipt": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_GAF_INTERNAL_HOLDOUT_V1_RESULT_r2.json",
+    "sha256": "eb6cf7ad23d82975a838aa15c61388c6ca1ecd02503e6b00a4c0a33f32f57f62"
+  },
+  "GAF_current_snapshot": {
+    "H": 10,
+    "action_backward_calls": 68760,
+    "attempts": 479,
+    "complete": false,
+    "control_steps": 67474,
+    "critic_forward_calls": 206280,
+    "entered_without_RESULT": 5,
+    "episode_seconds_sum": 2092.531194861047,
+    "flow_calls": 68760,
+    "method": "GAF-v1 adapted",
+    "no_G0_or_once_gate": true,
+    "planned_episodes": 500,
+    "policy_calls": 6876,
+    "same_A_main500_sources": true,
+    "successes": 305,
+    "technical_failures": 0,
+    "terminal_episodes": 474,
+    "training_scope": "15 existing training parents / 2 fixed internal holdout; adapted, not official reproduction or full MT50 training",
+    "utc": "2026-09-22T05:24:52.059710+00:00"
+  },
+  "next_actions": [
+    "Existing GAF daemon continues its already admitted500-source evaluation; do not launch another chain",
+    "On persisted terminal event publish final result and full-group exit/holder restoration evidence",
+    "No pending E3 launch permission or old-dev100 reconstruction gate; E6 and prior47 remain closed"
+  ],
+  "new_scientific_compute_in_this_handler": 0,
+  "new_claims": 0,
+  "new_launches": 0
+}

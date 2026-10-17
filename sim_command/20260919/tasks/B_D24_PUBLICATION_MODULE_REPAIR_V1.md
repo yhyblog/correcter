@@ -1,0 +1,3 @@
+# B_D24_PUBLICATION_MODULE_REPAIR_V1 revision1
+
+立即读取 `deadline_20260924/B_H20_PUBLICATION_MODULE_REPAIR_DECISION_V1.json`，自主修复B H20已确认publication_data缺模块，保留24有效终局，仅原范围976快照未完成单元按当前终局去重接续。此为已授权工程修复，无新科学样本；原H30健康链不打断。对H30只在同类真实失败时复用修复。优先将恢复stage接入普通后台队列，不能继续因existing_unique_parent_owns_stage而永久跳过已退出的partial原阶段。无需等待分析确认；写简短ACK和恢复队列READY/RESULT，全部原错误保留。

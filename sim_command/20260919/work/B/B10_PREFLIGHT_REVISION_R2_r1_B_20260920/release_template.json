@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "campaign_id": "corrector-sim-20260919",
+  "release_id": "P10_B_LVM_PREFLIGHT_V1",
+  "kind": "formal_compute",
+  "status": "draft",
+  "owner": "B",
+  "hostname": "trial-303225685-trialrun-303225685-worker-0",
+  "participating_hosts": [
+    "trial-303225685-trialrun-303225685-worker-0"
+  ],
+  "task_id": "B10_LVM_PREFLIGHT_V1",
+  "task_revision": 1,
+  "job_id": "lvm_gpu_probe_2_r2",
+  "config_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B10_PREFLIGHT_REVISION_R2_r1_B_20260920/config.json",
+  "config_sha256": "4dd56601c7995946dc77c2891e4aff36b31eff51a05586ab77804bc1eabb9d58",
+  "code_manifest_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B10_PREFLIGHT_REVISION_R2_r1_B_20260920/CODE_SNAPSHOT.json",
+  "code_manifest_sha256": "14f209c2fd49d5d6dd30fbd9803f02fb64196a248bfbe95a03f9b89294d26145",
+  "gpu": {
+    "index": 0,
+    "uuid": "GPU-4143840e-6c2e-d4c4-8c60-4005cfa1f917",
+    "name": "NVIDIA H100 80GB HBM3",
+    "driver_version": "535.161.08",
+    "pci_bus_id": "00000000:0F:00.0",
+    "cuda_visible_devices": "GPU-4143840e-6c2e-d4c4-8c60-4005cfa1f917",
+    "logical_device": "cuda:0"
+  },
+  "inputs": {
+    "model": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/corrector_pi05_mt50/h1_k10/best_cosine_model.pt",
+      "sha256": "0efadcfdfde814fc4e929d007ed0b95894de33f0d51e3d3cae512605e223d168",
+      "bytes": 170051647
+    },
+    "model_config": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/corrector_pi05_mt50/h1_k10/config.json",
+      "sha256": "4f7cc842b2e17bb5ff526dfcdfd7e94a680d1431bd9cf7af1b9f88373bc0b232",
+      "bytes": 981
+    }
+  },
+  "limits": {
+    "simulator_attempts": 0,
+    "completed_rollouts": 0,
+    "vla_sampling_calls": 0,
+    "model_gpu_inference_calls": 2,
+    "optimizer_updates": 0,
+    "optimizer_attempts": 0,
+    "model_initializations": 1,
+    "training_forward_calls": 0,
+    "training_updates": 0,
+    "env_steps": 0,
+    "environment_reset_calls": 0,
+    "flow_forward_calls": 0,
+    "vla_backward_calls": 0,
+    "critic_forward_calls": 0,
+    "critic_backward_calls": 0
+  },
+  "timeout_seconds": 180,
+  "termination_grace_seconds": 20,
+  "retry_cap": 0,
+  "valid_from_utc": null,
+  "expires_at_utc": null,
+  "wave_id": "corrector-sim-20260919-B-LVM-preflight-R2-independent",
+  "run_id": "B10_LVM_PREFLIGHT_V1_r1_B_R2_once",
+  "output_dir": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B10_LVM_PREFLIGHT_V1/B10_LVM_PREFLIGHT_V1_r1_B_R2_once",
+  "note": "Draft CPU proposal only. Analysis alone sets released/time window and active control/task metadata after acceptance. No automatic retries, shared wave or training."
+}

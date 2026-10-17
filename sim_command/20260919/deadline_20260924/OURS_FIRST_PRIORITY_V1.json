@@ -1,0 +1,59 @@
+{
+  "schema": "corrector_priority_override_v1",
+  "issued_at_utc": "2026-09-22T05:57:51.719530+00:00",
+  "status": "effective",
+  "authority": "Explicit user instruction: prioritize our-method experiments; external-method reproduction after those finish",
+  "instruction_zh": "先完成本方法主表、消融、触发对照、跨底座/跨环境适用性和既有数据成本整理，再安排尚未开始的外部复现。",
+  "preserve_admitted_jobs": true,
+  "completed_results_reused_only": true,
+  "new_external_reproduction_admission": false,
+  "external_scope_after_ours": "Only already-planned scope after own-method completion or explicit reprioritization; no automatic new baselines",
+  "do_not_resume_475": true,
+  "strict_consistency_checks_required": false,
+  "no_new_GPU_preflight": true,
+  "owners": {
+    "A": {
+      "task_id": "A_D24_OURS_E5_REPORT_V1",
+      "brief": "tasks/A_D24_OURS_E5_REPORT_V1.md",
+      "scope": "CPU-only own-method E5 costs/parameter counts from saved records; independent of B/C",
+      "model_inference": 0,
+      "simulator_attempts": 0,
+      "optimizer_updates": 0,
+      "new_scientific_GPU_work": false
+    },
+    "B": {
+      "task_id": "B_D24_EXTENSION_REMAINDER_V1",
+      "scope": "Continue admitted LIBERO Post development/fit/test; then native Velocity if correctly adapted within original scope",
+      "current_protocol": "Post operator transfer, no D/G0, not Full; disclose actual variant",
+      "do_not_duplicate_Smol_X_Velocity": true
+    },
+    "C": {
+      "task_id": "C_D24_MW_VELOCITY_V1",
+      "scope": "SmolVLA/X-VLA native Velocity adaptation and original500 each; counts as our-method applicability",
+      "no_N_Post_SFT_replay": true
+    }
+  },
+  "unchanged_compute_authorizations": [
+    {
+      "path": "deadline_20260924/CONTINUATION_AUTHORIZATION_20260922_V1.json",
+      "sha256": "3e6a0aab7abe79365192c953d45b4e13b44139ab26ffadb6f7c3f82547107d8b"
+    },
+    {
+      "path": "deadline_20260924/C_AUTHORIZATION_V1.json",
+      "sha256": "11dddb6797ce174a03c9161a68658531902418699fa6e1ee07b5f1872a26378e"
+    }
+  ],
+  "CPU_reporting_task_authorization": {
+    "task_id": "A_D24_OURS_E5_REPORT_V1",
+    "host": "trial-303224955-trialrun-303224955-worker-0",
+    "status": "authorized",
+    "requires_further_permission": false,
+    "new_GPU_or_training_budget": 0,
+    "allowed": "existing artifacts, configurations and small-module CPU parameter inspection; write isolated analysis results"
+  },
+  "deadline": {
+    "stop_new_experiments": "2026-09-23T12:00:00Z",
+    "tables_due": "2026-09-23T15:00:00Z"
+  },
+  "formal_wave_holder_policy": "all8 holders off throughout formal group; restore after full group exit; CPU-only report does not change occupancy"
+}

@@ -1,0 +1,122 @@
+{
+  "checked_at_utc": "2026-09-19T15:00:02.695493+00:00",
+  "data": {
+    "hostname": "trial-303224955-trialrun-303224955-worker-0",
+    "kernel": "5.15.152.bsk.10-sign-amd64",
+    "os_release": "PRETTY_NAME=\"Debian GNU/Linux 12 (bookworm)\"\nNAME=\"Debian GNU/Linux\"\nVERSION_ID=\"12\"\nVERSION=\"12 (bookworm)\"\nVERSION_CODENAME=bookworm\nID=debian\nHOME_URL=\"https://www.debian.org/\"\nSUPPORT_URL=\"https://www.debian.org/support\"\nBUG_REPORT_URL=\"https://bugs.debian.org/\"\n",
+    "cpu_logical_host": 224,
+    "cpu_affinity": 224,
+    "tmp_disk": {
+      "total": 3779301580800,
+      "used": 495316975616,
+      "free": 3091930099712
+    },
+    "commands": {
+      "gpu_inventory": {
+        "command": [
+          "nvidia-smi",
+          "--query-gpu=index,name,uuid,driver_version,memory.total,memory.used,utilization.gpu",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "0, NVIDIA H100 80GB HBM3, GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe, 535.161.08, 81559 MiB, 1013 MiB, 50 %\n1, NVIDIA H100 80GB HBM3, GPU-64240b2e-5845-da58-e703-61322f21cbf6, 535.161.08, 81559 MiB, 1013 MiB, 49 %\n2, NVIDIA H100 80GB HBM3, GPU-2254f286-1a7d-edf8-e4a4-f24c051cab83, 535.161.08, 81559 MiB, 1013 MiB, 49 %\n3, NVIDIA H100 80GB HBM3, GPU-8a8b08b1-2a03-ae94-bac7-4f690cf5c5d8, 535.161.08, 81559 MiB, 1013 MiB, 49 %\n4, NVIDIA H100 80GB HBM3, GPU-ec35bc25-f521-4261-e3a3-cf536a41aa64, 535.161.08, 81559 MiB, 1013 MiB, 49 %\n5, NVIDIA H100 80GB HBM3, GPU-7a3ce392-0958-db98-bd25-b95810298e5f, 535.161.08, 81559 MiB, 1013 MiB, 49 %\n6, NVIDIA H100 80GB HBM3, GPU-b63ae919-c2a3-ff8c-3527-2f924152251f, 535.161.08, 81559 MiB, 1013 MiB, 50 %\n7, NVIDIA H100 80GB HBM3, GPU-893accc7-1601-840b-ea72-5d8302ef6d44, 535.161.08, 81559 MiB, 1013 MiB, 50 %\n",
+        "stderr": ""
+      },
+      "compute_processes": {
+        "command": [
+          "nvidia-smi",
+          "--query-compute-apps=gpu_uuid,pid,process_name,used_gpu_memory",
+          "--format=csv,noheader"
+        ],
+        "returncode": 0,
+        "stdout": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe, 3299747, [Not Found], 1004 MiB\nGPU-64240b2e-5845-da58-e703-61322f21cbf6, 3299748, [Not Found], 1004 MiB\nGPU-2254f286-1a7d-edf8-e4a4-f24c051cab83, 3299750, [Not Found], 1004 MiB\nGPU-8a8b08b1-2a03-ae94-bac7-4f690cf5c5d8, 3299752, [Not Found], 1004 MiB\nGPU-ec35bc25-f521-4261-e3a3-cf536a41aa64, 3299754, [Not Found], 1004 MiB\nGPU-7a3ce392-0958-db98-bd25-b95810298e5f, 3299756, [Not Found], 1004 MiB\nGPU-b63ae919-c2a3-ff8c-3527-2f924152251f, 3299758, [Not Found], 1004 MiB\nGPU-893accc7-1601-840b-ea72-5d8302ef6d44, 3299760, [Not Found], 1004 MiB\n",
+        "stderr": ""
+      },
+      "mount": {
+        "command": [
+          "findmnt",
+          "-T",
+          "/mnt/bn/arnold-recommend/yaohaoyang",
+          "-J",
+          "-o",
+          "TARGET,SOURCE,FSTYPE,OPTIONS"
+        ],
+        "returncode": 0,
+        "stdout": "{\n   \"filesystems\": [\n      {\n         \"target\": \"/mnt/bn/arnold-recommend\",\n         \"source\": \"BF-bytefuse-arnold-recommend\",\n         \"fstype\": \"virtio_pfs_010309\",\n         \"options\": \"rw,nosuid,nodev,relatime,user_id=0,group_id=0,default_permissions,allow_other,dev=455\"\n      }\n   ]\n}\n",
+        "stderr": ""
+      }
+    },
+    "project_compute_processes": [
+      {
+        "pid": 142646,
+        "program": "/usr/bin/python3",
+        "relevant_arguments": [
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A00_r1/probe_node.py"
+        ]
+      }
+    ],
+    "guard_status": {
+      "pid": 27508,
+      "updated": 1789829999.3353884,
+      "gpus": {
+        "0": {
+          "state": "holder",
+          "manager_pid": 27512,
+          "driver_pids": [
+            3299747
+          ]
+        },
+        "1": {
+          "state": "holder",
+          "manager_pid": 27513,
+          "driver_pids": [
+            3299748
+          ]
+        },
+        "2": {
+          "state": "holder",
+          "manager_pid": 27514,
+          "driver_pids": [
+            3299750
+          ]
+        },
+        "3": {
+          "state": "holder",
+          "manager_pid": 27515,
+          "driver_pids": [
+            3299752
+          ]
+        },
+        "4": {
+          "state": "holder",
+          "manager_pid": 27516,
+          "driver_pids": [
+            3299754
+          ]
+        },
+        "5": {
+          "state": "holder",
+          "manager_pid": 27517,
+          "driver_pids": [
+            3299756
+          ]
+        },
+        "6": {
+          "state": "holder",
+          "manager_pid": 27518,
+          "driver_pids": [
+            3299758
+          ]
+        },
+        "7": {
+          "state": "holder",
+          "manager_pid": 27519,
+          "driver_pids": [
+            3299760
+          ]
+        }
+      }
+    },
+    "guard_state_source": "/tmp/gpu_occupancy_guard/status.json"
+  }
+}

@@ -1,0 +1,455 @@
+{
+  "role": "B",
+  "hostname": "trial-303225685-trialrun-303225685-worker-0",
+  "session_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+  "workspace_path": "/mnt/bn/arnold-recommend/yaohaoyang",
+  "shared_mount_check": {
+    "read": true,
+    "write": true,
+    "roundtrip_verified": true,
+    "marker_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/nodes/B/shared_mount_marker.json",
+    "mount_type": "virtio_pfs_010309",
+    "cross_host_visibility": "A ACK readable and controller revision 2 registers matching B identity; marker peer read not independently confirmed",
+    "mount_source": "BF-bytefuse-arnold-recommend"
+  },
+  "gpu": {
+    "count": 8,
+    "model": "NVIDIA H100 80GB HBM3",
+    "devices": [
+      {
+        "index": "0",
+        "uuid": "GPU-4143840e-6c2e-d4c4-8c60-4005cfa1f917",
+        "name": "NVIDIA H100 80GB HBM3",
+        "memory_total_mib": "81559",
+        "driver_version": "535.161.08",
+        "utilization_percent": "49",
+        "memory_used_mib": "1013"
+      },
+      {
+        "index": "1",
+        "uuid": "GPU-6d43b200-7592-1feb-46e0-6e6a0aadce30",
+        "name": "NVIDIA H100 80GB HBM3",
+        "memory_total_mib": "81559",
+        "driver_version": "535.161.08",
+        "utilization_percent": "49",
+        "memory_used_mib": "1013"
+      },
+      {
+        "index": "2",
+        "uuid": "GPU-16b17920-fc5b-e353-dfa5-6a98646e4cae",
+        "name": "NVIDIA H100 80GB HBM3",
+        "memory_total_mib": "81559",
+        "driver_version": "535.161.08",
+        "utilization_percent": "49",
+        "memory_used_mib": "1013"
+      },
+      {
+        "index": "3",
+        "uuid": "GPU-d0942bf0-fce5-5cef-1df9-cd9b085ee9b7",
+        "name": "NVIDIA H100 80GB HBM3",
+        "memory_total_mib": "81559",
+        "driver_version": "535.161.08",
+        "utilization_percent": "49",
+        "memory_used_mib": "1013"
+      },
+      {
+        "index": "4",
+        "uuid": "GPU-33015720-ddc5-fbd4-bb56-7c337282eb10",
+        "name": "NVIDIA H100 80GB HBM3",
+        "memory_total_mib": "81559",
+        "driver_version": "535.161.08",
+        "utilization_percent": "49",
+        "memory_used_mib": "1013"
+      },
+      {
+        "index": "5",
+        "uuid": "GPU-4062899a-e02c-36e6-9370-21f286817092",
+        "name": "NVIDIA H100 80GB HBM3",
+        "memory_total_mib": "81559",
+        "driver_version": "535.161.08",
+        "utilization_percent": "50",
+        "memory_used_mib": "1013"
+      },
+      {
+        "index": "6",
+        "uuid": "GPU-540de68c-d698-47c6-443e-4bc0d281534e",
+        "name": "NVIDIA H100 80GB HBM3",
+        "memory_total_mib": "81559",
+        "driver_version": "535.161.08",
+        "utilization_percent": "49",
+        "memory_used_mib": "1013"
+      },
+      {
+        "index": "7",
+        "uuid": "GPU-940192c8-5e85-1fb0-967b-d3c037ad6464",
+        "name": "NVIDIA H100 80GB HBM3",
+        "memory_total_mib": "81559",
+        "driver_version": "535.161.08",
+        "utilization_percent": "49",
+        "memory_used_mib": "1013"
+      }
+    ]
+  },
+  "environment_summary": {
+    "runtimes": {
+      "mw-pi05-legacy": {
+        "python": "3.12.13",
+        "executable": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/bin/python",
+        "base_prefix": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot",
+        "prefix": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot",
+        "versions": {
+          "torch": "2.7.1",
+          "torchvision": "0.22.1",
+          "numpy": "2.2.6",
+          "safetensors": "0.7.0",
+          "transformers": "5.4.0",
+          "lerobot": "0.5.1",
+          "metaworld": "3.0.0",
+          "mujoco": "3.6.0",
+          "jax": null,
+          "jaxlib": null,
+          "flax": null,
+          "optax": null,
+          "orbax-checkpoint": null,
+          "tensorstore": null,
+          "robosuite": "1.4.0",
+          "libero": null,
+          "datasets": "4.8.4",
+          "pyarrow": "23.0.1",
+          "accelerate": "1.13.0",
+          "pytest": "9.0.3"
+        },
+        "module_locations": {
+          "torch": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/lib/python3.12/site-packages/torch/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/lib/python3.12/site-packages/torch"
+            ]
+          },
+          "lerobot": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/src/lerobot/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/src/lerobot"
+            ]
+          },
+          "metaworld": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/lib/python3.12/site-packages/metaworld/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/lib/python3.12/site-packages/metaworld"
+            ]
+          },
+          "mujoco": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/lib/python3.12/site-packages/mujoco/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/lib/python3.12/site-packages/mujoco"
+            ]
+          },
+          "jax": null,
+          "openpi": null,
+          "libero": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/lib/python3.12/site-packages/libero/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/lib/python3.12/site-packages/libero"
+            ]
+          },
+          "robosuite": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/lib/python3.12/site-packages/robosuite/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/lib/python3.12/site-packages/robosuite"
+            ]
+          },
+          "guided_action_flow": null,
+          "ogbench": null
+        },
+        "CUDA_VISIBLE_DEVICES": "",
+        "check_type": "metadata/spec only; no model, CUDA initialization, or simulator"
+      },
+      "mw-smolvla-lr044": {
+        "python": "3.12.13",
+        "executable": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-smolvla-lr044/bin/python",
+        "base_prefix": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot",
+        "prefix": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-smolvla-lr044",
+        "versions": {
+          "torch": "2.7.1",
+          "torchvision": "0.22.1",
+          "numpy": "2.2.6",
+          "safetensors": "0.8.0",
+          "transformers": "4.57.1",
+          "lerobot": "0.4.4",
+          "metaworld": "3.0.0",
+          "mujoco": "3.6.0",
+          "jax": null,
+          "jaxlib": null,
+          "flax": null,
+          "optax": null,
+          "orbax-checkpoint": null,
+          "tensorstore": null,
+          "robosuite": null,
+          "libero": null,
+          "datasets": "4.8.5",
+          "pyarrow": "23.0.1",
+          "accelerate": "1.15.0",
+          "pytest": "9.1.1"
+        },
+        "module_locations": {
+          "torch": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-smolvla-lr044/lib/python3.12/site-packages/torch/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-smolvla-lr044/lib/python3.12/site-packages/torch"
+            ]
+          },
+          "lerobot": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/lerobot-smolvla-8fff0fd/src/lerobot/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/lerobot-smolvla-8fff0fd/src/lerobot"
+            ]
+          },
+          "metaworld": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-smolvla-lr044/lib/python3.12/site-packages/metaworld/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-smolvla-lr044/lib/python3.12/site-packages/metaworld"
+            ]
+          },
+          "mujoco": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-smolvla-lr044/lib/python3.12/site-packages/mujoco/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-smolvla-lr044/lib/python3.12/site-packages/mujoco"
+            ]
+          },
+          "jax": null,
+          "openpi": null,
+          "libero": null,
+          "robosuite": null,
+          "guided_action_flow": null,
+          "ogbench": null
+        },
+        "CUDA_VISIBLE_DEVICES": "",
+        "check_type": "metadata/spec only; no model, CUDA initialization, or simulator"
+      },
+      "mw-xvla-lr044": {
+        "python": "3.12.13",
+        "executable": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-xvla-lr044/bin/python",
+        "base_prefix": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot",
+        "prefix": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-xvla-lr044",
+        "versions": {
+          "torch": "2.7.1",
+          "torchvision": "0.22.1",
+          "numpy": "2.2.6",
+          "safetensors": "0.8.0",
+          "transformers": "4.57.1",
+          "lerobot": "0.4.4",
+          "metaworld": "3.0.0",
+          "mujoco": "3.6.0",
+          "jax": null,
+          "jaxlib": null,
+          "flax": null,
+          "optax": null,
+          "orbax-checkpoint": null,
+          "tensorstore": null,
+          "robosuite": null,
+          "libero": null,
+          "datasets": "4.8.5",
+          "pyarrow": "23.0.1",
+          "accelerate": "1.15.0",
+          "pytest": "9.1.1"
+        },
+        "module_locations": {
+          "torch": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-xvla-lr044/lib/python3.12/site-packages/torch/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-xvla-lr044/lib/python3.12/site-packages/torch"
+            ]
+          },
+          "lerobot": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/lerobot-xvla-8fff0fd/src/lerobot/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/lerobot-xvla-8fff0fd/src/lerobot"
+            ]
+          },
+          "metaworld": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-xvla-lr044/lib/python3.12/site-packages/metaworld/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-xvla-lr044/lib/python3.12/site-packages/metaworld"
+            ]
+          },
+          "mujoco": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-xvla-lr044/lib/python3.12/site-packages/mujoco/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-xvla-lr044/lib/python3.12/site-packages/mujoco"
+            ]
+          },
+          "jax": null,
+          "openpi": null,
+          "libero": null,
+          "robosuite": null,
+          "guided_action_flow": null,
+          "ogbench": null
+        },
+        "CUDA_VISIBLE_DEVICES": "",
+        "check_type": "metadata/spec only; no model, CUDA initialization, or simulator"
+      },
+      "pi05-openpi-jax": {
+        "python": "3.11.14",
+        "executable": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/pi05-openpi-jax/bin/python",
+        "base_prefix": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/piper-wine",
+        "prefix": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/pi05-openpi-jax",
+        "versions": {
+          "torch": "2.7.1",
+          "torchvision": "0.22.1",
+          "numpy": "1.26.4",
+          "safetensors": "0.5.3",
+          "transformers": "4.53.2",
+          "lerobot": "0.1.0",
+          "metaworld": null,
+          "mujoco": "2.3.7",
+          "jax": "0.5.3",
+          "jaxlib": "0.5.3",
+          "flax": "0.10.2",
+          "optax": "0.2.4",
+          "orbax-checkpoint": "0.11.13",
+          "tensorstore": "0.1.74",
+          "robosuite": null,
+          "libero": null,
+          "datasets": "3.6.0",
+          "pyarrow": "20.0.0",
+          "accelerate": null,
+          "pytest": null
+        },
+        "module_locations": {
+          "torch": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/pi05-openpi-jax/lib/python3.11/site-packages/torch/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/pi05-openpi-jax/lib/python3.11/site-packages/torch"
+            ]
+          },
+          "lerobot": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/pi05-openpi-jax/lib/python3.11/site-packages/lerobot/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/pi05-openpi-jax/lib/python3.11/site-packages/lerobot"
+            ]
+          },
+          "metaworld": null,
+          "mujoco": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/pi05-openpi-jax/lib/python3.11/site-packages/mujoco/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/pi05-openpi-jax/lib/python3.11/site-packages/mujoco"
+            ]
+          },
+          "jax": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/pi05-openpi-jax/lib/python3.11/site-packages/jax/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/pi05-openpi-jax/lib/python3.11/site-packages/jax"
+            ]
+          },
+          "openpi": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/openpi-215abfb/src/openpi/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/openpi-215abfb/src/openpi"
+            ]
+          },
+          "libero": null,
+          "robosuite": null,
+          "guided_action_flow": null,
+          "ogbench": null
+        },
+        "CUDA_VISIBLE_DEVICES": "",
+        "check_type": "metadata/spec only; no model, CUDA initialization, or simulator"
+      },
+      "libero-sim-openpi": {
+        "python": "3.8.20",
+        "executable": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/libero-sim-openpi/bin/python",
+        "base_prefix": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/cache/python/cpython-3.8-linux-x86_64-gnu",
+        "prefix": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/libero-sim-openpi",
+        "versions": {
+          "torch": "1.11.0+cu113",
+          "torchvision": "0.12.0+cu113",
+          "numpy": "1.22.4",
+          "safetensors": null,
+          "transformers": "4.21.1",
+          "lerobot": null,
+          "metaworld": null,
+          "mujoco": "3.2.3",
+          "jax": null,
+          "jaxlib": null,
+          "flax": null,
+          "optax": null,
+          "orbax-checkpoint": null,
+          "tensorstore": null,
+          "robosuite": "1.4.1",
+          "libero": "0.1.0",
+          "datasets": null,
+          "pyarrow": null,
+          "accelerate": null,
+          "pytest": "8.3.5"
+        },
+        "module_locations": {
+          "torch": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/libero-sim-openpi/lib/python3.8/site-packages/torch/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/libero-sim-openpi/lib/python3.8/site-packages/torch"
+            ]
+          },
+          "lerobot": null,
+          "metaworld": null,
+          "mujoco": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/libero-sim-openpi/lib/python3.8/site-packages/mujoco/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/libero-sim-openpi/lib/python3.8/site-packages/mujoco"
+            ]
+          },
+          "jax": null,
+          "openpi": null,
+          "libero": {
+            "origin": null,
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/openpi-215abfb/third_party/libero/libero"
+            ]
+          },
+          "robosuite": {
+            "origin": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/libero-sim-openpi/lib/python3.8/site-packages/robosuite/__init__.py",
+            "search_locations": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/libero-sim-openpi/lib/python3.8/site-packages/robosuite"
+            ]
+          },
+          "guided_action_flow": null,
+          "ogbench": null
+        },
+        "CUDA_VISIBLE_DEVICES": "",
+        "check_type": "metadata/spec only; no model, CUDA initialization, or simulator"
+      }
+    },
+    "cpu_and_storage_evidence": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B00_r1_trial-303225685-trialrun-303225685-worker-0_20260919T145623Z/host_inventory.json",
+    "gpu_functional_verification": false
+  },
+  "local_checkpoint_gaps": [
+    {
+      "old_path": "/tmp/act_recap_future_aware_20260914/checkpoint_cache/030000/pretrained_model/policy_postprocessor.json",
+      "exists_on_B": false,
+      "expected_sha256": "550237addb77c5b9e4e0c78655dbd5ecc792adbf6895a0eff08f6d6daa2f9401",
+      "shared_equivalent": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/vla-sft-030000/policy_postprocessor.json",
+      "shared_sha256": "550237addb77c5b9e4e0c78655dbd5ecc792adbf6895a0eff08f6d6daa2f9401",
+      "matches": true
+    },
+    {
+      "old_path": "/tmp/act_recap_future_aware_20260914/checkpoint_cache/030000/pretrained_model/policy_postprocessor_step_0_unnormalizer_processor.safetensors",
+      "exists_on_B": false,
+      "expected_sha256": "4fff91faea9afc9208e5519088f2bc8fb9cb21102bfeec8a9b3f259863c5cf00",
+      "shared_equivalent": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/vla-sft-030000/policy_postprocessor_step_0_unnormalizer_processor.safetensors",
+      "shared_sha256": "4fff91faea9afc9208e5519088f2bc8fb9cb21102bfeec8a9b3f259863c5cf00",
+      "matches": true
+    }
+  ],
+  "occupancy_status_source": {
+    "hostname": "trial-303225685-trialrun-303225685-worker-0",
+    "command": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_lifecycle.sh status",
+    "local_runtime_path": "/tmp/gpu_occupancy_guard",
+    "running": true,
+    "holders": 8,
+    "observed_at_utc": "2026-09-19T14:59:51Z",
+    "shared_log_is_not_authority": true,
+    "host_snapshot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B00_r1_trial-303225685-trialrun-303225685-worker-0_20260919T145623Z/host_inventory.json",
+    "shared_log_collision_risk": true
+  },
+  "run_id": "B00_r1_trial-303225685-trialrun-303225685-worker-0_20260919T145623Z",
+  "updated_at_utc": "2026-09-19T15:08:21Z"
+}

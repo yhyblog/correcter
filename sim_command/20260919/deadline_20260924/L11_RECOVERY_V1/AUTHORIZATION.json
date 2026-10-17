@@ -1,0 +1,193 @@
+{
+  "schema": "corrector_L11_execution_recovery_authorization_v1",
+  "revision": 1,
+  "status": "released",
+  "issued_at_utc": "2026-09-23T04:22:19.038218+00:00",
+  "authority": "Prior explicit user scope: necessary private engineering repair, resume unfinished experiments, keep independent nodes busy; analysis disposition of saved pre-Q execution anomalies.",
+  "original_authorization": {
+    "path": "deadline_20260924/L11_RETEST_V1/AUTHORIZATION.json",
+    "sha256": "a978519ba24dfb3aba22cf5ce8472d9b855e788e44266a28e0d006be876d5e87"
+  },
+  "analysis_findings": {
+    "path": "deadline_20260924/L11_RECOVERY_V1/STATUS_AT_REVIEW.json",
+    "sha256": "d828b322b35f57aaa8fd08efa3895e6b9545bd38c7e4889d01eed4cad4741014"
+  },
+  "assignment": {
+    "path": "deadline_20260924/L11_RECOVERY_V1/ASSIGNMENT.md",
+    "sha256": "a62a7e5f137c22a2142bbc327af16e68547e5ef7e5a39b9b507ce89ccad4c28d"
+  },
+  "nodes": {
+    "A": {
+      "task_id": "A_D24_L11_RENDER_RECOVERY_V1",
+      "revision": 1,
+      "owner": "A",
+      "host": "trial-303224955-trialrun-303224955-worker-0",
+      "thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+      "original_thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+      "brief": {
+        "path": "tasks/A_D24_L11_RENDER_RECOVERY_V1.md",
+        "sha256": "faf61499f1148fdaa6a5d0c2d1760e687c6a864b0e4f3a289c759e9aed3ddfec"
+      },
+      "units": {
+        "path": "deadline_20260924/L11_RECOVERY_V1/RECOVERY_UNITS_A.jsonl",
+        "sha256": "cd84b6301aaa5c4cabf620d6ef9f3793c9766bd50a2b45768a2f351b26716042"
+      },
+      "planned_recovery_unit_max": 1900,
+      "additional_attempt_cap": 2100,
+      "stage_attempt_cap": 2100,
+      "cumulative_attempt_cap": 32300,
+      "branches_per_GPU_target": 24,
+      "GPU_count": 8,
+      "logical_concurrency_target": 192,
+      "expected_result": "receipts/A/A_D24_L11_RENDER_RECOVERY_V1_RESULT_r1.json"
+    },
+    "B": {
+      "task_id": "B_D24_L11_RENDER_RECOVERY_V1",
+      "revision": 1,
+      "owner": "B",
+      "host": "trial-303225685-trialrun-303225685-worker-0",
+      "thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+      "original_thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+      "brief": {
+        "path": "tasks/B_D24_L11_RENDER_RECOVERY_V1.md",
+        "sha256": "27f2e675d911828491b875089d29da142f0a86abc0ac1fcc1cc6e3cf6f8c95cf"
+      },
+      "units": {
+        "path": "deadline_20260924/L11_RECOVERY_V1/RECOVERY_UNITS_B.jsonl",
+        "sha256": "f54bb911b02d735c6cc38b1b873148cd3c071b661d660b0a03f4bf09140bd00d"
+      },
+      "planned_recovery_unit_max": 1000,
+      "additional_attempt_cap": 1100,
+      "stage_attempt_cap": 1100,
+      "cumulative_attempt_cap": 25850,
+      "branches_per_GPU_target": 24,
+      "GPU_count": 8,
+      "logical_concurrency_target": 192,
+      "expected_result": "receipts/B/B_D24_L11_RENDER_RECOVERY_V1_RESULT_r1.json"
+    },
+    "C": {
+      "task_id": "C_D24_L11_RENDER_RECOVERY_V1",
+      "revision": 1,
+      "owner": "C",
+      "host": "trial-303269581-trialrun-303269581-worker-0",
+      "thread_id": "01a0c793-10d2-7791-a250-fd65d88e1ccb",
+      "original_thread_id": "01a0c793-10d2-7791-a250-fd65d88e1ccb",
+      "brief": {
+        "path": "tasks/C_D24_L11_RENDER_RECOVERY_V1.md",
+        "sha256": "2b6dd8261459d0b91f97ef1e4cfc43459ae99396ced5da1889adfc164647eba8"
+      },
+      "units": {
+        "path": "deadline_20260924/L11_RECOVERY_V1/RECOVERY_UNITS_C.jsonl",
+        "sha256": "bf441704d624bd914319ac2d4599ee157c8864e2a6db8556fd06f10c681277bd"
+      },
+      "planned_recovery_unit_max": 1764,
+      "additional_attempt_cap": 2000,
+      "stage_attempt_cap": 2000,
+      "cumulative_attempt_cap": 20750,
+      "branches_per_GPU_target": 24,
+      "GPU_count": 8,
+      "logical_concurrency_target": 192,
+      "expected_result": "receipts/C/C_D24_L11_RENDER_RECOVERY_V1_RESULT_r1.json"
+    }
+  },
+  "tasks": {
+    "A": {
+      "task_id": "A_D24_L11_RENDER_RECOVERY_V1",
+      "revision": 1,
+      "owner": "A",
+      "host": "trial-303224955-trialrun-303224955-worker-0",
+      "thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+      "original_thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+      "brief": {
+        "path": "tasks/A_D24_L11_RENDER_RECOVERY_V1.md",
+        "sha256": "faf61499f1148fdaa6a5d0c2d1760e687c6a864b0e4f3a289c759e9aed3ddfec"
+      },
+      "units": {
+        "path": "deadline_20260924/L11_RECOVERY_V1/RECOVERY_UNITS_A.jsonl",
+        "sha256": "cd84b6301aaa5c4cabf620d6ef9f3793c9766bd50a2b45768a2f351b26716042"
+      },
+      "planned_recovery_unit_max": 1900,
+      "additional_attempt_cap": 2100,
+      "stage_attempt_cap": 2100,
+      "cumulative_attempt_cap": 32300,
+      "branches_per_GPU_target": 24,
+      "GPU_count": 8,
+      "logical_concurrency_target": 192,
+      "expected_result": "receipts/A/A_D24_L11_RENDER_RECOVERY_V1_RESULT_r1.json"
+    },
+    "B": {
+      "task_id": "B_D24_L11_RENDER_RECOVERY_V1",
+      "revision": 1,
+      "owner": "B",
+      "host": "trial-303225685-trialrun-303225685-worker-0",
+      "thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+      "original_thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+      "brief": {
+        "path": "tasks/B_D24_L11_RENDER_RECOVERY_V1.md",
+        "sha256": "27f2e675d911828491b875089d29da142f0a86abc0ac1fcc1cc6e3cf6f8c95cf"
+      },
+      "units": {
+        "path": "deadline_20260924/L11_RECOVERY_V1/RECOVERY_UNITS_B.jsonl",
+        "sha256": "f54bb911b02d735c6cc38b1b873148cd3c071b661d660b0a03f4bf09140bd00d"
+      },
+      "planned_recovery_unit_max": 1000,
+      "additional_attempt_cap": 1100,
+      "stage_attempt_cap": 1100,
+      "cumulative_attempt_cap": 25850,
+      "branches_per_GPU_target": 24,
+      "GPU_count": 8,
+      "logical_concurrency_target": 192,
+      "expected_result": "receipts/B/B_D24_L11_RENDER_RECOVERY_V1_RESULT_r1.json"
+    },
+    "C": {
+      "task_id": "C_D24_L11_RENDER_RECOVERY_V1",
+      "revision": 1,
+      "owner": "C",
+      "host": "trial-303269581-trialrun-303269581-worker-0",
+      "thread_id": "01a0c793-10d2-7791-a250-fd65d88e1ccb",
+      "original_thread_id": "01a0c793-10d2-7791-a250-fd65d88e1ccb",
+      "brief": {
+        "path": "tasks/C_D24_L11_RENDER_RECOVERY_V1.md",
+        "sha256": "2b6dd8261459d0b91f97ef1e4cfc43459ae99396ced5da1889adfc164647eba8"
+      },
+      "units": {
+        "path": "deadline_20260924/L11_RECOVERY_V1/RECOVERY_UNITS_C.jsonl",
+        "sha256": "bf441704d624bd914319ac2d4599ee157c8864e2a6db8556fd06f10c681277bd"
+      },
+      "planned_recovery_unit_max": 1764,
+      "additional_attempt_cap": 2000,
+      "stage_attempt_cap": 2000,
+      "cumulative_attempt_cap": 20750,
+      "branches_per_GPU_target": 24,
+      "GPU_count": 8,
+      "logical_concurrency_target": 192,
+      "expected_result": "receipts/C/C_D24_L11_RENDER_RECOVERY_V1_RESULT_r1.json"
+    }
+  },
+  "new_unique_scientific_units": 0,
+  "recovery_unit_max": 4664,
+  "additional_attempt_cap": 5200,
+  "new_GPU_claims": 3,
+  "new_GPU_claims_semantics": "one finite recovery root chain per node; technical continuation inside owned finite budgets",
+  "new_training_updates": 0,
+  "new_collection": 0,
+  "chosen_loss": "L11",
+  "fit_seed": 9101,
+  "must_not_repeat_valid_scientific_units": true,
+  "raw_low_success_alone_is_not_replay_authority": true,
+  "repair_required_before_recovery_on_affected_A_C_paths": true,
+  "B_may_use_existing_process_isolated_verified_path_immediately": true,
+  "root_cause_runtime_not_yet_confirmed_at_publication": true,
+  "A_H30_ownership_transfer_to_B_after_old_A_family_exit": true,
+  "historical_attempts_not_reset": true,
+  "no_second_analysis_or_user_approval": true,
+  "no_separate_GPU_preflights": true,
+  "strict_consistency_audits_required": false,
+  "same_fault_max_restarts_after_documented_fix": 2,
+  "unchanged_blind_retry_allowed": false,
+  "analysis_wait_timeout_seconds": 1800,
+  "cross_node_runtime_exit_barrier": false,
+  "all_formal_holders_off": true,
+  "science_admission_cutoff_utc": "2026-09-23T12:00:00Z",
+  "tables_due_utc": "2026-09-23T15:00:00Z"
+}

@@ -1,0 +1,143 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A10_CAUSAL_C10_CPU_V1",
+  "accepted_at_utc": "2026-09-20T00:01:19.499534+00:00",
+  "status": "CPU_integration_preparation_accepted_for_one_limited_wave",
+  "receipt": {
+    "path": "receipts/A/A10_CAUSAL_C10_CPU_V1_RESULT.json",
+    "sha256": "64f445d2366c5c6b719c756596d2c7b53f21e9bf7d4d6f5f983c4f94ffe791e1"
+  },
+  "report": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_CPU_V1/REPORT.md",
+    "sha256": "4005a8f4e012332e2fc760f5ab91671cbbb686b30c5ce5acdf1d9f94cf1211ad"
+  },
+  "CPU_READY": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_CPU_V1/CPU_READY.json",
+    "sha256": "d2f72f359082a016a46c88f1bbb0274a664bff0ff9bcd1fbd6cc2d2dd7517876"
+  },
+  "proposal": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_CPU_V1/proposal/PROPOSAL.json",
+    "sha256": "eff48e3138d85f365c4945ae865514a4e99dd98015a75971bbbd710774f9d535"
+  },
+  "root_verification": {
+    "RESULT_artifact_refs_SHA_size": 27,
+    "package_manifest_files_SHA_size": 415,
+    "work_evidence_files_SHA_size": 44,
+    "runtime_code_manifest_entries_match_verified_package": 393,
+    "all111_caps_equal_parent_plus_branches": true,
+    "installed_guard_SHA_matches": true,
+    "new_claim_output_cache_absent": true,
+    "pure_publication_check_invocations": 1,
+    "root_model_or_hardware_or_simulator_calls": 0,
+    "large_weight_hashes": 0
+  },
+  "independent_reviews": [
+    {
+      "agent": "/root/pv_v3_numeric_acceptance_review",
+      "scope": "causal inputs/originalG0/force-vs-real/independent replay/terminal/C10-H20",
+      "blocking_findings": []
+    },
+    {
+      "agent": "/root/pv_guard_install_review",
+      "scope": "111caps/physical count formulas/two children in one reserved group/cleanup/safe checker",
+      "blocking_findings": []
+    }
+  ],
+  "method_decision": {
+    "independent_replay_alternative_approved": true,
+    "branch_order": [
+      "Post",
+      "Velocity"
+    ],
+    "branches_max": 2,
+    "full_state_restore_claim": false,
+    "paired_performance_estimation": false,
+    "force_engineering_intervention_at_fixed_cut_if_G0_false": true,
+    "real_trigger_recorded_separately": true,
+    "prefix_mismatch_stop_before_V_intervention": true,
+    "early_stop_first_branch_ends_wave": true
+  },
+  "scientific_limits": [
+    "No complete hidden state restoration or paired performance estimate",
+    "Matured D residual diagnostic only; G0 consumes current context, known next5, future D predictions",
+    "G0 threshold0.05/execute5_then_fixed10 unchanged; C10/H20 effectiveness unvalidated",
+    "Forced engineering intervention separately flagged, not gain-trigger evidence",
+    "Historical five-task D/G0/Q compatibility, not MT50 adaptation",
+    "Launcher complete may contain early stop; inspect completed_C10_branches and per-stage coverage",
+    "No success-rate/ranking/cost-advantage claim"
+  ],
+  "budget": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_CPU_V1/proposal/RESOURCE_BUDGET.json",
+    "sha256": "8901dfb46d68fdf9d5530f93e88457335203d526cc42c20dc9541f191c72b3f0",
+    "entries": 111,
+    "commands": 1,
+    "claims": 1,
+    "branch_attempts_max": 2,
+    "branch_order": [
+      "Post",
+      "Velocity"
+    ],
+    "control_steps_max": 32,
+    "control_physics_substeps_max": 426,
+    "initialization_physics_substeps_max": 52000,
+    "render_max": 34,
+    "sampling_max": 7,
+    "flow_max": 70,
+    "D_forward_max": 8,
+    "G0_forward_max": 4,
+    "Q_member_forward_max": 44,
+    "action_gradient_max": 4
+  },
+  "lifecycle": "Two fresh children sequentially inside ONE formal process group and ONE reservation; all8 holders stopped until full-group exit; early stop/failure ends remaining wave",
+  "timeout_scope": "each of two sequential GNU timeout children includes its complete SHA check, imports, loads, reset, prefix, DG0, PV, C10, H20 first action and in-process cleanup",
+  "end_to_end_strict_upper_bound_seconds": null,
+  "cost_semantics": {
+    "deployment": {
+      "Post": 1,
+      "Velocity": 2
+    },
+    "diagnostic_PV_sampling": 3,
+    "prefix_sampling": 2,
+    "H20_restore_sampling": 2,
+    "shared_anchor_or_prefix_savings": 0,
+    "success_rate_sample": false,
+    "no_ranking": true
+  },
+  "publication_check": {
+    "path": "manifests/CAUSAL_C10_V1_PUBLICATION_STAGE/PUBLICATION_CHECK.json",
+    "sha256": "ae014d73d7ccdcf3e67b7bdf28065cfa403c5c67734863014b2dc985a224d3d4",
+    "status": "PASS",
+    "hardware_verified": false
+  },
+  "published_sources": {
+    "CONTROL.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/CAUSAL_C10_V1_PUBLICATION_STAGE/CONTROL.json",
+      "sha256": "fac7c13f4492e56faf7d5910a8cc519c0709d766c0a18ebd4a09a807f0e0b956"
+    },
+    "TASK_BOARD.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/CAUSAL_C10_V1_PUBLICATION_STAGE/TASK_BOARD.json",
+      "sha256": "7f66298c1de2b42d566d3f77e4daa58caafcfae65532d9ca3a36ca0b177f9333"
+    },
+    "RELEASE.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/CAUSAL_C10_V1_PUBLICATION_STAGE/RELEASE.json",
+      "sha256": "71b1ddc1d214f564988551b0c6138b953ae3d43a3140e76b05d2c684b40b9cd8"
+    },
+    "TASK_BRIEF.md": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/CAUSAL_C10_V1_PUBLICATION_STAGE/TASK_BRIEF.md",
+      "sha256": "e63ee17a153b6bc7b151eb987ac1e6cc049ee7b17770577929120bf52c597f10"
+    }
+  },
+  "CPU_fixture_history": "Final sealed result/check/manifests accepted; earlier failures retained, not runtime evidence",
+  "runtime_validation_pending": [
+    "joint native+causal D/G0+PV+C10 integration",
+    "independent prefix observable agreement",
+    "native reset exact counts in the new two-process path",
+    "numerical D/G0 compatibility at this legal cut",
+    "render series/early-stop cleanup"
+  ],
+  "new_release": "releases/P10_A_CAUSAL_C10_PREFLIGHT_V1.json",
+  "new_release_sha256": "71b1ddc1d214f564988551b0c6138b953ae3d43a3140e76b05d2c684b40b9cd8",
+  "old_release_reuse": false,
+  "B_compute_authorized": false,
+  "delete_or_shared_install_authorized": false
+}

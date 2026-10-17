@@ -1,0 +1,38 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "accepted_at_utc": "2026-09-19T17:53:12.552891+00:00",
+  "status": "CPU_repair_preparation_accepted_for_one_graphics_probe",
+  "receipt": {
+    "path": "receipts/A/A10_EGL_CPU_REPAIR_V1_RESULT.json",
+    "sha256": "aa2a258191fb86216d00d98e9e55f63c0e904927e0158c8680a318202ad7c16a"
+  },
+  "report": {
+    "path": "receipts/A/A10_EGL_CPU_REPAIR_V1_REPORT.md",
+    "sha256": "9b7e29eed44c7706439a0cab43c198b18483adec3fb1837c24a5916bb8e3d19d"
+  },
+  "proposal": {
+    "path": "results/A/A10_EGL_CPU_REPAIR_V1/proposal/PROPOSAL.json",
+    "sha256": "f5ea6f220c760465ab4ee93e459bb3e63f508d2d51a22e5e477ea375446f319b"
+  },
+  "bundle": {
+    "path": "results/A/A10_EGL_CPU_REPAIR_V1/BUNDLE_MANIFEST.json",
+    "sha256": "40040cd0e6134d715ffc025156b0e7118a9f35e7d01bf6e7a36700b1a1ee6639"
+  },
+  "reviewed": [
+    "Matched isolated userspace library source/version/SHA and declared ELF limitations",
+    "One EGL enumeration and unique DRM/sysfs PCI/kernel UUID selection before one display/context",
+    "MjrContext reuses current EGL context; no second EGL context or physical advance",
+    "Exact finite API caps and no retry/fallback",
+    "A-only reservation inherited by graphics process family and failure cleanup/restoration",
+    "CPU guard does not call NVML/EGL/lifecycle; actual launcher verifies identity and limits"
+  ],
+  "not_yet_validated": [
+    "EGL runtime and RGB readback",
+    "MetaWorld full observation chain",
+    "VLA sampling and P/V",
+    "Any performance or success-rate result"
+  ],
+  "new_release": "releases/P10_A_EGL_GRAPHICS_PROBE_V1.json",
+  "old_native_release_closed": true,
+  "native_v5_authorized": false
+}

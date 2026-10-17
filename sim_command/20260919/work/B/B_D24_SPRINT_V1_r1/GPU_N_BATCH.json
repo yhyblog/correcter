@@ -1,0 +1,150 @@
+{
+  "batch_id": "D24_GPU_N_r1",
+  "kind": "gpu",
+  "run_id": "D24_GPU_N_r1",
+  "max_workers": 8,
+  "jobs": [
+    {
+      "job_id": "smol50k_N_shard0",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/smol50k_N_shard0.json",
+      "argv": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/runtime.sh",
+        "mw-smolvla-lr044",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-smolvla-lr044/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/mw_eval.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/smol50k_N_shard0.json"
+      ],
+      "gpus": [
+        0
+      ],
+      "timeout_seconds": 43200,
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/smol50k_N_shard0",
+      "env": {}
+    },
+    {
+      "job_id": "smol50k_N_shard1",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/smol50k_N_shard1.json",
+      "argv": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/runtime.sh",
+        "mw-smolvla-lr044",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-smolvla-lr044/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/mw_eval.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/smol50k_N_shard1.json"
+      ],
+      "gpus": [
+        1
+      ],
+      "timeout_seconds": 43200,
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/smol50k_N_shard1",
+      "env": {}
+    },
+    {
+      "job_id": "smol50k_N_shard2",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/smol50k_N_shard2.json",
+      "argv": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/runtime.sh",
+        "mw-smolvla-lr044",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-smolvla-lr044/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/mw_eval.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/smol50k_N_shard2.json"
+      ],
+      "gpus": [
+        2
+      ],
+      "timeout_seconds": 43200,
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/smol50k_N_shard2",
+      "env": {}
+    },
+    {
+      "job_id": "smol50k_N_shard3",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/smol50k_N_shard3.json",
+      "argv": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/runtime.sh",
+        "mw-smolvla-lr044",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-smolvla-lr044/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/mw_eval.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/smol50k_N_shard3.json"
+      ],
+      "gpus": [
+        3
+      ],
+      "timeout_seconds": 43200,
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/smol50k_N_shard3",
+      "env": {}
+    },
+    {
+      "job_id": "pi05official_N_libero_spatial",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/pi05official_N_libero_spatial.json",
+      "argv": [
+        "/usr/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/libero_job.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/pi05official_N_libero_spatial.json"
+      ],
+      "gpus": [
+        4
+      ],
+      "timeout_seconds": 43200,
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/pi05official_N_libero_spatial",
+      "env": {}
+    },
+    {
+      "job_id": "pi05official_N_libero_object",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/pi05official_N_libero_object.json",
+      "argv": [
+        "/usr/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/libero_job.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/pi05official_N_libero_object.json"
+      ],
+      "gpus": [
+        5
+      ],
+      "timeout_seconds": 43200,
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/pi05official_N_libero_object",
+      "env": {}
+    },
+    {
+      "job_id": "pi05official_N_libero_goal",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/pi05official_N_libero_goal.json",
+      "argv": [
+        "/usr/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/libero_job.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/pi05official_N_libero_goal.json"
+      ],
+      "gpus": [
+        6
+      ],
+      "timeout_seconds": 43200,
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/pi05official_N_libero_goal",
+      "env": {}
+    },
+    {
+      "job_id": "pi05official_N_libero_10",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/pi05official_N_libero_10.json",
+      "argv": [
+        "/usr/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/libero_job.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/pi05official_N_libero_10.json"
+      ],
+      "gpus": [
+        7
+      ],
+      "timeout_seconds": 43200,
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/pi05official_N_libero_10",
+      "env": {}
+    }
+  ],
+  "physical_rollout_attempts": 900,
+  "automatic_retry": false
+}

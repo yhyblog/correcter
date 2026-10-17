@@ -1,0 +1,56 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "target_role": "B",
+  "target_hostname": "trial-303225685-trialrun-303225685-worker-0",
+  "target_session": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+  "issued_at_utc": "2026-09-19T15:11:05.205789+00:00",
+  "delivery": "shared_files_only",
+  "task_id": "B10_PREFLIGHT_REVISION_R2",
+  "task_revision": 1,
+  "release": "releases/P00_PREFLIGHT_CORRECTIONS_V1.json",
+  "prerequisites": "B00 complete accepted; no wait for A00 needed",
+  "status": "published_awaiting_ack",
+  "storage_side_task": "Read contracts/STORAGE_RETENTION_V1.md; inventory candidates only, analysis makes all delete/keep/defer decisions",
+  "instruction": "B10 CPU accepted. The CPU correction task is already released now: read current CONTROL6/TASK_BOARD9 and P00_PREFLIGHT_CORRECTIONS_V1, claim B10_PREFLIGHT_REVISION_R2, fix GPU/current-release guards and submit immutable corrected proposal. No GPU/rollout/training/deletion. No need to wait for a GPU release to do this CPU task.",
+  "ack": "receipts/B/B10_PREFLIGHT_REVISION_R2_ACK.json",
+  "analysis_decisions": "contracts/INVENTORY_DECISIONS_V1.md",
+  "acknowledged_at_utc": "2026-09-19T15:09:56Z",
+  "last_checked_at_utc": "2026-09-19T15:13:36.035687+00:00",
+  "latest_instruction_at_utc": "2026-09-19T16:16:12.516738+00:00",
+  "interface_handoff": {
+    "message_id": "B10_INTERFACE_V1_READY",
+    "status": "published_awaiting_consumer_confirmation",
+    "manifest": "manifests/PUBLIC_INTERFACE_V1.json",
+    "ready_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/interface_v1/INTERFACE_READY.json",
+    "schema_sha256": "7d52f22e9d2e622a18a9a71fdac822ed50413aa3838aa3ad40d98e0bee10500f",
+    "instruction": "A interface v1 is available now; verify all published file SHAs, read README/schema/examples and adapt isolated B views/events. Record consumed version/SHA and compatibility checks or concrete blockers in receipts/B/A10_INTERFACE_FEEDBACK.md. Do not change immutable A v1 or begin GPU work.",
+    "task_supplement": "tasks/B10_INTERFACE_V1_HANDOFF.md"
+  },
+  "next_task": {
+    "task_id": "B10_PREFLIGHT_REVISION_R2",
+    "task_revision": 1,
+    "task": "tasks/B10_PREFLIGHT_REVISION_R2.md",
+    "release": "releases/P00_PREFLIGHT_CORRECTIONS_V1.json",
+    "published_at_utc": "2026-09-19T16:09:02.305131+00:00",
+    "status": "published_awaiting_ack",
+    "note": "B10 CPU accepted. Apply bounded CPU guard corrections and targeted storage dependency check; do not run the 2-forward GPU probe yet."
+  },
+  "previous_task": "B10",
+  "task": "tasks/B10_PREFLIGHT_REVISION_R2.md",
+  "storage_decisions": "manifests/STORAGE_DECISIONS_V2.json",
+  "current_control_note": {
+    "updated_at_utc": "2026-09-20T08:27:50.624206+00:00",
+    "A_only_compute_release": null,
+    "B_compute_authorized": false,
+    "active_A_only_guard_installation_release": null,
+    "installed_guard_sha256": "7910c567a47ddf68294d92fc9698cc780aeb130ddefde0337414bfcd88cb85a4",
+    "instruction": "All compute zero. A revises common-pool pair/horizon/recovery/stratification/quote; B existing CPU tasks unchanged. Future LVM view must apply its own nonterminal-target eligibility; immutable B packages unchanged now."
+  },
+  "storage_clearance_request": {
+    "task_supplement": "tasks/B_STORAGE_CLEARANCE_V1.md",
+    "input_manifest": "manifests/STORAGE_PAYLOAD_REVIEW_V1.json",
+    "receipt": "receipts/B/STORAGE_DEPENDENCY_REVIEW_V1.json",
+    "status": "pending",
+    "scope": "CPU/read-only27 exact files; no deletion; do not wait for GPU release"
+  }
+}

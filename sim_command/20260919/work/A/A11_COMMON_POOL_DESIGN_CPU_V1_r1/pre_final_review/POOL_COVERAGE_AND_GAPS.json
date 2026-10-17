@@ -1,0 +1,3657 @@
+{
+  "schema": "common-pool-coverage-draft/1",
+  "task_id": "A11_COMMON_POOL_DESIGN_CPU_V1",
+  "status": "DESIGN_ONLY",
+  "environment_count": 50,
+  "normal_demo_episodes": 2500,
+  "normal_demo_frames": 204806,
+  "language_index_count": 49,
+  "duplicate_language_index": {
+    "index": 40,
+    "environments": [
+      "push-back-v3",
+      "push-v3"
+    ],
+    "reason": "distinct environment IDs 37/38; shared instruction does not merge parents or coverage"
+  },
+  "mapping_basis": {
+    "config": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/src/lerobot/envs/metaworld_config.json",
+      "sha256": "29a6eb981413975da05d37f0033b3c51b82fdf8d6350eb863d0c530a2b1c9b94",
+      "size_bytes": 7714
+    },
+    "historical_audit": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+      "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+      "size_bytes": 396970
+    },
+    "mapping_is_static_not_live_environment_probe": true
+  },
+  "rows": [
+    {
+      "environment_task": "assembly-v3",
+      "environment_id": 0,
+      "instruction": "Pick up a nut and place it onto a peg",
+      "language_task_indices": [
+        0
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 4469,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "basketball-v3",
+      "environment_id": 1,
+      "instruction": "Dunk the basketball into the basket",
+      "language_task_indices": [
+        1
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 5495,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "bin-picking-v3",
+      "environment_id": 2,
+      "instruction": "Grasp the puck from one bin and place it into another bin",
+      "language_task_indices": [
+        2
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 6012,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "box-close-v3",
+      "environment_id": 3,
+      "instruction": "Grasp the cover and close the box with it",
+      "language_task_indices": [
+        3
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 8511,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "button-press-topdown-v3",
+      "environment_id": 4,
+      "instruction": "Press a button from the top",
+      "language_task_indices": [
+        4
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 3295,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "button-press-topdown-wall-v3",
+      "environment_id": 5,
+      "instruction": "Bypass a wall and press a button from the top",
+      "language_task_indices": [
+        5
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 2908,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "button-press-v3",
+      "environment_id": 6,
+      "instruction": "Press a button",
+      "language_task_indices": [
+        6
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 3110,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "button-press-wall-v3",
+      "environment_id": 7,
+      "instruction": "Bypass a wall and press a button",
+      "language_task_indices": [
+        7
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 3690,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "coffee-button-v3",
+      "environment_id": 8,
+      "instruction": "Push a button on the coffee machine",
+      "language_task_indices": [
+        8
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 1812,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "coffee-pull-v3",
+      "environment_id": 9,
+      "instruction": "Pull a mug from a coffee machine",
+      "language_task_indices": [
+        9
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 3965,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "coffee-push-v3",
+      "environment_id": 10,
+      "instruction": "Push a mug under a coffee machine",
+      "language_task_indices": [
+        10
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 2747,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "dial-turn-v3",
+      "environment_id": 11,
+      "instruction": "Rotate a dial 180 degrees",
+      "language_task_indices": [
+        11
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 3592,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "disassemble-v3",
+      "environment_id": 12,
+      "instruction": "Pick a nut out of a peg",
+      "language_task_indices": [
+        12
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 6736,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 120,
+        "a0_repeat0_suffix_count": 120,
+        "supervised_bank_present": true,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 120,
+        "source_prefix_development": 20,
+        "all_indexed_segments": 260,
+        "first_success_observed_segments": 99,
+        "actions_rewards_success": "indexed existing fields",
+        "physics_state": "privileged restoration provenance only",
+        "RGB": "missing in indexed historical trajectories",
+        "next_observation": "missing in indexed historical trajectories",
+        "terminated": "unknown; historical done flags merge reasons",
+        "truncated": "unknown; historical done flags merge reasons",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "door-close-v3",
+      "environment_id": 13,
+      "instruction": "Close a door with a revolving joint",
+      "language_task_indices": [
+        13
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 3136,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "door-lock-v3",
+      "environment_id": 14,
+      "instruction": "Lock the door by rotating the lock clockwise",
+      "language_task_indices": [
+        14
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 4139,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "door-open-v3",
+      "environment_id": 15,
+      "instruction": "Open a door with a revolving joint",
+      "language_task_indices": [
+        15
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 4988,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "door-unlock-v3",
+      "environment_id": 16,
+      "instruction": "Unlock the door by rotating the lock counter-clockwise",
+      "language_task_indices": [
+        16
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 2116,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "drawer-close-v3",
+      "environment_id": 17,
+      "instruction": "Push and close a drawer",
+      "language_task_indices": [
+        18
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 3923,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "drawer-open-v3",
+      "environment_id": 18,
+      "instruction": "Open a drawer",
+      "language_task_indices": [
+        19
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 4443,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "faucet-close-v3",
+      "environment_id": 19,
+      "instruction": "Rotate the faucet clockwise",
+      "language_task_indices": [
+        21
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 3264,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "faucet-open-v3",
+      "environment_id": 20,
+      "instruction": "Rotate the faucet counter-clockwise",
+      "language_task_indices": [
+        20
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 2956,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "hammer-v3",
+      "environment_id": 21,
+      "instruction": "Hammer a screw on the wall",
+      "language_task_indices": [
+        22
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 3265,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "hand-insert-v3",
+      "environment_id": 22,
+      "instruction": "Insert the gripper into a hole",
+      "language_task_indices": [
+        17
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 3030,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "handle-press-side-v3",
+      "environment_id": 23,
+      "instruction": "Press a handle down sideways",
+      "language_task_indices": [
+        23
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 2059,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "handle-press-v3",
+      "environment_id": 24,
+      "instruction": "Press a handle down",
+      "language_task_indices": [
+        24
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 1485,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "handle-pull-side-v3",
+      "environment_id": 25,
+      "instruction": "Pull a handle up sideways",
+      "language_task_indices": [
+        25
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 3999,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "handle-pull-v3",
+      "environment_id": 26,
+      "instruction": "Pull a handle up",
+      "language_task_indices": [
+        26
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 6134,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "lever-pull-v3",
+      "environment_id": 27,
+      "instruction": "Pull a lever down 90 degrees",
+      "language_task_indices": [
+        27
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 3901,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "peg-insert-side-v3",
+      "environment_id": 28,
+      "instruction": "Insert a peg sideways",
+      "language_task_indices": [
+        35
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 8332,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "peg-unplug-side-v3",
+      "environment_id": 29,
+      "instruction": "Unplug a peg sideways",
+      "language_task_indices": [
+        36
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 6338,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "pick-out-of-hole-v3",
+      "environment_id": 30,
+      "instruction": "Pick up a puck from a hole",
+      "language_task_indices": [
+        29
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 5869,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "pick-place-v3",
+      "environment_id": 31,
+      "instruction": "Pick and place a puck to a goal",
+      "language_task_indices": [
+        30
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 2656,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "pick-place-wall-v3",
+      "environment_id": 32,
+      "instruction": "Pick a puck, bypass a wall and place the puck",
+      "language_task_indices": [
+        28
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 4132,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 120,
+        "a0_repeat0_suffix_count": 120,
+        "supervised_bank_present": true,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 120,
+        "source_prefix_development": 20,
+        "all_indexed_segments": 260,
+        "first_success_observed_segments": 89,
+        "actions_rewards_success": "indexed existing fields",
+        "physics_state": "privileged restoration provenance only",
+        "RGB": "missing in indexed historical trajectories",
+        "next_observation": "missing in indexed historical trajectories",
+        "terminated": "unknown; historical done flags merge reasons",
+        "truncated": "unknown; historical done flags merge reasons",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "plate-slide-back-side-v3",
+      "environment_id": 33,
+      "instruction": "Get a plate from the cabinet sideways",
+      "language_task_indices": [
+        34
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 2289,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "plate-slide-back-v3",
+      "environment_id": 34,
+      "instruction": "Get a plate from the cabinet",
+      "language_task_indices": [
+        33
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 3260,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "plate-slide-side-v3",
+      "environment_id": 35,
+      "instruction": "Slide a plate into a cabinet sideways",
+      "language_task_indices": [
+        32
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 2384,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "plate-slide-v3",
+      "environment_id": 36,
+      "instruction": "Slide a plate into a cabinet",
+      "language_task_indices": [
+        31
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 2555,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "push-back-v3",
+      "environment_id": 37,
+      "instruction": "Push the puck to a goal",
+      "language_task_indices": [
+        40
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 8888,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "push-v3",
+      "environment_id": 38,
+      "instruction": "Push the puck to a goal",
+      "language_task_indices": [
+        40
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 3521,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "push-wall-v3",
+      "environment_id": 39,
+      "instruction": "Bypass a wall and push a puck to a goal",
+      "language_task_indices": [
+        41
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 4047,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "reach-v3",
+      "environment_id": 40,
+      "instruction": "Reach a goal position",
+      "language_task_indices": [
+        42
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 2351,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "reach-wall-v3",
+      "environment_id": 41,
+      "instruction": "Bypass a wall and reach a goal",
+      "language_task_indices": [
+        43
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 2316,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "shelf-place-v3",
+      "environment_id": 42,
+      "instruction": "Pick and place a puck onto a shelf",
+      "language_task_indices": [
+        44
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 4925,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 120,
+        "a0_repeat0_suffix_count": 120,
+        "supervised_bank_present": true,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 120,
+        "source_prefix_development": 20,
+        "all_indexed_segments": 260,
+        "first_success_observed_segments": 31,
+        "actions_rewards_success": "indexed existing fields",
+        "physics_state": "privileged restoration provenance only",
+        "RGB": "missing in indexed historical trajectories",
+        "next_observation": "missing in indexed historical trajectories",
+        "terminated": "unknown; historical done flags merge reasons",
+        "truncated": "unknown; historical done flags merge reasons",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "soccer-v3",
+      "environment_id": 43,
+      "instruction": "Kick a soccer into the goal",
+      "language_task_indices": [
+        37
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 5308,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "stick-pull-v3",
+      "environment_id": 44,
+      "instruction": "Grasp a stick and pull a box with the stick",
+      "language_task_indices": [
+        39
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 5469,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 120,
+        "a0_repeat0_suffix_count": 120,
+        "supervised_bank_present": true,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 120,
+        "source_prefix_development": 20,
+        "all_indexed_segments": 260,
+        "first_success_observed_segments": 22,
+        "actions_rewards_success": "indexed existing fields",
+        "physics_state": "privileged restoration provenance only",
+        "RGB": "missing in indexed historical trajectories",
+        "next_observation": "missing in indexed historical trajectories",
+        "terminated": "unknown; historical done flags merge reasons",
+        "truncated": "unknown; historical done flags merge reasons",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "stick-push-v3",
+      "environment_id": 45,
+      "instruction": "Grasp a stick and push a box using the stick",
+      "language_task_indices": [
+        38
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 3766,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 120,
+        "a0_repeat0_suffix_count": 120,
+        "supervised_bank_present": true,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 120,
+        "source_prefix_development": 20,
+        "all_indexed_segments": 260,
+        "first_success_observed_segments": 118,
+        "actions_rewards_success": "indexed existing fields",
+        "physics_state": "privileged restoration provenance only",
+        "RGB": "missing in indexed historical trajectories",
+        "next_observation": "missing in indexed historical trajectories",
+        "terminated": "unknown; historical done flags merge reasons",
+        "truncated": "unknown; historical done flags merge reasons",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "sweep-into-v3",
+      "environment_id": 46,
+      "instruction": "Sweep a puck into a hole",
+      "language_task_indices": [
+        45
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 4440,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "sweep-v3",
+      "environment_id": 47,
+      "instruction": "Sweep a puck off the table",
+      "language_task_indices": [
+        46
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 4378,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "window-open-v3",
+      "environment_id": 48,
+      "instruction": "Push and open a window",
+      "language_task_indices": [
+        47
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 4358,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    },
+    {
+      "environment_task": "window-close-v3",
+      "environment_id": 49,
+      "instruction": "Push and close a window",
+      "language_task_indices": [
+        48
+      ],
+      "normal_demonstrations": {
+        "episodes": 50,
+        "frames": 4044,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/preparation/20260911/metaworld.data-audit.json",
+          "sha256": "a34d8a51508b44b820c067c07c07a5e9f6a09d4114ddeef3539647287386bdde",
+          "size_bytes": 396970
+        },
+        "metadata": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+          "sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+          "size_bytes": 2942
+        },
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "observation_state": "declared float32[4]",
+        "raw_actions": "declared float32[4]; actual values may exceed [-1,1]",
+        "reward_and_success": "next.reward/next.success declared; per-task outcomes/first-success not read in this task",
+        "RGB": "declared 3x480x480 image; historical file-presence audit, not every image decoded",
+        "next_observation": "unknown as explicit field; may use contiguous next frame within same episode only after view validation; final next frame unknown",
+        "terminated": "unknown: no separate field in info schema",
+        "truncated": "unknown: no separate field in info schema",
+        "normal_role": "existing demonstration source; no assertion every episode is successful/optimal",
+        "exact_eligible_normal_pair_count": null,
+        "missing_reason": "requires later frozen parent split and legal frame/outcome masks, not new simulation"
+      },
+      "historical_train600": {
+        "parent_count": 0,
+        "a0_repeat0_suffix_count": 0,
+        "supervised_bank_present": false,
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/DATA_ACCESS_READY.json",
+          "sha256": "bfd0c753f608b1935a602a2c3e3bfabc3470a21d32af0cd44797b49e295e0fec",
+          "size_bytes": 2611
+        },
+        "recollect": false,
+        "new_MT50_pool_member": false
+      },
+      "existing_train_development_trajectory_index": {
+        "source_prefix_train": 0,
+        "source_prefix_development": 0,
+        "all_indexed_segments": 0,
+        "first_success_observed_segments": 0,
+        "actions_rewards_success": "unknown outside authorized historical index",
+        "physics_state": "unknown",
+        "RGB": "unknown",
+        "next_observation": "unknown",
+        "terminated": "unknown",
+        "truncated": "unknown",
+        "source": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/data_access_v1/existing_trajectory_index.jsonl",
+          "sha256": "b43ba3381b0b8fc04372bc818d8c443b1c43e9e133c0335f1657343bf9833876",
+          "size_bytes": 2040928
+        }
+      },
+      "new_pool": {
+        "status": "planned_no_collection_release",
+        "H": 10,
+        "frozen_train_parents": null,
+        "frozen_development_parents": null,
+        "frozen_seeds": null,
+        "proposed_train_parents": 8,
+        "proposed_development_parents": 2,
+        "reason": "equal planned allocation for all 50 actual environments; not conditional on five-task G0 alarm"
+      }
+    }
+  ],
+  "historical_separate": {
+    "access_manifest": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/HISTORICAL_DATA_ACCESS_V1.json",
+      "sha256": "ffaba13ebb585fc3c8be4c417a6c371349c4c85d88ffa3862e6ea2087522d0d5",
+      "size_bytes": 1488
+    },
+    "train_parents": 600,
+    "development_parents": 100,
+    "indexed_prefixes": 700,
+    "indexed_a0_repeat0_suffixes": 600,
+    "total_segments": 1300,
+    "full_candidate_library": false,
+    "old_13x4_not_new_default": true,
+    "train600_recollection": false,
+    "missing_observation_next_terminated_truncated_segments": 1300,
+    "held_trajectories_opened": 0,
+    "other_legacy_eval_or_calibration_coverage": "not inspected; outside this train/development index"
+  },
+  "future_missing": [
+    "new native H10 parents/cuts/true per-step n+1 observations and terminal provenance",
+    "frozen normal-demo episode split and normalizer/token/feature identities",
+    "MT50 D/G0/Q training identity; existing five-task models do not establish coverage",
+    "restoration/replay equivalence and per-task initialization bounds",
+    "actual project storage quota; pool free capacity is not a project quota"
+  ]
+}

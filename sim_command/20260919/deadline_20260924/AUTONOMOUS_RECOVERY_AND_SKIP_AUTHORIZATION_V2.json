@@ -1,0 +1,100 @@
+{
+  "schema": "corrector_operational_recovery_authorization_v2",
+  "directive_id": "AUTONOMOUS_RECOVERY_AND_SKIP_V1",
+  "revision": 1,
+  "status": "released",
+  "issued_at_utc": "2026-09-22T17:00:20.346160+00:00",
+  "authority": "User explicitly requests independent failure diagnosis/repair/resume and 30-minute analysis timeout followed by next independent task; latest Post-only selection remains mandatory",
+  "rule": {
+    "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_V1.md",
+    "sha256": "f3ef2d8727e952d3ef58c7a9ebed40c07a79736e8198fd9978df169a46a2dbb7"
+  },
+  "selection_rule": {
+    "path": "deadline_20260924/POST_LED_SELECTION_OVERRIDE_V1.json",
+    "sha256": "fa907477112320e7f8356282c5ba64742452172dee998e9efc20a82b92b9c4b1"
+  },
+  "runtime_compatibility": {
+    "path": "deadline_20260924/AUTORUN_LIVE_CHAIN_COMPATIBILITY_V1.json",
+    "sha256": "2ae5a001cec168399a9733d038ed56d1ebeefd311081999f45429dc75e24ac16"
+  },
+  "tasks": {
+    "A": {
+      "task_id": "A_D24_AUTORECOVERY_QUEUE_RULE_V1",
+      "revision": 1,
+      "owner": "A",
+      "host": "trial-303224955-trialrun-303224955-worker-0",
+      "original_thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13"
+    },
+    "B": {
+      "task_id": "B_D24_AUTORECOVERY_QUEUE_RULE_V1",
+      "revision": 1,
+      "owner": "B",
+      "host": "trial-303225685-trialrun-303225685-worker-0",
+      "original_thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2"
+    },
+    "C": {
+      "task_id": "C_D24_AUTORECOVERY_QUEUE_RULE_V1",
+      "revision": 1,
+      "owner": "C",
+      "host": "trial-303269581-trialrun-303269581-worker-0",
+      "original_thread_id": "01a0c793-10d2-7791-a250-fd65d88e1ccb"
+    }
+  },
+  "scope": "CPU operational queue adaptation and deployment; scientific continuation uses the already granted task scope and budgets",
+  "scientific_compute_added": 0,
+  "new_GPU_claims_for_control_task": 0,
+  "new_unique_scientific_units": 0,
+  "new_training_updates": 0,
+  "routine_private_engineering_repair_and_resume_authorized": true,
+  "analysis_wait_timeout_seconds": 1800,
+  "same_fault_max_restarts_after_documented_fix": 2,
+  "unchanged_blind_retry_allowed": false,
+  "existing_stage_and_node_attempt_caps_apply": true,
+  "old_retry_zero_procedure_superseded_for_current_unfinished_authorized_tasks": true,
+  "reopen_historical_closed_or_cancelled_tasks": false,
+  "keep_scientific_configuration_and_valid_terminal_results": true,
+  "resume_after_confirmed_own_process_family_exit": true,
+  "advance_independent_eligible_task_without_waiting_1800_seconds": true,
+  "analysis_ACK_is_not_actionable_decision": true,
+  "selection_or_ownership_prerequisites_may_be_bypassed_after_timeout": false,
+  "must_not_replace_current_runtime_authorization_or_drain_healthy_chain": true,
+  "second_approval_required": false,
+  "all_formal_holders_off": true,
+  "admission_cutoff_utc": "2026-09-23T12:00:00Z",
+  "analysis_original_thread_id": "01a0b91f-355f-7cd1-ae36-412500534ffb",
+  "metadata_revision": 2,
+  "metadata_compatibility_for_C": true,
+  "same_directive_no_duplicate_deployment": true,
+  "predecessor": {
+    "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V1.json",
+    "sha256": "87878b0e2019048935904d639d1d15a1af9f0778047171a508054fecaadd4ab0"
+  },
+  "new_GPU_claims": 0,
+  "nodes": {
+    "A": {
+      "task_id": "A_D24_AUTORECOVERY_QUEUE_RULE_V1",
+      "revision": 1,
+      "owner": "A",
+      "host": "trial-303224955-trialrun-303224955-worker-0",
+      "original_thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+      "thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13"
+    },
+    "B": {
+      "task_id": "B_D24_AUTORECOVERY_QUEUE_RULE_V1",
+      "revision": 1,
+      "owner": "B",
+      "host": "trial-303225685-trialrun-303225685-worker-0",
+      "original_thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+      "thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2"
+    },
+    "C": {
+      "task_id": "C_D24_AUTORECOVERY_QUEUE_RULE_V1",
+      "revision": 1,
+      "owner": "C",
+      "host": "trial-303269581-trialrun-303269581-worker-0",
+      "original_thread_id": "01a0c793-10d2-7791-a250-fd65d88e1ccb",
+      "thread_id": "01a0c793-10d2-7791-a250-fd65d88e1ccb"
+    }
+  },
+  "publication_scope": "C discovery binding only; A/B V1 remain valid and unchanged, same operational policy and no added science"
+}

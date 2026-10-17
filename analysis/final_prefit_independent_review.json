@@ -1,0 +1,807 @@
+{
+  "schema": "native10_final_prefit_independent_review_v1",
+  "status": "passed",
+  "created_utc": "2026-09-17T00:05:45.980893+00:00",
+  "reviewer": "analysis/critic_data_audit",
+  "blockers": [],
+  "scope": "Bounded real final preflight numeric evidence, initial tensor identity, saved PCA/parameter masks/bootstrap/minibatch artifacts. Prior real-input review reused; no repeated episode/trajectory audit.",
+  "bindings": {
+    "pipeline_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1",
+    "pipeline_complete_sha256": "eb1e39d4ee145ebecce9b16593a9c1fd901fd7dcc2a5c9e8746f657e4c202d3e",
+    "pipeline_result_sha256": "d693a7d1fa4f1d5a0be4f2141966f35d97390e6e427c4c5cb6803bfc8791c79d",
+    "execution_complete_sha256": "d2ba158591ea7fee9c9caca75e7ad2fc2f9b236c3709a35344512d6ab14ec23d",
+    "real_input_review_sha256": "758186a4ba455d1859a6a737a3af986699094eb94239a41dddf5d8d0e53317c8",
+    "preview_specification_sha256": "08891c3ee6feb71aa41a8cfa7cb0fbed61930e16eb8938cf5bfeff1dd24ad946",
+    "design_sha256": "3b9bbf7a67fc15123ac761c13358c0bfd8492ea9aea3c25649cefb02c66ef0cf",
+    "preflight_ready": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_fit_protocols/final_preflight_v1/coordination/NATIVE10_ANALYSIS_READY.json",
+      "sha256": "684fa1d88290a68a64e21e898695a9271602e5bec0ecff7c707962ad625ff521"
+    },
+    "preflight_protocol_sha256": "9fc2c0aa22fe6ea5eb497da656a41d6002ce1b4b7eed4436067f7af4a310f07d"
+  },
+  "verified_pipeline_files": {
+    "A/batch_singleton_audit.json": "94dba9fc08df383b97f93f4431eed19ebfdacab715260cb19c8ac3811c6013d3",
+    "A/initial/complete.json": "1172a88851c52eb99fff353afaaf82466c6839c704c3c63a81e88bc31b00f2dc",
+    "A/initial/config.json": "d5735c00af807130bdd5609b179af6187167c9e0ab3453d82c5285dd76925066",
+    "A/initial/models/refit/member_0/selected.pt": "8a08e1fbab88e17635a6cc4bec6f811a9fd435888a5298fd1782a6cb51fc0f09",
+    "A/initial/models/refit/member_1/selected.pt": "699045cdf0c7b2965aeaf4fb4e8459cfb66ad8b72c8cc02a01d2cc8bc0fa87b3",
+    "A/initial/models/refit/member_2/selected.pt": "f12692a54285f95e3b905abc985a645e674569113bc254d31bfc069728e5f15c",
+    "A/initial/models/refit/member_3/selected.pt": "88a560baa2d39a6b849173d040117ef72ee2ccec3949767b3b93652a34f3195a",
+    "A/initial/ranking.json": "8ff4bbb6bb1b656f6c53b58f2ae97457e3676ac2ec1c8227e572e1090e077e61",
+    "A/reload_audit.json": "16d32fec720562f6969179abfaa752b9780d55919d30e054f0da69caa4095fc6",
+    "B/batch_singleton_audit.json": "25771a760287cb20badccaf3167266f55de46aece821450bcb93f26b7a8fec04",
+    "B/initial/complete.json": "cd36e7e59bed7a9a649801b4a39ca1c2aab6ea44ec2566e475f66d7fb5d0f7a6",
+    "B/initial/config.json": "41a2ed15e763d86bc32cb1b1395ec55f6ed40910194b7e96e9f1059e352ae552",
+    "B/initial/models/refit/member_0/selected.pt": "b7642417b613f25d12884d262b37e3fbd38d15f23f2a59b9e410aa9852e0fd4d",
+    "B/initial/models/refit/member_1/selected.pt": "8a246d74a0c805051ba05978500041cadcd281ccb7cf18530036671420056020",
+    "B/initial/models/refit/member_2/selected.pt": "fd2a4d53348e3ccd52e5235a2d0a90df3b330b23a76185da635a0e635863dc42",
+    "B/initial/models/refit/member_3/selected.pt": "e1e6d1dd4d4ee151ff8691f37f2b69768a3b1bbf821c7d79a80cc6b842894e8a",
+    "B/initial/ranking.json": "d0a9d86d8984634fb08f2926a69128d46daa5bb5af9642214461017bf053130a",
+    "B/reload_audit.json": "4604ba8f758928f65de22555bb09ca61b9d500fa8117b83f72ea59e5b796ddb9",
+    "config.json": "c7fcdf6a8f3c6c633ffcedbe5ad8e263c0f99b9c53655c9badd83ab060c220ca",
+    "minibatch_plans.npz": "3762bfa512b54c1a20528dd0ece850baa3de3b86b28fe317f651b131d3c3e36f",
+    "pca_fit_audit.json": "47707fc7b9b1ea2c56243e455c92e20254c7a8d6306c3f377324ea43d676d5e0",
+    "preprocessing.npz": "a513af33903a4711605c07eaf90417465327bd7ff1cc90cbffd52eded06dcba9",
+    "registration.json": "c4ab3a0ce30906c026e341b12ab8787503e9088135f529ade1ccd9f08c641aec",
+    "result.json": "d693a7d1fa4f1d5a0be4f2141966f35d97390e6e427c4c5cb6803bfc8791c79d",
+    "sampling.json": "b962bc1441d5f9ed8e31c1fecaef6609f1c58ff092bdc461f706ed8077aae381",
+    "source_sets.json": "23562c71313d3c04d6426348f0fccd813f4354c2f438bf8dd13c8e11f14323da",
+    "trainable_masks.json": "b8313ca07052735713f23c19954abca109101120a45743c83beee3af2200c6ac"
+  },
+  "coverage": {
+    "train_planned": 600,
+    "train_reached": 600,
+    "development_planned": 100,
+    "development_reached": 95,
+    "rounds": [
+      1,
+      2
+    ],
+    "episode_split_checked": true
+  },
+  "numeric_runtime": {
+    "torch": "2.7.1+cu126",
+    "numpy": "2.2.6",
+    "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+    "executable": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python3.12",
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 2,
+    "torch_distribution": "2.7.1",
+    "numpy_distribution": "2.2.6",
+    "torch_version_file": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/lib/python3.12/site-packages/torch/version.py",
+      "sha256": "6ed9ff03113f2ceba7ad0f77cf4b160ea03f918ef010b5f662ce74786d182974"
+    }
+  },
+  "canonical": {
+    "A": {
+      "train": {
+        "source_count": 600,
+        "members": 4,
+        "probability_slots": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "gradient_slots": [
+          0,
+          11
+        ],
+        "all_recorded_strict_checks_passed": true,
+        "offline_float64_online_float32_gain_difference": 5.21540641784668e-08
+      },
+      "development": {
+        "source_count": 95,
+        "members": 4,
+        "probability_slots": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "gradient_slots": [
+          0,
+          11
+        ],
+        "all_recorded_strict_checks_passed": true,
+        "offline_float64_online_float32_gain_difference": 3.5390257835388184e-08
+      }
+    },
+    "B": {
+      "train": {
+        "source_count": 600,
+        "members": 4,
+        "probability_slots": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "gradient_slots": [
+          0,
+          11
+        ],
+        "all_recorded_strict_checks_passed": true,
+        "offline_float64_online_float32_gain_difference": 0.0
+      },
+      "development": {
+        "source_count": 95,
+        "members": 4,
+        "probability_slots": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "gradient_slots": [
+          0,
+          11
+        ],
+        "all_recorded_strict_checks_passed": true,
+        "offline_float64_online_float32_gain_difference": 0.0
+      }
+    }
+  },
+  "dense": {
+    "A": {
+      "train": {
+        "source_count": 600,
+        "observed_feature_max_abs_difference": 0,
+        "projected_features": {
+          "max_abs_difference": 0.00014901161921443418,
+          "reference_rms_range": [
+            1.0059834637044038,
+            1.0059834637044038
+          ],
+          "comparison_rms_range": [
+            1.005983466249264,
+            1.005983466249264
+          ],
+          "all_finite": true
+        },
+        "member_probabilities": {
+          "max_abs_difference": 1.8298625946044922e-05,
+          "reference_rms_range": [
+            0.6935178454516442,
+            0.7066290082118103
+          ],
+          "comparison_rms_range": [
+            0.6935163992450837,
+            0.706627866181418
+          ],
+          "all_finite": true
+        },
+        "member_gradients": {
+          "0": {
+            "max_abs_difference": 2.5212764739990234e-05,
+            "reference_rms_range": [
+              0.12124792841813607,
+              0.16814839888759034
+            ],
+            "comparison_rms_range": [
+              0.12124773903462412,
+              0.1681486941777392
+            ],
+            "all_finite": true
+          },
+          "11": {
+            "max_abs_difference": 1.609325408935547e-05,
+            "reference_rms_range": [
+              0.0681524791063088,
+              0.08999058680992272
+            ],
+            "comparison_rms_range": [
+              0.06815300992209572,
+              0.08999131589161284
+            ],
+            "all_finite": true
+          }
+        },
+        "ensemble_gradients": {
+          "0": {
+            "max_abs_difference": 1.1563301086425781e-05,
+            "reference_rms_range": [
+              0.12649015533007907,
+              0.12649015533007907
+            ],
+            "comparison_rms_range": [
+              0.12649032234313917,
+              0.12649032234313917
+            ],
+            "all_finite": true
+          },
+          "11": {
+            "max_abs_difference": 8.52346420288086e-06,
+            "reference_rms_range": [
+              0.0654472899640437,
+              0.0654472899640437
+            ],
+            "comparison_rms_range": [
+              0.06544794849905591,
+              0.06544794849905591
+            ],
+            "all_finite": true
+          }
+        },
+        "hard_invariants_passed": true,
+        "state_fingerprints": [
+          "9252a35542ec3c7514568da3eef4583b00037da7efd7f04080e4f8a7f0b744c2",
+          "b7f2bfb94e432b9e39187b89c1394f17ea58ca8140130e16c8302dda134a8b07",
+          "8e43af9ee38e87a50f09f0ef6e2d41c3ca499699789558ad58e7a0bab9d684a1",
+          "0577c45f418329452944e6e1ef835c1af280b26726de52b1289a3e29b7c7f1dc"
+        ]
+      },
+      "development": {
+        "source_count": 95,
+        "observed_feature_max_abs_difference": 0,
+        "projected_features": {
+          "max_abs_difference": 0.00013411045802058652,
+          "reference_rms_range": [
+            1.108032176024517,
+            1.108032176024517
+          ],
+          "comparison_rms_range": [
+            1.1080321705930603,
+            1.1080321705930603
+          ],
+          "all_finite": true
+        },
+        "member_probabilities": {
+          "max_abs_difference": 1.3709068298339844e-05,
+          "reference_rms_range": [
+            0.6461097798765763,
+            0.6667649000500493
+          ],
+          "comparison_rms_range": [
+            0.6461076556800364,
+            0.6667643154866266
+          ],
+          "all_finite": true
+        },
+        "member_gradients": {
+          "0": {
+            "max_abs_difference": 1.52587890625e-05,
+            "reference_rms_range": [
+              0.13739458302006177,
+              0.18932143716787264
+            ],
+            "comparison_rms_range": [
+              0.1373944800040254,
+              0.1893214245104487
+            ],
+            "all_finite": true
+          },
+          "11": {
+            "max_abs_difference": 1.1861324310302734e-05,
+            "reference_rms_range": [
+              0.06990619206023771,
+              0.07893158522539988
+            ],
+            "comparison_rms_range": [
+              0.06990636795438813,
+              0.07893214345974729
+            ],
+            "all_finite": true
+          }
+        },
+        "ensemble_gradients": {
+          "0": {
+            "max_abs_difference": 8.52346420288086e-06,
+            "reference_rms_range": [
+              0.1423366458751132,
+              0.1423366458751132
+            ],
+            "comparison_rms_range": [
+              0.14233670716931204,
+              0.14233670716931204
+            ],
+            "all_finite": true
+          },
+          "11": {
+            "max_abs_difference": 6.467103958129883e-06,
+            "reference_rms_range": [
+              0.061810983616534185,
+              0.061810983616534185
+            ],
+            "comparison_rms_range": [
+              0.06181151794237005,
+              0.06181151794237005
+            ],
+            "all_finite": true
+          }
+        },
+        "hard_invariants_passed": true,
+        "state_fingerprints": [
+          "9252a35542ec3c7514568da3eef4583b00037da7efd7f04080e4f8a7f0b744c2",
+          "b7f2bfb94e432b9e39187b89c1394f17ea58ca8140130e16c8302dda134a8b07",
+          "8e43af9ee38e87a50f09f0ef6e2d41c3ca499699789558ad58e7a0bab9d684a1",
+          "0577c45f418329452944e6e1ef835c1af280b26726de52b1289a3e29b7c7f1dc"
+        ]
+      }
+    },
+    "B": {
+      "train": {
+        "source_count": 600,
+        "observed_feature_max_abs_difference": 0,
+        "projected_features": {
+          "max_abs_difference": 0.00028475187718868256,
+          "reference_rms_range": [
+            0.9876022804384578,
+            0.9876022804384578
+          ],
+          "comparison_rms_range": [
+            0.9876022752212142,
+            0.9876022752212142
+          ],
+          "all_finite": true
+        },
+        "member_probabilities": {
+          "max_abs_difference": 3.5762786865234375e-07,
+          "reference_rms_range": [
+            0.47463246524082,
+            0.5141177571280725
+          ],
+          "comparison_rms_range": [
+            0.4746324515653489,
+            0.514117779634929
+          ],
+          "all_finite": true
+        },
+        "member_gradients": {
+          "0": {
+            "max_abs_difference": 1.0943040251731873e-08,
+            "reference_rms_range": [
+              0.0011384141413220872,
+              0.0030014213440516767
+            ],
+            "comparison_rms_range": [
+              0.0011384140465450989,
+              0.003001421013846417
+            ],
+            "all_finite": true
+          },
+          "11": {
+            "max_abs_difference": 1.1641532182693481e-08,
+            "reference_rms_range": [
+              0.0011555174761654827,
+              0.003361478792562191
+            ],
+            "comparison_rms_range": [
+              0.001155517374049597,
+              0.003361478899261922
+            ],
+            "all_finite": true
+          }
+        },
+        "ensemble_gradients": {
+          "0": {
+            "max_abs_difference": 4.6566128730773926e-09,
+            "reference_rms_range": [
+              0.001237181148975683,
+              0.001237181148975683
+            ],
+            "comparison_rms_range": [
+              0.0012371810603056185,
+              0.0012371810603056185
+            ],
+            "all_finite": true
+          },
+          "11": {
+            "max_abs_difference": 4.423782229423523e-09,
+            "reference_rms_range": [
+              0.0013173494972147145,
+              0.0013173494972147145
+            ],
+            "comparison_rms_range": [
+              0.0013173494167763335,
+              0.0013173494167763335
+            ],
+            "all_finite": true
+          }
+        },
+        "hard_invariants_passed": true,
+        "state_fingerprints": [
+          "e4957bd7ab0dfacea317114b0515ca83eba088ff09b64ea4156b582809a7558a",
+          "6109036530876b573fbbab1cd761a0c5c629afdc486e35defb16fa6ca6cea28c",
+          "f84fe0af67415768d7c7348bff132467d92f3d5ec252f31479876ea6df49945e",
+          "b783feb586606e9d9f63941197752019595e3fd155fb520d45d15b051f576e50"
+        ]
+      },
+      "development": {
+        "source_count": 95,
+        "observed_feature_max_abs_difference": 0,
+        "projected_features": {
+          "max_abs_difference": 0.0002384185791015625,
+          "reference_rms_range": [
+            1.1089682646130286,
+            1.1089682646130286
+          ],
+          "comparison_rms_range": [
+            1.1089682578122397,
+            1.1089682578122397
+          ],
+          "all_finite": true
+        },
+        "member_probabilities": {
+          "max_abs_difference": 2.980232238769531e-07,
+          "reference_rms_range": [
+            0.47379456049305835,
+            0.5143605594717605
+          ],
+          "comparison_rms_range": [
+            0.47379455134572374,
+            0.514360578101088
+          ],
+          "all_finite": true
+        },
+        "member_gradients": {
+          "0": {
+            "max_abs_difference": 9.778887033462524e-09,
+            "reference_rms_range": [
+              0.0011414067901392006,
+              0.002995493285726462
+            ],
+            "comparison_rms_range": [
+              0.0011414067435312572,
+              0.0029954931498624424
+            ],
+            "all_finite": true
+          },
+          "11": {
+            "max_abs_difference": 1.0943040251731873e-08,
+            "reference_rms_range": [
+              0.0012069013031929864,
+              0.0034242236578108346
+            ],
+            "comparison_rms_range": [
+              0.0012069012428190147,
+              0.0034242237677785652
+            ],
+            "all_finite": true
+          }
+        },
+        "ensemble_gradients": {
+          "0": {
+            "max_abs_difference": 3.4924596548080444e-09,
+            "reference_rms_range": [
+              0.001237720097857695,
+              0.001237720097857695
+            ],
+            "comparison_rms_range": [
+              0.0012377200614601454,
+              0.0012377200614601454
+            ],
+            "all_finite": true
+          },
+          "11": {
+            "max_abs_difference": 3.7834979593753815e-09,
+            "reference_rms_range": [
+              0.001338104106273397,
+              0.001338104106273397
+            ],
+            "comparison_rms_range": [
+              0.0013381040848818044,
+              0.0013381040848818044
+            ],
+            "all_finite": true
+          }
+        },
+        "hard_invariants_passed": true,
+        "state_fingerprints": [
+          "e4957bd7ab0dfacea317114b0515ca83eba088ff09b64ea4156b582809a7558a",
+          "6109036530876b573fbbab1cd761a0c5c629afdc486e35defb16fa6ca6cea28c",
+          "f84fe0af67415768d7c7348bff132467d92f3d5ec252f31479876ea6df49945e",
+          "b783feb586606e9d9f63941197752019595e3fd155fb520d45d15b051f576e50"
+        ]
+      }
+    }
+  },
+  "numeric_interpretation": {
+    "hard_invariants": "All recorded finite/shape/source order/slot/member axes/a0 detachment and zero advantage/state immutability/source-independent structure checks agree. Gradient reduction is source sum, member mean only; no 1/N scaling.",
+    "differences": "Actual dense/singleton differences are nonzero and exceed the earlier synthetic example; report-only under the prior frozen numerical decision. Canonical production/reload strict comparisons all pass. No new tolerance, algorithm or runtime change used.",
+    "probability_difference_units": "Probability differences are in [0,1] probability units, not percentage points.",
+    "no_causal_or_performance_claim": true
+  },
+  "PCA": {
+    "source_count": 600,
+    "unique_source_count": 600,
+    "fit_ids_exact_train_order": true,
+    "development_excluded": true,
+    "bootstrap_duplicates_used": false,
+    "vision_dimension": 16,
+    "language_dimension": 8,
+    "diagnostics": {
+      "visual": {
+        "scale_floor": 0.001,
+        "scale_floor_count": 0,
+        "projected_clip_fraction": 0.0,
+        "retained_standard_deviations": [
+          38.3212890625,
+          36.226619720458984,
+          34.25390625,
+          26.028884887695312,
+          22.727609634399414,
+          20.05340003967285,
+          17.875621795654297,
+          14.120763778686523,
+          11.711106300354004,
+          10.538369178771973,
+          9.469165802001953,
+          9.105895042419434,
+          8.505538940429688,
+          7.670959949493408,
+          7.475822448730469,
+          7.003473281860352
+        ]
+      },
+      "language": {
+        "scale_floor": 0.001,
+        "scale_floor_count": 4,
+        "projected_clip_fraction": 0.0,
+        "retained_standard_deviations": [
+          2.79836106300354,
+          2.0726704597473145,
+          1.2879880666732788,
+          0.7651695013046265,
+          1.4606029026253964e-06,
+          2.1763491986348527e-06,
+          3.0700955448992318e-06,
+          1.934238980538794e-06
+        ]
+      }
+    }
+  },
+  "initial_state_identity": {
+    "A": [
+      {
+        "member": 0,
+        "sealed_weights_and_preprocessing_match": true,
+        "finite": true,
+        "parameter_tensors": 20,
+        "trainable_tensors": 8,
+        "buffer_tensors": 9,
+        "original_member": "1041",
+        "all_29_state_tensors_identical_to_original": true
+      },
+      {
+        "member": 1,
+        "sealed_weights_and_preprocessing_match": true,
+        "finite": true,
+        "parameter_tensors": 20,
+        "trainable_tensors": 8,
+        "buffer_tensors": 9,
+        "original_member": "1042",
+        "all_29_state_tensors_identical_to_original": true
+      },
+      {
+        "member": 2,
+        "sealed_weights_and_preprocessing_match": true,
+        "finite": true,
+        "parameter_tensors": 20,
+        "trainable_tensors": 8,
+        "buffer_tensors": 9,
+        "original_member": "1043",
+        "all_29_state_tensors_identical_to_original": true
+      },
+      {
+        "member": 3,
+        "sealed_weights_and_preprocessing_match": true,
+        "finite": true,
+        "parameter_tensors": 20,
+        "trainable_tensors": 8,
+        "buffer_tensors": 9,
+        "original_member": "1044",
+        "all_29_state_tensors_identical_to_original": true
+      }
+    ],
+    "B": [
+      {
+        "member": 0,
+        "sealed_weights_and_preprocessing_match": true,
+        "finite": true,
+        "parameter_tensors": 20,
+        "trainable_tensors": 20,
+        "buffer_tensors": 9
+      },
+      {
+        "member": 1,
+        "sealed_weights_and_preprocessing_match": true,
+        "finite": true,
+        "parameter_tensors": 20,
+        "trainable_tensors": 20,
+        "buffer_tensors": 9
+      },
+      {
+        "member": 2,
+        "sealed_weights_and_preprocessing_match": true,
+        "finite": true,
+        "parameter_tensors": 20,
+        "trainable_tensors": 20,
+        "buffer_tensors": 9
+      },
+      {
+        "member": 3,
+        "sealed_weights_and_preprocessing_match": true,
+        "finite": true,
+        "parameter_tensors": 20,
+        "trainable_tensors": 20,
+        "buffer_tensors": 9
+      }
+    ]
+  },
+  "B_fresh_initialization_evidence": "Four distinct parameter sets, each differing from all four A originals; common sealed train-only PCA buffers and final-phase initialization seeds. Fresh initialization follows the previously reviewed SHA-bound preflight implementation; this review did not regenerate random initialization.",
+  "bootstrap_and_minibatches": {
+    "A": [
+      {
+        "member": 0,
+        "bootstrap_draws": 600,
+        "unique_drawn_sources": 397,
+        "draws_per_task": 120,
+        "minibatch_shape": [
+          4000,
+          32
+        ],
+        "saved_plan_hash_and_bootstrap_membership_verified": true
+      },
+      {
+        "member": 1,
+        "bootstrap_draws": 600,
+        "unique_drawn_sources": 382,
+        "draws_per_task": 120,
+        "minibatch_shape": [
+          4000,
+          32
+        ],
+        "saved_plan_hash_and_bootstrap_membership_verified": true
+      },
+      {
+        "member": 2,
+        "bootstrap_draws": 600,
+        "unique_drawn_sources": 379,
+        "draws_per_task": 120,
+        "minibatch_shape": [
+          4000,
+          32
+        ],
+        "saved_plan_hash_and_bootstrap_membership_verified": true
+      },
+      {
+        "member": 3,
+        "bootstrap_draws": 600,
+        "unique_drawn_sources": 384,
+        "draws_per_task": 120,
+        "minibatch_shape": [
+          4000,
+          32
+        ],
+        "saved_plan_hash_and_bootstrap_membership_verified": true
+      }
+    ],
+    "B": [
+      {
+        "member": 0,
+        "bootstrap_draws": 600,
+        "unique_drawn_sources": 366,
+        "draws_per_task": 120,
+        "minibatch_shape": [
+          4000,
+          32
+        ],
+        "saved_plan_hash_and_bootstrap_membership_verified": true
+      },
+      {
+        "member": 1,
+        "bootstrap_draws": 600,
+        "unique_drawn_sources": 377,
+        "draws_per_task": 120,
+        "minibatch_shape": [
+          4000,
+          32
+        ],
+        "saved_plan_hash_and_bootstrap_membership_verified": true
+      },
+      {
+        "member": 2,
+        "bootstrap_draws": 600,
+        "unique_drawn_sources": 372,
+        "draws_per_task": 120,
+        "minibatch_shape": [
+          4000,
+          32
+        ],
+        "saved_plan_hash_and_bootstrap_membership_verified": true
+      },
+      {
+        "member": 3,
+        "bootstrap_draws": 600,
+        "unique_drawn_sources": 385,
+        "draws_per_task": 120,
+        "minibatch_shape": [
+          4000,
+          32
+        ],
+        "saved_plan_hash_and_bootstrap_membership_verified": true
+      }
+    ]
+  },
+  "reuse_contract": "Actual final run calls _load_preflight_verified before fitting; verifies exact identity, all initial seals, PCA/source order, preprocessing buffers, trainable masks, sampling and saved 4000x32 plans. Fit replays the deterministic sealed bootstrap/minibatch seed schedule and checks its identity; no new PCA or independent random initialization is authorized.",
+  "resource_evidence": {
+    "pipeline_optimizer_updates": 0,
+    "pipeline_simulator_calls": 0,
+    "model_fit_complete": false,
+    "next_stage_not_released_by_this_artifact": true,
+    "cost": {
+      "wall_seconds": 419.4460710994899,
+      "cpu_seconds": 260.800400338,
+      "peak_rss_kib": 1762424,
+      "stages": {
+        "input_audit_seconds": 263.5074464287609,
+        "old_import_and_train_pca_seconds": 2.307057136669755,
+        "A_initialization_export_checks_seconds": 76.42434882372618,
+        "B_initialization_export_checks_seconds": 76.33141504973173
+      },
+      "simulator_attempts": 0,
+      "optimizer_updates": 0,
+      "device": "cpu",
+      "scope": "model preflight only"
+    },
+    "execution_resource_ledger_review": "Parallel archive reviewer owns independent before/after ledger check; not duplicated here."
+  },
+  "remaining_training_requirements": [
+    "Separate READY final_training binding to this exact pipeline preflight seal/result, same science specification and input bundle.",
+    "Final selected trained model must produce strict export/reload evidence; this preflight reviews initial models only."
+  ],
+  "operations_performed": {
+    "checkpoint_tensor_reads": 12,
+    "model_forward_or_backward_calls": 0,
+    "PCA_fits": 0,
+    "model_initializations": 0,
+    "optimizer_updates": 0,
+    "simulator_calls": 0,
+    "tests_rerun": 0,
+    "workflow_data_loader_calls": 0
+  },
+  "limits": [
+    "Recorded numerical outputs were independently inspected and checked for internal consistency; numerical inference was not rerun.",
+    "No rehash or replay of 700 raw episodes; immutable final_real_input_review reused.",
+    "B initializer replay was not performed; freshness relies on bound implementation, seeds and independent sealed tensor checks."
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A11_COMMON_POOL_COLLECTOR_CPU_V1",
+  "revision": 1,
+  "reviewed_at_utc": "2026-09-20T10:17:03.089823+00:00",
+  "status": "CPU_implementation_delivery_reviewed_required_contract_repairs_before_release",
+  "receipt": {
+    "path": "receipts/A/A11_COMMON_POOL_COLLECTOR_CPU_V1_RESULT.json",
+    "sha256": "8acc911391ac6f0c90d8256adb331eab03e0e53b4f914654be017b07e0559fd0"
+  },
+  "report": {
+    "path": "results/A/A11_COMMON_POOL_COLLECTOR_CPU_V1/REPORT.md",
+    "sha256": "7f2754984a9eab357eaa2b185923d100164ff47f0f71aeb3e502b586c0c8b485"
+  },
+  "manifest": {
+    "path": "results/A/A11_COMMON_POOL_COLLECTOR_CPU_V1/EVIDENCE_MANIFEST.json",
+    "sha256": "160d9252f0b40106336aa1df048e260903f4823c52b48c2ebd1b9f0c9d033f8b"
+  },
+  "sidecar_ready": {
+    "path": "results/A/A11_COMMON_POOL_COLLECTOR_CPU_V1/sidecar_v1/READY.json",
+    "sha256": "56adfa1657553af79e0b740c643ddcc0616520c62c50983594e0cfa72e9650d9"
+  },
+  "executor_final_verification": {
+    "path": "work/A/A11_COMMON_POOL_COLLECTOR_CPU_V1_r1/FINAL_VERIFICATION.json",
+    "sha256": "41f89c089117c5a77b3d278ccaf55ec86f0cb58cdbf983736745dec548645245"
+  },
+  "root_verification": {
+    "artifact_refs": 30,
+    "manifest_files": 1704,
+    "unique_artifact_and_manifest_files": 1705,
+    "code_manifest_members_in_verified_set": 395,
+    "model_or_hardware_or_environment_calls": 0,
+    "new_tests_run": 0
+  },
+  "executor_CPU_tests": {
+    "main": 133,
+    "targeted_delta": 21,
+    "final_metadata_shell": 8,
+    "synthetic_operations_recorded_separately": true,
+    "actual_restricted_operations_all_zero": true
+  },
+  "independent_reviewers": [
+    "/root/interface_v1_semantics_review",
+    "/root/pv_v3_numeric_acceptance_review",
+    "/root/b_pending_receipts_review"
+  ],
+  "accepted_scope": [
+    "shelf H10 cut5 normal+14 cold-policy replay controller implemented with real capture/compare call path",
+    "Q a0/local± each2 and G0 old/threefresh each2; namespace/repeat/s300 rules and core count arithmetic",
+    "typed full-state refusal structure, private ledgers and whole-wave lifecycle",
+    "immutable sidecar schema published; no B consumption assumed"
+  ],
+  "proposed_numerics_verified_not_authorized": {
+    "attempts": 15,
+    "controls": 4500,
+    "samples": 453,
+    "flow": 4530,
+    "observations": 4515,
+    "native_resets": 780,
+    "reset_model": 1560,
+    "initialization_substeps": 390000,
+    "resource_caps": 116
+  },
+  "storage_planning_verified": {
+    "controlled_payload_bytes": 8120172544,
+    "logs_bytes": 1073741824,
+    "filesystem_metadata_allowance_bytes": 268435456,
+    "sum_bytes": 9462349824,
+    "GiB": 8.8125,
+    "project_quota_known": false,
+    "reserved": false,
+    "third_party_temp_upper_bound": null
+  },
+  "required_repairs": [
+    {
+      "id": "STATE_BOX_INFINITY",
+      "severity": "blocks_real_cut_capture",
+      "evidence": [
+        "code/full_state.py:22",
+        "code/runtime_state.py:21",
+        "installed MetaWorld sawyer_xyz_env.py observation-space bounds"
+      ],
+      "finding": "generic finite-array check rejects valid +/-inf Box bounds recursively captured as metadata",
+      "decision": "typed Box-bound policy allows declared IEEE infinity while preserving bytes; physical values and NaN remain rejected"
+    },
+    {
+      "id": "EPISODE_IDENTITY",
+      "severity": "blocks_public_record_linkage",
+      "evidence": [
+        "code/core/event_recorder.py:19",
+        "code/sidecar_output.py:14"
+      ],
+      "finding": "source_id__branch versus parent_source_id__branch are different episode IDs",
+      "decision": "one episode identity function across private recorder/public episode/sidecar, retain source versus parent semantics"
+    },
+    {
+      "id": "PUBLIC_COST_REFS",
+      "severity": "public_contract_violation",
+      "evidence": [
+        "code/sidecar_output.py:26"
+      ],
+      "finding": "private ledger filenames used as public event IDs; private events are not public UUID events",
+      "decision": "public cost_event_refs=[] with explicit missing reason; SHA-index private ledgers separately after exit; no new public event bridge required"
+    },
+    {
+      "id": "NULL_REASONS",
+      "severity": "public_contract_violation",
+      "evidence": [
+        "code/sidecar_output.py:13",
+        "code/runtime_engine.py:142-143"
+      ],
+      "finding": "public null fields lack required missing_reasons; structural validator insufficient",
+      "decision": "semantic CPU check of actual publisher output and null reasons"
+    },
+    {
+      "id": "AGGREGATE_REFERENCE",
+      "severity": "consumer_semantics_require_fix",
+      "evidence": [
+        "code/sidecar_output.py:122-123"
+      ],
+      "finding": "logical paired aggregate marks physical_alias_of as its own attempt; record_ref target meaning ambiguous",
+      "decision": "physical_alias_of=null; existing comparison_arms/repeat_id=null distinguish aggregate, bind external aggregate index/label_key/member refs; keep immutable sidecar_v1"
+    },
+    {
+      "id": "RLIMIT_AS",
+      "severity": "unnecessary_runtime_failure_risk",
+      "evidence": [
+        "code/execution.py:8"
+      ],
+      "finding": "128GiB virtual address limit added without relation to resident memory or CUDA address reservations",
+      "decision": "remove self-imposed RLIMIT_AS; keep inherited platform constraints and honest resident-memory estimates/observation scope; no GPU probe to test this artificial restriction"
+    },
+    {
+      "id": "STORAGE_ADMISSION",
+      "severity": "finite_release_precondition_incomplete",
+      "evidence": [
+        "code/authorization.py:50",
+        "code/authorization.py:59",
+        "code/launch.py:43"
+      ],
+      "finding": "quota reservation and zero third-party temporary writes unproven; pre-gate two JSONs bypass Store",
+      "decision": "scoped first-parent admission with controlled-byte budget, capacity evidence and explicit non-hard external-write limits; bound the two small metadata files; do not require full-batch reservation"
+    }
+  ],
+  "runtime_unknowns": [
+    "MJB Python buffer ABI and deterministic serialized bytes",
+    "complete shelf field/derived-state qualification at real cut",
+    "finite storage admission and unowned/native temp limits",
+    "other49 task support denied"
+  ],
+  "nonblocking_reporting_note": "non-normal replay before cut can retain BRANCH_RESULT but fail sidecar publication; must report sidecar missing, never fabricate paired data; optional CPU-only handling within repair",
+  "current_GPU_proposal": "unreleased V1 retained, not executable; new repaired package must have new V2 proposal identity",
+  "future_compute_authorized": false,
+  "next_task": "A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1"
+}

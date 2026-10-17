@@ -1,0 +1,112 @@
+{
+  "authorized_actual_counts": {
+    "simulator_attempts": 0,
+    "completed_rollouts": 0,
+    "vla_sampling_calls": 0,
+    "model_gpu_inference_calls": 0,
+    "optimizer_updates": 0,
+    "optimizer_attempts": 0,
+    "model_initializations": 0,
+    "training_forward_calls": 0
+  },
+  "all_numbers_below_are_unreleased_proposals": true,
+  "preflight": {
+    "job_id": "lvm_gpu_probe_2",
+    "kind": "lvm_gpu_probe",
+    "proposal_only": true,
+    "timeout_seconds": 180,
+    "retry_cap": 0,
+    "inputs": {
+      "model": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/corrector_pi05_mt50/h1_k10/best_cosine_model.pt",
+        "sha256": "0efadcfdfde814fc4e929d007ed0b95894de33f0d51e3d3cae512605e223d168",
+        "bytes": 170051647
+      },
+      "model_config": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/corrector_pi05_mt50/h1_k10/config.json",
+        "sha256": "4f7cc842b2e17bb5ff526dfcdfd7e94a680d1431bd9cf7af1b9f88373bc0b232",
+        "bytes": 981
+      }
+    },
+    "limits": {
+      "simulator_attempts": 0,
+      "completed_rollouts": 0,
+      "vla_sampling_calls": 0,
+      "model_gpu_inference_calls": 2,
+      "optimizer_updates": 0,
+      "optimizer_attempts": 0,
+      "model_initializations": 1,
+      "training_forward_calls": 0
+    },
+    "expected_peak_vram_GiB_estimate": 2,
+    "disk_peak_GiB_estimate": 0.1,
+    "gpu_seconds_upper_bound": 200,
+    "notes": "Synthetic-token shape/finiteness probe only; does not establish VLA feature, renderer or task performance validity.",
+    "termination_grace_seconds": 20,
+    "all_GPU_reservation_seconds_upper_bound": 1600
+  },
+  "E1": {
+    "fit_jobs": 48,
+    "complete_ensemble_seeds": 3,
+    "losses": 4,
+    "members": 4,
+    "updates_per_member": 4000,
+    "total_updates": 192000,
+    "simulator_attempts": 0,
+    "model_gpu_inference_calls": 0,
+    "device": "CPU",
+    "timeout_seconds_per_member": 1800,
+    "maximum_sum_job_wall_seconds": 87360,
+    "peak_host_RAM_GiB_estimate": 3,
+    "VRAM_GiB": 0,
+    "output_disk_GiB_estimate": 0.2,
+    "retain": "48 final models + lineage, configs, actual counters; operators share fits"
+  },
+  "GAF": {
+    "fit_jobs": 3,
+    "updates_per_member": 10000,
+    "total_updates": 30000,
+    "train_forward_calls": 30000,
+    "maximum_development_forward_calls": 1200,
+    "development_rows_cap": 10240,
+    "simulator_attempts": 0,
+    "VLA_sampling_calls": 0,
+    "maximum_sum_GPU_job_seconds": 10860,
+    "peak_VRAM_GiB_estimate": 4,
+    "peak_RAM_GiB_estimate": 16,
+    "output_disk_GiB_estimate": 0.1,
+    "retain": "three independently initialized selected+final critics, model/data/config/code identity",
+    "inputs_ready": false
+  },
+  "LVM_common_token_extraction": {
+    "frames": null,
+    "model_feature_calls": null,
+    "input_manifest": null,
+    "reason": "Do not invent common pool size. Once N unique frames frozen, feature extraction count=N (or ceil(N/batch) explicit batch calls); FP16 token payload=1048576*N bytes before format overhead; deduplicate before release."
+  },
+  "X_VLA_new_SFT_if_analysis_selects": {
+    "existing_declared_recipe_updates": 30000,
+    "world_size": 8,
+    "effective_batch": 64,
+    "historical_preview": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/resolved-formal-previews/xvla.json",
+      "sha256": "99fb660a738767a0d2a3b31e3780c8d84496e9a58dfc8e37e7d555b4fab9443b",
+      "bytes": 9025
+    },
+    "new_run_authorized": false,
+    "minimum_scientific_training_updates": null,
+    "reason": "No demonstrated smaller adequate MT50 run;30k is existing finite adaptation recipe, not a proven minimum. First load/2-update technical pilot would require its own job/output and release; B10 does not start it.",
+    "time_and_peak_VRAM": null,
+    "output_disk_peak_GiB_estimate": 60,
+    "estimate_reason": "Base3.52GB + mixed-precision model/Adam states and selected/final/resume outputs; must refine after finite pilot, no benchmark claimed"
+  },
+  "E8_preflight_and_evaluation": {
+    "counts": null,
+    "reason": "Need per-backbone immutable runner/config and analysis per-suite cases before exact finite launch; not silently included in core quote"
+  },
+  "retry_cap": 0,
+  "single_host_wave": "One job per explicitly independent wave; lifecycle reserves all8 GPUs and releases only after command exits including failure; no idle-subset holders",
+  "joint_wave": "Blocked until analysis/A publishes barrier+participant identities; no cross-host computation proposed by this wrapper",
+  "estimates_not_measurements": true,
+  "timeouts": "TERM at timeout_seconds;20s kill grace included in upper wall/GPU job bounds; all8 cards reserved until command exit; estimates are not measured GPU kernel time"
+}

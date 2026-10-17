@@ -1,0 +1,527 @@
+{
+  "schema": "corrector_B_event_audit_v1",
+  "event_id": "B_87dc0316e5ff8d608ee9b9ea6bd335ad",
+  "task_id": "B_D24_SPRINT_V1",
+  "run_id": "D24_XVLA_r2",
+  "at_utc": "2026-09-21T21:03:06.720515+00:00",
+  "outcome": "audited_complete",
+  "scope": "X-VLA SFT terminal audited; existing LIBERO handoff and newly admitted X N continuation verified; not full D24 completion",
+  "event": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/outbox/B_87dc0316e5ff8d608ee9b9ea6bd335ad.json",
+    "sha256": "fe7c3722db294ade89cc5fd6945624dc0668f5450b1f8637613708861cd7e051"
+  },
+  "claim": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_XVLA_r2/CLAIM.json",
+    "sha256": "190714febeda2161ea632276f0904c0fe731350f501ca6cc105fcff5fb7d6d8a"
+  },
+  "claim_SHA_verified": true,
+  "scientific_job_claim": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/claims/xvla_mt50_s42_D24_r2.json",
+    "sha256": "490205432a0c620f7e89b3cad31cef21ddb8fa8834cd935f36282bf663753dc3"
+  },
+  "original_result": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_XVLA_r2/RESULT.json",
+    "sha256": "6bed0115bc804be7858af997bba5f24de79ea679399294f2c0cf4609a34b42a4"
+  },
+  "supervisor_and_scientific_job_exited": true,
+  "drain": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_XVLA_r2/DRAIN.json",
+    "sha256": "ec55b97ca14462bf9107ebf07da78b007ef8d6349183c77568fecb9ddb43b4ae"
+  },
+  "training_complete_summary": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/XVLA_TRAINING_COMPLETE_SUMMARY.json",
+    "sha256": "4c4698b311672bd39e8516556a41578688eaabb2ab5e6bbaba7586682e40b664"
+  },
+  "final_checkpoint_selection": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/XVLA_FINAL_CHECKPOINT_SELECTION.json",
+    "sha256": "129f27ecba108907b8f3279cfba6a91461a89810b8e47833a4e4ecb9e83d0520"
+  },
+  "checkpoint_validation_scope": "COMPLETE/training_step, dimensions and saved file presence/size; no full tensor hash or GPU reload",
+  "current_control": {
+    "queue_revision": 21,
+    "root_revision": 56,
+    "global_stop": false,
+    "stop_requested": false,
+    "B_enabled": true,
+    "effective_authorization": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/AUTHORIZATION_V1.json",
+      "sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80"
+    }
+  },
+  "authorized_continuation": {
+    "run_id": "D24_XVLA_N_r1",
+    "prior_completed_X_episodes": 0,
+    "planned_episodes": 500,
+    "worker_count": 8,
+    "source_policy": "unchanged500 D24 MetaWorld test source IDs/reset seeds/policy seeds used by Smol, grouped by task across8 GPUs",
+    "checkpoint_step": 30000,
+    "H": 30,
+    "K": 10,
+    "NFE": 10,
+    "after_batches": [
+      "D24_LIBERO_UNSTARTED_r3"
+    ],
+    "metadata_and_syntax_checks": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/XVLA_EVAL_CHECKS.json",
+      "sha256": "2d24293c4f97372668a67d921cb6b8dd30a691d0f307140093f98b0e963f3cb9"
+    },
+    "code_snapshot": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/XVLA_EVAL_CODE_SNAPSHOT.json",
+      "sha256": "23c640de40ff0800f392f21678fb7c7dfe0e453fbe27dea74e5024b5c58714c4"
+    },
+    "no_completed_experiments_repeated": true,
+    "no_new_SFT": true
+  },
+  "stable_handoff": {
+    "at_utc": "2026-09-21T21:03:06.726884+00:00",
+    "observer_process": {
+      "hostname": "trial-303225685-trialrun-303225685-worker-0",
+      "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+      "pid": 452085,
+      "start_ticks": 91710679,
+      "session_id": 452085
+    },
+    "observer_alive": true,
+    "observer_heartbeat": {
+      "at_utc": "2026-09-21T21:03:02.827990+00:00",
+      "cycles": 1523,
+      "event_states": {
+        "B_164ca463b69bf91fb1b4477f5d672621": "another event awaiting original-handler ACK",
+        "B_226aaaad83007274bf5ab893d5e6b0ac": "another event awaiting original-handler ACK",
+        "B_2c9d49ecea9b35eced7bce65e6b718f0": "another event awaiting original-handler ACK",
+        "B_422445bd68021930284fe3fd62016937": "another event awaiting original-handler ACK",
+        "B_720b05f54224e945fc8df00ea6e171c3": "another event awaiting original-handler ACK",
+        "B_87dc0316e5ff8d608ee9b9ea6bd335ad": "transport_accepted",
+        "B_99ff50dfc5242547a4f45ca077bc485b": "another event awaiting original-handler ACK",
+        "B_b19457ac2e48eb664d4cc3c842a4f42b": "another event awaiting original-handler ACK",
+        "B_d7421c534b86bcdc0a5f8337058fe7eb": "another event awaiting original-handler ACK",
+        "B_e23469d0140e993de8cdc5b045fd0c3e": "another event awaiting original-handler ACK"
+      },
+      "identity": {
+        "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+        "hostname": "trial-303225685-trialrun-303225685-worker-0",
+        "pid": 452085,
+        "session_id": 452085,
+        "start_ticks": 91710679
+      },
+      "original_turn": {
+        "completed_at": null,
+        "started_at": 1790024150,
+        "status": "inProgress",
+        "turn_id": "01a0c5c0-eed6-7560-a161-47dee8959311"
+      },
+      "scientific_model_calls": 0,
+      "state": "supervising",
+      "wakeup_readiness": "original_thread_ACK_verified_offline_pending",
+      "writer_locked": true
+    },
+    "queues": [
+      {
+        "run_id": "D24_LIBERO_UNSTARTED_r3",
+        "process": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 485196,
+          "start_ticks": 92263845,
+          "session_id": 485196
+        },
+        "alive": true,
+        "claim": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_LIBERO_UNSTARTED_r3/CLAIM.json",
+          "sha256": "d97099bb2bec92d46b82eb8667c77d03a1f13eab165e2b350b76d87a7b64d9e6"
+        },
+        "configuration": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/LIBERO_UNSTARTED_BATCH.json",
+          "sha256": "064bbf8fed3bacaa041514071b1b007fc564491df6f79c37da77a7a52d727f14"
+        },
+        "progress": {
+          "at_utc": "2026-09-21T21:03:05.353020+00:00",
+          "status": "running",
+          "active": [
+            "pi05official_N_libero_object_unstarted_r3_s0",
+            "pi05official_N_libero_object_unstarted_r3_s1",
+            "pi05official_N_libero_object_unstarted_r3_s2",
+            "pi05official_N_libero_goal_unstarted_r3_s0",
+            "pi05official_N_libero_goal_unstarted_r3_s1",
+            "pi05official_N_libero_goal_unstarted_r3_s2",
+            "pi05official_N_libero_10_unstarted_r3_s0",
+            "pi05official_N_libero_10_unstarted_r3_s1"
+          ],
+          "queued": 0,
+          "completed": 0,
+          "resolved": 0,
+          "auxiliary_gpus": []
+        },
+        "completion_trigger": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_LIBERO_UNSTARTED_r3__D24_LIBERO_UNSTARTED_r3__1.json",
+          "sha256": "b6ed9b1bab5226fdaec6b62867d894dee078551ce441e6edaee832fcd599a597"
+        },
+        "jobs": [
+          {
+            "job_id": "pi05official_N_libero_object_unstarted_r3_s0",
+            "gpus": [
+              0
+            ],
+            "process": {
+              "hostname": "trial-303225685-trialrun-303225685-worker-0",
+              "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+              "pid": 541254,
+              "start_ticks": 93987081,
+              "session_id": 541254
+            },
+            "alive": true,
+            "status": {
+              "status": "running",
+              "job_id": "pi05official_N_libero_object_unstarted_r3_s0",
+              "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+              "suite": "libero_object",
+              "H": 10,
+              "K": 5,
+              "method": "N",
+              "source_policy": "new deterministic task randomization from frozen seeds; save pre-settle simulator state for paired comparisons; distinct from official 50-init-state benchmark protocol",
+              "planned_episodes": 31,
+              "completed_episodes": 10,
+              "technical_failures": 0,
+              "server": {
+                "model": "pi05",
+                "config": "pi05_libero",
+                "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+                "H": 10,
+                "NFE": 10,
+                "policy_rng": "fixed per source, reset before first query",
+                "load_seconds": 13.981062848004512,
+                "job_id": "pi05official_N_libero_object_unstarted_r3_s0",
+                "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479"
+              },
+              "latest_source": "D24_LIBERO_libero_object_t03_e04",
+              "at_utc": "2026-09-21T21:02:53.252019+00:00"
+            }
+          },
+          {
+            "job_id": "pi05official_N_libero_object_unstarted_r3_s1",
+            "gpus": [
+              1
+            ],
+            "process": {
+              "hostname": "trial-303225685-trialrun-303225685-worker-0",
+              "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+              "pid": 541255,
+              "start_ticks": 93987083,
+              "session_id": 541255
+            },
+            "alive": true,
+            "status": {
+              "status": "running",
+              "job_id": "pi05official_N_libero_object_unstarted_r3_s1",
+              "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+              "suite": "libero_object",
+              "H": 10,
+              "K": 5,
+              "method": "N",
+              "source_policy": "new deterministic task randomization from frozen seeds; save pre-settle simulator state for paired comparisons; distinct from official 50-init-state benchmark protocol",
+              "planned_episodes": 31,
+              "completed_episodes": 9,
+              "technical_failures": 0,
+              "server": {
+                "model": "pi05",
+                "config": "pi05_libero",
+                "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+                "H": 10,
+                "NFE": 10,
+                "policy_rng": "fixed per source, reset before first query",
+                "load_seconds": 13.947949360008352,
+                "job_id": "pi05official_N_libero_object_unstarted_r3_s1",
+                "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479"
+              },
+              "latest_source": "D24_LIBERO_libero_object_t03_e02",
+              "at_utc": "2026-09-21T21:02:37.211468+00:00"
+            }
+          },
+          {
+            "job_id": "pi05official_N_libero_object_unstarted_r3_s2",
+            "gpus": [
+              2
+            ],
+            "process": {
+              "hostname": "trial-303225685-trialrun-303225685-worker-0",
+              "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+              "pid": 541256,
+              "start_ticks": 93987084,
+              "session_id": 541256
+            },
+            "alive": true,
+            "status": {
+              "status": "running",
+              "job_id": "pi05official_N_libero_object_unstarted_r3_s2",
+              "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+              "suite": "libero_object",
+              "H": 10,
+              "K": 5,
+              "method": "N",
+              "source_policy": "new deterministic task randomization from frozen seeds; save pre-settle simulator state for paired comparisons; distinct from official 50-init-state benchmark protocol",
+              "planned_episodes": 31,
+              "completed_episodes": 11,
+              "technical_failures": 0,
+              "server": {
+                "model": "pi05",
+                "config": "pi05_libero",
+                "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+                "H": 10,
+                "NFE": 10,
+                "policy_rng": "fixed per source, reset before first query",
+                "load_seconds": 13.87756315304432,
+                "job_id": "pi05official_N_libero_object_unstarted_r3_s2",
+                "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479"
+              },
+              "latest_source": "D24_LIBERO_libero_object_t03_e09",
+              "at_utc": "2026-09-21T21:02:48.252858+00:00"
+            }
+          },
+          {
+            "job_id": "pi05official_N_libero_goal_unstarted_r3_s0",
+            "gpus": [
+              3
+            ],
+            "process": {
+              "hostname": "trial-303225685-trialrun-303225685-worker-0",
+              "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+              "pid": 541257,
+              "start_ticks": 93987085,
+              "session_id": 541257
+            },
+            "alive": true,
+            "status": {
+              "status": "running",
+              "job_id": "pi05official_N_libero_goal_unstarted_r3_s0",
+              "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+              "suite": "libero_goal",
+              "H": 10,
+              "K": 5,
+              "method": "N",
+              "source_policy": "new deterministic task randomization from frozen seeds; save pre-settle simulator state for paired comparisons; distinct from official 50-init-state benchmark protocol",
+              "planned_episodes": 31,
+              "completed_episodes": 8,
+              "technical_failures": 0,
+              "server": {
+                "model": "pi05",
+                "config": "pi05_libero",
+                "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+                "H": 10,
+                "NFE": 10,
+                "policy_rng": "fixed per source, reset before first query",
+                "load_seconds": 14.119314390001819,
+                "job_id": "pi05official_N_libero_goal_unstarted_r3_s0",
+                "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479"
+              },
+              "latest_source": "D24_LIBERO_libero_goal_t03_e00",
+              "at_utc": "2026-09-21T21:02:52.951754+00:00"
+            }
+          },
+          {
+            "job_id": "pi05official_N_libero_goal_unstarted_r3_s1",
+            "gpus": [
+              4
+            ],
+            "process": {
+              "hostname": "trial-303225685-trialrun-303225685-worker-0",
+              "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+              "pid": 541258,
+              "start_ticks": 93987086,
+              "session_id": 541258
+            },
+            "alive": true,
+            "status": {
+              "status": "running",
+              "job_id": "pi05official_N_libero_goal_unstarted_r3_s1",
+              "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+              "suite": "libero_goal",
+              "H": 10,
+              "K": 5,
+              "method": "N",
+              "source_policy": "new deterministic task randomization from frozen seeds; save pre-settle simulator state for paired comparisons; distinct from official 50-init-state benchmark protocol",
+              "planned_episodes": 30,
+              "completed_episodes": 9,
+              "technical_failures": 0,
+              "server": {
+                "model": "pi05",
+                "config": "pi05_libero",
+                "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+                "H": 10,
+                "NFE": 10,
+                "policy_rng": "fixed per source, reset before first query",
+                "load_seconds": 13.577988609089516,
+                "job_id": "pi05official_N_libero_goal_unstarted_r3_s1",
+                "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479"
+              },
+              "latest_source": "D24_LIBERO_libero_goal_t03_e04",
+              "at_utc": "2026-09-21T21:02:50.538552+00:00"
+            }
+          },
+          {
+            "job_id": "pi05official_N_libero_goal_unstarted_r3_s2",
+            "gpus": [
+              5
+            ],
+            "process": {
+              "hostname": "trial-303225685-trialrun-303225685-worker-0",
+              "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+              "pid": 541259,
+              "start_ticks": 93987087,
+              "session_id": 541259
+            },
+            "alive": true,
+            "status": {
+              "status": "running",
+              "job_id": "pi05official_N_libero_goal_unstarted_r3_s2",
+              "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+              "suite": "libero_goal",
+              "H": 10,
+              "K": 5,
+              "method": "N",
+              "source_policy": "new deterministic task randomization from frozen seeds; save pre-settle simulator state for paired comparisons; distinct from official 50-init-state benchmark protocol",
+              "planned_episodes": 30,
+              "completed_episodes": 8,
+              "technical_failures": 0,
+              "server": {
+                "model": "pi05",
+                "config": "pi05_libero",
+                "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+                "H": 10,
+                "NFE": 10,
+                "policy_rng": "fixed per source, reset before first query",
+                "load_seconds": 14.135287692886777,
+                "job_id": "pi05official_N_libero_goal_unstarted_r3_s2",
+                "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479"
+              },
+              "latest_source": "D24_LIBERO_libero_goal_t03_e02",
+              "at_utc": "2026-09-21T21:02:22.517092+00:00"
+            }
+          },
+          {
+            "job_id": "pi05official_N_libero_10_unstarted_r3_s0",
+            "gpus": [
+              6
+            ],
+            "process": {
+              "hostname": "trial-303225685-trialrun-303225685-worker-0",
+              "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+              "pid": 541264,
+              "start_ticks": 93987088,
+              "session_id": 541264
+            },
+            "alive": true,
+            "status": {
+              "status": "running",
+              "job_id": "pi05official_N_libero_10_unstarted_r3_s0",
+              "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+              "suite": "libero_10",
+              "H": 10,
+              "K": 5,
+              "method": "N",
+              "source_policy": "new deterministic task randomization from frozen seeds; save pre-settle simulator state for paired comparisons; distinct from official 50-init-state benchmark protocol",
+              "planned_episodes": 48,
+              "completed_episodes": 5,
+              "technical_failures": 0,
+              "server": {
+                "model": "pi05",
+                "config": "pi05_libero",
+                "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+                "H": 10,
+                "NFE": 10,
+                "policy_rng": "fixed per source, reset before first query",
+                "load_seconds": 14.043837700970471,
+                "job_id": "pi05official_N_libero_10_unstarted_r3_s0",
+                "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479"
+              },
+              "latest_source": "D24_LIBERO_libero_10_t01_e03",
+              "at_utc": "2026-09-21T21:02:52.291201+00:00"
+            }
+          },
+          {
+            "job_id": "pi05official_N_libero_10_unstarted_r3_s1",
+            "gpus": [
+              7
+            ],
+            "process": {
+              "hostname": "trial-303225685-trialrun-303225685-worker-0",
+              "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+              "pid": 541270,
+              "start_ticks": 93987089,
+              "session_id": 541270
+            },
+            "alive": true,
+            "status": {
+              "status": "running",
+              "job_id": "pi05official_N_libero_10_unstarted_r3_s1",
+              "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+              "suite": "libero_10",
+              "H": 10,
+              "K": 5,
+              "method": "N",
+              "source_policy": "new deterministic task randomization from frozen seeds; save pre-settle simulator state for paired comparisons; distinct from official 50-init-state benchmark protocol",
+              "planned_episodes": 47,
+              "completed_episodes": 5,
+              "technical_failures": 0,
+              "server": {
+                "model": "pi05",
+                "config": "pi05_libero",
+                "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+                "H": 10,
+                "NFE": 10,
+                "policy_rng": "fixed per source, reset before first query",
+                "load_seconds": 13.885146973072551,
+                "job_id": "pi05official_N_libero_10_unstarted_r3_s1",
+                "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479"
+              },
+              "latest_source": "D24_LIBERO_libero_10_t01_e04",
+              "at_utc": "2026-09-21T21:02:42.202102+00:00"
+            }
+          }
+        ],
+        "completed_episodes_at_snapshot": 65
+      },
+      {
+        "run_id": "D24_XVLA_N_r1",
+        "process": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 550042,
+          "start_ticks": 94006384,
+          "session_id": 550042
+        },
+        "alive": true,
+        "claim": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_XVLA_N_r1/CLAIM.json",
+          "sha256": "8d10175eebef9cea927f2cc01f75a338b5335aefd3eb48fdc61f544b3b35e1dc"
+        },
+        "configuration": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/XVLA_EVAL_BATCH.json",
+          "sha256": "39e3600d9accf64c6430af74c36ed12e047187e886209e0909fb97b03ddb7199"
+        },
+        "progress": {
+          "status": "waiting_for_predecessor",
+          "predecessor": "D24_LIBERO_UNSTARTED_r3",
+          "at_utc": "2026-09-21T21:02:51.726947+00:00",
+          "scientific_operations": 0
+        },
+        "completion_trigger": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_XVLA_N_r1__D24_XVLA_N_r1__1.json",
+          "sha256": "ca7722f645cd1b9a281a897939f34e9651b937db38e6b0d88042e8c6d4df505d"
+        }
+      }
+    ],
+    "all_completion_triggers_verified": true,
+    "formal_current_GPU_jobs": 8
+  },
+  "handler_activity": {
+    "new_detached_supervisors": 1,
+    "new_models_loaded": 0,
+    "new_GPU_probes": 0,
+    "new_scientific_episode_entry": 0
+  },
+  "operations": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/XVLA_EVAL_OPERATIONS.txt",
+    "sha256": "7e9f0f3ae9eae6d73a47ed6b5b61fcc3d6d1a08390f32e31fa8100edd4193ec9"
+  },
+  "A_waits_for_B": false
+}

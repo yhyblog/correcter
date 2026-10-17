@@ -1,0 +1,70 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A11_OBSERVATION_PHASE_CPU_REPAIR_V1",
+  "revision": 1,
+  "accepted_at_utc": "2026-09-20T12:24:05.373648+00:00",
+  "status": "CPU_observation_phase_contract_repair_accepted",
+  "receipt": {
+    "path": "receipts/A/A11_OBSERVATION_PHASE_CPU_REPAIR_V1_RESULT.json",
+    "sha256": "ba3c3a52338d51168fbfff732558b2c848a57bd7497bbe24690dedfa5ee8ed46"
+  },
+  "report": {
+    "path": "results/A/A11_OBSERVATION_PHASE_CPU_REPAIR_V1/REPORT.md",
+    "sha256": "f60514d972c389b1cc7b222fee844cc724506ec7a9961bc2b233184a3b554485"
+  },
+  "evidence_manifest": {
+    "path": "results/A/A11_OBSERVATION_PHASE_CPU_REPAIR_V1/EVIDENCE_MANIFEST.json",
+    "sha256": "504051f374756a578f5fc08fb4c0bc16a5925fc563455807dd930bfbe6af3aeb"
+  },
+  "proposal": {
+    "path": "results/A/A11_OBSERVATION_PHASE_CPU_REPAIR_V1/proposal/PROPOSAL.json",
+    "sha256": "5f5d060811541035646d901ca9cfb73312ac81018ed396a354c1850fba9c26f5"
+  },
+  "root_verification": {
+    "status": "PASS",
+    "artifact_refs": 26,
+    "manifest_files": 93,
+    "unique_artifact_evidence_paths": 94,
+    "errors": [],
+    "receipt_and_manifest_anchor_SHA": "PASS",
+    "real_operations_zero": true,
+    "operation_count": 130,
+    "old_protocol_equal": {
+      "resource_caps": true,
+      "source": true,
+      "device": true,
+      "storage": true,
+      "timeouts": true
+    },
+    "CONFIG_only_301_phase_names_changed": true,
+    "future_paths_absent": true
+  },
+  "reported_check_groups": 25,
+  "old_suites_repeated": false,
+  "real_operations_zero": true,
+  "independent_phase_review": "Real reset/step share canonical helper; CONFIG contains exactly step_0..step_300; real load_authorization validates before command/claim/hardware; saved actual scope/hooks/Journal CPU fixture covers301 phases, invalid inputs and cleanup. No deterministic remaining phase-contract blocker found.",
+  "independent_metadata_review": "V4 source/seed/device/116caps/storage/timeouts identical to V3; templates consistent; future paths absent; nested source status and PROPOSED identifiers remain frozen.",
+  "numerical_scope": "Only two observation scope arguments/import and phase-list validation change; no extra render/observation or other runtime operation",
+  "resource_risk_acceptance_inherited": {
+    "path": "manifests/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1_REVIEW.json",
+    "sha256": "ede9a4857ed27149048e158ca520cef2ac5e5d837052ab8cf99515dee105aa3e"
+  },
+  "prior_execution": {
+    "task": "A11_COMMON_POOL_FIRST_PARENT_V3",
+    "closure": "releases/P11_A_COMMON_POOL_FIRST_PARENT_V3_CLOSED.json",
+    "executed_and_consumed": true,
+    "valid_training_samples": 0,
+    "model_initializations": 1,
+    "language_forwards": 1,
+    "initialization_native_resets": 51,
+    "initialization_physics_substeps": 25500
+  },
+  "next_task": "A11_COMMON_POOL_FIRST_PARENT_V4",
+  "same_planned_parent": true,
+  "remaining_unknowns": [
+    "real MJB/full-state qualification",
+    "real s300 execution",
+    "bounded storage monitoring gaps already accepted"
+  ],
+  "no_performance_claim": true
+}

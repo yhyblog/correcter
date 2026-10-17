@@ -1,0 +1,738 @@
+{
+  "schema": "native10_policy5_final_evidence_receipt_v1",
+  "created_utc": "2026-09-16T21:30:16.178806+00:00",
+  "status": "complete",
+  "review": "read-only inventory/SHA/provenance/ledger verification; no bootstrap recomputation or repeated tests",
+  "artifacts": {
+    "primary": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_audits/round1_policy_v1",
+      "seal_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_audits/round1_policy_v1/complete.json",
+      "seal_sha256": "4bfadd48f1ee23b8a9e616d8517364ec69e3d96efe22c59d8ff3d2a0322cf701",
+      "status": "complete",
+      "sealed_inventory_and_sha_verified": true,
+      "files": {
+        "result.json": "0e991c13d624a34b397a4cbba60b7c8d84882d7140566b235a4388c5eb73e4e4"
+      }
+    },
+    "independent": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_independent_audits/round1_policy_v1_independent",
+      "seal_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_independent_audits/round1_policy_v1_independent/complete.json",
+      "seal_sha256": "7f11a12d453ba8071ef9ccf07bb9bbf0d150f2925f166cb8f90190087c5e4f1a",
+      "status": "complete",
+      "sealed_inventory_and_sha_verified": true,
+      "files": {
+        "budget_snapshot.jsonl": "9bfb286467094c4c5fd6b26385b857b550febb854aa349827336baff4da74586",
+        "paired_outcomes.npz": "f64f1fc047d18a40c98c25868300243111888caf323070f6a43eb2a5e443682a",
+        "report.md": "abebf91e848a5399b116e919ad3d36264c4f33cc306f22c196c9d2d2b1c3707d",
+        "result.json": "9ec41b2f8cabcbc42a5bb1101a79e98e99b9ec3b947986e7d91f5f4f8ab7b686"
+      }
+    },
+    "cost": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_cost_diagnostics/round1_policy_v1",
+      "seal_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_cost_diagnostics/round1_policy_v1/complete.json",
+      "seal_sha256": "2794a827e559ee8782dd540462e583d0bf8c38eefe49ceed75259c45de8ad595",
+      "status": "complete",
+      "sealed_inventory_and_sha_verified": true,
+      "files": {
+        "branch_costs.csv": "23267a10e7df57a59d57bbaabb7b6f47efc4192748bdf86d7c11dcef37a55d9f",
+        "commands.csv": "cd1e8a142948bd76214c47ad9733d822cf7dea044cdf4785edd5ddd49ef776e8",
+        "report.md": "69811b574c4d24c8fa3f7c2b98199a3a723f43282610911ef570d3da1003cffb",
+        "result.json": "ac5659904ed05080711965f3ebc9c230118fad75ce37e30956db272e99605780"
+      }
+    },
+    "report_v2": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_reports/round1_policy_v2",
+      "seal_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_reports/round1_policy_v2/complete.json",
+      "seal_sha256": "394fb10022f98ff950214e0ba8d2ed6e85e75f12dcc2b316535396fabb18a270",
+      "status": "complete",
+      "sealed_inventory_and_sha_verified": true,
+      "files": {
+        "per_source.csv": "e2b7a58642d04589b4a5f7976f9e36d2db543ab2e90c5a53bd2cc2fe4eef8635",
+        "provenance.json": "a53f44644c07ed65bc530c7b7d6af3d3e1aefc4fa9f3d01c3e6870ef5688d958",
+        "report.md": "b2a99d54a87f3eb03e5c8814b0546cb1f5b4265995cbd98242d0111b48440b81",
+        "runtime.json": "0ac0040c052f1e47a038648010537d12ce1e5c6e6c89b0cc17c31bc96dd89194"
+      }
+    }
+  },
+  "handoff": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_ROUND1_POLICY5_EXECUTOR_HANDOFF_V2.md",
+    "sha256": "b2a99d54a87f3eb03e5c8814b0546cb1f5b4265995cbd98242d0111b48440b81",
+    "identical_to_sealed_report_v2": true
+  },
+  "denominator": {
+    "planned_sources": 100,
+    "task_sources": 20,
+    "cut_sources": 95,
+    "no_cut_sources": 5,
+    "paired_repeats": 4,
+    "logical_outcomes_per_arm": 400,
+    "physical_branches": 1900
+  },
+  "success_counts": {
+    "continue_native10": 221,
+    "alarm_replan10": 257,
+    "velocity": 265,
+    "direct": 268,
+    "post": 267
+  },
+  "success_rates": {
+    "continue_native10": 0.5525,
+    "alarm_replan10": 0.6425,
+    "velocity": 0.6625,
+    "direct": 0.67,
+    "post": 0.6675
+  },
+  "seven_comparisons": {
+    "alarm_replan10_minus_continue_native10": {
+      "gain": 0.09,
+      "source_95ci": [
+        0.0275,
+        0.155
+      ],
+      "rescues": 52,
+      "harms": 16,
+      "positive_sources": 18,
+      "negative_sources": 8,
+      "zero_sources": 74,
+      "gain_pp": 9.0,
+      "source_95ci_pp": [
+        2.75,
+        15.5
+      ]
+    },
+    "velocity_minus_alarm_replan10": {
+      "gain": 0.02,
+      "source_95ci": [
+        -0.02,
+        0.0625
+      ],
+      "rescues": 19,
+      "harms": 11,
+      "positive_sources": 7,
+      "negative_sources": 5,
+      "zero_sources": 88,
+      "gain_pp": 2.0,
+      "source_95ci_pp": [
+        -2.0,
+        6.25
+      ]
+    },
+    "direct_minus_alarm_replan10": {
+      "gain": 0.0275,
+      "source_95ci": [
+        -0.0075,
+        0.065
+      ],
+      "rescues": 20,
+      "harms": 9,
+      "positive_sources": 9,
+      "negative_sources": 4,
+      "zero_sources": 87,
+      "gain_pp": 2.75,
+      "source_95ci_pp": [
+        -0.75,
+        6.5
+      ]
+    },
+    "post_minus_alarm_replan10": {
+      "gain": 0.025,
+      "source_95ci": [
+        -0.0125,
+        0.065
+      ],
+      "rescues": 20,
+      "harms": 10,
+      "positive_sources": 9,
+      "negative_sources": 4,
+      "zero_sources": 87,
+      "gain_pp": 2.5,
+      "source_95ci_pp": [
+        -1.25,
+        6.5
+      ]
+    },
+    "velocity_minus_continue_native10": {
+      "gain": 0.11,
+      "source_95ci": [
+        0.0425,
+        0.1775
+      ],
+      "rescues": 57,
+      "harms": 13,
+      "positive_sources": 19,
+      "negative_sources": 6,
+      "zero_sources": 75,
+      "gain_pp": 11.0,
+      "source_95ci_pp": [
+        4.25,
+        17.75
+      ]
+    },
+    "direct_minus_continue_native10": {
+      "gain": 0.1175,
+      "source_95ci": [
+        0.05,
+        0.1875
+      ],
+      "rescues": 59,
+      "harms": 12,
+      "positive_sources": 20,
+      "negative_sources": 6,
+      "zero_sources": 74,
+      "gain_pp": 11.75,
+      "source_95ci_pp": [
+        5.0,
+        18.75
+      ]
+    },
+    "post_minus_continue_native10": {
+      "gain": 0.115,
+      "source_95ci": [
+        0.05,
+        0.1825
+      ],
+      "rescues": 58,
+      "harms": 12,
+      "positive_sources": 19,
+      "negative_sources": 5,
+      "zero_sources": 76,
+      "gain_pp": 11.5,
+      "source_95ci_pp": [
+        5.0,
+        18.25
+      ]
+    }
+  },
+  "bootstrap": {
+    "seed": 2026091622,
+    "replicates": 10000,
+    "unit": "episode/source",
+    "stratification": "task",
+    "suffix_repeats_independent": false,
+    "interval": "percentile",
+    "multiplicity_adjusted": false
+  },
+  "checks": {
+    "primary_passed": true,
+    "independent_passed": true,
+    "independent_checks": 115658,
+    "suffix_records_checked": 24857,
+    "primary_independent_exact": true,
+    "cost_primary_statistics_exact": true,
+    "report_input_seals_exact": true
+  },
+  "resources": {
+    "policy5_simulator_attempts": 1995,
+    "policy5_optimizer_updates": 0,
+    "receipt_simulator_attempts": 0,
+    "receipt_model_calls": 0,
+    "receipt_optimizer_updates": 0,
+    "ledger_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/budget/attempts.jsonl",
+    "ledger_sha256": "9bfb286467094c4c5fd6b26385b857b550febb854aa349827336baff4da74586",
+    "ledger_records": 44674,
+    "resource_totals": {
+      "simulator_attempts": 25474,
+      "training_updates": 19200
+    },
+    "by_stage": {
+      "p0": {
+        "simulator_attempts": 564
+      },
+      "round1_labels": {
+        "simulator_attempts": 22915
+      },
+      "training_round1": {
+        "training_updates": 19200
+      },
+      "round1_development_policy": {
+        "simulator_attempts": 1995
+      }
+    },
+    "same_static_ledger_as_main_and_independent_audits": true,
+    "ledger_training_update_resource_key": "training_updates",
+    "policy5_training_updates": 0
+  },
+  "raw_and_q": {
+    "quality": {
+      "raw_unique_group_distribution": {
+        "4": 95
+      },
+      "clipped_collision_sources": 0,
+      "unmatched_final_rms_sources": 0,
+      "zero_channel_counts": {
+        "velocity": {
+          "xyz": 0,
+          "gripper": 2
+        },
+        "direct": {
+          "xyz": 0,
+          "gripper": 2
+        },
+        "post": {
+          "xyz": 0,
+          "gripper": 2
+        }
+      },
+      "aliases_of_a0": {
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      },
+      "matching_group_flags": {
+        "xyz": {
+          "zero_group": 0,
+          "shrunk": 79
+        },
+        "gripper": {
+          "zero_group": 2,
+          "shrunk": 14
+        }
+      }
+    },
+    "q_vs_actual": {
+      "velocity": {
+        "sources": 95,
+        "predicted_gain": {
+          "records": 95,
+          "observed": 95,
+          "missing": 0,
+          "sum": 4.402983155101538,
+          "mean": 0.046347191106331974,
+          "median": 0.049478545784950256,
+          "p90": 0.07019009590148927,
+          "minimum": 0.00960022397339344,
+          "maximum": 0.08426080644130707
+        },
+        "actual_gain": {
+          "records": 95,
+          "observed": 95,
+          "missing": 0,
+          "sum": 2.0,
+          "mean": 0.021052631578947368,
+          "median": 0.0,
+          "p90": 0.0,
+          "minimum": -0.75,
+          "maximum": 1.0
+        },
+        "pearson": 0.11627135755599531,
+        "spearman": 0.12189317484272531,
+        "sign_table": {
+          "q_negative_actual_negative": 0,
+          "q_negative_actual_zero": 0,
+          "q_negative_actual_positive": 0,
+          "q_zero_actual_negative": 0,
+          "q_zero_actual_zero": 0,
+          "q_zero_actual_positive": 0,
+          "q_positive_actual_negative": 5,
+          "q_positive_actual_zero": 83,
+          "q_positive_actual_positive": 7
+        }
+      },
+      "direct": {
+        "sources": 95,
+        "predicted_gain": {
+          "records": 95,
+          "observed": 95,
+          "missing": 0,
+          "sum": 5.065780155360699,
+          "mean": 0.053324001635375776,
+          "median": 0.05690528452396393,
+          "p90": 0.0736901193857193,
+          "minimum": 0.010797593742609024,
+          "maximum": 0.08569455146789551
+        },
+        "actual_gain": {
+          "records": 95,
+          "observed": 95,
+          "missing": 0,
+          "sum": 2.75,
+          "mean": 0.02894736842105263,
+          "median": 0.0,
+          "p90": 0.0,
+          "minimum": -0.75,
+          "maximum": 1.0
+        },
+        "pearson": 0.050445917570726875,
+        "spearman": 0.093226239540026,
+        "sign_table": {
+          "q_negative_actual_negative": 0,
+          "q_negative_actual_zero": 0,
+          "q_negative_actual_positive": 0,
+          "q_zero_actual_negative": 0,
+          "q_zero_actual_zero": 0,
+          "q_zero_actual_positive": 0,
+          "q_positive_actual_negative": 4,
+          "q_positive_actual_zero": 82,
+          "q_positive_actual_positive": 9
+        }
+      },
+      "post": {
+        "sources": 95,
+        "predicted_gain": {
+          "records": 95,
+          "observed": 95,
+          "missing": 0,
+          "sum": 5.149598443880677,
+          "mean": 0.054206299409270284,
+          "median": 0.057123616337776184,
+          "p90": 0.07551608681678773,
+          "minimum": 0.011896055191755295,
+          "maximum": 0.08973462879657745
+        },
+        "actual_gain": {
+          "records": 95,
+          "observed": 95,
+          "missing": 0,
+          "sum": 2.5,
+          "mean": 0.02631578947368421,
+          "median": 0.0,
+          "p90": 0.0,
+          "minimum": -0.75,
+          "maximum": 1.0
+        },
+        "pearson": 0.01964421268005617,
+        "spearman": 0.051564754477313554,
+        "sign_table": {
+          "q_negative_actual_negative": 0,
+          "q_negative_actual_zero": 0,
+          "q_negative_actual_positive": 0,
+          "q_zero_actual_negative": 0,
+          "q_zero_actual_zero": 0,
+          "q_zero_actual_positive": 0,
+          "q_positive_actual_negative": 4,
+          "q_positive_actual_zero": 82,
+          "q_positive_actual_positive": 9
+        }
+      }
+    },
+    "cost_result_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_cost_diagnostics/round1_policy_v1/result.json",
+    "cost_fields": [
+      "cost",
+      "final_raw_amplitude",
+      "per_source",
+      "branch_cost_rows"
+    ],
+    "description": "Final raw constraints passed; Q rises do not imply true rescue. Development data are not independent validation."
+  },
+  "round2_read_only_interface_review": {
+    "status": "existing collector semantics reusable; new binding and launcher preparation required",
+    "new_model_or_simulation_executed": false,
+    "manifest_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/main_registration_v2/primary_manifest.json",
+    "manifest_sha256": "991e13f37117d3bc41b904554602be413e281a4ae1f80f6c05c00d70d6433886",
+    "primary_count": 300,
+    "seed_min": 2026111300,
+    "seed_max": 2026111599,
+    "radius_derivation": "Existing rule in prepare_main.py:61-65 applied per task/split/round in unchanged primary registration order: (.5 if (index//2)%2==0 else 1). No outcome input.",
+    "task_rule_radius_counts": [
+      {
+        "task": "disassemble-v3",
+        "registered_cut": "first_alarm",
+        "channel_radius": 0.5,
+        "n": 15
+      },
+      {
+        "task": "disassemble-v3",
+        "registered_cut": "first_alarm",
+        "channel_radius": 1.0,
+        "n": 15
+      },
+      {
+        "task": "disassemble-v3",
+        "registered_cut": "scheduled15",
+        "channel_radius": 0.5,
+        "n": 5
+      },
+      {
+        "task": "disassemble-v3",
+        "registered_cut": "scheduled15",
+        "channel_radius": 1.0,
+        "n": 5
+      },
+      {
+        "task": "disassemble-v3",
+        "registered_cut": "scheduled45",
+        "channel_radius": 0.5,
+        "n": 5
+      },
+      {
+        "task": "disassemble-v3",
+        "registered_cut": "scheduled45",
+        "channel_radius": 1.0,
+        "n": 5
+      },
+      {
+        "task": "disassemble-v3",
+        "registered_cut": "scheduled95",
+        "channel_radius": 0.5,
+        "n": 5
+      },
+      {
+        "task": "disassemble-v3",
+        "registered_cut": "scheduled95",
+        "channel_radius": 1.0,
+        "n": 5
+      },
+      {
+        "task": "pick-place-wall-v3",
+        "registered_cut": "first_alarm",
+        "channel_radius": 0.5,
+        "n": 15
+      },
+      {
+        "task": "pick-place-wall-v3",
+        "registered_cut": "first_alarm",
+        "channel_radius": 1.0,
+        "n": 15
+      },
+      {
+        "task": "pick-place-wall-v3",
+        "registered_cut": "scheduled15",
+        "channel_radius": 0.5,
+        "n": 5
+      },
+      {
+        "task": "pick-place-wall-v3",
+        "registered_cut": "scheduled15",
+        "channel_radius": 1.0,
+        "n": 5
+      },
+      {
+        "task": "pick-place-wall-v3",
+        "registered_cut": "scheduled45",
+        "channel_radius": 0.5,
+        "n": 5
+      },
+      {
+        "task": "pick-place-wall-v3",
+        "registered_cut": "scheduled45",
+        "channel_radius": 1.0,
+        "n": 5
+      },
+      {
+        "task": "pick-place-wall-v3",
+        "registered_cut": "scheduled95",
+        "channel_radius": 0.5,
+        "n": 5
+      },
+      {
+        "task": "pick-place-wall-v3",
+        "registered_cut": "scheduled95",
+        "channel_radius": 1.0,
+        "n": 5
+      },
+      {
+        "task": "shelf-place-v3",
+        "registered_cut": "first_alarm",
+        "channel_radius": 0.5,
+        "n": 15
+      },
+      {
+        "task": "shelf-place-v3",
+        "registered_cut": "first_alarm",
+        "channel_radius": 1.0,
+        "n": 15
+      },
+      {
+        "task": "shelf-place-v3",
+        "registered_cut": "scheduled15",
+        "channel_radius": 0.5,
+        "n": 5
+      },
+      {
+        "task": "shelf-place-v3",
+        "registered_cut": "scheduled15",
+        "channel_radius": 1.0,
+        "n": 5
+      },
+      {
+        "task": "shelf-place-v3",
+        "registered_cut": "scheduled45",
+        "channel_radius": 0.5,
+        "n": 5
+      },
+      {
+        "task": "shelf-place-v3",
+        "registered_cut": "scheduled45",
+        "channel_radius": 1.0,
+        "n": 5
+      },
+      {
+        "task": "shelf-place-v3",
+        "registered_cut": "scheduled95",
+        "channel_radius": 0.5,
+        "n": 5
+      },
+      {
+        "task": "shelf-place-v3",
+        "registered_cut": "scheduled95",
+        "channel_radius": 1.0,
+        "n": 5
+      },
+      {
+        "task": "stick-pull-v3",
+        "registered_cut": "first_alarm",
+        "channel_radius": 0.5,
+        "n": 15
+      },
+      {
+        "task": "stick-pull-v3",
+        "registered_cut": "first_alarm",
+        "channel_radius": 1.0,
+        "n": 15
+      },
+      {
+        "task": "stick-pull-v3",
+        "registered_cut": "scheduled15",
+        "channel_radius": 0.5,
+        "n": 5
+      },
+      {
+        "task": "stick-pull-v3",
+        "registered_cut": "scheduled15",
+        "channel_radius": 1.0,
+        "n": 5
+      },
+      {
+        "task": "stick-pull-v3",
+        "registered_cut": "scheduled45",
+        "channel_radius": 0.5,
+        "n": 5
+      },
+      {
+        "task": "stick-pull-v3",
+        "registered_cut": "scheduled45",
+        "channel_radius": 1.0,
+        "n": 5
+      },
+      {
+        "task": "stick-pull-v3",
+        "registered_cut": "scheduled95",
+        "channel_radius": 0.5,
+        "n": 5
+      },
+      {
+        "task": "stick-pull-v3",
+        "registered_cut": "scheduled95",
+        "channel_radius": 1.0,
+        "n": 5
+      },
+      {
+        "task": "stick-push-v3",
+        "registered_cut": "first_alarm",
+        "channel_radius": 0.5,
+        "n": 15
+      },
+      {
+        "task": "stick-push-v3",
+        "registered_cut": "first_alarm",
+        "channel_radius": 1.0,
+        "n": 15
+      },
+      {
+        "task": "stick-push-v3",
+        "registered_cut": "scheduled15",
+        "channel_radius": 0.5,
+        "n": 5
+      },
+      {
+        "task": "stick-push-v3",
+        "registered_cut": "scheduled15",
+        "channel_radius": 1.0,
+        "n": 5
+      },
+      {
+        "task": "stick-push-v3",
+        "registered_cut": "scheduled45",
+        "channel_radius": 0.5,
+        "n": 5
+      },
+      {
+        "task": "stick-push-v3",
+        "registered_cut": "scheduled45",
+        "channel_radius": 1.0,
+        "n": 5
+      },
+      {
+        "task": "stick-push-v3",
+        "registered_cut": "scheduled95",
+        "channel_radius": 0.5,
+        "n": 5
+      },
+      {
+        "task": "stick-push-v3",
+        "registered_cut": "scheduled95",
+        "channel_radius": 1.0,
+        "n": 5
+      }
+    ],
+    "evidence": [
+      {
+        "path": "experiments/native10_training_20260916/main_collection.py",
+        "lines": [
+          54,
+          165,
+          170,
+          186,
+          212,
+          232,
+          287,
+          296,
+          326,
+          358,
+          419,
+          423,
+          616
+        ],
+        "finding": "Supports generation_round2, 13 candidates plus normal, pre-action reserve, registered fallback and primary-inherited radius."
+      },
+      {
+        "path": "src/corrector/critic.py",
+        "lines": [
+          87,
+          99,
+          103,
+          105,
+          106,
+          109,
+          112
+        ],
+        "finding": "Actual file hash precedes torch.load/from_state; parameter/buffer versions and eval/frozen/CPU invariants are verified after loading."
+      },
+      {
+        "path": "experiments/native10_training_20260916/main_runner.py",
+        "lines": [
+          88,
+          117
+        ],
+        "finding": "Frozen file inventory and critic ranking/registered hashes checked; stage-specific static binding still belongs to new round2 preparation."
+      },
+      {
+        "path": "experiments/native10_training_20260916/candidates13.py",
+        "lines": [
+          197,
+          200,
+          203,
+          207,
+          218,
+          239
+        ],
+        "finding": "Channel .5/1 scales final post channel (independent fallback when zero); random half/full are separate fixed arms; raw alias metadata retained."
+      }
+    ],
+    "risks": [
+      "Do not reuse policy5 guard/collector: it forbids capture and restricts old 100 development sources/five arms. Round2 needs normal MainCollector labels13 and new primary capture.",
+      "Do not reuse prepare_main builder unchanged: it hardcodes old assets/critic and round1+development 400 IDs (lines53,57-72). New config must bind B200 selected seal, preprocessing, four checkpoint hashes, generation_round2 and exactly300 train round2 primary IDs.",
+      "The original main factory creates engine before constructor registration/model checks (main_collection616-623). New wrapper should finish static selected-seal/manifest/radius/scope checks before GPU loading and save actual-loaded identity evidence.",
+      "Raw registration scheduled.fallback=none_pending_analysis_review is an obsolete request placeholder. Keep original fields and separately bind effective analysis_lead_v1; do not mutate old manifests or treat placeholder as disabling approved fallback.",
+      "Radius mapping must cover exactly the300 primary IDs and remain task/cut balanced. Replacements inherit primary radius; random_half/full and formal V/D/P radii must not be globally rescaled by this .5/1 channel assignment.",
+      "New source a0 is allowed; do not import policy5 old-development raw50 cross-bank equality. Keep original candidate/suffix seed namespace and source/model provenance.",
+      "Use unique round2_labels_v1 paths; preserve round1 files. Stage17400/0updates, technical_reserve separate; unused budget is not new scientific authorization."
+    ]
+  },
+  "independent_validation_success": false,
+  "meets_five_pp_correction_target": false,
+  "limitations": [
+    "Receipt copies existing sealed statistical estimates without recomputation.",
+    "Conditional round2 authorization is not evidence that its new preparation/freeze checks have completed."
+  ]
+}

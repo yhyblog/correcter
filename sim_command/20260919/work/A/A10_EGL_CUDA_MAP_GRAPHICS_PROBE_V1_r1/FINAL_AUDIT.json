@@ -1,0 +1,709 @@
+{
+  "task_id": "A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1",
+  "audited_at_utc": "2026-09-19T18:49:58.082049+00:00",
+  "audit_mode": "CPU reads/reconciliation of saved artifacts, no driver call or rerender",
+  "launcher_invocations": 1,
+  "returncode": 0,
+  "retries": 0,
+  "planned_vs_actual": {
+    "graphics_probe_attempts": {
+      "planned_cap": 1,
+      "entered": 1,
+      "returned": 1,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "egl_device_enumerations": {
+      "planned_cap": 1,
+      "entered": 1,
+      "returned": 1,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "egl_device_string_queries": {
+      "planned_cap": 8,
+      "entered": 8,
+      "returned": 8,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "probe_explicit_egl_get_proc_address_calls": {
+      "planned_cap": 5,
+      "entered": 5,
+      "returned": 5,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "egl_device_attribute_queries": {
+      "planned_cap": 8,
+      "entered": 8,
+      "returned": 8,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "cuda_driver_initializations": {
+      "planned_cap": 1,
+      "entered": 1,
+      "returned": 1,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "cuda_device_pci_queries": {
+      "planned_cap": 8,
+      "entered": 8,
+      "returned": 8,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "egl_error_queries": {
+      "planned_cap": 35,
+      "entered": 35,
+      "returned": 35,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "probe_explicit_driver_library_loads": {
+      "planned_cap": 2,
+      "entered": 2,
+      "returned": 2,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "probe_explicit_cuda_symbol_lookups": {
+      "planned_cap": 2,
+      "entered": 2,
+      "returned": 2,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "probe_explicit_egl_core_symbol_lookups": {
+      "planned_cap": 11,
+      "entered": 11,
+      "returned": 11,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "cuda_context_creations": {
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "cuda_kernel_launches": {
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "cuda_device_count_queries": {
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "cuda_uuid_queries": {
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "cuda_error_string_queries": {
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "egl_device_binary_queries": {
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "egl_drm_string_queries": {
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "egl_platform_display_calls": {
+      "planned_cap": 1,
+      "entered": 1,
+      "returned": 1,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "egl_initialize_calls": {
+      "planned_cap": 1,
+      "entered": 1,
+      "returned": 1,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "egl_choose_config_calls": {
+      "planned_cap": 1,
+      "entered": 1,
+      "returned": 1,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "egl_bind_api_calls": {
+      "planned_cap": 1,
+      "entered": 1,
+      "returned": 1,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "graphics_context_creations": {
+      "planned_cap": 1,
+      "entered": 1,
+      "returned": 1,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "egl_make_current_calls": {
+      "planned_cap": 2,
+      "entered": 2,
+      "returned": 2,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "egl_query_string_calls": {
+      "planned_cap": 2,
+      "entered": 2,
+      "returned": 2,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "probe_explicit_gl_string_queries": {
+      "planned_cap": 3,
+      "entered": 3,
+      "returned": 3,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "static_scene_constructions": {
+      "planned_cap": 1,
+      "entered": 1,
+      "returned": 1,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "static_scene_data_constructions": {
+      "planned_cap": 1,
+      "entered": 1,
+      "returned": 1,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "explicit_mj_forward_calls": {
+      "planned_cap": 1,
+      "entered": 1,
+      "returned": 1,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "mujoco_render_context_creations": {
+      "planned_cap": 1,
+      "entered": 1,
+      "returned": 1,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "mujoco_render_context_frees": {
+      "planned_cap": 1,
+      "entered": 1,
+      "returned": 1,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "mujoco_scene_updates": {
+      "planned_cap": 1,
+      "entered": 1,
+      "returned": 1,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "render_calls": {
+      "planned_cap": 1,
+      "entered": 1,
+      "returned": 1,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "rgb_readback_calls": {
+      "planned_cap": 1,
+      "entered": 1,
+      "returned": 1,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "egl_destroy_context_calls": {
+      "planned_cap": 1,
+      "entered": 1,
+      "returned": 1,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "egl_terminate_calls": {
+      "planned_cap": 1,
+      "entered": 1,
+      "returned": 1,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "egl_release_thread_calls": {
+      "planned_cap": 1,
+      "entered": 1,
+      "returned": 1,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "model_initializations": {
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "model_gpu_inference_calls": {
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "vla_sampling_calls": {
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "flow_forward_calls": {
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "simulator_attempts": {
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "metaworld_environment_instances": {
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "environment_reset_calls": {
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "physics_steps": {
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "env_steps": {
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "completed_rollouts": {
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "optimizer_updates": {
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "incomplete": 0
+    }
+  },
+  "phase_totals": {
+    "entered": 105,
+    "returned": 105,
+    "failed": 0,
+    "incomplete": 0
+  },
+  "all_caps_respected": true,
+  "billing": "Each entered event charges once; terminal metadata adds0. All105 events have returned terminal.",
+  "device_target": {
+    "gpu_uuid": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe",
+    "gpu_index": 0,
+    "gpu_model": "NVIDIA H100 80GB HBM3",
+    "driver": "535.161.08",
+    "pci_bus_id": "0000:0f:00.0"
+  },
+  "selected_egl_index": 0,
+  "selected_CUDA_handle": 0,
+  "mapping_proved_by_PCI_UUID_not_ordinal": true,
+  "candidate_count": 8,
+  "all_candidate_kernel_identities_match": true,
+  "display_after_all_PCI_queries": true,
+  "raw_API_operation_counts": {
+    "egl_error_queries": 35,
+    "probe_explicit_egl_get_proc_address_calls": 5,
+    "cuda_driver_initializations": 1,
+    "egl_device_enumerations": 1,
+    "egl_device_string_queries": 8,
+    "egl_device_attribute_queries": 8,
+    "cuda_device_pci_queries": 8,
+    "egl_platform_display_calls": 1,
+    "egl_initialize_calls": 1,
+    "egl_choose_config_calls": 1,
+    "egl_bind_api_calls": 1,
+    "graphics_context_creations": 1,
+    "egl_make_current_calls": 2,
+    "probe_explicit_gl_string_queries": 3,
+    "egl_query_string_calls": 2,
+    "egl_destroy_context_calls": 1,
+    "egl_terminate_calls": 1,
+    "egl_release_thread_calls": 1
+  },
+  "EGL_error_values": [
+    12288
+  ],
+  "CUDA_loaded_files": [
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/isolation/lib/libcuda.so.535.161.08"
+  ],
+  "frozen_visibility_matched": true,
+  "renderer_identity": {
+    "GL": {
+      "vendor": "NVIDIA Corporation",
+      "renderer": "NVIDIA H100 80GB HBM3/PCIe/SSE2",
+      "version": "4.6.0 NVIDIA 535.161.08"
+    },
+    "EGL": {
+      "vendor": "NVIDIA",
+      "version": "1.5"
+    },
+    "egl_index": 0
+  },
+  "data_time_before": 0.0,
+  "data_time_after": 0.0,
+  "RGB_integrity": {
+    "npy_header": {
+      "descr": "|u1",
+      "fortran_order": false,
+      "shape": [
+        64,
+        64,
+        3
+      ]
+    },
+    "npy_sha256": "c54779ce229370a193da93de18b041c20fd234973543dca84f4ff8e27b0780db",
+    "ppm_sha256": "bae9e142be8f5d35a94043072f73e7fcf998263420ef92278a5926b26d15cebf",
+    "payload_sha256": "c243814df1c1ee2e3a2759adb621eb61fd4b7089fcd7e68a10069d56feb1bfc4",
+    "PPM_NPY_pixels_identical": true,
+    "unique_colors": 460,
+    "channel_min": [
+      0,
+      0,
+      0
+    ],
+    "channel_max": [
+      201,
+      102,
+      127
+    ],
+    "red_dominant_pixel_count": 120,
+    "red_dominant_bbox_xyxy": [
+      25,
+      21,
+      37,
+      32
+    ],
+    "blue_grey_pixel_count": 2560,
+    "method": "CPU stdlib reads saved NPY/PPM only; no image editing, model, render or readback. Color statistics are supporting evidence, not a standalone scene acceptance."
+  },
+  "RGB_scene_inspection": {
+    "inspected_at_utc": "2026-09-19T18:45:23.753559+00:00",
+    "method": "Executor viewed RGB_VIEW.png at original64x64, a pixel-identical lossless copy of the saved PPM; CPU integrity check also matched saved NPY payload",
+    "source_scene": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/scene.xml",
+    "source_scene_sha256": "f82da007b1c54685280718d8f2787c59ea3c82a1f97e8e124f910ee18de2c3ae",
+    "image": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1/RGB_VIEW.png",
+    "image_sha256": "a7f903ce48654667a643fe6a5c0afee8214736ed3e6fa98ab28b507320ed2633",
+    "observed": [
+      "One red-orange sphere with visible light/dark shading near the center",
+      "Blue-grey plane with perspective edges below the sphere",
+      "Black background outside the plane"
+    ],
+    "expected_from_frozen_XML": [
+      "One sphere radius0.3 at(0,0,0.3), rgba(0.8,0.2,0.1,1)",
+      "One plane size(2,2,0.1), rgba(0.3,0.4,0.5,1)",
+      "Fixed oblique camera and overhead light"
+    ],
+    "scene_consistency": "visually_consistent",
+    "not_just_nonempty_or_nonconstant": true,
+    "runtime_frame_count": 1,
+    "additional_render_or_readback": 0,
+    "scope": "Executor qualitative scene inspection plus pixel-identity evidence; analysis acceptance remains pending. This is no MetaWorld/VLA/task-success validation."
+  },
+  "timing": {
+    "preparation_seconds": 5.306398595217615,
+    "reservation_and_holder_release_seconds": 50.638421702198684,
+    "reserved_wrapper_setup_seconds": 0.004156047943979502,
+    "timed_diagnostic_process_seconds": 10.002969447057694,
+    "reservation_release_overhead_seconds": 0.018575230613350868,
+    "restoration_observation_seconds": 8.004707871004939,
+    "end_to_end_observed_seconds": 73.97522889403626,
+    "timeout_scope": "GNU timeout child: CPU authorization and static library checks, EGL device mapping, one context, one static scene RGB render/readback, cleanup",
+    "timeout_seconds": 120,
+    "kill_grace_seconds": 10,
+    "end_to_end_strict_upper_bound_seconds": null,
+    "missing_reason": "Pre-launch CPU SHA/device checks, reservation, release and restoration are outside the child timeout; missing markers yield null, never fabricated zero durations"
+  },
+  "memory_and_disk": {
+    "child_family_maxrss_KiB": 109828,
+    "child_family_maxrss_MiB": 107.25390625,
+    "RAM_scope": "Linux RUSAGE_CHILDREN max individual-child RSS, includes launcher/graphics descendant and observer subprocesses; not simultaneous aggregate or graphics-only RSS",
+    "all_observer_NVML_samples": 154,
+    "timed_child_NVML_samples": 18,
+    "sample_window": "Query begins and ends within timed child; excludes holder release/restoration samples",
+    "GPU_peaks_by_index": {
+      "0": {
+        "NVML_memory_used_MiB": 15,
+        "sampled_utilization_percent": 0
+      },
+      "1": {
+        "NVML_memory_used_MiB": 3,
+        "sampled_utilization_percent": 0
+      },
+      "2": {
+        "NVML_memory_used_MiB": 3,
+        "sampled_utilization_percent": 0
+      },
+      "3": {
+        "NVML_memory_used_MiB": 3,
+        "sampled_utilization_percent": 0
+      },
+      "4": {
+        "NVML_memory_used_MiB": 3,
+        "sampled_utilization_percent": 0
+      },
+      "5": {
+        "NVML_memory_used_MiB": 3,
+        "sampled_utilization_percent": 0
+      },
+      "6": {
+        "NVML_memory_used_MiB": 3,
+        "sampled_utilization_percent": 0
+      },
+      "7": {
+        "NVML_memory_used_MiB": 3,
+        "sampled_utilization_percent": 0
+      }
+    },
+    "GPU_allocator_peak_bytes": null,
+    "GPU_allocator_peak_missing_reason": "No allocator instrumentation; rounded NVML samples can miss short allocations",
+    "gpu_seconds": null,
+    "gpu_seconds_missing_reason": "No GPU event timing/utilization integral; sampled utilization0 is not zero total GPU work",
+    "runtime_output_bytes": 119250,
+    "output_scope": "Original new run files, excluding existing bundle and CPU audit/PNG viewing copy"
+  },
+  "cleanup": {
+    "errors": []
+  },
+  "occupancy": {
+    "launcher_restoration": {
+      "status": "occupancy_resolved",
+      "guard_status": {
+        "pid": 27508,
+        "updated": 1789843383.1289058,
+        "gpus": {
+          "0": {
+            "state": "holder",
+            "manager_pid": 220701,
+            "driver_pids": [
+              2564086
+            ]
+          },
+          "1": {
+            "state": "holder",
+            "manager_pid": 220702,
+            "driver_pids": [
+              2564087
+            ]
+          },
+          "2": {
+            "state": "holder",
+            "manager_pid": 220703,
+            "driver_pids": [
+              2564089
+            ]
+          },
+          "3": {
+            "state": "holder",
+            "manager_pid": 220704,
+            "driver_pids": [
+              2564091
+            ]
+          },
+          "4": {
+            "state": "holder",
+            "manager_pid": 220705,
+            "driver_pids": [
+              2564098
+            ]
+          },
+          "5": {
+            "state": "holder",
+            "manager_pid": 220706,
+            "driver_pids": [
+              2564103
+            ]
+          },
+          "6": {
+            "state": "holder",
+            "manager_pid": 220707,
+            "driver_pids": [
+              2564109
+            ]
+          },
+          "7": {
+            "state": "holder",
+            "manager_pid": 220708,
+            "driver_pids": [
+              2564113
+            ]
+          }
+        }
+      },
+      "external_jobs_preserved": true,
+      "observed_at": {
+        "monotonic_seconds": 3883268.296432671,
+        "unix_seconds": 1789843383.746861,
+        "utc": "2026-09-19T18:43:03.746864+00:00"
+      }
+    },
+    "fresh_status": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1/OCCUPANCY_AFTER.json",
+      "sha256": "45219c1e883050328aab1eb96a1efae7955c26dcce04a0341371b55fe3ad7848",
+      "bytes": 1446
+    },
+    "guard_log": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1/GUARD_LOG_WINDOW.txt",
+      "sha256": "da1621c4886c8b501a1218b804a459846bff08f387f258663ed87053039fee55",
+      "bytes": 976
+    },
+    "whole_wave_evidence": "All8 holders yielded for reservation; no holder start in timed child interval; all8 restarted18:42:56UTC after timed exit18:42:55.723607UTC; post-exit process scan empty",
+    "fresh_holder_count": 8,
+    "guard_pid": 27508,
+    "holder_manager_pids": [
+      220701,
+      220702,
+      220703,
+      220704,
+      220705,
+      220706,
+      220707,
+      220708
+    ],
+    "process_snapshot": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1/POST_EXIT_PROCESS_SNAPSHOT.json",
+      "sha256": "20d443b928d6f4b584cbe798792381dd816700258f93c296994cf68a8b250104",
+      "bytes": 145
+    }
+  },
+  "CPU_prelaunch_note": {
+    "task_id": "A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1",
+    "recorded_at_utc": "2026-09-19T18:41:44.781716+00:00",
+    "event": "Observer preparation had an overly strict string assertion expecting an absolute literal where source uses BASE plus a relative release path; corrected only that preparation assertion",
+    "preparation_command_exitcode": 1,
+    "real_launcher_invocations_before_correction": 0,
+    "release_claim_existed": false,
+    "frozen_launcher_or_bundle_changed": false,
+    "ACK_written_before_launch": true
+  },
+  "independent_CPU_checker_run": false,
+  "release_consumed": true,
+  "analysis_acceptance_and_closure_pending": true,
+  "old_native_v5_or_B_executed": false,
+  "deleted_files": 0,
+  "run_artifacts": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/EGL_graphics_runs/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1_A_wave03/LAUNCH_RESULT.json",
+      "sha256": "af193c22f56eb7d24186d17a0ba7f37cc11685d9f2ddeb2b9e9ac9b00d101197",
+      "bytes": 4554
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/EGL_graphics_runs/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1_A_wave03/graphics/RESULT.json",
+      "sha256": "0fb55336024a003656ce69524e99c48e4a11d54c7550b8db256c60e2ca25749b",
+      "bytes": 3014
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/EGL_graphics_runs/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1_A_wave03/graphics/api_results.jsonl",
+      "sha256": "2ca2e88a5500064900f48022555a30d4c0a0568635c6608db2824c9856e0835d",
+      "bytes": 21275
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/EGL_graphics_runs/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1_A_wave03/graphics/cleanup.json",
+      "sha256": "339acc3b09add3c3d0e689adf17878a1bd264d3a3f00fccce7db538630e20066",
+      "bytes": 19
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/EGL_graphics_runs/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1_A_wave03/graphics/device_mapping.json",
+      "sha256": "f2b60aa3f8f681eb4e593a9f542b00e298f5e0e18f9322b8a4f4fe95c93b783d",
+      "bytes": 14530
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/EGL_graphics_runs/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1_A_wave03/graphics/events.jsonl",
+      "sha256": "dbf477696b927dadcaa870a76a195cdd9834ee1bb10e6e7091db78495625f14e",
+      "bytes": 42183
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/EGL_graphics_runs/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1_A_wave03/graphics/loader_identity.json",
+      "sha256": "df72fa93236f672f45d16f532552d868fc22e7d0eb140b27d0b780e6080a4b0d",
+      "bytes": 1323
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/EGL_graphics_runs/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1_A_wave03/graphics/renderer_identity.json",
+      "sha256": "21e8eeec9bffca88b1b5504a0fb0f996b69b410ab41f9b30087a288dd3b71af0",
+      "bytes": 225
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/EGL_graphics_runs/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1_A_wave03/graphics/rgb.npy",
+      "sha256": "c54779ce229370a193da93de18b041c20fd234973543dca84f4ff8e27b0780db",
+      "bytes": 12416
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/EGL_graphics_runs/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1_A_wave03/graphics/rgb.ppm",
+      "sha256": "bae9e142be8f5d35a94043072f73e7fcf998263420ef92278a5926b26d15cebf",
+      "bytes": 12301
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/EGL_graphics_runs/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1_A_wave03/launch_identity.json",
+      "sha256": "060f246bde34eb21715513b350f1df5bb5c7a84ad2e10e12181142e0210fdc28",
+      "bytes": 6235
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/EGL_graphics_runs/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1_A_wave03/wave_timing.jsonl",
+      "sha256": "e987c0ac7df962ba43c99187be541d5573bb8d165e60f47c0232afecc9a6d46e",
+      "bytes": 1175
+    }
+  ]
+}

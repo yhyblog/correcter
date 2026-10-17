@@ -1,0 +1,76 @@
+{
+  "schema": "B_dependency_event_audit_v1",
+  "event_id": "B_48db40fab906eccb8736986e425c3204",
+  "task_id": "B_QUEUE_JOIN_V1",
+  "run_id": "d5c29466430f4c210af7499877cee4a72368530cf312c5ae8faee33e1bc68231",
+  "node": "B",
+  "hostname": "trial-303225685-trialrun-303225685-worker-0",
+  "executor_thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+  "at_utc": "2026-09-22T10:00:03.447701+00:00",
+  "outcome": "audited_complete",
+  "event_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/outbox/B_48db40fab906eccb8736986e425c3204.json",
+  "dependency_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/dependency_changes/d5c29466430f4c210af7499877cee4a72368530cf312c5ae8faee33e1bc68231.json",
+  "change": {
+    "new_authorization": "deadline_20260924/A_PAPER_RESULTS_AUTHORIZATION_V1.json",
+    "task_id": "A_D24_PAPER_RESULTS_ASSEMBLY_V1",
+    "owner": "A",
+    "B_new_scientific_tasks": []
+  },
+  "current_control": {
+    "revision": 67,
+    "updated_at_utc": "2026-09-22T09:53:03.454197+00:00",
+    "stop_requested": false,
+    "active_B_compute_task_ids": [
+      "B_D24_R_H20_H30_V1"
+    ],
+    "queue_revision": 34,
+    "B_priority_task": "B_D24_R_H20_H30_V1",
+    "task_board_revision": 99,
+    "B_ready_tasks": [],
+    "board_note": "B R H20/H30 running fields are lagging snapshots; own final RESULT and prior terminal audit/ACK establish complete. Analysis owns global board/control."
+  },
+  "existing_claim": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_R_H20_H30_V1/CLAIM.json",
+    "matches_registered_process_identity": true,
+    "matches_registered_claim_sha256": true,
+    "run_id": "D24_B_R_H20_H30_r1",
+    "state": "terminal_complete_preserved"
+  },
+  "completed_B_R_task": {
+    "result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_R_H20_H30_V1/RESULT.json",
+    "summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_R_H20_H30_V1/FINAL_SUMMARY.json",
+    "previous_terminal_ack": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/handler_acks/B_4b6930e1938be25963539c5370ddd50e.json",
+    "previous_terminal_audit": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/events/B_4b6930e1938be25963539c5370ddd50e_AUDIT.json",
+      "sha256": "5ed7e766d3c8abba7d9319c46c7608e2be77cb4c00ceb4a827a575d8809d355d"
+    },
+    "known_formal_processes_checked": 25,
+    "known_formal_processes_alive": 0
+  },
+  "background": {
+    "state": "stable_idle_occupied",
+    "runtime_evidence": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/events/B_48db40fab906eccb8736986e425c3204_RUNTIME.json",
+    "guard_alive": true,
+    "guard_pid": 776269,
+    "holder_gpu_count": 8,
+    "holder_target_utilization": 0.9,
+    "observer_alive": true,
+    "observer_pid": 452085,
+    "observer_state": "supervising",
+    "legacy_join_waiter_alive": true,
+    "service_registration": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/SERVICE_REGISTRATION.json",
+    "terminal_trigger_registration": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_B_R_H20_H30_r1__D24_B_R_H20_H30_r1__1.json",
+    "dependency_trigger_registered": true,
+    "wakeup_readiness": "original_thread_ACK_verified_offline_pending"
+  },
+  "legacy_package_note": "package_sha256 remains null; old shared collector package gates are superseded for deadline science and do not create new pending B science or require re-running completed stages. Generic collector migration remains deferred.",
+  "actions": {
+    "new_scientific_launches": 0,
+    "duplicate_launches": 0,
+    "GPU_probes": 0,
+    "new_notification_deliveries": 0,
+    "shared_control_edits": 0
+  },
+  "decision": "Dependency change audited. Keep completed B outputs and original claims; retain existing eight-GPU occupancy and registered dependency observer. No new B compute is released. No A/B runtime barrier.",
+  "A_waits_for_B": false
+}

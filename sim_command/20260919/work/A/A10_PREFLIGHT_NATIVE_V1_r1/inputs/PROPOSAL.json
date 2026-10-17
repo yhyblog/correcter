@@ -1,0 +1,298 @@
+{
+  "proposal_id": "A10_NATIVE_QUEUE_PREFLIGHT_V4",
+  "status": "proposed_not_released",
+  "task_id": "A10_PREFLIGHT_NATIVE_V1",
+  "task_revision": 1,
+  "campaign_id": "corrector-sim-20260919",
+  "owner_host": "trial-303224955-trialrun-303224955-worker-0",
+  "node_role": "A",
+  "wave_participants": [
+    "A"
+  ],
+  "code_manifest_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PREFLIGHT_REVISION_R2/code_snapshot_v4/CODE_MANIFEST.json",
+  "source_manifest_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PREFLIGHT_REVISION_R2/preflight_v4/source_manifest.json",
+  "source_manifest_sha256": "d01e452e6e67aa90beef3b7ecc9157c5c8b96e28ea80e1eec4e47ef8400542eb",
+  "source": {
+    "source_id": "A10-native-queue-diagnostic-shelf-place-v3-2026091900",
+    "task": "shelf-place-v3",
+    "parent_episode_id": "A10-native-queue-diagnostic-shelf-place-v3-2026091900",
+    "env_seed": 2026091900,
+    "generation_seed": 2026091901,
+    "suffix_seed": 2026091902,
+    "split": "development",
+    "proposed_only": true,
+    "selection": "one fixed diagnostic identity; no outcome-based replacement"
+  },
+  "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model",
+  "model_sha256": "dff338a91dbe534ca3c4525ba82df9324662e3c87131f42ed6e3d1b7bf0e94d4",
+  "interface_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/interface_v1",
+  "lineage_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/legacy-pi05-mt50.files.json",
+  "required_inputs": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model/config.json",
+      "sha256": "573be3e8d78fe6328d0a8ca3978aaf993dbebb3571d77aa241478aacbd782d5d",
+      "verification_now": "sha256 matched"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model/model.safetensors",
+      "sha256": "dff338a91dbe534ca3c4525ba82df9324662e3c87131f42ed6e3d1b7bf0e94d4",
+      "verification_now": "size + historical identity"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model/policy_postprocessor.json",
+      "sha256": "550237addb77c5b9e4e0c78655dbd5ecc792adbf6895a0eff08f6d6daa2f9401",
+      "verification_now": "sha256 matched"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model/policy_postprocessor_step_0_unnormalizer_processor.safetensors",
+      "sha256": "4fff91faea9afc9208e5519088f2bc8fb9cb21102bfeec8a9b3f259863c5cf00",
+      "verification_now": "sha256 matched"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model/policy_preprocessor.json",
+      "sha256": "3398544bef8193b0aed36c7980982f68e902f739eb937fbde5a34066bf22583e",
+      "verification_now": "sha256 matched"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model/policy_preprocessor_step_2_normalizer_processor.safetensors",
+      "sha256": "4fff91faea9afc9208e5519088f2bc8fb9cb21102bfeec8a9b3f259863c5cf00",
+      "verification_now": "sha256 matched"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model/train_config.json",
+      "sha256": "36642b5ebc9cf24cf32f4afb6825cc7d778a0e7e20f5a43232049e058dd57f08",
+      "verification_now": "sha256 matched"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/.cache/huggingface-vla-corrector/hub/models--google--paligemma-3b-pt-224/snapshots/35e4f46485b4d07967e7e9935bc3786aad50687c/added_tokens.json",
+      "sha256": "7d0bad90030d638a4bf89a82e91206e25f1fbe0012f14bca21666a64b643bc49",
+      "verification_now": "full sha256"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/.cache/huggingface-vla-corrector/hub/models--google--paligemma-3b-pt-224/snapshots/35e4f46485b4d07967e7e9935bc3786aad50687c/config.json",
+      "sha256": "e00c72cdff16296bf1229c3267b99f5247d8c740cae84336866338d64fa7918f",
+      "verification_now": "full sha256"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/.cache/huggingface-vla-corrector/hub/models--google--paligemma-3b-pt-224/snapshots/35e4f46485b4d07967e7e9935bc3786aad50687c/special_tokens_map.json",
+      "sha256": "5ef37093ae4236587b6e8266acb815b46e2db8ce656c66552bfa574d32880405",
+      "verification_now": "full sha256"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/.cache/huggingface-vla-corrector/hub/models--google--paligemma-3b-pt-224/snapshots/35e4f46485b4d07967e7e9935bc3786aad50687c/tokenizer.json",
+      "sha256": "ef6773c135b77b834de1d13c75a4c98ab7a3684ffd602d1831e1f1bf5467c563",
+      "verification_now": "full sha256"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/.cache/huggingface-vla-corrector/hub/models--google--paligemma-3b-pt-224/snapshots/35e4f46485b4d07967e7e9935bc3786aad50687c/tokenizer_config.json",
+      "sha256": "3259402b1d1802e02417d7bff75a889ec61d359d15be6050a957b307c48edbbe",
+      "verification_now": "full sha256"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PREFLIGHT_REVISION_R2/preflight_v4/source_manifest.json",
+      "sha256": "d01e452e6e67aa90beef3b7ecc9157c5c8b96e28ea80e1eec4e47ef8400542eb",
+      "verification_now": "full sha256"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/legacy-pi05-mt50.files.json",
+      "sha256": "8a6b66be01901284f8a3280b4ce847b248329866c25b761ff253680770eb5383",
+      "verification_now": "full sha256"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/interface_v1/interface.schema.json",
+      "sha256": "7d52f22e9d2e622a18a9a71fdac822ed50413aa3838aa3ad40d98e0bee10500f",
+      "verification_now": "full sha256"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/interface_v1/examples.jsonl",
+      "sha256": "10bc6cfbcfcc4e1b76f70d9aa31f2accb3c267baa240e64260106324fd4ce15f",
+      "verification_now": "full sha256"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/P00_PREPARATION_CONTRACT_V1.md",
+      "sha256": "b8fe737874ea7771bef87e5ed188f5c0eff619492d5656c9d58de9cbf1e078cd",
+      "verification_now": "full sha256"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/DATA_LOG_CONTRACT_V1.md",
+      "sha256": "c0276b27c006c9687fd11cb01420fb468adff7c7019a4f3e57633ee15b535c65",
+      "verification_now": "full sha256"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INVENTORY_DECISIONS_V1.md",
+      "sha256": "f9e2d62a17ac95cd1a6c0271c3b048a908341a7b6f2dc5131174c98c43e4c48d",
+      "verification_now": "full sha256"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PREFLIGHT_REVISION_R2/preflight_v4/external_source_manifest.json",
+      "sha256": "8a6935bc6788aaaacd1de4ab3ba98419a65d764eaca7d8377e88cfbe961117b7",
+      "verification_now": "full sha256; all 118 source identities checked CPU-only"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_lifecycle.sh",
+      "sha256": "3248ae959f5e43bca50c361818f620cff21eb87d10b1ee6b2d8c8756df623248",
+      "verification_now": "full sha256"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_guard.py",
+      "sha256": "d499982dff72c3b74ddab0e13e359edccb5f282900c534030b3816b58495fcaf",
+      "verification_now": "full sha256"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_hold.py",
+      "sha256": "3f75a84145092f2c6beb342f8ea9ae445905c6e0549693c5aa78f525c0436a2e",
+      "verification_now": "full sha256"
+    }
+  ],
+  "horizons": [
+    10,
+    20,
+    30,
+    40,
+    50
+  ],
+  "resource_caps": {
+    "simulator_attempts": 1,
+    "env_steps": 1,
+    "vla_sampling_calls": 5,
+    "flow_forward_calls": 50,
+    "vla_backward_calls": 0,
+    "critic_forward_calls": 0,
+    "critic_backward_calls": 0,
+    "monitor_calls": 0,
+    "optimizer_updates": 0
+  },
+  "completed_rollouts": 0,
+  "model_initializations": 1,
+  "environment_initializations": 2,
+  "environment_reset_calls": 52,
+  "state_restorations": 0,
+  "max_retries": 0,
+  "timeout_seconds": 1800,
+  "kill_grace_seconds": 30,
+  "python": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/bin/python",
+  "occupancy_lifecycle": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_lifecycle.sh",
+  "hf_home": "/mnt/bn/arnold-recommend/yaohaoyang/.cache/huggingface-vla-corrector",
+  "tokenizer_name": "google/paligemma-3b-pt-224",
+  "tokenizer_revision": "35e4f46485b4d07967e7e9935bc3786aad50687c",
+  "runtime_packages": {
+    "torch": "2.7.1",
+    "numpy": "2.2.6",
+    "mujoco": "3.6.0",
+    "metaworld": "3.0.0",
+    "gymnasium": "1.2.3",
+    "transformers": "5.4.0",
+    "lerobot": "0.5.1",
+    "jsonschema": "4.26.0",
+    "safetensors": "0.7.0"
+  },
+  "resource_estimates": {
+    "gpu_count": 1,
+    "reserved_GPU_wave": "all eight A holders paused for the whole A-only command",
+    "vram_peak_GiB_estimate": 40,
+    "host_ram_peak_GiB_estimate": 64,
+    "incremental_disk_GiB_estimate": 2,
+    "estimates_are_measured": false,
+    "disk_quota_known": false,
+    "model_weight_bytes_read": 9354050752,
+    "full_large_weight_hash_before_load": true,
+    "output_retention": [
+      "claim",
+      "events",
+      "resource_receipt",
+      "queue_checks",
+      "raw5plans",
+      "RGB/proprio current+next",
+      "one real transition",
+      "failures",
+      "initialization_events_and_receipt",
+      "wave_timing",
+      "LAUNCH_RESULT",
+      "restoration_observation"
+    ],
+    "full_large_weight_hash_passes_before_or_inside_timed_child": 2,
+    "model_weight_hash_bytes_read": 18708101504,
+    "initialization_journal_records_upper_bound": 10730,
+    "source_package_bytes_hashed": 728991,
+    "estimate_note": "40GiB VRAM/64GiB RAM/2GiB disk remain estimates; two full weight hash passes plus model loader I/O; no real runtime measurement"
+  },
+  "not_covered": [
+    "D/G0/Q GPU binding",
+    "Post/Velocity real gradient and sampler numerical checks",
+    "full episodes",
+    "MT50 trained corrector",
+    "multi-host wave barrier"
+  ],
+  "abort_rule": "stop on first budget violation, control stop, identity drift or technical failure; never retry or replace seed",
+  "publication_is_authorization": false,
+  "initialization_reset_calls": 51,
+  "diagnostic_reset_calls": 1,
+  "diagnostic_initial_states": 1,
+  "taskset_seed": 42,
+  "taskset_generated_goals": 50,
+  "initialization_caps": {
+    "model_initializations": 1,
+    "environment_instances": 2,
+    "wrapper_instances": 1,
+    "taskset_constructions": 1,
+    "taskset_reset_calls": 50,
+    "wrapper_initialization_reset_calls": 1,
+    "initialization_reset_calls": 51,
+    "diagnostic_reset_calls": 1,
+    "environment_reset_calls": 52,
+    "reset_model_calls": 104,
+    "initialization_do_simulation_calls": 5200,
+    "initialization_physics_substeps": 26000,
+    "policy_do_simulation_calls": 1,
+    "policy_physics_substeps": 13
+  },
+  "control_minimum_limits": {
+    "model_gpu_inference_calls": 5,
+    "simulator_attempts": 1,
+    "training_updates": 0,
+    "model_initializations": 1,
+    "environment_instances": 2,
+    "initialization_reset_calls": 51,
+    "diagnostic_reset_calls": 1,
+    "environment_reset_calls": 52,
+    "initialization_physics_substeps": 26000,
+    "policy_physics_substeps": 13
+  },
+  "external_source_manifest_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PREFLIGHT_REVISION_R2/preflight_v4/external_source_manifest.json",
+  "external_source_manifest_sha256": "8a6935bc6788aaaacd1de4ab3ba98419a65d764eaca7d8377e88cfbe961117b7",
+  "timeout_scope": "diagnostic_process_only_including_all_initialization",
+  "restoration_observation_timeout_seconds": 120,
+  "nominal_timed_child_TERM_deadline_seconds": 1800,
+  "nominal_timed_child_KILL_deadline_seconds": 1830,
+  "end_to_end_strict_upper_bound_seconds": null,
+  "timeout_accounting": {
+    "inside": [
+      "repeated authorization/input SHA/device/runtime verification",
+      "heavy imports",
+      "model loading",
+      "all task-set/wrapper/diagnostic resets and initialization physics",
+      "five native samples",
+      "one policy control",
+      "diagnostic validation and cleanup"
+    ],
+    "outside": [
+      "prelaunch CPU authorization and full input hashing",
+      "NVML identity check and guard-active check",
+      "all-GPU reservation and holder release",
+      "reserved wrapper setup",
+      "reservation release",
+      "up to 120s occupancy-restoration observation"
+    ],
+    "actual_times": "LAUNCH_RESULT.json records preparation/reservation/timed-process/release/restoration/end-to-end; missing markers are null",
+    "not_an_end_to_end_1830_second_bound": true
+  },
+  "counter_scope": {
+    "environment_instances": "two native SawyerShelfPlaceEnvV3 constructor attempts; one additional Python wrapper counted separately",
+    "environment_reset_calls": "native SawyerXYZEnv.reset entries, 50 task-set +1 wrapper initialization +1 diagnostic",
+    "reset_model_calls": "two per native reset: direct call, then Gymnasium MujocoEnv.reset delegation",
+    "initialization_physics_substeps": "104 reset_model *50 hand do_simulation *5 frames =26000; includes diagnostic reset settling",
+    "policy_physics_substeps": "one native control, zero-based 30Hz index0 =>floor(400/30)=13",
+    "overlapping_dimensions": "Do not sum aggregate reset count with its source subcounts or add settling frames to policy control count",
+    "failure": "durable entered attempts remain charged; returned/failed/incomplete tracked separately; no retries/refunds"
+  }
+}

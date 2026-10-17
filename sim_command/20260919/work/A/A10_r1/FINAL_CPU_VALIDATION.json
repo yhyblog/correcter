@@ -1,0 +1,112 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-09-19T15:58:58.357860+00:00",
+  "checks": [
+    {
+      "name": "system_cpu_suite",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v3/test_cpu_contract.py",
+        "--basetemp=/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_r1/test_artifacts_v3_system"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "status": "passed",
+      "stdout": "..........................................                               [100%]\n42 passed in 0.74s\n",
+      "stderr": ""
+    },
+    {
+      "name": "runtime_cpu_suite",
+      "command": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v3/test_cpu_contract.py",
+        "--basetemp=/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_r1/test_artifacts_v3_runtime"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "status": "passed",
+      "stdout": "..........................................                               [100%]\n42 passed in 1.09s\n",
+      "stderr": ""
+    },
+    {
+      "name": "shell_syntax",
+      "command": [
+        "bash",
+        "-n",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/commands_v3/run_proposed_native_preflight.sh",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/commands_v3/cpu_checks.sh"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "status": "passed",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "P00_release_denial",
+      "command": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/commands_v3/run_proposed_native_preflight.sh",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P00_PREP_V1.json"
+      ],
+      "returncode": 1,
+      "expected_returncode": 1,
+      "status": "passed",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v3/launch_preflight.py\", line 35, in <module>\n    main()\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v3/launch_preflight.py\", line 16, in main\n    control, release, proposal = load_authorization(args.campaign, args.release, args.proposal)\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v3/core/release.py\", line 72, in load_authorization\n    authorize(control, release, proposal)\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v3/core/release.py\", line 32, in authorize\n    raise ContractError('Formal compute is not released by current CONTROL')\ncore.validation.ContractError: Formal compute is not released by current CONTROL\n"
+    },
+    {
+      "name": "full_runtime_AST",
+      "command": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/bin/python",
+        "-B",
+        "-c",
+        "import pathlib,ast; p=pathlib.Path.cwd(); f=list(p.rglob(\"*.py\")); [ast.parse(x.read_text(),filename=str(x)) for x in f]; print(\"AST passed\",len(f),\"files\")"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "status": "passed",
+      "stdout": "AST passed 381 files\n",
+      "stderr": ""
+    },
+    {
+      "name": "B_published_examples_semantic_validation",
+      "status": "passed",
+      "records": 23,
+      "input": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B10/B10_r1_trial-303225685-trialrun-303225685-worker-0_20260919T150956Z/evidence/B_PUBLIC_EXAMPLES.synthetic.jsonl",
+      "sha256": "a72bec6cbcf2a7ab54eb253662142970594fe2a6a64b94d19285cdc73cb6812a"
+    },
+    {
+      "name": "immutable_code_manifest",
+      "status": "passed",
+      "files": 408,
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v3/CODE_MANIFEST.json",
+      "sha256": "07f4b2eb87e93c563621bd346b1b75a2a2ddb82b97492dd4f5d1c52757941687"
+    },
+    {
+      "name": "three_durable_cost_lifecycle_examples",
+      "status": "passed",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/accounting_examples_v1/SUMMARY.json"
+    }
+  ],
+  "runtime_AST_python": "3.12.13 (vendored lerobot contains PEP695 syntax; system Python3.11 is only the CPU gate/test runner)",
+  "synthetic_examples_are_not_real_model_calls": true,
+  "real_resource_counts": {
+    "simulator_attempts": 0,
+    "vla_sampling_calls": 0,
+    "optimizer_updates": 0,
+    "gpu_seconds": 0
+  }
+}

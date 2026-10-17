@@ -1,0 +1,119 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1",
+  "revision": 1,
+  "reviewed_at_utc": "2026-09-20T11:01:04.486306+00:00",
+  "status": "CPU_repair_delivery_accepted_with_two_narrow_followup_fixes_before_compute",
+  "receipt": {
+    "path": "receipts/A/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1_RESULT.json",
+    "sha256": "bd3dc31d6c792653af6d8614b81be12e2107c464319e4848af6567c72176f22e"
+  },
+  "report": {
+    "path": "results/A/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1/REPORT.md",
+    "sha256": "0f96a00bec31c27bdff4488c6f5270a94cf92a5fba4f0ed069d93a635a082c7d"
+  },
+  "manifest": {
+    "path": "results/A/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1/EVIDENCE_MANIFEST.json",
+    "sha256": "0403896fb4dab14412c68e0d6a14db56aa8a22014272fc6d5f2f74a8aec6d646"
+  },
+  "supplement": {
+    "path": "results/A/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1/supplement_v1/READY.json",
+    "sha256": "dd330a43d5a7b0e6304975d399c561388b3bbb7befd2e609dd223f4a41de9edd"
+  },
+  "root_verification": {
+    "artifact_refs": 27,
+    "evidence_files": 1302,
+    "unique_artifact_and_evidence_files": 1302,
+    "SHA_size_realpath_pass": true,
+    "reported_real_zero_operations": 130,
+    "root_runtime_or_test_calls": 0
+  },
+  "reported_CPU_checks": {
+    "targeted_assertions": 104,
+    "final_JSON_shell_checks": 2,
+    "old133_suite_rerun": false,
+    "initial_isolated_entry_import_failure_retained": true
+  },
+  "reviewers": [
+    "/root/interface_v1_semantics_review",
+    "/root/pv_v3_numeric_acceptance_review",
+    "/root/b_pending_receipts_review"
+  ],
+  "previous_findings_resolved": [
+    "Box metadata infinity distinct from nonfinite physical state",
+    "single episode identity preserves source/parent meanings",
+    "empty public cost refs and private post-exit cost indices",
+    "public null reasons checked",
+    "neutral aggregate carrier with all-member proof and no physical alias",
+    "RLIMIT_AS removed",
+    "bounded_first_parent storage admission and small gate JSON bounds"
+  ],
+  "unchanged_scientific_and_resource_scope": {
+    "caps": 116,
+    "source_seed_unchanged": true,
+    "samples": 453,
+    "flow": 4530,
+    "controls": 4500,
+    "observations": 4515,
+    "attempts": 15,
+    "timeouts_unchanged": true,
+    "full_state_proof_pending_in_same_parent": true
+  },
+  "synthetic_count_explanation": "452 fake plans are450 virtual continuation samples plus2 directed fixtures; constant bank does not run3 fresh model samples. Not a reduction of453 real budget.",
+  "new_findings": [
+    {
+      "id": "SHARED_BANK_REF",
+      "severity": "deterministic_block_before_first_Q_control_publication",
+      "evidence": [
+        "code/public_records.py:109-112",
+        "inherited code/runtime_engine.py:168-172"
+      ],
+      "finding": "publisher requires generated_chunk_ref under current engine.out, but load_bank installs immutable normal/BANK references for Q/G0 candidate plans",
+      "decision": "retain local obs/next rule; allow only verified same-parent/cut/source/BANK-manifest plan whitelist for generated_chunk_ref; no arbitrary external paths or extra plan copy required"
+    },
+    {
+      "id": "PRECUT_INTERVENED",
+      "severity": "incorrect_public_status_on_missing_cut_path",
+      "evidence": [
+        "code/sidecar_output.py:24",
+        "existing success_at2 precut fixture"
+      ],
+      "finding": "namespace!=normal alone labels an ended-before-cut branch as intervened",
+      "decision": "derive flag from actual intervention entry/plan execution state and extend existing CPU fixture; no new simulation"
+    }
+  ],
+  "resource_review": {
+    "planning_bytes": 11609841664,
+    "minimum_free_floor_bytes": 536870912,
+    "admission_available_bytes": 12146712576,
+    "minimum_available_inodes": 70000,
+    "private_temp_threshold_bytes": 2147483648,
+    "poll_seconds": 5,
+    "polls_max": 6000,
+    "entries_per_poll_max": 4096,
+    "new_address_space_limit": null,
+    "no_deterministic_resource_block_found": true
+  },
+  "bounded_risk_decision": {
+    "scope": "one planned shelf parent only after corrected producer is accepted and a separate release exists",
+    "accepts_monitoring_gaps": true,
+    "project_quota_known": false,
+    "exclusive_reservation": false,
+    "accepted_unknowns": [
+      "shared HF cache and native writes ignoring private paths",
+      "unlinked-open temporary files",
+      "between-scan and cleanup overshoot",
+      "future capacity and process-group RSS peak/hard bound"
+    ],
+    "conditions": [
+      "fresh runtime capacity check before NVML/holder",
+      "unchanged bounded Store/log/gate metadata and finite temp monitoring",
+      "stop owned wave on quota/write/monitor failure; wait whole group before holder restoration",
+      "retain failures; no retry or expansion"
+    ],
+    "not_collection_authorization": true
+  },
+  "B_compatibility": "no B ACK/RESULT observed; do not claim integration; v1 supplement has overly strict shared-chunk clause and needs immutable successor",
+  "future_compute_authorized": false,
+  "next_task": "A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1"
+}

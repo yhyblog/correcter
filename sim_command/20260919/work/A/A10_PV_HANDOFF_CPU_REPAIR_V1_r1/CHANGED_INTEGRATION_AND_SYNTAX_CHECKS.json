@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "actual_child_environment_positive_and_negative_checks": 4,
+  "wrong_config_rejected": true,
+  "frozen_shell_export": true,
+  "handoff_CPU_environment_gate_before_parent_NVML": true,
+  "unchanged_lifecycle_invocation": true,
+  "install_rollback_metadata_checks": [
+    {
+      "operation": "install",
+      "unauthorized_rejected": true,
+      "synthetic_exact_release_accepted": true,
+      "active_compute_window_rejected": true,
+      "shared_writes": 0
+    },
+    {
+      "operation": "rollback",
+      "unauthorized_rejected": true,
+      "synthetic_exact_release_accepted": true,
+      "active_compute_window_rejected": true,
+      "shared_writes": 0
+    }
+  ],
+  "install_entry_main_invocations": 0,
+  "AST_changed_or_added_paths": [
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/guard_patch/gpu_occupancy_guard.patched.py",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/code/core/contracts.py",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/code/core/handoff.py",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/code/launch.py",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/code/diagnostic.py",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/commands/check_publication_metadata_cpu.py",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/commands/transition_guard_file_cpu.py",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PV_HANDOFF_CPU_REPAIR_V1_r1/prepare_guard_patch.py",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PV_HANDOFF_CPU_REPAIR_V1_r1/prepare_v3_package.py",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PV_HANDOFF_CPU_REPAIR_V1_r1/prepare_installation_proposal.py",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PV_HANDOFF_CPU_REPAIR_V1_r1/check_handoff_fakes.py",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PV_HANDOFF_CPU_REPAIR_V1_r1/check_changed_integration.py"
+  ],
+  "shell_syntax": {
+    "argv": [
+      "/bin/bash",
+      "-n",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/commands/run_proposed_pv_offline.sh"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "executed_shell": false
+  },
+  "publication_CLI": {
+    "argv": [
+      "/usr/bin/python3",
+      "-I",
+      "-S",
+      "-B",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/commands/check_publication_metadata_cpu.py",
+      "--control",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PV_HANDOFF_CPU_REPAIR_V1_r1/targeted_fixtures/CONTROL_CANDIDATE.json",
+      "--board",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PV_HANDOFF_CPU_REPAIR_V1_r1/targeted_fixtures/TASK_BOARD_CANDIDATE.json",
+      "--release-json",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PV_HANDOFF_CPU_REPAIR_V1_r1/targeted_fixtures/RELEASE_CANDIDATE.json"
+    ],
+    "returncode": 0,
+    "result": {
+      "status": "PASS_METADATA_ONLY_NOT_AUTHORIZATION",
+      "task_id": "A10_PV_OFFLINE_PREFLIGHT_V3",
+      "release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V3",
+      "board_status": "ready",
+      "release_status": "released",
+      "proposal_sha256": "c07750be489911e2d7363729d8ed186605f8792337c9f4118677e20a3af1ca2a",
+      "manifest_entries_followed": false,
+      "hardware_identity_verified": false,
+      "real_launcher_invocations": 0,
+      "compute_release_claims": 0,
+      "holder_operations": 0,
+      "large_weight_hashes": 0,
+      "publication_is_authorization": false
+    },
+    "stderr": "",
+    "fixture_only_not_authorization": true
+  },
+  "real_guard_launcher_claim_or_GPU_calls": 0,
+  "holder_queries_stops": 0,
+  "shared_installations": 0,
+  "daemon_restarts": 0,
+  "deletions": 0
+}

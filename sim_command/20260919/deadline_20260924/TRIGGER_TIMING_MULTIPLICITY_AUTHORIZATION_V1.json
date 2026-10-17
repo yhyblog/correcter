@@ -1,0 +1,118 @@
+{
+  "schema": "corrector_trigger_modes_authorization_v1",
+  "authorization_id": "D24_TRIGGER_TIMING_MULTIPLICITY_V1",
+  "status": "released",
+  "issued_at_utc": "2026-09-22T10:35:32.000396+00:00",
+  "user_basis": "User explicitly adds random timing once vs gain timing once, and no total intervention cap on MT50 main+five-H sweep",
+  "brief": {
+    "path": "deadline_20260924/TRIGGER_TIMING_AND_MULTIPLICITY_V1.md",
+    "sha256": "d964c1ae899d6b121de74371c951cd79e97b4c2b513e2e8ee4d3f59ce34e62e1"
+  },
+  "random_schedule": {
+    "path": "deadline_20260924/RANDOM_ONCE_SCHEDULE_V1.json",
+    "sha256": "2a51139a422c3c5b88fdfc5d32c803db345619650e466fb1780f8da732e54a5f"
+  },
+  "source_reference": {
+    "path": "deadline_20260924/TRIGGER_MODE_SOURCES_V1.json",
+    "sha256": "878eafe809597338e2b51a3925b166bde4e9e3cc58f0a24592693e1a8eb106f2"
+  },
+  "new_modes": [
+    "Random-once",
+    "G0-multi"
+  ],
+  "reused_modes": [
+    "N",
+    "G0-once"
+  ],
+  "H_order": [
+    10,
+    30,
+    50,
+    20,
+    40
+  ],
+  "per_H_mode_order": [
+    "Random-once",
+    "G0-multi"
+  ],
+  "planned_new_cells": 30,
+  "planned_new_first_entries": 15000,
+  "unique_existing_test_sources": 500,
+  "new_initial_states": 0,
+  "new_training_updates": 0,
+  "new_development_rollouts": 0,
+  "base_SFT_updates": 0,
+  "per_node_new_attempt_cap": 5500,
+  "technical_retry": "one corrected retry per genuinely failed source only; stage cap includes failures; no successful replay",
+  "per_batch_analysis_approval_required": false,
+  "independent_GPU_preflight_required": false,
+  "strict_consistency_audit_required": false,
+  "cross_node_runtime_dependency": false,
+  "numerics": "frozen A main; SFT030000; D5/G0.05/C10/nativeH/raw50/NFE10/300steps; no Q gate; same candidate and natural RNG domains",
+  "renderer": "existing node-native NVIDIA EGL535,30Hz/400Hz/.015",
+  "holder_policy": "all holders off entire formal wave including loading/gaps/finished cards; restore after group exit including failures; no idle-subset holders",
+  "max_wall_hours_per_node": 8,
+  "new_experiment_admission_cutoff_utc": "2026-09-23T12:00:00Z",
+  "tables_due_utc": "2026-09-23T15:00:00Z",
+  "nodes": {
+    "A": {
+      "task_id": "A_D24_VELOCITY_TRIGGER_MODES_V1",
+      "revision": 1,
+      "branch": "Velocity",
+      "host": "trial-303224955-trialrun-303224955-worker-0",
+      "thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+      "brief": {
+        "path": "tasks/A_D24_VELOCITY_TRIGGER_MODES_V1.md",
+        "sha256": "feca7b5529dc0a1ebadf0cd9ae5f7d4c485af04cb890242768972418c0840833"
+      },
+      "planned_first_entries": 5000,
+      "new_attempt_cap": 5500,
+      "node_cumulative_attempt_cap": 18000,
+      "last_observed_cumulative_attempts": null,
+      "prior_counter_source": "executor must preserve actual D24 ledger; no reset",
+      "target_concurrency": 8,
+      "optimizer_updates": 0
+    },
+    "B": {
+      "task_id": "B_D24_POST_TRIGGER_MODES_V1",
+      "revision": 1,
+      "branch": "Post",
+      "host": "trial-303225685-trialrun-303225685-worker-0",
+      "thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+      "brief": {
+        "path": "tasks/B_D24_POST_TRIGGER_MODES_V1.md",
+        "sha256": "49072a7e87a67c8a0e239086811870abcad9cc131cc3fb51f75fd0ff6e10e2f5"
+      },
+      "planned_first_entries": 5000,
+      "new_attempt_cap": 5500,
+      "node_cumulative_attempt_cap": 16000,
+      "last_observed_cumulative_attempts": 6687,
+      "prior_counter_source": "executor must preserve actual D24 ledger; no reset",
+      "target_concurrency": 8,
+      "optimizer_updates": 0
+    },
+    "C": {
+      "task_id": "C_D24_R_TRIGGER_MODES_V1",
+      "revision": 1,
+      "branch": "R",
+      "host": "trial-303269581-trialrun-303269581-worker-0",
+      "thread_id": "01a0c793-10d2-7791-a250-fd65d88e1ccb",
+      "brief": {
+        "path": "tasks/C_D24_R_TRIGGER_MODES_V1.md",
+        "sha256": "1c60c4b0006b7dca33d6d1f71092083e9aaedd682ad0bb98e066917431702f56"
+      },
+      "planned_first_entries": 5000,
+      "new_attempt_cap": 5500,
+      "node_cumulative_attempt_cap": 7900,
+      "last_observed_cumulative_attempts": 2013,
+      "prior_counter_source": "executor must preserve actual D24 ledger; no reset",
+      "target_concurrency": 8,
+      "optimizer_updates": 0
+    }
+  },
+  "C_cumulative_cap_change": {
+    "old": 2400,
+    "new": 7900,
+    "reason": "new user-authorized 5000-evaluation task plus bounded technical correction; prior2013 preserved; no unused old claim reuse"
+  }
+}

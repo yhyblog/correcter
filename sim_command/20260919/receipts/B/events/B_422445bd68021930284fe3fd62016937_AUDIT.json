@@ -1,0 +1,132 @@
+{
+  "schema": "corrector_B_event_audit_v1",
+  "event_id": "B_422445bd68021930284fe3fd62016937",
+  "task_id": "B_D24_SPRINT_V1",
+  "run_id": "D24_XVLA_r1",
+  "at_utc": "2026-09-21T16:16:49.572181+00:00",
+  "outcome": "audited_complete",
+  "outcome_scope": "event diagnosis and stable authorized continuation, not campaign completion",
+  "event": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/outbox/B_422445bd68021930284fe3fd62016937.json",
+    "sha256": "4964d975e192667026a417a0b05177e658028de699e02e758e0c4fcc96ad31f9"
+  },
+  "original_event_outcome": "execution_unknown",
+  "original_claim": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_XVLA_r1/CLAIM.json",
+    "sha256": "e29624474a724ec1282868655b882687ce021d961ed7422103b0c6e98ca9414e"
+  },
+  "original_claim_SHA_verified": true,
+  "original_process": {
+    "hostname": "trial-303225685-trialrun-303225685-worker-0",
+    "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+    "pid": 474976,
+    "start_ticks": 92172940,
+    "session_id": 474976
+  },
+  "original_process_exited": true,
+  "original_result_reference": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_XVLA_r1/RESULT.json",
+    "exists": false
+  },
+  "error_log": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_XVLA_r1/supervisor.log",
+    "sha256": "d102ddff727bd361bf1d94de6517f51976b9fa4e67821d257463220e5f723817"
+  },
+  "last_original_progress": {
+    "status": "waiting_for_predecessor",
+    "predecessor": "D24_GPU_N_r1",
+    "at_utc": "2026-09-21T15:57:32.309977+00:00",
+    "scientific_operations": 0
+  },
+  "reconciled_result": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_XVLA_r1/RESULT_RECONCILED.json",
+    "sha256": "c30ff5c716f434f7c58ae7b15cbecdcc6c1f1ccb25f96371047ecae9d099ef4b"
+  },
+  "diagnosis": {
+    "outcome": "failed_before_scientific_entry",
+    "observed_error": "CONTROL.json ENOENT in authorize during predecessor wait",
+    "publication_race": "consistent with contemporaneous CONTROL revision publication; exact filesystem cause not independently proven",
+    "model_loads": 0,
+    "optimizer_updates": 0,
+    "direct_exit_code_observed": false,
+    "original_claim_and_event_preserved": true,
+    "no_original_scientific_claim_or_runner_or_output": true
+  },
+  "effective_authorization": {
+    "queue_revision": 10,
+    "root_revision": 54,
+    "global_stop": false,
+    "stop_requested": false,
+    "B_enabled": true,
+    "scientific_authorization": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/AUTHORIZATION_V1.json",
+      "sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80"
+    }
+  },
+  "repair_checks": {
+    "status": "pass",
+    "checks": [
+      "transient missing metadata waits and reads current publication",
+      "partial JSON publication recovery",
+      "persistent unavailability stops; no stale authorization fallback",
+      "A-only active release does not revoke unchanged B grant",
+      "global stop still enforced",
+      "changed B authorization rejected",
+      "predecessor-wait error publishes terminal result without launching compute"
+    ],
+    "models_loaded": 0,
+    "GPU_calls": 0,
+    "real_notifications_sent": 0
+  },
+  "stable_handoff": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/STABLE_HANDOFF.json",
+    "sha256": "47675d1fb840f554e8f147af524b665c857e7702612cb6a336262e425f0cd4ec"
+  },
+  "operations_note": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/README_OPERATIONS.txt",
+    "sha256": "aa560f4561532465f12456a6413ace0096ee94c0108dcd2785e2947856b90c96"
+  },
+  "recovery_source_counts": {
+    "previous_completed_episodes_retained": 258,
+    "previous_unknown_consumed_not_replayed": 5,
+    "second_interruption_technical_failed_sources_excluded": 5,
+    "baseline_recovery_planned_attempts": 353,
+    "libero_unstarted_queued_attempts": 279,
+    "baseline_recovery_corrected_spatial_retry": 1
+  },
+  "old_terminal_batches": [
+    {
+      "run_id": "D24_GPU_N_r1",
+      "result": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_GPU_N_r1/RESULT.json",
+        "sha256": "403f277380ce13650e1562a1aa38686a2f2b07213f346901aa4febe127c400f5"
+      },
+      "status": "partial",
+      "all_owned_descendants_exited": true
+    },
+    {
+      "run_id": "D24_LIBERO_REPAIR_r2",
+      "result": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_LIBERO_REPAIR_r2/RESULT.json",
+        "sha256": "4a82594177d30a9f4070935b1e624a05aa9e6ffddd803e3b75c7f533a84a018d"
+      },
+      "status": "failed",
+      "all_owned_descendants_exited": true
+    }
+  ],
+  "recovery_queue_run_ids": [
+    "D24_N_CONTROL_REPAIR_r2",
+    "D24_XVLA_r2",
+    "D24_LIBERO_UNSTARTED_r3"
+  ],
+  "all_three_completion_triggers_verified": true,
+  "observer_identity_verified": true,
+  "E1_complete_jobs": 48,
+  "E1_optimizer_updates": 192000,
+  "A_waits_for_B": false,
+  "limitations": [
+    "Five consumed old episode sources remain unknown and are not replayed.",
+    "Five explicit technical failures from the second LIBERO interruption are retained and excluded from the unstarted-only queue.",
+    "Headless terminal-disconnect callback remains unverified; the original live-thread callback path is verified."
+  ]
+}

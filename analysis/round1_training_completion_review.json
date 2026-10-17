@@ -1,0 +1,1021 @@
+{
+  "status": "passed",
+  "created_utc": "2026-09-16T20:36:20.942848+00:00",
+  "scope": "Bounded independent resource, identity and seal verification; no simulations, training, model forwards, old trajectory payload checks, or rerun of the executing auditor numeric checks.",
+  "blockers": [],
+  "checks_passed": 311,
+  "resources": {
+    "journal_rows": 42679,
+    "simulator_attempts": 23479,
+    "simulator_p0": 564,
+    "simulator_round1_labels": 22915,
+    "simulator_attempts_added_by_fit": 0,
+    "training_round1_optimizer_updates": 19200,
+    "unique_optimizer_update_identities": 19200,
+    "optimizer_identity_grid": "2 paths x 4 members x steps 1..2400",
+    "accounting_rule": "Count and enforce caps by resource, not journal row count."
+  },
+  "ledger": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/budget/attempts.jsonl",
+    "sha256": "3b225b8fd310e5ed8fd6d1bb76dfd6a009e7d2ebb5ab26a2dc90db08b4baedaf",
+    "simulator_prefix_sha256": "59366c2e08f34f1914b721e16111d1324b07cad187eab343efc21a460576d44f",
+    "prefix_unchanged": true,
+    "audit_snapshot_byte_identical": true,
+    "stable_during_review": true,
+    "contiguous_unique_numbers": true,
+    "unique_event_key": [
+      "resource",
+      "stage",
+      "kind",
+      "identity"
+    ]
+  },
+  "member_update_coverage": [
+    {
+      "path": "A",
+      "member": 0,
+      "updates": 2400,
+      "first_attempt": 23480,
+      "last_attempt": 25879
+    },
+    {
+      "path": "A",
+      "member": 1,
+      "updates": 2400,
+      "first_attempt": 25880,
+      "last_attempt": 28279
+    },
+    {
+      "path": "A",
+      "member": 2,
+      "updates": 2400,
+      "first_attempt": 28280,
+      "last_attempt": 30679
+    },
+    {
+      "path": "A",
+      "member": 3,
+      "updates": 2400,
+      "first_attempt": 30680,
+      "last_attempt": 33079
+    },
+    {
+      "path": "B",
+      "member": 0,
+      "updates": 2400,
+      "first_attempt": 33080,
+      "last_attempt": 35479
+    },
+    {
+      "path": "B",
+      "member": 1,
+      "updates": 2400,
+      "first_attempt": 35480,
+      "last_attempt": 37879
+    },
+    {
+      "path": "B",
+      "member": 2,
+      "updates": 2400,
+      "first_attempt": 37880,
+      "last_attempt": 40279
+    },
+    {
+      "path": "B",
+      "member": 3,
+      "updates": 2400,
+      "first_attempt": 40280,
+      "last_attempt": 42679
+    }
+  ],
+  "artifact_seals": {
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/complete.json": "ff460f12c598a34a15a28ed7619ed071a60be195a3dd2f0c1c963a202ee22287",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/complete.json": "931c6f6043db92b5d9003eb2833dfc8edd0ab6c860a1979db3983cd7d893725f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/training_audits/round1_fit_v1_new/complete.json": "80184aeef52e467ae6f386ea594bae2588f8d47879fb8c9224c49586ab423a4c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/round1_training_execution_v1/complete.json": "05d106e67ba60d2f686636314ca97bc4cfce079f2fb7753a19be2e3c476690b1"
+  },
+  "hash_verification": {
+    "unique_files": 221,
+    "bytes": 96894964,
+    "model_manifest_entries": 158,
+    "freeze_entries": 46,
+    "all_matched": true
+  },
+  "selected_artifact": {
+    "path": "B",
+    "step": 200,
+    "members": 4,
+    "byte_hash_bound_to_checkpoint": true
+  },
+  "execution": {
+    "process_exit_code": 0,
+    "recorded_holders_running": 8,
+    "policy_evaluation_performed": false,
+    "executing_audit_status": "passed",
+    "executing_audit_checks_reported": 73098,
+    "executing_audit_checks_rerun": false,
+    "stage_closed": true
+  },
+  "nonblocking_notes": [
+    {
+      "type": "historical_execution_status",
+      "recorded": "complete_pending_independent_product_audit",
+      "severity": "nonblocking",
+      "explanation": "Execution seal predates the independently sealed passing audit; retain the historical seal unchanged."
+    }
+  ],
+  "verified_files": {
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/complete.json": {
+      "sha256": "ff460f12c598a34a15a28ed7619ed071a60be195a3dd2f0c1c963a202ee22287",
+      "bytes": 17908
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/development_step_1600.json": {
+      "sha256": "2c1d3082d6b6f54be2e75bea2a5c07537b704da064f480053e7b4e1ff33be2b9",
+      "bytes": 11201
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/development_step_1600.npz": {
+      "sha256": "a75d8c9297fc5cbaead4b2a7c15dab8d30759b4899c41344b7943f489b19e418",
+      "bytes": 19070
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/development_step_200.json": {
+      "sha256": "eea9bebcde3fee6e05c4e7d29fc5d431bdbaf97d869a6e92e6d4a5764dc93f3f",
+      "bytes": 10432
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/development_step_200.npz": {
+      "sha256": "23ac0545d199c98cdf83c3840aff966c47fb04ad003cdaca6d4f8cf698a3fc4d",
+      "bytes": 19010
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/development_step_2400.json": {
+      "sha256": "475bb078629f6d753019bc27448578e8c7d775e47770c9bd4d41df0f480e6286",
+      "bytes": 11090
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/development_step_2400.npz": {
+      "sha256": "09226f644a2de989bbad98844d068b54a26731e7d67cbd3f482b0bd45cdf4564",
+      "bytes": 19067
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/development_step_400.json": {
+      "sha256": "2768e560d1b3731a8b7aa7b97923c7a32aee581a9dcdb66cc170c5974c7e8146",
+      "bytes": 10488
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/development_step_400.npz": {
+      "sha256": "a081866f7f36d06a91c349c9786fd7064d0ccd4664748d0d395d2c665eeac994",
+      "bytes": 18978
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/development_step_800.json": {
+      "sha256": "1c324895166666a56bcf662684f08fa1d2a2152dd5a297637ffbaf420db27dad",
+      "bytes": 11217
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/development_step_800.npz": {
+      "sha256": "62bd32aee492221f6f1bf4134b1171915087d39e9a38df68e175b37061975103",
+      "bytes": 19012
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_0/fit.json": {
+      "sha256": "312bd7a35eb14c30ecd6ee68545a97e297f5328678afe0a78473d95d74e52ccc",
+      "bytes": 905028
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_0/step_1600/development_predictions.npz": {
+      "sha256": "9b1b346adcfaa7966a4cf8247df3682229c1e0232c4401167845859b0ffebae3",
+      "bytes": 4688
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_0/step_1600/metadata.json": {
+      "sha256": "926135dfa716666f9c02e08451cd9431106b2fb41db71946ed7829becff0fd9c",
+      "bytes": 1177
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_0/step_1600/selected.pt": {
+      "sha256": "cf00520b44f682bc5a846c82e97afb081b66e7fa5c1353c33dfd34e713e85c46",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_0/step_200/development_predictions.npz": {
+      "sha256": "bea09977d06539d2712d6d9ea433823206c9a5fccb9a2e424b02e9cb07cdd30a",
+      "bytes": 4677
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_0/step_200/metadata.json": {
+      "sha256": "d4aa6cbc50a8ec4100bc823588f9da65c9119474135ee4b5656800a773fd7c41",
+      "bytes": 1173
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_0/step_200/selected.pt": {
+      "sha256": "2491800e47aff6278a64132ddd905df9b36a9905f340dc071025c75972fe7a1f",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_0/step_2400/development_predictions.npz": {
+      "sha256": "e2d825e87e2467b6409362d2cad50f9aca84e77fd767b2e52d377c7ffca93170",
+      "bytes": 4690
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_0/step_2400/metadata.json": {
+      "sha256": "ca9fef0d76266ba4fc31fdbc56c0a30eda68673a3d4e1aa1c8b8f41816ebd85c",
+      "bytes": 1176
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_0/step_2400/selected.pt": {
+      "sha256": "e7687a8187c2c6027c6135f6881bc0cf040d34a8fad98122f230d1fead8d7f4c",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_0/step_400/development_predictions.npz": {
+      "sha256": "4a6a028b03c800680be7d3cd2c6f468a4283c1596e17f0a347846b9fc2659830",
+      "bytes": 4669
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_0/step_400/metadata.json": {
+      "sha256": "b5e82c86fca6b10c5b327db1aa92267c083baa2f3afbed03cb3e4aabef5abaee",
+      "bytes": 1175
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_0/step_400/selected.pt": {
+      "sha256": "e9431ae964cc95faef4658228fcc685a3bd86a708b3e6e6b8b3bc4d65d008ab6",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_0/step_800/development_predictions.npz": {
+      "sha256": "0ece88630372d39cc54d00b56155d797b94c597e2ffb74fa7a115636a290389e",
+      "bytes": 4668
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_0/step_800/metadata.json": {
+      "sha256": "d63726a8b4819ee5331fa33cc09e922a56c10c0585e55820f3ca3eda9decd87a",
+      "bytes": 1172
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_0/step_800/selected.pt": {
+      "sha256": "10d6fcf4355da1e8f15bbf0c816471c926cf2a7d5a2ce4183a2a42c5db02b8f7",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_1/fit.json": {
+      "sha256": "b0cd96fdd89566317aabf7d51f8de35fd5771e6e14d67cc37522d0e9dd16fd43",
+      "bytes": 904014
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_1/step_1600/development_predictions.npz": {
+      "sha256": "4064a86c3a8f508cced90b8ec4ff1ced6473838967ad5aef1e4c8dd51148fe94",
+      "bytes": 4666
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_1/step_1600/metadata.json": {
+      "sha256": "7fbd547907c6369791398051cb5364e4f0ca0b2554069c919504d0b247b468ea",
+      "bytes": 1174
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_1/step_1600/selected.pt": {
+      "sha256": "7a772a72df836690e537a30ff6511fda6bc6033b864377a49e82671fdcaab1cd",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_1/step_200/development_predictions.npz": {
+      "sha256": "2ed26dcdbdcf82d3c227406d55dbe2b7ef5dd2a9c7dc9c113287ee189ab381de",
+      "bytes": 4654
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_1/step_200/metadata.json": {
+      "sha256": "4cf6444ce4493d774d0cfe875e838b903415be4469e59fccf3775c908875065a",
+      "bytes": 1172
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_1/step_200/selected.pt": {
+      "sha256": "4273c68271c1a257b54870cbb651026db4a5a3faa8b92ad60e9b43b4d3b67893",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_1/step_2400/development_predictions.npz": {
+      "sha256": "9762b37365ab3bc6607a913c6d1dc028707f236d481eb49f88b246481faf988e",
+      "bytes": 4668
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_1/step_2400/metadata.json": {
+      "sha256": "e78165fb1965778f0dfec9b5b9238f51e3fc3020902b37777aeae16408021d67",
+      "bytes": 1176
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_1/step_2400/selected.pt": {
+      "sha256": "d6c6690b1c7190005a22b1e09dc92cf7abeb15a68e08ed753f40fb11d03d6824",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_1/step_400/development_predictions.npz": {
+      "sha256": "df8d525a5e860d3f005223e2b664dee349a19885ccf7457fafc19b87bf24e8c6",
+      "bytes": 4645
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_1/step_400/metadata.json": {
+      "sha256": "e3a9e2078ed3c0a028ec8984e003fc2f47d5039b3bc06d8213283a3c0401a094",
+      "bytes": 1174
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_1/step_400/selected.pt": {
+      "sha256": "f3cf82d94391be54c7b2749f525ba68c0502a2c4f4ffabd2fc365c22713e94b2",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_1/step_800/development_predictions.npz": {
+      "sha256": "83c08436dc089f22985305580e4f45c8ccc6d495576adeb7366d3039f480f2de",
+      "bytes": 4645
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_1/step_800/metadata.json": {
+      "sha256": "4793cf9adc83a8791f3ce574220bbb0b106e9b67ea94c7beef0743a4af308c44",
+      "bytes": 1171
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_1/step_800/selected.pt": {
+      "sha256": "e7c8fa7fddbd844d623eaba9a6e26ccd2d8f08e38d4cb77935e623110182ad71",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_2/fit.json": {
+      "sha256": "9e0ff49623a0c8a1d5957fd1431c59d8995d5189e3a62b970e642db50d5487d7",
+      "bytes": 900750
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_2/step_1600/development_predictions.npz": {
+      "sha256": "1d232faf9390c4d88c6c9790ce9016333ed77af3f3c028bc77e0fa6bf717454b",
+      "bytes": 4683
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_2/step_1600/metadata.json": {
+      "sha256": "eaf9b47ecfc728de462900abdfd667fe6c314adfc151aa1c91cf4b9f33b469e7",
+      "bytes": 1174
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_2/step_1600/selected.pt": {
+      "sha256": "62d8c3e334dcae6e93ad23e96487eb680bdb198d87ac10fcdb3c0db0d0b96c9d",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_2/step_200/development_predictions.npz": {
+      "sha256": "0e2ff61e992a0343b5e15951915bb07d6ea17c43927b25161ffe68b8ccdb4abf",
+      "bytes": 4664
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_2/step_200/metadata.json": {
+      "sha256": "473191761acb0de850fa9314c7700e3e6e9a8e33dc8529bb01601ed57cc10419",
+      "bytes": 1173
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_2/step_200/selected.pt": {
+      "sha256": "a15c2557ea2fef94a016cf8b3b3bd1ebbce7a70a7ada0b7711913fcd8f513b30",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_2/step_2400/development_predictions.npz": {
+      "sha256": "32644d36fb7a714ceba4960ffc4f6a3403dd2db8fd0246203e5bf9b303d6de8f",
+      "bytes": 4678
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_2/step_2400/metadata.json": {
+      "sha256": "f36746292354221e619b56cf32f3539587255ef88f7a567fc2398a74baf30268",
+      "bytes": 1175
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_2/step_2400/selected.pt": {
+      "sha256": "0c9738aa6661e3c89efbcd2c52e86db75ca1c526a0ca7f51c0cec4db6f881ebf",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_2/step_400/development_predictions.npz": {
+      "sha256": "9bdb3e0a5f0e2323f23f6e5c573ae45c3535e522c2498d925ceca0bddeadc767",
+      "bytes": 4658
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_2/step_400/metadata.json": {
+      "sha256": "739d333cd19323e9228130e2de1c5cb2c7778f6f3528249255542c9c8a23f34a",
+      "bytes": 1173
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_2/step_400/selected.pt": {
+      "sha256": "346ff6e08463c80468a67c2dfded9f55f558d7d9a223ca65e862c9e9eabdf6b4",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_2/step_800/development_predictions.npz": {
+      "sha256": "f78e77d50387e072b111a6eaaed9e831b46348a72468500561c57a4fcc789f6e",
+      "bytes": 4667
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_2/step_800/metadata.json": {
+      "sha256": "12516557fa12d209a491111befc7e7b46e87481f0baaddb834934efceef8e154",
+      "bytes": 1173
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_2/step_800/selected.pt": {
+      "sha256": "f4f0ce2476aee52d43a9e6896c36280da5f59c5f695520d6fd9cd15fa052dd25",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_3/fit.json": {
+      "sha256": "8fa6144df09eb15cfe4e78a6225bd32e760cea7ec030e110a92970fbbc4bdb9f",
+      "bytes": 900936
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_3/step_1600/development_predictions.npz": {
+      "sha256": "93b09a29df8aee873e0c88c73e7074a0828684d8b68c1f1b5e2611c79b6cf74a",
+      "bytes": 4693
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_3/step_1600/metadata.json": {
+      "sha256": "5a2db05e9ccb18b2162b492425b9bd014cd05674dfeb59b75a1d6afa76a6a552",
+      "bytes": 1175
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_3/step_1600/selected.pt": {
+      "sha256": "e7079811fda016ac90e019df016cc494bd3b84935f9186aace7df98ed6831d36",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_3/step_200/development_predictions.npz": {
+      "sha256": "b5475bc76c22918005c61fcadbf607388aaadc7e4b302fa7fb103d54dacc09a9",
+      "bytes": 4679
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_3/step_200/metadata.json": {
+      "sha256": "6154fa9d531aee1b1953bea45a729839db33363f735da0289fabfefd73428127",
+      "bytes": 1174
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_3/step_200/selected.pt": {
+      "sha256": "c2cc8075f104f8617cc529521c06cd7e3a6ac0b9168aaa11199a378f689dc22d",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_3/step_2400/development_predictions.npz": {
+      "sha256": "d46a9b489e1ae464fd4ef5fe00b46e723c20345fcb77fc4baaed3d2866410c4e",
+      "bytes": 4688
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_3/step_2400/metadata.json": {
+      "sha256": "8910fc7959cc1b34f38142f79f926ee267758ebc00d22aba0e37fdfef2d4c587",
+      "bytes": 1176
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_3/step_2400/selected.pt": {
+      "sha256": "c5edaf95fc8af1f49779d2b4af6df603fe98f0657789d7d723e61da85e4d7a2b",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_3/step_400/development_predictions.npz": {
+      "sha256": "f4b45efb57f533ca158df5b1602a6704bf971b67fea487649957f3eac1aed450",
+      "bytes": 4671
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_3/step_400/metadata.json": {
+      "sha256": "c4e22edfcf4501397f61eb11acc55107603f334eeb72f74cb7bca07ad772f467",
+      "bytes": 1172
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_3/step_400/selected.pt": {
+      "sha256": "3caf4417cbbea6a18204c799d92299a788fee1c224b27a8340e6f5e79b553e3b",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_3/step_800/development_predictions.npz": {
+      "sha256": "62dde649f6e83725eb5cb6faf0a43ddfa864d3b2200f9b90fef84d27b232ea66",
+      "bytes": 4693
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_3/step_800/metadata.json": {
+      "sha256": "c303246108bd936407456833aa31596762cac33a58234735cc79bbf8157d8e4c",
+      "bytes": 1173
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/member_3/step_800/selected.pt": {
+      "sha256": "c94a934790437997a82d05c2dc2692b6e9372e6566f62385d63be566ee78830f",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/development_step_1600.json": {
+      "sha256": "a62cbd3f6cd50fcecb8be6efe1513da398f0da4ca2736909d14ff9a3763fb72c",
+      "bytes": 11061
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/development_step_1600.npz": {
+      "sha256": "871623e635e3f86f73e9c31d46f12aa4ea1667dca5c96b8fc4f17e284ad52f7e",
+      "bytes": 19125
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/development_step_200.json": {
+      "sha256": "7f7e5ef25769455f549c34722b1cae31d1e569739c5146564d1fd22f3b3a4c91",
+      "bytes": 10493
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/development_step_200.npz": {
+      "sha256": "cbb07c1d3f57f78a97e211a4a7549ee8ad0f727335f5d2b0e03f0a6499cba717",
+      "bytes": 18854
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/development_step_2400.json": {
+      "sha256": "0d608020b19ab3f910aa12d58618dff9a9c079c8c182ffd830debf9148ea40b2",
+      "bytes": 10974
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/development_step_2400.npz": {
+      "sha256": "e1700c2db00134d572d871467072c44df0c4be271fe645f09561bb40a2d39998",
+      "bytes": 19089
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/development_step_400.json": {
+      "sha256": "9eb304d68150f48a88202f929ba4d95c48048cbdf73f16f056237843ba414100",
+      "bytes": 10804
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/development_step_400.npz": {
+      "sha256": "25aba3caba5172fc51942d53821a6b2ed532cfd10c02af13d589db41ebc7c1a1",
+      "bytes": 18975
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/development_step_800.json": {
+      "sha256": "744dccdd7eee96761d2a27a6fe8994beb0f0f6c2d7baed5b438ae6dbb5375198",
+      "bytes": 11066
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/development_step_800.npz": {
+      "sha256": "e19fdacdc0445000487b2551c26e2741cc68b2fc013cc53c71c20df0a9230a04",
+      "bytes": 19068
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_0/fit.json": {
+      "sha256": "d2d522de1e7ab03c6909b5bd6cd1bb80519e6d85ce4282fd07e976f167b6961f",
+      "bytes": 901092
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_0/step_1600/development_predictions.npz": {
+      "sha256": "6ab124b4121f584e7bf96900494fa716487bffaddf16e15d4098c1fdaf93cf5a",
+      "bytes": 4679
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_0/step_1600/metadata.json": {
+      "sha256": "8893448e7489df38a278c2a2bc73fa40a8985fbf38bded23c38b857fea03212a",
+      "bytes": 1178
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_0/step_1600/selected.pt": {
+      "sha256": "1becdf68b023de78bf81c368ff5f7b9484d071738c19bfb9c2004400ef213bee",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_0/step_200/development_predictions.npz": {
+      "sha256": "5d4189d9e869ba8eb367ca3133aaf5cdb567670968c078b916211f248c25324b",
+      "bytes": 4649
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_0/step_200/metadata.json": {
+      "sha256": "abb91f760abba9161bd8242f8be47a33c5abd5bd4badbb682e16379cb7b82a8a",
+      "bytes": 1173
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_0/step_200/selected.pt": {
+      "sha256": "bc93c9035409cd2b7e413dffd0e0f9f3053ac34add4b47fc5cd57be9a5cdceb3",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_0/step_2400/development_predictions.npz": {
+      "sha256": "9e816697c6b8016684cee6246bedde5d794cd3ed73b27eb36d7aaac6e7e46815",
+      "bytes": 4686
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_0/step_2400/metadata.json": {
+      "sha256": "1995ea991cd0bb460729f16983d330b314fb0d6d43f946f56b5b95657c3b4e0c",
+      "bytes": 1175
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_0/step_2400/selected.pt": {
+      "sha256": "2261f6709373c1a90c25624333c57a0cb84275380f5ccc2799c67177185a6efc",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_0/step_400/development_predictions.npz": {
+      "sha256": "a574bd5f39ca3a9a11a004cbaebc168079511e43cd00ed6262c492792f26ff8a",
+      "bytes": 4639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_0/step_400/metadata.json": {
+      "sha256": "112e25b3ed5fca1a3dea37732dbba56ddadc11fdae1f5201fe630eadf05e8821",
+      "bytes": 1174
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_0/step_400/selected.pt": {
+      "sha256": "239cbd349f966dd3c7cca0db61266ac77c4e41f445eb7fc009c6f9fb90e0574a",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_0/step_800/development_predictions.npz": {
+      "sha256": "39bc42908772f09f82fe1bbed38ff3822ae8b3ef462f851b366aa1c36fc5a795",
+      "bytes": 4679
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_0/step_800/metadata.json": {
+      "sha256": "63e3b521f75be0d4a646b8e32ad68fc8bd95a5efff77b6e2151caf875e4ac339",
+      "bytes": 1175
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_0/step_800/selected.pt": {
+      "sha256": "560061b87ea8973a5544bb3aeb94857b5d716bf342cfb0f5608a9f6c4cbb7f14",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_1/fit.json": {
+      "sha256": "3c9bdd547403d9b9bfe7fa09e94dcbceca22d7215da55b3c95b681dc375dacb8",
+      "bytes": 903564
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_1/step_1600/development_predictions.npz": {
+      "sha256": "ee3f858f37108bd75c19e3511a94ea25866ff18996558a6683b31434566e4331",
+      "bytes": 4696
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_1/step_1600/metadata.json": {
+      "sha256": "048a4eb2c2c863ee8610bcd3a5479a8187fbf75f6ab6c649862b3e1c8a6ba33d",
+      "bytes": 1179
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_1/step_1600/selected.pt": {
+      "sha256": "2369bb4ef72b8b0ab4807e1ebef49506316f122ac05691ca9a370c2a66ca55ae",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_1/step_200/development_predictions.npz": {
+      "sha256": "c415c045af04e7928e3bb4e40beb456de045b878e5d2541e21795ece7163f2c4",
+      "bytes": 4628
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_1/step_200/metadata.json": {
+      "sha256": "b536932d9923e6ef4a67ea34d6b8846dfe9c7cb3357f8ceba136c56057ebd4dd",
+      "bytes": 1174
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_1/step_200/selected.pt": {
+      "sha256": "639e78888f9ef9657cef73da4f21f0676593a58ec4bfa0f8f098d0885432fb2f",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_1/step_2400/development_predictions.npz": {
+      "sha256": "a860f241d31e8b4d309b922e4f56aab76f6431a728132e9ac825412727a9859e",
+      "bytes": 4674
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_1/step_2400/metadata.json": {
+      "sha256": "af339ef7afea4ae31f0bb6fbe8d88d638ca455964fa35d904bcc1d3a2c8e5e31",
+      "bytes": 1175
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_1/step_2400/selected.pt": {
+      "sha256": "8b84323ccd7f7f602b478cb60464e94239aabf9303fdbf99a11b7f7c7520cec2",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_1/step_400/development_predictions.npz": {
+      "sha256": "ac496882454b5e666dfef5d9b3b4ee6644983cda6ea3919a9dc7da5bcc87a7ed",
+      "bytes": 4683
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_1/step_400/metadata.json": {
+      "sha256": "1bf21d4025ac063945f4f1575ecfc52790ffaec63e5d22640f40af86ec1177bb",
+      "bytes": 1172
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_1/step_400/selected.pt": {
+      "sha256": "9dbbeaaaf09375c67317ad5a4bbe3d1878b9d2ead02a56428c9d51786a4183e1",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_1/step_800/development_predictions.npz": {
+      "sha256": "082c2aae21b2d2b6700253590df3d546c2beeacee06beba0ec50c6c4f6e40f5c",
+      "bytes": 4687
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_1/step_800/metadata.json": {
+      "sha256": "68b087852d820d3cd47f217553c81c9c1d3c79765b9feb03c700fde763a33bd1",
+      "bytes": 1173
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_1/step_800/selected.pt": {
+      "sha256": "3c4f796d8c942b35d5f7bc782938b91e50673e6f64dcf627d0e4a37275cdf568",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_2/fit.json": {
+      "sha256": "e17ff121b2f806ae1c9c69b9fbf204a981676f0752b93a297ee61ed2ad968a74",
+      "bytes": 908510
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_2/step_1600/development_predictions.npz": {
+      "sha256": "419da4a537206659004f7284581eea0426b46d832b1d25003c2dfa324c8ad074",
+      "bytes": 4695
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_2/step_1600/metadata.json": {
+      "sha256": "227651d2265c6cf1d20294e2f66f74944c0a755b334207a9bf555f08c5361f0a",
+      "bytes": 1177
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_2/step_1600/selected.pt": {
+      "sha256": "a35dfe87723873d4b7631b3f34ce899d184659920d5dba0c54c1a7565a20b821",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_2/step_200/development_predictions.npz": {
+      "sha256": "ba852a2f2d7f24d1eaf7b808430a2fa15610ac925249e0e76e6ba11dfe40cfdc",
+      "bytes": 4592
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_2/step_200/metadata.json": {
+      "sha256": "8fd3107b37fcd0d1f1dd2a6f486ece3a9d955bb56eb63cd6542ac34bc963bc62",
+      "bytes": 1172
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_2/step_200/selected.pt": {
+      "sha256": "e1f06c0214243ec9fd8952cab93139feafafbc8e84a74e432e9498d68d422df3",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_2/step_2400/development_predictions.npz": {
+      "sha256": "8f8d874efeade8bbc7653424c69aecd8fd9bc4c4ad5c330c212f904fcdaf1d73",
+      "bytes": 4690
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_2/step_2400/metadata.json": {
+      "sha256": "3ec68a8a9a6846926460caaa224783e3080469deefe804d2fbe9ac00209323a4",
+      "bytes": 1172
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_2/step_2400/selected.pt": {
+      "sha256": "b7b70841f2a38c9965a28924253b771528732ce3addf4a2120d0af683e078c18",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_2/step_400/development_predictions.npz": {
+      "sha256": "3afe1c888ba4a718a9915127b08e17af98c1d4212d686c136a7020137fbd6f81",
+      "bytes": 4638
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_2/step_400/metadata.json": {
+      "sha256": "5d25a59ee40a9c79dc0b06b408f31443a06268bcee726d06937179e778c5e3ed",
+      "bytes": 1174
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_2/step_400/selected.pt": {
+      "sha256": "896301dd0be366a5270fde19c0b2df23b72252d234d81cc210c4b0d5eb32f203",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_2/step_800/development_predictions.npz": {
+      "sha256": "4d2e46b66fab8300a0f3246c97c819b80079b272fd9ab0cce3ba21b76e6fc5a3",
+      "bytes": 4672
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_2/step_800/metadata.json": {
+      "sha256": "b5dd3c3ce336f927bf6a28dfb46f8b9821e52e58819b23e87972ffb423e34ee9",
+      "bytes": 1173
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_2/step_800/selected.pt": {
+      "sha256": "a16d474f0f9934ca231f4fcac43bdcce0df6ce46dbd6d40a9fbf555f41d86585",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_3/fit.json": {
+      "sha256": "7648c694ab24060559a49417c3d192b82a3262ba50d5781a3db3ed34c4373a01",
+      "bytes": 910465
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_3/step_1600/development_predictions.npz": {
+      "sha256": "f80894f90e9612ae71a7556bdfdb2bb698d375467262fca80158ac1d248ec37b",
+      "bytes": 4708
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_3/step_1600/metadata.json": {
+      "sha256": "c50bd08ef5034a86022a95a0865b5f1798d460edbf954697cafb395195791a4f",
+      "bytes": 1177
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_3/step_1600/selected.pt": {
+      "sha256": "4315db7f49f44afc65fafe4097f3b32bd0f42983f4e8619cefca32566b61769d",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_3/step_200/development_predictions.npz": {
+      "sha256": "5cbc72e1f657b9b912b57a8cdfef25fb538b473ae7dcf86f459f06cb8ecad901",
+      "bytes": 4591
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_3/step_200/metadata.json": {
+      "sha256": "65c8d7ca3de38f2506fa9a309133d02beb1270cca78d113b2d7999b1c1314a47",
+      "bytes": 1173
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_3/step_200/selected.pt": {
+      "sha256": "ae18f18e36b878b37b1085778136f6faf62f7146ad0d4ca015076671b2a074eb",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_3/step_2400/development_predictions.npz": {
+      "sha256": "6dd562d34c57a41da44416b32240c54e24fcc239d808c68f572b612a1718c254",
+      "bytes": 4703
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_3/step_2400/metadata.json": {
+      "sha256": "5f372be640932821ec401ce77a231c0afe005e84b3f42e5f7779ba4ddaa63b96",
+      "bytes": 1179
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_3/step_2400/selected.pt": {
+      "sha256": "3aa9c4e741b41d7ac526e0b176eab82f12e7b105718351ef5e82689985c5f70a",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_3/step_400/development_predictions.npz": {
+      "sha256": "86107274aae510ea194c5b2f131f453a253050e5ea6e3e2eaf7c4dbf389c5946",
+      "bytes": 4657
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_3/step_400/metadata.json": {
+      "sha256": "ee2a665c64b7115946d58b5c7fe0f89cf542ff232d8e32edc76dcdafa7b3179d",
+      "bytes": 1174
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_3/step_400/selected.pt": {
+      "sha256": "683be673e09ba7f74b7e0d86519dcabe4d6980a7bfcb4f54874813138c22bb1d",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_3/step_800/development_predictions.npz": {
+      "sha256": "cb41ab225943cb890f24a0dc83851283f148f5acef82adb9cfa21f83c5c1fbbe",
+      "bytes": 4690
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_3/step_800/metadata.json": {
+      "sha256": "19c071c1f5b43e61e977d5241782dd9d262830dde4e09f4a53658a744570dfae",
+      "bytes": 1172
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/member_3/step_800/selected.pt": {
+      "sha256": "c3d4a37199af5df62bef5915e4cfa8f3ea2a5550ccb43755dc2c1481b05a459e",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/registration.json": {
+      "sha256": "041425baf713d62a744f714472aa7007188232bc275077cd3cd039985bf0842a",
+      "bytes": 3423
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/result.json": {
+      "sha256": "2b9f668b24a7c94e86a75342bd981751c6627e2569cde1ddb7868afd14c3f03f",
+      "bytes": 352596
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/complete.json": {
+      "sha256": "931c6f6043db92b5d9003eb2833dfc8edd0ab6c860a1979db3983cd7d893725f",
+      "bytes": 1026
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/config.json": {
+      "sha256": "0fe942a745d8ad31b055ce670647da71799a78f622ca5f98175109efa24b47a6",
+      "bytes": 15927
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/models/refit/member_0/selected.pt": {
+      "sha256": "bc93c9035409cd2b7e413dffd0e0f9f3053ac34add4b47fc5cd57be9a5cdceb3",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/models/refit/member_1/selected.pt": {
+      "sha256": "639e78888f9ef9657cef73da4f21f0676593a58ec4bfa0f8f098d0885432fb2f",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/models/refit/member_2/selected.pt": {
+      "sha256": "e1f06c0214243ec9fd8952cab93139feafafbc8e84a74e432e9498d68d422df3",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/models/refit/member_3/selected.pt": {
+      "sha256": "ae18f18e36b878b37b1085778136f6faf62f7146ad0d4ca015076671b2a074eb",
+      "bytes": 700300
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/ranking.json": {
+      "sha256": "6b0a7e4530bfbbadafabb9546a891fbe4bf64a6d3774df62515f9ccd9aae242d",
+      "bytes": 16402
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected_reload_audit.json": {
+      "sha256": "ce43fc0888f807ef048612ad733795bc1ad5aef24103f0ed89e3c1d51c4beb7b",
+      "bytes": 3969
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/training_audits/round1_fit_v1_new/complete.json": {
+      "sha256": "80184aeef52e467ae6f386ea594bae2588f8d47879fb8c9224c49586ab423a4c",
+      "bytes": 366
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/training_audits/round1_fit_v1_new/audit.json": {
+      "sha256": "ea7357b8f590591d8d7c82ca1173f54b0283864d2348b7b60b438b337385b543",
+      "bytes": 80990
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/training_audits/round1_fit_v1_new/budget_snapshot.jsonl": {
+      "sha256": "3b225b8fd310e5ed8fd6d1bb76dfd6a009e7d2ebb5ab26a2dc90db08b4baedaf",
+      "bytes": 13710700
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/training_audits/round1_fit_v1_new/report.md": {
+      "sha256": "5bbc9d58ca1c83472106880c906dea63c975361454ae316014c8bcc6930b6532",
+      "bytes": 1437
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/round1_training_execution_v1/complete.json": {
+      "sha256": "05d106e67ba60d2f686636314ca97bc4cfce079f2fb7753a19be2e3c476690b1",
+      "bytes": 495
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/round1_training_execution_v1/command.sh": {
+      "sha256": "f264ed2f2115b22e43f07148cb7bece6f744c32b8b1d77dae86a3d3322381664",
+      "bytes": 636
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/round1_training_execution_v1/registration.json": {
+      "sha256": "0a2859d501f08268bb9b27ae99bc67168713fd59feb43e2d985de601bfd15e44",
+      "bytes": 1131
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/round1_training_execution_v1/result.json": {
+      "sha256": "ede922acd7ab26e9309dd0cc7ea10a16365ac23beeccc0edeb090e6d080ef490",
+      "bytes": 1427
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/round1_training_execution_v1/run.log": {
+      "sha256": "84c265b72968328e59464465384e0fee808b688647c1473b1fbb2d6010848996",
+      "bytes": 230508
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/config.json": {
+      "sha256": "efe92b99a5d0d27d3434d1d7c5c453d294493b2a7a4ee6038bcc6e447be9bb4d",
+      "bytes": 1262096
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/freeze.json": {
+      "sha256": "d688d581e87ef9b8c0649aa12ca2d31030c0c4da376370d363210785e034c9c7",
+      "bytes": 10148
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_ANALYSIS_READY.json": {
+      "sha256": "0f55ffb5cf97d94cd1d4a0200973ae3336bee81314c56fdc0cef062152abd84e",
+      "bytes": 15664
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/training_pipeline.py": {
+      "sha256": "8488dc82370a2dfb516d6da4f8da1e76200596194a64861a21b81a4d95788655",
+      "bytes": 44476
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/training.py": {
+      "sha256": "c111518c3ce2973fae00ce1b4653211792390fbcfff6ce965e4759ad6a00be25",
+      "bytes": 27452
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/dataset.py": {
+      "sha256": "46e9d820e96de446007613cd84411b92dc47616f9508fe6ae7f992193cd602a7",
+      "bytes": 37626
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/artifact_loader.py": {
+      "sha256": "923d5147e550beeb269e1ea168832f3b601797856de854fa6c35a4675608ecb4",
+      "bytes": 36287
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/protocol.py": {
+      "sha256": "2e2a34e5f66dbfb92bb41fdffa372442d9e7b3e2ab55d0de96380ee76350b5c9",
+      "bytes": 20055
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/storage.py": {
+      "sha256": "af2582337032796638fb1b56681bd43ef4a6141254671bdd43c45bf981735a3a",
+      "bytes": 4941
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/semantics.py": {
+      "sha256": "faca9157236d1178b61d3dc9845f7ad9369d76eb81efb546b43be1c6037c0639",
+      "bytes": 12062
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/candidates13.py": {
+      "sha256": "8f461e4f18b22ea8941620fb70f247cc970e2e055fc9d5fd5b934009f990882e",
+      "bytes": 15011
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/scene_identity.py": {
+      "sha256": "44fd6d7328e715adad7d6aba755b2f1c778309962eb12ada54b262bbeae3d9dc",
+      "bytes": 8292
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/src/corrector/critic.py": {
+      "sha256": "e2517850279c800a0ea073c6ccc7732d42fb64e456dd99cab5d9034cc2f03269",
+      "bytes": 6418
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/src/corrector/guidance.py": {
+      "sha256": "788bd844c14df521f931bd1e3f962fdc61e36f2d9f9519505e242660f8d41c9b",
+      "bytes": 17137
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/src/corrector/actions.py": {
+      "sha256": "ca89b253b1a7e34e1253ee0a5e944957be5775ec03f70123140ad4501081bfa5",
+      "bytes": 1437
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/prepare_fit.py": {
+      "sha256": "163cc1f01135ae25573142fe4c207b9ac11990a6528b5e05feababde3e615248",
+      "bytes": 14748
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/config.json": {
+      "sha256": "f68b59f279ae4d03094ebe70f0185e29d7a65a8ce20903aed92ac4392f1e4fd2",
+      "bytes": 1254357
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/freeze.json": {
+      "sha256": "f46dda706607bf8ed52281d33a203471c2854b6c09f83e6d26d3b216a509d893",
+      "bytes": 137527
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/training_design_v2.json": {
+      "sha256": "23fecfe3a86a0011f38b4249e21d44eefaf1573f108586d7295c9ee4e070d4db",
+      "bytes": 19256
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_preflight_v1/training_design.json": {
+      "sha256": "3b9bbf7a67fc15123ac761c13358c0bfd8492ea9aea3c25649cefb02c66ef0cf",
+      "bytes": 23944
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_ANALYSIS_LEAD.md": {
+      "sha256": "e39d35a046ab9058c9539cae876a3168d98fe2900b580ea0cc042eed1479e833",
+      "bytes": 5635
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_CONCURRENCY32_REVIEW.md": {
+      "sha256": "50a2187aaf70085e321c700d6b367c4d549a7721c0e5c4073e63191ea52e2311",
+      "bytes": 5571
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_EVAL20_AMENDMENT.md": {
+      "sha256": "a4e43217a062c1918e44984ef557bc17001df02e9e712dc9929fe11e31ce5076",
+      "bytes": 5523
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_EXECUTOR_REVIEW.md": {
+      "sha256": "e5e7879231bc15b4bdb3f4d1d4f519ed89178f630bd81715ff75dc9123d22614",
+      "bytes": 7598
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_FIRST50_ANALYSIS.md": {
+      "sha256": "21c1167fb94715da21b979f88dc24121f6786348a5e197d7b837242c8d1f2a2b",
+      "bytes": 5476
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_FIRST50_EXECUTOR_HANDOFF.md": {
+      "sha256": "5dbafb1c84899008f3a5e9ded05e0481c53e1990ae7f9e547de4f850e5daa30f",
+      "bytes": 5585
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_MAIN_COLLECTION_REVIEW.md": {
+      "sha256": "083a1ab397512936c3d13ae033310e6a23467faf72f387c040300b16b5d11857",
+      "bytes": 6395
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_MAIN_EXECUTOR_HANDOFF.md": {
+      "sha256": "0b7ed9d138f372d5066fcf16bab0ed494d51c883322cdcc3b08eb36981d41561",
+      "bytes": 2855
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_P0_ANALYSIS_REVIEW.md": {
+      "sha256": "ea73031e503b3661a8492477037d15b23555aaae04b6f2b38da1e1ce03b0b822",
+      "bytes": 11956
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_P0_EXECUTOR_HANDOFF.md": {
+      "sha256": "4da1ee50c653b9918e7d7108fd0b055522d4abbf2c59fa3fa7175f801e800b8a",
+      "bytes": 6876
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_PREFIT_EXECUTOR_REVIEW.md": {
+      "sha256": "f4c36f85335742005d01e4e51513dcb8b4992432f8818842d47af3abad1619e1",
+      "bytes": 6496
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_PROTOCOL_REVIEW.md": {
+      "sha256": "e6b91aebcdb1526efc358b3e0613af7821071bebb3d0da7033c83d53b41efda6",
+      "bytes": 17620
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_RAW_BUDGET_AMENDMENT.md": {
+      "sha256": "26dc21b69348e3ba90e5554b838efe9b6d610c2cef55ed0e0962fb99df89900d",
+      "bytes": 5883
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_RAW_COMMAND_REVIEW.md": {
+      "sha256": "8789cb1b3b5f55ca4777e320eb7d60a84a5cc636f7b97c0ababb4c00a95e068d",
+      "bytes": 5105
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_RAW_RESTORE_EVIDENCE.md": {
+      "sha256": "63b3f985b02fe81bb9e2d4f2aa9a342bbe0d1abdffce5115f90b3b3da605904b",
+      "bytes": 6026
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_ROUND1_ANALYSIS_DECISION.md": {
+      "sha256": "5ce1d67fc8d8dcec8045f1d94cbf98e255530c65a6fd13e7b1bbaf4f0570bf75",
+      "bytes": 5172
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_ROUND1_COMPLETION_CHECK.md": {
+      "sha256": "e70f4ea17e8f388f27a5a4ef50235f1f0f39665884c546e3a9c47a98b3175202",
+      "bytes": 4805
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_ROUND1_DATASET_PREFLIGHT_HANDOFF.md": {
+      "sha256": "b835c8661719bad065bc64d1a6ac50252ab056db725a2072a5f2a055aa62b7bb",
+      "bytes": 6088
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_ROUND1_FIT_PREFLIGHT_DECISION.md": {
+      "sha256": "7c3fc8a8f8bc0c13709205b9c9053a69a99e7c1a08e5f042972af5023c759960",
+      "bytes": 4672
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_ROUND1_RUNNING_HANDOFF.md": {
+      "sha256": "f8cf6222d3c0d1edcacfd5002974199bdb6e80e331e4909bccc2820da2dc7a69",
+      "bytes": 4396
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_ROUND1_TRAIN300_DIAGNOSTICS.md": {
+      "sha256": "cc6c75d025935c3ddab24c5f0e50f07749d70dc81279f8795902fa6c0e3a4e6b",
+      "bytes": 7337
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_ROUND1_TRAINING_DECISION.md": {
+      "sha256": "b125fb409d3698e7ed358a17cab42b039a83249fcd629091664a4616c9592ee4",
+      "bytes": 6341
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_RUNTIME_REVIEW.md": {
+      "sha256": "d90fe3690a2b60e6e6595976337471da7211c92af68c84de6bdf23404395a265",
+      "bytes": 4994
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_TRAINING_ADDENDUM.md": {
+      "sha256": "a0f499e388a3c09619cd5042901b8fcd919a670503e58835069f2a5fdab467df",
+      "bytes": 4238
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_TRAINING_DESIGN_REVIEW.md": {
+      "sha256": "75f54448394638a4769dfae5f17eba00bff57a30c2aa54886e50d855dc813b64",
+      "bytes": 14845
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_TRAINING_READINESS_REVIEW.md": {
+      "sha256": "cd59280a23803bee7fbe25d969b20c5f0a4960ec0e3708e4a45cbf1b0b6ea587",
+      "bytes": 4972
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/coordination/NATIVE10_TRAINING_TASK.md": {
+      "sha256": "682c3aa13611afd21ee01ed1d934543aed45a8cad8714f660b5f171b9281d45a",
+      "bytes": 13895
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_fit_v1/code_snapshot.tar.gz": {
+      "sha256": "e29ae5cc412b235c0b96a3baf5e5e69ad8aa34e863af29f8f4cf12e508684bb6",
+      "bytes": 311777
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_train_full_v1/complete.json": {
+      "sha256": "08d8bf56408f65dc4302a588be987626ea2d4f420ab3a156c8c360ef8a7fd14a",
+      "bytes": 386
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round1_train_full_v1/input_audit.json": {
+      "sha256": "7de6ee45b9ee8bd68e9ba082d55a973b02a55741bc3a12c11e2d4ca472d9c1db",
+      "bytes": 30698526
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_development_full_v1/complete.json": {
+      "sha256": "ff4084fa637fc5c50cbad1ee2010084d7b2658f42902700069b09ec71fdf8865",
+      "bytes": 392
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round1_development_full_v1/input_audit.json": {
+      "sha256": "b540489d63ad00b23fa183f4b4d47f268df8d444eafa0c6a527e2254cbc2876b",
+      "bytes": 9706824
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/round1/round1_preflight_v1/complete.json": {
+      "sha256": "3a97fff5235b804ec05afd6cc4dc6f25e89319c393d2fa21f70eda2296ed3930",
+      "bytes": 2447
+    }
+  },
+  "operational_status": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_EXECUTOR_STATUS.json",
+    "round1_training_actual_optimizer_updates": 19200,
+    "round1_training_optimizer_updates": 19200,
+    "training_progress_actual_optimizer_updates": 19200,
+    "status_mtime_utc": "2026-09-16T20:35:03.537281+00:00",
+    "note": "The stale value 15684 was observed at review start; the executor status was updated externally to 19200 before review completion. Reviewer did not modify execution-owned files."
+  }
+}

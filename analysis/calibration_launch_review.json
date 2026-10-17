@@ -1,0 +1,92 @@
+{
+  "status": "actual_calibration_launch_binding_review_passed",
+  "reviewed_at_utc": "2026-09-17T02:43:38.201600+00:00",
+  "actual_launch": {
+    "started_utc": "2026-09-17T02:41:18.830118+00:00",
+    "pid": 582068,
+    "controller_pid": 581890,
+    "command": [
+      "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+      "-u",
+      "-m",
+      "experiments.native10_training_20260916.calibration_runner_v1",
+      "launch",
+      "--config",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_protocols/calibration_v1/config.json",
+      "--freeze",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_protocols/calibration_v1/freeze.json",
+      "--stage",
+      "calibration",
+      "--bank-version",
+      "calibration_policy_v1",
+      "--wave-id",
+      "calibration_v1_01",
+      "--workers",
+      "32"
+    ],
+    "config_sha256": "c04125ae474316783e7dd6ca74c799d5441299801f22cd0910889f98511d7382",
+    "freeze_sha256": "d181899e5ccf70177db5fee6267ec9f102f4aae6e437e42f7a0eb86dc9800d1e",
+    "ready_sha256": "5cec3558223d18ba9f2b160c478590b8d0ec9b161989f794e6dbcd7983f10138",
+    "stage_cap": 1200,
+    "optimizer_updates": 0,
+    "primary_capture_limit": 100,
+    "bank_restore_limit": 100,
+    "branch_limit": 1000,
+    "lifecycle_owned_by_runner": true,
+    "loaded_workers_at_launch": 0
+  },
+  "actual_launch_record_sha256": "3a906560b65fd1f6bd17a3ae303f18bf37bb0bcaee8d77a4ffa41d68a6f4b881",
+  "freeze_result": {
+    "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_protocols/calibration_v1/config.json",
+    "config_sha256": "c04125ae474316783e7dd6ca74c799d5441299801f22cd0910889f98511d7382",
+    "freeze": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/calibration_protocols/calibration_v1/freeze.json",
+    "freeze_sha256": "d181899e5ccf70177db5fee6267ec9f102f4aae6e437e42f7a0eb86dc9800d1e",
+    "model_calls": 0,
+    "optimizer_updates": 0,
+    "ready_sha256": "5cec3558223d18ba9f2b160c478590b8d0ec9b161989f794e6dbcd7983f10138",
+    "simulator_calls": 0,
+    "status": "passed",
+    "wall_seconds": 11.765120211988688
+  },
+  "independent_reviewer": "critic_data_audit",
+  "authorization_inventory": {
+    "unique_references": 163,
+    "original_and_snapshot_items": 326,
+    "all_in_freeze_files": true,
+    "all_hashes_match": true,
+    "two_metadata_path_fixes_verified": true,
+    "previous_omitted_reference_classes_covered": true
+  },
+  "mutable_logs": {
+    "live_ledger_frozen": false,
+    "live_scene_registry_frozen": false,
+    "scene_prefix_records": 700,
+    "scene_prefix_bytes": 471628,
+    "append_allowed_after_prefix": true
+  },
+  "contract": {
+    "critic": "A4000",
+    "primary_method": "post",
+    "calibration_primary_slots": 100,
+    "per_task": 20,
+    "ordered_backup_slots": 200,
+    "paired_suffixes": 2,
+    "physical_arms": 5,
+    "calibration_simulator_limit": 1200,
+    "original_shared_reserve_limit": 1200,
+    "new_optimizer_updates": 0,
+    "selection_proposal_only": true,
+    "selection_seal_authorized": false,
+    "heldout_authorized": false
+  },
+  "resources_before": {
+    "ledger_sha256": "8af52eeec7a34958d64205790010160cf04393f8db995c6b4707916c0f3dee2d",
+    "optimizer_updates": 51200,
+    "reserve_used": 0,
+    "simulator_attempts": 44869
+  },
+  "scientific_outcomes_read": false,
+  "tests_or_model_simulator_optimizer_calls_added": 0,
+  "old_failed_freeze_record_preserved": true,
+  "next_step": "Continue the single current wave;read full calibrated outcomes only after all100 registered sources and audits are complete. No parameter changes or automatic heldout start."
+}

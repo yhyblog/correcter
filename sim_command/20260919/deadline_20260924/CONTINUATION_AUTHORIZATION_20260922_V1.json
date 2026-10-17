@@ -1,0 +1,95 @@
+{
+  "schema": "corrector_deadline_continuation_authorization_v1",
+  "campaign_id": "corrector-sim-20260919",
+  "authorization_id": "D24_CONTINUATION_20260922_V1",
+  "revision": 1,
+  "status": "released",
+  "issued_at_utc": "2026-09-22T03:56:53.824907+00:00",
+  "issuer": "analysis",
+  "user_basis": "Continue remaining experiments in the already authorized D24 plan; necessary adaptation allowed, strict consistency checks waived; independent A/B useful work and automatic queues requested. This redistributes unfinished work, not a new scientific scope.",
+  "parent_authorization": {
+    "path": "deadline_20260924/AUTHORIZATION_V1.json",
+    "sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80"
+  },
+  "plan": {
+    "path": "deadline_20260924/CONTINUATION_20260922.md",
+    "sha256": "87a7b4c9c624a0fed60f475f60934e31271a0a85a8e0f558308595b5cd6818fb"
+  },
+  "scientific_execution_authorized": true,
+  "per_job_analysis_approval_required": false,
+  "shared_queue_READY_required": false,
+  "strict_consistency_audit_required": false,
+  "legacy_closed_release_reuse_allowed": false,
+  "remaining475_pool_collection_admissions": false,
+  "formal_GPU_concurrency_target_per_node": 8,
+  "new_experiment_admission_cutoff_utc": "2026-09-23T12:00:00Z",
+  "final_tables_due_utc": "2026-09-23T15:00:00Z",
+  "budget_semantics": "Each stage is a subset of the original cumulative per-node totals, never a reset. Prior failed attempts count. Preserve already admitted jobs and skip exact duplicates.",
+  "nodes": {
+    "A": {
+      "task_id": "A_D24_CORE_REMAINDER_V1",
+      "owner_host": "trial-303224955-trialrun-303224955-worker-0",
+      "thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+      "brief": {
+        "path": "tasks/A_D24_CORE_REMAINDER_V1.md",
+        "sha256": "ca0c3bcec7ee0f20ddf702975ef783cd8a8122ec44beb276ae80ab24054974a2"
+      },
+      "priorities": [
+        "E6 fixed100 existing-dev replay calibration then two50test arms",
+        "E3 existing epoch30 VLA-Corrector500",
+        "GAF existing-data adaptation fit3x10000 and500evaluation when ready"
+      ],
+      "max_additional_rollout_attempts": 3000,
+      "max_additional_small_network_updates": 30000,
+      "node_cumulative_rollout_cap": 18000,
+      "node_cumulative_small_network_updates_cap": 200000,
+      "E6_development_existing_parent_identities": 100,
+      "E6_development_rollout_attempt_cap": 200,
+      "E6_new_parent_identities": 0,
+      "new_base_model_SFT": false
+    },
+    "B": {
+      "task_id": "B_D24_EXTENSION_REMAINDER_V1",
+      "parent_task_id": "B_D24_SPRINT_V1",
+      "owner_host": "trial-303225685-trialrun-303225685-worker-0",
+      "thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+      "brief": {
+        "path": "tasks/B_D24_EXTENSION_REMAINDER_V1.md",
+        "sha256": "8511ca0e0463324f209be6e7778b2dc94c3617d195c8d15f1761235edc08ba38"
+      },
+      "priorities": [
+        "publishE1 retained80+corrected1120 without rerun",
+        "Smol/Post",
+        "X030000/Post",
+        "LIBERO/Post with genuine adaptation disclosure",
+        "readyVelocity extensions"
+      ],
+      "max_additional_rollout_attempts": 6000,
+      "max_additional_small_network_updates": 100000,
+      "node_cumulative_rollout_cap": 16000,
+      "node_cumulative_small_network_updates_cap": 500000,
+      "E8_new_development_parents_per_setting_max": 40,
+      "E8_new_development_rollouts_per_setting_max": 200,
+      "new_base_model_SFT": false
+    }
+  },
+  "ownership": {
+    "E1": "B",
+    "E6": "A",
+    "E3": "A",
+    "E8": "B"
+  },
+  "occupancy_policy": "Latest user-provided AGENTS: all holders off throughout entire formal wave, including model loading, gaps and finished individual GPUs; restore after whole group exits, including failure. No idle-subset or tail auxiliary holders. This supersedes earlier idle-fill permission prospectively; preserve historical deviation evidence.",
+  "retry_policy": "one corrected retry for concretely diagnosed failed job/episode, distinct run identity, completed episodes not repeated",
+  "minimum_checks": [
+    "correct model/action dimension and units",
+    "valid actual observation",
+    "train/dev/test separation and no test-based selection",
+    "success versus technical failure recorded separately",
+    "ordinary capacity check and own holder-family exit before formal entry"
+  ],
+  "reporting": "actual counts and missing cells; no fake common-data/Full/official-LIBERO claims; no added strict audits",
+  "cross_node_dependency": "independent; one missing method blocks only that method, never the other node or all queued ready work",
+  "completed_jobs": "A main8000 and pilot120; B completeN and E1 fits/corrected episodes must not restart",
+  "data_retention": "no new deletion authorization"
+}

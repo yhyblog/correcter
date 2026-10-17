@@ -1,0 +1,957 @@
+{
+  "schema": "round1_policy_method_diagnostics_v1",
+  "status": "completed_with_cross_stage_suffix_equivalence_not_established",
+  "created_utc": "2026-09-16T21:26:11.055225+00:00",
+  "role": "analysis_only_independent_readonly_method_diagnosis",
+  "simulator_attempts": 0,
+  "optimizer_updates": 0,
+  "model_inference_calls": 0,
+  "round2_collection_method_blockers": [],
+  "decision": "既定固定 B200 生成第二轮 300 个新训练源、13 候选和独立 native 控制臂的数据方案可以继续准备与按 READY 放行；本诊断不改变任何科学规则，不要求先证明 B200 优于旧 critic。",
+  "scope": {
+    "policy_sources": 100,
+    "cut_sources": 95,
+    "no_cut_common_sources": 5,
+    "repeats": 4,
+    "read_new_and_old_bank_files": [
+      "generation.json",
+      "plans.npz",
+      "formal_directions.npz"
+    ],
+    "bank_files_sha_checked": 570,
+    "evidence_hash_or_raw_mask_tail_issues": [],
+    "complete_trajectories_reread": false,
+    "historical_suffix_noise_full_comparison_performed": false
+  },
+  "evidence": {
+    "policy_audit_complete": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_audits/round1_policy_v1/complete.json",
+      "sha256": "4bfadd48f1ee23b8a9e616d8517364ec69e3d96efe22c59d8ff3d2a0322cf701"
+    },
+    "policy_audit_result": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_audits/round1_policy_v1/result.json",
+      "sha256": "0e991c13d624a34b397a4cbba60b7c8d84882d7140566b235a4388c5eb73e4e4"
+    },
+    "sealed_cost_raw_q_supplement": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_cost_diagnostics/round1_policy_v1/complete.json",
+      "sha256": "2794a827e559ee8782dd540462e583d0bf8c38eefe49ceed75259c45de8ad595",
+      "all_four_sealed_files_hash_checked": true
+    },
+    "selected_model": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1",
+      "seal_sha256": "ff460f12c598a34a15a28ed7619ed071a60be195a3dd2f0c1c963a202ee22287",
+      "selected_seal_sha256": "931c6f6043db92b5d9003eb2833dfc8edd0ab6c860a1979db3983cd7d893725f"
+    },
+    "design": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_preflight_v1/training_design.json",
+      "sha256": "3b9bbf7a67fc15123ac761c13358c0bfd8492ea9aea3c25649cefb02c66ef0cf"
+    }
+  },
+  "actual_evidence": {
+    "policy_statistics": {
+      "overall": {
+        "sources": 100,
+        "logical_outcomes_per_arm": 400,
+        "success_counts": {
+          "continue_native10": 221,
+          "alarm_replan10": 257,
+          "velocity": 265,
+          "direct": 268,
+          "post": 267
+        },
+        "success_rates": {
+          "continue_native10": 0.5525,
+          "alarm_replan10": 0.6425,
+          "velocity": 0.6625,
+          "direct": 0.67,
+          "post": 0.6675
+        }
+      },
+      "comparisons": {
+        "alarm_replan10_minus_continue_native10": {
+          "gain": 0.09,
+          "source_95ci": [
+            0.0275,
+            0.155
+          ],
+          "rescues": 52,
+          "harms": 16,
+          "positive_sources": 18,
+          "negative_sources": 8,
+          "zero_sources": 74
+        },
+        "velocity_minus_alarm_replan10": {
+          "gain": 0.02,
+          "source_95ci": [
+            -0.02,
+            0.0625
+          ],
+          "rescues": 19,
+          "harms": 11,
+          "positive_sources": 7,
+          "negative_sources": 5,
+          "zero_sources": 88
+        },
+        "direct_minus_alarm_replan10": {
+          "gain": 0.0275,
+          "source_95ci": [
+            -0.0075,
+            0.065
+          ],
+          "rescues": 20,
+          "harms": 9,
+          "positive_sources": 9,
+          "negative_sources": 4,
+          "zero_sources": 87
+        },
+        "post_minus_alarm_replan10": {
+          "gain": 0.025,
+          "source_95ci": [
+            -0.0125,
+            0.065
+          ],
+          "rescues": 20,
+          "harms": 10,
+          "positive_sources": 9,
+          "negative_sources": 4,
+          "zero_sources": 87
+        },
+        "velocity_minus_continue_native10": {
+          "gain": 0.11,
+          "source_95ci": [
+            0.0425,
+            0.1775
+          ],
+          "rescues": 57,
+          "harms": 13,
+          "positive_sources": 19,
+          "negative_sources": 6,
+          "zero_sources": 75
+        },
+        "direct_minus_continue_native10": {
+          "gain": 0.1175,
+          "source_95ci": [
+            0.05,
+            0.1875
+          ],
+          "rescues": 59,
+          "harms": 12,
+          "positive_sources": 20,
+          "negative_sources": 6,
+          "zero_sources": 74
+        },
+        "post_minus_continue_native10": {
+          "gain": 0.115,
+          "source_95ci": [
+            0.05,
+            0.1825
+          ],
+          "rescues": 58,
+          "harms": 12,
+          "positive_sources": 19,
+          "negative_sources": 5,
+          "zero_sources": 76
+        }
+      },
+      "per_task": {
+        "disassemble-v3": {
+          "sources": 20,
+          "logical_outcomes_per_arm": 80,
+          "success_counts": {
+            "continue_native10": 68,
+            "alarm_replan10": 61,
+            "velocity": 67,
+            "direct": 67,
+            "post": 66
+          },
+          "success_rates": {
+            "continue_native10": 0.85,
+            "alarm_replan10": 0.7625,
+            "velocity": 0.8375,
+            "direct": 0.8375,
+            "post": 0.825
+          }
+        },
+        "pick-place-wall-v3": {
+          "sources": 20,
+          "logical_outcomes_per_arm": 80,
+          "success_counts": {
+            "continue_native10": 44,
+            "alarm_replan10": 69,
+            "velocity": 71,
+            "direct": 70,
+            "post": 70
+          },
+          "success_rates": {
+            "continue_native10": 0.55,
+            "alarm_replan10": 0.8625,
+            "velocity": 0.8875,
+            "direct": 0.875,
+            "post": 0.875
+          }
+        },
+        "shelf-place-v3": {
+          "sources": 20,
+          "logical_outcomes_per_arm": 80,
+          "success_counts": {
+            "continue_native10": 21,
+            "alarm_replan10": 23,
+            "velocity": 23,
+            "direct": 23,
+            "post": 25
+          },
+          "success_rates": {
+            "continue_native10": 0.2625,
+            "alarm_replan10": 0.2875,
+            "velocity": 0.2875,
+            "direct": 0.2875,
+            "post": 0.3125
+          }
+        },
+        "stick-pull-v3": {
+          "sources": 20,
+          "logical_outcomes_per_arm": 80,
+          "success_counts": {
+            "continue_native10": 18,
+            "alarm_replan10": 24,
+            "velocity": 24,
+            "direct": 28,
+            "post": 26
+          },
+          "success_rates": {
+            "continue_native10": 0.225,
+            "alarm_replan10": 0.3,
+            "velocity": 0.3,
+            "direct": 0.35,
+            "post": 0.325
+          }
+        },
+        "stick-push-v3": {
+          "sources": 20,
+          "logical_outcomes_per_arm": 80,
+          "success_counts": {
+            "continue_native10": 70,
+            "alarm_replan10": 80,
+            "velocity": 80,
+            "direct": 80,
+            "post": 80
+          },
+          "success_rates": {
+            "continue_native10": 0.875,
+            "alarm_replan10": 1.0,
+            "velocity": 1.0,
+            "direct": 1.0,
+            "post": 1.0
+          }
+        }
+      },
+      "alarm_conditioned": {
+        "sources": 95,
+        "logical_outcomes_per_arm": 380,
+        "success_counts": {
+          "continue_native10": 205,
+          "alarm_replan10": 241,
+          "velocity": 249,
+          "direct": 252,
+          "post": 251
+        },
+        "success_rates": {
+          "continue_native10": 0.5394736842105263,
+          "alarm_replan10": 0.6342105263157894,
+          "velocity": 0.6552631578947369,
+          "direct": 0.6631578947368421,
+          "post": 0.6605263157894737
+        }
+      },
+      "no_cut_common_outcomes": {
+        "sources": 5,
+        "logical_outcomes_per_arm": 20,
+        "success_counts": {
+          "continue_native10": 16,
+          "alarm_replan10": 16,
+          "velocity": 16,
+          "direct": 16,
+          "post": 16
+        },
+        "success_rates": {
+          "continue_native10": 0.8,
+          "alarm_replan10": 0.8,
+          "velocity": 0.8,
+          "direct": 0.8,
+          "post": 0.8
+        }
+      },
+      "bootstrap": {
+        "seed": 2026091622,
+        "replicates": 10000,
+        "unit": "episode/source",
+        "stratification": "task",
+        "suffix_repeats_independent": false,
+        "interval": "percentile",
+        "multiplicity_adjusted": false
+      },
+      "independent_validation_success": false,
+      "interpretation": "Development policy comparison; seven descriptive paired comparisons, not heldout confirmation."
+    },
+    "q_amplitude_mask_fallback_and_direction_summary": {
+      "n_cut": 95,
+      "issues": [],
+      "methods": {
+        "velocity": {
+          "q_gain_cut_pp": 4.634719110633197,
+          "q_gain_full100_with_common_zero_pp": 4.402983155101538,
+          "actual_gain_full100_pp": 2.0,
+          "actual_gain_cut_pp": 2.1052631578947367,
+          "q_positive_sources": 95,
+          "q_negative_sources": 0,
+          "old_q_gain_cut_pp": 11.789703103468606,
+          "old_new_cosine": {
+            "n": 95,
+            "mean": 0.621288518775465,
+            "min": -0.7366454681583591,
+            "median": 0.6899461998050991,
+            "max": 0.9125504937830076
+          },
+          "radius": {
+            "xyz_rms": {
+              "n": 95,
+              "mean": 0.04188395642951427,
+              "min": 0.01724687409711136,
+              "median": 0.04350521069710304,
+              "max": 0.04999995136091024
+            },
+            "gripper_rms": {
+              "n": 95,
+              "mean": 0.09395607330418207,
+              "min": 0.0,
+              "median": 0.09999989925931921,
+              "max": 0.09999991554589464
+            },
+            "xyz_linf": {
+              "n": 95,
+              "mean": 0.13419638657207159,
+              "min": 0.06392711400985718,
+              "median": 0.14277765154838562,
+              "max": 0.14999985694885254
+            },
+            "gripper_linf": {
+              "n": 95,
+              "mean": 0.19054793440981915,
+              "min": 0.0,
+              "median": 0.18789243698120117,
+              "max": 0.29626673460006714
+            }
+          },
+          "old_radius": {
+            "xyz_rms": {
+              "n": 95,
+              "mean": 0.04118813924009303,
+              "min": 0.019826492093960497,
+              "median": 0.04112148523200763,
+              "max": 0.04999995211137378
+            },
+            "gripper_rms": {
+              "n": 95,
+              "mean": 0.09442578451325667,
+              "min": 0.0,
+              "median": 0.09999989949852094,
+              "max": 0.09999990685155989
+            }
+          },
+          "fallback_sources": 0,
+          "total_updates": 285,
+          "accepted_updates": 285,
+          "halvings": 0
+        },
+        "direct": {
+          "q_gain_cut_pp": 5.332400163537578,
+          "q_gain_full100_with_common_zero_pp": 5.065780155360699,
+          "actual_gain_full100_pp": 2.75,
+          "actual_gain_cut_pp": 2.8947368421052633,
+          "q_positive_sources": 95,
+          "q_negative_sources": 0,
+          "old_q_gain_cut_pp": 11.635904472419305,
+          "old_new_cosine": {
+            "n": 95,
+            "mean": 0.6842042805823831,
+            "min": -0.47775509894641666,
+            "median": 0.7353597631860253,
+            "max": 0.9119925606011031
+          },
+          "radius": {
+            "xyz_rms": {
+              "n": 95,
+              "mean": 0.04188395616807409,
+              "min": 0.01724687119664427,
+              "median": 0.043505206298811404,
+              "max": 0.04999995196508614
+            },
+            "gripper_rms": {
+              "n": 95,
+              "mean": 0.09395607288296866,
+              "min": 0.0,
+              "median": 0.09999989891823811,
+              "max": 0.09999991211829037
+            },
+            "xyz_linf": {
+              "n": 95,
+              "mean": 0.11831813234419218,
+              "min": 0.054932303726673126,
+              "median": 0.11921131610870361,
+              "max": 0.14999985694885254
+            },
+            "gripper_linf": {
+              "n": 95,
+              "mean": 0.1645000464429981,
+              "min": 0.0,
+              "median": 0.16962939873337746,
+              "max": 0.29421454668045044
+            }
+          },
+          "old_radius": {
+            "xyz_rms": {
+              "n": 95,
+              "mean": 0.04118813921593354,
+              "min": 0.01982649146244907,
+              "median": 0.04112148648949125,
+              "max": 0.04999995268207844
+            },
+            "gripper_rms": {
+              "n": 95,
+              "mean": 0.09442578481148742,
+              "min": 0.0,
+              "median": 0.09999989911922025,
+              "max": 0.09999991087304004
+            }
+          },
+          "fallback_sources": 0,
+          "total_updates": 285,
+          "accepted_updates": 285,
+          "halvings": 0
+        },
+        "post": {
+          "q_gain_cut_pp": 5.420629940927029,
+          "q_gain_full100_with_common_zero_pp": 5.149598443880677,
+          "actual_gain_full100_pp": 2.5,
+          "actual_gain_cut_pp": 2.6315789473684212,
+          "q_positive_sources": 95,
+          "q_negative_sources": 0,
+          "old_q_gain_cut_pp": 12.741410091862473,
+          "old_new_cosine": {
+            "n": 95,
+            "mean": 0.7663737665209999,
+            "min": 0.06520084030446598,
+            "median": 0.776649449908174,
+            "max": 0.9291825197916944
+          },
+          "radius": {
+            "xyz_rms": {
+              "n": 95,
+              "mean": 0.0418839563515671,
+              "min": 0.01724686973455314,
+              "median": 0.04350520954537255,
+              "max": 0.04999995107362158
+            },
+            "gripper_rms": {
+              "n": 95,
+              "mean": 0.09395607283451854,
+              "min": 0.0,
+              "median": 0.09999989858993635,
+              "max": 0.09999991504776469
+            },
+            "xyz_linf": {
+              "n": 95,
+              "mean": 0.12984210156075854,
+              "min": 0.04981299862265587,
+              "median": 0.13616414368152618,
+              "max": 0.14999985694885254
+            },
+            "gripper_linf": {
+              "n": 95,
+              "mean": 0.15519620184051364,
+              "min": 0.0,
+              "median": 0.1547938585281372,
+              "max": 0.2256489098072052
+            }
+          },
+          "old_radius": {
+            "xyz_rms": {
+              "n": 95,
+              "mean": 0.04118813923371014,
+              "min": 0.01982649162683832,
+              "median": 0.0411214830896158,
+              "max": 0.049999952766083225
+            },
+            "gripper_rms": {
+              "n": 95,
+              "mean": 0.09442578545454727,
+              "min": 0.0,
+              "median": 0.09999989951912051,
+              "max": 0.09999991176966228
+            }
+          }
+        }
+      },
+      "masked_fraction": {
+        "n": 95,
+        "mean": 0.20763157894736836,
+        "min": 0.0,
+        "median": 0.25,
+        "max": 0.5
+      },
+      "groups": {
+        "xyz": {
+          "zero_sources": 0,
+          "shrunk_sources": 79,
+          "masked_fraction": {
+            "n": 95,
+            "mean": 0.2059649122807018,
+            "min": 0.0,
+            "median": 0.2,
+            "max": 0.43333333333333335
+          }
+        },
+        "gripper": {
+          "zero_sources": 2,
+          "shrunk_sources": 14,
+          "masked_fraction": {
+            "n": 95,
+            "mean": 0.21263157894736842,
+            "min": 0.0,
+            "median": 0.0,
+            "max": 1.0
+          }
+        }
+      },
+      "crossstage_anchor_checks": {
+        "source_seal_sha256": 95,
+        "source_protocol_sha256": 95,
+        "base_seed": 95,
+        "cut_step": 95,
+        "suffix_seed_namespace": 95,
+        "suffix_protocol": 95,
+        "a0_all50_bitexact": 95,
+        "formal_mask_bitexact": 95,
+        "initial_noise_hash": 95
+      },
+      "mutual_cosine": {
+        "velocity_direct": {
+          "n": 95,
+          "mean": 0.8059907460107832,
+          "min": 0.2836114537907521,
+          "median": 0.8441816770077422,
+          "max": 0.9740272899593393
+        },
+        "velocity_post": {
+          "n": 95,
+          "mean": 0.7650275367927789,
+          "min": -0.055645736249584125,
+          "median": 0.8112063341115116,
+          "max": 0.9775464177431323
+        },
+        "direct_post": {
+          "n": 95,
+          "mean": 0.9411498044226138,
+          "min": 0.7871211859181264,
+          "median": 0.9568208606842925,
+          "max": 0.9929016673428799
+        }
+      },
+      "per_task": {
+        "disassemble-v3": {
+          "velocity": {
+            "q_gain_pp": 5.283150114119053,
+            "sources": 20
+          },
+          "direct": {
+            "q_gain_pp": 6.136223152279854,
+            "sources": 20
+          },
+          "post": {
+            "q_gain_pp": 6.282979808747768,
+            "sources": 20
+          }
+        },
+        "pick-place-wall-v3": {
+          "velocity": {
+            "q_gain_pp": 6.756616329007289,
+            "sources": 17
+          },
+          "direct": {
+            "q_gain_pp": 7.278243605704869,
+            "sources": 17
+          },
+          "post": {
+            "q_gain_pp": 7.514057878185721,
+            "sources": 17
+          }
+        },
+        "shelf-place-v3": {
+          "velocity": {
+            "q_gain_pp": 2.4947026842518856,
+            "sources": 19
+          },
+          "direct": {
+            "q_gain_pp": 3.281936441597186,
+            "sources": 19
+          },
+          "post": {
+            "q_gain_pp": 3.3792246623258837,
+            "sources": 19
+          }
+        },
+        "stick-pull-v3": {
+          "velocity": {
+            "q_gain_pp": 3.3788517411602172,
+            "sources": 19
+          },
+          "direct": {
+            "q_gain_pp": 4.069924452587178,
+            "sources": 19
+          },
+          "post": {
+            "q_gain_pp": 4.112255710520243,
+            "sources": 19
+          }
+        },
+        "stick-push-v3": {
+          "velocity": {
+            "q_gain_pp": 5.408765077590942,
+            "sources": 20
+          },
+          "direct": {
+            "q_gain_pp": 6.021902710199356,
+            "sources": 20
+          },
+          "post": {
+            "q_gain_pp": 5.961156859993935,
+            "sources": 20
+          }
+        }
+      },
+      "channel_cosine": {
+        "direct_post_xyz": {
+          "n": 95,
+          "mean": 0.9427552022432026,
+          "median": 0.9778239727020264
+        },
+        "direct_post_gripper": {
+          "n": 93,
+          "mean": 0.9339507536221576,
+          "median": 0.9537783861160278
+        },
+        "old_new_xyz": {
+          "velocity": {
+            "n": 95,
+            "mean": 0.6080698139328313,
+            "median": 0.6332501769065857
+          },
+          "direct": {
+            "n": 95,
+            "mean": 0.5924880705381694,
+            "median": 0.6206972002983093
+          },
+          "post": {
+            "n": 95,
+            "mean": 0.6020510853905426,
+            "median": 0.6457043290138245
+          }
+        }
+      }
+    },
+    "q_source_association_descriptive": {
+      "velocity": {
+        "pearson": 0.11627135755599531,
+        "spearman": 0.12189317484272531,
+        "sign_table": {
+          "q_negative_actual_negative": 0,
+          "q_negative_actual_zero": 0,
+          "q_negative_actual_positive": 0,
+          "q_zero_actual_negative": 0,
+          "q_zero_actual_zero": 0,
+          "q_zero_actual_positive": 0,
+          "q_positive_actual_negative": 5,
+          "q_positive_actual_zero": 83,
+          "q_positive_actual_positive": 7
+        }
+      },
+      "direct": {
+        "pearson": 0.050445917570726875,
+        "spearman": 0.093226239540026,
+        "sign_table": {
+          "q_negative_actual_negative": 0,
+          "q_negative_actual_zero": 0,
+          "q_negative_actual_positive": 0,
+          "q_zero_actual_negative": 0,
+          "q_zero_actual_zero": 0,
+          "q_zero_actual_positive": 0,
+          "q_positive_actual_negative": 4,
+          "q_positive_actual_zero": 82,
+          "q_positive_actual_positive": 9
+        }
+      },
+      "post": {
+        "pearson": 0.01964421268005617,
+        "spearman": 0.051564754477313554,
+        "sign_table": {
+          "q_negative_actual_negative": 0,
+          "q_negative_actual_zero": 0,
+          "q_negative_actual_positive": 0,
+          "q_zero_actual_negative": 0,
+          "q_zero_actual_zero": 0,
+          "q_zero_actual_positive": 0,
+          "q_positive_actual_negative": 4,
+          "q_positive_actual_zero": 82,
+          "q_positive_actual_positive": 9
+        }
+      }
+    },
+    "raw_quality_from_sealed_supplement": {
+      "raw_unique_group_distribution": {
+        "4": 95
+      },
+      "clipped_collision_sources": 0,
+      "unmatched_final_rms_sources": 0,
+      "zero_channel_counts": {
+        "velocity": {
+          "xyz": 0,
+          "gripper": 2
+        },
+        "direct": {
+          "xyz": 0,
+          "gripper": 2
+        },
+        "post": {
+          "xyz": 0,
+          "gripper": 2
+        }
+      },
+      "aliases_of_a0": {
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      },
+      "matching_group_flags": {
+        "xyz": {
+          "zero_group": 0,
+          "shrunk": 79
+        },
+        "gripper": {
+          "zero_group": 2,
+          "shrunk": 14
+        }
+      }
+    },
+    "illustrative_cases": [
+      {
+        "id": "stick-pull-v3__2026111658",
+        "counts": {
+          "continue_native10": 4,
+          "alarm_replan10": 3,
+          "velocity": 0,
+          "direct": 0,
+          "post": 0
+        },
+        "gain": {
+          "velocity": 0.051387131214141846,
+          "direct": 0.05690528452396393,
+          "post": 0.05771692097187042
+        },
+        "radius": {
+          "velocity": {
+            "xyz_rms": 0.04511557233940853,
+            "gripper_rms": 0.09999991554589464,
+            "xyz_linf": 0.1368345022201538,
+            "gripper_linf": 0.1915300488471985
+          },
+          "direct": {
+            "xyz_rms": 0.04511557343765174,
+            "gripper_rms": 0.09999989632550016,
+            "xyz_linf": 0.1341809630393982,
+            "gripper_linf": 0.17275524139404297
+          },
+          "post": {
+            "xyz_rms": 0.04511557319733116,
+            "gripper_rms": 0.09999989268369656,
+            "xyz_linf": 0.148840069770813,
+            "gripper_linf": 0.15324431657791138
+          }
+        },
+        "old_new_cosine": {
+          "velocity": 0.6944396327188134,
+          "direct": 0.7654728320190687,
+          "post": 0.7838778727618013
+        },
+        "mutual_cosine": {
+          "velocity_direct": 0.8418966542336249,
+          "velocity_post": 0.8256300207835153,
+          "direct_post": 0.9599521115213021
+        },
+        "group": {
+          "xyz": {
+            "requested": 0.05,
+            "achieved_target": 0.04511557157571446,
+            "zero_group": false,
+            "shrunk": true
+          },
+          "gripper": {
+            "requested": 0.1,
+            "achieved_target": 0.0999999,
+            "zero_group": false,
+            "shrunk": false
+          }
+        },
+        "fallback": {
+          "velocity": null,
+          "direct": null
+        }
+      },
+      {
+        "id": "disassemble-v3__2026111695",
+        "counts": {
+          "continue_native10": 4,
+          "alarm_replan10": 0,
+          "velocity": 4,
+          "direct": 4,
+          "post": 4
+        },
+        "gain": {
+          "velocity": 0.06292179226875305,
+          "direct": 0.06860096752643585,
+          "post": 0.06804162263870239
+        },
+        "radius": {
+          "velocity": {
+            "xyz_rms": 0.04691121313301127,
+            "gripper_rms": 0.09999989818329244,
+            "xyz_linf": 0.14732138812541962,
+            "gripper_linf": 0.16908373683691025
+          },
+          "direct": {
+            "xyz_rms": 0.046911211146502645,
+            "gripper_rms": 0.0999999015404932,
+            "xyz_linf": 0.14999985694885254,
+            "gripper_linf": 0.17392771691083908
+          },
+          "post": {
+            "xyz_rms": 0.04691121104031835,
+            "gripper_rms": 0.09999990071715564,
+            "xyz_linf": 0.1469707489013672,
+            "gripper_linf": 0.15360573306679726
+          }
+        },
+        "old_new_cosine": {
+          "velocity": 0.6917854658084097,
+          "direct": 0.6685741662373675,
+          "post": 0.7756451116877611
+        },
+        "mutual_cosine": {
+          "velocity_direct": 0.7866632941043742,
+          "velocity_post": 0.8338762414426714,
+          "direct_post": 0.9766144774967552
+        },
+        "group": {
+          "xyz": {
+            "requested": 0.05,
+            "achieved_target": 0.0469112112177646,
+            "zero_group": false,
+            "shrunk": true
+          },
+          "gripper": {
+            "requested": 0.1,
+            "achieved_target": 0.0999999,
+            "zero_group": false,
+            "shrunk": false
+          }
+        },
+        "fallback": {
+          "velocity": null,
+          "direct": null
+        }
+      }
+    ],
+    "denominator_note": "Q 只在 95 个真实 cut 上有模型输出；全 100 源的 Q 政策增益均值将 5 个共同结局源的干预增益定义为 0。实际成功增益全 100 源分母为 400，cut 子集分母为 380。",
+    "cosine_note": "whole-action cosine 使用实际十步 raw delta；另外单列 XYZ/gripper cosine，避免跨通道幅度比支配相似度解释。"
+  },
+  "cross_stage": {
+    "old_fixed_guided_success_counts_from_parent_independent_dataset_summary": {
+      "velocity": 280,
+      "direct": 274,
+      "post": 274
+    },
+    "new_fixed_guided_success_counts": {
+      "velocity": 265,
+      "direct": 268,
+      "post": 267
+    },
+    "descriptive_new_minus_old_percentage_points": {
+      "velocity": -3.75,
+      "direct": -1.5,
+      "post": -1.75
+    },
+    "confirmed_on_all_95_banks": {
+      "source_seal_sha256": 95,
+      "source_protocol_sha256": 95,
+      "base_seed": 95,
+      "cut_step": 95,
+      "suffix_seed_namespace": 95,
+      "suffix_protocol": 95,
+      "a0_all50_bitexact": 95,
+      "formal_mask_bitexact": 95,
+      "initial_noise_hash": 95
+    },
+    "pairing_claim": "same original source/cut/raw 50-step a0/mask/base-noise and registered suffix namespace verified; full historical-versus-new executed suffix/noise lists not compared in this review or the sealed supplement. Only the new five-arm paired result is established here.",
+    "pending_only_if_cross_stage_paired_claim_is_required": [
+      "complete historical-versus-new suffix decision index/seed/noise evidence, with termination-dependent list lengths handled explicitly"
+    ],
+    "not_a_round2_collection_gate": true,
+    "significance_recalculated": false,
+    "interpretation": "历史固定流候选总成功数高于新 B200 流候选是描述性事实；不能称本轮训练提升策略，更不能用 B200 在旧 13-bank 的离线选择收益代替本次新梯度 rollout 的收益。即使将来完成跨阶段配对，这仍是被复用用于选模型的开发集，不是独立验证。"
+  },
+  "method_inferences": [
+    {
+      "claim": "幅度被压成零、fallback 或候选等于 a0 不是当前总体收益有限的主要解释。",
+      "basis": "95 bank 三实际纠偏均非 a0 alias，XYZ 零组 0、grip 零组 2；V/D 570 次更新全部接受无 fallback。均值实际 RMS 与旧 bank 接近。",
+      "limit": "半径在个别状态仍受可行域限制；不能据平均数排除这些状态的动作约束。"
+    },
+    {
+      "claim": "局部动作评分与真实控制收益仍有错配。",
+      "basis": "三法全部 95 源预测正收益；源级实际仍有 5/4/4 个净损害。1658 三法 Q 预测 +5.14/+5.69/+5.77pp，实际由 replan 3/4 降至 0/4。",
+      "limit": "优化后候选的正 Q 本身受梯度选择影响；四次二值结局不等于真实概率，不能从单状态宣称精确校准误差或物理失败原因。"
+    },
+    {
+      "claim": "三种注入方式不是三套高度独立的修复策略。",
+      "basis": "新 D/P 的 XYZ cosine 均值 .943、gripper .934，且有共同救回/损害状态。",
+      "limit": "相似方向不等于相同轨迹；当前样本不足以确立一种注入方式稳定优越。"
+    },
+    {
+      "claim": "中断价值与修正价值必须继续分开报告。",
+      "basis": "1695 的 native/replan/V/D/P 为4/0/4/4/4；它的纠偏收益恢复了原本自然执行已有的成功。disassemble 总体 native68、replan61、D67。",
+      "limit": "其他任务重规划可以改善，不能从这个例子推广为完全取消中断。"
+    }
+  ],
+  "round2_data_value_and_blind_spots": {
+    "keep_registered_collection": true,
+    "new_information_expected": [
+      "新 300 独立训练 episode 提供新的状态覆盖；固定 B200 的实际 V/D/post 和 post 正反/通道分量把模型部署时会访问的方向变成真实反事实标签。",
+      "在同一旧 dev 状态，新旧 XYZ 实际方向 cosine 均值约 .59-.61，说明 B200 不只是重复旧方向。第二轮是针对新方向分布补数据，而不是假定 B200 已更好。",
+      "保留 critic-independent 平滑随机正反、半/全半径和 reverse-post，可观测高 Q 方向失败与低 Q 方向改善，避免只收高分动作。",
+      "同源四次配对 suffix 和 native 控制臂保留局部相对收益与是否中断两类目标；normal 不能当 a0 混入动作 critic。"
+    ],
+    "known_limits": [
+      "每源四个二值后缀使源级均值粒度为 25pp；正反差只提供有限半径的方向标签，不是无噪声的真实解析梯度。",
+      "单一主要 cut、十步前缀、现有局部半径和 mask 仍只覆盖有限动作族；全成功或全失败源无局部结果差异不等于物理上无解。",
+      "第一轮 Q 的源级增益排序与真实增益关联弱；增加同分布数据可能改善，但目前没有保证。",
+      "G0/VLA 保持冻结，本轮动作 critic 训练本身不会修正不必要的中断；native/replan 标签用于单独诊断，不静默增加门控模型。",
+      "raw 超界/边界 mask 和 clipped 表示的识别盲区仍需保留诊断；当前无 clipped collision，不据此新增输入或修改执行语义。",
+      "开发源继续被复用作有限的固定规则选择，最终必须保留独立 calibration/heldout 身份；当前不能写验证成功。"
+    ],
+    "constraints_unchanged": [
+      "B200 四成员与生成配置全程冻结",
+      "300 新预注册训练源，不看标签筛选或在线更新生成 critic",
+      "13 候选加 native 控制，既定配对 suffix 与半径/mask/raw 语义",
+      "train-only PCA/source-grouped bootstrap 与 dev/cal/held 边界",
+      "不添加第六个历史 critic 仿真臂，不重跑开发候选以追求正收益"
+    ]
+  }
+}

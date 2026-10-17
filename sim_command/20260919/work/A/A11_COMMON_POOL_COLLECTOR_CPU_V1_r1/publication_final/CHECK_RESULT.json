@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "synthetic": true,
+  "checks": [
+    {
+      "case": "board_ready",
+      "passed": true
+    },
+    {
+      "case": "board_running",
+      "passed": true
+    },
+    {
+      "case": "board_released",
+      "passed": true
+    },
+    {
+      "case": "missing_allowed_task_ids",
+      "passed": true
+    },
+    {
+      "case": "missing_per_task_compute_limits",
+      "passed": true
+    },
+    {
+      "case": "unknown_project_quota_rejected",
+      "passed": true
+    },
+    {
+      "case": "actual_pure_JSON_entry",
+      "passed": true
+    },
+    {
+      "case": "shell_syntax_only",
+      "passed": true
+    }
+  ],
+  "command": [
+    "/usr/bin/python",
+    "-B",
+    "-S",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_COLLECTOR_CPU_V1/code/publication_check.py",
+    "--control",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_COLLECTOR_CPU_V1_r1/publication_final/CONTROL.json",
+    "--board",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_COLLECTOR_CPU_V1_r1/publication_final/BOARD.json",
+    "--release",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_COLLECTOR_CPU_V1_r1/publication_final/RELEASE.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"board_status\": \"ready\", \"grants_authorization\": false, \"release_status\": \"released\", \"runtime_storage_admission_present\": false, \"status\": \"PASS\"}\n",
+  "stderr": "",
+  "elapsed_seconds": 0.05482035828754306,
+  "shell_exit": 0,
+  "real_launcher_invocations": 0,
+  "claims": 0,
+  "hardware": 0,
+  "new_active_authority_files": 0,
+  "final_budget_static_asserts": [
+    "stdout32MiB=RLIMIT_FSIZE",
+    "PPM header15bytes"
+  ],
+  "top_level_AST_count": 17,
+  "proposal_sha256": "3d74592fbffad0ba5f5b2f0c6d1264eb7eab71d6c1f765e4a838cc01b1eebc02"
+}

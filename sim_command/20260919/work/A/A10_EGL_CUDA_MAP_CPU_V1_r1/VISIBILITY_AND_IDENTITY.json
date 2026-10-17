@@ -1,0 +1,58 @@
+{
+  "inventory": [
+    {
+      "pci_bus_id": "0000:0f:00.0",
+      "gpu_uuid": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe",
+      "kernel_path": "/proc/driver/nvidia/gpus/0000:0f:00.0/information",
+      "cpu_snapshot_sha256": "e48afbda9cac68ef104cb419f93a6799d564748504ca17412086db7708713b6c"
+    },
+    {
+      "pci_bus_id": "0000:2d:00.0",
+      "gpu_uuid": "GPU-64240b2e-5845-da58-e703-61322f21cbf6",
+      "kernel_path": "/proc/driver/nvidia/gpus/0000:2d:00.0/information",
+      "cpu_snapshot_sha256": "c30da1fa6d0379d0ec6863972255131e1a1890d7bd88a70eb6f2d99e63004c5d"
+    },
+    {
+      "pci_bus_id": "0000:44:00.0",
+      "gpu_uuid": "GPU-2254f286-1a7d-edf8-e4a4-f24c051cab83",
+      "kernel_path": "/proc/driver/nvidia/gpus/0000:44:00.0/information",
+      "cpu_snapshot_sha256": "c1dcd8c545ad178ee09af7bf50da8c915c2cd8b6dc322aede54262b6c23e848b"
+    },
+    {
+      "pci_bus_id": "0000:5b:00.0",
+      "gpu_uuid": "GPU-8a8b08b1-2a03-ae94-bac7-4f690cf5c5d8",
+      "kernel_path": "/proc/driver/nvidia/gpus/0000:5b:00.0/information",
+      "cpu_snapshot_sha256": "5fdcb73715d4c715308ff0974ea225bd419b698788a7c90bc0b447a50636d038"
+    },
+    {
+      "pci_bus_id": "0000:89:00.0",
+      "gpu_uuid": "GPU-ec35bc25-f521-4261-e3a3-cf536a41aa64",
+      "kernel_path": "/proc/driver/nvidia/gpus/0000:89:00.0/information",
+      "cpu_snapshot_sha256": "020b612892234f8189f315d3d0ea376fb90d5e3db057fe5b7a83c1bb71bb3287"
+    },
+    {
+      "pci_bus_id": "0000:a8:00.0",
+      "gpu_uuid": "GPU-7a3ce392-0958-db98-bd25-b95810298e5f",
+      "kernel_path": "/proc/driver/nvidia/gpus/0000:a8:00.0/information",
+      "cpu_snapshot_sha256": "9c8a89f7cd51df993c899deffa9a9ac4a08707b191150756eccc4f4dec067ec2"
+    },
+    {
+      "pci_bus_id": "0000:c0:00.0",
+      "gpu_uuid": "GPU-b63ae919-c2a3-ff8c-3527-2f924152251f",
+      "kernel_path": "/proc/driver/nvidia/gpus/0000:c0:00.0/information",
+      "cpu_snapshot_sha256": "c122452ad8e5e27b741a123091fcfcacc765eb66f73a980f03521c17f931a6fe"
+    },
+    {
+      "pci_bus_id": "0000:d8:00.0",
+      "gpu_uuid": "GPU-893accc7-1601-840b-ea72-5d8302ef6d44",
+      "kernel_path": "/proc/driver/nvidia/gpus/0000:d8:00.0/information",
+      "cpu_snapshot_sha256": "e106d0999dc23dc16a6841fccf96213ac9641d99ae13b3c850b6c1f2ba069c82"
+    }
+  ],
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe,GPU-64240b2e-5845-da58-e703-61322f21cbf6,GPU-2254f286-1a7d-edf8-e4a4-f24c051cab83,GPU-8a8b08b1-2a03-ae94-bac7-4f690cf5c5d8,GPU-ec35bc25-f521-4261-e3a3-cf536a41aa64,GPU-7a3ce392-0958-db98-bd25-b95810298e5f,GPU-b63ae919-c2a3-ff8c-3527-2f924152251f,GPU-893accc7-1601-840b-ea72-5d8302ef6d44",
+    "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+    "NVIDIA_VISIBLE_DEVICES": "GPU-b63ae919-c2a3-ff8c-3527-2f924152251f,GPU-ec35bc25-f521-4261-e3a3-cf536a41aa64,GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe,GPU-2254f286-1a7d-edf8-e4a4-f24c051cab83,GPU-64240b2e-5845-da58-e703-61322f21cbf6,GPU-7a3ce392-0958-db98-bd25-b95810298e5f,GPU-893accc7-1601-840b-ea72-5d8302ef6d44,GPU-8a8b08b1-2a03-ae94-bac7-4f690cf5c5d8"
+  },
+  "reason": "Expose the existing eight devices consistently to EGL and CUDA; use only returned EGL CUDA handles in the same process, never infer handles or match by ordinal; fixed target context only"
+}

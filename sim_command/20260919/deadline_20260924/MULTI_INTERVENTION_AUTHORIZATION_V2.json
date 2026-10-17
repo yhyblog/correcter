@@ -1,0 +1,60 @@
+{
+  "schema": "corrector_deadline_addendum_v1",
+  "campaign_id": "corrector-sim-20260919",
+  "authorization_id": "A_D24_MULTI_INTERVENTION_PILOT_V1_R2",
+  "task_id": "A_D24_MULTI_INTERVENTION_PILOT_V1",
+  "revision": 2,
+  "status": "released",
+  "issued_at_utc": "2026-09-21T16:02:10.524418+00:00",
+  "owner": "A",
+  "owner_host": "trial-303224955-trialrun-303224955-worker-0",
+  "plan": {
+    "path": "deadline_20260924/MULTI_INTERVENTION_PILOT_V2.md",
+    "sha256": "40ac823e3ff55b0b59720dacdcf52e56958e3f3e80f729f9cbe1421d2cbff13a"
+  },
+  "cohort": {
+    "path": "deadline_20260924/MULTI_INTERVENTION_COHORT_V2.json",
+    "sha256": "5620b293ac444750226b38be4a60d0b6eb1717111da4a9f64263db52ec2d716b"
+  },
+  "base_sprint_authorization": {
+    "path": "deadline_20260924/AUTHORIZATION_V1.json",
+    "sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80"
+  },
+  "scientific_compute_authorized_now": true,
+  "priority": "interrupt_next_job_admission_before_large_corrector_eval; retain running jobs and N baselines",
+  "primary_arms": [
+    "R_once",
+    "R_multi",
+    "Post_once",
+    "Post_multi"
+  ],
+  "secondary_arms_if_ready": [
+    "Velocity_once",
+    "Velocity_multi"
+  ],
+  "episodes_per_arm": 20,
+  "control_steps_per_episode": 300,
+  "max_new_physical_rollout_attempts_including_corrected_retry": 160,
+  "counts_within_existing_A_sprint18000_cap": true,
+  "model_training_authorized": false,
+  "max_interventions": {
+    "once": 1,
+    "multi": null
+  },
+  "only_algorithm_change": "remove total intervention count cap; preserve all remaining trigger and execution conditions",
+  "strict_consistency_audit_required": false,
+  "requires_additional_release_or_preflight": false,
+  "automatic_next_arm_execution": true,
+  "old_completed_standalone_rerun_authorized": false,
+  "historical_once_result_reuse": "metadata-compatible selected repeat0 only; otherwise execute necessary once controls under new pilot run IDs",
+  "new_experiment_admission_cutoff_utc": "2026-09-23T12:00:00Z",
+  "result_path": "results/A/A_D24_MULTI_INTERVENTION_PILOT_V1",
+  "first_feedback": "R/Post20 table immediately; do not wait optionalVelocity",
+  "new_initial_states_authorized": 0,
+  "additional_repeats_authorized": 0,
+  "supersedes_authorization": {
+    "path": "deadline_20260924/MULTI_INTERVENTION_AUTHORIZATION_V1.json",
+    "sha256": "ef6879d2c7c640780bf66306248f884b811f3c8bec276c314855ce1de4a17b7f"
+  },
+  "user_override": "Reuse only20old initial states; no additional30"
+}

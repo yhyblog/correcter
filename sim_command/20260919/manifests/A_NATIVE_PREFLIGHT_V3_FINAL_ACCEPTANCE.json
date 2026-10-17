@@ -1,0 +1,238 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "reviewed_at_utc": "2026-09-19T20:33:57.487934+00:00",
+  "status": "finite_native_engineering_preflight_success_accepted",
+  "receipt": {
+    "path": "receipts/A/A10_PREFLIGHT_NATIVE_V3_RESULT.json",
+    "sha256": "b84b97c45adb20a608b35da2f49fe3a1d80711b8611b4aaa01349b31e06b18a6"
+  },
+  "report": {
+    "path": "receipts/A/A10_PREFLIGHT_NATIVE_V3_REPORT.md",
+    "sha256": "ddde49e9970691a919697d76c2c720bc1b7e013fca41c754a72018e8eef61e39"
+  },
+  "audit": {
+    "path": "work/A/A10_PREFLIGHT_NATIVE_V3_r1/FINAL_AUDIT.json",
+    "sha256": "fdb3746c21880f7db34de548b2a49b7f5b11e9eb1988082ff220dcb2c4376212"
+  },
+  "LAUNCH_RESULT": {
+    "path": "results/A/P10_launcher_runs/A10_PREFLIGHT_NATIVE_V3_r1_A_wave05/LAUNCH_RESULT.json",
+    "sha256": "8cefc762a40b2c1920c1e2c63caab528b44ed6bb4972e225eef38e990710e5b7"
+  },
+  "root_verification": {
+    "RESULT_artifact_references_SHA_and_size": 52,
+    "manifest_files_SHA_and_size": 67,
+    "ledger_reconciliation": {
+      "events.jsonl": {
+        "entered": 63,
+        "returned": 63,
+        "failed": 0,
+        "incomplete": 0,
+        "caps_respected": true
+      },
+      "initialization_events.jsonl": {
+        "entered": 5363,
+        "returned": 5363,
+        "failed": 0,
+        "incomplete": 0,
+        "caps_respected": true
+      },
+      "graphics_events.jsonl": {
+        "entered": 108,
+        "returned": 108,
+        "failed": 0,
+        "incomplete": 0,
+        "caps_respected": true
+      }
+    },
+    "five_raw50_plans_bitwise_equal": true,
+    "NPZ_PPM_pixels_identical_frames": 2,
+    "saved_PNG_views_visually_inspected": 2,
+    "PNG_provenance_SHA_verified": true,
+    "new_runtime_calls": 0
+  },
+  "visual_evidence": {
+    "images": [
+      {
+        "path": "work/A/A10_PREFLIGHT_NATIVE_V3_r1/RGB_views/RGB_diagnostic.png",
+        "sha256": "74f623dff65246bd5560863c04792f0df14a6a02bdd33e3cdfe02dde962dbf83"
+      },
+      {
+        "path": "work/A/A10_PREFLIGHT_NATIVE_V3_r1/RGB_views/RGB_post_control.png",
+        "sha256": "716e5b24ad3228142faf2384cdec040f09ba820130ab58a39f6d0f2918b7ce2e"
+      }
+    ],
+    "observation": "Both480x480images show the red robot arm and gripper, wooden table and upright shelf, blue block and green target marker from the same camera; visually consistent with shelf-place. Subtle post-control change does not establish task completion."
+  },
+  "independent_review": {
+    "agent": "/root/native_v3_result_audit",
+    "blocking_findings": []
+  },
+  "resource_counts": {
+    "simulator_attempts": 1,
+    "env_steps": 1,
+    "vla_sampling_calls": 5,
+    "flow_forward_calls": 50,
+    "vla_backward_calls": 0,
+    "critic_forward_calls": 0,
+    "critic_backward_calls": 0,
+    "monitor_calls": 0,
+    "optimizer_updates": 0,
+    "model_initializations": 1,
+    "environment_instances": 2,
+    "wrapper_instances": 1,
+    "taskset_constructions": 1,
+    "taskset_reset_calls": 50,
+    "wrapper_initialization_reset_calls": 1,
+    "initialization_reset_calls": 51,
+    "diagnostic_reset_calls": 1,
+    "environment_reset_calls": 52,
+    "reset_model_calls": 104,
+    "initialization_do_simulation_calls": 5200,
+    "initialization_physics_substeps": 26000,
+    "policy_do_simulation_calls": 1,
+    "policy_physics_substeps": 13,
+    "diagnostic_native_resets_returned": 1,
+    "diagnostic_observations_returned": 1,
+    "post_control_observations_returned": 1,
+    "complete_observations_returned": 2,
+    "usable_observation_artifacts": 2,
+    "completed_rollouts": 0,
+    "gpu_seconds": null,
+    "GPU_seconds_missing_reason": "No device utilization integral; scoped CUDA event timing below is not total GPU time",
+    "measured_outermost_device_seconds": 2.4808901672363284,
+    "measured_device_scope": "parent/child overlap excluded; sums measured intervals only, not total device utilization; compare only fixed single-worker timing subsets",
+    "real_sh_invocations": 1,
+    "release_claims": 1,
+    "native_nvml_identity_queries": 2,
+    "explicit_graphics_entered": 108,
+    "explicit_graphics_returned": 108,
+    "explicit_graphics_failed": 0,
+    "explicit_graphics_incomplete": 0,
+    "graphics_counts": {
+      "egl_device_enumerations": 1,
+      "egl_device_string_queries": 8,
+      "probe_explicit_egl_get_proc_address_calls": 5,
+      "egl_device_attribute_queries": 8,
+      "cuda_driver_initializations": 1,
+      "cuda_device_pci_queries": 8,
+      "egl_error_queries": 35,
+      "probe_explicit_driver_library_loads": 2,
+      "probe_explicit_cuda_symbol_lookups": 2,
+      "probe_explicit_egl_core_symbol_lookups": 11,
+      "cuda_device_count_queries": 0,
+      "cuda_uuid_queries": 0,
+      "cuda_error_string_queries": 0,
+      "egl_device_binary_queries": 0,
+      "egl_drm_string_queries": 0,
+      "egl_platform_display_calls": 1,
+      "egl_initialize_calls": 1,
+      "egl_choose_config_calls": 1,
+      "egl_bind_api_calls": 1,
+      "graphics_context_creations": 1,
+      "egl_make_current_calls": 2,
+      "egl_query_string_calls": 2,
+      "probe_explicit_gl_string_queries": 3,
+      "static_scene_constructions": 0,
+      "static_scene_data_constructions": 0,
+      "explicit_mj_forward_calls": 0,
+      "mujoco_render_context_creations": 1,
+      "mujoco_render_context_frees": 1,
+      "mujoco_scene_updates": 2,
+      "render_calls": 2,
+      "rgb_readback_calls": 2,
+      "egl_destroy_context_calls": 1,
+      "egl_terminate_calls": 1,
+      "egl_release_thread_calls": 1,
+      "mujoco_set_buffer_calls": 1,
+      "offscreen_viewer_creations": 1,
+      "policy_device_selections": 1,
+      "policy_device_property_queries": 1
+    },
+    "peak_total_GPU_memory_bytes": null,
+    "peak_pytorch_allocated_bytes": 9547717632,
+    "peak_pytorch_reserved_bytes": 9896460288,
+    "observed_peak_process_RSS_KiB": 39832356,
+    "observed_peak_process_HWM_KiB": 41252412,
+    "CPU_memory_scope": "Maximum sampled single matching process, not process-tree sum or guaranteed whole-wave peak",
+    "CPU_PNG_encodings": 2,
+    "extra_render_or_RGB_readback_calls": 0,
+    "extra_CPU_checker_invocations": 0,
+    "extra_GPU_queries_by_observer_or_audit": 0,
+    "extra_UUID_probes": 0,
+    "extra_large_weight_hashes": 0,
+    "deletions": 0,
+    "retries": 0,
+    "new_evidence_bytes_before_final_receipt": 6911273
+  },
+  "policy_UUID": {
+    "policy_uuid_guard_passed": true,
+    "actual_runtime_type": {
+      "module": "torch._C",
+      "qualname": "_CUuuid",
+      "trusted_class_identity_match": true
+    },
+    "conversion_calls": 1,
+    "conversion_error": null,
+    "format_valid": true,
+    "target_matches": true,
+    "torch_uuid_text": "17198167-95ac-ca23-d6a3-58bb5568a8fe",
+    "target_uuid": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe",
+    "physical_target": {
+      "pci_bus_id": "0000:0f:00.0",
+      "gpu_uuid": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe"
+    },
+    "selected_EGL_index": 0,
+    "selected_EGL_handle": 140021890646400,
+    "selected_CUDA_attribute_handle": 0,
+    "policy_logical_index": 0,
+    "after_torch_loader_snapshot_present": true,
+    "old_V2_runtime_type": null,
+    "old_V2_type_status": "unknown; not backfilled",
+    "independent_extra_UUID_probe": false,
+    "evidence": [
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_diagnostic_runs/ba0faa37ed325af8c2c61221310c8bb23f47fd10a109ff5a3d4847866d4f1f2a/policy_device_type.json",
+        "sha256": "b06a7f28d0820383dfef4400766ae9a51a52f89074e0b933d5bcba45a824e16b",
+        "size_bytes": 1029
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_diagnostic_runs/ba0faa37ed325af8c2c61221310c8bb23f47fd10a109ff5a3d4847866d4f1f2a/policy_device.json",
+        "sha256": "198e23672ebcec07784a6d3d2ef9d41b9bbeea728e6718720164f53ca6fe70e4",
+        "size_bytes": 1092
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_diagnostic_runs/ba0faa37ed325af8c2c61221310c8bb23f47fd10a109ff5a3d4847866d4f1f2a/device_mapping.json",
+        "sha256": "5e4458dd849257b904f130ebaa326d52702e44934185132b1ade121850b8e8ea",
+        "size_bytes": 14986
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_diagnostic_runs/ba0faa37ed325af8c2c61221310c8bb23f47fd10a109ff5a3d4847866d4f1f2a/loader_identity.json",
+        "sha256": "730b62f260ce7ade73b8c3fef9e6f8802fb31594d63eab79e64ef3226f619c18",
+        "size_bytes": 1544
+      }
+    ]
+  },
+  "accepted_findings": [
+    "One launch/claim/diagnostic;5native50flow and1real control step13substeps",
+    "52native resets/104reset_model/26000initialization substeps separately metered",
+    "108graphics calls returned,1EGL/MjrContext and2RGB observations with2usableNPZ",
+    "Real runtime Torch _CUuuid class identity, one conversion, canonical fixedUUID equality and after-Torch535loader verified",
+    "Same initial observation/noise yielded5identical raw50 plans withH-specific9/19/29/39/49remaining queues",
+    "One real transition links current/next observations, first raw action and seed",
+    "Cleanup completed; process group exited before all8holders restored"
+  ],
+  "scope_limits": [
+    "Finite engineering diagnostic only; no full episode success-rate sample",
+    "No D/G0/Q monitor/critic or real Post/Velocity numerical validation",
+    "No C10 intervention execution/recovery, MT50 adaptation or common training pool completion",
+    "2.480890s is scoped outer sampling CUDA-event total including first-call effects; not stable inference latency or total GPU seconds",
+    "PyTorch allocator and single-process RSS observations retain scope; total device peak/GPU-seconds unknown",
+    "Old native V2 runtime UUID type remains unknown"
+  ],
+  "CPU_audit_recovery": "Post-run NumPy current-process handle restriction corrected in CPU auditor; no formal compute retry or extra render",
+  "closure": "releases/P10_A_NATIVE_PREFLIGHT_V3_CLOSED.json",
+  "formal_task_success_rate_sample": false,
+  "holder_restored_count": 8,
+  "retry_authorized": false,
+  "remaining_budget_reusable": false
+}

@@ -1,0 +1,1117 @@
+{
+  "schema": "corrector_queue_control_v1",
+  "revision": 60,
+  "updated_at_utc": "2026-09-23T15:44:03.439665+00:00",
+  "authorization": {
+    "path": "persistent_queue/AUTHORIZATION_V2.json",
+    "sha256": "d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928"
+  },
+  "global_stop": false,
+  "desired_state": "run_fixed_post_demo_video_queues",
+  "nodes": {
+    "A": {
+      "desired_state": "claim_then_run_finite_post_demo_video_capture",
+      "enabled": true,
+      "actual_state": "velocity_r2_running_H30",
+      "control_plane_task": "A_QUEUE_BOOTSTRAP_V1",
+      "control_plane_task_revision": 2,
+      "next_formal_concurrency": 192,
+      "first_formal_wave_release_required": null,
+      "resource_preparation_task": null,
+      "completion_event_task": "A_LONG_TASK_WAKEUP_V1",
+      "legacy_exit_gate": {
+        "satisfied": true,
+        "closure": {
+          "path": "releases/P11_A_COMMON_POOL_BATCH3_V1_CLOSED.json",
+          "sha256": "15c912600bb8269eaffdcbfa124ac70511f41a4bb4dafb85a11a6686614157b5"
+        },
+        "acceptance": {
+          "path": "manifests/A11_COMMON_POOL_BATCH3_V1_ACCEPTANCE.json",
+          "sha256": "a1ba9ecf9a6c6fa4a5fd35fd38d71cc338e2c2b7e71063521bcfa1aeca172592"
+        },
+        "automatic_first8_compute_unlocked": false
+      },
+      "priority_task": "A_POST_DEMO_VIDEOS_V1",
+      "deadline_authorization": {
+        "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+        "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+      },
+      "old_queue8_collection_gate_disposition": "superseded_for_new_sprint_tasks; no475collection; closed legacy releases unchanged",
+      "priority_authorization": {
+        "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+        "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+      },
+      "large_new_corrector_eval_waits_for_pilot_design_decision": false,
+      "baseline_N_and_existing_jobs_continue": true,
+      "actual_runtime_receipt": "receipts/A/A_D24_L11_RENDER_RECOVERY_V1_RESULT_r1.json",
+      "pilot_scope_approval_sufficient": true,
+      "main_intervention_cap": null,
+      "main_eval_admission": "only_new_crossbase_H_sweep_scope",
+      "analysis_decision": "deadline_20260924/MAIN_ONCE_CONTINUATION.md",
+      "pilot_complete": true,
+      "occupancy_adapter_delivery": {
+        "status": "CPU_only_accepted",
+        "receipt": "receipts/A/A_QUEUE_BOOTSTRAP_V1_r2_OCCUPANCY_OVERRIDE_V1_RESULT.json",
+        "analysis": "deadline_20260924/OCCUPANCY_ADAPTER_REVIEW.json",
+        "GPU_deployment_proven": true,
+        "scientific_launch_prerequisite": false,
+        "first_real_handoff_receipt": "receipts/A/A_D24_MAIN_ONCE_V1_RESULT_r1.json",
+        "deployment_evidence_scope": "start handoff only; ongoing main-chain terminal lifecycle not yet observed"
+      },
+      "start_acceptance": "deadline_20260924/GAF_FIT_COMPLETE_EVAL_START_ACCEPTANCE.json",
+      "running_snapshot_utc": null,
+      "deferred_resource_preparation_task": "A_QUEUE8_ADMISSION_PREP_V1",
+      "deferred_resource_disposition": "deadline_20260924/DELAYED_QUEUE8_PREP_DISPOSITION.json",
+      "startup_event_ACK_mode": "active_original_session_read_per_user_report",
+      "offline_automatic_wakeup_proven": false,
+      "wakeup_status": "DEPLOYED_CALLBACK_PENDING",
+      "wakeup_receipt": "receipts/A/A_LONG_TASK_WAKEUP_V1_RESULT.json",
+      "actual_callback_ACK_verified": false,
+      "wakeup_validation_is_scientific_dependency": false,
+      "h10_analysis": "deadline_20260924/H10_MAIN_ANALYSIS.json",
+      "completed_main_cells": 16,
+      "total_main_cells": 16,
+      "cell_event_ACK_mode": "active_original_session_read_not_offline_resume",
+      "h_sweep_results": "deadline_20260924/H_SWEEP_RESULTS.md",
+      "main_final_acceptance": "deadline_20260924/MAIN_FINAL_ACCEPTANCE.json",
+      "remaining_main_episodes": 0,
+      "actual_runtime_is_terminal": true,
+      "continuation_brief": "tasks/A_D24_FULL_Q_AUTORUN_HANDOFF_V2.md",
+      "continuation_status": "new_qualitative_recording_assignment",
+      "next_scientific_assignment": null,
+      "science_supplement": {
+        "path": "deadline_20260924/E3_UNSTARTED_CONTINUATION_AUTHORIZATION_V1.json",
+        "sha256": "3a6c62f0a40b4aa5eb08dafa9cef65d15717cb7edcbe505bc951ab37c40f79ad"
+      },
+      "actual_models_ready_snapshot": 8,
+      "new_E3_completed_snapshot": 243,
+      "E3_combined_terminal_snapshot": 500,
+      "next_authorized_stage": null,
+      "E3_VLA_Corrector_complete": true,
+      "E3_combined_successes": 319,
+      "remaining_E3_VLA_episodes": 0,
+      "GAF_fit_updates": 30000,
+      "GAF_terminal_snapshot": 500,
+      "GAF_target": 500,
+      "GAF_successes": 315,
+      "GAF_final_result": true,
+      "GAF_acceptance": "deadline_20260924/GAF_COMPLETE_ACCEPTANCE_20260922.json",
+      "completion": "deadline_20260924/E5_OURS_COMPLETE_ACCEPTANCE_20260922.json",
+      "remaining_GAF_episodes": 0,
+      "failure_disposition": "deadline_20260924/A_LIBERO_FULL_NATIVE_SCIENTIFIC_GAP_ACCEPTANCE.json",
+      "next_results_assignment": "A_D24_PAPER_RESULTS_ASSEMBLY_V1",
+      "new_assignment_acknowledged": true,
+      "recovery_directive": {
+        "path": "deadline_20260924/A_TRIGGER_PUBLICATION_REPAIR_CONTINUATION_V1.md",
+        "sha256": "fa42cd650ec8171bc4a831c338494bc6bd06319b013d8e45d4537f24cb8cfece"
+      },
+      "trigger_modes_completion": {
+        "task_id": "A_D24_VELOCITY_TRIGGER_MODES_V1",
+        "acceptance": {
+          "path": "deadline_20260924/TRIGGER_MODES_FINAL_ANALYSIS_ACCEPTANCE_20260922.json",
+          "sha256": "d6d4140ae3eda364e0797e255762cfc2606281f4f05690c131137ebc0a0b7cf2"
+        },
+        "valid": 5000,
+        "technical_history": 16,
+        "unresolved": 0
+      },
+      "cumulative_attempt_cap_current": 36700,
+      "admission_override": {
+        "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+        "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+      },
+      "priority_action": "record_new_authorized_paired_demonstrations",
+      "effective_holder_policy": "all_off_entire_formal_family",
+      "workers_per_GPU_target": 24,
+      "authorized_followups": [
+        {
+          "task_id": "A_POST_DEMO_VIDEOS_V1",
+          "authorization": {
+            "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+            "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+          },
+          "candidates": {
+            "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/CANDIDATES_A.jsonl",
+            "sha256": "30e947bc5151f79c48843abf90488ba1154b7102fd37270d5223e38e86e25952"
+          },
+          "scope": "qualitative_video_capture_only"
+        }
+      ],
+      "selection_required_before_new_selected_tests": true,
+      "selection_rule_override": {
+        "path": "deadline_20260924/L11_RETEST_V1/L11_SELECTION_OVERRIDE.json",
+        "sha256": "2006bc5818911d80a7b325bc91699c789675bb62b75647a4abcc8012119dffe2"
+      },
+      "selection_criterion": "user_fixed_L11_no_new_selection",
+      "Velocity_runs_but_not_current_paper": true,
+      "active_runtime_authorization": {
+        "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+        "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+      },
+      "followup_authorization": null,
+      "runtime_compatibility_directive": {
+        "path": "deadline_20260924/AUTORUN_LIVE_CHAIN_COMPATIBILITY_V1.json",
+        "sha256": "2ae5a001cec168399a9733d038ed56d1ebeefd311081999f45429dc75e24ac16"
+      },
+      "autonomous_recovery_policy": {
+        "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V1.json",
+        "sha256": "87878b0e2019048935904d639d1d15a1af9f0778047171a508054fecaadd4ab0"
+      },
+      "analysis_wait_timeout_seconds": 1800,
+      "control_plane_followups": [
+        {
+          "task_id": "A_D24_AUTORECOVERY_QUEUE_RULE_V1",
+          "task_revision": 1,
+          "revision": 1,
+          "task": "tasks/A_D24_AUTORECOVERY_QUEUE_RULE_V1.md",
+          "authorization": {
+            "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V1.json",
+            "sha256": "87878b0e2019048935904d639d1d15a1af9f0778047171a508054fecaadd4ab0"
+          },
+          "scope": "CPU_only_operational_recovery_and_queue_progress",
+          "does_not_replace_primary_task": true
+        },
+        {
+          "task_id": "A_D24_QUOTA_INDEPENDENT_QUEUE_V1",
+          "task_revision": 1,
+          "revision": 1,
+          "task": "tasks/A_D24_QUOTA_INDEPENDENT_QUEUE_V1.md",
+          "authorization": {
+            "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+            "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+          },
+          "scope": "CPU_only_quota_independent_queue_deployment",
+          "does_not_replace_primary_task": true
+        }
+      ],
+      "quota_independent_autorun": {
+        "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+        "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+      },
+      "remaining_assigned_scientific_units": 0,
+      "completion_rollup": {
+        "path": "deadline_20260924/FULL_Q_FINAL_COMPLETION_20260923.json",
+        "sha256": "9608d94ca4a888fac06d5edf2cfaa0fe1118702ecede69529d1f90dd85b56305"
+      },
+      "previous_primary_task": "A_D24_CROSSBASE_H_SWEEP_V1",
+      "task_id": "A_POST_DEMO_VIDEOS_V1",
+      "task": "tasks/A_POST_DEMO_VIDEOS_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+        "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+      },
+      "accepted_Post_selection": {
+        "chosen_loss": "L11",
+        "fit_seed": 9101,
+        "Post_only": true,
+        "Velocity_inherits": true,
+        "selection": {
+          "path": "deadline_20260924/L11_RETEST_V1/L11_SELECTION_OVERRIDE.json",
+          "sha256": "2006bc5818911d80a7b325bc91699c789675bb62b75647a4abcc8012119dffe2"
+        },
+        "selection_basis": "explicit_user_revision_after_Post_mean_tie_stability_comparison",
+        "prior_L01_selection_preserved": true,
+        "selection_50_overlap_main500_disclosed": true
+      },
+      "branches_per_GPU_target": 24,
+      "node_attempt_cap_current": 36700,
+      "current_task_attempt_cap": 212,
+      "evaluation_concurrency_policy": {
+        "path": "deadline_20260924/L11_RETEST_V1/CONCURRENCY_192.md",
+        "sha256": "b87c88e9feb678b657b6d404a5c715f27eb7c52077f49f63e122d45cfb6f18eb"
+      },
+      "historical_authorized_followups": [
+        {
+          "task_id": "A_D24_FULL_Q_LOSS_SELECTION_V1",
+          "task_revision": 1,
+          "task": "tasks/A_D24_FULL_Q_LOSS_SELECTION_V1.md",
+          "authorization": {
+            "path": "deadline_20260924/FULL_Q_LOSS_SELECTION_AUTHORIZATION_V1.json",
+            "sha256": "8fc0bf2c7c0c761d9fba424fb7fb127af8a9c505668fccd7231126535c6422c1"
+          },
+          "admission_override": {
+            "path": "deadline_20260924/Q_LOSS_PRIORITY_OVERRIDE_V1.json",
+            "sha256": "7e7c84f47284a71dee130bae1239ee3d18f04b176bbea7ad5a66e06da792b5a7"
+          },
+          "start_condition": "CPU_now; GPU_after_own_family_exit; native_test_after_fixed_scientific_selection",
+          "planned_episodes": 9600,
+          "stage_attempt_cap": 10100
+        },
+        {
+          "task_id": "A_D24_FULL_Q_AUTORUN_HANDOFF_V2",
+          "task_revision": 1,
+          "task": "tasks/A_D24_FULL_Q_AUTORUN_HANDOFF_V2.md",
+          "authorization": {
+            "path": "deadline_20260924/FULL_Q_AUTORUN_AUTHORIZATION_V2.json",
+            "sha256": "fb15e23ad4ed75eaa1b9490784d58dc9dc925e440194e99cab066ae11af6414f"
+          },
+          "start_condition": "CPU_now; selection_and_exact_ownership_then_own_predecessor_family_exit",
+          "priority": "P0_auto_chain_reallocation"
+        }
+      ],
+      "urgent_user_override": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/AUTHORIZATION.json",
+        "sha256": "4f8406e67e2d0b73beda277b3bc633749060f30e8420e8513285780a06952c5f"
+      },
+      "last_completed_task": "A_D24_L11_RENDER_RECOVERY_V1",
+      "latest_L11_final_completion": {
+        "path": "deadline_20260924/L11_FINAL_ROLLUP_20260923/FINAL_ACCEPTANCE.json",
+        "sha256": "6cb70c5ae875b632d14c11d346acdd667c99f0cc1ae57ae8b673aca1f05306e3"
+      },
+      "remaining_scientific_units": 0,
+      "completed_authorized_followups": [
+        {
+          "task_id": "A_D24_L11_RENDER_RECOVERY_V1",
+          "revision": 1,
+          "task_revision": 1,
+          "task": "tasks/A_D24_L11_RENDER_RECOVERY_V1.md",
+          "authorization": {
+            "path": "deadline_20260924/L11_RECOVERY_V1/AUTHORIZATION.json",
+            "sha256": "ca6f92258260815495a016d8c25eb079e9e0949a38a2c5ece6b836c2ef6d0ccc"
+          },
+          "planned_recovery_units": 1900,
+          "stage_attempt_cap": 2100
+        }
+      ],
+      "new_scientific_admissions_enabled": false,
+      "task_revision": 1,
+      "brief": "tasks/A_POST_DEMO_VIDEOS_V1.md",
+      "ACK_received": false,
+      "scientific_launch_observed": false,
+      "actual_execution_state": "dispatched_not_yet_acknowledged",
+      "logical_concurrency_target": 192,
+      "selection_required": false,
+      "selection_status": "fixed_L11_user_choice",
+      "complete_cells": 7,
+      "planned_cells": 8,
+      "valid_snapshot": 3994,
+      "state": "velocity_r2_running_H30",
+      "status": "running",
+      "snapshot_utc": "2026-09-23T13:50:38.539322+00:00",
+      "heartbeat_evidence": "deadline_20260924/CROSSBASE_H_SWEEP_V1/analysis/20260923T134924Z/A_HEARTBEAT_AT_REVIEW.json",
+      "analysis_status_evidence": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/analysis/20260923T134924Z/SCIENTIFIC_STATUS.json",
+        "sha256": "345b9c7742e8085251b59c0e405231263d6ffe6d5a99e8157397fed1310c736e"
+      },
+      "revision": 1,
+      "demo_recording_admissions_enabled": true,
+      "remaining_recording_candidates": 53
+    },
+    "B": {
+      "desired_state": "claim_then_run_finite_post_demo_video_capture",
+      "enabled": true,
+      "actual_state": "velocity_r3_running_H40",
+      "control_plane_task": "B_QUEUE_JOIN_V1",
+      "control_plane_task_revision": 2,
+      "collection_source_limit": 0,
+      "completion_event_task": "B_LONG_TASK_WAKEUP_V1",
+      "priority_task": "B_POST_DEMO_VIDEOS_V1",
+      "deadline_authorization": {
+        "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+        "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+      },
+      "actual_runtime_receipt": "receipts/B/B_D24_L11_RENDER_RECOVERY_V1_RESULT_r1.json",
+      "running_snapshot_utc": "2026-09-22T05:24:20.091401+00:00",
+      "snapshot_is_not_current_runtime": true,
+      "priority_authorization": {
+        "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+        "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+      },
+      "continuation_brief": "tasks/B_D24_PI05_SELECTED_H20_H30_V1.md",
+      "continuation_status": "new_qualitative_recording_assignment",
+      "next_formal_concurrency": 192,
+      "Smol_X_Velocity_owner": "C",
+      "scientific_priority": {
+        "path": "deadline_20260924/OURS_FIRST_PRIORITY_V1.json",
+        "sha256": "f45e4048ff1da43328e5ac9576fbc4be9716e8778393e4ead3b731060e220ce8"
+      },
+      "progress_snapshot": "deadline_20260924/PROGRESS_SNAPSHOT_20260922_0752.json",
+      "actual_runtime_is_terminal": true,
+      "next_scientific_assignment": null,
+      "completion": "deadline_20260924/B_EXTENSION_COMPLETE_ACCEPTANCE_20260922.json",
+      "new_assignment_acknowledged": true,
+      "authorized_followups": [
+        {
+          "task_id": "B_POST_DEMO_VIDEOS_V1",
+          "authorization": {
+            "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+            "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+          },
+          "candidates": {
+            "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/CANDIDATES_B.jsonl",
+            "sha256": "b2a7978f7d00faf94ace2150ca5b2160a097910b1162b08eb4cef1faa814b2cd"
+          },
+          "scope": "qualitative_video_capture_only"
+        }
+      ],
+      "cumulative_attempt_cap_current": 30250,
+      "trigger_modes_completion": {
+        "task_id": "B_D24_POST_TRIGGER_MODES_V1",
+        "acceptance": {
+          "path": "deadline_20260924/TRIGGER_MODES_FINAL_ANALYSIS_ACCEPTANCE_20260922.json",
+          "sha256": "d6d4140ae3eda364e0797e255762cfc2606281f4f05690c131137ebc0a0b7cf2"
+        },
+        "valid": 5000,
+        "technical_history": 9,
+        "unresolved": 0
+      },
+      "admission_override": {
+        "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+        "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+      },
+      "priority_action": "record_new_authorized_paired_demonstrations",
+      "effective_holder_policy": "all_off_entire_formal_family",
+      "workers_per_GPU_target": 24,
+      "selection_required_before_new_selected_tests": true,
+      "selection_rule_override": {
+        "path": "deadline_20260924/L11_RETEST_V1/L11_SELECTION_OVERRIDE.json",
+        "sha256": "2006bc5818911d80a7b325bc91699c789675bb62b75647a4abcc8012119dffe2"
+      },
+      "selection_criterion": "user_fixed_L11_no_new_selection",
+      "Velocity_runs_but_not_current_paper": true,
+      "active_runtime_authorization": {
+        "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+        "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+      },
+      "followup_authorization": null,
+      "runtime_compatibility_directive": {
+        "path": "deadline_20260924/AUTORUN_LIVE_CHAIN_COMPATIBILITY_V1.json",
+        "sha256": "2ae5a001cec168399a9733d038ed56d1ebeefd311081999f45429dc75e24ac16"
+      },
+      "autonomous_recovery_policy": {
+        "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V1.json",
+        "sha256": "87878b0e2019048935904d639d1d15a1af9f0778047171a508054fecaadd4ab0"
+      },
+      "analysis_wait_timeout_seconds": 1800,
+      "control_plane_followups": [
+        {
+          "task_id": "B_D24_AUTORECOVERY_QUEUE_RULE_V1",
+          "task_revision": 1,
+          "revision": 1,
+          "task": "tasks/B_D24_AUTORECOVERY_QUEUE_RULE_V1.md",
+          "authorization": {
+            "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V1.json",
+            "sha256": "87878b0e2019048935904d639d1d15a1af9f0778047171a508054fecaadd4ab0"
+          },
+          "scope": "CPU_only_operational_recovery_and_queue_progress",
+          "does_not_replace_primary_task": true
+        },
+        {
+          "task_id": "B_D24_QUOTA_INDEPENDENT_QUEUE_V1",
+          "task_revision": 1,
+          "revision": 1,
+          "task": "tasks/B_D24_QUOTA_INDEPENDENT_QUEUE_V1.md",
+          "authorization": {
+            "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+            "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+          },
+          "scope": "CPU_only_quota_independent_queue_deployment",
+          "does_not_replace_primary_task": true
+        },
+        {
+          "task_id": "B_D24_PUBLICATION_MODULE_REPAIR_V1",
+          "task_revision": 1,
+          "revision": 1,
+          "task": "tasks/B_D24_PUBLICATION_MODULE_REPAIR_V1.md",
+          "authorization": {
+            "path": "deadline_20260924/B_H20_PUBLICATION_MODULE_REPAIR_DECISION_V1.json",
+            "sha256": "b09d76aa5932ee0bcab6aa3f57d86d1270dcdfd1416824de92f85dfb222217f1"
+          },
+          "scope": "CPU_only_package_repair_then_original_authorized_continuation",
+          "does_not_replace_primary_task": true
+        }
+      ],
+      "quota_independent_autorun": {
+        "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+        "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+      },
+      "remaining_assigned_scientific_units": 0,
+      "completion_rollup": {
+        "path": "deadline_20260924/FULL_Q_FINAL_COMPLETION_20260923.json",
+        "sha256": "9608d94ca4a888fac06d5edf2cfaa0fe1118702ecede69529d1f90dd85b56305"
+      },
+      "previous_primary_task": "B_D24_CROSSBASE_H_SWEEP_V1",
+      "task_id": "B_POST_DEMO_VIDEOS_V1",
+      "task": "tasks/B_POST_DEMO_VIDEOS_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+        "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+      },
+      "accepted_Post_selection": {
+        "chosen_loss": "L11",
+        "fit_seed": 9101,
+        "Post_only": true,
+        "Velocity_inherits": true,
+        "selection": {
+          "path": "deadline_20260924/L11_RETEST_V1/L11_SELECTION_OVERRIDE.json",
+          "sha256": "2006bc5818911d80a7b325bc91699c789675bb62b75647a4abcc8012119dffe2"
+        },
+        "selection_basis": "explicit_user_revision_after_Post_mean_tie_stability_comparison",
+        "prior_L01_selection_preserved": true,
+        "selection_50_overlap_main500_disclosed": true
+      },
+      "branches_per_GPU_target": 24,
+      "node_attempt_cap_current": 30250,
+      "current_task_attempt_cap": 208,
+      "evaluation_concurrency_policy": {
+        "path": "deadline_20260924/L11_RETEST_V1/CONCURRENCY_192.md",
+        "sha256": "b87c88e9feb678b657b6d404a5c715f27eb7c52077f49f63e122d45cfb6f18eb"
+      },
+      "historical_authorized_followups": [
+        {
+          "task_id": "B_D24_SMOL_MULTI_EVAL_V1",
+          "task_revision": 1,
+          "task": "tasks/B_D24_SMOL_MULTI_EVAL_V1.md",
+          "authorization": {
+            "path": "deadline_20260924/MULTI_PRIMARY_VALIDATION_AUTHORIZATION_V1.json",
+            "sha256": "767685a6fd14840f1f04001e14cf01980a17810be5d044dd0db9d665d7d05699"
+          },
+          "start_condition": "CPU_now; GPU_after_own_original_chain_terminal",
+          "predecessor": "B_D24_SMOL_AUX_RETRAIN_V1",
+          "planned_episodes": 1500,
+          "stage_attempt_cap": 1650,
+          "cumulative_attempt_cap": 20000
+        },
+        {
+          "task_id": "B_D24_FULL_Q_LOSS_REFRESH_V1",
+          "task_revision": 1,
+          "task": "tasks/B_D24_FULL_Q_LOSS_REFRESH_V1.md",
+          "authorization": {
+            "path": "deadline_20260924/FULL_Q_LOSS_SELECTION_AUTHORIZATION_V1.json",
+            "sha256": "8fc0bf2c7c0c761d9fba424fb7fb127af8a9c505668fccd7231126535c6422c1"
+          },
+          "admission_override": {
+            "path": "deadline_20260924/Q_LOSS_PRIORITY_OVERRIDE_V1.json",
+            "sha256": "7e7c84f47284a71dee130bae1239ee3d18f04b176bbea7ad5a66e06da792b5a7"
+          },
+          "start_condition": "CPU_now; GPU_after_own_family_exit; native_test_after_fixed_scientific_selection",
+          "planned_episodes": 1000,
+          "stage_attempt_cap": 1100
+        },
+        {
+          "task_id": "B_D24_PI05_SELECTED_H20_H30_V1",
+          "task_revision": 1,
+          "task": "tasks/B_D24_PI05_SELECTED_H20_H30_V1.md",
+          "authorization": {
+            "path": "deadline_20260924/FULL_Q_AUTORUN_AUTHORIZATION_V2.json",
+            "sha256": "fb15e23ad4ed75eaa1b9490784d58dc9dc925e440194e99cab066ae11af6414f"
+          },
+          "start_condition": "CPU_now; selection_and_exact_ownership_then_own_predecessor_family_exit",
+          "priority": "P0_auto_chain_reallocation"
+        }
+      ],
+      "urgent_user_override": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/AUTHORIZATION.json",
+        "sha256": "4f8406e67e2d0b73beda277b3bc633749060f30e8420e8513285780a06952c5f"
+      },
+      "last_completed_task": "B_D24_L11_RENDER_RECOVERY_V1",
+      "latest_L11_final_completion": {
+        "path": "deadline_20260924/L11_FINAL_ROLLUP_20260923/FINAL_ACCEPTANCE.json",
+        "sha256": "6cb70c5ae875b632d14c11d346acdd667c99f0cc1ae57ae8b673aca1f05306e3"
+      },
+      "remaining_scientific_units": 0,
+      "completed_authorized_followups": [
+        {
+          "task_id": "B_D24_L11_RENDER_RECOVERY_V1",
+          "revision": 1,
+          "task_revision": 1,
+          "task": "tasks/B_D24_L11_RENDER_RECOVERY_V1.md",
+          "authorization": {
+            "path": "deadline_20260924/L11_RECOVERY_V1/AUTHORIZATION.json",
+            "sha256": "ca6f92258260815495a016d8c25eb079e9e0949a38a2c5ece6b836c2ef6d0ccc"
+          },
+          "planned_recovery_units": 1000,
+          "stage_attempt_cap": 1100
+        }
+      ],
+      "next_authorized_stage": null,
+      "new_scientific_admissions_enabled": false,
+      "task_revision": 1,
+      "brief": "tasks/B_POST_DEMO_VIDEOS_V1.md",
+      "ACK_received": false,
+      "scientific_launch_observed": false,
+      "actual_execution_state": "dispatched_not_yet_acknowledged",
+      "logical_concurrency_target": 192,
+      "main_intervention_cap": null,
+      "selection_required": false,
+      "selection_status": "fixed_L11_user_choice",
+      "main_eval_admission": "only_new_crossbase_H_sweep_scope",
+      "complete_cells": 6,
+      "planned_cells": 8,
+      "valid_snapshot": 3055,
+      "state": "velocity_r3_running_H40",
+      "status": "running",
+      "snapshot_utc": "2026-09-23T13:50:38.539322+00:00",
+      "heartbeat_evidence": "deadline_20260924/CROSSBASE_H_SWEEP_V1/analysis/20260923T134924Z/B_HEARTBEAT_AT_REVIEW.json",
+      "analysis_status_evidence": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/analysis/20260923T134924Z/SCIENTIFIC_STATUS.json",
+        "sha256": "345b9c7742e8085251b59c0e405231263d6ffe6d5a99e8157397fed1310c736e"
+      },
+      "analysis_decision_ref": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/B_RECOVERY_DECISION_V2.json",
+        "sha256": "111cb271708540bf10cd3dddc17b95cc3f8017f0dc6fd6c202a2db6e5115c415"
+      },
+      "revision": 1,
+      "demo_recording_admissions_enabled": true,
+      "remaining_recording_candidates": 52
+    },
+    "C": {
+      "enabled": true,
+      "desired_state": "claim_then_run_finite_post_demo_video_capture",
+      "actual_state": "accepted_complete",
+      "priority_task": "C_POST_DEMO_VIDEOS_V1",
+      "priority_authorization": {
+        "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+        "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+      },
+      "task": "tasks/C_POST_DEMO_VIDEOS_V1.md",
+      "onboarding": "deadline_20260924/C_SERVER_ONBOARDING.md",
+      "next_formal_concurrency": 192,
+      "owner_host": "trial-303269581-trialrun-303269581-worker-0",
+      "original_thread_id": "01a0c793-10d2-7791-a250-fd65d88e1ccb",
+      "identity_path": "nodes/C/identity.json",
+      "deployment_required": true,
+      "shared_package_required": false,
+      "per_batch_approval_required": false,
+      "remaining_collection_source_limit": 0,
+      "completion_event_policy": "fixed_C_original_thread_host_scoped_outbox; no LLM polling",
+      "actual_runtime_receipt": "receipts/C/C_D24_L11_RENDER_RECOVERY_V1_RESULT_r1.json",
+      "scientific_priority": {
+        "path": "deadline_20260924/OURS_FIRST_PRIORITY_V1.json",
+        "sha256": "f45e4048ff1da43328e5ac9576fbc4be9716e8778393e4ead3b731060e220ce8"
+      },
+      "actual_runtime_is_terminal": true,
+      "completion": "deadline_20260924/C_MW_VELOCITY_COMPLETE_ACCEPTANCE_20260922.json",
+      "next_scientific_assignment": null,
+      "continuation_brief": "tasks/C_D24_PI05_SELECTED_H40_H50_V1.md",
+      "continuation_status": "new_qualitative_recording_assignment",
+      "new_assignment_acknowledged": true,
+      "new_dispatch_notification": "original C task ACK observed",
+      "task_discovery_repair": {
+        "path": "deadline_20260924/C_TASK_DISCOVERY_AUTHORIZATION_V1.json",
+        "sha256": "eea53f22757c4976bb54b9995d79cc2abcb16d769adb4003d7ebf3ebb6583a5a"
+      },
+      "task_discovery_deployed": true,
+      "authorized_followups": [
+        {
+          "task_id": "C_POST_DEMO_VIDEOS_V1",
+          "authorization": {
+            "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+            "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+          },
+          "candidates": {
+            "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/CANDIDATES_C.jsonl",
+            "sha256": "5d5cef934f9d98031ee80d2674d810d739a8fd49f94aa5de0a32531e51daf3ec"
+          },
+          "scope": "qualitative_video_capture_only"
+        }
+      ],
+      "cumulative_attempt_cap_current": 25150,
+      "trigger_modes_completion": {
+        "task_id": "C_D24_R_TRIGGER_MODES_V1",
+        "acceptance": {
+          "path": "deadline_20260924/TRIGGER_MODES_FINAL_ANALYSIS_ACCEPTANCE_20260922.json",
+          "sha256": "d6d4140ae3eda364e0797e255762cfc2606281f4f05690c131137ebc0a0b7cf2"
+        },
+        "valid": 5000,
+        "technical_history": 0,
+        "unresolved": 0
+      },
+      "task_available_original_thread_ACK_verified": true,
+      "task_discovery_receipt": "receipts/C/C_TASK_DISCOVERY_SERVICE_V1_RESULT.json",
+      "offline_resume_verified": false,
+      "admission_override": {
+        "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+        "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+      },
+      "priority_action": "record_new_authorized_paired_demonstrations",
+      "effective_holder_policy": "all_off_entire_formal_family",
+      "workers_per_GPU_target": 24,
+      "selection_required_before_new_selected_tests": true,
+      "selection_rule_override": {
+        "path": "deadline_20260924/L11_RETEST_V1/L11_SELECTION_OVERRIDE.json",
+        "sha256": "2006bc5818911d80a7b325bc91699c789675bb62b75647a4abcc8012119dffe2"
+      },
+      "selection_criterion": "user_fixed_L11_no_new_selection",
+      "Velocity_runs_but_not_current_paper": true,
+      "active_runtime_authorization": {
+        "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+        "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+      },
+      "followup_authorization": null,
+      "runtime_compatibility_directive": {
+        "path": "deadline_20260924/AUTORUN_LIVE_CHAIN_COMPATIBILITY_V1.json",
+        "sha256": "2ae5a001cec168399a9733d038ed56d1ebeefd311081999f45429dc75e24ac16"
+      },
+      "autonomous_recovery_policy": {
+        "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V2.json",
+        "sha256": "0e0c6a309bf90c1d79d75d34a7d96470704c60e084c9b05b76621115341f82f7"
+      },
+      "analysis_wait_timeout_seconds": 1800,
+      "control_plane_followups": [
+        {
+          "task_id": "C_D24_AUTORECOVERY_QUEUE_RULE_V1",
+          "task_revision": 1,
+          "revision": 1,
+          "task": "tasks/C_D24_AUTORECOVERY_QUEUE_RULE_V1.md",
+          "authorization": {
+            "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V2.json",
+            "sha256": "0e0c6a309bf90c1d79d75d34a7d96470704c60e084c9b05b76621115341f82f7"
+          },
+          "scope": "CPU_only_operational_recovery_and_queue_progress",
+          "does_not_replace_primary_task": true
+        },
+        {
+          "task_id": "C_D24_QUOTA_INDEPENDENT_QUEUE_V1",
+          "task_revision": 1,
+          "revision": 1,
+          "task": "tasks/C_D24_QUOTA_INDEPENDENT_QUEUE_V1.md",
+          "authorization": {
+            "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+            "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+          },
+          "scope": "CPU_only_quota_independent_queue_deployment",
+          "does_not_replace_primary_task": true
+        }
+      ],
+      "quota_independent_autorun": {
+        "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+        "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+      },
+      "remaining_assigned_scientific_units": 0,
+      "completion_rollup": {
+        "path": "deadline_20260924/FULL_Q_FINAL_COMPLETION_20260923.json",
+        "sha256": "9608d94ca4a888fac06d5edf2cfaa0fe1118702ecede69529d1f90dd85b56305"
+      },
+      "previous_primary_task": "C_D24_CROSSBASE_H_SWEEP_V1",
+      "task_id": "C_POST_DEMO_VIDEOS_V1",
+      "authorization": {
+        "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+        "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+      },
+      "accepted_Post_selection": {
+        "chosen_loss": "L11",
+        "fit_seed": 9101,
+        "Post_only": true,
+        "Velocity_inherits": true,
+        "selection": {
+          "path": "deadline_20260924/L11_RETEST_V1/L11_SELECTION_OVERRIDE.json",
+          "sha256": "2006bc5818911d80a7b325bc91699c789675bb62b75647a4abcc8012119dffe2"
+        },
+        "selection_basis": "explicit_user_revision_after_Post_mean_tie_stability_comparison",
+        "prior_L01_selection_preserved": true,
+        "selection_50_overlap_main500_disclosed": true
+      },
+      "branches_per_GPU_target": 24,
+      "node_attempt_cap_current": 25150,
+      "current_task_attempt_cap": 208,
+      "evaluation_concurrency_policy": {
+        "path": "deadline_20260924/L11_RETEST_V1/CONCURRENCY_192.md",
+        "sha256": "b87c88e9feb678b657b6d404a5c715f27eb7c52077f49f63e122d45cfb6f18eb"
+      },
+      "historical_authorized_followups": [
+        {
+          "task_id": "C_D24_XVLA_MULTI_EVAL_V1",
+          "task_revision": 1,
+          "task": "tasks/C_D24_XVLA_MULTI_EVAL_V1.md",
+          "authorization": {
+            "path": "deadline_20260924/MULTI_PRIMARY_VALIDATION_AUTHORIZATION_V1.json",
+            "sha256": "767685a6fd14840f1f04001e14cf01980a17810be5d044dd0db9d665d7d05699"
+          },
+          "start_condition": "CPU_now; GPU_after_own_original_chain_terminal",
+          "predecessor": "C_D24_XVLA_AUX_RETRAIN_V1",
+          "planned_episodes": 1500,
+          "stage_attempt_cap": 1650,
+          "cumulative_attempt_cap": 14000
+        },
+        {
+          "task_id": "C_D24_FULL_Q_LOSS_REFRESH_V1",
+          "task_revision": 1,
+          "task": "tasks/C_D24_FULL_Q_LOSS_REFRESH_V1.md",
+          "authorization": {
+            "path": "deadline_20260924/FULL_Q_LOSS_SELECTION_AUTHORIZATION_V1.json",
+            "sha256": "8fc0bf2c7c0c761d9fba424fb7fb127af8a9c505668fccd7231126535c6422c1"
+          },
+          "admission_override": {
+            "path": "deadline_20260924/Q_LOSS_PRIORITY_OVERRIDE_V1.json",
+            "sha256": "7e7c84f47284a71dee130bae1239ee3d18f04b176bbea7ad5a66e06da792b5a7"
+          },
+          "start_condition": "CPU_now; GPU_after_own_family_exit; native_test_after_fixed_scientific_selection",
+          "planned_episodes": 1000,
+          "stage_attempt_cap": 1100
+        },
+        {
+          "task_id": "C_D24_PI05_SELECTED_H40_H50_V1",
+          "task_revision": 1,
+          "task": "tasks/C_D24_PI05_SELECTED_H40_H50_V1.md",
+          "authorization": {
+            "path": "deadline_20260924/FULL_Q_AUTORUN_AUTHORIZATION_V2.json",
+            "sha256": "fb15e23ad4ed75eaa1b9490784d58dc9dc925e440194e99cab066ae11af6414f"
+          },
+          "start_condition": "CPU_now; selection_and_exact_ownership_then_own_predecessor_family_exit",
+          "priority": "P0_auto_chain_reallocation"
+        }
+      ],
+      "urgent_user_override": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/AUTHORIZATION.json",
+        "sha256": "4f8406e67e2d0b73beda277b3bc633749060f30e8420e8513285780a06952c5f"
+      },
+      "last_completed_task": "C_D24_L11_RENDER_RECOVERY_V1",
+      "latest_L11_final_completion": {
+        "path": "deadline_20260924/L11_FINAL_ROLLUP_20260923/FINAL_ACCEPTANCE.json",
+        "sha256": "6cb70c5ae875b632d14c11d346acdd667c99f0cc1ae57ae8b673aca1f05306e3"
+      },
+      "remaining_scientific_units": 0,
+      "completed_authorized_followups": [
+        {
+          "task_id": "C_D24_L11_RENDER_RECOVERY_V1",
+          "revision": 1,
+          "task_revision": 1,
+          "task": "tasks/C_D24_L11_RENDER_RECOVERY_V1.md",
+          "authorization": {
+            "path": "deadline_20260924/L11_RECOVERY_V1/AUTHORIZATION.json",
+            "sha256": "ca6f92258260815495a016d8c25eb079e9e0949a38a2c5ece6b836c2ef6d0ccc"
+          },
+          "planned_recovery_units": 1764,
+          "stage_attempt_cap": 2000
+        }
+      ],
+      "next_authorized_stage": null,
+      "new_scientific_admissions_enabled": false,
+      "task_revision": 1,
+      "brief": "tasks/C_POST_DEMO_VIDEOS_V1.md",
+      "ACK_received": false,
+      "scientific_launch_observed": false,
+      "actual_execution_state": "dispatched_not_yet_acknowledged",
+      "logical_concurrency_target": 192,
+      "main_intervention_cap": null,
+      "selection_required": false,
+      "selection_status": "fixed_L11_user_choice",
+      "main_eval_admission": "only_new_crossbase_H_sweep_scope",
+      "deadline_authorization": {
+        "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+        "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+      },
+      "complete_cells": 8,
+      "planned_cells": 8,
+      "valid_snapshot": 4000,
+      "state": "accepted_complete",
+      "status": "complete",
+      "snapshot_utc": "2026-09-23T13:50:38.539322+00:00",
+      "unused_attempt_allowance_closed": true,
+      "all_formal_descendants_exited": true,
+      "holders_restored_from_saved_receipt": true,
+      "analysis_status_evidence": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/analysis/20260923T134924Z/SCIENTIFIC_STATUS.json",
+        "sha256": "345b9c7742e8085251b59c0e405231263d6ffe6d5a99e8157397fed1310c736e"
+      },
+      "revision": 1,
+      "demo_recording_admissions_enabled": true,
+      "remaining_recording_candidates": 52
+    }
+  },
+  "shared_package_state": "not_yet_implemented",
+  "automatic_batch_advance": false,
+  "human_review_per_normal_batch": false,
+  "previous_authorization": {
+    "path": "persistent_queue/AUTHORIZATION_V1.json",
+    "sha256": "f0790bbfdbe263be1044ef9ce3773d4ab0b3a63616edf04feda2e86103edf7b5"
+  },
+  "only_current_authorization_valid_for_new_admission": true,
+  "operational_overrides": [
+    {
+      "path": "persistent_queue/OCCUPANCY_OVERRIDE_V1.json",
+      "sha256": "0e896062a9c69dc51e6d1332eca5413c683d2c9bbed113b9346f8dba27310916"
+    },
+    {
+      "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V1.json",
+      "sha256": "87878b0e2019048935904d639d1d15a1af9f0778047171a508054fecaadd4ab0"
+    }
+  ],
+  "effective_holder_policy": "Latest user-provided AGENTS: all holders off throughout entire formal wave, including model loading, gaps and finished individual GPUs; restore after whole group exits, including failure. No idle-subset or tail auxiliary holders. This supersedes earlier idle-fill permission prospectively; preserve historical deviation evidence.",
+  "scheduling_directives": [
+    {
+      "path": "persistent_queue/QUEUE8_NEXT_WAVE_V1.json",
+      "sha256": "3f1c12d9acc944ad976ca860f91743c31bc3989d3832bd872cbd97f2fd1da3e4"
+    }
+  ],
+  "completion_event_policy": {
+    "path": "persistent_queue/LONG_TASK_EVENT_WAKEUP_V1.json",
+    "sha256": "6cd1233b0e345bbea2a8320f6126897364c89c6964e92975be4d80c1291766f6"
+  },
+  "conversation_wait_policy": "after_stable_handoff_end_turn; original_executor_woken_by_persisted_terminal_event; no_LLM_polling",
+  "latest_source_dispositions": {
+    "path": "manifests/COMMON_POOL_SOURCE_DISPOSITIONS_V3.json",
+    "sha256": "02f8db40f614e85dd21834fd7bfece2d1fac9f1886f165def3bb20767424ef37"
+  },
+  "latest_full_target_index": {
+    "path": "manifests/COMMON_POOL_ACCEPTED_PARENTS_V4.json",
+    "sha256": "0940306f01c4bd268d3811acda874a948e39edf3219336dbe8e4ca19f6f5c785"
+  },
+  "latest_partial_target_index": {
+    "path": "manifests/COMMON_POOL_PARTIAL_TARGET_PARENTS_V1.json",
+    "sha256": "540d420eaf4be5bb3ba556de8c77c472b593305cdfb295075074b9a0f7129a0b"
+  },
+  "legacy_terminal_overlay": {
+    "path": "persistent_queue/plan/LEGACY_BATCH3_TERMINAL_OVERLAY_V1.json",
+    "sha256": "7b2b7d0a4ae2170845621ca735dc796e5c8933ceb5ec0368d8b3d7012e62f869"
+  },
+  "stage_authorizations": [
+    {
+      "path": "deadline_20260924/AUTHORIZATION_V1.json",
+      "sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80"
+    },
+    {
+      "path": "deadline_20260924/CONTINUATION_AUTHORIZATION_20260922_V1.json",
+      "sha256": "3e6a0aab7abe79365192c953d45b4e13b44139ab26ffadb6f7c3f82547107d8b"
+    },
+    {
+      "path": "deadline_20260924/E3_UNSTARTED_CONTINUATION_AUTHORIZATION_V1.json",
+      "sha256": "3a6c62f0a40b4aa5eb08dafa9cef65d15717cb7edcbe505bc951ab37c40f79ad"
+    },
+    {
+      "path": "deadline_20260924/C_AUTHORIZATION_V1.json",
+      "sha256": "11dddb6797ce174a03c9161a68658531902418699fa6e1ee07b5f1872a26378e"
+    },
+    {
+      "path": "deadline_20260924/OURS_FIRST_PRIORITY_V1.json",
+      "sha256": "f45e4048ff1da43328e5ac9576fbc4be9716e8778393e4ead3b731060e220ce8"
+    },
+    {
+      "path": "deadline_20260924/IDLE_NODE_CONTINUATION_AUTHORIZATION_V1.json",
+      "sha256": "f9e3f3693b5b035a2a5498818f0068569c65b582bc85b9a08062233eab1bba97"
+    },
+    {
+      "path": "deadline_20260924/R_H_SWEEP_AUTHORIZATION_V1.json",
+      "sha256": "c9233a9b2f92fe97cd3b03515f18dde7f2803bb46ee07123a32881ff90b4a71a"
+    },
+    {
+      "path": "deadline_20260924/A_PAPER_RESULTS_AUTHORIZATION_V1.json",
+      "sha256": "6f0d7eea491696782df115e9cf1f326e542fcfc66f8cb0317cffa2eb2c5e36a1"
+    },
+    {
+      "path": "deadline_20260924/TRIGGER_TIMING_MULTIPLICITY_AUTHORIZATION_V1.json",
+      "sha256": "a205ddbea9443793d47fd0c38f589ff0d2779a4eaabbf8485b0ce5930ba1177a"
+    },
+    {
+      "path": "deadline_20260924/C_TASK_DISCOVERY_AUTHORIZATION_V1.json",
+      "sha256": "eea53f22757c4976bb54b9995d79cc2abcb16d769adb4003d7ebf3ebb6583a5a"
+    },
+    {
+      "path": "deadline_20260924/PER_BASE_AUXILIARY_TRAINING_AUTHORIZATION_V1.json",
+      "sha256": "6024320bc4b05cbdaa6e96062403c0d3f5fd1fc632c4f73872d3524cf7a4fdc3"
+    },
+    {
+      "path": "deadline_20260924/MULTI_PRIMARY_VALIDATION_AUTHORIZATION_V1.json",
+      "sha256": "767685a6fd14840f1f04001e14cf01980a17810be5d044dd0db9d665d7d05699"
+    },
+    {
+      "path": "deadline_20260924/Q_LOSS_PRIORITY_OVERRIDE_V1.json",
+      "sha256": "7e7c84f47284a71dee130bae1239ee3d18f04b176bbea7ad5a66e06da792b5a7"
+    },
+    {
+      "path": "deadline_20260924/FULL_Q_LOSS_SELECTION_AUTHORIZATION_V1.json",
+      "sha256": "8fc0bf2c7c0c761d9fba424fb7fb127af8a9c505668fccd7231126535c6422c1"
+    },
+    {
+      "path": "deadline_20260924/FULL_Q_AUTORUN_AUTHORIZATION_V2.json",
+      "sha256": "fb15e23ad4ed75eaa1b9490784d58dc9dc925e440194e99cab066ae11af6414f"
+    },
+    {
+      "path": "deadline_20260924/POST_LED_SELECTION_OVERRIDE_V1.json",
+      "sha256": "fa907477112320e7f8356282c5ba64742452172dee998e9efc20a82b92b9c4b1"
+    },
+    {
+      "path": "deadline_20260924/AUTORUN_LIVE_CHAIN_COMPATIBILITY_V1.json",
+      "sha256": "2ae5a001cec168399a9733d038ed56d1ebeefd311081999f45429dc75e24ac16"
+    },
+    {
+      "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V1.json",
+      "sha256": "87878b0e2019048935904d639d1d15a1af9f0778047171a508054fecaadd4ab0"
+    },
+    {
+      "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V2.json",
+      "sha256": "0e0c6a309bf90c1d79d75d34a7d96470704c60e084c9b05b76621115341f82f7"
+    },
+    {
+      "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+      "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+    },
+    {
+      "path": "deadline_20260924/B_H20_PUBLICATION_MODULE_REPAIR_DECISION_V1.json",
+      "sha256": "b09d76aa5932ee0bcab6aa3f57d86d1270dcdfd1416824de92f85dfb222217f1"
+    },
+    {
+      "path": "deadline_20260924/L11_RETEST_V1/AUTHORIZATION.json",
+      "sha256": "a978519ba24dfb3aba22cf5ce8472d9b855e788e44266a28e0d006be876d5e87"
+    },
+    {
+      "path": "deadline_20260924/L11_RECOVERY_V1/AUTHORIZATION.json",
+      "sha256": "ca6f92258260815495a016d8c25eb079e9e0949a38a2c5ece6b836c2ef6d0ccc"
+    },
+    {
+      "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/AUTHORIZATION.json",
+      "sha256": "4f8406e67e2d0b73beda277b3bc633749060f30e8420e8513285780a06952c5f"
+    },
+    {
+      "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+      "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+    }
+  ],
+  "deadline_override": {
+    "path": "deadline_20260924/AUTHORIZATION_V1.json",
+    "sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80"
+  },
+  "remaining_common_pool_collection_enabled": false,
+  "strict_consistency_audits_enabled": false,
+  "shared_package_is_scientific_launch_prerequisite": false,
+  "deadline_continuation": {
+    "path": "deadline_20260924/CONTINUATION_AUTHORIZATION_20260922_V1.json",
+    "sha256": "3e6a0aab7abe79365192c953d45b4e13b44139ab26ffadb6f7c3f82547107d8b"
+  },
+  "active_E3_unstarted_continuation": null,
+  "ABC_assignment": {
+    "path": "deadline_20260924/L11_RECOVERY_V1/ASSIGNMENT.md",
+    "sha256": "a62a7e5f137c22a2142bbc327af16e68547e5ef7e5a39b9b507ce89ccad4c28d"
+  },
+  "scientific_priority": {
+    "path": "deadline_20260924/L11_RETEST_V1/AUTHORIZATION.json",
+    "sha256": "a978519ba24dfb3aba22cf5ce8472d9b855e788e44266a28e0d006be876d5e87"
+  },
+  "idle_node_continuation": {
+    "path": "deadline_20260924/IDLE_NODE_CONTINUATION_AUTHORIZATION_V1.json",
+    "sha256": "f9e3f3693b5b035a2a5498818f0068569c65b582bc85b9a08062233eab1bba97"
+  },
+  "active_R_H_supplement": {
+    "path": "deadline_20260924/R_H_SWEEP_AUTHORIZATION_V1.json",
+    "sha256": "c9233a9b2f92fe97cd3b03515f18dde7f2803bb46ee07123a32881ff90b4a71a"
+  },
+  "active_trigger_mode_authorization": {
+    "path": "deadline_20260924/TRIGGER_TIMING_MULTIPLICITY_AUTHORIZATION_V1.json",
+    "sha256": "a205ddbea9443793d47fd0c38f589ff0d2779a4eaabbf8485b0ce5930ba1177a"
+  },
+  "C_cumulative_attempt_cap_current": 7900,
+  "active_per_base_auxiliary_training": {
+    "path": "deadline_20260924/PER_BASE_AUXILIARY_TRAINING_AUTHORIZATION_V1.json",
+    "sha256": "6024320bc4b05cbdaa6e96062403c0d3f5fd1fc632c4f73872d3524cf7a4fdc3"
+  },
+  "active_multi_primary_validation": {
+    "path": "deadline_20260924/MULTI_PRIMARY_VALIDATION_AUTHORIZATION_V1.json",
+    "sha256": "767685a6fd14840f1f04001e14cf01980a17810be5d044dd0db9d665d7d05699"
+  },
+  "active_q_loss_priority_override": {
+    "path": "deadline_20260924/Q_LOSS_PRIORITY_OVERRIDE_V1.json",
+    "sha256": "7e7c84f47284a71dee130bae1239ee3d18f04b176bbea7ad5a66e06da792b5a7"
+  },
+  "Random_multi_admissions_enabled": false,
+  "full_Q_loss_selection": {
+    "path": "deadline_20260924/L11_RETEST_V1/L11_SELECTION_OVERRIDE.json",
+    "sha256": "2006bc5818911d80a7b325bc91699c789675bb62b75647a4abcc8012119dffe2"
+  },
+  "evaluation_concurrency_policy": {
+    "path": "deadline_20260924/L11_RETEST_V1/CONCURRENCY_192.md",
+    "sha256": "b87c88e9feb678b657b6d404a5c715f27eb7c52077f49f63e122d45cfb6f18eb"
+  },
+  "active_full_Q_autorun_assignment": {
+    "path": "deadline_20260924/L11_RETEST_V1/ASSIGNMENT.md",
+    "sha256": "d4414af22e7ff85ab557cd071126b91658dbae39da62fb1709132d6bd6189b1e"
+  },
+  "full_Q_selection_gate_required": true,
+  "active_Post_selection_override": {
+    "path": "deadline_20260924/L11_RETEST_V1/L11_SELECTION_OVERRIDE.json",
+    "sha256": "2006bc5818911d80a7b325bc91699c789675bb62b75647a4abcc8012119dffe2"
+  },
+  "scientific_primary_branch_for_current_paper": "Post",
+  "Velocity_experiments_continue_for_other_work": true,
+  "active_autorun_runtime_compatibility": {
+    "path": "deadline_20260924/AUTORUN_LIVE_CHAIN_COMPATIBILITY_V1.json",
+    "sha256": "2ae5a001cec168399a9733d038ed56d1ebeefd311081999f45429dc75e24ac16"
+  },
+  "active_autonomous_recovery_policy": {
+    "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V1.json",
+    "sha256": "87878b0e2019048935904d639d1d15a1af9f0778047171a508054fecaadd4ab0"
+  },
+  "analysis_response_timeout_seconds": 1800,
+  "C_autonomous_recovery_discovery_compatibility": {
+    "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V2.json",
+    "sha256": "0e0c6a309bf90c1d79d75d34a7d96470704c60e084c9b05b76621115341f82f7"
+  },
+  "quota_independent_autorun": {
+    "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+    "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+  },
+  "accepted_Post_selection": {
+    "chosen_loss": "L11",
+    "fit_seed": 9101,
+    "Post_only": true,
+    "Velocity_inherits": true,
+    "selection": {
+      "path": "deadline_20260924/L11_RETEST_V1/L11_SELECTION_OVERRIDE.json",
+      "sha256": "2006bc5818911d80a7b325bc91699c789675bb62b75647a4abcc8012119dffe2"
+    },
+    "selection_basis": "explicit_user_revision_after_Post_mean_tie_stability_comparison",
+    "prior_L01_selection_preserved": true,
+    "selection_50_overlap_main500_disclosed": true
+  },
+  "A_owned_scope_completion_decision": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_AUTORECOVERY_QUEUE_RULE_V1/outbox/A_D24_AUTORECOVERY_QUEUE_RULE_V1_no_runnable.decision.json",
+    "sha256": "4a2bf1daa8bf82101a4508cb4e4f6d8a2c5692834a08b33fbd3bf05930b616e8"
+  },
+  "latest_full_Q_final_completion": {
+    "path": "deadline_20260924/FULL_Q_FINAL_COMPLETION_20260923.json",
+    "sha256": "9608d94ca4a888fac06d5edf2cfaa0fe1118702ecede69529d1f90dd85b56305"
+  },
+  "accepted_Post_selection_history": [
+    {
+      "chosen_loss": "L01",
+      "fit_seed": 9101,
+      "Post_only": true,
+      "Velocity_inherits": true,
+      "selection": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/SELECTION.json",
+        "sha256": "0678690bdeebf7bfe6d4293f959916c25c70dc5628779e3daea4303f3065f910"
+      }
+    }
+  ],
+  "active_L11_formal_retest": null,
+  "scientific_configuration_status": "user_selected_L11_fixed_fit9101_formal_retest_authorized",
+  "authorization_history": [
+    {
+      "path": "persistent_queue/AUTHORIZATION_V2.json",
+      "sha256": "d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928"
+    }
+  ],
+  "authorization_semantics": "Top-level authorization remains the existing CPU notification-service registration. New scientific work uses stage_authorizations and active_crossbase_H_sweep only.",
+  "active_L11_execution_recovery": null,
+  "new_scientific_admissions_enabled": false,
+  "remaining_experiments_mode": "explicit_user_crossbase_H_sweep_finite_queue",
+  "latest_L11_final_completion": {
+    "path": "deadline_20260924/L11_FINAL_ROLLUP_20260923/FINAL_ACCEPTANCE.json",
+    "sha256": "6cb70c5ae875b632d14c11d346acdd667c99f0cc1ae57ae8b673aca1f05306e3"
+  },
+  "completed_L11_execution_recovery": {
+    "path": "deadline_20260924/L11_RECOVERY_V1/AUTHORIZATION.json",
+    "sha256": "ca6f92258260815495a016d8c25eb079e9e0949a38a2c5ece6b836c2ef6d0ccc"
+  },
+  "completed_L11_formal_retest": {
+    "path": "deadline_20260924/L11_RETEST_V1/AUTHORIZATION.json",
+    "sha256": "a978519ba24dfb3aba22cf5ce8472d9b855e788e44266a28e0d006be876d5e87"
+  },
+  "active_crossbase_H_sweep": {
+    "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/AUTHORIZATION.json",
+    "sha256": "4f8406e67e2d0b73beda277b3bc633749060f30e8420e8513285780a06952c5f"
+  },
+  "active_deadline_authorization": {
+    "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+    "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+  },
+  "crossbase_H_sweep_status": {
+    "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/analysis/20260923T134924Z/SCIENTIFIC_STATUS.json",
+    "sha256": "345b9c7742e8085251b59c0e405231263d6ffe6d5a99e8157397fed1310c736e"
+  },
+  "active_post_demo_video_authorization": {
+    "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION.json",
+    "sha256": "a6d6595dff5f1b69ce253ec5bd373a91babccf81df504355271477696f8af4fe"
+  },
+  "demo_recording_admissions_enabled": true
+}

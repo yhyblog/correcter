@@ -1,0 +1,11 @@
+A10_PREFLIGHT_NATIVE_V2 r1 单次冻结sh已执行，退出1，技术失败，claim已消费，无重试。请验收并关闭 P10_A_NATIVE_PREFLIGHT_V2，未入额度不复用。
+RESULT：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PREFLIGHT_NATIVE_V2_RESULT.json
+RESULT SHA256 6825cda71e8e379bba659e721c9ced3f9d7caf0911fea389cbbaf96b617d5bc2
+短REPORT：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PREFLIGHT_NATIVE_V2_REPORT.md
+LAUNCH_RESULT：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_launcher_runs/A10_PREFLIGHT_NATIVE_V2_r1_A_wave04/LAUNCH_RESULT.json
+FINAL_AUDIT：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V2_r1/FINAL_AUDIT.json
+
+失败在 heavy_imports_and_policy_device_binding：Torch UUID property is not the frozen string ABI。八设备EGL CUDAhandle→PCI/内核UUID完整映射通过，固定target唯一；policy set_device和properties均返回，保存的str(properties.uuid)=17198167-95ac-ca23-d6a3-58bb5568a8fe与目标一致，但原对象不是str。确切Python类型未记录，不能从已保存字符串猜类；policy guard未通过，Torch绑定后的loader快照也未到达。没有另跑GPU/UUID探测或修改代码。
+实际71graphics entered/71returned/0failed/0incomplete：cuInit1、枚举1、扩展/属性/PCI各8、EGLerror23全SUCCESS、policy选择/属性各1、releaseThread1；上下文/render/readback均0。模型/诊断attempt/reset/native/flow/控制/物理/monitor/critic/反向/更新/rollout均0，5H/raw50/transition/两RGB未到达，缺产物原因已存；不是任务成功率样本。
+cleanup errors=[]，进程组234766全部退出、无残留；八holder于退出后恢复，manager234886–234893、guard27508。子进程21.551s、launcher总94.378s，观测单进程RSS/HWM峰441.492MiB；GPU秒/峰值显存未知null。36产物引用及53manifest文件SHA已核对。无额外CPUchecker、重试、删除或自动后续实验。
+建议仅由分析另发CPU ABI修正任务，核实Torch UUID返回类型和保守文本身份合同，并补原类型证据；当前未实施修正，需新release才可再计算。

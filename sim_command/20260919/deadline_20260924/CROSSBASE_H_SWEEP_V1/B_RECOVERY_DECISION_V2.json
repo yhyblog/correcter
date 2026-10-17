@@ -1,0 +1,28 @@
+{
+  "issued_at_utc": "2026-09-23T13:49:12.931494+00:00",
+  "task_id": "B_D24_CROSSBASE_H_SWEEP_V1",
+  "task_revision": 1,
+  "supersedes": "B_RECOVERY_DECISION_V1.json",
+  "decision": "continue_existing_velocity_r3_no_new_launch",
+  "science_scope_unchanged": true,
+  "observed": {
+    "ready_utc": "2026-09-23T13:43:06Z",
+    "heartbeat_utc": "2026-09-23T13:48:09Z",
+    "phase": "SmolVLA_Velocity_H40",
+    "remaining_at_launch": 945,
+    "preserved_valid": 3055,
+    "projected_total_attempts": 4384,
+    "attempt_cap": 4400
+  },
+  "instructions": [
+    "Existing r3 is already admitted and running. Preserve its live process family and claim; do not launch r4 or resubmit the 945 units.",
+    "Continue H40 then H50 automatically under existing grant/deadline. Publish valid-only sampling means separately from failed-attempt costs.",
+    "r2 missing-directory failure had no scientific attempt; preserve it separately from original autograd failures.",
+    "Use versioned receipts; all holders remain off during the formal family, restoration only after all descendants exit."
+  ],
+  "evidence": [
+    "results/B/B_D24_CROSSBASE_H_SWEEP_V1/RECOVERY_RUNNING.json",
+    "results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/DAEMON_READY.json",
+    "results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/HEARTBEAT.json"
+  ]
+}

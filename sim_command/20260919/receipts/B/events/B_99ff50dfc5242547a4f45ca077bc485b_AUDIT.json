@@ -1,0 +1,153 @@
+{
+  "schema": "corrector_B_event_audit_v1",
+  "event_id": "B_99ff50dfc5242547a4f45ca077bc485b",
+  "event_sha256": "a8b3b00ee38d4d6f588be9702e9870c4bb660e2daa4d7ac2d0ba6ea8a110c492",
+  "outcome": "audited_complete",
+  "at_utc": "2026-09-21T15:56:21.626445+00:00",
+  "effective_CONTROL_revision": 7,
+  "effective_science_authorization": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/AUTHORIZATION_V1.json",
+    "sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80"
+  },
+  "event_root_authorization_sha256": "d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928",
+  "note": "D24 supersedes previous no-science/shared-package prerequisites; existing E1 batch was not rerun",
+  "claim_verified": true,
+  "E1_terminal_verified": true,
+  "E1": {
+    "status": "complete",
+    "at_utc": "2026-09-21T15:41:27.777423+00:00",
+    "job_count": 48,
+    "optimizer_updates": 192000,
+    "scientific_GPU_operations": 0,
+    "fit_seeds": [
+      9101,
+      9102,
+      9103
+    ],
+    "members": [
+      1041,
+      1042,
+      1043,
+      1044
+    ],
+    "losses": [
+      "L00",
+      "L01",
+      "L10",
+      "L11"
+    ],
+    "input": "unchanged historical train600",
+    "selection": "fixed final update; no test selection",
+    "duration_seconds": 142.29047081596218
+  },
+  "ensemble_index": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/E1_ENSEMBLES.json",
+  "E1_fits_started_this_turn": 0,
+  "continuation": {
+    "X_VLA_config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_XVLA_V1_r1/TRAIN_CONFIG.json",
+    "X_VLA_batch": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_XVLA_V1_r1/BATCH.json",
+    "training_started": false,
+    "state": "registered detached predecessor wait",
+    "seed": 42,
+    "global_batch": 64,
+    "world_size": 8,
+    "maximum_updates": 30000,
+    "maximum_window_seconds": 21600,
+    "checkpoint_selection": "last complete checkpoint; no test selection",
+    "CPU_entry_checks": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_XVLA_V1_r1/ENTRY_CHECKS.json"
+  },
+  "stable_handoff": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_XVLA_V1_r1/STABLE_HANDOFF.json",
+  "services": {
+    "D24_GPU_N_r1": {
+      "process": {
+        "hostname": "trial-303225685-trialrun-303225685-worker-0",
+        "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+        "pid": 464778,
+        "start_ticks": 92081088,
+        "session_id": 464778
+      },
+      "alive": true,
+      "claim": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_GPU_N_r1/CLAIM.json",
+      "completion_trigger": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_GPU_N_r1__D24_GPU_N_r1__1.json",
+      "progress": {
+        "at_utc": "2026-09-21T15:56:20.359957+00:00",
+        "status": "running",
+        "active": [
+          "smol50k_N_shard0",
+          "smol50k_N_shard1",
+          "smol50k_N_shard2",
+          "smol50k_N_shard3",
+          "pi05official_N_libero_spatial"
+        ],
+        "queued": 0,
+        "completed": 0,
+        "resolved": 3,
+        "auxiliary_gpus": [
+          5,
+          6,
+          7
+        ]
+      }
+    },
+    "D24_LIBERO_REPAIR_r2": {
+      "process": {
+        "hostname": "trial-303225685-trialrun-303225685-worker-0",
+        "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+        "pid": 470332,
+        "start_ticks": 92108310,
+        "session_id": 470332
+      },
+      "alive": true,
+      "claim": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_LIBERO_REPAIR_r2/CLAIM.json",
+      "completion_trigger": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_LIBERO_REPAIR_r2__D24_LIBERO_REPAIR_r2__1.json"
+    },
+    "D24_XVLA_r1": {
+      "process": {
+        "hostname": "trial-303225685-trialrun-303225685-worker-0",
+        "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+        "pid": 474976,
+        "start_ticks": 92172940,
+        "session_id": 474976
+      },
+      "alive": true,
+      "claim": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_XVLA_r1/CLAIM.json",
+      "completion_trigger": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_XVLA_r1__D24_XVLA_r1__1.json",
+      "progress": {
+        "status": "waiting_for_predecessor",
+        "predecessor": "D24_GPU_N_r1",
+        "at_utc": "2026-09-21T15:56:17.252363+00:00",
+        "scientific_operations": 0
+      }
+    }
+  },
+  "active_workers": {
+    "smol50k_N_shard0": {
+      "status": "running",
+      "completed_episodes": 53,
+      "technical_failures": 0
+    },
+    "smol50k_N_shard1": {
+      "status": "running",
+      "completed_episodes": 53,
+      "technical_failures": 0
+    },
+    "smol50k_N_shard2": {
+      "status": "running",
+      "completed_episodes": 37,
+      "technical_failures": 0
+    },
+    "smol50k_N_shard3": {
+      "status": "running",
+      "completed_episodes": 46,
+      "technical_failures": 0
+    },
+    "pi05official_N_libero_spatial": {
+      "status": "running",
+      "completed_episodes": 25,
+      "technical_failures": 0
+    }
+  },
+  "background_stable": true,
+  "completion_triggers_registered": true,
+  "scientific_campaign_complete": false,
+  "A_waits_for_B": false
+}

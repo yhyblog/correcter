@@ -1,0 +1,135 @@
+{
+  "A_runtime_depends_on_B": false,
+  "B_collection_source_limit": 0,
+  "OS_reboot_autostart_installed": false,
+  "artifacts": {
+    "B11_drain": {
+      "bytes": 190,
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_QUEUE_JOIN_V1_r2/cpu_waves/B11_001/DRAIN_COMPLETE.json",
+      "sha256": "3dfd20e1835e8c46709f4137a55ce1be8d3fdfc5512ca4e4f5851df48a996fb6"
+    },
+    "code": {
+      "bytes": 18920,
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_QUEUE_JOIN_V1_r2_occupancy_v1/b_join_waiter.py",
+      "sha256": "3bc9e4ec1773b1f6e8ee132999d758994e5ba12acb28b79edcd89179523cfc8e"
+    },
+    "gate": {
+      "bytes": 4650,
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/JOIN_GATE_V2_OCCUPANCY_V1.json",
+      "sha256": "c8a346ccac2a3bb72cf9c3b6fd678f2f589b7868944798061560f909c0bc4004"
+    },
+    "guard_status": {
+      "bytes": 1162,
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_QUEUE_JOIN_V1_r2_occupancy_v1/FINAL_GUARD_STATUS.txt",
+      "sha256": "4f5bcdc3c4b010afe8a31a4e88ddd6ff8bcdbaab11176ac227014c08f5244d4d"
+    },
+    "join_ack": {
+      "bytes": 1342,
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/JOIN_ACK_r2_occupancy_v1.json",
+      "sha256": "75dedcf29ee0c729cb15a151e5ffdbdea7c0864ea27f44deda5c498e2a33b5e8"
+    },
+    "live_verification": {
+      "bytes": 2076,
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_QUEUE_JOIN_V1_r2_occupancy_v1/FINAL_LIVE_VERIFICATION.json",
+      "sha256": "7e97c7feb8e5ffa9d143c03750a66a129320eeb6ee72c0ca3e9a4ffe9556c948"
+    },
+    "operations": {
+      "bytes": 2497,
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_QUEUE_JOIN_V1_r2_occupancy_v1/README_OPERATIONS.txt",
+      "sha256": "e5dedfcb08f538073bea26e00de6cafed4d188a81e759d781e078ded006200ce"
+    },
+    "report": {
+      "bytes": 3421,
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_QUEUE_JOIN_V1_r2_REPORT.md",
+      "sha256": "fade3ccf95b4a1c1cfc3ec4a1b7ececf67395ac4cf29ede214aaa8c0108ab3be"
+    },
+    "tests": {
+      "bytes": 872,
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_QUEUE_JOIN_V1_r2_occupancy_v1/CONTROL_PLANE_TESTS.json",
+      "sha256": "f05e8a420070652d98e50d42a2f2409410d7688e721ec385a394f640c62e3ff9"
+    }
+  },
+  "authorization_sha256": "d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928",
+  "automatic_background_continuation": true,
+  "auxiliary_GPU_activity": {
+    "accounting": "separate from scientific counters; do not report total-machine GPU0",
+    "observed_occupied_GPUs": 8,
+    "original_guard": true,
+    "utilization_percent": [
+      49,
+      50,
+      51,
+      49,
+      49,
+      50,
+      50,
+      50
+    ]
+  },
+  "blockers": [
+    {
+      "affects": "B package activation only",
+      "kind": "external_package_missing",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/package/READY.json"
+    },
+    {
+      "kind": "scientific_stage_freeze_pending",
+      "scope": "all B model training/evaluation; E1 proposal input-ready"
+    }
+  ],
+  "campaign_id": "corrector-sim-20260919",
+  "completed_tasks": [
+    "B11_COMMON_POOL_VIEWS_CPU_V1",
+    "B_INDEPENDENT_PIPELINE_PREP_V1"
+  ],
+  "completion_scope": "B bootstrap deployed; package/real daemon activation pending",
+  "current_service_commands": {
+    "start": [
+      "/usr/bin/python",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_QUEUE_JOIN_V1_r2_occupancy_v1/b_join_waiter.py",
+      "start"
+    ],
+    "status": [
+      "/usr/bin/python",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_QUEUE_JOIN_V1_r2_occupancy_v1/b_join_waiter.py",
+      "status"
+    ],
+    "stop": [
+      "/usr/bin/python",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_QUEUE_JOIN_V1_r2_occupancy_v1/b_join_waiter.py",
+      "stop"
+    ]
+  },
+  "daemon_ready": false,
+  "detached": true,
+  "guard_restart": false,
+  "hostname": "trial-303225685-trialrun-303225685-worker-0",
+  "join_waiter_running": true,
+  "manual_per_job_approval_required": false,
+  "operational_overrides_sha256": {
+    "persistent_queue/OCCUPANCY_OVERRIDE_V1.json": "0e896062a9c69dc51e6d1332eca5413c683d2c9bbed113b9346f8dba27310916"
+  },
+  "process_identity": {
+    "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+    "host": "trial-303225685-trialrun-303225685-worker-0",
+    "node": "B",
+    "pid": 431242,
+    "session_id": 431242,
+    "start_ticks": 91170445
+  },
+  "reported_at_utc": "2026-09-21T13:14:26.409448+00:00",
+  "revision": 2,
+  "role": "B",
+  "scientific_resource_counts": {
+    "feature_extraction": 0,
+    "model_calls": 0,
+    "optimizer_updates": 0,
+    "simulator_attempts": 0,
+    "vla_sampling_calls": 0
+  },
+  "session_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+  "status": "waiting_for_shared_package",
+  "task_id": "B_QUEUE_JOIN_V1",
+  "terminal_disconnect_survives": true,
+  "unrelated_processes_signaled": false
+}

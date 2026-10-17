@@ -1,0 +1,122 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A11_COMMON_POOL_DESIGN_CPU_V1",
+  "reviewed_at_utc": "2026-09-20T08:27:50.624206+00:00",
+  "status": "CPU_design_delivery_accepted_revisions_required_before_collection",
+  "receipt": {
+    "path": "receipts/A/A11_COMMON_POOL_DESIGN_CPU_V1_RESULT.json",
+    "sha256": "e49157da1b4ecb6cacfc0d502689b416bc3fe454fbe986f14be43172f0200d14"
+  },
+  "report": {
+    "path": "results/A/A11_COMMON_POOL_DESIGN_CPU_V1/REPORT.md",
+    "sha256": "97d482c7405bdfa46a3baf83256e54b6fdf8b109d355c4f2a5fa2779bb020d38"
+  },
+  "evidence_manifest": {
+    "path": "results/A/A11_COMMON_POOL_DESIGN_CPU_V1/EVIDENCE_MANIFEST.json",
+    "sha256": "525246f296a3910f2d2d0fffa38cec1a113b8f646d006ccb73e955b0c1eb548c"
+  },
+  "verification": {
+    "artifact_refs_SHA_size": 15,
+    "evidence_files_SHA_size": 52,
+    "unique_files_SHA_size": 53,
+    "models_hardware_or_environment_calls": 0
+  },
+  "accepted_scope": [
+    "50 actual task mapping and49 language IDs; existing demonstration and historical1300 index kept separate",
+    "Parent-level split and explicit unknown/censoring masks",
+    "Distinct C5 G0 and C10 Q targets, normal versus a0, method-specific views",
+    "Draft cold-replay arithmetic and uncompressed storage scenario, not runnable caps"
+  ],
+  "required_corrections": [
+    {
+      "id": "Q_PAIR",
+      "finding": "a0+independent native has no frozen positive/negative pair; L_pair set would be empty",
+      "decision": "Q=a0/local_plus/local_minus; one predeclared critic-independent smooth random direction; no extra independent-native Q slot",
+      "basis": "NATIVE10_CORRECTOR_ALGORITHM_ZH.md sections3.4,5.1,8.2"
+    },
+    {
+      "id": "G0_ESTIMATOR",
+      "finding": "onefresh differs from historical empirical label configuration",
+      "decision": "retain3fresh each2suffix versus old2suffix; fresh0 shares a0 generation only, not C5/C10 outcomes"
+    },
+    {
+      "id": "PAIRED_LABELS",
+      "finding": "full-state eligibility and valid repeats not frozen",
+      "decision": "full_state_verified required;2 complete matched planned repeats for each admitted comparison; observables-only cannot enter gain/pair/G0"
+    },
+    {
+      "id": "HORIZON",
+      "decision": "success through original-parent result state300 inclusive; full no-success horizon=0, premature technical/quota/unknown cutoff=null"
+    },
+    {
+      "id": "ENCODER_QUOTE",
+      "finding": "frozen sampler uses3visual and1language forwards per sample; draft uses1visual",
+      "old_quote_reference_correction": {
+        "policy_visual": 408000,
+        "policy_language": 136000,
+        "all_visual_including1559306_explicit": 1967306
+      },
+      "decision": "reprice new candidate structure and separately count image preprocessing/encoder/model operations"
+    },
+    {
+      "id": "CUT_HOST",
+      "finding": "alternating cut and alternating host on same ordinal confounds cut with machine",
+      "decision": "stratify bytask/split/cut; balanced train within task and dev across50tasks"
+    },
+    {
+      "id": "LVM_ELIGIBILITY",
+      "decision": "normal contiguous observed t..t+10 and original action/token identity; complete terminal flags not required for LVM-only view"
+    },
+    {
+      "id": "JOINT_BARRIER",
+      "decision": "local compute-exited is fact receipt only; release local reservation after all participants exit; data publication barrier separate"
+    }
+  ],
+  "quantity_decision": {
+    "design_tranche_parents": 500,
+    "train_per_task": 8,
+    "dev_per_task": 2,
+    "cuts_per_parent": 1,
+    "cut_values": [
+      5,
+      55
+    ],
+    "learning_sufficiency_claim": false,
+    "source_IDs_seeds_shards_or_compute_budget_frozen": false
+  },
+  "old_quote_arithmetic_verified": {
+    "attempts": 4500,
+    "controls": 1350000,
+    "sampling": 136000,
+    "flow": 1360000,
+    "storage_bytes": 1406254575616,
+    "planning_peak_bytes": 1566004304770,
+    "qualification": "old scenario only, superseded as recommended collection design; not hard caps or reserved quota"
+  },
+  "new_quote_crosscheck_not_authorization": {
+    "Q_candidates": 3,
+    "Q_repeats": 2,
+    "G0_fresh_generations": 3,
+    "G0_repeats_per_arm": 2,
+    "generated_plans_per_legal_cut": 3,
+    "cold_no_reuse_all500cuts_complete": {
+      "attempts": 7500,
+      "controls": 2250000,
+      "samples": 226500,
+      "flow": 2265000,
+      "observations": 2257500
+    },
+    "conditional_normal_equals_G0_old_repeat0": {
+      "attempts": 7000,
+      "controls": 2100000,
+      "samples": 211500,
+      "flow": 2115000
+    },
+    "normal_alias_must_be_predeclared_and_proven": true
+  },
+  "future_compute_authorized": false,
+  "collector_implemented_or_ready": false,
+  "Velocity_standalone_replay_authorized": false,
+  "next_CPU_task": "A11_COMMON_POOL_REVISION_CPU_V2",
+  "decisions": "contracts/COMMON_POOL_PROTOCOL_DECISIONS_V2.md"
+}

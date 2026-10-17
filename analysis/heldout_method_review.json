@@ -1,0 +1,345 @@
+{
+  "status": "complete_bounded_method_interpretation",
+  "created_utc": "2026-09-17T04:08:06.431030+00:00",
+  "inputs": {
+    "main_audit": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_audits/heldout_v1",
+      "seal_sha256": "d776f54ceb94879bc1945a6e5e02736d04ba9d7e4652e02e06280be3a85a833e",
+      "result_sha256": "d9d536e27c34e04b8a0d829c41d7312cf087296364b70e9590f5a9fe23e315c5"
+    },
+    "diagnostics": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_diagnostics/heldout_v1",
+      "seal_sha256": "617880a133121f3d1d60a4645f6fa2857545990c1b9aeb419017149c3d04d1d4",
+      "result_sha256": "ddf6664cc90a39d6de01fdffc7863be1632a786a058e32f8392f23b7a101b7c3"
+    },
+    "independent_statistics": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_independent_audits/heldout_v1",
+      "seal_sha256": "66fd7f8903d143822949dbddc297e31c16e132c06851f260ebf65cd8fcbd76ce",
+      "result_sha256": "e63867e0c446859a4e18cbfa1c2ecdaecafd99c197293e8922e8d58dd96c51e5",
+      "status": "passed",
+      "seven_comparisons_exact": true
+    },
+    "fixed_selection": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_selections/final_selection_v1",
+      "seal_sha256": "2afa80bc07c9cf3f87c5bb8a21bcc8b36baf2a129d25e86b37731de386c7144e",
+      "result_sha256": "87f1a411e8e82ecc4274875f93a264962824566271231338226d0a01e788f658"
+    }
+  },
+  "fixed_method_name": "Native10 first-alarm, fixed A4000 four-member critic, full-direction shared-radius matched post correction",
+  "primary_result_copied": {
+    "independent_sources": 100,
+    "per_task": 20,
+    "paired_suffixes": 4,
+    "post_successes": 250,
+    "replan_successes": 214,
+    "logical_denominator_per_arm": 400,
+    "gain": 0.09,
+    "ci95": [
+      0.0325,
+      0.15
+    ],
+    "rescues": 46,
+    "harms": 10,
+    "positive_negative_zero_sources": [
+      18,
+      6,
+      76
+    ]
+  },
+  "by_task": [
+    {
+      "task": "disassemble-v3",
+      "sources": 20,
+      "outcomes_per_arm": 80,
+      "replan_success": 49,
+      "post_success": 60,
+      "net_successes": 11,
+      "gain": 0.1375,
+      "rescues": 18,
+      "harms": 7
+    },
+    {
+      "task": "pick-place-wall-v3",
+      "sources": 20,
+      "outcomes_per_arm": 80,
+      "replan_success": 58,
+      "post_success": 66,
+      "net_successes": 8,
+      "gain": 0.1,
+      "rescues": 8,
+      "harms": 0
+    },
+    {
+      "task": "shelf-place-v3",
+      "sources": 20,
+      "outcomes_per_arm": 80,
+      "replan_success": 14,
+      "post_success": 22,
+      "net_successes": 8,
+      "gain": 0.1,
+      "rescues": 9,
+      "harms": 1
+    },
+    {
+      "task": "stick-pull-v3",
+      "sources": 20,
+      "outcomes_per_arm": 80,
+      "replan_success": 17,
+      "post_success": 22,
+      "net_successes": 5,
+      "gain": 0.0625,
+      "rescues": 7,
+      "harms": 2
+    },
+    {
+      "task": "stick-push-v3",
+      "sources": 20,
+      "outcomes_per_arm": 80,
+      "replan_success": 76,
+      "post_success": 80,
+      "net_successes": 4,
+      "gain": 0.05,
+      "rescues": 4,
+      "harms": 0
+    }
+  ],
+  "post_Q_alarm_only": {
+    "sources": 98,
+    "predicted_gain": {
+      "records": 98,
+      "observed": 98,
+      "missing": 0,
+      "sum": 10.842150629498065,
+      "mean": 0.11063419009691902,
+      "median": 0.10287362337112427,
+      "p90": 0.20379691570997238,
+      "minimum": -0.0027516186237335205,
+      "maximum": 0.2306518256664276
+    },
+    "actual_gain": {
+      "records": 98,
+      "observed": 98,
+      "missing": 0,
+      "sum": 9.0,
+      "mean": 0.09183673469387756,
+      "median": 0.0,
+      "p90": 0.5749999999999993,
+      "minimum": -1.0,
+      "maximum": 1.0
+    },
+    "pearson": 0.22257426307085915,
+    "spearman": 0.19163867207040053,
+    "sign_table": {
+      "q_negative_actual_negative": 0,
+      "q_negative_actual_zero": 1,
+      "q_negative_actual_positive": 0,
+      "q_zero_actual_negative": 0,
+      "q_zero_actual_zero": 0,
+      "q_zero_actual_positive": 0,
+      "q_positive_actual_negative": 6,
+      "q_positive_actual_zero": 73,
+      "q_positive_actual_positive": 18
+    },
+    "mean_prediction_minus_actual_gain": 0.018797455403041466
+  },
+  "net_harm_sources": [
+    {
+      "source": "stick-pull-v3__2026111753",
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 3,
+        "velocity": 2,
+        "direct": 0,
+        "post": 2
+      },
+      "post_minus_replan_net_successes": -1,
+      "post_predicted_gain": 0.13034842908382416
+    },
+    {
+      "source": "disassemble-v3__2026111765",
+      "success_counts": {
+        "continue_native10": 1,
+        "alarm_replan10": 2,
+        "velocity": 1,
+        "direct": 0,
+        "post": 0
+      },
+      "post_minus_replan_net_successes": -2,
+      "post_predicted_gain": 0.19545671343803406
+    },
+    {
+      "source": "stick-pull-v3__2026111798",
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 3
+      },
+      "post_minus_replan_net_successes": -1,
+      "post_predicted_gain": 6.330758333206177e-05
+    },
+    {
+      "source": "disassemble-v3__2026111885",
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 0
+      },
+      "post_minus_replan_net_successes": -4,
+      "post_predicted_gain": 0.2040414661169052
+    },
+    {
+      "source": "disassemble-v3__2026111890",
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 2,
+        "velocity": 1,
+        "direct": 3,
+        "post": 1
+      },
+      "post_minus_replan_net_successes": -1,
+      "post_predicted_gain": 0.17596550285816193
+    },
+    {
+      "source": "shelf-place-v3__2026111897",
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 4,
+        "velocity": 0,
+        "direct": 3,
+        "post": 3
+      },
+      "post_minus_replan_net_successes": -1,
+      "post_predicted_gain": 0.050109222531318665
+    }
+  ],
+  "illustrative_sources": [
+    {
+      "source": "disassemble-v3__2026111750",
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 0,
+        "velocity": 3,
+        "direct": 4,
+        "post": 4
+      },
+      "post_minus_replan_net_successes": 4,
+      "post_predicted_gain": 0.2306518256664276
+    },
+    {
+      "source": "disassemble-v3__2026111755",
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 3,
+        "direct": 3,
+        "post": 3
+      },
+      "post_minus_replan_net_successes": 3,
+      "post_predicted_gain": 0.20720475912094116
+    },
+    {
+      "source": "stick-push-v3__2026111779",
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 0,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      },
+      "post_minus_replan_net_successes": 4,
+      "post_predicted_gain": 0.09968410432338715
+    },
+    {
+      "source": "stick-pull-v3__2026111793",
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      },
+      "post_minus_replan_net_successes": 4,
+      "post_predicted_gain": 0.20369210839271545
+    },
+    {
+      "source": "pick-place-wall-v3__2026111876",
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 1,
+        "velocity": 1,
+        "direct": 1,
+        "post": 4
+      },
+      "post_minus_replan_net_successes": 3,
+      "post_predicted_gain": 0.14102348685264587
+    },
+    {
+      "source": "disassemble-v3__2026111885",
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 0
+      },
+      "post_minus_replan_net_successes": -4,
+      "post_predicted_gain": 0.2040414661169052
+    }
+  ],
+  "raw_and_matching": {
+    "alarm_sources": 98,
+    "no_cut_sources": 2,
+    "raw_a0_aliases": 0,
+    "unmatched_sources": 0,
+    "raw_invariant_failures": 0,
+    "fallbacks": 0,
+    "short_prefixes": 0,
+    "xyz_rms_mean": 0.042948973637167966,
+    "gripper_rms_mean": 0.0875094072086883,
+    "xyz_shrunk_sources": 63,
+    "gripper_shrunk_sources": 35,
+    "gripper_zero_sources": 9,
+    "required_direction_dependencies": [
+      "velocity",
+      "direct",
+      "post",
+      "reverse",
+      "random"
+    ],
+    "reverse_random_physical_branches": 0
+  },
+  "cost_seconds_per_alarm_source": {
+    "candidate_bank_excluding_restore": 1.334741,
+    "restore": 1.063736,
+    "generation_wall_including_restore": 2.436013,
+    "base_sampling": 0.361368,
+    "velocity_sampling": 0.484856,
+    "direct_sampling": 0.458213,
+    "post_gradient_substep": 0.003564
+  },
+  "interpretation": [
+    "The preregistered matched-post policy adds positive average success beyond replan on this independent same-five-task heldout. All five task point estimates are positive; task-specific generality is not separately established.",
+    "Corrections include repairing damage caused by interruption/replanning and additional successes when both normal and replan fail. Outcome summaries alone do not establish the physical mechanism.",
+    "Q average bias is modest on the 98 alarm sources, but its source-level correlation is weak; all six net-harm sources have positive predicted gain. Q is not a validated per-source acceptance or safety score.",
+    "Matching guards reject aliasing and command-invariant failures as explanations for these particular outcomes, but do not prove a unique causal mechanism or exclude noisy four-repeat labels.",
+    "The result measures matched post whose radius depends on all five directions, not standalone native-radius post or gradient-only deployment latency.",
+    "Development/calibration/held samples remain separate; differences across those samples do not isolate an effect of training scale. Point estimate above five pp plus CI lower bound above zero does not prove true gain at least five pp."
+  ],
+  "resources": {
+    "new_model_calls": 0,
+    "new_simulations": 0,
+    "new_optimizer_updates": 0,
+    "new_tests": 0,
+    "primary_ci_recomputed": false,
+    "method_changed": false
+  },
+  "limitations": [
+    "Read only sealed full audit/diagnostics and small scalar source summaries; no trajectory re-audit or model inference.",
+    "Independent statistics seal was complete and passed before this report was written.",
+    "No additional gating, task routing, source replacement or post-held model selection proposed or executed."
+  ]
+}

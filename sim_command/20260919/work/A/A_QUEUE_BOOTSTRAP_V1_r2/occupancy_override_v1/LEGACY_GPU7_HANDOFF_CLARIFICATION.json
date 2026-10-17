@@ -1,0 +1,354 @@
+{
+  "status": "SAVED_EVIDENCE_ONLY",
+  "legacy_closed": true,
+  "formal_START": {
+    "captured_at_utc": "2026-09-21T13:06:38.663189+00:00",
+    "formal_normal_START": {
+      "argv": [
+        "timeout",
+        "--foreground",
+        "--signal=TERM",
+        "--kill-after=30s",
+        "1800s",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/bin/python",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/code/child.py",
+        "--release",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P11_A_COMMON_POOL_BATCH3_V1.json",
+        "--parent",
+        "p07_door_unlock_train0000_cut5",
+        "--branch",
+        "normal"
+      ],
+      "branch": "normal",
+      "gpu_uuid": "GPU-893accc7-1601-840b-ea72-5d8302ef6d44",
+      "inherited_reservation": true,
+      "no_nested_lifecycle": true,
+      "parent_key": "p07_door_unlock_train0000_cut5",
+      "pgid": 1040589,
+      "pid": 1155658,
+      "start_ticks": 403577676
+    },
+    "formal_normal_START_sha256": "7898dc449ce9c8139df1f522cb7b591dd5d646a01b2e29e42b00a1909610149e",
+    "formal_normal_START_file_mtime_ns": 1789995892221308000,
+    "first_saved_numeric_events": [
+      {
+        "event_id": 1,
+        "phase": "entered",
+        "name": "collector_attempt",
+        "units": {
+          "simulator_attempts": 1
+        },
+        "detail": null,
+        "monotonic": 4035792.137893139
+      },
+      {
+        "event_id": 1,
+        "phase": "returned",
+        "error": null,
+        "monotonic": 4035792.139487938
+      },
+      {
+        "event_id": 2,
+        "phase": "entered",
+        "name": "reserved_NVML_identity",
+        "units": {
+          "native_nvml_identity_queries": 1
+        },
+        "detail": null,
+        "monotonic": 4035792.14534578
+      },
+      {
+        "event_id": 2,
+        "phase": "returned",
+        "error": null,
+        "monotonic": 4035792.332597696
+      }
+    ],
+    "scope": "saved files only; no new device call"
+  },
+  "holder_intervals": [
+    {
+      "gpu": "0",
+      "gpu_uuid": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe",
+      "manager_pid": 1149673,
+      "start": "2026-09-21T12:58:14.151904+00:00",
+      "stop_request": "2026-09-21T14:05:14.251934+00:00",
+      "manager_exit": "2026-09-21T14:05:14.554201+00:00",
+      "manager_elapsed_seconds": 4020.40229678154,
+      "stop_request_to_manager_exit_seconds": 0.30226683616638184,
+      "all_descendant_exit_time": null,
+      "descendant_exit_reason": "legacy supervisor did not persist per-descendant exit identities/times",
+      "duty": 0.95,
+      "measured_utilization_is_duty": false
+    },
+    {
+      "gpu": "1",
+      "gpu_uuid": "GPU-64240b2e-5845-da58-e703-61322f21cbf6",
+      "manager_pid": 1149674,
+      "start": "2026-09-21T12:58:14.173877+00:00",
+      "stop_request": "2026-09-21T14:05:15.837240+00:00",
+      "manager_exit": "2026-09-21T14:05:16.139533+00:00",
+      "manager_elapsed_seconds": 4021.965656042099,
+      "stop_request_to_manager_exit_seconds": 0.302293062210083,
+      "all_descendant_exit_time": null,
+      "descendant_exit_reason": "legacy supervisor did not persist per-descendant exit identities/times",
+      "duty": 0.95,
+      "measured_utilization_is_duty": false
+    },
+    {
+      "gpu": "2",
+      "gpu_uuid": "GPU-2254f286-1a7d-edf8-e4a4-f24c051cab83",
+      "manager_pid": 1149683,
+      "start": "2026-09-21T12:58:14.195292+00:00",
+      "stop_request": "2026-09-21T14:05:17.386163+00:00",
+      "manager_exit": "2026-09-21T14:05:17.688513+00:00",
+      "manager_elapsed_seconds": 4023.4932210445404,
+      "stop_request_to_manager_exit_seconds": 0.3023500442504883,
+      "all_descendant_exit_time": null,
+      "descendant_exit_reason": "legacy supervisor did not persist per-descendant exit identities/times",
+      "duty": 0.95,
+      "measured_utilization_is_duty": false
+    },
+    {
+      "gpu": "3",
+      "gpu_uuid": "GPU-8a8b08b1-2a03-ae94-bac7-4f690cf5c5d8",
+      "manager_pid": 1149703,
+      "start": "2026-09-21T12:58:14.216825+00:00",
+      "stop_request": "2026-09-21T14:05:19.536881+00:00",
+      "manager_exit": "2026-09-21T14:05:19.839257+00:00",
+      "manager_elapsed_seconds": 4025.6224319934845,
+      "stop_request_to_manager_exit_seconds": 0.30237603187561035,
+      "all_descendant_exit_time": null,
+      "descendant_exit_reason": "legacy supervisor did not persist per-descendant exit identities/times",
+      "duty": 0.95,
+      "measured_utilization_is_duty": false
+    },
+    {
+      "gpu": "4",
+      "gpu_uuid": "GPU-ec35bc25-f521-4261-e3a3-cf536a41aa64",
+      "manager_pid": 1149706,
+      "start": "2026-09-21T12:58:14.238212+00:00",
+      "stop_request": "2026-09-21T14:05:21.051001+00:00",
+      "manager_exit": "2026-09-21T14:05:21.353340+00:00",
+      "manager_elapsed_seconds": 4027.115127801895,
+      "stop_request_to_manager_exit_seconds": 0.3023388385772705,
+      "all_descendant_exit_time": null,
+      "descendant_exit_reason": "legacy supervisor did not persist per-descendant exit identities/times",
+      "duty": 0.95,
+      "measured_utilization_is_duty": false
+    },
+    {
+      "gpu": "7",
+      "gpu_uuid": "GPU-893accc7-1601-840b-ea72-5d8302ef6d44",
+      "manager_pid": 1149709,
+      "start": "2026-09-21T12:58:14.243871+00:00",
+      "stop_request": "2026-09-21T13:04:52.732550+00:00",
+      "manager_exit": "2026-09-21T13:04:53.134840+00:00",
+      "manager_elapsed_seconds": 398.89096903800964,
+      "stop_request_to_manager_exit_seconds": 0.40229010581970215,
+      "all_descendant_exit_time": null,
+      "descendant_exit_reason": "legacy supervisor did not persist per-descendant exit identities/times",
+      "duty": 0.95,
+      "measured_utilization_is_duty": false
+    },
+    {
+      "gpu": "5",
+      "gpu_uuid": "GPU-7a3ce392-0958-db98-bd25-b95810298e5f",
+      "manager_pid": 1155655,
+      "start": "2026-09-21T13:04:52.111542+00:00",
+      "stop_request": "2026-09-21T14:05:22.553750+00:00",
+      "manager_exit": "2026-09-21T14:05:22.856061+00:00",
+      "manager_elapsed_seconds": 3630.744518995285,
+      "stop_request_to_manager_exit_seconds": 0.3023109436035156,
+      "all_descendant_exit_time": null,
+      "descendant_exit_reason": "legacy supervisor did not persist per-descendant exit identities/times",
+      "duty": 0.95,
+      "measured_utilization_is_duty": false
+    },
+    {
+      "gpu": "6",
+      "gpu_uuid": "GPU-b63ae919-c2a3-ff8c-3527-2f924152251f",
+      "manager_pid": 1184850,
+      "start": "2026-09-21T13:46:34.915656+00:00",
+      "stop_request": "2026-09-21T14:05:24.047820+00:00",
+      "manager_exit": "2026-09-21T14:05:24.250571+00:00",
+      "manager_elapsed_seconds": 1129.3349149227142,
+      "stop_request_to_manager_exit_seconds": 0.20275092124938965,
+      "all_descendant_exit_time": null,
+      "descendant_exit_reason": "legacy supervisor did not persist per-descendant exit identities/times",
+      "duty": 0.95,
+      "measured_utilization_is_duty": false
+    },
+    {
+      "gpu": "7",
+      "gpu_uuid": "GPU-893accc7-1601-840b-ea72-5d8302ef6d44",
+      "manager_pid": 1190510,
+      "start": "2026-09-21T14:05:14.577669+00:00",
+      "stop_request": "2026-09-21T14:05:26.017744+00:00",
+      "manager_exit": "2026-09-21T14:05:26.220311+00:00",
+      "manager_elapsed_seconds": 11.6426420211792,
+      "stop_request_to_manager_exit_seconds": 0.20256686210632324,
+      "all_descendant_exit_time": null,
+      "descendant_exit_reason": "legacy supervisor did not persist per-descendant exit identities/times",
+      "duty": 0.95,
+      "measured_utilization_is_duty": false
+    }
+  ],
+  "GPU7_first_graphics_entries": [
+    {
+      "event_id": "bcf69e46-cee6-4e5a-bd42-0f455423bc39",
+      "operation": "cuda_driver_initializations",
+      "resource_units": {
+        "cuda_driver_initializations": 1
+      },
+      "phase": "entered",
+      "monotonic_ns": 4035792574685491,
+      "native_observation_phase": null,
+      "derived_utc_using_saved_same_boot_clock_pair": "2026-09-21T13:05:08.025112+00:00",
+      "wall_monotonic_conversion_uncertainty_seconds": null
+    },
+    {
+      "event_id": "152c6668-44ed-4a8e-8891-0bf51c282d5b",
+      "operation": "policy_device_selections",
+      "resource_units": {
+        "policy_device_selections": 1
+      },
+      "phase": "entered",
+      "monotonic_ns": 4035798047946696,
+      "native_observation_phase": null,
+      "derived_utc_using_saved_same_boot_clock_pair": "2026-09-21T13:05:13.498373+00:00",
+      "wall_monotonic_conversion_uncertainty_seconds": null
+    },
+    {
+      "event_id": "b385940c-e171-492e-a4c9-e0230a7f8bd3",
+      "operation": "policy_device_property_queries",
+      "resource_units": {
+        "policy_device_property_queries": 1
+      },
+      "phase": "entered",
+      "monotonic_ns": 4035798479223085,
+      "native_observation_phase": null,
+      "derived_utc_using_saved_same_boot_clock_pair": "2026-09-21T13:05:13.929650+00:00",
+      "wall_monotonic_conversion_uncertainty_seconds": null
+    },
+    {
+      "event_id": "a09eac75-3940-4978-bc4f-733f096f873a",
+      "operation": "egl_initialize_calls",
+      "resource_units": {
+        "egl_initialize_calls": 1
+      },
+      "phase": "entered",
+      "monotonic_ns": 4036007962250387,
+      "native_observation_phase": "step_0",
+      "derived_utc_using_saved_same_boot_clock_pair": "2026-09-21T13:08:43.412677+00:00",
+      "wall_monotonic_conversion_uncertainty_seconds": null
+    }
+  ],
+  "GPU7_model_load_entered": [
+    {
+      "event_id": 3,
+      "phase": "entered",
+      "name": "load_PI05_SFT030000",
+      "units": {
+        "model_initializations": 1,
+        "policy_model_loads": 1
+      },
+      "detail": null,
+      "monotonic": 4035838.464098269
+    }
+  ],
+  "clock_conversion_anchor": {
+    "monotonic_seconds": 4039421.856672922,
+    "unix_seconds": 1789999537.3070996,
+    "utc": "2026-09-21T14:05:37.307120+00:00"
+  },
+  "atomic_pre_formal_GPU_handoff_proven": null,
+  "unknown_reason": "No durable acknowledgement for all owned holder descendants before GPU entry; START file mtime is not GPU entry, and manager exit is not independent descendant exit evidence.",
+  "current_p07_stop_action_not_applicable": true,
+  "total_holder_manager_seconds": 25289.211778640747,
+  "holder_GPU_kernel_seconds": null,
+  "time_comparability": "mixed occupancy intervals are not directly comparable with no-holder algorithm latency; duty and isolated utilization samples are not sustained utilization proof",
+  "additional_GPU_queries": 0,
+  "formal_retries": 0,
+  "final_supervisor": {
+    "at_utc": "2026-09-21T14:05:27.309444+00:00",
+    "pid": 1149671,
+    "whole_wave_exit_saved": true,
+    "own_holders_remaining": 0,
+    "error": null,
+    "formal_lock_touched": false,
+    "shared_guard_modified": false
+  },
+  "original_guard_restoration": {
+    "external_jobs_preserved": true,
+    "guard_status": {
+      "gpus": {
+        "0": {
+          "driver_pids": [
+            3357120
+          ],
+          "manager_pid": 1190678,
+          "state": "holder"
+        },
+        "1": {
+          "driver_pids": [
+            3357124
+          ],
+          "manager_pid": 1190679,
+          "state": "holder"
+        },
+        "2": {
+          "driver_pids": [
+            3357123
+          ],
+          "manager_pid": 1190680,
+          "state": "holder"
+        },
+        "3": {
+          "driver_pids": [
+            3357126
+          ],
+          "manager_pid": 1190681,
+          "state": "holder"
+        },
+        "4": {
+          "driver_pids": [
+            3357128
+          ],
+          "manager_pid": 1190682,
+          "state": "holder"
+        },
+        "5": {
+          "driver_pids": [
+            3357130
+          ],
+          "manager_pid": 1190683,
+          "state": "holder"
+        },
+        "6": {
+          "driver_pids": [
+            3357132
+          ],
+          "manager_pid": 1190684,
+          "state": "holder"
+        },
+        "7": {
+          "driver_pids": [
+            3357134
+          ],
+          "manager_pid": 1190685,
+          "state": "holder"
+        }
+      },
+      "pid": 27508,
+      "updated": 1789999536.5454845
+    },
+    "observed_at": {
+      "monotonic_seconds": 4039421.856672922,
+      "unix_seconds": 1789999537.3070996,
+      "utc": "2026-09-21T14:05:37.307120+00:00"
+    },
+    "status": "occupancy_resolved"
+  }
+}

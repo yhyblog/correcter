@@ -1,0 +1,34 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "accepted_at_utc": "2026-09-19T15:11:05.205789+00:00",
+  "accepted": [
+    {
+      "task_id": "A00",
+      "receipt": "receipts/A/A00_RESULT.json",
+      "receipt_sha256": "c8585594102c82f716bb70afbf7c4e1658fd60e56336b0ab43f6cdb52f5a7fda",
+      "report": "receipts/A/A00_REPORT.md",
+      "report_sha256": "0f7a4d6fc12a411c419fad13479580727f8617320b3a6c97804540decdcda5c6",
+      "accepted_scope": "read_only_inventory_only",
+      "formal_compute_counts_zero": true
+    },
+    {
+      "task_id": "B00",
+      "receipt": "receipts/B/B00_RESULT.json",
+      "receipt_sha256": "57cb61f1c34e399d47853ff5da0b814b27daa87de1462f2a5231335305449e3f",
+      "report": "receipts/B/B00_REPORT.md",
+      "report_sha256": "910982370cc7eef96990fac1b8ddcb5a2f7e3a98cbe9753e63eefc70dbc1f34c",
+      "accepted_scope": "read_only_inventory_only",
+      "formal_compute_counts_zero": true
+    }
+  ],
+  "limitations": [
+    "GPU model/simulator runtime not tested",
+    "large weights checked by size/header/history, not current full SHA",
+    "MT50 D/G0/Q adaptation not complete",
+    "B00 NEW_RELEASE_PENDING statement is stale; P00_PREP_V1 now available for B10"
+  ],
+  "next_tasks": [
+    "A10",
+    "B10"
+  ]
+}

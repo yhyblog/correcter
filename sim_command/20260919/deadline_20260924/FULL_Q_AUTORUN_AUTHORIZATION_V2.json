@@ -1,0 +1,71 @@
+{
+  "schema": "corrector_full_Q_autorun_reallocation_v2",
+  "status": "released",
+  "issued_at_utc": "2026-09-22T16:44:55.578616+00:00",
+  "authority": "User requests all remaining tasks allocated to autonomous per-node queues; selection must precede all downstream selected configuration experiments",
+  "plan": {
+    "path": "deadline_20260924/FULL_Q_AUTORUN_ASSIGNMENT_V2.md",
+    "sha256": "623a125a63bd356d96f273fa1510ae5bd305aad781708d73988df08564d1f5f6"
+  },
+  "ownership_plan": {
+    "path": "deadline_20260924/FULL_Q_AUTORUN_OWNERSHIP_PLAN_V2.json",
+    "sha256": "c2be49e53c1676c64852e718277733ae30a951f5cb8f8e8158a084457ef16d9d"
+  },
+  "original_full_Q_authorization": {
+    "path": "deadline_20260924/FULL_Q_LOSS_SELECTION_AUTHORIZATION_V1.json",
+    "sha256": "8fc0bf2c7c0c761d9fba424fb7fb127af8a9c505668fccd7231126535c6422c1"
+  },
+  "concurrency_rule": {
+    "path": "deadline_20260924/EVALUATION_CONCURRENCY_24_V1.md",
+    "sha256": "8b13ba1b96d286b1be68f6d96c300017af95ae637120bb7c34c69ac943e33b29"
+  },
+  "selection_required_before_all_new_formal_selected_tests": true,
+  "selection_root": "results/A/A_D24_FULL_Q_LOSS_SELECTION_V1",
+  "transfer_ready": "results/A/A_D24_FULL_Q_AUTORUN_HANDOFF_V2/TRANSFER_READY.json",
+  "new_unique_scientific_units": 0,
+  "new_training_updates": 0,
+  "new_collection": 0,
+  "prior_total_first_evaluations_unchanged": 11600,
+  "node_first_evaluation_assignment": {
+    "A_including_original_DEV": 5600,
+    "B_including_native1000": 3000,
+    "C_including_native1000": 3000
+  },
+  "nodes": {
+    "A": {
+      "task_id": "A_D24_FULL_Q_AUTORUN_HANDOFF_V2",
+      "revision": 1,
+      "CPU_prepare_now": true,
+      "existing_DEV_must_continue": true,
+      "new_continuation_first_maximum": 3200,
+      "continuation_attempt_cap": 3500,
+      "cumulative_attempt_cap": 27000
+    },
+    "B": {
+      "task_id": "B_D24_PI05_SELECTED_H20_H30_V1",
+      "revision": 1,
+      "CPU_prepare_now": true,
+      "pi05_transferred_first_maximum": 2000,
+      "stage_attempt_cap": 2200,
+      "cumulative_attempt_cap": 22000,
+      "old_R_user_cancelled_recovery_cap": 24,
+      "native_full_Q_original_1000_not_duplicated": true
+    },
+    "C": {
+      "task_id": "C_D24_PI05_SELECTED_H40_H50_V1",
+      "revision": 1,
+      "CPU_prepare_now": true,
+      "pi05_transferred_first_maximum": 2000,
+      "stage_attempt_cap": 2200,
+      "cumulative_attempt_cap": 16000,
+      "native_full_Q_original_1000_not_duplicated": true
+    }
+  },
+  "no_second_analysis_or_user_approval": true,
+  "cross_node_runtime_exit_barrier": false,
+  "real_unit_ownership_handoff_required": true,
+  "whole_wave_holder_policy": "all_off_until_entire_own_formal_family_exit",
+  "science_admission_cutoff_utc": "2026-09-23T12:00:00Z",
+  "tables_due_utc": "2026-09-23T15:00:00Z",
+  "stage_max_hours": 12
+}

@@ -1,0 +1,51 @@
+{
+  "b_join": {
+    "argv": [
+      "/usr/bin/python",
+      "join_b.py",
+      "--node",
+      "B"
+    ],
+    "authorization_sha256": "d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928",
+    "collection_source_limit": 0,
+    "contract_sha256": "f9a8a8914c33b0480437e701c103697effcf7315e2a0109f556494d793254255",
+    "host": "trial-303225685-trialrun-303225685-worker-0",
+    "node": "B",
+    "non_nested_reservation": true,
+    "operational_overrides_sha256": {
+      "persistent_queue/OCCUPANCY_OVERRIDE_V1.json": "0e896062a9c69dc51e6d1332eca5413c683d2c9bbed113b9346f8dba27310916"
+    },
+    "performs_local_machine_gates_before_admission": true,
+    "plan_sha256": {
+      "AGGREGATE_LIMITS_V2.json": "f59b2c6a1bf939cac16edf25fad69003d99608878ffa6a70200031b76eb11654",
+      "PER_TASK_PARENT_BUDGETS_V1.json": "257c8439b5536b2552d61eb3945f035c17ee801166d96ad8fad2bfb9b5c0cc0c",
+      "SOURCES_V2.json": "04f3ffec28f944f6d9ff23aa96a86dc015d5e1d46441836cc0c434a2ca0bf0bd",
+      "STAGE_DAG_V2.json": "f96fec2fb4ff00c6a1755971d97dbea4a0556c53be0433c1887b45211a408d83",
+      "TASK_ORDINAL_OWNER_V2.json": "0567c7593796756d162f809a747a44de631d6df5dc1dc68842e52d185181e7c7"
+    },
+    "same_gpu_holder_exit_before_compute": true,
+    "scientific_baseline_sha256": {
+      "latest_proposal": "6e568f44bd084852ef52bdba6e4535e5ce84d8baaf5d75b5a1cd095d4dcc346d",
+      "protocol": "70a264d35a3b58e104a5b671ba5aac4d4d23c0f73844f8ffd2d154f34a7235c0",
+      "task_table": "2455eb6026587b134dfc6b7d480b66c2afd58ad31903759239f8da6018073ed2"
+    },
+    "tests": {
+      "path": "tests.json",
+      "sha256": "509ff9da54c0adb9bee31e15662ce5899edae40957bae72d1092fe914e3cebb7"
+    },
+    "training_evaluation_requires_stage_authorization": true
+  },
+  "files": [
+    {
+      "path": "join_b.py",
+      "sha256": "2b8cc9791a0a4ffa0cd288bed44ff77a5a7478c3e2fa68a7777e684e3da926cb"
+    },
+    {
+      "path": "tests.json",
+      "sha256": "509ff9da54c0adb9bee31e15662ce5899edae40957bae72d1092fe914e3cebb7"
+    }
+  ],
+  "immutable_after_publication": true,
+  "publisher": "A",
+  "status": "READY"
+}

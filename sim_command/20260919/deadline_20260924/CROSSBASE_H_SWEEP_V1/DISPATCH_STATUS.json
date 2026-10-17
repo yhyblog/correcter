@@ -1,0 +1,74 @@
+{
+  "published_at_utc": "2026-09-23T11:53:55.563534+00:00",
+  "nodes": {
+    "A": {
+      "task_id": "A_D24_CROSSBASE_H_SWEEP_V1",
+      "status": "running",
+      "ACK_received": true,
+      "scientific_launch_observed": true,
+      "transport": "fixed_original_thread_codex_queue",
+      "transport_accepted": true,
+      "complete_cells": 7,
+      "planned_cells": 8,
+      "valid_snapshot": 3994,
+      "remaining_scientific_units": 6,
+      "state": "velocity_r2_running_H30",
+      "snapshot_utc": "2026-09-23T13:50:38.539322+00:00",
+      "new_scientific_admissions_enabled": true,
+      "heartbeat_evidence": "deadline_20260924/CROSSBASE_H_SWEEP_V1/analysis/20260923T134924Z/A_HEARTBEAT_AT_REVIEW.json",
+      "analysis_status_evidence": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/analysis/20260923T134924Z/SCIENTIFIC_STATUS.json",
+        "sha256": "345b9c7742e8085251b59c0e405231263d6ffe6d5a99e8157397fed1310c736e"
+      }
+    },
+    "B": {
+      "task_id": "B_D24_CROSSBASE_H_SWEEP_V1",
+      "status": "running",
+      "ACK_received": true,
+      "scientific_launch_observed": true,
+      "transport": "existing_host_local_shared_task_observer",
+      "transport_accepted": true,
+      "complete_cells": 6,
+      "planned_cells": 8,
+      "valid_snapshot": 3055,
+      "remaining_scientific_units": 945,
+      "state": "velocity_r3_running_H40",
+      "snapshot_utc": "2026-09-23T13:50:38.539322+00:00",
+      "new_scientific_admissions_enabled": true,
+      "heartbeat_evidence": "deadline_20260924/CROSSBASE_H_SWEEP_V1/analysis/20260923T134924Z/B_HEARTBEAT_AT_REVIEW.json",
+      "analysis_status_evidence": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/analysis/20260923T134924Z/SCIENTIFIC_STATUS.json",
+        "sha256": "345b9c7742e8085251b59c0e405231263d6ffe6d5a99e8157397fed1310c736e"
+      }
+    },
+    "C": {
+      "task_id": "C_D24_CROSSBASE_H_SWEEP_V1",
+      "status": "complete",
+      "ACK_received": true,
+      "scientific_launch_observed": true,
+      "transport": "existing_host_local_shared_task_observer",
+      "transport_accepted": true,
+      "complete_cells": 8,
+      "planned_cells": 8,
+      "valid_snapshot": 4000,
+      "remaining_scientific_units": 0,
+      "state": "accepted_complete",
+      "snapshot_utc": "2026-09-23T13:50:38.539322+00:00",
+      "new_scientific_admissions_enabled": false,
+      "unused_attempt_allowance_closed": true,
+      "all_formal_descendants_exited": true,
+      "holders_restored_from_saved_receipt": true,
+      "analysis_status_evidence": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/analysis/20260923T134924Z/SCIENTIFIC_STATUS.json",
+        "sha256": "345b9c7742e8085251b59c0e405231263d6ffe6d5a99e8157397fed1310c736e"
+      }
+    }
+  },
+  "updated_at_utc": "2026-09-23T13:50:38.539322+00:00",
+  "transport_evidence": {
+    "A": "A_QUEUE_TRANSPORT_r2.json",
+    "B_event_id": "B_165fb8ca64fed8ff81f67d81125d679d",
+    "C_event_id": "C_781d3e456acafc287ad93dcca1e2ff17",
+    "note": "Transport acceptance alone is not executor ACK or scientific launch."
+  }
+}

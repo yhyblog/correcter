@@ -1,0 +1,67 @@
+{
+  "task_id": "C_TASK_DISCOVERY_SERVICE_V1",
+  "revision": 1,
+  "node": "C",
+  "status": "deployed",
+  "at_utc": "2026-09-22T12:44:19.033879+00:00",
+  "verification_status": "actual new dispatch ACK verified on original thread",
+  "end_to_end_task_available_ACK_verified": true,
+  "entry": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_TASK_DISCOVERY_SERVICE_V1_r1/wakeup.py",
+  "command": [
+    "/usr/bin/python",
+    "-B",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_TASK_DISCOVERY_SERVICE_V1_r1/wakeup.py",
+    "start"
+  ],
+  "task_discovery_module": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_TASK_DISCOVERY_SERVICE_V1_r1/task_discovery.py",
+  "old_service": {
+    "hostname": "trial-303269581-trialrun-303269581-worker-0",
+    "boot_id": "215be39c-da79-4f3e-ae0e-c08d40fad8f1",
+    "pid": 206827,
+    "start_ticks": 1062604814,
+    "session_id": 206827
+  },
+  "old_service_exited": true,
+  "new_service": {
+    "hostname": "trial-303269581-trialrun-303269581-worker-0",
+    "boot_id": "215be39c-da79-4f3e-ae0e-c08d40fad8f1",
+    "pid": 273734,
+    "start_ticks": 1063210339,
+    "session_id": 273734
+  },
+  "two_heartbeat_utc": [
+    "2026-09-22T12:42:14.234653+00:00",
+    "2026-09-22T12:42:19.300061+00:00"
+  ],
+  "deployment": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_TASK_DISCOVERY_SERVICE_V1/DEPLOYMENT.json",
+  "CPU_check": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_TASK_DISCOVERY_SERVICE_V1/CPU_CHECK.json",
+  "code_manifest": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_TASK_DISCOVERY_SERVICE_V1/PREDEPLOY_VALIDATION.json",
+  "preserved_jobs_outbox_delivery_ACKs": true,
+  "actual_new_dispatch": {
+    "event_id": "C_5f3c7f27abd09336f7169a8f61d4e580",
+    "task_id": "C_D24_XVLA_AUX_RETRAIN_V1",
+    "event": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/C/wakeup/outbox/C_5f3c7f27abd09336f7169a8f61d4e580.json",
+    "detected_at": "2026-09-22T12:42:14.164502+00:00",
+    "transport_entered": "2026-09-22T12:42:14.214804+00:00",
+    "transport_accepted": "2026-09-22T12:42:19.286176+00:00",
+    "delivery": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/C/wakeup/delivery/C_5f3c7f27abd09336f7169a8f61d4e580.json",
+    "handler_ACK": null
+  },
+  "dedup_key": "node,task_id,revision,authorization SHA",
+  "new_dispatch_monitoring_stop_utc": "2026-09-23T15:30:00Z",
+  "science_admission_cutoff_utc": "2026-09-23T12:00:00Z",
+  "scientific_launches": 0,
+  "GPU_calls": 0,
+  "holder_mutations": 0,
+  "training_updates": 0,
+  "new_synthetic_wakeup_events": 0,
+  "recursive_terminal_events": 0,
+  "offline_exec_resume_proven": false,
+  "actual_task_available_ACK": {
+    "event_id": "C_781d3e456acafc287ad93dcca1e2ff17",
+    "task_id": "C_D24_CROSSBASE_H_SWEEP_V1",
+    "handler_ACK": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/C/wakeup/handler_acks/C_781d3e456acafc287ad93dcca1e2ff17.json",
+    "actual_original_handler_verified": true,
+    "at_utc": "2026-09-23T11:56:14.267396+00:00"
+  }
+}

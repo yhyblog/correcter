@@ -1,0 +1,2753 @@
+{
+  "schema": "analysis_batch2_runtime_science_acceptance_contribution_v1",
+  "created_utc": "2026-09-21T01:30:45.055886+00:00",
+  "task_id": "A11_COMMON_POOL_BATCH2_V1",
+  "verdict": "PASS_EIGHT_PARENTS",
+  "authority": "analysis contribution only; root acceptance/index publication still separate",
+  "accepted_parents": [
+    {
+      "parent_key": "p00_assembly_train0000_cut5",
+      "source": {
+        "absolute_target": 300,
+        "cut": 5,
+        "env_seed": 2018080184,
+        "instruction": "Pick up a nut and place it onto a peg",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 5241831142996971203,
+        "ordinal": 0,
+        "parent_source_id": "PROPOSED_MT50_assembly_train_0000_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|assembly-v3|train|0|cut5",
+        "purpose": "next8 A train ordinal0/cut5 slots of original500 coverage plan",
+        "selection": "ASCII task names; exclude all processed identities including normal-only; first8; never skip unknown caps",
+        "source_id": "PROPOSED_MT50_assembly_train_0000",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "assembly-v3"
+      },
+      "source_manifest_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_MT50_CONTINUATION_CPU_V1/proposal/SOURCE_0.json",
+        "sha256": "7d60fb43b2be9031ca92f215163af5ee38997cf1fb4de2c4a8ba8b326cdf0c42",
+        "size_bytes": 921
+      },
+      "source_signature": "8827a57597c55630491482f09f2652998bbf261fefb748ec861d09e819e8c72b",
+      "runroot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5",
+      "run_id": "PROPOSED_A11_batch2_A_V1:p00_assembly_train0000_cut5",
+      "labels_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/reserved/PAIRED_LABELS.json",
+        "sha256": "4210736d0307768edb1baabe7b799bbea6a186315c3c959eb2f0e3edf9a0c89e",
+        "size_bytes": 12744
+      },
+      "coverage_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/reserved/ATTEMPT_COVERAGE.json",
+        "sha256": "b9b434f2c2e1a5f76ca7ee75819ca44d74160b2d883c691712eb659d536f35df",
+        "size_bytes": 2002
+      },
+      "labels": {
+        "G0": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "raw_alias_masked": false,
+          "target": -0.5,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "raw_alias_masked": false,
+          "target": -0.5,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "complete_outcomes": 15,
+      "full_state_exact_comparisons": 14,
+      "canonical_only": true,
+      "physical_equality_proven": null,
+      "paired_eligible": true,
+      "bank_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/normal/BANK.json",
+        "sha256": "798bf281053c705c899f7b4bd8d6c624878657df3b7b90fdae518442d0add08d",
+        "size_bytes": 6460
+      },
+      "aggregate_refs": {
+        "gain_local_plus": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_plus.json",
+            "sha256": "d83150877ea08ddf51fbb107058b090dadc1da86ffc35907b24e9224bd1042f7",
+            "size_bytes": 2748
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_plus.json",
+            "sha256": "56c2ab38a98cc57f8ae78f4eebe7858e99d02ee707c2d7bab2ced66fe971013d",
+            "size_bytes": 8389
+          }
+        },
+        "gain_local_minus": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_minus.json",
+            "sha256": "1ebbc7c87bd5cbdd8153259f0493fbabe3ba4924ae3dd4424fa17ca942bc8d06",
+            "size_bytes": 2754
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_minus.json",
+            "sha256": "6cc090d40220a0bcf3609c169aa993e41ccf8a665f2958b1ada303ac9b2f3b54",
+            "size_bytes": 8399
+          }
+        },
+        "pair": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/reserved/AGGREGATE_INDEX_pair.json",
+            "sha256": "f8ca77acf4229dd45c8e4ace2248cf2469383edbbdb0d68ec6d016b8dbe6600f",
+            "size_bytes": 2762
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/reserved/SIDECAR_AGGREGATE_pair.json",
+            "sha256": "f6bc3dca9db9ab3451ae88d38718236fe096c1dafcbd2f60a998eb984fb87098",
+            "size_bytes": 8419
+          }
+        },
+        "G0": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/reserved/AGGREGATE_INDEX_G0.json",
+            "sha256": "a4eb9f715035f617ec38ecdc3f9d7101e7684b3d4f41d3b9798eda3d459d2078",
+            "size_bytes": 4278
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/reserved/SIDECAR_AGGREGATE_G0.json",
+            "sha256": "e9b9e55cff63cb6a8ade1914e2cafaa0a3af2e15487294c47a9c0a7373e8f009",
+            "size_bytes": 12252
+          }
+        }
+      },
+      "complete_repeat_groups": 7,
+      "state_field_counts": [
+        221
+      ],
+      "branch_outcomes": {
+        "normal": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/normal/BRANCH_RESULT.json",
+            "sha256": "3cc9894fc587f5a3aaa120d20fdb20660850a672dc0edcdf8134da5155550c71",
+            "size_bytes": 1057
+          }
+        },
+        "Q_a0_r0": {
+          "success": 1,
+          "absolute_end": 64,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/Q_a0_r0/BRANCH_RESULT.json",
+            "sha256": "92033c99325ffc6be39b912a58b2a2d42d8b318fd6449e4a14015897353b7362",
+            "size_bytes": 572
+          }
+        },
+        "Q_a0_r1": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/Q_a0_r1/BRANCH_RESULT.json",
+            "sha256": "b03523ec3c68a37fdf69b1ba968f067edbc589928cecd5e1c0420fdcd594ee1f",
+            "size_bytes": 589
+          }
+        },
+        "Q_local_plus_r0": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/Q_local_plus_r0/BRANCH_RESULT.json",
+            "sha256": "3c3c714ba442bba59e43039a2b04ff30c67dc8bcf7b39c78de4650fd2cd9c5a7",
+            "size_bytes": 605
+          }
+        },
+        "Q_local_plus_r1": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/Q_local_plus_r1/BRANCH_RESULT.json",
+            "sha256": "d1b84056214baa9fb19574bed590deed31afc31634bfb231075ffa05f41a1e72",
+            "size_bytes": 605
+          }
+        },
+        "Q_local_minus_r0": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/Q_local_minus_r0/BRANCH_RESULT.json",
+            "sha256": "91225fb3a83bea01d80f5d05e718aa7a8d7294900566b0b2ad123cfa9d5011e0",
+            "size_bytes": 607
+          }
+        },
+        "Q_local_minus_r1": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/Q_local_minus_r1/BRANCH_RESULT.json",
+            "sha256": "664c7b127d96a362e71bd5ab7d9249bd9dc6caecc810a40cc5921477a68e55ef",
+            "size_bytes": 607
+          }
+        },
+        "G0_old_r0": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/G0_old_r0/BRANCH_RESULT.json",
+            "sha256": "37348d065913ac6d4365f20e618cf73d57bb480289b982a410d83c39d68e84d6",
+            "size_bytes": 582
+          }
+        },
+        "G0_old_r1": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/G0_old_r1/BRANCH_RESULT.json",
+            "sha256": "f3c076ff2b5fe2ed541e81677f7286d35cd4db710e630056c15c91d55aeaacbb",
+            "size_bytes": 582
+          }
+        },
+        "G0_fresh0_r0": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/G0_fresh0_r0/BRANCH_RESULT.json",
+            "sha256": "9162cb0fd9d47dd82b89ebb4db28a016d1896e2956aa41268856d07fc9b8e6f3",
+            "size_bytes": 597
+          }
+        },
+        "G0_fresh0_r1": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/G0_fresh0_r1/BRANCH_RESULT.json",
+            "sha256": "da63c5a8980d2b9c4f03ce264b9596bf7bc2add09c47c420152b4c96ca579931",
+            "size_bytes": 597
+          }
+        },
+        "G0_fresh1_r0": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/G0_fresh1_r0/BRANCH_RESULT.json",
+            "sha256": "c04c53dae934d80765d760c735c50bee6f4bcfb96b56b7b340f8a8558746bcc1",
+            "size_bytes": 597
+          }
+        },
+        "G0_fresh1_r1": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/G0_fresh1_r1/BRANCH_RESULT.json",
+            "sha256": "b946e671946a358dd232e7e70463f981062178096505c284ef49754cf17e60c3",
+            "size_bytes": 597
+          }
+        },
+        "G0_fresh2_r0": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/G0_fresh2_r0/BRANCH_RESULT.json",
+            "sha256": "5287d80f1f34ccc26bfbbc7d114dcc0f7c4013457e2e9770be55c1a0c6d03836",
+            "size_bytes": 597
+          }
+        },
+        "G0_fresh2_r1": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/G0_fresh2_r1/BRANCH_RESULT.json",
+            "sha256": "9bcd9ceab8d7674231bcbb3ac558becfd9313987f3569f907d4bed6b2faf1ce4",
+            "size_bytes": 597
+          }
+        }
+      },
+      "labels_recomputed_from_raw_results": {
+        "gain_local_plus": -0.5,
+        "gain_local_minus": -0.5,
+        "pair": 0.0,
+        "G0": 0.0
+      }
+    },
+    {
+      "parent_key": "p01_basketball_train0000_cut5",
+      "source": {
+        "absolute_target": 300,
+        "cut": 5,
+        "env_seed": 1876197831,
+        "instruction": "Dunk the basketball into the basket",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 3646229233949196140,
+        "ordinal": 0,
+        "parent_source_id": "PROPOSED_MT50_basketball_train_0000_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|basketball-v3|train|0|cut5",
+        "purpose": "next8 A train ordinal0/cut5 slots of original500 coverage plan",
+        "selection": "ASCII task names; exclude all processed identities including normal-only; first8; never skip unknown caps",
+        "source_id": "PROPOSED_MT50_basketball_train_0000",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "basketball-v3"
+      },
+      "source_manifest_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_MT50_CONTINUATION_CPU_V1/proposal/SOURCE_1.json",
+        "sha256": "eb610585bc6ea5c8c54fe124c6e04e7bc0531d468eb3652430806c2ddea36f2b",
+        "size_bytes": 927
+      },
+      "source_signature": "9c4de76f86d35b61d4eb07ef9c4950852be05233c2364087313de058f4a994a5",
+      "runroot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5",
+      "run_id": "PROPOSED_A11_batch2_A_V1:p01_basketball_train0000_cut5",
+      "labels_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/reserved/PAIRED_LABELS.json",
+        "sha256": "863a94180aab730d4a85b657d4ad7c31c06aa643bdae16c81e8ba2aa9c57d726",
+        "size_bytes": 12798
+      },
+      "coverage_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/reserved/ATTEMPT_COVERAGE.json",
+        "sha256": "b9b434f2c2e1a5f76ca7ee75819ca44d74160b2d883c691712eb659d536f35df",
+        "size_bytes": 2002
+      },
+      "labels": {
+        "G0": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "complete_outcomes": 15,
+      "full_state_exact_comparisons": 14,
+      "canonical_only": true,
+      "physical_equality_proven": null,
+      "paired_eligible": true,
+      "bank_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/normal/BANK.json",
+        "sha256": "16063865965a3c89f2a61584440d30e54b796ae6dc1889297dbe3bf103a9e543",
+        "size_bytes": 6502
+      },
+      "aggregate_refs": {
+        "gain_local_plus": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_plus.json",
+            "sha256": "4c8849a5a8f475c95818aef4e0449fc859b1ae5872d0665e30d0d40696299bfc",
+            "size_bytes": 2760
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_plus.json",
+            "sha256": "cdd3ebe9e5a834e5611b555a4531c3399aa8852d2a757e16814379054d49319a",
+            "size_bytes": 8427
+          }
+        },
+        "gain_local_minus": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_minus.json",
+            "sha256": "6a54648825cc1d760ecee46c738b86be59c20ee48544312e5774fadcccc3b5e8",
+            "size_bytes": 2766
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_minus.json",
+            "sha256": "57c300269511e0aa289bba7ef2b6b1bb5b9942e362732a28b2f402028b88b2da",
+            "size_bytes": 8437
+          }
+        },
+        "pair": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/reserved/AGGREGATE_INDEX_pair.json",
+            "sha256": "95c10f50c25eb98cdcf7527cf08d6f77fa4d1293afeeb3a04da30ece4e37605a",
+            "size_bytes": 2774
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/reserved/SIDECAR_AGGREGATE_pair.json",
+            "sha256": "78e2762dfb51734e751a6563f652824a6665bfb57cdd9a301c1b13bd9f30fb14",
+            "size_bytes": 8457
+          }
+        },
+        "G0": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/reserved/AGGREGATE_INDEX_G0.json",
+            "sha256": "1adf45a1ebbbf15ba8a0c6e27f2354f459e645d8f0930c717f0192e179ab3bb1",
+            "size_bytes": 4298
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/reserved/SIDECAR_AGGREGATE_G0.json",
+            "sha256": "212f531a23718131fd760e5025244dfa9926752af2b846309ce837361b82bdd7",
+            "size_bytes": 12314
+          }
+        }
+      },
+      "complete_repeat_groups": 7,
+      "state_field_counts": [
+        227
+      ],
+      "branch_outcomes": {
+        "normal": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/normal/BRANCH_RESULT.json",
+            "sha256": "8d2f5ff621bb30be2c14784ebb4d26851c542e4fff881f8f8262022df53288c8",
+            "size_bytes": 1061
+          }
+        },
+        "Q_a0_r0": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/Q_a0_r0/BRANCH_RESULT.json",
+            "sha256": "88c00e8263169cd13e3049b6adb6610e903b22b56e3b2f7932aa52b20ecca0b1",
+            "size_bytes": 589
+          }
+        },
+        "Q_a0_r1": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/Q_a0_r1/BRANCH_RESULT.json",
+            "sha256": "b03523ec3c68a37fdf69b1ba968f067edbc589928cecd5e1c0420fdcd594ee1f",
+            "size_bytes": 589
+          }
+        },
+        "Q_local_plus_r0": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/Q_local_plus_r0/BRANCH_RESULT.json",
+            "sha256": "3c3c714ba442bba59e43039a2b04ff30c67dc8bcf7b39c78de4650fd2cd9c5a7",
+            "size_bytes": 605
+          }
+        },
+        "Q_local_plus_r1": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/Q_local_plus_r1/BRANCH_RESULT.json",
+            "sha256": "d1b84056214baa9fb19574bed590deed31afc31634bfb231075ffa05f41a1e72",
+            "size_bytes": 605
+          }
+        },
+        "Q_local_minus_r0": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/Q_local_minus_r0/BRANCH_RESULT.json",
+            "sha256": "91225fb3a83bea01d80f5d05e718aa7a8d7294900566b0b2ad123cfa9d5011e0",
+            "size_bytes": 607
+          }
+        },
+        "Q_local_minus_r1": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/Q_local_minus_r1/BRANCH_RESULT.json",
+            "sha256": "664c7b127d96a362e71bd5ab7d9249bd9dc6caecc810a40cc5921477a68e55ef",
+            "size_bytes": 607
+          }
+        },
+        "G0_old_r0": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/G0_old_r0/BRANCH_RESULT.json",
+            "sha256": "37348d065913ac6d4365f20e618cf73d57bb480289b982a410d83c39d68e84d6",
+            "size_bytes": 582
+          }
+        },
+        "G0_old_r1": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/G0_old_r1/BRANCH_RESULT.json",
+            "sha256": "f3c076ff2b5fe2ed541e81677f7286d35cd4db710e630056c15c91d55aeaacbb",
+            "size_bytes": 582
+          }
+        },
+        "G0_fresh0_r0": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/G0_fresh0_r0/BRANCH_RESULT.json",
+            "sha256": "9162cb0fd9d47dd82b89ebb4db28a016d1896e2956aa41268856d07fc9b8e6f3",
+            "size_bytes": 597
+          }
+        },
+        "G0_fresh0_r1": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/G0_fresh0_r1/BRANCH_RESULT.json",
+            "sha256": "da63c5a8980d2b9c4f03ce264b9596bf7bc2add09c47c420152b4c96ca579931",
+            "size_bytes": 597
+          }
+        },
+        "G0_fresh1_r0": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/G0_fresh1_r0/BRANCH_RESULT.json",
+            "sha256": "c04c53dae934d80765d760c735c50bee6f4bcfb96b56b7b340f8a8558746bcc1",
+            "size_bytes": 597
+          }
+        },
+        "G0_fresh1_r1": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/G0_fresh1_r1/BRANCH_RESULT.json",
+            "sha256": "b946e671946a358dd232e7e70463f981062178096505c284ef49754cf17e60c3",
+            "size_bytes": 597
+          }
+        },
+        "G0_fresh2_r0": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/G0_fresh2_r0/BRANCH_RESULT.json",
+            "sha256": "5287d80f1f34ccc26bfbbc7d114dcc0f7c4013457e2e9770be55c1a0c6d03836",
+            "size_bytes": 597
+          }
+        },
+        "G0_fresh2_r1": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/G0_fresh2_r1/BRANCH_RESULT.json",
+            "sha256": "9bcd9ceab8d7674231bcbb3ac558becfd9313987f3569f907d4bed6b2faf1ce4",
+            "size_bytes": 597
+          }
+        }
+      },
+      "labels_recomputed_from_raw_results": {
+        "gain_local_plus": 0.0,
+        "gain_local_minus": 0.0,
+        "pair": 0.0,
+        "G0": 0.0
+      }
+    },
+    {
+      "parent_key": "p02_bin_picking_train0000_cut5",
+      "source": {
+        "absolute_target": 300,
+        "cut": 5,
+        "env_seed": 1175436077,
+        "instruction": "Grasp the puck from one bin and place it into another bin",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 7902283045736997362,
+        "ordinal": 0,
+        "parent_source_id": "PROPOSED_MT50_bin_picking_train_0000_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|bin-picking-v3|train|0|cut5",
+        "purpose": "next8 A train ordinal0/cut5 slots of original500 coverage plan",
+        "selection": "ASCII task names; exclude all processed identities including normal-only; first8; never skip unknown caps",
+        "source_id": "PROPOSED_MT50_bin_picking_train_0000",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "bin-picking-v3"
+      },
+      "source_manifest_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_MT50_CONTINUATION_CPU_V1/proposal/SOURCE_2.json",
+        "sha256": "454c417e24862586111126a91c469db20026a9bf087eeb56d64ea36bfa1c3946",
+        "size_bytes": 953
+      },
+      "source_signature": "7bcb2f5353dd7110aa54eb6c2be8af25b9801d0db16183b712fcce4540fac574",
+      "runroot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5",
+      "run_id": "PROPOSED_A11_batch2_A_V1:p02_bin_picking_train0000_cut5",
+      "labels_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/reserved/PAIRED_LABELS.json",
+        "sha256": "858b17f0bbe4e791faa53bcbaf9f0bf9c6ab7d8af8aaef1bc24715f6df6085f4",
+        "size_bytes": 12843
+      },
+      "coverage_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/reserved/ATTEMPT_COVERAGE.json",
+        "sha256": "b9b434f2c2e1a5f76ca7ee75819ca44d74160b2d883c691712eb659d536f35df",
+        "size_bytes": 2002
+      },
+      "labels": {
+        "G0": {
+          "raw_alias_masked": false,
+          "target": 0.16666666666666663,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "raw_alias_masked": false,
+          "target": -0.5,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "raw_alias_masked": false,
+          "target": 0.5,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "raw_alias_masked": false,
+          "target": 1.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "complete_outcomes": 15,
+      "full_state_exact_comparisons": 14,
+      "canonical_only": true,
+      "physical_equality_proven": null,
+      "paired_eligible": true,
+      "bank_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/normal/BANK.json",
+        "sha256": "70a34cac1f2dc431bf0322f5e08fcc8f94aa439e7055fa751ca6140f32b63eee",
+        "size_bytes": 6523
+      },
+      "aggregate_refs": {
+        "gain_local_plus": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_plus.json",
+            "sha256": "fb909d82ec7fbea5cc420de689a73bfd6fdeb03a49f1352080f87b86599ca0ca",
+            "size_bytes": 2766
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_plus.json",
+            "sha256": "4e6751522570e814b57dd74ef483bb2d4f7094ac9b1637c2481f4acff2862a19",
+            "size_bytes": 8446
+          }
+        },
+        "gain_local_minus": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_minus.json",
+            "sha256": "5ee16c2b489c1eff8b0ce54687c1f172e1d4fa7e47c91734faabfef80a1fa4a6",
+            "size_bytes": 2772
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_minus.json",
+            "sha256": "68517992b008326cfe94920adf76efdd3412d705bd48108f535ed2f217777ad4",
+            "size_bytes": 8456
+          }
+        },
+        "pair": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/reserved/AGGREGATE_INDEX_pair.json",
+            "sha256": "c2687d001b88e3acadf07e0b4e16c59c0a9ade431e817f693ef1f895302e9c19",
+            "size_bytes": 2780
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/reserved/SIDECAR_AGGREGATE_pair.json",
+            "sha256": "c622b2071641c1f9c511c7c3e3cc62f5a47559758873628ff8e0c26409f91c99",
+            "size_bytes": 8476
+          }
+        },
+        "G0": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/reserved/AGGREGATE_INDEX_G0.json",
+            "sha256": "c4aba6374a4643628fb7fa8a862105f415db2b1e78538b5fc2464edca459c1c7",
+            "size_bytes": 4308
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/reserved/SIDECAR_AGGREGATE_G0.json",
+            "sha256": "a8fd2322bf007391d6288b2fbfc0c289bfafee0cd87a3e7fdcd67cc19e3976ef",
+            "size_bytes": 12345
+          }
+        }
+      },
+      "complete_repeat_groups": 7,
+      "state_field_counts": [
+        246
+      ],
+      "branch_outcomes": {
+        "normal": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/normal/BRANCH_RESULT.json",
+            "sha256": "2f02d277937caa624b46f2285babce86ff54c2205a66854aeba3c7f50b7727db",
+            "size_bytes": 1063
+          }
+        },
+        "Q_a0_r0": {
+          "success": 1,
+          "absolute_end": 108,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/Q_a0_r0/BRANCH_RESULT.json",
+            "sha256": "1207865f967fcda6c2a81fb8c1a5a5a35b6d3fc9aad716e3ba3e41d006fb4cc9",
+            "size_bytes": 574
+          }
+        },
+        "Q_a0_r1": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/Q_a0_r1/BRANCH_RESULT.json",
+            "sha256": "b03523ec3c68a37fdf69b1ba968f067edbc589928cecd5e1c0420fdcd594ee1f",
+            "size_bytes": 589
+          }
+        },
+        "Q_local_plus_r0": {
+          "success": 1,
+          "absolute_end": 109,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/Q_local_plus_r0/BRANCH_RESULT.json",
+            "sha256": "f5aeb355568e2b69bb8cdce4ea84e3d411d4a1059218a7a9cd0b28b9a7f1935b",
+            "size_bytes": 590
+          }
+        },
+        "Q_local_plus_r1": {
+          "success": 1,
+          "absolute_end": 86,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/Q_local_plus_r1/BRANCH_RESULT.json",
+            "sha256": "3e79bc5fd132bf49f95fc01c82b5ebc31e8b1c09d3bb9408009203402c81ca99",
+            "size_bytes": 588
+          }
+        },
+        "Q_local_minus_r0": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/Q_local_minus_r0/BRANCH_RESULT.json",
+            "sha256": "91225fb3a83bea01d80f5d05e718aa7a8d7294900566b0b2ad123cfa9d5011e0",
+            "size_bytes": 607
+          }
+        },
+        "Q_local_minus_r1": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/Q_local_minus_r1/BRANCH_RESULT.json",
+            "sha256": "664c7b127d96a362e71bd5ab7d9249bd9dc6caecc810a40cc5921477a68e55ef",
+            "size_bytes": 607
+          }
+        },
+        "G0_old_r0": {
+          "success": 1,
+          "absolute_end": 78,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/G0_old_r0/BRANCH_RESULT.json",
+            "sha256": "3b5c1154005cffaeb3e162cecea1e47fb30998457fc1bb6b17e8ba28435bd809",
+            "size_bytes": 565
+          }
+        },
+        "G0_old_r1": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/G0_old_r1/BRANCH_RESULT.json",
+            "sha256": "f3c076ff2b5fe2ed541e81677f7286d35cd4db710e630056c15c91d55aeaacbb",
+            "size_bytes": 582
+          }
+        },
+        "G0_fresh0_r0": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/G0_fresh0_r0/BRANCH_RESULT.json",
+            "sha256": "9162cb0fd9d47dd82b89ebb4db28a016d1896e2956aa41268856d07fc9b8e6f3",
+            "size_bytes": 597
+          }
+        },
+        "G0_fresh0_r1": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/G0_fresh0_r1/BRANCH_RESULT.json",
+            "sha256": "da63c5a8980d2b9c4f03ce264b9596bf7bc2add09c47c420152b4c96ca579931",
+            "size_bytes": 597
+          }
+        },
+        "G0_fresh1_r0": {
+          "success": 1,
+          "absolute_end": 78,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/G0_fresh1_r0/BRANCH_RESULT.json",
+            "sha256": "cb3ba3aae0741873e4fe0ffcf6b8b03e2355557de865fe3a95c0d4e24fe9a1e1",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh1_r1": {
+          "success": 1,
+          "absolute_end": 79,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/G0_fresh1_r1/BRANCH_RESULT.json",
+            "sha256": "c4f36742337d8d29f645d061a1231687909f9dfac342e0b2e92c1c183774785e",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh2_r0": {
+          "success": 1,
+          "absolute_end": 78,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/G0_fresh2_r0/BRANCH_RESULT.json",
+            "sha256": "0ab1a5076cd0764e52bfb585a023021069ef43a7bf04ff92d75b77bb99927731",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh2_r1": {
+          "success": 1,
+          "absolute_end": 126,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/G0_fresh2_r1/BRANCH_RESULT.json",
+            "sha256": "68738329694723842e778d7da72de0f0256ce1dae098c0eaa67cf1013ec5e293",
+            "size_bytes": 582
+          }
+        }
+      },
+      "labels_recomputed_from_raw_results": {
+        "gain_local_plus": 0.5,
+        "gain_local_minus": -0.5,
+        "pair": 1.0,
+        "G0": 0.16666666666666663
+      }
+    },
+    {
+      "parent_key": "p03_box_close_train0000_cut5",
+      "source": {
+        "absolute_target": 300,
+        "cut": 5,
+        "env_seed": 213173705,
+        "instruction": "Grasp the cover and close the box with it",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 4714817999522531471,
+        "ordinal": 0,
+        "parent_source_id": "PROPOSED_MT50_box_close_train_0000_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|box-close-v3|train|0|cut5",
+        "purpose": "next8 A train ordinal0/cut5 slots of original500 coverage plan",
+        "selection": "ASCII task names; exclude all processed identities including normal-only; first8; never skip unknown caps",
+        "source_id": "PROPOSED_MT50_box_close_train_0000",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "box-close-v3"
+      },
+      "source_manifest_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_MT50_CONTINUATION_CPU_V1/proposal/SOURCE_3.json",
+        "sha256": "2adf920e7871d3ca44fd3449b7dff6ff6f7e8ba393b807fa5bfb185b43dcc925",
+        "size_bytes": 928
+      },
+      "source_signature": "646396f159b23334a2a7207244010245109d4534b5774711d92b863ae291bf1a",
+      "runroot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5",
+      "run_id": "PROPOSED_A11_batch2_A_V1:p03_box_close_train0000_cut5",
+      "labels_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/reserved/PAIRED_LABELS.json",
+        "sha256": "127003c31cd6b1cbfcd0147d971159a3b8cd5017be9fc1acb164e66d03ba2ce2",
+        "size_bytes": 12770
+      },
+      "coverage_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/reserved/ATTEMPT_COVERAGE.json",
+        "sha256": "b9b434f2c2e1a5f76ca7ee75819ca44d74160b2d883c691712eb659d536f35df",
+        "size_bytes": 2002
+      },
+      "labels": {
+        "G0": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "complete_outcomes": 15,
+      "full_state_exact_comparisons": 14,
+      "canonical_only": true,
+      "physical_equality_proven": null,
+      "paired_eligible": true,
+      "bank_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/normal/BANK.json",
+        "sha256": "df797cf1c6fc60613902b8e8305f52c2ef1018b1b74f6aa2eadf41ce754a6a2d",
+        "size_bytes": 6481
+      },
+      "aggregate_refs": {
+        "gain_local_plus": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_plus.json",
+            "sha256": "394b99d99c3b9bdfd066a42f786891fc217a494c77901ea7c66d2bc0c19aff84",
+            "size_bytes": 2754
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_plus.json",
+            "sha256": "148303e203292dd9230c6894e89ae56fc95ae47486a8d093adde2f6d18d9f0bd",
+            "size_bytes": 8408
+          }
+        },
+        "gain_local_minus": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_minus.json",
+            "sha256": "406abc06ee08c17b5d3b7da8b8fa64345826a25fef5871c8706404a896e2d5f9",
+            "size_bytes": 2760
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_minus.json",
+            "sha256": "2f44adee57dab3fc13bbc389d4b6469066af049ac1c19cedc6b0793fa68c8b43",
+            "size_bytes": 8418
+          }
+        },
+        "pair": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/reserved/AGGREGATE_INDEX_pair.json",
+            "sha256": "8bd3c5d6cb0965db3cb75d67488df5f9b194bd996ead31c27ff6b243fc77cbdd",
+            "size_bytes": 2768
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/reserved/SIDECAR_AGGREGATE_pair.json",
+            "sha256": "78e68549a2d04305876192f4a3e660885c72ccd046354da3f7ad75dc60de237f",
+            "size_bytes": 8438
+          }
+        },
+        "G0": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/reserved/AGGREGATE_INDEX_G0.json",
+            "sha256": "ba6d3a15f66a835588dc03d1206fd9a5ba45bec757039ad15c9c6a8789bb1990",
+            "size_bytes": 4288
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/reserved/SIDECAR_AGGREGATE_G0.json",
+            "sha256": "5797a319afedf34c1f16e30f5569a4b81a5148b84c6e4253fd42489ce30603d3",
+            "size_bytes": 12283
+          }
+        }
+      },
+      "complete_repeat_groups": 7,
+      "state_field_counts": [
+        228
+      ],
+      "branch_outcomes": {
+        "normal": {
+          "success": 0,
+          "absolute_end": 300,
+          "reason": "absolute_s300_complete",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/normal/BRANCH_RESULT.json",
+            "sha256": "a12135816d51d47a00c964500dbf25caad9aa08b2e487a46765d4739e239383f",
+            "size_bytes": 1059
+          }
+        },
+        "Q_a0_r0": {
+          "success": 1,
+          "absolute_end": 58,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/Q_a0_r0/BRANCH_RESULT.json",
+            "sha256": "a8931bf357dadfe30a542a1bd1a5afac56e623b6c3839f083a8262c17478c3c9",
+            "size_bytes": 572
+          }
+        },
+        "Q_a0_r1": {
+          "success": 1,
+          "absolute_end": 60,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/Q_a0_r1/BRANCH_RESULT.json",
+            "sha256": "e4078657964fbffd0c9968aab62e8ed0d0684d95b25ed1e7a7d1c84db5e2f19d",
+            "size_bytes": 572
+          }
+        },
+        "Q_local_plus_r0": {
+          "success": 1,
+          "absolute_end": 62,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/Q_local_plus_r0/BRANCH_RESULT.json",
+            "sha256": "0fc258df849832629732ed8597bc24fef0e64e1ce74e85ca792e1a64a444b64e",
+            "size_bytes": 588
+          }
+        },
+        "Q_local_plus_r1": {
+          "success": 1,
+          "absolute_end": 62,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/Q_local_plus_r1/BRANCH_RESULT.json",
+            "sha256": "6ee2a17d31e20cf1cbe0f4f618d4f5120a9b111323779e26370cb887dfc97837",
+            "size_bytes": 588
+          }
+        },
+        "Q_local_minus_r0": {
+          "success": 1,
+          "absolute_end": 59,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/Q_local_minus_r0/BRANCH_RESULT.json",
+            "sha256": "ec43a751ccc96ac51c6caedda8130385e1f00f7907afb0a125e4a99ca42e9aa6",
+            "size_bytes": 590
+          }
+        },
+        "Q_local_minus_r1": {
+          "success": 1,
+          "absolute_end": 59,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/Q_local_minus_r1/BRANCH_RESULT.json",
+            "sha256": "e654c6b32a6fddb6daf3da547bb02990a5dfaa7aff519a84559ccac132e23150",
+            "size_bytes": 590
+          }
+        },
+        "G0_old_r0": {
+          "success": 1,
+          "absolute_end": 101,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/G0_old_r0/BRANCH_RESULT.json",
+            "sha256": "efe4d07ccfcff21947cc5e529e52565bcfe0370687aee3574d214dc6c38ac3a3",
+            "size_bytes": 567
+          }
+        },
+        "G0_old_r1": {
+          "success": 1,
+          "absolute_end": 115,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/G0_old_r1/BRANCH_RESULT.json",
+            "sha256": "b1d30595bf7fd972c27761c7c98468d7a16113a7ff71f895151e0facca4e64e4",
+            "size_bytes": 567
+          }
+        },
+        "G0_fresh0_r0": {
+          "success": 1,
+          "absolute_end": 54,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/G0_fresh0_r0/BRANCH_RESULT.json",
+            "sha256": "b0421d23c17153af56d4ba5999ff707dfb4a1e4126e355d2b85f5bac14ae1471",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh0_r1": {
+          "success": 1,
+          "absolute_end": 54,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/G0_fresh0_r1/BRANCH_RESULT.json",
+            "sha256": "04120ef63c8e98be671dc3c383bd4dad133b0bf07cc025a3a358232c530e5879",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh1_r0": {
+          "success": 1,
+          "absolute_end": 53,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/G0_fresh1_r0/BRANCH_RESULT.json",
+            "sha256": "c7d37d4611a5e60142d56f2becb1cdda19e8ac58b8a105afd49d02d2852b1515",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh1_r1": {
+          "success": 1,
+          "absolute_end": 60,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/G0_fresh1_r1/BRANCH_RESULT.json",
+            "sha256": "b996ecb36562245457d8012b515a349a236afdce0f99093a4a8543ccff50bc2d",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh2_r0": {
+          "success": 1,
+          "absolute_end": 52,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/G0_fresh2_r0/BRANCH_RESULT.json",
+            "sha256": "0ca0d5d8dc9ae0dca35d5a74de3f8ddeedd222983379d52fececa579d7bab9f0",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh2_r1": {
+          "success": 1,
+          "absolute_end": 54,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/G0_fresh2_r1/BRANCH_RESULT.json",
+            "sha256": "74c1703a12a3914ca26f32655065eee92db38da40c1cd4e90bf184652c14e7eb",
+            "size_bytes": 580
+          }
+        }
+      },
+      "labels_recomputed_from_raw_results": {
+        "gain_local_plus": 0.0,
+        "gain_local_minus": 0.0,
+        "pair": 0.0,
+        "G0": 0.0
+      }
+    },
+    {
+      "parent_key": "p04_button_press_topdown_train0000_cut5",
+      "source": {
+        "absolute_target": 300,
+        "cut": 5,
+        "env_seed": 637558240,
+        "instruction": "Press a button from the top",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 6037847917591506176,
+        "ordinal": 0,
+        "parent_source_id": "PROPOSED_MT50_button_press_topdown_train_0000_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|button-press-topdown-v3|train|0|cut5",
+        "purpose": "next8 A train ordinal0/cut5 slots of original500 coverage plan",
+        "selection": "ASCII task names; exclude all processed identities including normal-only; first8; never skip unknown caps",
+        "source_id": "PROPOSED_MT50_button_press_topdown_train_0000",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "button-press-topdown-v3"
+      },
+      "source_manifest_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_MT50_CONTINUATION_CPU_V1/proposal/SOURCE_4.json",
+        "sha256": "3dc55752c5be5ce65b9a3ef4d8c0cb72a435b69dcb906d4b70b4d82dd3e8c46a",
+        "size_bytes": 958
+      },
+      "source_signature": "f9f4bceec2ae34161ca86dcd649c31c8a13b2b72e55c947e39b421f539f77747",
+      "runroot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5",
+      "run_id": "PROPOSED_A11_batch2_A_V1:p04_button_press_topdown_train0000_cut5",
+      "labels_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/reserved/PAIRED_LABELS.json",
+        "sha256": "98448656c3be2e3753bc7df29290cbd20c51589390296ab9df89156b20ebcbc4",
+        "size_bytes": 13078
+      },
+      "coverage_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/reserved/ATTEMPT_COVERAGE.json",
+        "sha256": "b9b434f2c2e1a5f76ca7ee75819ca44d74160b2d883c691712eb659d536f35df",
+        "size_bytes": 2002
+      },
+      "labels": {
+        "G0": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "complete_outcomes": 15,
+      "full_state_exact_comparisons": 14,
+      "canonical_only": true,
+      "physical_equality_proven": null,
+      "paired_eligible": true,
+      "bank_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/normal/BANK.json",
+        "sha256": "5d6be26c35a07f97ae2d024736c5230b0e1f34bd2cd974f95cc7d9ff1a857760",
+        "size_bytes": 6712
+      },
+      "aggregate_refs": {
+        "gain_local_plus": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_plus.json",
+            "sha256": "2370e2fbd97fc128dd4d71490e2020da1cc8c12468dbc8f72ebe30a1eb384735",
+            "size_bytes": 2820
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_plus.json",
+            "sha256": "89bf5d960f33fd2f014c4b26d7b8a9be6c1cf9e2d26b9ef669895e79452f91fd",
+            "size_bytes": 8617
+          }
+        },
+        "gain_local_minus": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_minus.json",
+            "sha256": "3294ce654bc8c0f0fb029f2db95410000079b86e62da96ec474c8c9eb4786a5a",
+            "size_bytes": 2826
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_minus.json",
+            "sha256": "4626f9f58054118ec025ca3e0592f94eba12e9aadf6947905c85be8f0cf56931",
+            "size_bytes": 8627
+          }
+        },
+        "pair": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/reserved/AGGREGATE_INDEX_pair.json",
+            "sha256": "d1ee9b2d38681703d13b311f9e34df427bc78f71338671a3fc4cac40f506d73e",
+            "size_bytes": 2834
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/reserved/SIDECAR_AGGREGATE_pair.json",
+            "sha256": "a26705b0e5d19cf40b4bd59398bd20b1983ad16d777bfaa3058d75d2d7c7de6c",
+            "size_bytes": 8647
+          }
+        },
+        "G0": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/reserved/AGGREGATE_INDEX_G0.json",
+            "sha256": "2e1c7cccb9230fe9f32ba4c6c44cd6cf2da40d5149a704d35fc9affa55c1415b",
+            "size_bytes": 4398
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/reserved/SIDECAR_AGGREGATE_G0.json",
+            "sha256": "1e01c4b34a5d3d55fcd4d88dccedef4969f111a7685d9d512edaab3460288072",
+            "size_bytes": 12624
+          }
+        }
+      },
+      "complete_repeat_groups": 7,
+      "state_field_counts": [
+        221
+      ],
+      "branch_outcomes": {
+        "normal": {
+          "success": 1,
+          "absolute_end": 41,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/normal/BRANCH_RESULT.json",
+            "sha256": "2ab1dc71988ef9fa45bff9becd1f4f36c1bee7d64ca6b9a2155bd20c1cf25654",
+            "size_bytes": 1064
+          }
+        },
+        "Q_a0_r0": {
+          "success": 1,
+          "absolute_end": 41,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/Q_a0_r0/BRANCH_RESULT.json",
+            "sha256": "fd0061133de4e9b9f9452d4bc2b0bec1a322f0175f4c10b532dae49e3e9779e9",
+            "size_bytes": 572
+          }
+        },
+        "Q_a0_r1": {
+          "success": 1,
+          "absolute_end": 40,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/Q_a0_r1/BRANCH_RESULT.json",
+            "sha256": "b96ac15a7c70d8d90358d6381f57212da55305be409d2517bf0abec87ff7ba4b",
+            "size_bytes": 572
+          }
+        },
+        "Q_local_plus_r0": {
+          "success": 1,
+          "absolute_end": 42,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/Q_local_plus_r0/BRANCH_RESULT.json",
+            "sha256": "f80e735ca615977c67568ed36e73ecdd1978ef718bb1e6d2783e5d1a42164766",
+            "size_bytes": 588
+          }
+        },
+        "Q_local_plus_r1": {
+          "success": 1,
+          "absolute_end": 41,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/Q_local_plus_r1/BRANCH_RESULT.json",
+            "sha256": "44d22e17cd90e0f1a6738f86fcb314d1f00a7c37c7747e4014220d037694fe2f",
+            "size_bytes": 588
+          }
+        },
+        "Q_local_minus_r0": {
+          "success": 1,
+          "absolute_end": 39,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/Q_local_minus_r0/BRANCH_RESULT.json",
+            "sha256": "ee66d2651a6d211c3b32630d155170f45bd40c877e195fcc62a8ce85be8f7c3b",
+            "size_bytes": 590
+          }
+        },
+        "Q_local_minus_r1": {
+          "success": 1,
+          "absolute_end": 39,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/Q_local_minus_r1/BRANCH_RESULT.json",
+            "sha256": "86f2f1af66bd51fc8ed6d9a16871c94da0deced69bb6b685f028eedd4f0d7576",
+            "size_bytes": 590
+          }
+        },
+        "G0_old_r0": {
+          "success": 1,
+          "absolute_end": 41,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/G0_old_r0/BRANCH_RESULT.json",
+            "sha256": "56aa006fd2382f0df4a3763258bc47a8dd07d8a1d1fffb962bb92b862b8d2c4d",
+            "size_bytes": 565
+          }
+        },
+        "G0_old_r1": {
+          "success": 1,
+          "absolute_end": 41,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/G0_old_r1/BRANCH_RESULT.json",
+            "sha256": "3f1f76ebdfe3350895c02e44402d839b8dc8bf805aff3137cc15bcd7d318eafa",
+            "size_bytes": 565
+          }
+        },
+        "G0_fresh0_r0": {
+          "success": 1,
+          "absolute_end": 42,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/G0_fresh0_r0/BRANCH_RESULT.json",
+            "sha256": "143db28b8ea2f8acec780f6f26f8c9c414e83095035053c653bc157aeb5117fd",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh0_r1": {
+          "success": 1,
+          "absolute_end": 42,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/G0_fresh0_r1/BRANCH_RESULT.json",
+            "sha256": "0c9b688f27e5ffb4c7115158234ebf6a297cacf2ad49bc835d4f2ad74518f4cd",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh1_r0": {
+          "success": 1,
+          "absolute_end": 42,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/G0_fresh1_r0/BRANCH_RESULT.json",
+            "sha256": "8287d599d65afbd8e8aafe5ce9ba3b1b39ff48640b9a6ee0fb86d0343718833f",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh1_r1": {
+          "success": 1,
+          "absolute_end": 42,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/G0_fresh1_r1/BRANCH_RESULT.json",
+            "sha256": "5717079963034516f7cba4aaf9b192279a3236d3448f86d9c5620a832a8c9a54",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh2_r0": {
+          "success": 1,
+          "absolute_end": 42,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/G0_fresh2_r0/BRANCH_RESULT.json",
+            "sha256": "95bcf5916b4c98fd927462f90651ae3d02fac13d02e4af68594933aa2341464d",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh2_r1": {
+          "success": 1,
+          "absolute_end": 42,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/G0_fresh2_r1/BRANCH_RESULT.json",
+            "sha256": "97596cbf77e0e72373bb29eff2636251f75ea73c4bd9652b28e3658e6866a54a",
+            "size_bytes": 580
+          }
+        }
+      },
+      "labels_recomputed_from_raw_results": {
+        "gain_local_plus": 0.0,
+        "gain_local_minus": 0.0,
+        "pair": 0.0,
+        "G0": 0.0
+      }
+    },
+    {
+      "parent_key": "p05_button_press_topdown_wall_train0000_cut5",
+      "source": {
+        "absolute_target": 300,
+        "cut": 5,
+        "env_seed": 1188802122,
+        "instruction": "Bypass a wall and press a button from the top",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 7261433002494547532,
+        "ordinal": 0,
+        "parent_source_id": "PROPOSED_MT50_button_press_topdown_wall_train_0000_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|button-press-topdown-wall-v3|train|0|cut5",
+        "purpose": "next8 A train ordinal0/cut5 slots of original500 coverage plan",
+        "selection": "ASCII task names; exclude all processed identities including normal-only; first8; never skip unknown caps",
+        "source_id": "PROPOSED_MT50_button_press_topdown_wall_train_0000",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "button-press-topdown-wall-v3"
+      },
+      "source_manifest_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_MT50_CONTINUATION_CPU_V1/proposal/SOURCE_5.json",
+        "sha256": "2350435c5ccae396965ca8da5d62294c2941826ea926d2395ac57c3b007b7022",
+        "size_bytes": 997
+      },
+      "source_signature": "d6369acd89d02cd3d86a5f37ec802af9863e358bb1942425088f69ecf863e4d1",
+      "runroot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5",
+      "run_id": "PROPOSED_A11_batch2_A_V1:p05_button_press_topdown_wall_train0000_cut5",
+      "labels_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/reserved/PAIRED_LABELS.json",
+        "sha256": "5b1cd1a1f91f512acb7a787bbfbd459da989832f7ab35e561055462dfc2e928c",
+        "size_bytes": 13218
+      },
+      "coverage_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/reserved/ATTEMPT_COVERAGE.json",
+        "sha256": "b9b434f2c2e1a5f76ca7ee75819ca44d74160b2d883c691712eb659d536f35df",
+        "size_bytes": 2002
+      },
+      "labels": {
+        "G0": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "complete_outcomes": 15,
+      "full_state_exact_comparisons": 14,
+      "canonical_only": true,
+      "physical_equality_proven": null,
+      "paired_eligible": true,
+      "bank_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/normal/BANK.json",
+        "sha256": "f604e7b190b06872a5bbc70b0e748f79f581ff052b1734d75cae3fcdf53c81c4",
+        "size_bytes": 6817
+      },
+      "aggregate_refs": {
+        "gain_local_plus": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_plus.json",
+            "sha256": "2dc914253c6b79d0b420a184259f908766d42718c99da9a44ce88f89fe28ebcb",
+            "size_bytes": 2850
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_plus.json",
+            "sha256": "dc2299984058ef75c60dc994583a65e3b4d4753354f7911135f75ea7eccb7465",
+            "size_bytes": 8712
+          }
+        },
+        "gain_local_minus": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_minus.json",
+            "sha256": "0ab1e11bb2f9fea022dad7608902da69df8d97c9bf88cf3c20429295510715f4",
+            "size_bytes": 2856
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_minus.json",
+            "sha256": "14c886c86008b40ffe96ba041e83877a0d3e41bf02f98f2f593fdc6fed2ee8cb",
+            "size_bytes": 8722
+          }
+        },
+        "pair": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/reserved/AGGREGATE_INDEX_pair.json",
+            "sha256": "69d5ab20da1a12e8beeacb3a944c761a5fb64a3e7f5b8865a8ede22726bea7bc",
+            "size_bytes": 2864
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/reserved/SIDECAR_AGGREGATE_pair.json",
+            "sha256": "0e6203580829aba5ddb0abc07118e35b04e226ebad3c615f9c4a5eb4d0adad73",
+            "size_bytes": 8742
+          }
+        },
+        "G0": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/reserved/AGGREGATE_INDEX_G0.json",
+            "sha256": "ef3db38a91cc7b69e6d0c19aec2248d878feafe13d9d0ae080aeac91c72db82d",
+            "size_bytes": 4448
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/reserved/SIDECAR_AGGREGATE_G0.json",
+            "sha256": "f4e589401b2284439288b90af20ec6fdbe6ac669239e265c9922d29423003f95",
+            "size_bytes": 12779
+          }
+        }
+      },
+      "complete_repeat_groups": 7,
+      "state_field_counts": [
+        221
+      ],
+      "branch_outcomes": {
+        "normal": {
+          "success": 1,
+          "absolute_end": 41,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/normal/BRANCH_RESULT.json",
+            "sha256": "556dee085751b08651ee09030bc36bde63a1cc1156503a67c02dd3d78b493caa",
+            "size_bytes": 1074
+          }
+        },
+        "Q_a0_r0": {
+          "success": 1,
+          "absolute_end": 33,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/Q_a0_r0/BRANCH_RESULT.json",
+            "sha256": "3269810cea955841f1e993e1679a008635b05dd4201f947ce46c101d6a9628fe",
+            "size_bytes": 572
+          }
+        },
+        "Q_a0_r1": {
+          "success": 1,
+          "absolute_end": 34,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/Q_a0_r1/BRANCH_RESULT.json",
+            "sha256": "f9f5819e3546808cd13a3157834a034d9ff9196a71e15cd45d0f15ef96e469dd",
+            "size_bytes": 572
+          }
+        },
+        "Q_local_plus_r0": {
+          "success": 1,
+          "absolute_end": 33,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/Q_local_plus_r0/BRANCH_RESULT.json",
+            "sha256": "ce198a3af40fcf9cde86eca7d53b730871fd89bd861a8547d1ad58fa5c917137",
+            "size_bytes": 588
+          }
+        },
+        "Q_local_plus_r1": {
+          "success": 1,
+          "absolute_end": 34,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/Q_local_plus_r1/BRANCH_RESULT.json",
+            "sha256": "ba8a8cb71cdd1acf7db4aebc4008f6fd2dd5c11c9ca246b4317af43afb2dac39",
+            "size_bytes": 588
+          }
+        },
+        "Q_local_minus_r0": {
+          "success": 1,
+          "absolute_end": 34,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/Q_local_minus_r0/BRANCH_RESULT.json",
+            "sha256": "84be4b95d8212bb64238c544f4aacf47dda7cd861f865192642010d1fd65fdc7",
+            "size_bytes": 590
+          }
+        },
+        "Q_local_minus_r1": {
+          "success": 1,
+          "absolute_end": 34,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/Q_local_minus_r1/BRANCH_RESULT.json",
+            "sha256": "aa731ad1d7d3d70620537ac6fc053f5e9b7ccf37161e9199d0acdd6278a7ca36",
+            "size_bytes": 590
+          }
+        },
+        "G0_old_r0": {
+          "success": 1,
+          "absolute_end": 41,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/G0_old_r0/BRANCH_RESULT.json",
+            "sha256": "56aa006fd2382f0df4a3763258bc47a8dd07d8a1d1fffb962bb92b862b8d2c4d",
+            "size_bytes": 565
+          }
+        },
+        "G0_old_r1": {
+          "success": 1,
+          "absolute_end": 40,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/G0_old_r1/BRANCH_RESULT.json",
+            "sha256": "1760a70e9d23d2d37350f9ca5d432c1a34ac916ac84f04fe8a88c05d00400195",
+            "size_bytes": 565
+          }
+        },
+        "G0_fresh0_r0": {
+          "success": 1,
+          "absolute_end": 41,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/G0_fresh0_r0/BRANCH_RESULT.json",
+            "sha256": "aefd3a1d9a896104e22a588d287cab3fff74ba150c05a917690feac222ffa958",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh0_r1": {
+          "success": 1,
+          "absolute_end": 40,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/G0_fresh0_r1/BRANCH_RESULT.json",
+            "sha256": "c2dcf08dd23f717728f84524b285295bfcd15e6e87211abb9e11f177c0e07e8c",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh1_r0": {
+          "success": 1,
+          "absolute_end": 41,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/G0_fresh1_r0/BRANCH_RESULT.json",
+            "sha256": "b33cd4cc36376ef75ae61167feb03d804579c3fd3fa8c4c36500db356c779e1d",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh1_r1": {
+          "success": 1,
+          "absolute_end": 41,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/G0_fresh1_r1/BRANCH_RESULT.json",
+            "sha256": "70df87b873f404fde921b2bb7b3888838c06198563e6774926f7cefbf03a1ed4",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh2_r0": {
+          "success": 1,
+          "absolute_end": 41,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/G0_fresh2_r0/BRANCH_RESULT.json",
+            "sha256": "8e71c7eebb6a117e698c16168c02bc07b5d80091b585216d256989a71eaceedf",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh2_r1": {
+          "success": 1,
+          "absolute_end": 40,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/G0_fresh2_r1/BRANCH_RESULT.json",
+            "sha256": "638163b15379bb6f87195a96c50e1fee1be5d3d767487ba4f3905d10f7892158",
+            "size_bytes": 580
+          }
+        }
+      },
+      "labels_recomputed_from_raw_results": {
+        "gain_local_plus": 0.0,
+        "gain_local_minus": 0.0,
+        "pair": 0.0,
+        "G0": 0.0
+      }
+    },
+    {
+      "parent_key": "p06_button_press_train0000_cut5",
+      "source": {
+        "absolute_target": 300,
+        "cut": 5,
+        "env_seed": 157406182,
+        "instruction": "Press a button",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 1765196663084057631,
+        "ordinal": 0,
+        "parent_source_id": "PROPOSED_MT50_button_press_train_0000_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|button-press-v3|train|0|cut5",
+        "purpose": "next8 A train ordinal0/cut5 slots of original500 coverage plan",
+        "selection": "ASCII task names; exclude all processed identities including normal-only; first8; never skip unknown caps",
+        "source_id": "PROPOSED_MT50_button_press_train_0000",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "button-press-v3"
+      },
+      "source_manifest_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_MT50_CONTINUATION_CPU_V1/proposal/SOURCE_6.json",
+        "sha256": "8b39304aaed8e69b1c5f238a750ef58069fc901da7764509e35d56042b31538c",
+        "size_bytes": 913
+      },
+      "source_signature": "23dae58759df9d372fb2a0fd59069656a0f0575fce5452df2818aaf86850f2cf",
+      "runroot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5",
+      "run_id": "PROPOSED_A11_batch2_A_V1:p06_button_press_train0000_cut5",
+      "labels_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/reserved/PAIRED_LABELS.json",
+        "sha256": "875d4a36a6e139305f12ec2cc3a252a035475bbf77409b72b24d2ba863b6c140",
+        "size_bytes": 12854
+      },
+      "coverage_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/reserved/ATTEMPT_COVERAGE.json",
+        "sha256": "b9b434f2c2e1a5f76ca7ee75819ca44d74160b2d883c691712eb659d536f35df",
+        "size_bytes": 2002
+      },
+      "labels": {
+        "G0": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "complete_outcomes": 15,
+      "full_state_exact_comparisons": 14,
+      "canonical_only": true,
+      "physical_equality_proven": null,
+      "paired_eligible": true,
+      "bank_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/normal/BANK.json",
+        "sha256": "646f36828cf2c83ee819893c8ed58ae8545997d376832e9237c3dbfddd33066b",
+        "size_bytes": 6544
+      },
+      "aggregate_refs": {
+        "gain_local_plus": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_plus.json",
+            "sha256": "ab0d48648419ae8e85e6ea80a1a830e492c38035a4a30faf07174447ba8f2317",
+            "size_bytes": 2772
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_plus.json",
+            "sha256": "959e3c23bd6a630cad4857c03fc2fec68c670f1cd5a83174d015929bb4d868db",
+            "size_bytes": 8465
+          }
+        },
+        "gain_local_minus": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_minus.json",
+            "sha256": "957a7dedd7c29dd10d31b0b76d8bfe5be834211f18e06c9c3f3816fadd248c40",
+            "size_bytes": 2778
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_minus.json",
+            "sha256": "573a44e88d925835384d781b3044821b7a3175d499f7973a0ca26c4ad7d0564a",
+            "size_bytes": 8475
+          }
+        },
+        "pair": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/reserved/AGGREGATE_INDEX_pair.json",
+            "sha256": "2fe6bf01674f7f129f35cff5a681a5dfefdf414768ba99ed726a6dd0d0d349fd",
+            "size_bytes": 2786
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/reserved/SIDECAR_AGGREGATE_pair.json",
+            "sha256": "4358a383aa28132f075a50f965e191909854195a4ae0011e02ada4975985c7cd",
+            "size_bytes": 8495
+          }
+        },
+        "G0": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/reserved/AGGREGATE_INDEX_G0.json",
+            "sha256": "01b0e6c6c0c6aea2408a750962bfa0b881388bba11fff9fba544decc64132c49",
+            "size_bytes": 4318
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/reserved/SIDECAR_AGGREGATE_G0.json",
+            "sha256": "e1f4e72654c28f1a978dd30a289468e0e5b80d3f0a1d4db8bb76d27ed9ebf81d",
+            "size_bytes": 12376
+          }
+        }
+      },
+      "complete_repeat_groups": 7,
+      "state_field_counts": [
+        221
+      ],
+      "branch_outcomes": {
+        "normal": {
+          "success": 1,
+          "absolute_end": 36,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/normal/BRANCH_RESULT.json",
+            "sha256": "f041411c2a0015840860a057e8109fc626d9f82c7c46d3cb5dda1d16c5c74b86",
+            "size_bytes": 1048
+          }
+        },
+        "Q_a0_r0": {
+          "success": 1,
+          "absolute_end": 39,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/Q_a0_r0/BRANCH_RESULT.json",
+            "sha256": "cffa172c4b1256a825e4efbbe09df63366af400206d84d755ebde4e35d9032c2",
+            "size_bytes": 572
+          }
+        },
+        "Q_a0_r1": {
+          "success": 1,
+          "absolute_end": 39,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/Q_a0_r1/BRANCH_RESULT.json",
+            "sha256": "b9d26473d59d4ad2f7e2dac7294bd62df31cd4b7afb92a79e193261f7ceb3e33",
+            "size_bytes": 572
+          }
+        },
+        "Q_local_plus_r0": {
+          "success": 1,
+          "absolute_end": 39,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/Q_local_plus_r0/BRANCH_RESULT.json",
+            "sha256": "4cb0293c4a946302b459b735bda58a086a81452bdbf131aa16c547d193884489",
+            "size_bytes": 588
+          }
+        },
+        "Q_local_plus_r1": {
+          "success": 1,
+          "absolute_end": 39,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/Q_local_plus_r1/BRANCH_RESULT.json",
+            "sha256": "d49435a2f6ade35e9ddbde2034557a20d00c0cc047fb8784313e54a9ae639122",
+            "size_bytes": 588
+          }
+        },
+        "Q_local_minus_r0": {
+          "success": 1,
+          "absolute_end": 39,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/Q_local_minus_r0/BRANCH_RESULT.json",
+            "sha256": "ee66d2651a6d211c3b32630d155170f45bd40c877e195fcc62a8ce85be8f7c3b",
+            "size_bytes": 590
+          }
+        },
+        "Q_local_minus_r1": {
+          "success": 1,
+          "absolute_end": 39,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/Q_local_minus_r1/BRANCH_RESULT.json",
+            "sha256": "86f2f1af66bd51fc8ed6d9a16871c94da0deced69bb6b685f028eedd4f0d7576",
+            "size_bytes": 590
+          }
+        },
+        "G0_old_r0": {
+          "success": 1,
+          "absolute_end": 36,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/G0_old_r0/BRANCH_RESULT.json",
+            "sha256": "5b2a0bdc45ec35ec1dc96f76b28c4f7997dc46285cdd79b6f200798f739b3aa6",
+            "size_bytes": 565
+          }
+        },
+        "G0_old_r1": {
+          "success": 1,
+          "absolute_end": 36,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/G0_old_r1/BRANCH_RESULT.json",
+            "sha256": "dc1abe2fe87f4a3ea0cf0e9eff4c2929eb2fd14808dd1d5ee5e7bb5dc8a4d219",
+            "size_bytes": 565
+          }
+        },
+        "G0_fresh0_r0": {
+          "success": 1,
+          "absolute_end": 37,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/G0_fresh0_r0/BRANCH_RESULT.json",
+            "sha256": "5a75b10b5a521600b4a2e691f2a4531e7a099bd378b06132f8531b3b025c7768",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh0_r1": {
+          "success": 1,
+          "absolute_end": 37,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/G0_fresh0_r1/BRANCH_RESULT.json",
+            "sha256": "1118fc732c33fdeb858ebb36b0e4f544a7e241bd2ea2a067a801b82dd7604b75",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh1_r0": {
+          "success": 1,
+          "absolute_end": 37,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/G0_fresh1_r0/BRANCH_RESULT.json",
+            "sha256": "2b6903a71f88f24b7929eead1872e3d40d1e57913db7a7be6cc2717d5330eaa8",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh1_r1": {
+          "success": 1,
+          "absolute_end": 37,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/G0_fresh1_r1/BRANCH_RESULT.json",
+            "sha256": "af1b18805e5dea711ad24baa3023859a90e7ac5e871ae6be225e6f15e2ab32ec",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh2_r0": {
+          "success": 1,
+          "absolute_end": 37,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/G0_fresh2_r0/BRANCH_RESULT.json",
+            "sha256": "867ee314dd978ff217426d02add252aba2dfd7734c49e0485f4ae7f449be54e7",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh2_r1": {
+          "success": 1,
+          "absolute_end": 37,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/G0_fresh2_r1/BRANCH_RESULT.json",
+            "sha256": "a6c2b86828bef52d3d70cf3415be4c8b8b17c2170c421ca4f2952aa4e7aa528b",
+            "size_bytes": 580
+          }
+        }
+      },
+      "labels_recomputed_from_raw_results": {
+        "gain_local_plus": 0.0,
+        "gain_local_minus": 0.0,
+        "pair": 0.0,
+        "G0": 0.0
+      }
+    },
+    {
+      "parent_key": "p07_button_press_wall_train0000_cut5",
+      "source": {
+        "absolute_target": 300,
+        "cut": 5,
+        "env_seed": 367468006,
+        "instruction": "Bypass a wall and press a button",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 815355439200768165,
+        "ordinal": 0,
+        "parent_source_id": "PROPOSED_MT50_button_press_wall_train_0000_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|button-press-wall-v3|train|0|cut5",
+        "purpose": "next8 A train ordinal0/cut5 slots of original500 coverage plan",
+        "selection": "ASCII task names; exclude all processed identities including normal-only; first8; never skip unknown caps",
+        "source_id": "PROPOSED_MT50_button_press_wall_train_0000",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "button-press-wall-v3"
+      },
+      "source_manifest_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_MT50_CONTINUATION_CPU_V1/proposal/SOURCE_7.json",
+        "sha256": "0730eb298a3126dbfb1124073fbfe5f70c59387905a270a2f298911b5b4868b2",
+        "size_bytes": 950
+      },
+      "source_signature": "3fef0e37574f352a48615f563ac3442079e41acccf7cf2aec1d74ca9afbeed70",
+      "runroot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5",
+      "run_id": "PROPOSED_A11_batch2_A_V1:p07_button_press_wall_train0000_cut5",
+      "labels_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/reserved/PAIRED_LABELS.json",
+        "sha256": "065f8e64ecdf8b4a53a2f47ffce4b9570469c565c7cca598645e9b23bf3c9ef0",
+        "size_bytes": 12994
+      },
+      "coverage_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/reserved/ATTEMPT_COVERAGE.json",
+        "sha256": "b9b434f2c2e1a5f76ca7ee75819ca44d74160b2d883c691712eb659d536f35df",
+        "size_bytes": 2002
+      },
+      "labels": {
+        "G0": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "complete_outcomes": 15,
+      "full_state_exact_comparisons": 14,
+      "canonical_only": true,
+      "physical_equality_proven": null,
+      "paired_eligible": true,
+      "bank_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/normal/BANK.json",
+        "sha256": "50eb22cb3178a25d6ff33e3c2c4d32116f2b6336a10856955b2a5362fc7285e4",
+        "size_bytes": 6649
+      },
+      "aggregate_refs": {
+        "gain_local_plus": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_plus.json",
+            "sha256": "7ed2c459df3a17e9eb5b10df4267247d194258a1fa7b974aa24d7348ad4f7468",
+            "size_bytes": 2802
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_plus.json",
+            "sha256": "0ecfb4a677a532d3b105065366e9789733084eef0e53776919e349486c7e52eb",
+            "size_bytes": 8560
+          }
+        },
+        "gain_local_minus": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_minus.json",
+            "sha256": "ed3f419b84ac7a7da3daba192e71e0f3fb3c04cc98826fb4a913833a91e915f3",
+            "size_bytes": 2808
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_minus.json",
+            "sha256": "4a1173c61dc49a9cbf8a16224434c3f17f9997578b75b1aa4ab051a79150da3a",
+            "size_bytes": 8570
+          }
+        },
+        "pair": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/reserved/AGGREGATE_INDEX_pair.json",
+            "sha256": "a390eec10912177d98511ef99170c3e28aad13269673ad96716b92d5db888df0",
+            "size_bytes": 2816
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/reserved/SIDECAR_AGGREGATE_pair.json",
+            "sha256": "bb58970199efcbf1c9a418310fd520ec9937511ef3be77da01022f193e40610b",
+            "size_bytes": 8590
+          }
+        },
+        "G0": {
+          "index_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/reserved/AGGREGATE_INDEX_G0.json",
+            "sha256": "1b70a3fee872c5c6b35169ab31129ea8fcba7ab3576d60283d1ea543a10471c1",
+            "size_bytes": 4368
+          },
+          "sidecar_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/reserved/SIDECAR_AGGREGATE_G0.json",
+            "sha256": "957df3e145bd3a7f122ddeadad19302665d523cbafcd0a3c14f3be142f2f218e",
+            "size_bytes": 12531
+          }
+        }
+      },
+      "complete_repeat_groups": 7,
+      "state_field_counts": [
+        221
+      ],
+      "branch_outcomes": {
+        "normal": {
+          "success": 1,
+          "absolute_end": 45,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/normal/BRANCH_RESULT.json",
+            "sha256": "d8a30c12f23ad7e435783d6fe5f92d987902edd250ffc218cef8b6b39262d85d",
+            "size_bytes": 1058
+          }
+        },
+        "Q_a0_r0": {
+          "success": 1,
+          "absolute_end": 44,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/Q_a0_r0/BRANCH_RESULT.json",
+            "sha256": "6c80c87b6d725127eff101062dffe2fd102560b92f47a9331f7f63ac6b62eee8",
+            "size_bytes": 572
+          }
+        },
+        "Q_a0_r1": {
+          "success": 1,
+          "absolute_end": 44,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/Q_a0_r1/BRANCH_RESULT.json",
+            "sha256": "ee955ccf35bc20a215bf3df1e0efbacaa137293bf2c6f2b57a8fd8af15475a34",
+            "size_bytes": 572
+          }
+        },
+        "Q_local_plus_r0": {
+          "success": 1,
+          "absolute_end": 43,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/Q_local_plus_r0/BRANCH_RESULT.json",
+            "sha256": "5f672cdbe60b914f5d8f5f36cc54b7987e9ad337c3384385cf710299facf877c",
+            "size_bytes": 588
+          }
+        },
+        "Q_local_plus_r1": {
+          "success": 1,
+          "absolute_end": 46,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/Q_local_plus_r1/BRANCH_RESULT.json",
+            "sha256": "05ddd71ca63ee07a4423a2a6030f17c0ae855ffe99ba1989ae2c08b2d31b62ff",
+            "size_bytes": 588
+          }
+        },
+        "Q_local_minus_r0": {
+          "success": 1,
+          "absolute_end": 43,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/Q_local_minus_r0/BRANCH_RESULT.json",
+            "sha256": "aaac0d5f7e76fb536fcb1d75e17589d194c4163f663a16c5fd0e3a6ec2c58759",
+            "size_bytes": 590
+          }
+        },
+        "Q_local_minus_r1": {
+          "success": 1,
+          "absolute_end": 44,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/Q_local_minus_r1/BRANCH_RESULT.json",
+            "sha256": "76c9a4933972ad7f14f580713b4a3d4580dd67e638909a42a52a2940682a3d09",
+            "size_bytes": 590
+          }
+        },
+        "G0_old_r0": {
+          "success": 1,
+          "absolute_end": 44,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/G0_old_r0/BRANCH_RESULT.json",
+            "sha256": "c92f760417a84283c526c4428669d7cc78b8b265610c6bd9cdd3b0ed4f16fa2c",
+            "size_bytes": 565
+          }
+        },
+        "G0_old_r1": {
+          "success": 1,
+          "absolute_end": 45,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/G0_old_r1/BRANCH_RESULT.json",
+            "sha256": "a22559180cf0f539e4ba1e6777c31631cbe3a55d86cea27402c2f82a06d37103",
+            "size_bytes": 565
+          }
+        },
+        "G0_fresh0_r0": {
+          "success": 1,
+          "absolute_end": 44,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/G0_fresh0_r0/BRANCH_RESULT.json",
+            "sha256": "b364f16dd5dd976db8a346ef163641dabacd103a466a52112b3917a26147a807",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh0_r1": {
+          "success": 1,
+          "absolute_end": 44,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/G0_fresh0_r1/BRANCH_RESULT.json",
+            "sha256": "19a097365f1f16cacdfc4f5da60608180a6cfb7f2e9f74cf05de529bed27de12",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh1_r0": {
+          "success": 1,
+          "absolute_end": 44,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/G0_fresh1_r0/BRANCH_RESULT.json",
+            "sha256": "58f7800edd10e7f4581d8157344d6dd6c4ec6ba79aec3ec23d7b21d881346e5e",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh1_r1": {
+          "success": 1,
+          "absolute_end": 44,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/G0_fresh1_r1/BRANCH_RESULT.json",
+            "sha256": "bc9af6ba379282e162b6b3021796e0164ed2667b8916aaf21a8d9fcb88cf48b4",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh2_r0": {
+          "success": 1,
+          "absolute_end": 44,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/G0_fresh2_r0/BRANCH_RESULT.json",
+            "sha256": "566d146b24af09b5b58b82e30c10f82dfb6c6f09756598bfadbdcdceb3076587",
+            "size_bytes": 580
+          }
+        },
+        "G0_fresh2_r1": {
+          "success": 1,
+          "absolute_end": 44,
+          "reason": "success",
+          "result_ref": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/G0_fresh2_r1/BRANCH_RESULT.json",
+            "sha256": "5bf79713692c604bcf08829d5fe76a70945b17a8f51c04c9e5692a865905b3c7",
+            "size_bytes": 580
+          }
+        }
+      },
+      "labels_recomputed_from_raw_results": {
+        "gain_local_plus": 0.0,
+        "gain_local_minus": 0.0,
+        "pair": 0.0,
+        "G0": 0.0
+      }
+    }
+  ],
+  "excluded_parents": [],
+  "summary": {
+    "started": 120,
+    "absolute_s300_complete": 37,
+    "controls": 15220,
+    "success": 83,
+    "unstarted": 0,
+    "qualified_parents": 8,
+    "paired_labels_recomputed": 32,
+    "complete_repeat_groups": 56,
+    "full_state_direct_SHA_comparisons": 112,
+    "commitments_entered": 112,
+    "commitments_completed_at_frozen_C": 112,
+    "post_commit_native_H10_resumptions": 112,
+    "early_commitment_successes": 0,
+    "direct_MJB_normal_branch_sample_pairs": 8
+  },
+  "early_commitment_successes": [],
+  "state_closure_direct_samples": [
+    {
+      "parent_key": "p00_assembly_train0000_cut5",
+      "reference_state_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/normal/CUT_STATE.json",
+        "sha256": "38538c2ba838e8181bfd035f3564d2e437724a30c2b7cb0825d21f9846d0975c",
+        "size_bytes": 5829392
+      },
+      "sample_state_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/Q_a0_r0/CUT_STATE.json",
+        "sha256": "38538c2ba838e8181bfd035f3564d2e437724a30c2b7cb0825d21f9846d0975c",
+        "size_bytes": 5829392
+      },
+      "normal_mjb_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/normal/cut_model.mjb",
+        "sha256": "dc378b0f67841e454200960c5920e6f56ae657e41c4a8019d6614132370fb79c",
+        "size_bytes": 18906057
+      },
+      "sample_mjb_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p00_assembly_train0000_cut5/Q_a0_r0/cut_model.mjb",
+        "sha256": "dc378b0f67841e454200960c5920e6f56ae657e41c4a8019d6614132370fb79c",
+        "size_bytes": 18906057
+      },
+      "fields": 221,
+      "groups": [
+        "callbacks_plugins",
+        "clocks",
+        "identity",
+        "integration",
+        "mutable_model",
+        "queue_history",
+        "rng",
+        "task_python",
+        "wrapper_python"
+      ],
+      "state_sha_direct_equal_branches": 14
+    },
+    {
+      "parent_key": "p01_basketball_train0000_cut5",
+      "reference_state_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/normal/CUT_STATE.json",
+        "sha256": "5d5affaa007177a356bd8f6f453a1e3d26dd078d6e49f4fecb4042ec57cdca70",
+        "size_bytes": 5831371
+      },
+      "sample_state_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/Q_a0_r0/CUT_STATE.json",
+        "sha256": "5d5affaa007177a356bd8f6f453a1e3d26dd078d6e49f4fecb4042ec57cdca70",
+        "size_bytes": 5831371
+      },
+      "normal_mjb_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/normal/cut_model.mjb",
+        "sha256": "07131e2fe9d5238df4eeff59f053feb9b5d7c8257199cb066657572799bf9d97",
+        "size_bytes": 19336031
+      },
+      "sample_mjb_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p01_basketball_train0000_cut5/Q_a0_r0/cut_model.mjb",
+        "sha256": "07131e2fe9d5238df4eeff59f053feb9b5d7c8257199cb066657572799bf9d97",
+        "size_bytes": 19336031
+      },
+      "fields": 227,
+      "groups": [
+        "callbacks_plugins",
+        "clocks",
+        "identity",
+        "integration",
+        "mutable_model",
+        "queue_history",
+        "rng",
+        "task_python",
+        "wrapper_python"
+      ],
+      "state_sha_direct_equal_branches": 14
+    },
+    {
+      "parent_key": "p02_bin_picking_train0000_cut5",
+      "reference_state_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/normal/CUT_STATE.json",
+        "sha256": "d6bdcce720f2e9cc023af95191f1c2985fc264ae02ba7e928c75c08e87324f32",
+        "size_bytes": 5835408
+      },
+      "sample_state_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/Q_a0_r0/CUT_STATE.json",
+        "sha256": "d6bdcce720f2e9cc023af95191f1c2985fc264ae02ba7e928c75c08e87324f32",
+        "size_bytes": 5835408
+      },
+      "normal_mjb_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/normal/cut_model.mjb",
+        "sha256": "f1617f4838446ac7bf8da6dcef1ec79c3b00c088ac185b862db516632bb331ce",
+        "size_bytes": 17874761
+      },
+      "sample_mjb_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p02_bin_picking_train0000_cut5/Q_a0_r0/cut_model.mjb",
+        "sha256": "f1617f4838446ac7bf8da6dcef1ec79c3b00c088ac185b862db516632bb331ce",
+        "size_bytes": 17874761
+      },
+      "fields": 246,
+      "groups": [
+        "callbacks_plugins",
+        "clocks",
+        "identity",
+        "integration",
+        "mutable_model",
+        "queue_history",
+        "rng",
+        "task_python",
+        "wrapper_python"
+      ],
+      "state_sha_direct_equal_branches": 14
+    },
+    {
+      "parent_key": "p03_box_close_train0000_cut5",
+      "reference_state_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/normal/CUT_STATE.json",
+        "sha256": "01d3c1b0995d1a1fd157cb8b30b459066f8065c3a4905a734d7e9e2eb913a1d8",
+        "size_bytes": 5830826
+      },
+      "sample_state_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/Q_a0_r0/CUT_STATE.json",
+        "sha256": "01d3c1b0995d1a1fd157cb8b30b459066f8065c3a4905a734d7e9e2eb913a1d8",
+        "size_bytes": 5830826
+      },
+      "normal_mjb_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/normal/cut_model.mjb",
+        "sha256": "ba3139ad46e2603e8f918eaa3e83c039aede5f68bfc120cd4100ca475af0c435",
+        "size_bytes": 21970800
+      },
+      "sample_mjb_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/Q_a0_r0/cut_model.mjb",
+        "sha256": "ba3139ad46e2603e8f918eaa3e83c039aede5f68bfc120cd4100ca475af0c435",
+        "size_bytes": 21970800
+      },
+      "fields": 228,
+      "groups": [
+        "callbacks_plugins",
+        "clocks",
+        "identity",
+        "integration",
+        "mutable_model",
+        "queue_history",
+        "rng",
+        "task_python",
+        "wrapper_python"
+      ],
+      "state_sha_direct_equal_branches": 14
+    },
+    {
+      "parent_key": "p04_button_press_topdown_train0000_cut5",
+      "reference_state_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/normal/CUT_STATE.json",
+        "sha256": "02bf6aaf0cedcec18d7dce471d057003ecbd96dfb314f6e1ffd0d1fdf40c8235",
+        "size_bytes": 5828838
+      },
+      "sample_state_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/Q_a0_r0/CUT_STATE.json",
+        "sha256": "02bf6aaf0cedcec18d7dce471d057003ecbd96dfb314f6e1ffd0d1fdf40c8235",
+        "size_bytes": 5828838
+      },
+      "normal_mjb_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/normal/cut_model.mjb",
+        "sha256": "ef0eeb3f19eb1947e62721a1cde86f3e0bda1d916fae2426f88045268af56484",
+        "size_bytes": 18826946
+      },
+      "sample_mjb_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p04_button_press_topdown_train0000_cut5/Q_a0_r0/cut_model.mjb",
+        "sha256": "ef0eeb3f19eb1947e62721a1cde86f3e0bda1d916fae2426f88045268af56484",
+        "size_bytes": 18826946
+      },
+      "fields": 221,
+      "groups": [
+        "callbacks_plugins",
+        "clocks",
+        "identity",
+        "integration",
+        "mutable_model",
+        "queue_history",
+        "rng",
+        "task_python",
+        "wrapper_python"
+      ],
+      "state_sha_direct_equal_branches": 14
+    },
+    {
+      "parent_key": "p05_button_press_topdown_wall_train0000_cut5",
+      "reference_state_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/normal/CUT_STATE.json",
+        "sha256": "f357ea852c8a9414fe5c7126231209a644d7597e8831c1fd87c95883b8fb0d08",
+        "size_bytes": 5829105
+      },
+      "sample_state_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/Q_a0_r0/CUT_STATE.json",
+        "sha256": "f357ea852c8a9414fe5c7126231209a644d7597e8831c1fd87c95883b8fb0d08",
+        "size_bytes": 5829105
+      },
+      "normal_mjb_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/normal/cut_model.mjb",
+        "sha256": "ac39126e33784ad6cbfee8b86e3975b98039a0f1d8bf01e33476660e3d3468ec",
+        "size_bytes": 19615117
+      },
+      "sample_mjb_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p05_button_press_topdown_wall_train0000_cut5/Q_a0_r0/cut_model.mjb",
+        "sha256": "ac39126e33784ad6cbfee8b86e3975b98039a0f1d8bf01e33476660e3d3468ec",
+        "size_bytes": 19615117
+      },
+      "fields": 221,
+      "groups": [
+        "callbacks_plugins",
+        "clocks",
+        "identity",
+        "integration",
+        "mutable_model",
+        "queue_history",
+        "rng",
+        "task_python",
+        "wrapper_python"
+      ],
+      "state_sha_direct_equal_branches": 14
+    },
+    {
+      "parent_key": "p06_button_press_train0000_cut5",
+      "reference_state_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/normal/CUT_STATE.json",
+        "sha256": "d2b72fe5114ab109d6227089f9c06f17c3008abfc430aefd210a8b5f329ed936",
+        "size_bytes": 5828757
+      },
+      "sample_state_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/Q_a0_r0/CUT_STATE.json",
+        "sha256": "d2b72fe5114ab109d6227089f9c06f17c3008abfc430aefd210a8b5f329ed936",
+        "size_bytes": 5828757
+      },
+      "normal_mjb_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/normal/cut_model.mjb",
+        "sha256": "ac9e605f3b98d0ccb050e010ca17f3c6c31b0d922a3eafe9f13e5999902dd295",
+        "size_bytes": 18826946
+      },
+      "sample_mjb_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p06_button_press_train0000_cut5/Q_a0_r0/cut_model.mjb",
+        "sha256": "ac9e605f3b98d0ccb050e010ca17f3c6c31b0d922a3eafe9f13e5999902dd295",
+        "size_bytes": 18826946
+      },
+      "fields": 221,
+      "groups": [
+        "callbacks_plugins",
+        "clocks",
+        "identity",
+        "integration",
+        "mutable_model",
+        "queue_history",
+        "rng",
+        "task_python",
+        "wrapper_python"
+      ],
+      "state_sha_direct_equal_branches": 14
+    },
+    {
+      "parent_key": "p07_button_press_wall_train0000_cut5",
+      "reference_state_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/normal/CUT_STATE.json",
+        "sha256": "696ff307aaa2f6954a9867e316e296fb73fd9cf6c87e155b9430b7dc609ec07f",
+        "size_bytes": 5829027
+      },
+      "sample_state_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/Q_a0_r0/CUT_STATE.json",
+        "sha256": "696ff307aaa2f6954a9867e316e296fb73fd9cf6c87e155b9430b7dc609ec07f",
+        "size_bytes": 5829027
+      },
+      "normal_mjb_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/normal/cut_model.mjb",
+        "sha256": "86460a2456c263b876aee65885b6fbc8dfe667bd9e1955cd10fa885303ce6f9e",
+        "size_bytes": 19615117
+      },
+      "sample_mjb_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p07_button_press_wall_train0000_cut5/Q_a0_r0/cut_model.mjb",
+        "sha256": "86460a2456c263b876aee65885b6fbc8dfe667bd9e1955cd10fa885303ce6f9e",
+        "size_bytes": 19615117
+      },
+      "fields": 221,
+      "groups": [
+        "callbacks_plugins",
+        "clocks",
+        "identity",
+        "integration",
+        "mutable_model",
+        "queue_history",
+        "rng",
+        "task_python",
+        "wrapper_python"
+      ],
+      "state_sha_direct_equal_branches": 14
+    }
+  ],
+  "scope": {
+    "read_only_cpu_original_evidence_review": true,
+    "model_simulation_gpu_hardware_calls": 0,
+    "large_weight_rehashes": 0,
+    "authoritative_documents_modified": false,
+    "closure": "frozen captured-field/MJB closure only; no universal physical equivalence",
+    "physical_equality_proven": null,
+    "local_plus_minus": "Q training probes only, not Post/Velocity method evaluation",
+    "training_authorized_or_performed": false,
+    "deduplication": "canonical filenames only; partial hardlink aliases excluded",
+    "MJB_rehash_scope": "one normal and one Q_a0_r0 per qualified parent; all 112 direct CUT_STATE SHA equalities include captured MJB digests; original verification and delivered raw MJB comparison counts also cross-checked",
+    "frozen_eight_source_order_independently_checked": true
+  },
+  "evidence_refs": {
+    "INDEPENDENT_PAIRED_LABELS.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH2_V1/INDEPENDENT_PAIRED_LABELS.json",
+      "sha256": "05821f93c27d5f39385967bb894803429a7932eff0aa93d21d73798917c58708",
+      "size_bytes": 19439
+    },
+    "PARENT_AND_BRANCH_COVERAGE.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH2_V1/PARENT_AND_BRANCH_COVERAGE.json",
+      "sha256": "1036ee0488ab8715797281035190e0431dcc525e0251a19fda236510b31d9ecb",
+      "size_bytes": 1498271
+    },
+    "STATE_CLOSURE_AUDIT.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH2_V1/STATE_CLOSURE_AUDIT.json",
+      "sha256": "b11f93b31455e21628686abfa31eccb8fb9a9d76bc646731a84cfa649d9a39b0",
+      "size_bytes": 10661624
+    },
+    "RESULT.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A11_COMMON_POOL_BATCH2_V1_RESULT.json",
+      "sha256": "5b9e3293de45ffdf55b6decbc870a969a3f408a1d9ba4ac660efd6d080e18116",
+      "size_bytes": 44234
+    }
+  },
+  "blockers": []
+}

@@ -1,0 +1,2651 @@
+{
+  "schema": "round1_trained_selection_independent_v1",
+  "utc": "2026-09-16T20:30:41.511886+00:00",
+  "scope": "static frozen development prediction/label audit; no new model inference/optimizer/simulator/held reads",
+  "selection_rule": {
+    "dataset": "same 100-episode development candidate bank for all A/B ensemble checkpoints",
+    "candidate_selector": "argmax mean member success probability; a0 wins ties",
+    "checkpoint_criteria_in_order": [
+      "maximize full-planned-episode real paired net gain of selected candidates versus a0",
+      "minimize paired harms",
+      "minimize relative probability-gain MSE",
+      "earlier update step",
+      "prefer path B"
+    ],
+    "only_one_selected_critic_per_round_gets_real_policy_rollouts": true,
+    "real_policy_comparisons_per_round": 1,
+    "maximum_rounds": 2,
+    "real_policy_arms": [
+      "continue_native10",
+      "alarm_replan10",
+      "velocity",
+      "direct",
+      "post"
+    ],
+    "max_real_development_branches_per_round": 2000,
+    "max_real_development_branches_total": 4000,
+    "offline_selection_is_proxy_for_continuous_guidance": true,
+    "final_primary_injection_selected_on_development": true,
+    "calibration": "100 episodes/20 distinct physical initial scenes per task, 2 repeats; selected model, low freedom pre-registered rule, no weight/PCA updates",
+    "heldout": "100 episodes/20 distinct physical initial scenes per task, 4 repeats, only after final model/method/acceptance freeze"
+  },
+  "coverage": {
+    "planned_sources": 100,
+    "critic_reached": 95,
+    "common_no_cut": 5,
+    "common_success_sources": 4,
+    "common_failure_sources": 1,
+    "full_planned_suffix_slots": 400,
+    "member_checkpoints": 40,
+    "selectable_ensemble_checkpoints": 10
+  },
+  "independent_ranked_checkpoints": [
+    {
+      "path": "B",
+      "step": 200,
+      "gain": 0.045,
+      "gain_pp": 4.5,
+      "rescues": 24,
+      "harms": 6,
+      "gain_mse": 0.05370577495641901,
+      "chosen_successes": 275,
+      "baseline_successes": 257,
+      "eligible_any_top_ties": 2,
+      "chosen_candidates_reached": {
+        "post": 76,
+        "xyz_positive": 2,
+        "direct": 6,
+        "random_full_positive": 4,
+        "velocity": 6,
+        "random_full_negative": 1
+      },
+      "positive_sources": 10,
+      "negative_sources": 3,
+      "eligible_a0_maximal": 0,
+      "eligible_a0_top_ties": 0
+    },
+    {
+      "path": "B",
+      "step": 2400,
+      "gain": 0.045,
+      "gain_pp": 4.5,
+      "rescues": 27,
+      "harms": 9,
+      "gain_mse": 0.05697171557612621,
+      "chosen_successes": 275,
+      "baseline_successes": 257,
+      "eligible_any_top_ties": 2,
+      "chosen_candidates_reached": {
+        "post": 22,
+        "random_full_positive": 16,
+        "random_half_positive": 1,
+        "velocity": 16,
+        "xyz_negative": 5,
+        "direct": 16,
+        "random_full_negative": 8,
+        "random_half_negative": 2,
+        "reverse_post": 7,
+        "gripper_positive": 2
+      },
+      "positive_sources": 12,
+      "negative_sources": 4,
+      "eligible_a0_maximal": 0,
+      "eligible_a0_top_ties": 0
+    },
+    {
+      "path": "A",
+      "step": 200,
+      "gain": 0.04,
+      "gain_pp": 4.0,
+      "rescues": 23,
+      "harms": 7,
+      "gain_mse": 0.05180749776172969,
+      "chosen_successes": 273,
+      "baseline_successes": 257,
+      "eligible_any_top_ties": 2,
+      "chosen_candidates_reached": {
+        "post": 72,
+        "direct": 19,
+        "xyz_positive": 2,
+        "velocity": 2
+      },
+      "positive_sources": 9,
+      "negative_sources": 3,
+      "eligible_a0_maximal": 0,
+      "eligible_a0_top_ties": 0
+    },
+    {
+      "path": "A",
+      "step": 400,
+      "gain": 0.035,
+      "gain_pp": 3.5000000000000004,
+      "rescues": 23,
+      "harms": 9,
+      "gain_mse": 0.05201814771453985,
+      "chosen_successes": 271,
+      "baseline_successes": 257,
+      "eligible_any_top_ties": 0,
+      "chosen_candidates_reached": {
+        "velocity": 5,
+        "post": 60,
+        "direct": 27,
+        "random_full_negative": 2,
+        "random_full_positive": 1
+      },
+      "positive_sources": 9,
+      "negative_sources": 4,
+      "eligible_a0_maximal": 0,
+      "eligible_a0_top_ties": 0
+    },
+    {
+      "path": "B",
+      "step": 400,
+      "gain": 0.035,
+      "gain_pp": 3.5000000000000004,
+      "rescues": 25,
+      "harms": 11,
+      "gain_mse": 0.05384675069597987,
+      "chosen_successes": 271,
+      "baseline_successes": 257,
+      "eligible_any_top_ties": 0,
+      "chosen_candidates_reached": {
+        "velocity": 15,
+        "random_full_positive": 15,
+        "post": 29,
+        "direct": 29,
+        "random_full_negative": 6,
+        "gripper_positive": 1
+      },
+      "positive_sources": 10,
+      "negative_sources": 4,
+      "eligible_a0_maximal": 0,
+      "eligible_a0_top_ties": 0
+    },
+    {
+      "path": "B",
+      "step": 1600,
+      "gain": 0.035,
+      "gain_pp": 3.5000000000000004,
+      "rescues": 25,
+      "harms": 11,
+      "gain_mse": 0.056748265451199646,
+      "chosen_successes": 271,
+      "baseline_successes": 257,
+      "eligible_any_top_ties": 0,
+      "chosen_candidates_reached": {
+        "velocity": 16,
+        "random_full_positive": 17,
+        "gripper_positive": 7,
+        "post": 9,
+        "direct": 23,
+        "random_full_negative": 12,
+        "xyz_negative": 2,
+        "reverse_post": 7,
+        "a0": 1,
+        "gripper_negative": 1
+      },
+      "positive_sources": 10,
+      "negative_sources": 5,
+      "eligible_a0_maximal": 1,
+      "eligible_a0_top_ties": 0
+    },
+    {
+      "path": "A",
+      "step": 2400,
+      "gain": 0.0325,
+      "gain_pp": 3.25,
+      "rescues": 20,
+      "harms": 7,
+      "gain_mse": 0.05836694194575912,
+      "chosen_successes": 270,
+      "baseline_successes": 257,
+      "eligible_any_top_ties": 0,
+      "chosen_candidates_reached": {
+        "direct": 18,
+        "gripper_positive": 36,
+        "velocity": 9,
+        "random_full_positive": 5,
+        "post": 15,
+        "random_full_negative": 5,
+        "random_half_negative": 4,
+        "random_half_positive": 3
+      },
+      "positive_sources": 9,
+      "negative_sources": 4,
+      "eligible_a0_maximal": 0,
+      "eligible_a0_top_ties": 0
+    },
+    {
+      "path": "B",
+      "step": 800,
+      "gain": 0.03,
+      "gain_pp": 3.0,
+      "rescues": 24,
+      "harms": 12,
+      "gain_mse": 0.05547970871966006,
+      "chosen_successes": 269,
+      "baseline_successes": 257,
+      "eligible_any_top_ties": 0,
+      "chosen_candidates_reached": {
+        "velocity": 14,
+        "random_full_positive": 17,
+        "post": 13,
+        "direct": 22,
+        "random_full_negative": 16,
+        "reverse_post": 11,
+        "gripper_positive": 2
+      },
+      "positive_sources": 9,
+      "negative_sources": 5,
+      "eligible_a0_maximal": 0,
+      "eligible_a0_top_ties": 0
+    },
+    {
+      "path": "A",
+      "step": 800,
+      "gain": 0.0275,
+      "gain_pp": 2.75,
+      "rescues": 19,
+      "harms": 8,
+      "gain_mse": 0.05381572560779421,
+      "chosen_successes": 268,
+      "baseline_successes": 257,
+      "eligible_any_top_ties": 0,
+      "chosen_candidates_reached": {
+        "direct": 14,
+        "gripper_positive": 44,
+        "random_full_positive": 10,
+        "random_full_negative": 12,
+        "velocity": 1,
+        "post": 14
+      },
+      "positive_sources": 8,
+      "negative_sources": 4,
+      "eligible_a0_maximal": 0,
+      "eligible_a0_top_ties": 0
+    },
+    {
+      "path": "A",
+      "step": 1600,
+      "gain": 0.0075,
+      "gain_pp": 0.75,
+      "rescues": 12,
+      "harms": 9,
+      "gain_mse": 0.057458366819224976,
+      "chosen_successes": 260,
+      "baseline_successes": 257,
+      "eligible_any_top_ties": 0,
+      "chosen_candidates_reached": {
+        "gripper_positive": 43,
+        "direct": 16,
+        "random_full_positive": 10,
+        "velocity": 2,
+        "random_half_negative": 1,
+        "post": 13,
+        "random_full_negative": 8,
+        "random_half_positive": 2
+      },
+      "positive_sources": 6,
+      "negative_sources": 5,
+      "eligible_a0_maximal": 0,
+      "eligible_a0_top_ties": 0
+    }
+  ],
+  "checkpoint_metrics": [
+    {
+      "path": "A",
+      "step": 200,
+      "gain": 0.04,
+      "gain_pp": 4.0,
+      "rescues": 23,
+      "harms": 7,
+      "gain_mse": 0.05180749776172969,
+      "chosen_successes": 273,
+      "baseline_successes": 257,
+      "eligible_any_top_ties": 2,
+      "chosen_candidates_reached": {
+        "post": 72,
+        "direct": 19,
+        "xyz_positive": 2,
+        "velocity": 2
+      },
+      "positive_sources": 9,
+      "negative_sources": 3,
+      "eligible_a0_maximal": 0,
+      "eligible_a0_top_ties": 0
+    },
+    {
+      "path": "A",
+      "step": 400,
+      "gain": 0.035,
+      "gain_pp": 3.5000000000000004,
+      "rescues": 23,
+      "harms": 9,
+      "gain_mse": 0.05201814771453985,
+      "chosen_successes": 271,
+      "baseline_successes": 257,
+      "eligible_any_top_ties": 0,
+      "chosen_candidates_reached": {
+        "velocity": 5,
+        "post": 60,
+        "direct": 27,
+        "random_full_negative": 2,
+        "random_full_positive": 1
+      },
+      "positive_sources": 9,
+      "negative_sources": 4,
+      "eligible_a0_maximal": 0,
+      "eligible_a0_top_ties": 0
+    },
+    {
+      "path": "A",
+      "step": 800,
+      "gain": 0.0275,
+      "gain_pp": 2.75,
+      "rescues": 19,
+      "harms": 8,
+      "gain_mse": 0.05381572560779421,
+      "chosen_successes": 268,
+      "baseline_successes": 257,
+      "eligible_any_top_ties": 0,
+      "chosen_candidates_reached": {
+        "direct": 14,
+        "gripper_positive": 44,
+        "random_full_positive": 10,
+        "random_full_negative": 12,
+        "velocity": 1,
+        "post": 14
+      },
+      "positive_sources": 8,
+      "negative_sources": 4,
+      "eligible_a0_maximal": 0,
+      "eligible_a0_top_ties": 0
+    },
+    {
+      "path": "A",
+      "step": 1600,
+      "gain": 0.0075,
+      "gain_pp": 0.75,
+      "rescues": 12,
+      "harms": 9,
+      "gain_mse": 0.057458366819224976,
+      "chosen_successes": 260,
+      "baseline_successes": 257,
+      "eligible_any_top_ties": 0,
+      "chosen_candidates_reached": {
+        "gripper_positive": 43,
+        "direct": 16,
+        "random_full_positive": 10,
+        "velocity": 2,
+        "random_half_negative": 1,
+        "post": 13,
+        "random_full_negative": 8,
+        "random_half_positive": 2
+      },
+      "positive_sources": 6,
+      "negative_sources": 5,
+      "eligible_a0_maximal": 0,
+      "eligible_a0_top_ties": 0
+    },
+    {
+      "path": "A",
+      "step": 2400,
+      "gain": 0.0325,
+      "gain_pp": 3.25,
+      "rescues": 20,
+      "harms": 7,
+      "gain_mse": 0.05836694194575912,
+      "chosen_successes": 270,
+      "baseline_successes": 257,
+      "eligible_any_top_ties": 0,
+      "chosen_candidates_reached": {
+        "direct": 18,
+        "gripper_positive": 36,
+        "velocity": 9,
+        "random_full_positive": 5,
+        "post": 15,
+        "random_full_negative": 5,
+        "random_half_negative": 4,
+        "random_half_positive": 3
+      },
+      "positive_sources": 9,
+      "negative_sources": 4,
+      "eligible_a0_maximal": 0,
+      "eligible_a0_top_ties": 0
+    },
+    {
+      "path": "B",
+      "step": 200,
+      "gain": 0.045,
+      "gain_pp": 4.5,
+      "rescues": 24,
+      "harms": 6,
+      "gain_mse": 0.05370577495641901,
+      "chosen_successes": 275,
+      "baseline_successes": 257,
+      "eligible_any_top_ties": 2,
+      "chosen_candidates_reached": {
+        "post": 76,
+        "xyz_positive": 2,
+        "direct": 6,
+        "random_full_positive": 4,
+        "velocity": 6,
+        "random_full_negative": 1
+      },
+      "positive_sources": 10,
+      "negative_sources": 3,
+      "eligible_a0_maximal": 0,
+      "eligible_a0_top_ties": 0
+    },
+    {
+      "path": "B",
+      "step": 400,
+      "gain": 0.035,
+      "gain_pp": 3.5000000000000004,
+      "rescues": 25,
+      "harms": 11,
+      "gain_mse": 0.05384675069597987,
+      "chosen_successes": 271,
+      "baseline_successes": 257,
+      "eligible_any_top_ties": 0,
+      "chosen_candidates_reached": {
+        "velocity": 15,
+        "random_full_positive": 15,
+        "post": 29,
+        "direct": 29,
+        "random_full_negative": 6,
+        "gripper_positive": 1
+      },
+      "positive_sources": 10,
+      "negative_sources": 4,
+      "eligible_a0_maximal": 0,
+      "eligible_a0_top_ties": 0
+    },
+    {
+      "path": "B",
+      "step": 800,
+      "gain": 0.03,
+      "gain_pp": 3.0,
+      "rescues": 24,
+      "harms": 12,
+      "gain_mse": 0.05547970871966006,
+      "chosen_successes": 269,
+      "baseline_successes": 257,
+      "eligible_any_top_ties": 0,
+      "chosen_candidates_reached": {
+        "velocity": 14,
+        "random_full_positive": 17,
+        "post": 13,
+        "direct": 22,
+        "random_full_negative": 16,
+        "reverse_post": 11,
+        "gripper_positive": 2
+      },
+      "positive_sources": 9,
+      "negative_sources": 5,
+      "eligible_a0_maximal": 0,
+      "eligible_a0_top_ties": 0
+    },
+    {
+      "path": "B",
+      "step": 1600,
+      "gain": 0.035,
+      "gain_pp": 3.5000000000000004,
+      "rescues": 25,
+      "harms": 11,
+      "gain_mse": 0.056748265451199646,
+      "chosen_successes": 271,
+      "baseline_successes": 257,
+      "eligible_any_top_ties": 0,
+      "chosen_candidates_reached": {
+        "velocity": 16,
+        "random_full_positive": 17,
+        "gripper_positive": 7,
+        "post": 9,
+        "direct": 23,
+        "random_full_negative": 12,
+        "xyz_negative": 2,
+        "reverse_post": 7,
+        "a0": 1,
+        "gripper_negative": 1
+      },
+      "positive_sources": 10,
+      "negative_sources": 5,
+      "eligible_a0_maximal": 1,
+      "eligible_a0_top_ties": 0
+    },
+    {
+      "path": "B",
+      "step": 2400,
+      "gain": 0.045,
+      "gain_pp": 4.5,
+      "rescues": 27,
+      "harms": 9,
+      "gain_mse": 0.05697171557612621,
+      "chosen_successes": 275,
+      "baseline_successes": 257,
+      "eligible_any_top_ties": 2,
+      "chosen_candidates_reached": {
+        "post": 22,
+        "random_full_positive": 16,
+        "random_half_positive": 1,
+        "velocity": 16,
+        "xyz_negative": 5,
+        "direct": 16,
+        "random_full_negative": 8,
+        "random_half_negative": 2,
+        "reverse_post": 7,
+        "gripper_positive": 2
+      },
+      "positive_sources": 12,
+      "negative_sources": 4,
+      "eligible_a0_maximal": 0,
+      "eligible_a0_top_ties": 0
+    }
+  ],
+  "selected": {
+    "path": "B",
+    "step": 200,
+    "gain": 0.045,
+    "gain_pp": 4.5,
+    "rescues": 24,
+    "harms": 6,
+    "gain_mse": 0.05370577495641901,
+    "chosen_successes": 275,
+    "baseline_successes": 257,
+    "eligible_any_top_ties": 2,
+    "chosen_candidates_reached": {
+      "post": 76,
+      "xyz_positive": 2,
+      "direct": 6,
+      "random_full_positive": 4,
+      "velocity": 6,
+      "random_full_negative": 1
+    },
+    "positive_sources": 10,
+    "negative_sources": 3,
+    "eligible_a0_maximal": 0,
+    "eligible_a0_top_ties": 0
+  },
+  "audit": {
+    "prediction_group_artifact_sha_checks": 60,
+    "all_40_member_predictions_equal_group_scatter": true,
+    "all_10_group_outcomes_equal_frozen_dataset_scatter": true,
+    "all_10_argmax_choices_identical": true,
+    "all_point_outcomes_and_metrics_reproduced": true,
+    "gain_mse_max_float64_error": 1.3877787807814457e-17,
+    "no_cut_predictions_ignored_and_choice_a0": true,
+    "a0_exact_tie_rule_confirmed_by_static_rule_and_argmax": "a0 slot0, then first registered slot; no new tolerance",
+    "no_outcome_selected_members": "all fixed members0..3 at same checkpoint; float64 equal mean; selected exports byte-identical to four B200 checkpoints",
+    "selected_export_checks": [
+      {
+        "member": 0,
+        "checkpoint_sha256": "bc93c9035409cd2b7e413dffd0e0f9f3053ac34add4b47fc5cd57be9a5cdceb3"
+      },
+      {
+        "member": 1,
+        "checkpoint_sha256": "639e78888f9ef9657cef73da4f21f0676593a58ec4bfa0f8f098d0885432fb2f"
+      },
+      {
+        "member": 2,
+        "checkpoint_sha256": "e1f06c0214243ec9fd8952cab93139feafafbc8e84a74e432e9498d68d422df3"
+      },
+      {
+        "member": 3,
+        "checkpoint_sha256": "ae18f18e36b878b37b1085778136f6faf62f7146ad0d4ca015076671b2a074eb"
+      }
+    ],
+    "new_simulator_calls": 0,
+    "optimizer_updates": 0,
+    "new_prediction_forward_calls": 0,
+    "held_files_read": false,
+    "eligible_a0_ties_observed": 0,
+    "a0_tie_evidence_scope": "No reached-source a0 top tie occurred among10 ensembles; exact tie priority is established by frozen specification/argmax implementation. Observed non-a0 ties follow registered slot order."
+  },
+  "descriptive_old_bank_fixed_candidates": {
+    "a0": {
+      "successes": 257,
+      "gain_pp": 0.0
+    },
+    "xyz_positive": {
+      "successes": 272,
+      "gain_pp": 3.75
+    },
+    "xyz_negative": {
+      "successes": 243,
+      "gain_pp": -3.5000000000000004
+    },
+    "gripper_positive": {
+      "successes": 250,
+      "gain_pp": -1.7500000000000002
+    },
+    "gripper_negative": {
+      "successes": 245,
+      "gain_pp": -3.0
+    },
+    "random_half_positive": {
+      "successes": 253,
+      "gain_pp": -1.0
+    },
+    "random_half_negative": {
+      "successes": 247,
+      "gain_pp": -2.5
+    },
+    "random_full_positive": {
+      "successes": 234,
+      "gain_pp": -5.75
+    },
+    "random_full_negative": {
+      "successes": 240,
+      "gain_pp": -4.25
+    },
+    "velocity": {
+      "successes": 280,
+      "gain_pp": 5.75
+    },
+    "direct": {
+      "successes": 274,
+      "gain_pp": 4.25
+    },
+    "post": {
+      "successes": 274,
+      "gain_pp": 4.25
+    },
+    "reverse_post": {
+      "successes": 219,
+      "gain_pp": -9.5
+    }
+  },
+  "selected_source_details": [
+    {
+      "episode_id": "disassemble-v3__2026111600",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.055194199085235596
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111601",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.07180814445018768
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111602",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "predicted_gain": 0.020004743710160255
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111603",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.03719106316566467
+    },
+    {
+      "episode_id": "stick-push-v3__2026111604",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.04744303226470947
+    },
+    {
+      "episode_id": "disassemble-v3__2026111605",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.04380717873573303
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111606",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.058449357748031616
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111607",
+      "reached": true,
+      "selected_slot": 1,
+      "selected_candidate": "xyz_positive",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.0070770904421806335
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111608",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.021247686818242073
+    },
+    {
+      "episode_id": "stick-push-v3__2026111609",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.060953766107559204
+    },
+    {
+      "episode_id": "disassemble-v3__2026111610",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.05035659670829773
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111611",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.06896384060382843
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111612",
+      "reached": true,
+      "selected_slot": 10,
+      "selected_candidate": "direct",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.015587333589792252
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111613",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.01291683316230774
+    },
+    {
+      "episode_id": "stick-push-v3__2026111614",
+      "reached": true,
+      "selected_slot": 7,
+      "selected_candidate": "random_full_positive",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.050429508090019226
+    },
+    {
+      "episode_id": "disassemble-v3__2026111615",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.047200173139572144
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111616",
+      "reached": false,
+      "selected_slot": 0,
+      "selected_candidate": "a0",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.0
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111617",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.01751861721277237
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111618",
+      "reached": true,
+      "selected_slot": 10,
+      "selected_candidate": "direct",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.014316607266664505
+    },
+    {
+      "episode_id": "stick-push-v3__2026111619",
+      "reached": true,
+      "selected_slot": 9,
+      "selected_candidate": "velocity",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.0680065006017685
+    },
+    {
+      "episode_id": "disassemble-v3__2026111620",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "predicted_gain": 0.053782641887664795
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111621",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.06508609652519226
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111622",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.043786436319351196
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111623",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.013235209509730339
+    },
+    {
+      "episode_id": "stick-push-v3__2026111624",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.048747286200523376
+    },
+    {
+      "episode_id": "disassemble-v3__2026111625",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.04320652782917023
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111626",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.025600414723157883
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111627",
+      "reached": true,
+      "selected_slot": 10,
+      "selected_candidate": "direct",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.020267605781555176
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111628",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.026263389736413956
+    },
+    {
+      "episode_id": "stick-push-v3__2026111629",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.06371332705020905
+    },
+    {
+      "episode_id": "disassemble-v3__2026111630",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.06330165266990662
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111631",
+      "reached": false,
+      "selected_slot": 0,
+      "selected_candidate": "a0",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.0
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111632",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.013836849480867386
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111633",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.033773962408304214
+    },
+    {
+      "episode_id": "stick-push-v3__2026111634",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.04430574178695679
+    },
+    {
+      "episode_id": "disassemble-v3__2026111635",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.03821192681789398
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111636",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "predicted_gain": 0.0594644695520401
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111637",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "predicted_gain": 0.0168364979326725
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111638",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.049318037927150726
+    },
+    {
+      "episode_id": "stick-push-v3__2026111639",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.06123022735118866
+    },
+    {
+      "episode_id": "disassemble-v3__2026111640",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "predicted_gain": 0.04435701668262482
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111641",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.06404958665370941
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111642",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.029495438560843468
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111643",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.04740604758262634
+    },
+    {
+      "episode_id": "stick-push-v3__2026111644",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.05442366003990173
+    },
+    {
+      "episode_id": "disassemble-v3__2026111645",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.047184526920318604
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111646",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.06937974691390991
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111647",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.02040831930935383
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111648",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.019883165135979652
+    },
+    {
+      "episode_id": "stick-push-v3__2026111649",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.0443415641784668
+    },
+    {
+      "episode_id": "disassemble-v3__2026111650",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.04901522397994995
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111651",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.0645047128200531
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111652",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.029886111617088318
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111653",
+      "reached": false,
+      "selected_slot": 0,
+      "selected_candidate": "a0",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.0
+    },
+    {
+      "episode_id": "stick-push-v3__2026111654",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.04990728199481964
+    },
+    {
+      "episode_id": "disassemble-v3__2026111655",
+      "reached": true,
+      "selected_slot": 9,
+      "selected_candidate": "velocity",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.053725942969322205
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111656",
+      "reached": true,
+      "selected_slot": 10,
+      "selected_candidate": "direct",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.06544926762580872
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111657",
+      "reached": false,
+      "selected_slot": 0,
+      "selected_candidate": "a0",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.0
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111658",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "predicted_gain": 0.04924777150154114
+    },
+    {
+      "episode_id": "stick-push-v3__2026111659",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.0659552812576294
+    },
+    {
+      "episode_id": "disassemble-v3__2026111660",
+      "reached": true,
+      "selected_slot": 9,
+      "selected_candidate": "velocity",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.054812952876091
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111661",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.04420654475688934
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111662",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.029609695076942444
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111663",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.022278189659118652
+    },
+    {
+      "episode_id": "stick-push-v3__2026111664",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.06142503023147583
+    },
+    {
+      "episode_id": "disassemble-v3__2026111665",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.04618631303310394
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111666",
+      "reached": true,
+      "selected_slot": 9,
+      "selected_candidate": "velocity",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.07332177460193634
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111667",
+      "reached": true,
+      "selected_slot": 10,
+      "selected_candidate": "direct",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "predicted_gain": 0.025115959346294403
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111668",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.05150286853313446
+    },
+    {
+      "episode_id": "stick-push-v3__2026111669",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.048702314496040344
+    },
+    {
+      "episode_id": "disassemble-v3__2026111670",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.046393707394599915
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111671",
+      "reached": false,
+      "selected_slot": 0,
+      "selected_candidate": "a0",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.0
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111672",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.013149132952094078
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111673",
+      "reached": true,
+      "selected_slot": 10,
+      "selected_candidate": "direct",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.015330975875258446
+    },
+    {
+      "episode_id": "stick-push-v3__2026111674",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.04381929337978363
+    },
+    {
+      "episode_id": "disassemble-v3__2026111675",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.04959556460380554
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111676",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.0534500777721405
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111677",
+      "reached": true,
+      "selected_slot": 1,
+      "selected_candidate": "xyz_positive",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.014624761417508125
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111678",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.03226616978645325
+    },
+    {
+      "episode_id": "stick-push-v3__2026111679",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.057804301381111145
+    },
+    {
+      "episode_id": "disassemble-v3__2026111680",
+      "reached": true,
+      "selected_slot": 9,
+      "selected_candidate": "velocity",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.05580766499042511
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111681",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.07311646640300751
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111682",
+      "reached": true,
+      "selected_slot": 7,
+      "selected_candidate": "random_full_positive",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.011132018640637398
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111683",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.04607195779681206
+    },
+    {
+      "episode_id": "stick-push-v3__2026111684",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.05589503049850464
+    },
+    {
+      "episode_id": "disassemble-v3__2026111685",
+      "reached": true,
+      "selected_slot": 8,
+      "selected_candidate": "random_full_negative",
+      "baseline_outcomes": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.04334615170955658
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111686",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.054367393255233765
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111687",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.024503037333488464
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111688",
+      "reached": true,
+      "selected_slot": 7,
+      "selected_candidate": "random_full_positive",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.007974930107593536
+    },
+    {
+      "episode_id": "stick-push-v3__2026111689",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.05476978421211243
+    },
+    {
+      "episode_id": "disassemble-v3__2026111690",
+      "reached": true,
+      "selected_slot": 9,
+      "selected_candidate": "velocity",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.05391360819339752
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111691",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.06910264492034912
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111692",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.03100448101758957
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111693",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "predicted_gain": 0.0422038808465004
+    },
+    {
+      "episode_id": "stick-push-v3__2026111694",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.05046124756336212
+    },
+    {
+      "episode_id": "disassemble-v3__2026111695",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.05191950500011444
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111696",
+      "reached": true,
+      "selected_slot": 7,
+      "selected_candidate": "random_full_positive",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.05146269500255585
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111697",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.020517248660326004
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111698",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.047603681683540344
+    },
+    {
+      "episode_id": "stick-push-v3__2026111699",
+      "reached": true,
+      "selected_slot": 11,
+      "selected_candidate": "post",
+      "baseline_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "selected_outcomes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted_gain": 0.0583023726940155
+    }
+  ],
+  "input_seals": {
+    "training_dataset": "08d8bf56408f65dc4302a588be987626ea2d4f420ab3a156c8c360ef8a7fd14a",
+    "development_dataset": "ff4084fa637fc5c50cbad1ee2010084d7b2658f42902700069b09ec71fdf8865",
+    "model": "ff460f12c598a34a15a28ed7619ed071a60be195a3dd2f0c1c963a202ee22287",
+    "selected_model": "931c6f6043db92b5d9003eb2833dfc8edd0ab6c860a1979db3983cd7d893725f",
+    "training_design": "3b9bbf7a67fc15123ac761c13358c0bfd8492ea9aea3c25649cefb02c66ef0cf",
+    "fit_freeze": "d688d581e87ef9b8c0649aa12ca2d31030c0c4da376370d363210785e034c9c7"
+  },
+  "input_artifacts": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/complete.json",
+      "sha256": "ff460f12c598a34a15a28ed7619ed071a60be195a3dd2f0c1c963a202ee22287"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_development_full_v1/complete.json",
+      "sha256": "ff4084fa637fc5c50cbad1ee2010084d7b2658f42902700069b09ec71fdf8865"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/result.json",
+      "sha256": "2b9f668b24a7c94e86a75342bd981751c6627e2569cde1ddb7868afd14c3f03f"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_preflight_v1/training_design.json",
+      "sha256": "3b9bbf7a67fc15123ac761c13358c0bfd8492ea9aea3c25649cefb02c66ef0cf"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_development_full_v1/metadata.json",
+      "sha256": "8cd96ab97a6babe88256662994e112789c4d435189eb4192abec8307df12d9e4"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_development_full_v1/rows.json",
+      "sha256": "0e3a63f80228605d4c8a8597893952ed5dd0f5fd06758abe59e2d4839a57a57e"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/development_step_200.json",
+      "sha256": "eea9bebcde3fee6e05c4e7d29fc5d431bdbaf97d869a6e92e6d4a5764dc93f3f"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/development_step_400.json",
+      "sha256": "2768e560d1b3731a8b7aa7b97923c7a32aee581a9dcdb66cc170c5974c7e8146"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/development_step_800.json",
+      "sha256": "1c324895166666a56bcf662684f08fa1d2a2152dd5a297637ffbaf420db27dad"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/development_step_1600.json",
+      "sha256": "2c1d3082d6b6f54be2e75bea2a5c07537b704da064f480053e7b4e1ff33be2b9"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/A/development_step_2400.json",
+      "sha256": "475bb078629f6d753019bc27448578e8c7d775e47770c9bd4d41df0f480e6286"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/development_step_200.json",
+      "sha256": "7f7e5ef25769455f549c34722b1cae31d1e569739c5146564d1fd22f3b3a4c91"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/development_step_400.json",
+      "sha256": "9eb304d68150f48a88202f929ba4d95c48048cbdf73f16f056237843ba414100"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/development_step_800.json",
+      "sha256": "744dccdd7eee96761d2a27a6fe8994beb0f0f6c2d7baed5b438ae6dbb5375198"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/development_step_1600.json",
+      "sha256": "a62cbd3f6cd50fcecb8be6efe1513da398f0da4ca2736909d14ff9a3763fb72c"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/B/development_step_2400.json",
+      "sha256": "0d608020b19ab3f910aa12d58618dff9a9c079c8c182ffd830debf9148ea40b2"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/complete.json",
+      "sha256": "931c6f6043db92b5d9003eb2833dfc8edd0ab6c860a1979db3983cd7d893725f"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/ranking.json",
+      "sha256": "6b0a7e4530bfbbadafabb9546a891fbe4bf64a6d3774df62515f9ccd9aae242d"
+    }
+  ],
+  "limitations": [
+    "The +4.5pp is selected on the same100-source old13candidate development bank from ten checkpoints; it is not held performance.",
+    "40 member weights form ten fixed4member ensembles; there is no outcome-picked member or per-source label-driven candidate choice.",
+    "Re-ranking old discrete candidates need not imply better action gradients, newflow trajectories or online latency.",
+    "B200 being selected does not select a primary flow injection method.",
+    "normal is outside the13critic candidates and originalG0 is fixed, so this training does not directly learn normal-vs-intervene decisions.",
+    "SelectedB200 picks oldbank post76/95 reached sources; its275 successes are one more than fixed oldpost274, five fewer than fixed oldvelocity280. These are descriptive oldbank comparisons, not changes to fixed checkpoint choice or newgeneration method selection."
+  ]
+}

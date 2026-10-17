@@ -1,0 +1,17 @@
+{
+  "type": "RuntimeError",
+  "message": "synthetic cleanup",
+  "branch": "Velocity",
+  "stage": {
+    "phase": "cleanup",
+    "last_committed_event": "branch_start",
+    "pending_event": null,
+    "returned_control_steps": 0
+  },
+  "category": "cleanup",
+  "operation": "environment_close",
+  "synthetic": true,
+  "traceback": "Traceback (most recent call last):\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1/cpu_checks/check_events.py\", line 211, in traceback_checks\n    try:cleanup_raise()\n        ^^^^^^^^^^^^^^^\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1/cpu_checks/check_events.py\", line 206, in cleanup_raise\n    def cleanup_raise():raise RuntimeError('synthetic cleanup')\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: synthetic cleanup\n",
+  "traceback_present": true,
+  "traceback_origin": "exception object at current handler; never reconstructed from saved error text"
+}

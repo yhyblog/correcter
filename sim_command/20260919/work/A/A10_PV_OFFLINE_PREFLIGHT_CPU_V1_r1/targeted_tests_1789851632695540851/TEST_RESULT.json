@@ -1,0 +1,212 @@
+{
+  "status": "passed",
+  "tests": [
+    {
+      "name": "synthetic_exact_future_authorization",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "reject_release_status",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "reject_release_task_id",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "reject_release_node_role",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "reject_release_max_retries",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "reject_release_owner_host",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "reject_release_proposal_sha256",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "reject_release_resource_caps",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "reject_release_cuda_environment",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "reject_control_mode",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "reject_control_formal_gpu_runs_enabled",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "reject_control_stop_requested",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "reject_control_active_compute_task_ids",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "reject_control_active_compute_release_id",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "reject_control_current_compute_limits",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "current_CPU_release_cannot_launch",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "template_path_cannot_launch",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "exclusive_consumption_with_no_actual_claim",
+      "status": "passed",
+      "evidence": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1_r1/targeted_tests_1789851632695540851/fake_campaign/results/A/P10_PV_release_claims/P10_A_PV_OFFLINE_PREFLIGHT_V1.json",
+        "claims": 1,
+        "second_claim_denied": true,
+        "synthetic": true
+      }
+    },
+    {
+      "name": "entered_returned_failed_missing_terminal_no_refund",
+      "status": "passed",
+      "evidence": {
+        "status": "reconciled",
+        "entered": {
+          "op": 3,
+          "forbidden": 0
+        },
+        "returned": {
+          "op": 1,
+          "forbidden": 0
+        },
+        "entered_events": 3,
+        "terminal_events": 2,
+        "failed": [
+          2
+        ],
+        "unresolved": [
+          3
+        ],
+        "charge_rule": "entered units charged once; raised or missing terminal record never refunds entry",
+        "units_are_incremental": true
+      }
+    },
+    {
+      "name": "future_child_environment_no_hardware_calls",
+      "status": "passed",
+      "evidence": {
+        "frozen_visibility": true,
+        "graphics_environment_not_required": true
+      }
+    },
+    {
+      "name": "existing_cpu_batch_single_frame_fake",
+      "status": "passed",
+      "evidence": {
+        "single_real_frame": true,
+        "zero_padding_masked": true,
+        "past_actions_zero": true,
+        "future_frame_not_input": true
+      }
+    },
+    {
+      "name": "frozen_sample_noise_ABI_fake_no_draw",
+      "status": "passed",
+      "evidence": {
+        "actual_rng_calls": 0,
+        "captured_frozen_call": {
+          "mean": 0.0,
+          "std": 1.0,
+          "size": [
+            1,
+            50,
+            32
+          ],
+          "dtype": "float32",
+          "device": "cuda:0"
+        }
+      }
+    },
+    {
+      "name": "frozen_independent_algorithm_and_feature_AST",
+      "status": "passed",
+      "evidence": {
+        "unchanged_algorithm_bodies": [
+          "project_solo",
+          "audit_solo",
+          "flow_update",
+          "post_direction",
+          "canonical_decode",
+          "spatial_tokens",
+          "cpu_batch"
+        ],
+        "numeric_tensor_execution": false
+      }
+    },
+    {
+      "name": "new_and_extracted_entry_static_syntax",
+      "status": "passed",
+      "evidence": {
+        "targeted_files": 16,
+        "bytecode_written": false,
+        "imports_performed": false
+      }
+    },
+    {
+      "name": "bounded_call_quote_and_deployment_cost_distinction",
+      "status": "passed",
+      "evidence": {
+        "quote_consistent": true,
+        "hardware_execution": false
+      }
+    },
+    {
+      "name": "forbidden_extra_work_caps",
+      "status": "passed",
+      "evidence": {
+        "zero_caps_refused_before_execution": true
+      }
+    }
+  ],
+  "torch_imports": 0,
+  "numpy_imports": 0,
+  "model_calls": 0,
+  "hardware_calls": 0,
+  "holder_queries": 0,
+  "subprocesses": 0,
+  "dlopen_calls": 0,
+  "blocked_scope_events": [],
+  "retained_test_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1_r1/targeted_tests_1789851632695540851",
+  "all_fixtures_synthetic": true,
+  "actual_tensor_numerics": "not executed; requires future compute release"
+}

@@ -1,0 +1,389 @@
+{
+  "event_id": "C_38fec09295ddb4a366b37bbcf237380e",
+  "at_utc": "2026-09-22T07:27:25.403910+00:00",
+  "status": "complete_audited",
+  "hostname": "trial-303269581-trialrun-303269581-worker-0",
+  "boot_id": "215be39c-da79-4f3e-ae0e-c08d40fad8f1",
+  "handler_thread": "01a0c793-10d2-7791-a250-fd65d88e1ccb",
+  "event_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/C/wakeup/outbox/C_38fec09295ddb4a366b37bbcf237380e.json",
+  "event_claim_sha_verified": true,
+  "batch_config_sha_verified": true,
+  "job_config_sha_verified": true,
+  "task_id": "C_D24_MW_VELOCITY_V1",
+  "batch_id": "D24_C_MW_VELOCITY_r2",
+  "jobs": [
+    {
+      "job_id": "smol50k_Velocity_shard0_r2",
+      "base": "smolvla",
+      "gpu": 0,
+      "valid": 130,
+      "status": "complete",
+      "descendants_exited": true
+    },
+    {
+      "job_id": "smol50k_Velocity_shard1_r2",
+      "base": "smolvla",
+      "gpu": 1,
+      "valid": 130,
+      "status": "complete",
+      "descendants_exited": true
+    },
+    {
+      "job_id": "smol50k_Velocity_shard2_r2",
+      "base": "smolvla",
+      "gpu": 2,
+      "valid": 120,
+      "status": "complete",
+      "descendants_exited": true
+    },
+    {
+      "job_id": "smol50k_Velocity_shard3_r2",
+      "base": "smolvla",
+      "gpu": 3,
+      "valid": 120,
+      "status": "complete",
+      "descendants_exited": true
+    },
+    {
+      "job_id": "xvla30k_Velocity_shard0_r2",
+      "base": "xvla",
+      "gpu": 4,
+      "valid": 130,
+      "status": "complete",
+      "descendants_exited": true
+    },
+    {
+      "job_id": "xvla30k_Velocity_shard1_r2",
+      "base": "xvla",
+      "gpu": 5,
+      "valid": 130,
+      "status": "complete",
+      "descendants_exited": true
+    },
+    {
+      "job_id": "xvla30k_Velocity_shard2_r2",
+      "base": "xvla",
+      "gpu": 6,
+      "valid": 120,
+      "status": "complete",
+      "descendants_exited": true
+    },
+    {
+      "job_id": "xvla30k_Velocity_shard3_r2",
+      "base": "xvla",
+      "gpu": 7,
+      "valid": 120,
+      "status": "complete",
+      "descendants_exited": true
+    }
+  ],
+  "scientific_units": 1000,
+  "valid_final_sources": 1000,
+  "sources_per_base": 500,
+  "final_technical_failures": 0,
+  "final_unknown": 0,
+  "final_unstarted": 0,
+  "physical_attempts": 1008,
+  "preserved_prior_technical_attempts": 8,
+  "corrected_retries": [
+    {
+      "base": "smolvla",
+      "source_id": "D24_MW_t00_e00",
+      "original_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/smol50k_Velocity_shard0_r1/episodes/D24_MW_t00_e00/RESULT.json",
+      "retry_claim": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/unit_retry_claims/smolvla/D24_MW_t00_e00__Velocity__repeat0__retry1.json",
+      "final_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/smol50k_Velocity_shard0_r2/episodes/D24_MW_t00_e00/RESULT.json",
+      "final_success": false
+    },
+    {
+      "base": "smolvla",
+      "source_id": "D24_MW_t01_e00",
+      "original_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/smol50k_Velocity_shard1_r1/episodes/D24_MW_t01_e00/RESULT.json",
+      "retry_claim": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/unit_retry_claims/smolvla/D24_MW_t01_e00__Velocity__repeat0__retry1.json",
+      "final_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/smol50k_Velocity_shard1_r2/episodes/D24_MW_t01_e00/RESULT.json",
+      "final_success": false
+    },
+    {
+      "base": "smolvla",
+      "source_id": "D24_MW_t02_e00",
+      "original_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/smol50k_Velocity_shard2_r1/episodes/D24_MW_t02_e00/RESULT.json",
+      "retry_claim": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/unit_retry_claims/smolvla/D24_MW_t02_e00__Velocity__repeat0__retry1.json",
+      "final_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/smol50k_Velocity_shard2_r2/episodes/D24_MW_t02_e00/RESULT.json",
+      "final_success": false
+    },
+    {
+      "base": "smolvla",
+      "source_id": "D24_MW_t03_e00",
+      "original_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/smol50k_Velocity_shard3_r1/episodes/D24_MW_t03_e00/RESULT.json",
+      "retry_claim": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/unit_retry_claims/smolvla/D24_MW_t03_e00__Velocity__repeat0__retry1.json",
+      "final_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/smol50k_Velocity_shard3_r2/episodes/D24_MW_t03_e00/RESULT.json",
+      "final_success": true
+    },
+    {
+      "base": "xvla",
+      "source_id": "D24_MW_t00_e00",
+      "original_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/xvla30k_Velocity_shard0_r1/episodes/D24_MW_t00_e00/RESULT.json",
+      "retry_claim": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/unit_retry_claims/xvla/D24_MW_t00_e00__Velocity__repeat0__retry1.json",
+      "final_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/xvla30k_Velocity_shard0_r2/episodes/D24_MW_t00_e00/RESULT.json",
+      "final_success": true
+    },
+    {
+      "base": "xvla",
+      "source_id": "D24_MW_t01_e00",
+      "original_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/xvla30k_Velocity_shard1_r1/episodes/D24_MW_t01_e00/RESULT.json",
+      "retry_claim": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/unit_retry_claims/xvla/D24_MW_t01_e00__Velocity__repeat0__retry1.json",
+      "final_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/xvla30k_Velocity_shard1_r2/episodes/D24_MW_t01_e00/RESULT.json",
+      "final_success": true
+    },
+    {
+      "base": "xvla",
+      "source_id": "D24_MW_t02_e00",
+      "original_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/xvla30k_Velocity_shard2_r1/episodes/D24_MW_t02_e00/RESULT.json",
+      "retry_claim": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/unit_retry_claims/xvla/D24_MW_t02_e00__Velocity__repeat0__retry1.json",
+      "final_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/xvla30k_Velocity_shard2_r2/episodes/D24_MW_t02_e00/RESULT.json",
+      "final_success": false
+    },
+    {
+      "base": "xvla",
+      "source_id": "D24_MW_t03_e00",
+      "original_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/xvla30k_Velocity_shard3_r1/episodes/D24_MW_t03_e00/RESULT.json",
+      "retry_claim": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/unit_retry_claims/xvla/D24_MW_t03_e00__Velocity__repeat0__retry1.json",
+      "final_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/xvla30k_Velocity_shard3_r2/episodes/D24_MW_t03_e00/RESULT.json",
+      "final_success": true
+    }
+  ],
+  "successful_source_replays": 0,
+  "max_attempts_per_unit": 2,
+  "development_attempts": 0,
+  "base_optimizer_updates": 0,
+  "head_optimizer_updates": 0,
+  "callback_scientific_launches": 0,
+  "callback_notifications_created": 0,
+  "source_identity_seeds_native_dimensions_protocol_and_costs_verified": true,
+  "authoritative_results": "durable per-episode RESULT.json; no log-derived substitutions",
+  "summary_recomputed_matches": true,
+  "summary_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/D24_C_MW_VELOCITY_r2/SUMMARY.json",
+  "groups": [
+    {
+      "base": "smolvla",
+      "method": "Full-Velocity-transfer",
+      "planned": 500,
+      "entered": 500,
+      "valid": 500,
+      "successes": 247,
+      "technical_failures": 0,
+      "unknown": 0,
+      "unstarted": 0,
+      "success_rate_pct": 49.4,
+      "success_wilson95_pct": [
+        45.039013091903215,
+        53.770136116650654
+      ],
+      "N_valid": 496,
+      "N_successes": 234,
+      "Post_valid": 500,
+      "Post_successes": 240,
+      "versus_N": {
+        "paired_valid": 496,
+        "rescued": 35,
+        "harmed": 23,
+        "new_successes": 246,
+        "old_successes": 234,
+        "difference_pp": 2.4193548387096775,
+        "task_cluster_bootstrap_95_ci_pp": [
+          -0.40404040404040403,
+          5.05050505050505
+        ],
+        "uncertainty": "descriptive paired task-cluster percentile bootstrap, 2000 draws, seed20260922; fixed-source missingness retained"
+      },
+      "versus_Post": {
+        "paired_valid": 500,
+        "rescued": 11,
+        "harmed": 4,
+        "new_successes": 247,
+        "old_successes": 240,
+        "difference_pp": 1.4,
+        "task_cluster_bootstrap_95_ci_pp": [
+          0.0,
+          3.0
+        ],
+        "uncertainty": "descriptive paired task-cluster percentile bootstrap, 2000 draws, seed20260922; fixed-source missingness retained"
+      },
+      "interventions": 420,
+      "policy_calls": 10276,
+      "flow_calls": 102760,
+      "action_gradients": 1260,
+      "total_episode_seconds": 12423.103417573497,
+      "total_base_inference_seconds": 1994.7876735124737,
+      "total_corrector_seconds": 1889.2982456367463,
+      "missing": []
+    },
+    {
+      "base": "xvla",
+      "method": "Full-Velocity-transfer",
+      "planned": 500,
+      "entered": 500,
+      "valid": 500,
+      "successes": 403,
+      "technical_failures": 0,
+      "unknown": 0,
+      "unstarted": 0,
+      "success_rate_pct": 80.6,
+      "success_wilson95_pct": [
+        76.9060370280767,
+        83.82735333567634
+      ],
+      "N_valid": 500,
+      "N_successes": 403,
+      "Post_valid": 500,
+      "Post_successes": 407,
+      "versus_N": {
+        "paired_valid": 500,
+        "rescued": 25,
+        "harmed": 25,
+        "new_successes": 403,
+        "old_successes": 403,
+        "difference_pp": 0.0,
+        "task_cluster_bootstrap_95_ci_pp": [
+          -4.6,
+          4.0
+        ],
+        "uncertainty": "descriptive paired task-cluster percentile bootstrap, 2000 draws, seed20260922; fixed-source missingness retained"
+      },
+      "versus_Post": {
+        "paired_valid": 500,
+        "rescued": 7,
+        "harmed": 11,
+        "new_successes": 403,
+        "old_successes": 407,
+        "difference_pp": -0.8,
+        "task_cluster_bootstrap_95_ci_pp": [
+          -2.2,
+          0.4
+        ],
+        "uncertainty": "descriptive paired task-cluster percentile bootstrap, 2000 draws, seed20260922; fixed-source missingness retained"
+      },
+      "interventions": 411,
+      "policy_calls": 6807,
+      "flow_calls": 68070,
+      "action_gradients": 1233,
+      "total_episode_seconds": 7287.587881531566,
+      "total_base_inference_seconds": 689.4403667859733,
+      "total_corrector_seconds": 1187.3354594726115,
+      "missing": []
+    }
+  ],
+  "N_unavailable_sources": {
+    "smolvla": [
+      "D24_MW_t18_e01",
+      "D24_MW_t21_e06",
+      "D24_MW_t23_e01",
+      "D24_MW_t24_e08"
+    ],
+    "xvla": []
+  },
+  "optional_stats": {
+    "present": 1000,
+    "trajectory_saved": 1000,
+    "null_top_level_fields": 0
+  },
+  "runtime_observation": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/D24_C_MW_VELOCITY_r2/FINAL_RUNTIME_OBSERVATION.json",
+  "all_formal_processes_exited": true,
+  "all_formal_process_groups_empty": true,
+  "formal_identity_count": 26,
+  "all8_holders_restored": true,
+  "restoration_observed_at_utc": "2026-09-22T07:14:56.757346+00:00",
+  "restoration_evidence": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/D24_C_MW_VELOCITY_r2/OCCUPANCY_RESTORATION_OBSERVED.json",
+  "current_holder_observation_at_utc": "2026-09-22T07:23:10.079227+00:00",
+  "guard_pid": 31625,
+  "GPU_utilization": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/D24_C_MW_VELOCITY_r2/gpu_metrics.jsonl",
+    "records": 257,
+    "first": "2026-09-22T06:09:13.983608+00:00",
+    "last": "2026-09-22T07:14:28.479703+00:00",
+    "per_gpu": {
+      "0": {
+        "samples": 257,
+        "mean_utilization_pct": 10.836575875486382,
+        "min_utilization_pct": 0.0,
+        "max_utilization_pct": 56.0,
+        "max_memory_used_mib": 11856.0
+      },
+      "1": {
+        "samples": 257,
+        "mean_utilization_pct": 10.844357976653697,
+        "min_utilization_pct": 0.0,
+        "max_utilization_pct": 56.0,
+        "max_memory_used_mib": 11856.0
+      },
+      "2": {
+        "samples": 257,
+        "mean_utilization_pct": 16.24124513618677,
+        "min_utilization_pct": 0.0,
+        "max_utilization_pct": 57.0,
+        "max_memory_used_mib": 11856.0
+      },
+      "3": {
+        "samples": 257,
+        "mean_utilization_pct": 12.377431906614786,
+        "min_utilization_pct": 0.0,
+        "max_utilization_pct": 56.0,
+        "max_memory_used_mib": 11856.0
+      },
+      "4": {
+        "samples": 257,
+        "mean_utilization_pct": 6.809338521400778,
+        "min_utilization_pct": 0.0,
+        "max_utilization_pct": 62.0,
+        "max_memory_used_mib": 14142.0
+      },
+      "5": {
+        "samples": 257,
+        "mean_utilization_pct": 7.669260700389105,
+        "min_utilization_pct": 0.0,
+        "max_utilization_pct": 61.0,
+        "max_memory_used_mib": 14142.0
+      },
+      "6": {
+        "samples": 257,
+        "mean_utilization_pct": 8.898832684824903,
+        "min_utilization_pct": 0.0,
+        "max_utilization_pct": 62.0,
+        "max_memory_used_mib": 14142.0
+      },
+      "7": {
+        "samples": 257,
+        "mean_utilization_pct": 8.704280155642023,
+        "min_utilization_pct": 0.0,
+        "max_utilization_pct": 61.0,
+        "max_memory_used_mib": 14142.0
+      }
+    },
+    "guard_state_sample_counts": {
+      "holder": 1,
+      "reserved": 256
+    },
+    "stale_guard_holder_samples": [
+      {
+        "at_utc": "2026-09-22T06:09:13.983608+00:00",
+        "guard_updated_unix": 1790057301.236429
+      }
+    ],
+    "auxiliary_gpu_samples": 0,
+    "interpretation": "Samples include loading, CPU rendering, gaps and idle tail; not continuous utilization or a controlled speed comparison. Entry NVML contexts were empty; the initial guard JSON was stale."
+  },
+  "batch_elapsed_seconds": 3981.667026190087,
+  "method_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/METHOD.md",
+  "protocol": "B native 80Hz control, .0025 timestep, frame_skip5, action_scale .01; onboarding 30Hz/.015 prose discrepancy retained explicitly",
+  "adaptation": "Smol native velocity/Euler; X velocity-reparameterized native clean-prediction remixer (not Euler); native mean/std+true clamp, independent own radius",
+  "transfer": "frozen pi05 external features/PCA/D/G0/Q with historical five-task training coverage",
+  "cost_note": "base inference time includes synchronous gradient RPC; corrector time overlaps it; do not add these totals",
+  "interpretation": "Smol positive point estimates and X neutral/negative estimates; all paired descriptive 95% intervals contain or touch zero. No consistent improvement or equivalence claim.",
+  "notification_route": "queue",
+  "unattended_exec_resume_proven": false,
+  "notification_limit": "Original interactive queue callback handled here; unlocked-writer headless exec resume remains unproven. No recursive event emitted.",
+  "progress_metadata_repair": "Observer counted completed models as resident after exit. Preserve its terminal snapshot, set current resident=0 using host process evidence; scientific results and execution code unchanged.",
+  "report_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/D24_C_MW_VELOCITY_r2/FINAL_REPORT.md",
+  "audit_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/events/C_38fec09295ddb4a366b37bbcf237380e_AUDIT.json",
+  "next_authorized_C_scientific_work": null,
+  "whole_task_complete": true
+}

@@ -1,0 +1,333 @@
+{
+  "at_utc": "2026-09-21T15:46:11.955667+00:00",
+  "background_stable": true,
+  "completion_triggers_registered": true,
+  "fixed_original_thread": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+  "observer_process": {
+    "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+    "hostname": "trial-303225685-trialrun-303225685-worker-0",
+    "pid": 452085,
+    "session_id": 452085,
+    "start_ticks": 91710679
+  },
+  "join_waiter_process": {
+    "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+    "node": "B",
+    "pid": 431242,
+    "session_id": 431242,
+    "start_ticks": 91170445,
+    "hostname": "trial-303225685-trialrun-303225685-worker-0"
+  },
+  "batches": {
+    "D24_E1_r1": {
+      "process_identity": {
+        "hostname": "trial-303225685-trialrun-303225685-worker-0",
+        "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+        "pid": 462719,
+        "start_ticks": 92036343,
+        "session_id": 462719
+      },
+      "alive": false,
+      "claim": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_E1_r1/CLAIM.json",
+      "completion_registration": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_E1_r1__D24_E1_r1__1.json",
+      "terminal": {
+        "status": "complete",
+        "exit_code": 0,
+        "batch_id": "D24_E1_r1",
+        "job_count": 48,
+        "all_owned_descendants_exited": true,
+        "publication_completed": true,
+        "occupancy_handoff_complete": null,
+        "occupancy_note": "CPU only; no CUDA reservation required",
+        "elapsed_seconds": 142.29047081596218,
+        "at_utc": "2026-09-21T15:34:38.500550+00:00"
+      },
+      "progress": {
+        "at_utc": "2026-09-21T15:34:38.481422+00:00",
+        "status": "running",
+        "active": [],
+        "queued": 0,
+        "completed": 48,
+        "resolved": 48,
+        "auxiliary_gpus": []
+      }
+    },
+    "D24_GPU_N_r1": {
+      "process_identity": {
+        "hostname": "trial-303225685-trialrun-303225685-worker-0",
+        "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+        "pid": 464778,
+        "start_ticks": 92081088,
+        "session_id": 464778
+      },
+      "alive": true,
+      "claim": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_GPU_N_r1/CLAIM.json",
+      "completion_registration": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_GPU_N_r1__D24_GPU_N_r1__1.json",
+      "progress": {
+        "at_utc": "2026-09-21T15:46:09.902459+00:00",
+        "status": "running",
+        "active": [
+          "smol50k_N_shard0",
+          "smol50k_N_shard1",
+          "smol50k_N_shard2",
+          "smol50k_N_shard3",
+          "pi05official_N_libero_spatial"
+        ],
+        "queued": 0,
+        "completed": 0,
+        "resolved": 3,
+        "auxiliary_gpus": [
+          5,
+          6,
+          7
+        ]
+      }
+    },
+    "D24_LIBERO_REPAIR_r2": {
+      "process_identity": {
+        "hostname": "trial-303225685-trialrun-303225685-worker-0",
+        "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+        "pid": 470332,
+        "start_ticks": 92108310,
+        "session_id": 470332
+      },
+      "alive": true,
+      "claim": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_LIBERO_REPAIR_r2/CLAIM.json",
+      "completion_registration": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_LIBERO_REPAIR_r2__D24_LIBERO_REPAIR_r2__1.json"
+    }
+  },
+  "live_workers": {
+    "smol50k_N_shard0": {
+      "process_identity": {
+        "hostname": "trial-303225685-trialrun-303225685-worker-0",
+        "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+        "pid": 465300,
+        "start_ticks": 92087689,
+        "session_id": 465300
+      },
+      "status": {
+        "status": "running",
+        "job_id": "smol50k_N_shard0",
+        "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/smol50k_N_shard0.json",
+        "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model",
+        "H": 50,
+        "K": 10,
+        "method": "N",
+        "planned_episodes": 130,
+        "completed_episodes": 9,
+        "technical_failures": 0,
+        "load_seconds": 55.86693172599189,
+        "latest_source": "D24_MW_t00_e08",
+        "at_utc": "2026-09-21T15:46:09.496505+00:00"
+      }
+    },
+    "smol50k_N_shard1": {
+      "process_identity": {
+        "hostname": "trial-303225685-trialrun-303225685-worker-0",
+        "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+        "pid": 465304,
+        "start_ticks": 92087690,
+        "session_id": 465304
+      },
+      "status": {
+        "status": "running",
+        "job_id": "smol50k_N_shard1",
+        "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/smol50k_N_shard1.json",
+        "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model",
+        "H": 50,
+        "K": 10,
+        "method": "N",
+        "planned_episodes": 130,
+        "completed_episodes": 9,
+        "technical_failures": 0,
+        "load_seconds": 55.82473582192324,
+        "latest_source": "D24_MW_t01_e08",
+        "at_utc": "2026-09-21T15:46:04.632698+00:00"
+      }
+    },
+    "smol50k_N_shard2": {
+      "process_identity": {
+        "hostname": "trial-303225685-trialrun-303225685-worker-0",
+        "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+        "pid": 465310,
+        "start_ticks": 92087691,
+        "session_id": 465310
+      },
+      "status": {
+        "status": "running",
+        "job_id": "smol50k_N_shard2",
+        "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/smol50k_N_shard2.json",
+        "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model",
+        "H": 50,
+        "K": 10,
+        "method": "N",
+        "planned_episodes": 120,
+        "completed_episodes": 9,
+        "technical_failures": 0,
+        "load_seconds": 55.86085874494165,
+        "latest_source": "D24_MW_t02_e08",
+        "at_utc": "2026-09-21T15:46:11.856165+00:00"
+      }
+    },
+    "smol50k_N_shard3": {
+      "process_identity": {
+        "hostname": "trial-303225685-trialrun-303225685-worker-0",
+        "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+        "pid": 465315,
+        "start_ticks": 92087692,
+        "session_id": 465315
+      },
+      "status": {
+        "status": "running",
+        "job_id": "smol50k_N_shard3",
+        "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/smol50k_N_shard3.json",
+        "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model",
+        "H": 50,
+        "K": 10,
+        "method": "N",
+        "planned_episodes": 120,
+        "completed_episodes": 14,
+        "technical_failures": 0,
+        "load_seconds": 55.9266863509547,
+        "latest_source": "D24_MW_t07_e03",
+        "at_utc": "2026-09-21T15:46:08.686801+00:00"
+      }
+    },
+    "pi05official_N_libero_spatial": {
+      "process_identity": {
+        "hostname": "trial-303225685-trialrun-303225685-worker-0",
+        "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+        "pid": 465320,
+        "start_ticks": 92087693,
+        "session_id": 465320
+      },
+      "status": {
+        "status": "running",
+        "job_id": "pi05official_N_libero_spatial",
+        "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+        "suite": "libero_spatial",
+        "H": 10,
+        "K": 5,
+        "method": "N",
+        "source_policy": "new deterministic task randomization from frozen seeds; save pre-settle simulator state for paired comparisons; distinct from official 50-init-state benchmark protocol",
+        "planned_episodes": 100,
+        "completed_episodes": 7,
+        "technical_failures": 0,
+        "server": {
+          "model": "pi05",
+          "config": "pi05_libero",
+          "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+          "H": 10,
+          "NFE": 10,
+          "policy_rng": "fixed per source, reset before first query",
+          "load_seconds": 13.493457661941648,
+          "job_id": "pi05official_N_libero_spatial",
+          "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479"
+        },
+        "latest_source": "D24_LIBERO_libero_spatial_t00_e06",
+        "at_utc": "2026-09-21T15:46:06.487188+00:00"
+      }
+    }
+  },
+  "E1": {
+    "status": "complete",
+    "at_utc": "2026-09-21T15:41:27.777423+00:00",
+    "job_count": 48,
+    "optimizer_updates": 192000,
+    "scientific_GPU_operations": 0,
+    "fit_seeds": [
+      9101,
+      9102,
+      9103
+    ],
+    "members": [
+      1041,
+      1042,
+      1043,
+      1044
+    ],
+    "losses": [
+      "L00",
+      "L01",
+      "L10",
+      "L11"
+    ],
+    "input": "unchanged historical train600",
+    "selection": "fixed final update; no test selection",
+    "duration_seconds": 142.29047081596218
+  },
+  "gpu_metrics": {
+    "at_utc": "2026-09-21T15:45:57.716024+00:00",
+    "rows": "0, GPU-4143840e-6c2e-d4c4-8c60-4005cfa1f917, 0, 1969\n1, GPU-6d43b200-7592-1feb-46e0-6e6a0aadce30, 0, 1969\n2, GPU-16b17920-fc5b-e353-dfa5-6a98646e4cae, 0, 1969\n3, GPU-d0942bf0-fce5-5cef-1df9-cd9b085ee9b7, 16, 1969\n4, GPU-33015720-ddc5-fbd4-bb56-7c337282eb10, 0, 8855\n5, GPU-4062899a-e02c-36e6-9370-21f286817092, 50, 1013\n6, GPU-540de68c-d698-47c6-443e-4bc0d281534e, 49, 1013\n7, GPU-940192c8-5e85-1fb0-967b-d3c037ad6464, 50, 1013",
+    "exit_code": 0,
+    "active_jobs": [
+      "smol50k_N_shard0",
+      "smol50k_N_shard1",
+      "smol50k_N_shard2",
+      "smol50k_N_shard3",
+      "pi05official_N_libero_spatial"
+    ],
+    "auxiliary_gpus": [
+      5,
+      6,
+      7
+    ]
+  },
+  "guard_status": {
+    "pid": 35861,
+    "updated": 1790005570.4862485,
+    "gpus": {
+      "0": {
+        "state": "reserved",
+        "pids": [
+          2952973
+        ]
+      },
+      "1": {
+        "state": "reserved",
+        "pids": [
+          2952988
+        ]
+      },
+      "2": {
+        "state": "reserved",
+        "pids": [
+          2953008
+        ]
+      },
+      "3": {
+        "state": "reserved",
+        "pids": [
+          2953030
+        ]
+      },
+      "4": {
+        "state": "reserved",
+        "pids": [
+          2953110
+        ]
+      },
+      "5": {
+        "state": "reserved",
+        "pids": [
+          2971750
+        ]
+      },
+      "6": {
+        "state": "reserved",
+        "pids": [
+          2971752
+        ]
+      },
+      "7": {
+        "state": "reserved",
+        "pids": [
+          2971754
+        ]
+      }
+    }
+  },
+  "consumed_job_claims": 56,
+  "current_CONTROL_revision": 7,
+  "A_waits_for_B": false
+}

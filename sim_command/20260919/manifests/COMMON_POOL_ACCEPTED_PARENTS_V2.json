@@ -1,0 +1,1017 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "version": 2,
+  "published_at_utc": "2026-09-20T20:07:45.425665+00:00",
+  "status": "accepted_eight_paired_train_parents_with_separate_source_dispositions",
+  "supersedes": {
+    "path": "manifests/COMMON_POOL_ACCEPTED_PARENTS_V1.json",
+    "sha256": "89b80f3ba0111d772fbe2479941b144bc7a5a7d35de0c23fcc5cfc15fc8d38ba"
+  },
+  "coverage_plan_parent_count": 500,
+  "processed_planned_parent_slots": 9,
+  "accepted_parent_count": 8,
+  "accepted_train_parents": 8,
+  "accepted_dev_parents": 0,
+  "normal_only_pre_cut_success_parents": 1,
+  "remaining_planned_parent_slots": 491,
+  "remaining_planned_parent_slots_semantics": "unattempted slots; excludes one consumed normal-only pre-cut-success slot, no automatic replacement",
+  "remaining_slots_not_guaranteed_valid_samples": true,
+  "training_authorized": false,
+  "source_dispositions": {
+    "path": "manifests/COMMON_POOL_SOURCE_DISPOSITIONS_V1.json",
+    "sha256": "6df22e9b29a43daab80dc1daa99af042157774b6b1766550fed010717a4e586a"
+  },
+  "parents": [
+    {
+      "source": {
+        "absolute_target": 300,
+        "cut": 5,
+        "env_seed": 2026092000,
+        "instruction": "Pick and place a puck onto a shelf",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 2026092001,
+        "parent_source_id": "PROPOSED_MT50_shelf_train_0000_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "purpose": "first planned parent of coverage batch; not extra diagnostic",
+        "selection": "fixed proposed ordinal0 train cut5; no outcome-dependent seed replacement",
+        "source_id": "PROPOSED_MT50_shelf_train_0000",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "shelf-place-v3"
+      },
+      "node": "A",
+      "source_ordinal_within_task_train": 0,
+      "task": "shelf-place-v3",
+      "split": "train",
+      "cut": 5,
+      "native_H": 10,
+      "run_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4",
+      "release": {
+        "path": "releases/P11_A_COMMON_POOL_FIRST_PARENT_V4.json",
+        "sha256": "b924b93d2318edcf22dfe36d0bafee6df5feebc02432d26375e4e6ca37d3723a"
+      },
+      "acceptance": {
+        "path": "manifests/A11_COMMON_POOL_FIRST_PARENT_V4_ACCEPTANCE.json",
+        "sha256": "8f8a21f345162bf3bb02d238bc594a6d9f340e2ca00a7ce25ee6e44e61a45de8"
+      },
+      "runtime_manifest": {
+        "path": "results/A/A11_COMMON_POOL_FIRST_PARENT_V4/RUNTIME_FILE_MANIFEST.json",
+        "sha256": "6f68b72cfdc78d66719497c80bf07bb9c346f77c0e7e67fd382691977b64ed9f"
+      },
+      "attempt_coverage": {
+        "path": "results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/ATTEMPT_COVERAGE.json",
+        "sha256": "d8bfe574c7745e42cbae5c7e3c2bedd9c6deed3a630f237f8b72ab7a50bdca8d"
+      },
+      "paired_labels": {
+        "path": "results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/PAIRED_LABELS.json",
+        "sha256": "b81e21bd78adcd6d2ec8be36627c8f669858cc5e6780ef102bf69927eebff866"
+      },
+      "aggregate_indices": {
+        "gain_local_plus": {
+          "path": "results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/AGGREGATE_INDEX_gain_local_plus.json",
+          "sha256": "f898a07caef29affc87c7bc3dba8df013a4df876500fb788c020a570ca3d1dc6"
+        },
+        "gain_local_minus": {
+          "path": "results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/AGGREGATE_INDEX_gain_local_minus.json",
+          "sha256": "864670d347eea9bde668522d7dc9accfabb5237139a1c22d9e91243bf2a99308"
+        },
+        "pair": {
+          "path": "results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/AGGREGATE_INDEX_pair.json",
+          "sha256": "12da314284cb6b54c00a11674de0570f56c7eed306e7ccce5a712f884b1ea90c"
+        },
+        "G0": {
+          "path": "results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/AGGREGATE_INDEX_G0.json",
+          "sha256": "51fc4559142f9a9f2662cefb48fe8d2983af75d5460c3484e38d4099d3974758"
+        }
+      },
+      "bank": {
+        "path": "results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/BANK.json",
+        "sha256": "eee6e7d4e8bce152f07563e116af0c59f4b25d0d6acb10214d1cd28a71fa11c4"
+      },
+      "physical_attempts": 15,
+      "complete_repeat_groups": 7,
+      "independent_parent_count": 1,
+      "labels": {
+        "gain_local_plus": 0.0,
+        "gain_local_minus": 0.5,
+        "pair": -0.5,
+        "G0": 0.3333333333333333
+      },
+      "full_state_verified_scope": "frozen captured-field/MJB closure",
+      "physical_equality_proven": null,
+      "partial_hardlink_paths_excluded_from_sample_count": true,
+      "views": {
+        "Q_G0_paired_metadata": "accepted",
+        "D5_GAF_raw_fields": "available_for_B_window_index_compatibility_not_yet_accepted_as_completed_views",
+        "LVM_positive": "not_qualified_normal_policy_rollout_is_not_demonstration_and_endpoint_tokens_absent"
+      },
+      "historical_failed_attempt": "A11_COMMON_POOL_FIRST_PARENT_V3",
+      "failed_attempt_adds_parent_samples": 0
+    },
+    {
+      "source": {
+        "absolute_target": 300,
+        "cut": 5,
+        "env_seed": 2101296749,
+        "instruction": "Pick a nut out of a peg",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 8014819236357871939,
+        "ordinal": 0,
+        "parent_source_id": "PROPOSED_MT50_disassemble_train_0000_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|disassemble-v3|train|0|cut5",
+        "purpose": "eight fixed remaining A train slots of original 500-parent coverage plan",
+        "selection": "ordinal0 then1, task dictionary order, skip accepted shelf0; no result-based selection",
+        "source_id": "PROPOSED_MT50_disassemble_train_0000",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "disassemble-v3"
+      },
+      "node": "A",
+      "source_ordinal_within_task_train": 0,
+      "task": "disassemble-v3",
+      "split": "train",
+      "cut": 5,
+      "native_H": 10,
+      "run_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5",
+      "release": {
+        "path": "releases/P11_A_COMMON_POOL_BATCH1_V1.json",
+        "sha256": "0581e70a7eebd5b4cbf9ad263487d03c15df1e7ec2771afc1a6ba5238eb2d363"
+      },
+      "acceptance": {
+        "path": "manifests/A11_COMMON_POOL_BATCH1_V1_ACCEPTANCE.json",
+        "sha256": "d30881eb47a86f4cc41be170afa1b2addef36616bcc99bd4ef4b858237c5089b"
+      },
+      "runtime_manifest": {
+        "path": "results/A/A11_COMMON_POOL_BATCH1_V1/RUNTIME_FILES.jsonl",
+        "sha256": "7e1c63e7ae05a528f1fa6bd5cb74547b3d2aec219a41e12b50f7400e66047902"
+      },
+      "runtime_manifest_format": "jsonl",
+      "attempt_coverage": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/ATTEMPT_COVERAGE.json",
+        "sha256": "b9b434f2c2e1a5f76ca7ee75819ca44d74160b2d883c691712eb659d536f35df",
+        "size_bytes": 2002
+      },
+      "paired_labels": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/PAIRED_LABELS.json",
+        "sha256": "cde892086c8c6695998546e63ea417dc203e9b7ba512d68a6ed0b08a20386b32",
+        "size_bytes": 12843
+      },
+      "aggregate_indices": {
+        "gain_local_plus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_plus.json",
+          "sha256": "303e14966eccbc33986b7cee60bfd0b55332ad9844cf5d0a2729ff143d67a99e",
+          "size_bytes": 2766
+        },
+        "gain_local_minus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_minus.json",
+          "sha256": "aa9d9b5e3372f95385690bdb06337b323f5aafae6a3a3a51f23aaed4ba9df8d4",
+          "size_bytes": 2772
+        },
+        "pair": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/AGGREGATE_INDEX_pair.json",
+          "sha256": "e406d87b2eba69b36e586f1fc8743749e221b0a8a4bd834c8f19820bc8415070",
+          "size_bytes": 2780
+        },
+        "G0": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/AGGREGATE_INDEX_G0.json",
+          "sha256": "fdcaed13553acc39709042000505da0e63fc2f43abf919e1c9c6e1739a913ffe",
+          "size_bytes": 4308
+        }
+      },
+      "aggregate_sidecars": {
+        "gain_local_plus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_plus.json",
+          "sha256": "aadf6a31d5d493bfce49c35e27602d86afea10f0a8a32fbd537a6bf2e94ca24e",
+          "size_bytes": 8442
+        },
+        "gain_local_minus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_minus.json",
+          "sha256": "83bf1950aaf8c4cfe8bd20d11f5a1ceb23122a9766a1942ee6cdfaaf83e5f431",
+          "size_bytes": 8452
+        },
+        "pair": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/SIDECAR_AGGREGATE_pair.json",
+          "sha256": "0b9a5697a4f2427a4a1353e7df41ddf94c52a8e6a8b15c7ac0b1376ee2339252",
+          "size_bytes": 8472
+        },
+        "G0": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/SIDECAR_AGGREGATE_G0.json",
+          "sha256": "44593f1db270d2e41052c7068a4374a331a0f6c8eb02ce184214f6d0f098bdeb",
+          "size_bytes": 12341
+        }
+      },
+      "bank": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/normal/BANK.json",
+        "sha256": "917fc70675bbb9dd0764e8200bae2b013e7c46fc7ad79b09725b56e37307b75e",
+        "size_bytes": 6519
+      },
+      "source_manifest": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH_SCALING_CPU_V1/proposal/SOURCE_0.json",
+        "sha256": "36cbeed4884ac0d686c923b61585ffd9b0a84fefe83565eb4749d21b74583db8",
+        "size_bytes": 910
+      },
+      "source_signature": "9759d27148d574d1ffb05cccb621eb0baac2d58b1c32b4de3e27b48694465989",
+      "physical_attempts": 15,
+      "complete_repeat_groups": 7,
+      "independent_parent_count": 1,
+      "labels": {
+        "G0": 0.16666666666666666,
+        "gain_local_minus": 0.5,
+        "gain_local_plus": 0.0,
+        "pair": -0.5
+      },
+      "target_masks": {
+        "G0": true,
+        "gain_local_minus": true,
+        "gain_local_plus": true,
+        "pair": true
+      },
+      "full_state_verified_scope": "frozen captured-field/MJB closure",
+      "physical_equality_proven": null,
+      "partial_hardlink_paths_excluded_from_sample_count": true,
+      "views": {
+        "Q_G0_paired_metadata": "accepted",
+        "D5_GAF_raw_fields": "available_for_B_window_index_compatibility_not_yet_accepted_as_completed_views",
+        "LVM_positive": "not_qualified_normal_policy_rollout_is_not_demonstration_and_endpoint_tokens_absent"
+      }
+    },
+    {
+      "source": {
+        "absolute_target": 300,
+        "cut": 5,
+        "env_seed": 1317397464,
+        "instruction": "Pick a puck, bypass a wall and place the puck",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 9051539271699936322,
+        "ordinal": 0,
+        "parent_source_id": "PROPOSED_MT50_pick_place_wall_train_0000_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|pick-place-wall-v3|train|0|cut5",
+        "purpose": "eight fixed remaining A train slots of original 500-parent coverage plan",
+        "selection": "ordinal0 then1, task dictionary order, skip accepted shelf0; no result-based selection",
+        "source_id": "PROPOSED_MT50_pick_place_wall_train_0000",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "pick-place-wall-v3"
+      },
+      "node": "A",
+      "source_ordinal_within_task_train": 0,
+      "task": "pick-place-wall-v3",
+      "split": "train",
+      "cut": 5,
+      "native_H": 10,
+      "run_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5",
+      "release": {
+        "path": "releases/P11_A_COMMON_POOL_BATCH1_V1.json",
+        "sha256": "0581e70a7eebd5b4cbf9ad263487d03c15df1e7ec2771afc1a6ba5238eb2d363"
+      },
+      "acceptance": {
+        "path": "manifests/A11_COMMON_POOL_BATCH1_V1_ACCEPTANCE.json",
+        "sha256": "d30881eb47a86f4cc41be170afa1b2addef36616bcc99bd4ef4b858237c5089b"
+      },
+      "runtime_manifest": {
+        "path": "results/A/A11_COMMON_POOL_BATCH1_V1/RUNTIME_FILES.jsonl",
+        "sha256": "7e1c63e7ae05a528f1fa6bd5cb74547b3d2aec219a41e12b50f7400e66047902"
+      },
+      "runtime_manifest_format": "jsonl",
+      "attempt_coverage": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/ATTEMPT_COVERAGE.json",
+        "sha256": "b9b434f2c2e1a5f76ca7ee75819ca44d74160b2d883c691712eb659d536f35df",
+        "size_bytes": 2002
+      },
+      "paired_labels": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/PAIRED_LABELS.json",
+        "sha256": "63f8b072ba78acdb28bd2a71ed4c6ce692ebf055c0e5100b85f0c33d5741d5eb",
+        "size_bytes": 12940
+      },
+      "aggregate_indices": {
+        "gain_local_plus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_plus.json",
+          "sha256": "e64fce86e4aa041ca11f41cb6b55fd8497468e4beeb375f518aee162b83a4961",
+          "size_bytes": 2790
+        },
+        "gain_local_minus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_minus.json",
+          "sha256": "a2970e2ce686d79a58ed93e093c3e2d713eafa565bf295c7ee1d2b0f443d7407",
+          "size_bytes": 2796
+        },
+        "pair": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/AGGREGATE_INDEX_pair.json",
+          "sha256": "fb8cc6cf30042a9e801d37164773bf982c19c1288889806f8665f399a42d721c",
+          "size_bytes": 2804
+        },
+        "G0": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/AGGREGATE_INDEX_G0.json",
+          "sha256": "b78c00cf9a13b7c35f8e137bbd559909ffff62839de71ed1ebdccfeff165005b",
+          "size_bytes": 4348
+        }
+      },
+      "aggregate_sidecars": {
+        "gain_local_plus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_plus.json",
+          "sha256": "08e06e08e87a4f8b5ab194b88656c46dc79a286b78b96ebb38beb9f0f99448ab",
+          "size_bytes": 8518
+        },
+        "gain_local_minus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_minus.json",
+          "sha256": "105909b3e08c62b2be0bb5cbd4d4b4c3d0b277815dea0a49b8112147000374a9",
+          "size_bytes": 8528
+        },
+        "pair": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/SIDECAR_AGGREGATE_pair.json",
+          "sha256": "f559e3582a750df5ff3e7c3e665036475531774dc837b53437283ae6406dfbfe",
+          "size_bytes": 8548
+        },
+        "G0": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/SIDECAR_AGGREGATE_G0.json",
+          "sha256": "e936b74228e8256b0c5a9ff44e7fbdb04d944cd7f598128549eec4b2213374d3",
+          "size_bytes": 12465
+        }
+      },
+      "bank": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/normal/BANK.json",
+        "sha256": "2885adb014c4d81e6cb18b159b6e7f50146252aa7ebda1a54d0acef6ca1e5885",
+        "size_bytes": 6603
+      },
+      "source_manifest": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH_SCALING_CPU_V1/proposal/SOURCE_1.json",
+        "sha256": "72269108011dca5c07f85bdbbfc60a08db51ebcdad368414c9bfd2bf5a40b5ac",
+        "size_bytes": 948
+      },
+      "source_signature": "51e655c1e2510bd68bfb52fbcb2ef5b86e26f70ad98b9e1be47a3bff9b8ea1d0",
+      "physical_attempts": 15,
+      "complete_repeat_groups": 7,
+      "independent_parent_count": 1,
+      "labels": {
+        "G0": 0.0,
+        "gain_local_minus": 0.0,
+        "gain_local_plus": -0.5,
+        "pair": -0.5
+      },
+      "target_masks": {
+        "G0": true,
+        "gain_local_minus": true,
+        "gain_local_plus": true,
+        "pair": true
+      },
+      "full_state_verified_scope": "frozen captured-field/MJB closure",
+      "physical_equality_proven": null,
+      "partial_hardlink_paths_excluded_from_sample_count": true,
+      "views": {
+        "Q_G0_paired_metadata": "accepted",
+        "D5_GAF_raw_fields": "available_for_B_window_index_compatibility_not_yet_accepted_as_completed_views",
+        "LVM_positive": "not_qualified_normal_policy_rollout_is_not_demonstration_and_endpoint_tokens_absent"
+      }
+    },
+    {
+      "source": {
+        "absolute_target": 300,
+        "cut": 5,
+        "env_seed": 1189644218,
+        "instruction": "Grasp a stick and pull a box with the stick",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 8946108781053521251,
+        "ordinal": 0,
+        "parent_source_id": "PROPOSED_MT50_stick_pull_train_0000_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|stick-pull-v3|train|0|cut5",
+        "purpose": "eight fixed remaining A train slots of original 500-parent coverage plan",
+        "selection": "ordinal0 then1, task dictionary order, skip accepted shelf0; no result-based selection",
+        "source_id": "PROPOSED_MT50_stick_pull_train_0000",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "stick-pull-v3"
+      },
+      "node": "A",
+      "source_ordinal_within_task_train": 0,
+      "task": "stick-pull-v3",
+      "split": "train",
+      "cut": 5,
+      "native_H": 10,
+      "run_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5",
+      "release": {
+        "path": "releases/P11_A_COMMON_POOL_BATCH1_V1.json",
+        "sha256": "0581e70a7eebd5b4cbf9ad263487d03c15df1e7ec2771afc1a6ba5238eb2d363"
+      },
+      "acceptance": {
+        "path": "manifests/A11_COMMON_POOL_BATCH1_V1_ACCEPTANCE.json",
+        "sha256": "d30881eb47a86f4cc41be170afa1b2addef36616bcc99bd4ef4b858237c5089b"
+      },
+      "runtime_manifest": {
+        "path": "results/A/A11_COMMON_POOL_BATCH1_V1/RUNTIME_FILES.jsonl",
+        "sha256": "7e1c63e7ae05a528f1fa6bd5cb74547b3d2aec219a41e12b50f7400e66047902"
+      },
+      "runtime_manifest_format": "jsonl",
+      "attempt_coverage": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/ATTEMPT_COVERAGE.json",
+        "sha256": "b9b434f2c2e1a5f76ca7ee75819ca44d74160b2d883c691712eb659d536f35df",
+        "size_bytes": 2002
+      },
+      "paired_labels": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/PAIRED_LABELS.json",
+        "sha256": "90bb8087f393950e48cb42f8784f502d4c5ad8aad3aacbfe7dd652ae133009b7",
+        "size_bytes": 12798
+      },
+      "aggregate_indices": {
+        "gain_local_plus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_plus.json",
+          "sha256": "f5bb101612c51fecf0d0c867f9ecfa04238ed56e24f7ff1d03f60593c1c7fa0e",
+          "size_bytes": 2760
+        },
+        "gain_local_minus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_minus.json",
+          "sha256": "250407884f465185f8ef6857d79bb972f7bbbd49f8e51bfca702ceb34cb52138",
+          "size_bytes": 2766
+        },
+        "pair": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/AGGREGATE_INDEX_pair.json",
+          "sha256": "7245aa83651f0029a4c01569534669664a10c9a6a0cd76eba02620976d078c20",
+          "size_bytes": 2774
+        },
+        "G0": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/AGGREGATE_INDEX_G0.json",
+          "sha256": "c600780643d9db268401aed2abde7408bb6d745ea46f22da18375b133e5b6097",
+          "size_bytes": 4298
+        }
+      },
+      "aggregate_sidecars": {
+        "gain_local_plus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_plus.json",
+          "sha256": "7536cf6cfa45e9e07b1870c901da401655e8122aaa19adb916cc3c39cfcbf597",
+          "size_bytes": 8423
+        },
+        "gain_local_minus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_minus.json",
+          "sha256": "3f03967473d9c0d5678b3cf1dd0cfe01e2817e1aabb18bb2487a1de60d7809b1",
+          "size_bytes": 8433
+        },
+        "pair": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/SIDECAR_AGGREGATE_pair.json",
+          "sha256": "4fc0bab3985590bf209e3ba83cecfb9d9535da411eefb7f0b2e21943da021ccf",
+          "size_bytes": 8453
+        },
+        "G0": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/SIDECAR_AGGREGATE_G0.json",
+          "sha256": "34b779bc782da2c529d22ad985379705d8d64b0aa49b4e955accf67e79a6e08a",
+          "size_bytes": 12310
+        }
+      },
+      "bank": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/normal/BANK.json",
+        "sha256": "187d6172618677142317ca9f6be5598319ac112b218993bb6a057b33229c83ae",
+        "size_bytes": 6498
+      },
+      "source_manifest": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH_SCALING_CPU_V1/proposal/SOURCE_2.json",
+        "sha256": "f983810e3c0ff3d100bfab1094a89cfaed51815afbbacf91a3cf666b2f205227",
+        "size_bytes": 926
+      },
+      "source_signature": "6c6607f8799a3465189e6d2f20581254d63a0a765a52c6ee7bfbdb3d182e075d",
+      "physical_attempts": 15,
+      "complete_repeat_groups": 7,
+      "independent_parent_count": 1,
+      "labels": {
+        "G0": 0.0,
+        "gain_local_minus": 0.0,
+        "gain_local_plus": 0.0,
+        "pair": 0.0
+      },
+      "target_masks": {
+        "G0": true,
+        "gain_local_minus": true,
+        "gain_local_plus": true,
+        "pair": true
+      },
+      "full_state_verified_scope": "frozen captured-field/MJB closure",
+      "physical_equality_proven": null,
+      "partial_hardlink_paths_excluded_from_sample_count": true,
+      "views": {
+        "Q_G0_paired_metadata": "accepted",
+        "D5_GAF_raw_fields": "available_for_B_window_index_compatibility_not_yet_accepted_as_completed_views",
+        "LVM_positive": "not_qualified_normal_policy_rollout_is_not_demonstration_and_endpoint_tokens_absent"
+      }
+    },
+    {
+      "source": {
+        "absolute_target": 300,
+        "cut": 5,
+        "env_seed": 686922949,
+        "instruction": "Grasp a stick and push a box using the stick",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 6998766813102916334,
+        "ordinal": 0,
+        "parent_source_id": "PROPOSED_MT50_stick_push_train_0000_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|stick-push-v3|train|0|cut5",
+        "purpose": "eight fixed remaining A train slots of original 500-parent coverage plan",
+        "selection": "ordinal0 then1, task dictionary order, skip accepted shelf0; no result-based selection",
+        "source_id": "PROPOSED_MT50_stick_push_train_0000",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "stick-push-v3"
+      },
+      "node": "A",
+      "source_ordinal_within_task_train": 0,
+      "task": "stick-push-v3",
+      "split": "train",
+      "cut": 5,
+      "native_H": 10,
+      "run_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5",
+      "release": {
+        "path": "releases/P11_A_COMMON_POOL_BATCH1_V1.json",
+        "sha256": "0581e70a7eebd5b4cbf9ad263487d03c15df1e7ec2771afc1a6ba5238eb2d363"
+      },
+      "acceptance": {
+        "path": "manifests/A11_COMMON_POOL_BATCH1_V1_ACCEPTANCE.json",
+        "sha256": "d30881eb47a86f4cc41be170afa1b2addef36616bcc99bd4ef4b858237c5089b"
+      },
+      "runtime_manifest": {
+        "path": "results/A/A11_COMMON_POOL_BATCH1_V1/RUNTIME_FILES.jsonl",
+        "sha256": "7e1c63e7ae05a528f1fa6bd5cb74547b3d2aec219a41e12b50f7400e66047902"
+      },
+      "runtime_manifest_format": "jsonl",
+      "attempt_coverage": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/ATTEMPT_COVERAGE.json",
+        "sha256": "b9b434f2c2e1a5f76ca7ee75819ca44d74160b2d883c691712eb659d536f35df",
+        "size_bytes": 2002
+      },
+      "paired_labels": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/PAIRED_LABELS.json",
+        "sha256": "54c691b8296c8cadef47958724a0f3273a2974abebc24881dfd36dd519acd264",
+        "size_bytes": 12798
+      },
+      "aggregate_indices": {
+        "gain_local_plus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_plus.json",
+          "sha256": "a7efe5c179f400b95a5dae9ee1bf5246dc0c6bd509415306d8d1a7ed15bb3ed1",
+          "size_bytes": 2760
+        },
+        "gain_local_minus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_minus.json",
+          "sha256": "44ff737215e53582923550302cf261d0adb48b9b5e02725ca2678d9279000c49",
+          "size_bytes": 2766
+        },
+        "pair": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/AGGREGATE_INDEX_pair.json",
+          "sha256": "84be8e4a56a1b8c28e48a58559c05e10460866845535316526a75651339cdfb9",
+          "size_bytes": 2774
+        },
+        "G0": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/AGGREGATE_INDEX_G0.json",
+          "sha256": "c7412d17f48f4683fbdf07d05d6a540b5f88b46c9d1346140eafc0e0f4d1a27d",
+          "size_bytes": 4298
+        }
+      },
+      "aggregate_sidecars": {
+        "gain_local_plus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_plus.json",
+          "sha256": "ed625ac975652027ed2cba10268d1225306a42ad6bde801824dabba901bc94c2",
+          "size_bytes": 8423
+        },
+        "gain_local_minus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_minus.json",
+          "sha256": "e0304367d75b1d1e1bbebddc64828d58372fb55b9ca639bf69ab53b167c4e5d8",
+          "size_bytes": 8433
+        },
+        "pair": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/SIDECAR_AGGREGATE_pair.json",
+          "sha256": "96730b01b6bf6b92605f8183443405573cea318ecab79b0d1f6d4f19d44111f3",
+          "size_bytes": 8453
+        },
+        "G0": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/SIDECAR_AGGREGATE_G0.json",
+          "sha256": "acd9cf6ed31d8c9e6ae984003e973f788f3cb1d994d5d2e509aa06f40dbe82c1",
+          "size_bytes": 12310
+        }
+      },
+      "bank": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/normal/BANK.json",
+        "sha256": "d702eb1ed0e8142c9047394fa4b169c9fa6c7db9f46cba0591cfd9f0467e7ec5",
+        "size_bytes": 6498
+      },
+      "source_manifest": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH_SCALING_CPU_V1/proposal/SOURCE_3.json",
+        "sha256": "029ab27a9e9bbefdac5fe0a07e29572020fb24a40948c58a1cc74a790561960b",
+        "size_bytes": 926
+      },
+      "source_signature": "fec095370cd7cfcaafe4858de8d48969c9f0c14da5db00f2ca0eec18855d29e9",
+      "physical_attempts": 15,
+      "complete_repeat_groups": 7,
+      "independent_parent_count": 1,
+      "labels": {
+        "G0": 0.0,
+        "gain_local_minus": 0.0,
+        "gain_local_plus": 0.0,
+        "pair": 0.0
+      },
+      "target_masks": {
+        "G0": true,
+        "gain_local_minus": true,
+        "gain_local_plus": true,
+        "pair": true
+      },
+      "full_state_verified_scope": "frozen captured-field/MJB closure",
+      "physical_equality_proven": null,
+      "partial_hardlink_paths_excluded_from_sample_count": true,
+      "views": {
+        "Q_G0_paired_metadata": "accepted",
+        "D5_GAF_raw_fields": "available_for_B_window_index_compatibility_not_yet_accepted_as_completed_views",
+        "LVM_positive": "not_qualified_normal_policy_rollout_is_not_demonstration_and_endpoint_tokens_absent"
+      }
+    },
+    {
+      "source": {
+        "absolute_target": 300,
+        "cut": 55,
+        "env_seed": 1572292984,
+        "instruction": "Pick a puck, bypass a wall and place the puck",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 8395148044507494801,
+        "ordinal": 1,
+        "parent_source_id": "PROPOSED_MT50_pick_place_wall_train_0001_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|pick-place-wall-v3|train|1|cut55",
+        "purpose": "eight fixed remaining A train slots of original 500-parent coverage plan",
+        "selection": "ordinal0 then1, task dictionary order, skip accepted shelf0; no result-based selection",
+        "source_id": "PROPOSED_MT50_pick_place_wall_train_0001",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "pick-place-wall-v3"
+      },
+      "node": "A",
+      "source_ordinal_within_task_train": 1,
+      "task": "pick-place-wall-v3",
+      "split": "train",
+      "cut": 55,
+      "native_H": 10,
+      "run_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55",
+      "release": {
+        "path": "releases/P11_A_COMMON_POOL_BATCH1_V1.json",
+        "sha256": "0581e70a7eebd5b4cbf9ad263487d03c15df1e7ec2771afc1a6ba5238eb2d363"
+      },
+      "acceptance": {
+        "path": "manifests/A11_COMMON_POOL_BATCH1_V1_ACCEPTANCE.json",
+        "sha256": "d30881eb47a86f4cc41be170afa1b2addef36616bcc99bd4ef4b858237c5089b"
+      },
+      "runtime_manifest": {
+        "path": "results/A/A11_COMMON_POOL_BATCH1_V1/RUNTIME_FILES.jsonl",
+        "sha256": "7e1c63e7ae05a528f1fa6bd5cb74547b3d2aec219a41e12b50f7400e66047902"
+      },
+      "runtime_manifest_format": "jsonl",
+      "attempt_coverage": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/ATTEMPT_COVERAGE.json",
+        "sha256": "b9b434f2c2e1a5f76ca7ee75819ca44d74160b2d883c691712eb659d536f35df",
+        "size_bytes": 2002
+      },
+      "paired_labels": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/PAIRED_LABELS.json",
+        "sha256": "159e99a3e09a79a95fb43bed2675bb94a5727397ea8e5369621550fa3a2ed3c8",
+        "size_bytes": 12966
+      },
+      "aggregate_indices": {
+        "gain_local_plus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/AGGREGATE_INDEX_gain_local_plus.json",
+          "sha256": "ade0be4bba78efd75ba0e7c48de0ea79896d22f4c157cc4ae9ce3a6ddebb2a6e",
+          "size_bytes": 2796
+        },
+        "gain_local_minus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/AGGREGATE_INDEX_gain_local_minus.json",
+          "sha256": "32088aee45928de7a19b09566750e4d25fb5ada1a6f08abaebd78eb4192c5503",
+          "size_bytes": 2802
+        },
+        "pair": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/AGGREGATE_INDEX_pair.json",
+          "sha256": "e956997f1d7c37dffb8ec773719eaa7a1fe72da12b4bb874eadfc85135ae08a5",
+          "size_bytes": 2810
+        },
+        "G0": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/AGGREGATE_INDEX_G0.json",
+          "sha256": "2e03d2a7a30e9eefa665f361f2e471f13c7034d8d380a2cc3a55c4ef9663b1e9",
+          "size_bytes": 4358
+        }
+      },
+      "aggregate_sidecars": {
+        "gain_local_plus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/SIDECAR_AGGREGATE_gain_local_plus.json",
+          "sha256": "5dea25ed0808c22259d3886a08e545a318fa86bbbfc81e941d432ee56fdcb06e",
+          "size_bytes": 8532
+        },
+        "gain_local_minus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/SIDECAR_AGGREGATE_gain_local_minus.json",
+          "sha256": "d773b47bfde94e96ce19359bfe0d3aa85f9bb0cf24cb5d432d59a52990855cdc",
+          "size_bytes": 8542
+        },
+        "pair": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/SIDECAR_AGGREGATE_pair.json",
+          "sha256": "afceeb559b05682f2cc797ec65ffdeb7bf393556acc1671161d59a6fa36e2ba5",
+          "size_bytes": 8562
+        },
+        "G0": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/SIDECAR_AGGREGATE_G0.json",
+          "sha256": "e8c2653be96e88686a89a5897e1a4c68fece8e80dd41e081dd755e02dc26070f",
+          "size_bytes": 12487
+        }
+      },
+      "bank": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/normal/BANK.json",
+        "sha256": "52467af1b227bf1d7ff092e44865e81dfd5a559fc78a6c516e310f8be1518fc4",
+        "size_bytes": 6623
+      },
+      "source_manifest": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH_SCALING_CPU_V1/proposal/SOURCE_5.json",
+        "sha256": "c4e36495e0fb8ed3f1f86397691acfa9c485d63f59804120ce141a1d6421cb3e",
+        "size_bytes": 950
+      },
+      "source_signature": "d8bcf5206f464646dc65c1cf7b8d25e93375cbe5e2223d0b646fcad06e8eceb8",
+      "physical_attempts": 15,
+      "complete_repeat_groups": 7,
+      "independent_parent_count": 1,
+      "labels": {
+        "G0": 0.0,
+        "gain_local_minus": 0.0,
+        "gain_local_plus": 0.0,
+        "pair": 0.0
+      },
+      "target_masks": {
+        "G0": true,
+        "gain_local_minus": true,
+        "gain_local_plus": true,
+        "pair": true
+      },
+      "full_state_verified_scope": "frozen captured-field/MJB closure",
+      "physical_equality_proven": null,
+      "partial_hardlink_paths_excluded_from_sample_count": true,
+      "views": {
+        "Q_G0_paired_metadata": "accepted",
+        "D5_GAF_raw_fields": "available_for_B_window_index_compatibility_not_yet_accepted_as_completed_views",
+        "LVM_positive": "not_qualified_normal_policy_rollout_is_not_demonstration_and_endpoint_tokens_absent"
+      }
+    },
+    {
+      "source": {
+        "absolute_target": 300,
+        "cut": 55,
+        "env_seed": 1389985904,
+        "instruction": "Pick and place a puck onto a shelf",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 4093328034983560901,
+        "ordinal": 1,
+        "parent_source_id": "PROPOSED_MT50_shelf_train_0001_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|shelf-place-v3|train|1|cut55",
+        "purpose": "eight fixed remaining A train slots of original 500-parent coverage plan",
+        "selection": "ordinal0 then1, task dictionary order, skip accepted shelf0; no result-based selection",
+        "source_id": "PROPOSED_MT50_shelf_train_0001",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "shelf-place-v3"
+      },
+      "node": "A",
+      "source_ordinal_within_task_train": 1,
+      "task": "shelf-place-v3",
+      "split": "train",
+      "cut": 55,
+      "native_H": 10,
+      "run_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55",
+      "release": {
+        "path": "releases/P11_A_COMMON_POOL_BATCH1_V1.json",
+        "sha256": "0581e70a7eebd5b4cbf9ad263487d03c15df1e7ec2771afc1a6ba5238eb2d363"
+      },
+      "acceptance": {
+        "path": "manifests/A11_COMMON_POOL_BATCH1_V1_ACCEPTANCE.json",
+        "sha256": "d30881eb47a86f4cc41be170afa1b2addef36616bcc99bd4ef4b858237c5089b"
+      },
+      "runtime_manifest": {
+        "path": "results/A/A11_COMMON_POOL_BATCH1_V1/RUNTIME_FILES.jsonl",
+        "sha256": "7e1c63e7ae05a528f1fa6bd5cb74547b3d2aec219a41e12b50f7400e66047902"
+      },
+      "runtime_manifest_format": "jsonl",
+      "attempt_coverage": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/ATTEMPT_COVERAGE.json",
+        "sha256": "b9b434f2c2e1a5f76ca7ee75819ca44d74160b2d883c691712eb659d536f35df",
+        "size_bytes": 2002
+      },
+      "paired_labels": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/PAIRED_LABELS.json",
+        "sha256": "15595459d8576deda068866338d4bbff54b53948422a7e9895047994b41ca9de",
+        "size_bytes": 12686
+      },
+      "aggregate_indices": {
+        "gain_local_plus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/AGGREGATE_INDEX_gain_local_plus.json",
+          "sha256": "a20033f911fabaa1d0ada61204c2515aeaad84424d9abbf003470f1d1d18ca22",
+          "size_bytes": 2736
+        },
+        "gain_local_minus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/AGGREGATE_INDEX_gain_local_minus.json",
+          "sha256": "07ab77d9fc5d23136ae1aa157de4b94967b2c4336cbb31cb53e4c505f0ea0965",
+          "size_bytes": 2742
+        },
+        "pair": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/AGGREGATE_INDEX_pair.json",
+          "sha256": "13d4f327bd263799c17105d4f679f0ed31bca385744a620d92d3f7ff1f5a0108",
+          "size_bytes": 2750
+        },
+        "G0": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/AGGREGATE_INDEX_G0.json",
+          "sha256": "fe6bf085302dac99e14e3a49bfb07b0614a662069213963c3653c08dd9234a18",
+          "size_bytes": 4258
+        }
+      },
+      "aggregate_sidecars": {
+        "gain_local_plus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/SIDECAR_AGGREGATE_gain_local_plus.json",
+          "sha256": "1458453bca140a0ddf3da6e6b814bc3df04ccf0272eef046e453f906cee58c80",
+          "size_bytes": 8348
+        },
+        "gain_local_minus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/SIDECAR_AGGREGATE_gain_local_minus.json",
+          "sha256": "a7fe1335c0fe478aa74bba7fa392e13acb57744faf69aba693835884a8617235",
+          "size_bytes": 8358
+        },
+        "pair": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/SIDECAR_AGGREGATE_pair.json",
+          "sha256": "0636cb52f241847dd9827b38f3822e033836540b70dcb96e7a433b79ec87ebc6",
+          "size_bytes": 8378
+        },
+        "G0": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/SIDECAR_AGGREGATE_G0.json",
+          "sha256": "8962d525e60452dc135cd4475f7739745f8035c1d747a1f2c10aba6c6e093bd7",
+          "size_bytes": 12183
+        }
+      },
+      "bank": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/normal/BANK.json",
+        "sha256": "283c3d0472aa3ef6434126bf5d86d2a36e819df31ad4f005a8d74dbaeddac892",
+        "size_bytes": 6413
+      },
+      "source_manifest": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH_SCALING_CPU_V1/proposal/SOURCE_6.json",
+        "sha256": "3967bb308273ca4ba112d3d668283ab0e9b1ff689fb883811d41d7c203f9bd29",
+        "size_bytes": 911
+      },
+      "source_signature": "c6714804af9a94f274af733e422e1184d4598f663fac74ec51fb82bd8949b5de",
+      "physical_attempts": 15,
+      "complete_repeat_groups": 7,
+      "independent_parent_count": 1,
+      "labels": {
+        "G0": 0.0,
+        "gain_local_minus": 0.0,
+        "gain_local_plus": 1.0,
+        "pair": 1.0
+      },
+      "target_masks": {
+        "G0": true,
+        "gain_local_minus": true,
+        "gain_local_plus": true,
+        "pair": true
+      },
+      "full_state_verified_scope": "frozen captured-field/MJB closure",
+      "physical_equality_proven": null,
+      "partial_hardlink_paths_excluded_from_sample_count": true,
+      "views": {
+        "Q_G0_paired_metadata": "accepted",
+        "D5_GAF_raw_fields": "available_for_B_window_index_compatibility_not_yet_accepted_as_completed_views",
+        "LVM_positive": "not_qualified_normal_policy_rollout_is_not_demonstration_and_endpoint_tokens_absent"
+      }
+    },
+    {
+      "source": {
+        "absolute_target": 300,
+        "cut": 55,
+        "env_seed": 1195000414,
+        "instruction": "Grasp a stick and pull a box with the stick",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 4924591511774449267,
+        "ordinal": 1,
+        "parent_source_id": "PROPOSED_MT50_stick_pull_train_0001_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|stick-pull-v3|train|1|cut55",
+        "purpose": "eight fixed remaining A train slots of original 500-parent coverage plan",
+        "selection": "ordinal0 then1, task dictionary order, skip accepted shelf0; no result-based selection",
+        "source_id": "PROPOSED_MT50_stick_pull_train_0001",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "stick-pull-v3"
+      },
+      "node": "A",
+      "source_ordinal_within_task_train": 1,
+      "task": "stick-pull-v3",
+      "split": "train",
+      "cut": 55,
+      "native_H": 10,
+      "run_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55",
+      "release": {
+        "path": "releases/P11_A_COMMON_POOL_BATCH1_V1.json",
+        "sha256": "0581e70a7eebd5b4cbf9ad263487d03c15df1e7ec2771afc1a6ba5238eb2d363"
+      },
+      "acceptance": {
+        "path": "manifests/A11_COMMON_POOL_BATCH1_V1_ACCEPTANCE.json",
+        "sha256": "d30881eb47a86f4cc41be170afa1b2addef36616bcc99bd4ef4b858237c5089b"
+      },
+      "runtime_manifest": {
+        "path": "results/A/A11_COMMON_POOL_BATCH1_V1/RUNTIME_FILES.jsonl",
+        "sha256": "7e1c63e7ae05a528f1fa6bd5cb74547b3d2aec219a41e12b50f7400e66047902"
+      },
+      "runtime_manifest_format": "jsonl",
+      "attempt_coverage": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/ATTEMPT_COVERAGE.json",
+        "sha256": "b9b434f2c2e1a5f76ca7ee75819ca44d74160b2d883c691712eb659d536f35df",
+        "size_bytes": 2002
+      },
+      "paired_labels": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/PAIRED_LABELS.json",
+        "sha256": "2abc1de4c52bf62b9eaf14ff05d74c44129bb5037a9efe2833dfd9aaee470a84",
+        "size_bytes": 12826
+      },
+      "aggregate_indices": {
+        "gain_local_plus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/AGGREGATE_INDEX_gain_local_plus.json",
+          "sha256": "9786cda9abd4bf33ea7565d8e30f121039ec76ae2edd1ed18e4cbd2c9a80494b",
+          "size_bytes": 2766
+        },
+        "gain_local_minus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/AGGREGATE_INDEX_gain_local_minus.json",
+          "sha256": "deef1dc7705fc564908ea91fec0184f750b9efd934545326dd967fd76e63588c",
+          "size_bytes": 2772
+        },
+        "pair": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/AGGREGATE_INDEX_pair.json",
+          "sha256": "082d5daca4d9995d75f3c90bc2ae398d37f5bfe5ebd6dd23152f7f7cfeda78dc",
+          "size_bytes": 2780
+        },
+        "G0": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/AGGREGATE_INDEX_G0.json",
+          "sha256": "32741b1d56acc515d87cc0f3b76d43038226a8e29f7bd18269b3e40cc51bafdf",
+          "size_bytes": 4308
+        }
+      },
+      "aggregate_sidecars": {
+        "gain_local_plus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/SIDECAR_AGGREGATE_gain_local_plus.json",
+          "sha256": "a379b0fc36f9ab25b6486203e4352de7b40f632240fddfb8091912950eb36f03",
+          "size_bytes": 8437
+        },
+        "gain_local_minus": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/SIDECAR_AGGREGATE_gain_local_minus.json",
+          "sha256": "83234817c00abfc62fe565840add29a8eac7f7bf4b2a029ec8e1b7c54c131cb9",
+          "size_bytes": 8447
+        },
+        "pair": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/SIDECAR_AGGREGATE_pair.json",
+          "sha256": "2e11ba3003ec882b12a211d59abf4f28492670befeb96fdcf16a04f457f5324a",
+          "size_bytes": 8467
+        },
+        "G0": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/SIDECAR_AGGREGATE_G0.json",
+          "sha256": "99828acbb685813ea216e77e10c1bebddb78b224685853a57d4a9e22ca6cb881",
+          "size_bytes": 12332
+        }
+      },
+      "bank": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/normal/BANK.json",
+        "sha256": "d75238c8381e7d744fcb6dfcdee598ca901c86a8db74da1a5d6eb9abd96e36e4",
+        "size_bytes": 6518
+      },
+      "source_manifest": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH_SCALING_CPU_V1/proposal/SOURCE_7.json",
+        "sha256": "ecf03aa50f85ba1a00dcf40297b16351bfd841b414dbdc4e6f42f3e48e34df85",
+        "size_bytes": 928
+      },
+      "source_signature": "a1b98540473fdf9cf6e986647743bedb0b188e358f36acb48d123e1c9a8358a2",
+      "physical_attempts": 15,
+      "complete_repeat_groups": 7,
+      "independent_parent_count": 1,
+      "labels": {
+        "G0": 0.0,
+        "gain_local_minus": 0.0,
+        "gain_local_plus": 0.0,
+        "pair": 0.0
+      },
+      "target_masks": {
+        "G0": true,
+        "gain_local_minus": true,
+        "gain_local_plus": true,
+        "pair": true
+      },
+      "full_state_verified_scope": "frozen captured-field/MJB closure",
+      "physical_equality_proven": null,
+      "partial_hardlink_paths_excluded_from_sample_count": true,
+      "views": {
+        "Q_G0_paired_metadata": "accepted",
+        "D5_GAF_raw_fields": "available_for_B_window_index_compatibility_not_yet_accepted_as_completed_views",
+        "LVM_positive": "not_qualified_normal_policy_rollout_is_not_demonstration_and_endpoint_tokens_absent"
+      }
+    }
+  ],
+  "immutability": "Version1 and all raw source/release/receipt files retained byte-identical. Version2 adds seven accepted paired parents. Frozen PROPOSED/UNAUTHORIZED_TEMPLATE source strings remain provenance, not current runtime authority."
+}

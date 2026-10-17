@@ -1,0 +1,13 @@
+{
+  "at_utc": "2026-09-21T13:06:05.027672+00:00",
+  "command": [
+    "nvidia-smi",
+    "--query-gpu=index,uuid,utilization.gpu,memory.used",
+    "--format=csv,noheader,nounits"
+  ],
+  "returncode": 0,
+  "stdout": "0, GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe, 94, 1009\n1, GPU-64240b2e-5845-da58-e703-61322f21cbf6, 94, 1009\n2, GPU-2254f286-1a7d-edf8-e4a4-f24c051cab83, 94, 1009\n3, GPU-8a8b08b1-2a03-ae94-bac7-4f690cf5c5d8, 93, 1009\n4, GPU-ec35bc25-f521-4261-e3a3-cf536a41aa64, 94, 1009\n5, GPU-7a3ce392-0958-db98-bd25-b95810298e5f, 94, 1009\n6, GPU-b63ae919-c2a3-ff8c-3527-2f924152251f, 0, 529\n7, GPU-893accc7-1601-840b-ea72-5d8302ef6d44, 0, 529\n",
+  "stderr": "",
+  "purpose": "user-authorized occupancy verification after GPU7 yield and GPU5 completion; separate from formal116 caps",
+  "snapshot_only_not_sustained_average": true
+}

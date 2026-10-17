@@ -1,0 +1,966 @@
+{
+  "schema": "batch1_runtime_readonly_acceptance_v1",
+  "release_id": "P11_A_COMMON_POOL_BATCH1_V1",
+  "verdict": "PASS_WITH_EXPLICIT_UNMEASURED_FIELDS",
+  "blocking_findings": [],
+  "checks": {
+    "release_identity": true,
+    "claim_and_command_bind_release_sha": true,
+    "release_consumed_no_reuse": true,
+    "no_retry": true,
+    "raw_and_report_documents_identical": true,
+    "319_private_scopes": true,
+    "private_scopes_unique": true,
+    "all_private_scopes_present_complete_no_missing_terminal": true,
+    "scope_classification": true,
+    "116_resource_caps_match_release": true,
+    "scope_totals_match_ledger": true,
+    "all_116_resources_within_caps": true,
+    "private_scope_event_pair_totals": true,
+    "missing_evidence_preserved": true,
+    "sample_scope_numeric_launcher": true,
+    "sample_scope_numeric_p04": true,
+    "sample_scope_initialization_p04": true,
+    "sample_scope_graphics_p04": true,
+    "scheduler_event_sequence": true,
+    "scheduler_real_events": true,
+    "scheduler_event_counts": true,
+    "uuid_p00_disassemble_train0000_cut5_normal": true,
+    "uuid_p01_pick_place_wall_train0000_cut5_normal": true,
+    "raw_child_exit_p01_pick_place_wall_train0000_cut5_normal": true,
+    "uuid_p01_pick_place_wall_train0000_cut5_Q_a0_r0": true,
+    "raw_child_exit_p00_disassemble_train0000_cut5_normal": true,
+    "uuid_p00_disassemble_train0000_cut5_Q_a0_r0": true,
+    "raw_child_exit_p01_pick_place_wall_train0000_cut5_Q_a0_r0": true,
+    "uuid_p01_pick_place_wall_train0000_cut5_Q_a0_r1": true,
+    "raw_child_exit_p00_disassemble_train0000_cut5_Q_a0_r0": true,
+    "uuid_p00_disassemble_train0000_cut5_Q_a0_r1": true,
+    "raw_child_exit_p01_pick_place_wall_train0000_cut5_Q_a0_r1": true,
+    "uuid_p01_pick_place_wall_train0000_cut5_Q_local_plus_r0": true,
+    "raw_child_exit_p00_disassemble_train0000_cut5_Q_a0_r1": true,
+    "uuid_p00_disassemble_train0000_cut5_Q_local_plus_r0": true,
+    "raw_child_exit_p01_pick_place_wall_train0000_cut5_Q_local_plus_r0": true,
+    "uuid_p01_pick_place_wall_train0000_cut5_Q_local_plus_r1": true,
+    "raw_child_exit_p00_disassemble_train0000_cut5_Q_local_plus_r0": true,
+    "uuid_p00_disassemble_train0000_cut5_Q_local_plus_r1": true,
+    "raw_child_exit_p01_pick_place_wall_train0000_cut5_Q_local_plus_r1": true,
+    "uuid_p01_pick_place_wall_train0000_cut5_Q_local_minus_r0": true,
+    "raw_child_exit_p00_disassemble_train0000_cut5_Q_local_plus_r1": true,
+    "uuid_p00_disassemble_train0000_cut5_Q_local_minus_r0": true,
+    "raw_child_exit_p01_pick_place_wall_train0000_cut5_Q_local_minus_r0": true,
+    "uuid_p01_pick_place_wall_train0000_cut5_Q_local_minus_r1": true,
+    "raw_child_exit_p00_disassemble_train0000_cut5_Q_local_minus_r0": true,
+    "uuid_p00_disassemble_train0000_cut5_Q_local_minus_r1": true,
+    "raw_child_exit_p01_pick_place_wall_train0000_cut5_Q_local_minus_r1": true,
+    "uuid_p01_pick_place_wall_train0000_cut5_G0_old_r0": true,
+    "raw_child_exit_p00_disassemble_train0000_cut5_Q_local_minus_r1": true,
+    "uuid_p00_disassemble_train0000_cut5_G0_old_r0": true,
+    "raw_child_exit_p01_pick_place_wall_train0000_cut5_G0_old_r0": true,
+    "uuid_p01_pick_place_wall_train0000_cut5_G0_old_r1": true,
+    "raw_child_exit_p00_disassemble_train0000_cut5_G0_old_r0": true,
+    "uuid_p00_disassemble_train0000_cut5_G0_old_r1": true,
+    "raw_child_exit_p01_pick_place_wall_train0000_cut5_G0_old_r1": true,
+    "uuid_p01_pick_place_wall_train0000_cut5_G0_fresh0_r0": true,
+    "raw_child_exit_p00_disassemble_train0000_cut5_G0_old_r1": true,
+    "uuid_p00_disassemble_train0000_cut5_G0_fresh0_r0": true,
+    "raw_child_exit_p01_pick_place_wall_train0000_cut5_G0_fresh0_r0": true,
+    "uuid_p01_pick_place_wall_train0000_cut5_G0_fresh0_r1": true,
+    "raw_child_exit_p01_pick_place_wall_train0000_cut5_G0_fresh0_r1": true,
+    "uuid_p01_pick_place_wall_train0000_cut5_G0_fresh1_r0": true,
+    "raw_child_exit_p00_disassemble_train0000_cut5_G0_fresh0_r0": true,
+    "uuid_p00_disassemble_train0000_cut5_G0_fresh0_r1": true,
+    "raw_child_exit_p01_pick_place_wall_train0000_cut5_G0_fresh1_r0": true,
+    "uuid_p01_pick_place_wall_train0000_cut5_G0_fresh1_r1": true,
+    "raw_child_exit_p00_disassemble_train0000_cut5_G0_fresh0_r1": true,
+    "uuid_p00_disassemble_train0000_cut5_G0_fresh1_r0": true,
+    "raw_child_exit_p01_pick_place_wall_train0000_cut5_G0_fresh1_r1": true,
+    "uuid_p01_pick_place_wall_train0000_cut5_G0_fresh2_r0": true,
+    "raw_child_exit_p00_disassemble_train0000_cut5_G0_fresh1_r0": true,
+    "uuid_p00_disassemble_train0000_cut5_G0_fresh1_r1": true,
+    "raw_child_exit_p01_pick_place_wall_train0000_cut5_G0_fresh2_r0": true,
+    "uuid_p01_pick_place_wall_train0000_cut5_G0_fresh2_r1": true,
+    "raw_child_exit_p00_disassemble_train0000_cut5_G0_fresh1_r1": true,
+    "uuid_p00_disassemble_train0000_cut5_G0_fresh2_r0": true,
+    "raw_child_exit_p01_pick_place_wall_train0000_cut5_G0_fresh2_r1": true,
+    "uuid_p02_stick_pull_train0000_cut5_normal": true,
+    "raw_child_exit_p00_disassemble_train0000_cut5_G0_fresh2_r0": true,
+    "uuid_p00_disassemble_train0000_cut5_G0_fresh2_r1": true,
+    "raw_child_exit_p02_stick_pull_train0000_cut5_normal": true,
+    "uuid_p02_stick_pull_train0000_cut5_Q_a0_r0": true,
+    "raw_child_exit_p00_disassemble_train0000_cut5_G0_fresh2_r1": true,
+    "uuid_p03_stick_push_train0000_cut5_normal": true,
+    "raw_child_exit_p02_stick_pull_train0000_cut5_Q_a0_r0": true,
+    "uuid_p02_stick_pull_train0000_cut5_Q_a0_r1": true,
+    "raw_child_exit_p03_stick_push_train0000_cut5_normal": true,
+    "uuid_p03_stick_push_train0000_cut5_Q_a0_r0": true,
+    "raw_child_exit_p02_stick_pull_train0000_cut5_Q_a0_r1": true,
+    "uuid_p02_stick_pull_train0000_cut5_Q_local_plus_r0": true,
+    "raw_child_exit_p03_stick_push_train0000_cut5_Q_a0_r0": true,
+    "uuid_p03_stick_push_train0000_cut5_Q_a0_r1": true,
+    "raw_child_exit_p02_stick_pull_train0000_cut5_Q_local_plus_r0": true,
+    "uuid_p02_stick_pull_train0000_cut5_Q_local_plus_r1": true,
+    "raw_child_exit_p03_stick_push_train0000_cut5_Q_a0_r1": true,
+    "uuid_p03_stick_push_train0000_cut5_Q_local_plus_r0": true,
+    "raw_child_exit_p02_stick_pull_train0000_cut5_Q_local_plus_r1": true,
+    "uuid_p02_stick_pull_train0000_cut5_Q_local_minus_r0": true,
+    "raw_child_exit_p03_stick_push_train0000_cut5_Q_local_plus_r0": true,
+    "uuid_p03_stick_push_train0000_cut5_Q_local_plus_r1": true,
+    "raw_child_exit_p02_stick_pull_train0000_cut5_Q_local_minus_r0": true,
+    "uuid_p02_stick_pull_train0000_cut5_Q_local_minus_r1": true,
+    "raw_child_exit_p03_stick_push_train0000_cut5_Q_local_plus_r1": true,
+    "uuid_p03_stick_push_train0000_cut5_Q_local_minus_r0": true,
+    "raw_child_exit_p03_stick_push_train0000_cut5_Q_local_minus_r0": true,
+    "uuid_p03_stick_push_train0000_cut5_Q_local_minus_r1": true,
+    "raw_child_exit_p02_stick_pull_train0000_cut5_Q_local_minus_r1": true,
+    "uuid_p02_stick_pull_train0000_cut5_G0_old_r0": true,
+    "raw_child_exit_p03_stick_push_train0000_cut5_Q_local_minus_r1": true,
+    "uuid_p03_stick_push_train0000_cut5_G0_old_r0": true,
+    "raw_child_exit_p02_stick_pull_train0000_cut5_G0_old_r0": true,
+    "uuid_p02_stick_pull_train0000_cut5_G0_old_r1": true,
+    "raw_child_exit_p03_stick_push_train0000_cut5_G0_old_r0": true,
+    "uuid_p03_stick_push_train0000_cut5_G0_old_r1": true,
+    "raw_child_exit_p02_stick_pull_train0000_cut5_G0_old_r1": true,
+    "uuid_p02_stick_pull_train0000_cut5_G0_fresh0_r0": true,
+    "raw_child_exit_p03_stick_push_train0000_cut5_G0_old_r1": true,
+    "uuid_p03_stick_push_train0000_cut5_G0_fresh0_r0": true,
+    "raw_child_exit_p02_stick_pull_train0000_cut5_G0_fresh0_r0": true,
+    "uuid_p02_stick_pull_train0000_cut5_G0_fresh0_r1": true,
+    "raw_child_exit_p03_stick_push_train0000_cut5_G0_fresh0_r0": true,
+    "uuid_p03_stick_push_train0000_cut5_G0_fresh0_r1": true,
+    "raw_child_exit_p02_stick_pull_train0000_cut5_G0_fresh0_r1": true,
+    "uuid_p02_stick_pull_train0000_cut5_G0_fresh1_r0": true,
+    "raw_child_exit_p03_stick_push_train0000_cut5_G0_fresh0_r1": true,
+    "uuid_p03_stick_push_train0000_cut5_G0_fresh1_r0": true,
+    "raw_child_exit_p03_stick_push_train0000_cut5_G0_fresh1_r0": true,
+    "uuid_p03_stick_push_train0000_cut5_G0_fresh1_r1": true,
+    "raw_child_exit_p02_stick_pull_train0000_cut5_G0_fresh1_r0": true,
+    "uuid_p02_stick_pull_train0000_cut5_G0_fresh1_r1": true,
+    "raw_child_exit_p03_stick_push_train0000_cut5_G0_fresh1_r1": true,
+    "uuid_p03_stick_push_train0000_cut5_G0_fresh2_r0": true,
+    "raw_child_exit_p02_stick_pull_train0000_cut5_G0_fresh1_r1": true,
+    "uuid_p02_stick_pull_train0000_cut5_G0_fresh2_r0": true,
+    "raw_child_exit_p03_stick_push_train0000_cut5_G0_fresh2_r0": true,
+    "uuid_p03_stick_push_train0000_cut5_G0_fresh2_r1": true,
+    "raw_child_exit_p02_stick_pull_train0000_cut5_G0_fresh2_r0": true,
+    "uuid_p02_stick_pull_train0000_cut5_G0_fresh2_r1": true,
+    "raw_child_exit_p03_stick_push_train0000_cut5_G0_fresh2_r1": true,
+    "uuid_p04_disassemble_train0001_cut55_normal": true,
+    "raw_child_exit_p02_stick_pull_train0000_cut5_G0_fresh2_r1": true,
+    "uuid_p05_pick_place_wall_train0001_cut55_normal": true,
+    "raw_child_exit_p04_disassemble_train0001_cut55_normal": true,
+    "uuid_p06_shelf_train0001_cut55_normal": true,
+    "raw_child_exit_p05_pick_place_wall_train0001_cut55_normal": true,
+    "uuid_p05_pick_place_wall_train0001_cut55_Q_a0_r0": true,
+    "raw_child_exit_p06_shelf_train0001_cut55_normal": true,
+    "uuid_p06_shelf_train0001_cut55_Q_a0_r0": true,
+    "raw_child_exit_p05_pick_place_wall_train0001_cut55_Q_a0_r0": true,
+    "uuid_p05_pick_place_wall_train0001_cut55_Q_a0_r1": true,
+    "raw_child_exit_p06_shelf_train0001_cut55_Q_a0_r0": true,
+    "uuid_p06_shelf_train0001_cut55_Q_a0_r1": true,
+    "raw_child_exit_p05_pick_place_wall_train0001_cut55_Q_a0_r1": true,
+    "uuid_p05_pick_place_wall_train0001_cut55_Q_local_plus_r0": true,
+    "raw_child_exit_p06_shelf_train0001_cut55_Q_a0_r1": true,
+    "uuid_p06_shelf_train0001_cut55_Q_local_plus_r0": true,
+    "raw_child_exit_p06_shelf_train0001_cut55_Q_local_plus_r0": true,
+    "uuid_p06_shelf_train0001_cut55_Q_local_plus_r1": true,
+    "raw_child_exit_p05_pick_place_wall_train0001_cut55_Q_local_plus_r0": true,
+    "uuid_p05_pick_place_wall_train0001_cut55_Q_local_plus_r1": true,
+    "raw_child_exit_p06_shelf_train0001_cut55_Q_local_plus_r1": true,
+    "uuid_p06_shelf_train0001_cut55_Q_local_minus_r0": true,
+    "raw_child_exit_p05_pick_place_wall_train0001_cut55_Q_local_plus_r1": true,
+    "uuid_p05_pick_place_wall_train0001_cut55_Q_local_minus_r0": true,
+    "raw_child_exit_p06_shelf_train0001_cut55_Q_local_minus_r0": true,
+    "uuid_p06_shelf_train0001_cut55_Q_local_minus_r1": true,
+    "raw_child_exit_p05_pick_place_wall_train0001_cut55_Q_local_minus_r0": true,
+    "uuid_p05_pick_place_wall_train0001_cut55_Q_local_minus_r1": true,
+    "raw_child_exit_p06_shelf_train0001_cut55_Q_local_minus_r1": true,
+    "uuid_p06_shelf_train0001_cut55_G0_old_r0": true,
+    "raw_child_exit_p05_pick_place_wall_train0001_cut55_Q_local_minus_r1": true,
+    "uuid_p05_pick_place_wall_train0001_cut55_G0_old_r0": true,
+    "raw_child_exit_p06_shelf_train0001_cut55_G0_old_r0": true,
+    "uuid_p06_shelf_train0001_cut55_G0_old_r1": true,
+    "raw_child_exit_p05_pick_place_wall_train0001_cut55_G0_old_r0": true,
+    "uuid_p05_pick_place_wall_train0001_cut55_G0_old_r1": true,
+    "raw_child_exit_p06_shelf_train0001_cut55_G0_old_r1": true,
+    "uuid_p06_shelf_train0001_cut55_G0_fresh0_r0": true,
+    "raw_child_exit_p05_pick_place_wall_train0001_cut55_G0_old_r1": true,
+    "uuid_p05_pick_place_wall_train0001_cut55_G0_fresh0_r0": true,
+    "raw_child_exit_p06_shelf_train0001_cut55_G0_fresh0_r0": true,
+    "uuid_p06_shelf_train0001_cut55_G0_fresh0_r1": true,
+    "raw_child_exit_p05_pick_place_wall_train0001_cut55_G0_fresh0_r0": true,
+    "uuid_p05_pick_place_wall_train0001_cut55_G0_fresh0_r1": true,
+    "raw_child_exit_p06_shelf_train0001_cut55_G0_fresh0_r1": true,
+    "uuid_p06_shelf_train0001_cut55_G0_fresh1_r0": true,
+    "raw_child_exit_p05_pick_place_wall_train0001_cut55_G0_fresh0_r1": true,
+    "uuid_p05_pick_place_wall_train0001_cut55_G0_fresh1_r0": true,
+    "raw_child_exit_p06_shelf_train0001_cut55_G0_fresh1_r0": true,
+    "uuid_p06_shelf_train0001_cut55_G0_fresh1_r1": true,
+    "raw_child_exit_p05_pick_place_wall_train0001_cut55_G0_fresh1_r0": true,
+    "uuid_p05_pick_place_wall_train0001_cut55_G0_fresh1_r1": true,
+    "raw_child_exit_p06_shelf_train0001_cut55_G0_fresh1_r1": true,
+    "uuid_p06_shelf_train0001_cut55_G0_fresh2_r0": true,
+    "raw_child_exit_p05_pick_place_wall_train0001_cut55_G0_fresh1_r1": true,
+    "uuid_p05_pick_place_wall_train0001_cut55_G0_fresh2_r0": true,
+    "raw_child_exit_p06_shelf_train0001_cut55_G0_fresh2_r0": true,
+    "uuid_p06_shelf_train0001_cut55_G0_fresh2_r1": true,
+    "raw_child_exit_p05_pick_place_wall_train0001_cut55_G0_fresh2_r0": true,
+    "uuid_p05_pick_place_wall_train0001_cut55_G0_fresh2_r1": true,
+    "raw_child_exit_p06_shelf_train0001_cut55_G0_fresh2_r1": true,
+    "uuid_p07_stick_pull_train0001_cut55_normal": true,
+    "raw_child_exit_p05_pick_place_wall_train0001_cut55_G0_fresh2_r1": true,
+    "raw_child_exit_p07_stick_pull_train0001_cut55_normal": true,
+    "uuid_p07_stick_pull_train0001_cut55_Q_a0_r0": true,
+    "raw_child_exit_p07_stick_pull_train0001_cut55_Q_a0_r0": true,
+    "uuid_p07_stick_pull_train0001_cut55_Q_a0_r1": true,
+    "raw_child_exit_p07_stick_pull_train0001_cut55_Q_a0_r1": true,
+    "uuid_p07_stick_pull_train0001_cut55_Q_local_plus_r0": true,
+    "raw_child_exit_p07_stick_pull_train0001_cut55_Q_local_plus_r0": true,
+    "uuid_p07_stick_pull_train0001_cut55_Q_local_plus_r1": true,
+    "raw_child_exit_p07_stick_pull_train0001_cut55_Q_local_plus_r1": true,
+    "uuid_p07_stick_pull_train0001_cut55_Q_local_minus_r0": true,
+    "raw_child_exit_p07_stick_pull_train0001_cut55_Q_local_minus_r0": true,
+    "uuid_p07_stick_pull_train0001_cut55_Q_local_minus_r1": true,
+    "raw_child_exit_p07_stick_pull_train0001_cut55_Q_local_minus_r1": true,
+    "uuid_p07_stick_pull_train0001_cut55_G0_old_r0": true,
+    "raw_child_exit_p07_stick_pull_train0001_cut55_G0_old_r0": true,
+    "uuid_p07_stick_pull_train0001_cut55_G0_old_r1": true,
+    "raw_child_exit_p07_stick_pull_train0001_cut55_G0_old_r1": true,
+    "uuid_p07_stick_pull_train0001_cut55_G0_fresh0_r0": true,
+    "raw_child_exit_p07_stick_pull_train0001_cut55_G0_fresh0_r0": true,
+    "uuid_p07_stick_pull_train0001_cut55_G0_fresh0_r1": true,
+    "raw_child_exit_p07_stick_pull_train0001_cut55_G0_fresh0_r1": true,
+    "uuid_p07_stick_pull_train0001_cut55_G0_fresh1_r0": true,
+    "raw_child_exit_p07_stick_pull_train0001_cut55_G0_fresh1_r0": true,
+    "uuid_p07_stick_pull_train0001_cut55_G0_fresh1_r1": true,
+    "raw_child_exit_p07_stick_pull_train0001_cut55_G0_fresh1_r1": true,
+    "uuid_p07_stick_pull_train0001_cut55_G0_fresh2_r0": true,
+    "raw_child_exit_p07_stick_pull_train0001_cut55_G0_fresh2_r0": true,
+    "uuid_p07_stick_pull_train0001_cut55_G0_fresh2_r1": true,
+    "raw_child_exit_p07_stick_pull_train0001_cut55_G0_fresh2_r1": true,
+    "whole_group_exit_after_all_children": true,
+    "106_distinct_started_exited_children": true,
+    "maximum_parent_and_child_concurrency_2": true,
+    "all_8_admitted_published_after_group_exit": true,
+    "group_cleanup_coherent": true,
+    "primary_publication_errors_absent": true,
+    "outer_exit_3_only_coverage_stop": true,
+    "unstarted_labels_null_not_zero": true,
+    "saved_8_holders_restored": true,
+    "scheduler_caps_match_release": true,
+    "known_scheduler_caps_pass": true
+  },
+  "summary": {
+    "child_count": 106,
+    "child_returncode_zero": 106,
+    "outer_returncode": 3,
+    "outer_3_reason": "p04 normal succeeded at step48 before cut55; 14 branches unstarted; other seven parents complete",
+    "caps": 116,
+    "private_scopes": 319,
+    "event_pairs": {
+      "entered": 921713,
+      "failed": 0,
+      "incomplete": 0,
+      "terminal": 921713
+    },
+    "maximum_active_parents": 2,
+    "maximum_live_child_processes_from_scheduler": 2,
+    "whole_wave_exit_event_id": 221,
+    "publication_event_ids": [
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229
+    ],
+    "restored_holder_count": 8,
+    "restoration_utc": "2026-09-20T19:48:36.616914+00:00",
+    "unused_caps_reusable": false
+  },
+  "scope_notes": [
+    "Read-only saved evidence CPU acceptance; no GPU, hardware, live process, holder, or runtime query performed.",
+    "All 319 scope summaries independently re-summed and checked for complete endpoints; original saved independent audit SHA verified against evidence manifest. Only launcher and p04 raw private logs reparsed; full 447482084-byte private log set was not rescanned.",
+    "All106 saved raw child EXIT documents compared with wave rows and raw scheduler exits.",
+    "Raw scheduler causal IDs establish whole-wave exit221 before eight publications222-229. Final saved lifecycle result records holder restoration after command exit; no continuous successful guard raw poll series exists.",
+    "No authority files or implementation changed."
+  ],
+  "targeted_raw_private_log_checks": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/launcher/events.jsonl",
+      "events_entered": 8,
+      "events_terminal": 8,
+      "verified": true
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p04_disassemble_train0001_cut55/normal/numeric_events.jsonl",
+      "events_entered": 570,
+      "events_terminal": 570,
+      "verified": true
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p04_disassemble_train0001_cut55/normal/initialization_events.jsonl",
+      "events_entered": 5667,
+      "events_terminal": 5667,
+      "verified": true
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p04_disassemble_train0001_cut55/normal/graphics_events.jsonl",
+      "events_entered": 249,
+      "events_terminal": 249,
+      "verified": true
+    }
+  ],
+  "measured_zero": {
+    "child_nonzero_exit_count": 0,
+    "failed_private_events": 0,
+    "incomplete_private_events": 0,
+    "missing_or_corrupt_private_scopes": 0,
+    "primary_errors": 0,
+    "cleanup_actions": 0,
+    "publication_failures": 0,
+    "retries": 0,
+    "new_hardware_or_process_queries_this_acceptance": 0
+  },
+  "not_measured_not_zero": {
+    "publication_group_scan_calls": null,
+    "final_cleanup_process_scan_count": null,
+    "successful_handoff_raw_poll_count": null,
+    "continuous_holder_absence_raw_poll_series": null,
+    "process_group_RSS_peak_bytes": null,
+    "GPU_compute_seconds": null,
+    "storage_maximum_overshoot_bytes": null
+  },
+  "evidence": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH1_V1/LAUNCH_RESULT.json",
+      "sha256": "ba39a932edc5f9c59b8e6a71b356e24bae4f038522ddd84676e3f3e68a7c54b6",
+      "size_bytes": 4558,
+      "manifest_sha_matches": true
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH1_V1/INDEPENDENT_LEDGER_AUDIT.json",
+      "sha256": "21c5f6cdd1c7e68017d650467dd7ffd120f0010a12756f584ce4ab4f3eacdc23",
+      "size_bytes": 3385962,
+      "manifest_sha_matches": true
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH1_V1/SCHEDULER_AUX_AUDIT.json",
+      "sha256": "961426f71bb4002aea48687170e7065d4603c94d74ebfbcf1aa6aea26c87203b",
+      "size_bytes": 4839,
+      "manifest_sha_matches": true
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH1_V1/EXIT_AND_RESTORATION.json",
+      "sha256": "728485f4929f2ddd743a4130189e27ac4f115266ba03ac0797200a3d96a56196",
+      "size_bytes": 170297,
+      "manifest_sha_matches": true
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH1_V1/WAVE_EXIT.json",
+      "sha256": "c4a00924c90bc887bcef6310c073b97d81e7987891ab2c7f65c79c5de8cf9570",
+      "size_bytes": 96987,
+      "manifest_sha_matches": true
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH1_V1/FAILURE_AND_MISSING_EVIDENCE.json",
+      "sha256": "cac382520e07fc9569be9e28b719c34929716e40d70c0adeb1f2ff271879e5e5",
+      "size_bytes": 217,
+      "manifest_sha_matches": true
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/launcher/LAUNCH_RESULT.json",
+      "sha256": "ba39a932edc5f9c59b8e6a71b356e24bae4f038522ddd84676e3f3e68a7c54b6",
+      "size_bytes": 4558
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/reserved/WAVE_EXIT.json",
+      "sha256": "c4a00924c90bc887bcef6310c073b97d81e7987891ab2c7f65c79c5de8cf9570",
+      "size_bytes": 96987
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/reserved/PROCESS_GROUP_EXIT.json",
+      "sha256": "8658d43d6d9e162d20e6b068eb89e09a0a748e6c3c940e6921876840894e36af",
+      "size_bytes": 374
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH1_V1/OUTER_COMMAND_RESULT.json",
+      "sha256": "2a9f406a017466881b5814c3822cb8873dc1f435dbd6a83d499af35aaa9cf7c0",
+      "size_bytes": 874,
+      "manifest_sha_matches": true
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P11_A_COMMON_POOL_BATCH1_V1.json",
+      "sha256": "0581e70a7eebd5b4cbf9ad263487d03c15df1e7ec2771afc1a6ba5238eb2d363",
+      "size_bytes": 70187
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_claims/P11_A_COMMON_POOL_BATCH1_V1.json",
+      "sha256": "1c1ecc58b366254caaa3a76cc96261fab2e940c08f11b88bcb72103af106830c",
+      "size_bytes": 205,
+      "manifest_sha_matches": true
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_commands/P11_A_COMMON_POOL_BATCH1_V1.json",
+      "sha256": "7010fa8023193cc7ca0975d69fe5db5c12fe39528ef04c8c98bea1ff63cf26a3",
+      "size_bytes": 155,
+      "manifest_sha_matches": true
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/launcher/events.jsonl",
+      "sha256": "dd9e1590b5967a54c6b8c406a5449933766a7ceb57e6509d39c37fb94a1e071d",
+      "size_bytes": 2038
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p04_disassemble_train0001_cut55/normal/numeric_events.jsonl",
+      "sha256": "747f4c21ff078ff51c3425bbdc01ab3b3ff0a2bf8a5e89720baea88f624fc17a",
+      "size_bytes": 141281
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p04_disassemble_train0001_cut55/normal/initialization_events.jsonl",
+      "sha256": "80d546e252a6911c7fa95ca39a383237f7f23329a0f33fd23a87277d774a2336",
+      "size_bytes": 3260751
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p04_disassemble_train0001_cut55/normal/graphics_events.jsonl",
+      "sha256": "b721a3e85aa5b541d8b4db02f9b25edc58ec5197029194febb64f04d9a0f7927",
+      "size_bytes": 113941
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/reserved/SCHEDULER_EVENTS.jsonl",
+      "sha256": "c4b7ed769442bc7bc122df0b5d4caa051f7a41cd0059210539351d6d2a33049b",
+      "size_bytes": 92216
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/normal_EXIT.json",
+      "sha256": "9557b8a24dfbc172b74c7576376cfea42bb0de64fa71fb39031ec438e7a068c1",
+      "size_bytes": 1250
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/normal_EXIT.json",
+      "sha256": "9cccd6a5117957b09cc48c10b969ded3dd770837f4b97161c764af02e3f59f93",
+      "size_bytes": 1244
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/Q_a0_r0_EXIT.json",
+      "sha256": "9e6026ebee74ba48e0366b6651a687dc0a972c403d75eb97acca97b3cb60e37c",
+      "size_bytes": 770
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/Q_a0_r0_EXIT.json",
+      "sha256": "b75356da960a9de137d8724d513cfe625c1f76a7ec31051f9b01483696019f58",
+      "size_bytes": 787
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/Q_a0_r1_EXIT.json",
+      "sha256": "eeb0263b2c63be17b92027041fc9d75ae9d1959d43ef470fc574bc4094c692d9",
+      "size_bytes": 770
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/Q_a0_r1_EXIT.json",
+      "sha256": "734a38df01598a0978a96ee9daeebbebee30b6816ea462716e7d3a6368f1026e",
+      "size_bytes": 772
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/Q_local_plus_r0_EXIT.json",
+      "sha256": "8e45f1116ca896092db176433f8acf9226500f948de3e8b0557ac0de27a50f92",
+      "size_bytes": 811
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/Q_local_plus_r0_EXIT.json",
+      "sha256": "2f0befca11e58492f8dab3885e1f70c042f3b135bece518df73fcd3d0d8a2acf",
+      "size_bytes": 794
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/Q_local_plus_r1_EXIT.json",
+      "sha256": "bdf09cb6a28c10ce1c86efa7fb2514dc50e590cc913e00c02226eb35c73ca73b",
+      "size_bytes": 794
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/Q_local_plus_r1_EXIT.json",
+      "sha256": "0f439bab73fc1055718fb34ac9eb452bb797c73d16165e9992ea958a39cd2411",
+      "size_bytes": 809
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/Q_local_minus_r0_EXIT.json",
+      "sha256": "dcf9e4d8ac848a0a9a0087f574871de9ef51c97c2d2fc59b7001a73ae6e3f3cb",
+      "size_bytes": 796
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/Q_local_minus_r0_EXIT.json",
+      "sha256": "59d338de3d97f8ac829108cf6007072eb33d74dc58bcaae31015dc1cfe5520bc",
+      "size_bytes": 797
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/Q_local_minus_r1_EXIT.json",
+      "sha256": "30169a8b2ce1090dfc956587378639ef7c82fb8859e09b1eff321c54cf338b72",
+      "size_bytes": 797
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/Q_local_minus_r1_EXIT.json",
+      "sha256": "aa3ce5982a7fb3ec9685d2f795f4e1665a8638962134d6ea623ae40eea810a52",
+      "size_bytes": 797
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/G0_old_r0_EXIT.json",
+      "sha256": "796d3633ca9852e72cce721a7e6be0686747a88c6874f8399dd55b218b3e8eb9",
+      "size_bytes": 765
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/G0_old_r0_EXIT.json",
+      "sha256": "733f2c81bccef9d6adea312790a19da47a18525019308e9281ac1c23f2342aa2",
+      "size_bytes": 781
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/G0_old_r1_EXIT.json",
+      "sha256": "8f6de1e62c57437362ebe53ed1efb655509502f7524b5028a7c81e0697ca4e65",
+      "size_bytes": 765
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/G0_old_r1_EXIT.json",
+      "sha256": "6e978b7e380512b778f5623c7ccb941e445f01e4c0fa7ef5a217240a7c7fbc18",
+      "size_bytes": 781
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/G0_fresh0_r0_EXIT.json",
+      "sha256": "d646994eb5cb96f715eab8c89ab1161fa6e4e713253c81b4f274438426139125",
+      "size_bytes": 783
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/G0_fresh0_r1_EXIT.json",
+      "sha256": "7bcbbe20469f67a0a43aaef3149e9ecdeda3ee0cb5431b6b1247bdab57488d93",
+      "size_bytes": 782
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/G0_fresh0_r0_EXIT.json",
+      "sha256": "e9d4c377f16b68b1dc4c5be0ad6215b8325ef7def3362f4e7c57236467faaa91",
+      "size_bytes": 800
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/G0_fresh1_r0_EXIT.json",
+      "sha256": "38328cd9bf07691a71716afea4471d9cc5f0078187eb5f52b7dc0e0e4ff5998a",
+      "size_bytes": 783
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/G0_fresh0_r1_EXIT.json",
+      "sha256": "9357cd536091e3c64ffc4b99f25ba14896291f571ee23a509cb6c05d2be89254",
+      "size_bytes": 799
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/G0_fresh1_r1_EXIT.json",
+      "sha256": "12a572188f4e95b250d9539ab6a82380c86e5eee9c2b0f8fb2f8537e0b96f33c",
+      "size_bytes": 783
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/G0_fresh1_r0_EXIT.json",
+      "sha256": "7ff9dd1ad6e82d06f83ce344f8c88cf0e18ce91322d8d1297fbdb7363d38128f",
+      "size_bytes": 799
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/G0_fresh2_r0_EXIT.json",
+      "sha256": "0af61b3c685e03976e52f9fa3b289747b1e13679a3e0a7ab21e92a6b85dfc4a8",
+      "size_bytes": 783
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/G0_fresh1_r1_EXIT.json",
+      "sha256": "b29bd185948f8ec5fed1e0024e9e9a2f193318960d711b8be552d253545e528e",
+      "size_bytes": 800
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5/reserved/G0_fresh2_r1_EXIT.json",
+      "sha256": "196c6a6760ab9cf163daa4772b2bfef9c018c1c80ab4c5ceea6150e055244079",
+      "size_bytes": 783
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/G0_fresh2_r0_EXIT.json",
+      "sha256": "fec803698432ea9bb31ec9b422d2852b8992d233e373da475f505a0786b4a95a",
+      "size_bytes": 784
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/normal_EXIT.json",
+      "sha256": "478af0336b586c5a3d346af5772a276cc7211ceb13d485e10c90adc99d8321a2",
+      "size_bytes": 1257
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5/reserved/G0_fresh2_r1_EXIT.json",
+      "sha256": "0736f31bf33db7faf180962376fc4ca9f70e7ae63a9ff77ff6f956b6ce2a632f",
+      "size_bytes": 800
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/Q_a0_r0_EXIT.json",
+      "sha256": "c6e725a414636c63780c67f8b42ecbea351e2355e8e831d3e0f18cffda0f7ff4",
+      "size_bytes": 786
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/normal_EXIT.json",
+      "sha256": "ce7045309cb023459cd91513a7be758e6b7eb82b18d58ddc1b73b691695cbf67",
+      "size_bytes": 1241
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/Q_a0_r1_EXIT.json",
+      "sha256": "85e8807fba9f2a007bb256ec116c7f140d0d95a3852533a6bc75caf72aec7e79",
+      "size_bytes": 786
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/Q_a0_r0_EXIT.json",
+      "sha256": "b48793362bf7592766d3c0d72728a4f573e2442940279d046aba736a3ab1b3d0",
+      "size_bytes": 769
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/Q_local_plus_r0_EXIT.json",
+      "sha256": "ff6e05986ed152bcc961118708cc20aec69dca9f55bb98d883be009f0b180058",
+      "size_bytes": 809
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/Q_a0_r1_EXIT.json",
+      "sha256": "51e3755a9eb04a49911223852b951908a4030af0408e9e1da832da3372e58edb",
+      "size_bytes": 770
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/Q_local_plus_r1_EXIT.json",
+      "sha256": "b7f0467806ad9af9b8190de733d8a0cf272ba18acf8afc0f0c7145f500c6c17a",
+      "size_bytes": 811
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/Q_local_plus_r0_EXIT.json",
+      "sha256": "10af9f4a223aa0e0bdc1c180db9d9c724cad6f5b55f5ef303d0393e88265450f",
+      "size_bytes": 794
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/Q_local_minus_r0_EXIT.json",
+      "sha256": "bf07b1eac6b4863f37b78a9683e1d2fe7395130d4eb7a41b024ac11f694db45f",
+      "size_bytes": 814
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/Q_local_plus_r1_EXIT.json",
+      "sha256": "1c063a76e03a35a4a41cf63757d2b44c13f332af89c08bc2f01a2c5d9c8986ca",
+      "size_bytes": 794
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/Q_local_minus_r0_EXIT.json",
+      "sha256": "96eab1aaa3b36eea4fb97cdb0bc85f07cf27155844b7bf8dd67af9406097b899",
+      "size_bytes": 797
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/Q_local_minus_r1_EXIT.json",
+      "sha256": "1eac10a5478f7aa8781b2672d6eefa06221d89a8618ab98d64b7c6908b2b8871",
+      "size_bytes": 814
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/Q_local_minus_r1_EXIT.json",
+      "sha256": "720967ee3ae2637a9c1eccdbd7c55d84a0f00ef463afe9f54152d11a616b5b62",
+      "size_bytes": 797
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/G0_old_r0_EXIT.json",
+      "sha256": "bac70315510c7a592f9c872036c82d9acfda6cb955ac3721bb38f10fb608beb6",
+      "size_bytes": 781
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/G0_old_r0_EXIT.json",
+      "sha256": "6253d33494a934b99cc5b54f5442a3ff5899d751b2cc4f0e96f5937e02eb68ee",
+      "size_bytes": 765
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/G0_old_r1_EXIT.json",
+      "sha256": "aef0d782bbc074e47cedf57db83eaefaa07c97fd51020689514aa34ccacaac6b",
+      "size_bytes": 781
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/G0_old_r1_EXIT.json",
+      "sha256": "803234d345e918d4fb035e1fa640282f950a2e1fef06ab1ffd6cc79aec65f52a",
+      "size_bytes": 765
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/G0_fresh0_r0_EXIT.json",
+      "sha256": "6bdc48cb47757abd0a7fdc3abb377089dc17aeba0bb54a19ccd383c9c6fcdd03",
+      "size_bytes": 800
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/G0_fresh0_r0_EXIT.json",
+      "sha256": "16dc95d09734114c8750ef3d4120c08d065ff6e6dff06a07fc9925660257f203",
+      "size_bytes": 782
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/G0_fresh0_r1_EXIT.json",
+      "sha256": "727a76649a9c58a64af658657be613b488327d8f42a3c483a87f702993c44982",
+      "size_bytes": 799
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/G0_fresh0_r1_EXIT.json",
+      "sha256": "db2f641be9408c0587f2079b465bc0b0b0ca80f4ae03923c45e90225706b4ff5",
+      "size_bytes": 783
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/G0_fresh1_r0_EXIT.json",
+      "sha256": "ad5d6c22b83aa4e2701d93d82e4db021ece8e4aca65e5e62d1a0d8853acf73cd",
+      "size_bytes": 782
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/G0_fresh1_r0_EXIT.json",
+      "sha256": "d26793bc4160488c1109df477792c2f4ad92e77badda6a0b93c74a5d65186ea0",
+      "size_bytes": 799
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/G0_fresh1_r1_EXIT.json",
+      "sha256": "c91d77e3446debc7182357fb4c49398c90c07e4c5c71150f3c6673abd8b87dab",
+      "size_bytes": 783
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/G0_fresh1_r1_EXIT.json",
+      "sha256": "c499cded810d6d4fe6b6febe9ea10ab1e87ba8f4f5852b1f69f187bfa8e6b96c",
+      "size_bytes": 799
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/G0_fresh2_r0_EXIT.json",
+      "sha256": "5330f995d59e06304527a51416fd07e9194fe52d798de79c03ec8375752390b7",
+      "size_bytes": 782
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/G0_fresh2_r0_EXIT.json",
+      "sha256": "a910cb1680fd612ceabb60ed7d137414b6d21dda4343a74c046410b2580c5962",
+      "size_bytes": 799
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5/reserved/G0_fresh2_r1_EXIT.json",
+      "sha256": "1ef43ab4c124de776e50632bd3fd5c702fc68f282e3078c8a148f8e11aecc2be",
+      "size_bytes": 782
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5/reserved/G0_fresh2_r1_EXIT.json",
+      "sha256": "ad03cbbf0cf624aa908b4095d58ec63a73558aa9731991e09a78b1920bb51e83",
+      "size_bytes": 799
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p04_disassemble_train0001_cut55/reserved/normal_EXIT.json",
+      "sha256": "d99d31ae1510af38f8eb33a185dce12aa6df5332fa7345be9374db75428dc70d",
+      "size_bytes": 755
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/normal_EXIT.json",
+      "sha256": "e3917f7e543090e496354c02952c155d056b0185af6cbab12e19d6c1d9e9c6fe",
+      "size_bytes": 1269
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/normal_EXIT.json",
+      "sha256": "a9c438a0a371729a89c3bc0cd4d04f8fed876407bee13845dceeaa020fea3c03",
+      "size_bytes": 1249
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/Q_a0_r0_EXIT.json",
+      "sha256": "84ba83f4b7becb111465551358ab68ba1b398ad624c39972e187d261ad38d4b9",
+      "size_bytes": 786
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/Q_a0_r0_EXIT.json",
+      "sha256": "8a006b8db93270e8a46a5a53eb144efd1c5b21ad24eda7b0d1221cea8fb5ad51",
+      "size_bytes": 786
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/Q_a0_r1_EXIT.json",
+      "sha256": "4a25f81f77cc3966b60fe8d7eb54bff05a9f420b5045771cbaf6eb826f04c25f",
+      "size_bytes": 786
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/Q_a0_r1_EXIT.json",
+      "sha256": "454e139305420b045badf08a89a75cd40ac2303ee96d55d276d897b8e532a7a6",
+      "size_bytes": 787
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/Q_local_plus_r0_EXIT.json",
+      "sha256": "74613f46a84e58fbbabf1d4e706594b1888005d8f68c65876a068db5fa08d561",
+      "size_bytes": 793
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/Q_local_plus_r0_EXIT.json",
+      "sha256": "f1eb92ec59134878e7d4117a58e69aa0f367c95dfcd3e7b36701060104f84426",
+      "size_bytes": 809
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/Q_local_plus_r1_EXIT.json",
+      "sha256": "c2e13e9d76e639234fc46d5991183f19153bce21b2bcd99539b03398d0e430f0",
+      "size_bytes": 792
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/Q_local_plus_r1_EXIT.json",
+      "sha256": "4f5b6734c83e67398aefae7d68e83872634f1f5edd03f35d84120645afaf5669",
+      "size_bytes": 809
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/Q_local_minus_r0_EXIT.json",
+      "sha256": "6c7b7397b8a248d7e8e989a7313c1a1f1b1c8e5cda2b62e59c306e36f8321912",
+      "size_bytes": 814
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/Q_local_minus_r0_EXIT.json",
+      "sha256": "36d5a5ca8aa347161bf63d8a04bec00b0fe4afe613d18fd6edaf660e7b5b29af",
+      "size_bytes": 813
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/Q_local_minus_r1_EXIT.json",
+      "sha256": "081c199567eb3118eb6788e284da6dd93b19e0a2c87ba513c60ba370284ebd29",
+      "size_bytes": 812
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/Q_local_minus_r1_EXIT.json",
+      "sha256": "298add293b89eb5d677ee9ec4806ccdf20818e416437572a171260f55864f1c9",
+      "size_bytes": 812
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/G0_old_r0_EXIT.json",
+      "sha256": "aa3e82459b3150c78f3434e941a217af91690d98d068bd805ec4782e005b802b",
+      "size_bytes": 782
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/G0_old_r0_EXIT.json",
+      "sha256": "0c4ac47b618e0da1073dbea723345cf7a1988c772c24088f15ad2fe2d4006eb5",
+      "size_bytes": 782
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/G0_old_r1_EXIT.json",
+      "sha256": "c2de68be23b3c7ff5a054c3fe1c70af520e961839ee10c95fd2d920df04d96a3",
+      "size_bytes": 781
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/G0_old_r1_EXIT.json",
+      "sha256": "515692c8a4f49a6a41fc6521755ce03c3cc8c467eea75d1b0c976331089bd86a",
+      "size_bytes": 782
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/G0_fresh0_r0_EXIT.json",
+      "sha256": "b46aed764bf45e1603fd49340ecc9a5b657451704a6c7a386fbfa3257df845c7",
+      "size_bytes": 800
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/G0_fresh0_r0_EXIT.json",
+      "sha256": "2648bbf9ba048ce3396f840d413fb102d3ce35b052676721b6b91915e4adc5b1",
+      "size_bytes": 800
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/G0_fresh0_r1_EXIT.json",
+      "sha256": "540a153106fbbea98cf9f05ce274e64c111ed641d86742477d56ddf9574e0526",
+      "size_bytes": 798
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/G0_fresh0_r1_EXIT.json",
+      "sha256": "479ab2464d1d3f3fa558c76e0ea5dabf8a1b5713cf96f8fe80d28fd29a01bf1c",
+      "size_bytes": 800
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/G0_fresh1_r0_EXIT.json",
+      "sha256": "dc620f26422c010dae3b6ec7e720c3800d2608222ffd1f108a9259c01a9fc818",
+      "size_bytes": 799
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/G0_fresh1_r0_EXIT.json",
+      "sha256": "2e6d23d8e76102643a12d0c7cc0ad927f6779b58b16d73cb6d8bfba627d5fb1c",
+      "size_bytes": 800
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/G0_fresh1_r1_EXIT.json",
+      "sha256": "f529521c126080687d3234f8c26aedd444c6af46107ecf819342434e7076f65a",
+      "size_bytes": 799
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/G0_fresh1_r1_EXIT.json",
+      "sha256": "de9a50d6c06d6ffa245c7322eb2fbe39b661d5b1714a55773cd3c874b6ace227",
+      "size_bytes": 800
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/G0_fresh2_r0_EXIT.json",
+      "sha256": "e712e5bea7a6a5460a21c33f0b22764cc711c13168729e1bb18e65b6bb54afc1",
+      "size_bytes": 800
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/G0_fresh2_r0_EXIT.json",
+      "sha256": "5784e4644a4789659b846f8e716f3bc078e353b2631a28cd6e083aece980fba1",
+      "size_bytes": 800
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55/reserved/G0_fresh2_r1_EXIT.json",
+      "sha256": "37a50dea8e5b6fe560923762933ff7add2bf59497e75d9839826bce698dc7b01",
+      "size_bytes": 800
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55/reserved/G0_fresh2_r1_EXIT.json",
+      "sha256": "f1052fa3df8b9b36614a8d194d8331a13073bfe7a07e0eb406f658e48d9a7781",
+      "size_bytes": 800
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/normal_EXIT.json",
+      "sha256": "b37737bc5ca7e00c1344907475b09d27604fb43dc352821a0970ba3f1932f291",
+      "size_bytes": 1243
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/Q_a0_r0_EXIT.json",
+      "sha256": "894506d2a97a7f83d450886502adfd399bd1b85af9615fe2281cfdaa0668510d",
+      "size_bytes": 769
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/Q_a0_r1_EXIT.json",
+      "sha256": "2f1d55e8e18b6253c8bef450b75f7f95f6808face2df8ed4b6a08523f7c0c1d2",
+      "size_bytes": 769
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/Q_local_plus_r0_EXIT.json",
+      "sha256": "87afe045e0a1895b60cf2127436fb96f9b207c6f59f5151fab75264dcaa2d3b2",
+      "size_bytes": 793
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/Q_local_plus_r1_EXIT.json",
+      "sha256": "50b4564dbd381b4731402ddc5366dc9ec74c03d245d948da6b0c90ff01ed81fd",
+      "size_bytes": 793
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/Q_local_minus_r0_EXIT.json",
+      "sha256": "138e5d57d37227054e7e08c416d26d75959e8f6bec8f1c6b881effc5aad2310d",
+      "size_bytes": 796
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/Q_local_minus_r1_EXIT.json",
+      "sha256": "297869a52f09bf7512d6b2f97d51ba33ff01a9729ea82fa270dff79d1b1302a9",
+      "size_bytes": 797
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/G0_old_r0_EXIT.json",
+      "sha256": "bb3e4c2adee062e477d2d36486ac376c2b6289a7fe47e518cfb8b3bde283c323",
+      "size_bytes": 764
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/G0_old_r1_EXIT.json",
+      "sha256": "a30410468453fca3739e16144bda0aca349802487af3eed4e677470a9a28dec8",
+      "size_bytes": 765
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/G0_fresh0_r0_EXIT.json",
+      "sha256": "6baa70323420492d457a1c18ff9bd0fb8c15b2f95939f1281a8db99643517e61",
+      "size_bytes": 782
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/G0_fresh0_r1_EXIT.json",
+      "sha256": "1b551363e9c46ac5ee409a9226eefcb28b11e5ef8def806ba188bf45d86438ef",
+      "size_bytes": 783
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/G0_fresh1_r0_EXIT.json",
+      "sha256": "183be19afbe46698ad02f39842c4d291ec80e1725325a155fbbc995dd4d77738",
+      "size_bytes": 781
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/G0_fresh1_r1_EXIT.json",
+      "sha256": "e9bebf9f04dd0ff67b2518d03c50d1a9d854aeb6e902e8a8cb3fae3a20489c63",
+      "size_bytes": 783
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/G0_fresh2_r0_EXIT.json",
+      "sha256": "38e3acec15fccfbec67bca23c4f159cf5e13f9e1e144c3707e64ed91ab975f1b",
+      "size_bytes": 783
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55/reserved/G0_fresh2_r1_EXIT.json",
+      "sha256": "e80c7604d75090080fac6d858bd18407175a33cca09e061ec1a462e62a6088e7",
+      "size_bytes": 783
+    }
+  ]
+}

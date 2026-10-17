@@ -1,0 +1,176 @@
+{
+  "A_waits_for_B": false,
+  "B_collection_source_limit": 0,
+  "E1": {
+    "complete_fit_seeds": [
+      9101,
+      9102,
+      9103
+    ],
+    "device": "cpu",
+    "ensemble_members": [
+      1041,
+      1042,
+      1043,
+      1044
+    ],
+    "jobs": 48,
+    "optimizer_updates_proposal": 192000,
+    "train_parents": 600
+  },
+  "GAF": {
+    "complete_system_seed_count": 1,
+    "ensemble_members": [
+      9201,
+      9202,
+      9203
+    ],
+    "final_pool_bound": false,
+    "jobs": 3,
+    "optimizer_updates_proposal": 30000
+  },
+  "artifact_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_INDEPENDENT_PIPELINE_PREP_V1",
+  "artifacts": {
+    "ARTIFACT_MANIFEST.json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_INDEPENDENT_PIPELINE_PREP_V1/ARTIFACT_MANIFEST.json",
+    "CODE_SNAPSHOT.json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_INDEPENDENT_PIPELINE_PREP_V1/CODE_SNAPSHOT.json",
+    "CPU_TEST_RESULT.json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_INDEPENDENT_PIPELINE_PREP_V1/CPU_TEST_RESULT.json",
+    "INPUT_AUDIT.json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_INDEPENDENT_PIPELINE_PREP_V1/INPUT_AUDIT.json",
+    "REPORT.md": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_INDEPENDENT_PIPELINE_PREP_V1/REPORT.md",
+    "STAGE_DAG.json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_INDEPENDENT_PIPELINE_PREP_V1/STAGE_DAG.json"
+  },
+  "authorization_sha256": "d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928",
+  "auxiliary_occupancy": "Original B guard occupied all8 throughout metadata preparation; not included in scientific zero counts. Bootstrap/status observations accounted separately under B_QUEUE_JOIN.",
+  "campaign_id": "corrector-sim-20260919",
+  "completion_scope": "CPU stage preparation and proposals only; not downstream model execution or scientific acceptance",
+  "daemon_ready": false,
+  "finished_at_utc": "2026-09-21T13:11:34.075017+00:00",
+  "future_stage_blockers": [
+    {
+      "blocked_input": [
+        "real development D predictions/arrivals/actions/reset trace",
+        "frozen original G0 intervention decisions and exact D/G0 identities"
+      ],
+      "id": "B13_E6_D5_THRESHOLD",
+      "implementation_missing": null,
+      "status": "blocked_input"
+    },
+    {
+      "blocked_input": [
+        "P20_B_MECHANISM frozen episode/seed/source and exact G0/D/Q identity"
+      ],
+      "id": "B21_E1_E6_H10_EVAL",
+      "implementation_missing": [
+        "new-protocol closed-loop driver connecting frozen D5->R and E1 four loss ensembles",
+        "E5 operation accounting and stage-aware queue wrapper"
+      ],
+      "status": "blocked_engineering_and_input"
+    },
+    {
+      "blocked_input": [
+        "final same A pool SHA",
+        "train/development tensor materialization"
+      ],
+      "id": "B12_GAF_FIT_FINALPOOL_V1",
+      "implementation_missing": null,
+      "status": "blocked_input_and_engineering"
+    },
+    {
+      "blocked_input": [
+        "normal demonstration t/t+10 frame eligibility",
+        "256x2048 endpoint tokens",
+        "finite encoder/train/selection budget"
+      ],
+      "id": "B12_LVM_TOKENS_AND_FIT",
+      "implementation_missing": [
+        "released feature extraction and normal-demo trainer connected to queue"
+      ],
+      "status": "blocked_engineering_and_input"
+    },
+    {
+      "blocked_input": [
+        "P20_B_EXTERNAL immutable source/seed/split/budget"
+      ],
+      "id": "B20_EXTERNAL_H10_EVAL",
+      "implementation_missing": [
+        "GAF denoiser hook + original LVM repeated/cooldown trigger in real new-protocol runtime with E5"
+      ],
+      "status": "blocked_engineering_and_input"
+    },
+    {
+      "blocked_input": [
+        "Smol-specific D/G0/Q views and finite P20_B_SMOL recipe"
+      ],
+      "id": "B30_SMOL50K_CORRECTOR",
+      "implementation_missing": [
+        "real Smol sampler Post/Velocity hooks",
+        "Smol-specific Corrector training/evaluation stage entry"
+      ],
+      "status": "blocked_engineering_and_input"
+    },
+    {
+      "blocked_input": [],
+      "id": "B30_XVLA_MT50_SFT",
+      "implementation_missing": [
+        "stage-gated DDP wrapper with inherited reservation, durable scientific claim, entered/completed per-rank counters and cancellation",
+        "B-local runtime identities/admission, no standalone GPU probe"
+      ],
+      "status": "blocked_engineering_and_stage_freeze"
+    },
+    {
+      "blocked_input": [
+        "trained X checkpoint",
+        "X-specific D/G0/Q views and frozen evaluation sources"
+      ],
+      "id": "B30_XVLA_CORRECTOR_EVAL",
+      "implementation_missing": [
+        "X sampler Post/Velocity hooks",
+        "new-protocol E5/runtime wrapper"
+      ],
+      "status": "blocked_engineering_and_input"
+    },
+    {
+      "blocked_input": [
+        "choose/freeze local29999 checkpoint + own normalization or official weights + official normalization",
+        "LIBERO-specific Corrector views and finite training/eval source recipes"
+      ],
+      "id": "B30_PI05_LIBERO_CORRECTOR",
+      "implementation_missing": [
+        "JAX/OpenPI R/Post/Velocity integration and 7D action derivative/normalization semantics",
+        "D/G0/Q adaptation for state8 and two images",
+        "persistent model server+client lifecycle with shared single node reservation and per-job ports/cache/E5"
+      ],
+      "status": "blocked_engineering_and_input"
+    }
+  ],
+  "hostname": "trial-303225685-trialrun-303225685-worker-0",
+  "new_cpu_tests": {
+    "old_full_suite_rerun": false,
+    "passed": 10
+  },
+  "next_action": "Analysis may freeze E1 once now; A public package independently pending. Other B stages remain separately input/engineering-blocked; no per-job chat approval after frozen grant.",
+  "operational_overrides_sha256": {
+    "persistent_queue/OCCUPANCY_OVERRIDE_V1.json": "0e896062a9c69dc51e6d1332eca5413c683d2c9bbed113b9346f8dba27310916"
+  },
+  "ready_for_once_stage_freeze": [
+    "B13_E1_FIT_TRAIN600_V1"
+  ],
+  "resource_counts": {
+    "completed_rollouts": 0,
+    "driver_queries": 0,
+    "feature_extraction": 0,
+    "large_weight_rehashes": 0,
+    "model_forward_calls": 0,
+    "model_initializations": 0,
+    "optimizer_updates": 0,
+    "scientific_gpu_seconds": 0,
+    "simulator_attempts": 0,
+    "torch_imports": 0,
+    "vla_sampling_calls": 0
+  },
+  "revision": 1,
+  "role": "B",
+  "scientific_execution_started": false,
+  "session_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+  "status": "complete",
+  "task_id": "B_INDEPENDENT_PIPELINE_PREP_V1"
+}

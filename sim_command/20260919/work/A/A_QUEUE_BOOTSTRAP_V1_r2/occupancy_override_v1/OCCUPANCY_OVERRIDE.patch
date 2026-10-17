@@ -1,0 +1,423 @@
+--- before/README.md
++++ after/README.md
+@@ -1,6 +1,6 @@
+ # Corrector persistent queue v1
+ 
+-This immutable package implements current AUTHORIZATION_V2 and the independent
++This unpublished collection package implements AUTHORIZATION_V2 and the independent
+ first-eight gate. A owns the remaining 475 frozen sources; B owns zero common-pool
+ sources. Original scientific controller, 15 cold branches, C10/C5, terminal s300,
+ state closure, candidate generation and numeric budgets are retained. No training,
+@@ -27,11 +27,27 @@
+ drain and final evidence publication. qdrain uses one persistent PGID with separately
+ recorded per-batch child membership; each batch has a full group-exit/publication
+ barrier before the next starts. A parent stays on its UUID for all cold repeats.
+-There is no holder between branches, between batches, on a completed slot, or while
+-CPU hash/validation/publication work remains. All eight holders restore only when
+-the chain has no runnable work and owned descendants/publication have completed.
+-This applies the latest explicit user all-holder-off instruction; optional older
+-idle-card filling is not enabled. The shared guard and old launchers are untouched.
++The SHA-bound OCCUPANCY_OVERRIDE_V1 takes precedence over older all-holder-off
++clauses. Assigned/pending/loading cards stay holder-free. A completed parent must
++have a proven branch-family exit before its card becomes eligible for a private
++auxiliary holder; no holder is inserted between that parent's cold branches.
++Before any later formal Popen, the scheduler records a stop request and observes
++its own holder manager and private-session descendants exiting, then records the
++entry ACK. It signals no unrelated process and performs no additional GPU query
++for that barrier. Idle eligibility also requires a fresh, empty reserved snapshot
++from the existing guard. Auxiliary duty, intervals and existing utilization
++samples are separate from scientific budgets. A duty setting is not utilization.
++All auxiliary sessions must exit and their evidence be published before the
++original same lock FD is released to restore the shared guard. Unknown cleanup
++retains the reservation; it never permits another formal entry.
++
++The old 475-source collection stage was superseded and disabled in current queue
++CONTROL. This package has never been deployed, and its operational patch is not
++proof of an active future D24 runner. No package/READY or new scientific grant is
++published by this change. Frozen source plans, claims, shared guard and completed
++launchers remain unchanged. See OCCUPANCY_OVERRIDE_READY.json for the narrow CPU
++checks and handoff evidence; applying this adapter to a future authorized runner
++must precede its launch.
+ 
+ Source, command and budget opportunities are one-shot. The shared ledger publishes
+ immutable CAS generations via atomic exclusive hard links (tested on this FUSE
+--- before/queue/qauthority.py
++++ after/queue/qauthority.py
+@@ -6,6 +6,7 @@
+ import socket
+ from pathlib import Path
+ from qio import PACKAGE, QUEUE, CAMPAIGN, read, ref, sha, verify, under
++from qoccupancy import policy as effective_occupancy_policy
+ 
+ AUTH_SHA = 'd73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928'
+ FIRST_RELEASE = 'P11_A_COMMON_POOL_QUEUE8_FIRST_V1'
+@@ -23,6 +24,7 @@
+ def current(node, *, host=None, admission=True):
+     host = socket.gethostname() if host is None else host
+     control = read(QUEUE/'CONTROL.json')
++    effective_occupancy_policy(control,node)
+     row = control['authorization']
+     if row != dict(path='persistent_queue/AUTHORIZATION_V2.json', sha256=AUTH_SHA):
+         raise AuthorityFault('authority changed; old V1/new unknown authority cannot dispatch')
+@@ -104,8 +106,9 @@
+         raise AuthorityFault('first8 differs from published immutable runtime')
+     if release.get('resource_admission_decision') != 'accept_requested8_with_declared_unknowns':
+         raise AuthorityFault('explicit8 resource decision required; never fall back to2')
+-    if release.get('holder_policy') != 'all8_off_across_runnable_chain':
+-        raise AuthorityFault('latest user whole-node holder policy required')
++    # SHA-bound operational override supersedes the frozen legacy holder clause.
++    # It cannot change this release's scientific scope, sources or caps.
++    effective_occupancy_policy(node='A')
+     entries = [x for x in read(CAMPAIGN/'TASK_BOARD.json')['tasks'] if x.get('id') == FIRST_TASK]
+     if len(entries) != 1 or entries[0].get('status') not in ('ready', 'running') or entries[0].get('owner') != 'A':
+         raise AuthorityFault('first8 board must be unique ready/running A task')
+@@ -116,6 +119,8 @@
+ 
+ def collection_gate(*, sequence, admission=True):
+     auth, control = current('A', admission=admission)
++    if control.get('remaining_common_pool_collection_enabled') is False:
++        raise AuthorityFault('legacy475 collection superseded/disabled; occupancy override cannot reopen it')
+     if auth['collection_source_limits_by_node']['A'] != 475 or auth['max_collection_parallel_parents_by_node']['A'] != 8:
+         raise AuthorityFault('collection stage limits drift')
+     if sequence == 1:
+--- before/queue/qbatch.py
++++ after/queue/qbatch.py
+@@ -19,21 +19,33 @@
+ from controller import branch_allows_next
+ from pool_protocol import ARMS
+ from storage import Store
++from qoccupancy import PerGPU
++from qio import QUEUE
+ 
+ 
+ class QueueBackend(ProcessBackend):
+-    def __init__(self,*args,monitor,**kwargs):
++    def __init__(self,*args,monitor,occupancy,**kwargs):
+         super().__init__(*args,**kwargs);self.monitor=monitor;self.next_monitor=0
++        self.occupancy=occupancy
+         self.completed=[];self.breaker=snapshot()['node_breakers'].get('A',{}).copy()
++
++    def start(self,parent,job):
++        # The acknowledgement precedes Popen, imports, graphics and model loading.
++        self.occupancy.before_formal(parent['device']['gpu_uuid'],parent['parent_key'])
++        return super().start(parent,job)
+ 
+     def refresh(self):
+         super().refresh()
+         if time.monotonic()>=self.next_monitor:
+             self.monitor.check();self.next_monitor=time.monotonic()+5
++            cached=read('/tmp/gpu_occupancy_guard/status.json')
++            self.occupancy.monitor_cached(cached)
++            for gpu in self.occupancy.devices:self.occupancy.fill_idle(gpu,cached)
+ 
+     def record_exit(self,parent,job,row):
+         super().record_exit(parent,job,row)
+         if not branch_allows_next(job,row) or job==ARMS[-1]:
++            self.occupancy.formal_exited(parent['device']['gpu_uuid'],parent['parent_key'],row)
+             path=Path(parent['paths']['output'])/job[0]/'RESOURCE_LEDGER.json'
+             error=read(path).get('primary') if path.exists() else None
+             signature=failure_signature(error)
+@@ -45,6 +57,10 @@
+                 if n>=3:raise GlobalFault('three consecutive completed parents share a technical failure signature')
+             else:self.breaker.update(signature=None,consecutive=0)
+ 
++    def drain(self):
++        self.occupancy.close()
++        return super().drain()
++
+ 
+ def execute(release_path, proposal, fds, holder_ack):
+     p=proposal;root=Path(p['paths']['output']);root.mkdir(parents=True,exist_ok=False)
+@@ -54,7 +70,7 @@
+     new_json(out/'HOLDER_EXIT_ACK.json',holder_ack)
+     mark_entered(p);configure_store(store)
+     meter=Meter(out/'events.jsonl',{'native_nvml_identity_queries':len(p['parents'])})
+-    backend=None;monitor=None;wave=None;cleanup=None;primary=None;validation=None;manifest=None
++    backend=None;occupancy=None;monitor=None;wave=None;cleanup=None;primary=None;validation=None;manifest=None
+     phase='full_identity';started=time.monotonic()
+     def stop(sig,frame):raise GlobalFault('queue batch signal/phase deadline '+str(sig))
+     previous={s:signal.signal(s,stop) for s in (signal.SIGTERM,signal.SIGINT,signal.SIGHUP,signal.SIGALRM)}
+@@ -72,7 +88,10 @@
+         for parent in p['parents']:
+             child=Path(parent['paths']['cache']);child.mkdir();(child/'temporary').mkdir();(child/'cache').mkdir()
+         monitor=BatchMonitor(p,store);monitor.check()
+-        backend=QueueBackend(release_path,p,fds,monitor=monitor)
++        devices=[x['device'] for x in read(QUEUE/'plan/NEXT8_FORMAL_CONCURRENCY_V1.json')['parents']]
++        occupancy=PerGPU(Path(os.environ['CORRECTOR_QUEUE_AUXILIARY_ROOT'])/p['job_id'],devices,holder_ack,
++            pending_gpus=[parent['device']['gpu_uuid'] for parent in p['parents']])
++        backend=QueueBackend(release_path,p,fds,monitor=monitor,occupancy=occupancy)
+         recorder=EventRecorder(reserved/'SCHEDULER_EVENTS.jsonl',branch='batch_manager',source_id=p['job_id'],
+             parent_source_id='not_applicable:batch',split='mixed_fixed_source_splits',synthetic=False,writer=manager)
+         phase='cold_parent_wave';signal.alarm(p['timeouts']['reserved_wave_seconds']+p['timeouts']['reserved_wave_grace_seconds'])
+--- before/queue/qdrain.py
++++ after/queue/qdrain.py
+@@ -18,6 +18,7 @@
+ def main():
+     parser=argparse.ArgumentParser();parser.add_argument('--first-release',required=True);parser.add_argument('--chain',required=True)
+     args=parser.parse_args();chain=Path(args.chain);context=read(chain/'REQUEST.json')
++    os.environ['CORRECTOR_QUEUE_AUXILIARY_ROOT']=str(chain/'auxiliary_holders')
+     fds=held_reservation_fds()
+     if not fds or os.getpid()!=os.getpgrp():raise RuntimeError('guard-created isolated PGID and inherited lock required')
+     new_json(chain/'DRAIN_STARTED.json',dict(process=process_identity(),utc=utc(),existing_lock_fds=list(fds)))
+--- before/queue/qservice.py
++++ after/queue/qservice.py
+@@ -72,7 +72,7 @@
+     server=socket.socket(socket.AF_UNIX,socket.SOCK_STREAM);server.bind(sockpath);os.chmod(sockpath,0o600);server.listen(1)
+     request=dict(node=node,host=socket.gethostname(),process=process_identity(),socket=sockpath,
+                  request_unix=time.time(),holder_processes=holders,first_release=ref(release_path),
+-                 holder_policy='all8_off_across_runnable_chain',nested_lock_acquisitions=0)
++                 holder_policy='OCCUPANCY_OVERRIDE_V1_formal_priority_per_GPU_exit_ACK',nested_lock_acquisitions=0)
+     new_json(chain/'REQUEST.json',request)
+     cmd=[cfg['occupancy_lifecycle'],'run','--',cfg['python'],'-B',str(PACKAGE/'queue/qdrain.py'),
+          '--first-release',str(release_path),'--chain',str(chain)]
+@@ -94,7 +94,7 @@
+             if now-last_heartbeat>=5:
+                 progress=read(chain/'PROGRESS.json') if (chain/'PROGRESS.json').exists() else None
+                 heartbeat(node,'formal_chain' if peer else 'holder_handoff',chain=str(chain),progress=progress,
+-                          reservation='same_node_guard_FD',holders='all8off_until_chain_exit_publication')
++                          reservation='same_node_guard_FD',holders='idle_cards_only; ACK_before_each_formal_entry')
+                 last_heartbeat=now
+             if peer and (chain/'HOLDER_EXIT_ACK.json').exists() and now-last_monitor>=15:
+                 count=monitor_sample(chain,count,active=True);last_monitor=now
+@@ -136,6 +136,19 @@
+         atomic_json(QUEUE/'nodes'/node/'BLOCKED.json',dict(reason='supervisor failure',evidence=ref(chain/'SUPERVISOR_FAILURE.json'),utc=utc()))
+     finally:
+         server.close()  # Leave the unique socket pathname as evidence; no cleanup/deletion task.
++        # Also covers qdrain being killed before its normal finally block.
++        # Keep this live supervisor and its same reservation FD while cleanup
++        # is unresolved. A raised exception must not unwind and close that FD.
++        from qoccupancy import stop_tree
++        while True:
++            try:
++                auxiliary_exit=stop_tree(chain/'auxiliary_holders','outer_supervisor_before_reservation_release')
++                new_json(chain/'AUXILIARY_EXIT_BEFORE_RELEASE.json',dict(records=auxiliary_exit,utc=utc()))
++                break
++            except BaseException as error:
++                try:heartbeat(node,'blocked_retaining_reservation',chain=str(chain),reason='auxiliary exit/publication unproven: '+str(error))
++                except BaseException:pass
++                time.sleep(5)
+         if fd is not None:
+             if not cleanup or cleanup.get('status')!='all_formal_group_members_exited':
+                 heartbeat(node,'blocked_retaining_reservation',chain=str(chain),reason='owned exit unproven')
+--- /dev/null
++++ queue/qoccupancy.py
+@@ -0,0 +1,194 @@
++"""Per-card auxiliary ownership and pre-Popen exit barrier. No hardware probes.
++
++Auxiliary processes have private sessions; science retains its original node
++lock/group. Every auxiliary session is published before it receives permission
++to exec gpu_hold, so the outer supervisor can clean it after a manager failure.
++"""
++import os
++import signal
++import subprocess
++import time
++from pathlib import Path
++from qio import PACKAGE,QUEUE,CAMPAIGN,read,verify,ref,new_json,append,utc,process_identity,same_process
++
++OVERRIDE_SHA='0e896062a9c69dc51e6d1332eca5413c683d2c9bbed113b9346f8dba27310916'
++BASE_SHA='d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928'
++HOLDER_SHA='3f75a84145092f2c6beb342f8ea9ae445905c6e0549693c5aa78f525c0436a2e'
++
++def policy(control=None,node='A'):
++    ctl=read(QUEUE/'CONTROL.json') if control is None else control
++    row=dict(path='persistent_queue/OCCUPANCY_OVERRIDE_V1.json',sha256=OVERRIDE_SHA)
++    if row not in ctl.get('operational_overrides',[]):raise RuntimeError('occupancy override is not bound')
++    doc=read(verify(row));verify(doc['contract'])
++    if (doc['base_queue_authorization']['sha256']!=BASE_SHA or
++        ctl['authorization']!=doc['base_queue_authorization'] or node not in doc['nodes'] or
++        not doc['allow_idle_subset_holders_during_formal_wave'] or doc['formal_compute_on_same_GPU_with_holder_authorized']):
++        raise RuntimeError('occupancy precedence or base authority mismatch')
++    verify(doc['base_queue_authorization'])
++    return dict(id=doc['id'],sha256=OVERRIDE_SHA,mode='formal_priority_per_GPU_exit_ACK',
++        holder_on_loading_GPU=False,auxiliary_costs_separate=True,science_budget_changed=False)
++
++def session_members(saved):
++    """A private session cannot acquire unrelated external process members."""
++    current=process_identity()
++    if any(saved[k]!=current[k] for k in ('host','boot_id')):raise RuntimeError('holder belongs to another host/boot')
++    leader=process_identity(saved['pid'])
++    if leader and leader['start_ticks']!=saved['start_ticks']:raise RuntimeError('holder PID reused; ownership unproven')
++    rows=[]
++    for f in Path('/proc').iterdir():
++        if not f.name.isdigit():continue
++        try:
++            bits=(f/'stat').read_text().rsplit(') ',1)[1].split()
++            if int(bits[3])==saved['pid'] and bits[0]!='Z':
++                row=process_identity(int(f.name))
++                if row:rows.append(row)
++        except (OSError,ValueError,IndexError):continue
++    if any(r['start_ticks']<saved['start_ticks'] for r in rows):raise RuntimeError('invalid holder session ancestry')
++    return rows
++
++def signal_owned(saved,sig):
++    if same_process(saved):os.kill(saved['pid'],sig)
++
++def stop_session(folder,reason,timeout=30):
++    folder=Path(folder);started=folder/'STARTED.json'
++    if not started.exists():
++        # A spawned CPU wrapper has no permission to enter GPU code until its
++        # own identity and GO record both exist. Still reap its private session.
++        started=folder/'SPAWNED.json'
++        if not started.exists():
++            if (folder/'GO_RECORDED.json').exists():raise RuntimeError('orphan GO record without holder identity')
++            if (folder/'SPAWN_INTENT.json').exists():raise RuntimeError('holder spawn outcome unknown; retain reservation')
++            return dict(status='not_started',GPU_compute_entered=False)
++    if (folder/'EXIT_ACK.json').exists():
++        result=read(folder/'EXIT_ACK.json')
++        if session_members(result['manager']):raise RuntimeError('acknowledged holder session is live again')
++        return result
++    saved=read(started)['process'];begin=time.monotonic();deadline=begin+timeout;seen={};exits={}
++    if not (folder/'STOP_REQUEST.json').exists():
++        new_json(folder/'STOP_REQUEST.json',dict(utc=utc(),monotonic=begin,reason=reason,manager=saved))
++    first=session_members(saved)
++    for row in first:seen[(row['pid'],row['start_ticks'])]=row
++    signal_owned(saved,signal.SIGTERM)
++    manager_exit=None
++    while True:
++        rows=session_members(saved);now=time.monotonic();live={(x['pid'],x['start_ticks']) for x in rows}
++        for row in rows:seen[(row['pid'],row['start_ticks'])]=row
++        for key in seen:
++            if key not in live and key not in exits:exits[key]=dict(observed_utc=utc(),observed_monotonic=now)
++        if manager_exit is None and not same_process(saved):manager_exit=dict(observed_utc=utc(),observed_monotonic=now)
++        if not rows:break
++        if now>=deadline:raise RuntimeError('holder descendants remain: formal entry/release forbidden')
++        # gpu_hold normally reaps its own children. If the manager exits early,
++        # only this positively identified private session may be cleaned up.
++        if manager_exit is not None:
++            for row in rows:signal_owned(row,signal.SIGTERM)
++        time.sleep(.1)
++    launch=read(folder/'GO_RECORDED.json') if (folder/'GO_RECORDED.json').exists() else None
++    result=dict(status='all_owned_holder_session_processes_exited',manager=saved,reason=reason,
++        manager_exit=manager_exit,all_descendants_exit_observed_utc=utc(),all_descendants_exit_observed_monotonic=time.monotonic(),
++        descendants=[dict(identity=v,exit=exits.get(k)) for k,v in seen.items() if v['pid']!=saved['pid']],
++        elapsed_seconds=time.monotonic()-begin,extra_GPU_queries=0,no_unrelated_process_signals=True,
++        holder_manager_interval_seconds=(time.monotonic()-launch['monotonic']) if launch else 0,
++        interval_scope='GO permission to observed full private-session exit; not kernel time or energy',
++        GPU_uuid=launch.get('GPU_uuid') if launch else None,configured_duty=launch.get('duty') if launch else None,
++        measured_utilization=None)
++    new_json(folder/'EXIT_ACK.json',result);return result
++
++def stop_tree(root,reason):
++    records=[]
++    folders={p.parent for name in ('SPAWN_INTENT.json','STARTED.json','SPAWNED.json','GO_RECORDED.json') for p in Path(root).glob('**/'+name)}
++    for folder in sorted(folders):records.append(stop_session(folder,reason))
++    return records
++
++class PerGPU:
++    def __init__(self,root,devices,initial_ack,*,pending_gpus=(),holder_factory=None,holder_stopper=stop_session):
++        self.root=Path(root);self.root.mkdir(parents=True,exist_ok=True)
++        self.devices={d['gpu_uuid']:d for d in devices};self.states={key:'idle' for key in self.devices}
++        self.parents={};self.holders={};self.handles={};self.sequence=0;self.stopper=holder_stopper
++        self.factory=holder_factory or self._spawn
++        for gpu in pending_gpus:
++            if gpu not in self.devices:raise RuntimeError('pending GPU outside fixed node map')
++            self.states[gpu]='pending_formal'
++        if initial_ack.get('status')!='all8_holder_processes_exited_before_formal_child':raise RuntimeError('original node guard handoff required')
++        new_json(self.root/'POLICY.json',dict(effective=policy(),initial_guard_ack=initial_ack))
++
++    def event(self,name,**values):append(self.root/'AUXILIARY_EVENTS.jsonl',dict(event=name,utc=utc(),monotonic=time.monotonic(),**values))
++
++    def _spawn(self,gpu,folder):
++        holder=CAMPAIGN.parents[2]/'gpu_hold.py'
++        verify(dict(path=str(holder),sha256=HOLDER_SHA))
++        read_fd,write_fd=os.pipe();proc=None
++        try:
++            env=dict(os.environ,CUDA_VISIBLE_DEVICES=gpu)
++            new_json(folder/'SPAWN_INTENT.json',dict(utc=utc(),GPU_uuid=gpu,GPU_permission_requires_durable_GO=True))
++            with (folder/'stdout.log').open('xb') as out,(folder/'stderr.log').open('xb') as err:
++                proc=subprocess.Popen(['/usr/bin/python','-B',str(PACKAGE/'queue/qholder_entry.py'),
++                    '--root',str(folder),'--go-fd',str(read_fd),'--holder',str(holder)],
++                    stdin=subprocess.DEVNULL,stdout=out,stderr=err,env=env,start_new_session=True,pass_fds=(read_fd,))
++            self.handles[gpu]=proc
++            identity=process_identity(proc.pid)
++            if identity is None or identity['pgid']!=proc.pid:raise RuntimeError('holder CPU wrapper identity missing')
++            new_json(folder/'SPAWNED.json',dict(process=identity,utc=utc(),monotonic=time.monotonic(),GPU_compute_entered=False))
++            end=time.monotonic()+10
++            while not (folder/'STARTED.json').exists():
++                if proc.poll() is not None or time.monotonic()>end:raise RuntimeError('holder CPU entry acknowledgement failed')
++                time.sleep(.02)
++            saved=read(folder/'STARTED.json')['process']
++            if saved['pid']!=proc.pid or saved['pgid']!=proc.pid or not same_process(saved):raise RuntimeError('holder session identity mismatch')
++            new_json(folder/'GO_RECORDED.json',dict(utc=utc(),monotonic=time.monotonic(),GPU_uuid=gpu,manager=saved,duty=.95,measured_utilization=None))
++            os.write(write_fd,b'GO\n')
++        finally:
++            os.close(read_fd);os.close(write_fd)
++        return folder
++
++    def fill_idle(self,gpu,cached_guard):
++        if self.states[gpu]!='idle' or gpu in self.holders:return False
++        device=self.devices[gpu];row=cached_guard.get('gpus',{}).get(str(device['gpu_index']),{})
++        if (time.time()-cached_guard.get('updated',0)>12 or row.get('state')!='reserved' or
++            not isinstance(row.get('pids'),list) or row['pids']):
++            self.event('idle_fill_deferred',gpu_uuid=gpu,reason='fresh_empty_reserved_guard_snapshot_required');return False
++        self.sequence+=1;folder=self.root/('holder_%05d'%self.sequence);folder.mkdir()
++        self.holders[gpu]=folder
++        self.factory(gpu,folder);self.event('holder_started',gpu_uuid=gpu,registry=str(folder),target_duty=.95)
++        return True
++
++    def monitor_cached(self,cached_guard):
++        # Cached guard queries already exist. Never interpret low utilization as
++        # idle. More than one GPU context or stale ownership yields OUR holder.
++        for gpu,folder in list(self.holders.items()):
++            row=cached_guard.get('gpus',{}).get(str(self.devices[gpu]['gpu_index']),{})
++            owned={r['pid'] for r in session_members(read(folder/'STARTED.json')['process'])}
++            unknown=set(row.get('pids',[]))-owned
++            if (time.time()-cached_guard.get('updated',0)>12 or row.get('state')!='reserved' or
++                unknown or not owned):
++                ack=self.stopper(folder,'cached_guard_conflict_or_stale')
++                proc=self.handles.pop(gpu,None)
++                if proc is not None:proc.wait(timeout=1)
++                self.holders.pop(gpu,None);self.event('holder_yielded',gpu_uuid=gpu,ack=ack)
++
++    def before_formal(self,gpu,parent):
++        if self.states[gpu]=='formal':
++            if self.parents[gpu]!=parent:raise RuntimeError('GPU already owned by another formal parent')
++            return
++        self.states[gpu]='handoff'  # Filling becomes impossible before any stop is requested.
++        folder=self.holders.get(gpu)
++        ack=self.stopper(folder,'formal_GPU_entry_before_Popen') if folder else dict(status='no_auxiliary_holder_started')
++        if ack['status'] not in ('all_owned_holder_session_processes_exited','no_auxiliary_holder_started'):raise RuntimeError('holder exit not proven')
++        proc=self.handles.pop(gpu,None)
++        if proc is not None:proc.wait(timeout=1)
++        self.holders.pop(gpu,None);self.parents[gpu]=parent;self.states[gpu]='formal'
++        self.event('formal_entry_permitted_after_holder_exit_ACK',gpu_uuid=gpu,parent=parent,ack=ack)
++
++    def formal_exited(self,gpu,parent,proof):
++        if self.states[gpu]!='formal' or self.parents[gpu]!=parent:raise RuntimeError('formal owner mismatch')
++        if not proof.get('cleanup_complete') or proof.get('remaining_group')!=[]:raise RuntimeError('formal descendant exit not proven')
++        self.states[gpu]='idle';self.parents.pop(gpu)
++        self.event('formal_parent_exited_GPU_eligible',gpu_uuid=gpu,parent=parent,proof=proof)
++
++    def close(self):
++        # Called before original formal group drain and before outer lock release.
++        records=stop_tree(self.root,'wave_end_before_original_guard_restoration')
++        for proc in self.handles.values():proc.wait(timeout=1)
++        self.handles.clear();self.holders.clear()
++        self.event('all_auxiliary_holders_exited',records=records)
++        return records
+--- /dev/null
++++ queue/qholder_entry.py
+@@ -0,0 +1,22 @@
++"""CPU-only launch acknowledgement before permission to enter holder GPU code."""
++import argparse
++import os
++import select
++import time
++from pathlib import Path
++from qio import new_json,process_identity,utc
++
++def main():
++    p=argparse.ArgumentParser();p.add_argument('--root',required=True);p.add_argument('--go-fd',required=True,type=int);p.add_argument('--holder',required=True);a=p.parse_args()
++    root=Path(a.root);own=process_identity()
++    if os.getsid(0)!=own['pid'] or own['pgid']!=own['pid']:raise RuntimeError('private holder session required')
++    new_json(root/'STARTED.json',dict(process=own,session=os.getsid(0),utc=utc(),monotonic=time.monotonic(),GPU_compute_entered=False))
++    ready=select.select([a.go_fd],[],[],15)[0]
++    if not ready or os.read(a.go_fd,3)!=b'GO\n':return 2
++    os.close(a.go_fd)
++    if not (root/'GO_RECORDED.json').exists():raise RuntimeError('no durable holder ownership record')
++    new_json(root/'EXEC_ENTERED.json',dict(utc=utc(),monotonic=time.monotonic(),process=own,holder_duty=.95))
++    os.execv('/usr/bin/python',['/usr/bin/python','-B',a.holder,'--devices','0','--size','8192','--dtype','bf16',
++        '--target-util','0.95','--period-seconds','0.20','--log-interval','60'])
++
++if __name__=='__main__':raise SystemExit(main())

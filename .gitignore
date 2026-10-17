@@ -1,0 +1,79 @@
+# Python environments and build caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.cache/
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.netrc
+.git-credentials
+
+# Raw experiment output; curated results are kept under docs/ and analysis/.
+# Selected result summaries and source snapshots are explicitly tracked.
+/outputs/
+/results/
+/sim_command/20260919/results/
+/sim_command/20260919/deadline_20260924/A/runs/
+/sim_command/20260919/deadline_20260924/A/jobs/
+/sim_command/20260919/deadline_20260924/A/chain/
+/sim_command/20260919/deadline_20260924/A/notifications/
+/sim_command/20260919/deadline_20260924/A/outbox/
+/sim_command/20260919/persistent_queue/nodes/
+
+# Host runtime state and generated ledgers
+*.log
+*.pid
+*.lock
+*.jsonl
+*.partial_*
+*.captured_tail
+claims/
+heartbeats/
+logs/
+__logs__/
+
+# Downloaded environments, upstream checkouts and host graphics libraries
+upstream/
+vendor_vla/
+isolation/
+site-packages/
+*.deb
+*.so
+*.so.*
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+
+# Large checkpoints, raw tensors, simulator states, frames and videos
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npz
+*.npy
+*.f32
+*.bin
+*.toc
+*.mjb
+*.ppm
+*.mp4
+*.avi
+*.mov
+
+# The small frozen critic and action normalization assets are part of the core.
+!/assets/**/*.pt
+!/assets/**/*.safetensors

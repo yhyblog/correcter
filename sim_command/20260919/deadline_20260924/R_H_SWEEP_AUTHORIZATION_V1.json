@@ -1,0 +1,92 @@
+{
+  "schema": "corrector_R_H_supplement_v1",
+  "authorization_id": "D24_R_H_SWEEP_SUPPLEMENT_V1",
+  "status": "released",
+  "issued_at_utc": "2026-09-22T09:16:30.060353+00:00",
+  "user_basis": [
+    "2026-09-22 explicitly add R H20/30/40/50 to main sweep",
+    "2026-09-22 explicitly assign B/C for faster parallel execution"
+  ],
+  "shared_brief": {
+    "path": "deadline_20260924/R_H_SWEEP_SUPPLEMENT_V1.md",
+    "sha256": "6523bb6bcf77013f93565f5de095ad4c483aa14cf0fa703edbc5eaed99aaee6b"
+  },
+  "frozen_reference": {
+    "main_package": "results/A/A_D24_MAIN_ONCE_V1",
+    "main_config": {
+      "path": "results/A/A_D24_MAIN_ONCE_V1/config/CONFIG.json",
+      "sha256": "2ebd9dfae4045c94057c44ddeed006bb6513150458ea3d44b2228bd84061bda8"
+    },
+    "test_sources": {
+      "path": "deadline_20260924/A/config/TEST_SOURCES_V1.json",
+      "sha256": "839bedbffde39059a688d71eb5d465a363e9ce0331583473f4e4740527dbeacc"
+    },
+    "N_config": {
+      "path": "deadline_20260924/A/config/CONFIG.json",
+      "sha256": "4ac056f9c57b5ff75c16272ab93c685f745079c693f221d5c5b0219738cf4e69"
+    }
+  },
+  "planned_new_test_episodes": 2000,
+  "unique_test_sources": 500,
+  "new_initial_state_identities": 0,
+  "training_updates": 0,
+  "base_SFT_updates": 0,
+  "renderer": "NVIDIA_EGL_no_Mesa_fallback",
+  "physical_protocol": "A main 30Hz/400Hz/action_scale0.015/corner2_480/native_raw50_NFE10/C10_once1",
+  "holder_policy": "all holders off entire formal wave; restore after all formal descendants exit; no idle subset holders",
+  "per_batch_analysis_approval_required": false,
+  "strict_consistency_audit_or_separate_GPU_preflight_required": false,
+  "cross_node_runtime_dependencies": [],
+  "successful_episode_replay": false,
+  "existing_A_Full_task_interrupted": false,
+  "new_experiment_admission_cutoff_utc": "2026-09-23T12:00:00Z",
+  "tables_due_utc": "2026-09-23T15:00:00Z",
+  "nodes": {
+    "B": {
+      "task_id": "B_D24_R_H20_H30_V1",
+      "revision": 1,
+      "host": "trial-303225685-trialrun-303225685-worker-0",
+      "thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+      "H": [
+        20,
+        30
+      ],
+      "method": "R",
+      "brief": {
+        "path": "tasks/B_D24_R_H20_H30_V1.md",
+        "sha256": "407cd7abdaa74bf562cc9ce124f7747d82c1d7ab3b5a12ce6e6a8522f1726cf6"
+      },
+      "planned_first_entries": 1000,
+      "maximum_additional_physical_attempts": 1100,
+      "maximum_corrected_retry_per_failed_source": 1,
+      "last_observed_node_attempts": 5687,
+      "node_cumulative_attempt_cap": 16000,
+      "max_wall_hours": 6,
+      "target_concurrency": 8,
+      "allowed_adaptations": "private host/UUID/PCI/NVIDIA535 library/runtime/output/lifecycle binding; frozen A science unchanged"
+    },
+    "C": {
+      "task_id": "C_D24_R_H40_H50_V1",
+      "revision": 1,
+      "host": "trial-303269581-trialrun-303269581-worker-0",
+      "thread_id": "01a0c793-10d2-7791-a250-fd65d88e1ccb",
+      "H": [
+        40,
+        50
+      ],
+      "method": "R",
+      "brief": {
+        "path": "tasks/C_D24_R_H40_H50_V1.md",
+        "sha256": "0f0345da976e881f43495f030e1d949d35afcf5bfa327a728f56e2c2f3ee475b"
+      },
+      "planned_first_entries": 1000,
+      "maximum_additional_physical_attempts": 1100,
+      "maximum_corrected_retry_per_failed_source": 1,
+      "last_observed_node_attempts": 1013,
+      "node_cumulative_attempt_cap": 2400,
+      "max_wall_hours": 6,
+      "target_concurrency": 8,
+      "allowed_adaptations": "private host/UUID/PCI/NVIDIA535 library/runtime/output/lifecycle binding; frozen A science unchanged"
+    }
+  }
+}

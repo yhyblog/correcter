@@ -1,0 +1,1547 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:corrector-sim:interface:1",
+  "title": "corrector-sim-interface/1",
+  "$defs": {
+    "ref": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "format": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "format"
+      ],
+      "additionalProperties": false
+    },
+    "missing_reasons": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "identity": {
+      "type": "object",
+      "properties": {
+        "campaign_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "task_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "run_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "node_role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hostname": {
+          "type": "string",
+          "minLength": 1
+        },
+        "wave_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "shard_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "release_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "driver": {
+          "type": "string",
+          "minLength": 1
+        },
+        "runtime": {
+          "type": "string",
+          "minLength": 1
+        },
+        "gpu_model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "code_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "config_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "data_manifest_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "model_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "campaign_id",
+        "task_id",
+        "run_id",
+        "node_role",
+        "hostname",
+        "wave_id",
+        "shard_id",
+        "release_id",
+        "driver",
+        "runtime",
+        "gpu_model",
+        "code_sha256",
+        "config_sha256",
+        "data_manifest_sha256",
+        "model_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "method": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "checkpoint": {
+          "$ref": "#/$defs/ref"
+        },
+        "training_lineage_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "version",
+        "checkpoint",
+        "training_lineage_ref"
+      ],
+      "additionalProperties": false
+    },
+    "environment": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "task": {
+          "type": "string",
+          "minLength": 1
+        },
+        "instruction": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "name",
+        "version",
+        "task",
+        "instruction"
+      ],
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "parent_episode_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "initial_state_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "branch_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "suffix_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "parent_episode_id",
+        "source_id",
+        "initial_state_id",
+        "branch_id",
+        "suffix_id"
+      ],
+      "additionalProperties": false
+    },
+    "hardware": {
+      "type": "object",
+      "properties": {
+        "gpu_index": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "gpu_uuid": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "worker_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "concurrency": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "precision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "batch_size": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "warmup": {
+          "type": "boolean"
+        },
+        "clock_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "gpu_index",
+        "gpu_uuid",
+        "worker_id",
+        "concurrency",
+        "precision",
+        "batch_size",
+        "warmup",
+        "clock_id"
+      ],
+      "additionalProperties": false
+    },
+    "resources": {
+      "type": "object",
+      "properties": {
+        "simulator_attempts": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "env_steps": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "vla_sampling_calls": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "flow_forward_calls": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "vla_backward_calls": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "critic_forward_calls": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "critic_backward_calls": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "monitor_calls": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "optimizer_updates": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "simulator_attempts",
+        "env_steps",
+        "vla_sampling_calls",
+        "flow_forward_calls",
+        "vla_backward_calls",
+        "critic_forward_calls",
+        "critic_backward_calls",
+        "monitor_calls",
+        "optimizer_updates"
+      ],
+      "additionalProperties": false
+    },
+    "context": {
+      "type": "object",
+      "properties": {
+        "interface_version": {
+          "const": "corrector-sim-interface/1"
+        },
+        "synthetic": {
+          "type": "boolean"
+        },
+        "missing_reasons": {
+          "$ref": "#/$defs/missing_reasons"
+        },
+        "record_type": {
+          "const": "context"
+        },
+        "identity": {
+          "$ref": "#/$defs/identity"
+        },
+        "method": {
+          "$ref": "#/$defs/method"
+        },
+        "environment": {
+          "$ref": "#/$defs/environment"
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        },
+        "episode_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "split": {
+          "enum": [
+            "train",
+            "development",
+            "calibration",
+            "test",
+            "historical"
+          ]
+        },
+        "H": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "C": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "remaining_budget": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "environment_step": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "plan_age": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "observation_history_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "proprioception": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "a0_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "noise_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "normalizer_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "generated_length": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "observation_max_step": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "historical_label_commitment": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "interface_version",
+        "synthetic",
+        "missing_reasons",
+        "record_type",
+        "identity",
+        "method",
+        "environment",
+        "source",
+        "episode_id",
+        "split",
+        "H",
+        "C",
+        "remaining_budget",
+        "environment_step",
+        "plan_age",
+        "observation_history_ref",
+        "proprioception",
+        "a0_ref",
+        "noise_ref",
+        "normalizer_ref",
+        "generated_length",
+        "observation_max_step",
+        "historical_label_commitment"
+      ],
+      "additionalProperties": false
+    },
+    "transition": {
+      "type": "object",
+      "properties": {
+        "interface_version": {
+          "const": "corrector-sim-interface/1"
+        },
+        "synthetic": {
+          "type": "boolean"
+        },
+        "missing_reasons": {
+          "$ref": "#/$defs/missing_reasons"
+        },
+        "record_type": {
+          "const": "transition"
+        },
+        "identity": {
+          "$ref": "#/$defs/identity"
+        },
+        "dataset_revision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "split": {
+          "enum": [
+            "train",
+            "development",
+            "calibration",
+            "test",
+            "historical"
+          ]
+        },
+        "environment": {
+          "$ref": "#/$defs/environment"
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        },
+        "collection_policy": {
+          "$ref": "#/$defs/method"
+        },
+        "seed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "step": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "H": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "generated_length": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "executed_prefix_length": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "observation_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "proprioception": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "next_observation_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "next_step": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "raw_actions": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 1
+              },
+              "minItems": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "normalized_actions": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 1
+              },
+              "minItems": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "normalizer_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "generated_chunk_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "executed_actions_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "rewards": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "successes": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "boolean"
+              },
+              "minItems": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "first_success_step": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "terminated": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "truncated": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "cut_reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "anchor_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "a0_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "candidate_family": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "raw_alias_group": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "suffix_seed": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "terminal_success": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "data_origin": {
+          "enum": [
+            "new",
+            "historical_train",
+            "historical_development",
+            "historical_revealed_held"
+          ]
+        }
+      },
+      "required": [
+        "interface_version",
+        "synthetic",
+        "missing_reasons",
+        "record_type",
+        "identity",
+        "dataset_revision",
+        "split",
+        "environment",
+        "source",
+        "collection_policy",
+        "seed",
+        "step",
+        "H",
+        "generated_length",
+        "executed_prefix_length",
+        "observation_ref",
+        "proprioception",
+        "next_observation_ref",
+        "next_step",
+        "raw_actions",
+        "normalized_actions",
+        "normalizer_ref",
+        "generated_chunk_ref",
+        "executed_actions_ref",
+        "rewards",
+        "successes",
+        "first_success_step",
+        "terminated",
+        "truncated",
+        "cut_reason",
+        "anchor_id",
+        "a0_ref",
+        "candidate_family",
+        "raw_alias_group",
+        "suffix_seed",
+        "terminal_success",
+        "data_origin"
+      ],
+      "additionalProperties": false
+    },
+    "episode": {
+      "type": "object",
+      "properties": {
+        "interface_version": {
+          "const": "corrector-sim-interface/1"
+        },
+        "synthetic": {
+          "type": "boolean"
+        },
+        "missing_reasons": {
+          "$ref": "#/$defs/missing_reasons"
+        },
+        "record_type": {
+          "const": "episode"
+        },
+        "identity": {
+          "$ref": "#/$defs/identity"
+        },
+        "episode_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "method": {
+          "$ref": "#/$defs/method"
+        },
+        "environment": {
+          "$ref": "#/$defs/environment"
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        },
+        "train_seed": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "generation_seed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "suffix_seed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "H": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "C": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "split": {
+          "enum": [
+            "train",
+            "development",
+            "calibration",
+            "test",
+            "historical"
+          ]
+        },
+        "success": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "first_success_step": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "termination_reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "technical_status": {
+          "enum": [
+            "complete",
+            "failed",
+            "incomplete"
+          ]
+        },
+        "executed_steps": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "intervened": {
+          "type": "boolean"
+        },
+        "cut_step": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "prefix_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "entry_generation_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "suffix_run_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reused_from": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        },
+        "cost_event_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "deployment_time_is_reconstructed_estimate": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "interface_version",
+        "synthetic",
+        "missing_reasons",
+        "record_type",
+        "identity",
+        "episode_id",
+        "method",
+        "environment",
+        "source",
+        "train_seed",
+        "generation_seed",
+        "suffix_seed",
+        "H",
+        "C",
+        "split",
+        "success",
+        "first_success_step",
+        "termination_reason",
+        "technical_status",
+        "executed_steps",
+        "intervened",
+        "cut_step",
+        "prefix_id",
+        "entry_generation_id",
+        "suffix_run_id",
+        "reused_from",
+        "cost_event_refs",
+        "deployment_time_is_reconstructed_estimate"
+      ],
+      "additionalProperties": false
+    },
+    "event": {
+      "type": "object",
+      "properties": {
+        "interface_version": {
+          "const": "corrector-sim-interface/1"
+        },
+        "synthetic": {
+          "type": "boolean"
+        },
+        "missing_reasons": {
+          "$ref": "#/$defs/missing_reasons"
+        },
+        "record_type": {
+          "const": "event"
+        },
+        "identity": {
+          "$ref": "#/$defs/identity"
+        },
+        "episode_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "event_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "event_type": {
+          "enum": [
+            "natural_plan",
+            "intervention_decision",
+            "anchor_sample",
+            "guided_sample",
+            "flow_forward",
+            "vla_backward",
+            "critic_forward",
+            "critic_backward",
+            "monitor",
+            "action_transform",
+            "env_step",
+            "restore",
+            "audit_io"
+          ]
+        },
+        "decision_index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sampling_index": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "environment_step": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "phase": {
+          "enum": [
+            "entered",
+            "returned",
+            "failed"
+          ]
+        },
+        "wall_start": {
+          "type": "number"
+        },
+        "wall_end": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "device_elapsed": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "timing_parent_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "is_deployment_required_for_methods": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "is_research_only": {
+          "type": "boolean"
+        },
+        "hardware": {
+          "$ref": "#/$defs/hardware"
+        },
+        "resource_units": {
+          "$ref": "#/$defs/resources"
+        },
+        "measurement_scope": {
+          "enum": [
+            "operation",
+            "count_block",
+            "container"
+          ]
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "error": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "interface_version",
+        "synthetic",
+        "missing_reasons",
+        "record_type",
+        "identity",
+        "episode_id",
+        "event_id",
+        "event_type",
+        "decision_index",
+        "sampling_index",
+        "environment_step",
+        "phase",
+        "wall_start",
+        "wall_end",
+        "device_elapsed",
+        "timing_parent_id",
+        "is_deployment_required_for_methods",
+        "is_research_only",
+        "hardware",
+        "resource_units",
+        "measurement_scope",
+        "count",
+        "error"
+      ],
+      "additionalProperties": false
+    },
+    "chunk": {
+      "type": "object",
+      "properties": {
+        "interface_version": {
+          "const": "corrector-sim-interface/1"
+        },
+        "synthetic": {
+          "type": "boolean"
+        },
+        "missing_reasons": {
+          "$ref": "#/$defs/missing_reasons"
+        },
+        "record_type": {
+          "const": "chunk"
+        },
+        "identity": {
+          "$ref": "#/$defs/identity"
+        },
+        "episode_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "chunk_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "plan_H": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "C": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "generated_length": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "actual_executed_length": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "start_step": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "end_step": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "termination_reason": {
+          "enum": [
+            "natural_exhaustion",
+            "alarm",
+            "success",
+            "environment_terminated",
+            "environment_truncated",
+            "budget",
+            "technical_failure",
+            "intervention_complete"
+          ]
+        },
+        "unguided_plan_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "final_raw_plan_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "executed_actions_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "noise_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "normalizer_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "interface_version",
+        "synthetic",
+        "missing_reasons",
+        "record_type",
+        "identity",
+        "episode_id",
+        "chunk_id",
+        "plan_H",
+        "C",
+        "generated_length",
+        "actual_executed_length",
+        "start_step",
+        "end_step",
+        "termination_reason",
+        "unguided_plan_ref",
+        "final_raw_plan_ref",
+        "executed_actions_ref",
+        "noise_ref",
+        "normalizer_ref"
+      ],
+      "additionalProperties": false
+    },
+    "view_manifest": {
+      "type": "object",
+      "properties": {
+        "interface_version": {
+          "const": "corrector-sim-interface/1"
+        },
+        "synthetic": {
+          "type": "boolean"
+        },
+        "missing_reasons": {
+          "$ref": "#/$defs/missing_reasons"
+        },
+        "record_type": {
+          "const": "view_manifest"
+        },
+        "method": {
+          "$ref": "#/$defs/method"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "raw_data_manifest": {
+          "$ref": "#/$defs/ref"
+        },
+        "selection_rule": {
+          "type": "string",
+          "minLength": 1
+        },
+        "parent_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "transition_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "target": {
+          "type": "string",
+          "minLength": 1
+        },
+        "discount": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "action_window": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "actual_execution_length_semantics": {
+          "type": "string",
+          "minLength": 1
+        },
+        "feature_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "normalizer_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "historical_initialization": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "training_lineage_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "split_unit": {
+          "const": "parent_episode"
+        }
+      },
+      "required": [
+        "interface_version",
+        "synthetic",
+        "missing_reasons",
+        "record_type",
+        "method",
+        "version",
+        "raw_data_manifest",
+        "selection_rule",
+        "parent_count",
+        "source_count",
+        "transition_count",
+        "target",
+        "discount",
+        "action_window",
+        "actual_execution_length_semantics",
+        "feature_version",
+        "normalizer_ref",
+        "historical_initialization",
+        "training_lineage_ref",
+        "split_unit"
+      ],
+      "additionalProperties": false
+    },
+    "shard_manifest": {
+      "type": "object",
+      "properties": {
+        "interface_version": {
+          "const": "corrector-sim-interface/1"
+        },
+        "synthetic": {
+          "type": "boolean"
+        },
+        "missing_reasons": {
+          "$ref": "#/$defs/missing_reasons"
+        },
+        "record_type": {
+          "const": "shard_manifest"
+        },
+        "identity": {
+          "$ref": "#/$defs/identity"
+        },
+        "global_manifest_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "parent_episode_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "initial_state_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "environment_task": {
+                "type": "string",
+                "minLength": 1
+              },
+              "seed": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "split": {
+                "type": "string",
+                "minLength": 1
+              },
+              "host": {
+                "type": "string",
+                "minLength": 1
+              },
+              "node_role": {
+                "type": "string",
+                "minLength": 1
+              },
+              "Hs": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "minItems": 1
+              },
+              "methods": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1
+              }
+            },
+            "required": [
+              "parent_episode_id",
+              "source_id",
+              "initial_state_id",
+              "environment_task",
+              "seed",
+              "split",
+              "host",
+              "node_role",
+              "Hs",
+              "methods"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        },
+        "assignment_rule": {
+          "const": "explicit_analysis_manifest"
+        }
+      },
+      "required": [
+        "interface_version",
+        "synthetic",
+        "missing_reasons",
+        "record_type",
+        "identity",
+        "global_manifest_sha256",
+        "sources",
+        "assignment_rule"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/context"
+    },
+    {
+      "$ref": "#/$defs/transition"
+    },
+    {
+      "$ref": "#/$defs/episode"
+    },
+    {
+      "$ref": "#/$defs/event"
+    },
+    {
+      "$ref": "#/$defs/chunk"
+    },
+    {
+      "$ref": "#/$defs/view_manifest"
+    },
+    {
+      "$ref": "#/$defs/shard_manifest"
+    }
+  ]
+}

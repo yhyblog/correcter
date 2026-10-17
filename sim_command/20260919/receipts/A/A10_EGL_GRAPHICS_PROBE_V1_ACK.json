@@ -1,0 +1,101 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A10_EGL_GRAPHICS_PROBE_V1",
+  "task_revision": 1,
+  "node_role": "A",
+  "hostname": "trial-303224955-trialrun-303224955-worker-0",
+  "executor_session_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+  "started_at_utc": "2026-09-19T17:55:10.995723+00:00",
+  "control_revision": 10,
+  "release_id": "P10_A_EGL_GRAPHICS_PROBE_V1",
+  "run_id": "A10_EGL_GRAPHICS_PROBE_V1_r1_A_wave02",
+  "wave_id": "corrector-sim-20260919-A-graphics-probe-wave02",
+  "shard_id": "A-EGL-static64-device17198167-once",
+  "allowed_scope": [
+    "one released graphics-only attempt; fixed physical GPU; integrated A-only lifecycle; no VLA/MT1/reset/physics/training/retry/deletion"
+  ],
+  "inputs_checked": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/CONTROL.json",
+      "sha256": "dba6220e3b36e28b4ef217fc2159ed0905faff53af9db3b18734be22de01df4c",
+      "frozen_copy": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_GRAPHICS_PROBE_V1_r1/inputs/CONTROL.json"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/TASK_BOARD.json",
+      "sha256": "a3540149aa88f1ad82436040e41d17b9430cc2c589ac46ef93cd9a3656aa8c01",
+      "frozen_copy": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_GRAPHICS_PROBE_V1_r1/inputs/TASK_BOARD.json"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/tasks/A10_EGL_GRAPHICS_PROBE_V1.md",
+      "sha256": "a66489ddeb6d7c8c940037667bcf5841fecea90c814ecedd217c30b5042ae249",
+      "frozen_copy": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_GRAPHICS_PROBE_V1_r1/inputs/tasks/A10_EGL_GRAPHICS_PROBE_V1.md"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_EGL_GRAPHICS_PROBE_V1.json",
+      "sha256": "f7cd7b8799cc237794a5a1d8ac2e745866553be4e38e08084eb54dc6c27ad995",
+      "frozen_copy": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_GRAPHICS_PROBE_V1_r1/inputs/releases/P10_A_EGL_GRAPHICS_PROBE_V1.json"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/REPORT_CONTRACT.md",
+      "sha256": "d14bdfecf3b669946ddad77e37650ce5786253e071e45c6c6900c38cf11aac16",
+      "frozen_copy": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_GRAPHICS_PROBE_V1_r1/inputs/contracts/REPORT_CONTRACT.md"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_EGL_CPU_REPAIR_V1_RESULT.json",
+      "sha256": "aa2a258191fb86216d00d98e9e55f63c0e904927e0158c8680a318202ad7c16a",
+      "frozen_copy": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_GRAPHICS_PROBE_V1_r1/inputs/receipts/A/A10_EGL_CPU_REPAIR_V1_RESULT.json"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_NATIVE_PREFLIGHT_V1_CLOSED.json",
+      "sha256": "7574117b24d27f7fc99b3212238d5027f545db8f8077dd77bae0732f4ef2ff02",
+      "frozen_copy": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_GRAPHICS_PROBE_V1_r1/inputs/releases/P10_A_NATIVE_PREFLIGHT_V1_CLOSED.json"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CPU_REPAIR_V1/proposal/PROPOSAL.json",
+      "sha256": "f5ea6f220c760465ab4ee93e459bb3e63f508d2d51a22e5e477ea375446f319b"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CPU_REPAIR_V1/BUNDLE_MANIFEST.json",
+      "sha256": "40040cd0e6134d715ffc025156b0e7118a9f35e7d01bf6e7a36700b1a1ee6639"
+    }
+  ],
+  "resource_caps": {
+    "graphics_probe_attempts": 1,
+    "egl_device_enumerations": 1,
+    "egl_device_string_queries": 48,
+    "probe_explicit_egl_get_proc_address_calls": 4,
+    "egl_platform_display_calls": 1,
+    "egl_initialize_calls": 1,
+    "egl_choose_config_calls": 1,
+    "egl_bind_api_calls": 1,
+    "graphics_context_creations": 1,
+    "egl_make_current_calls": 2,
+    "egl_query_string_calls": 2,
+    "probe_explicit_gl_string_queries": 3,
+    "static_scene_constructions": 1,
+    "static_scene_data_constructions": 1,
+    "explicit_mj_forward_calls": 1,
+    "mujoco_render_context_creations": 1,
+    "mujoco_render_context_frees": 1,
+    "mujoco_scene_updates": 1,
+    "render_calls": 1,
+    "rgb_readback_calls": 1,
+    "egl_destroy_context_calls": 1,
+    "egl_terminate_calls": 1,
+    "egl_release_thread_calls": 1,
+    "model_initializations": 0,
+    "model_gpu_inference_calls": 0,
+    "vla_sampling_calls": 0,
+    "flow_forward_calls": 0,
+    "simulator_attempts": 0,
+    "metaworld_environment_instances": 0,
+    "environment_reset_calls": 0,
+    "physics_steps": 0,
+    "env_steps": 0,
+    "completed_rollouts": 0,
+    "optimizer_updates": 0
+  },
+  "release_or_run_claim_existed_before_ACK": false,
+  "input_check_policy": "Actual frozen launcher performs complete SHA and device checks; no independent CPU checker",
+  "observer_scope": "CPU process/RSS and read-only NVML samples only; no extra graphics calls"
+}

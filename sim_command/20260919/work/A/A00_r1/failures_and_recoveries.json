@@ -1,0 +1,22 @@
+[
+  {
+    "command": "/usr/bin/python3 -B /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A00_r1/probe_node.py",
+    "exit_code": 1,
+    "error_class": "CONTROL_revision_guard",
+    "detail": "CONTROL advanced from1 to2 while A00 revision1 and zero-compute scope remained unchanged.",
+    "recovery": "Read CONTROL/TASK_BOARD/A00; revision2 only fills B host/session; updated own audit helper accepted revisions and retried read-only probe successfully."
+  },
+  {
+    "command": "git -C /mnt/bn/arnold-recommend/yaohaoyang/Corrector rev-parse HEAD",
+    "exit_code": 128,
+    "error_class": "not_a_git_repository",
+    "recovery": "Recorded filesystem/source-SHA identities; no git mutation or repository recreation."
+  },
+  {
+    "command": "python3 -B /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A00_r1/publish_A00.py",
+    "exit_code": 1,
+    "error_class": "CONTROL_revision_guard",
+    "detail": "CONTROL advanced to3 and released P00/A10/B10 zero-compute preparation; A00 unchanged.",
+    "recovery": "Re-read CONTROL; own helper now validates unchanged A00 task SHA, owner, scope, stop flag and zero compute limits on each batch. Retried publication."
+  }
+]

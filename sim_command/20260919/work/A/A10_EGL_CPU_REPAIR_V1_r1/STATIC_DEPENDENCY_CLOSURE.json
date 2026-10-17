@@ -1,0 +1,455 @@
+{
+  "method": "readelf only; no dlopen/ldd/EGL execution",
+  "root_libraries": [
+    "Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libEGL.so.1",
+    "Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libEGL_nvidia.so.535.161.08",
+    "Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libGL.so.1",
+    "Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libGLX.so.0",
+    "Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libGLdispatch.so.0",
+    "Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libnvidia-eglcore.so.535.161.08",
+    "Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libnvidia-glsi.so.535.161.08",
+    "Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libnvidia-glvkspirv.so.535.161.08"
+  ],
+  "search_roots": [
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib",
+    "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/lib",
+    "/usr/lib/x86_64-linux-gnu",
+    "/lib/x86_64-linux-gnu"
+  ],
+  "closure": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libEGL.so.1",
+      "sha256": "1eddeaa92166dc09ed083de8eee9641c2fa3a8fbd44fb66dfaf6e6a23024e7f3",
+      "size_bytes": 93424,
+      "needed": [
+        {
+          "soname": "libGLdispatch.so.0",
+          "static_candidate": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libGLdispatch.so.0"
+        },
+        {
+          "soname": "libdl.so.2",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libdl.so.2"
+        },
+        {
+          "soname": "libc.so.6",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+        }
+      ],
+      "dynamic": [
+        "0x0000000000000001 (NEEDED)             Shared library: [libGLdispatch.so.0]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libdl.so.2]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]",
+        "0x000000000000000e (SONAME)             Library soname: [libEGL.so.1]",
+        "0x000000000000000f (RPATH)              Library rpath: [$ORIGIN/.:$ORIGIN/../GLdispatch]"
+      ]
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libEGL_nvidia.so.535.161.08",
+      "sha256": "671e5273785288bc412abbc8ae1fa90f336933a85c5ea339b980c3371744d1cb",
+      "size_bytes": 1337472,
+      "needed": [
+        {
+          "soname": "libpthread.so.0",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libpthread.so.0"
+        },
+        {
+          "soname": "librt.so.1",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/librt.so.1"
+        },
+        {
+          "soname": "libm.so.6",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libm.so.6"
+        },
+        {
+          "soname": "libc.so.6",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+        },
+        {
+          "soname": "libdl.so.2",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libdl.so.2"
+        },
+        {
+          "soname": "libnvidia-glsi.so.535.161.08",
+          "static_candidate": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libnvidia-glsi.so.535.161.08"
+        }
+      ],
+      "dynamic": [
+        "0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]",
+        "0x0000000000000001 (NEEDED)             Shared library: [librt.so.1]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libdl.so.2]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libnvidia-glsi.so.535.161.08]",
+        "0x000000000000000e (SONAME)             Library soname: [libEGL_nvidia.so.0]"
+      ]
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libGL.so.1",
+      "sha256": "6b7b1f6e5c5f949a7e5e2f49ffde1322d93469c9994d0c5ebfeaff93808bb415",
+      "size_bytes": 727544,
+      "needed": [
+        {
+          "soname": "libGLdispatch.so.0",
+          "static_candidate": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libGLdispatch.so.0"
+        },
+        {
+          "soname": "libGLX.so.0",
+          "static_candidate": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libGLX.so.0"
+        },
+        {
+          "soname": "libc.so.6",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+        }
+      ],
+      "dynamic": [
+        "0x0000000000000001 (NEEDED)             Shared library: [libGLdispatch.so.0]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libGLX.so.0]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]",
+        "0x000000000000000e (SONAME)             Library soname: [libGL.so.1]",
+        "0x000000000000000f (RPATH)              Library rpath: [$ORIGIN/.:$ORIGIN/../GLdispatch:$ORIGIN/../GLX]"
+      ]
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libGLX.so.0",
+      "sha256": "b751c6d86c6effb9f2a973e6eb720ab13e9f1f8b540817a63f5796fd4c8fd129",
+      "size_bytes": 348376,
+      "needed": [
+        {
+          "soname": "libGLdispatch.so.0",
+          "static_candidate": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libGLdispatch.so.0"
+        },
+        {
+          "soname": "libdl.so.2",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libdl.so.2"
+        },
+        {
+          "soname": "libX11.so.6",
+          "static_candidate": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/lib/libX11.so.6.4.0"
+        },
+        {
+          "soname": "libc.so.6",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+        }
+      ],
+      "dynamic": [
+        "0x0000000000000001 (NEEDED)             Shared library: [libGLdispatch.so.0]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libdl.so.2]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libX11.so.6]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]",
+        "0x000000000000000e (SONAME)             Library soname: [libGLX.so.0]",
+        "0x000000000000000f (RPATH)              Library rpath: [$ORIGIN/.:$ORIGIN/../GLdispatch]"
+      ]
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libGLdispatch.so.0",
+      "sha256": "83c7e928323191c72a5e545c860c5374d0e5f7d6c526718ac03a1cc9d2a43d1f",
+      "size_bytes": 1030840,
+      "needed": [
+        {
+          "soname": "libdl.so.2",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libdl.so.2"
+        },
+        {
+          "soname": "libc.so.6",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+        }
+      ],
+      "dynamic": [
+        "0x0000000000000001 (NEEDED)             Shared library: [libdl.so.2]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]",
+        "0x000000000000000e (SONAME)             Library soname: [libGLdispatch.so.0]",
+        "0x000000000000000f (RPATH)              Library rpath: [$ORIGIN/.]"
+      ]
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libnvidia-eglcore.so.535.161.08",
+      "sha256": "699ff9083ba37c5cd6c163d4cd1a9a14bf6f7d8d3cac7339603e53bf39cee724",
+      "size_bytes": 43907464,
+      "needed": [
+        {
+          "soname": "libm.so.6",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libm.so.6"
+        },
+        {
+          "soname": "libc.so.6",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+        },
+        {
+          "soname": "ld-linux-x86-64.so.2",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2"
+        },
+        {
+          "soname": "libdl.so.2",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libdl.so.2"
+        },
+        {
+          "soname": "libnvidia-glsi.so.535.161.08",
+          "static_candidate": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libnvidia-glsi.so.535.161.08"
+        }
+      ],
+      "dynamic": [
+        "0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]",
+        "0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libdl.so.2]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libnvidia-glsi.so.535.161.08]",
+        "0x000000000000000e (SONAME)             Library soname: [libnvidia-eglcore.so.535.161.08]"
+      ]
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libnvidia-glsi.so.535.161.08",
+      "sha256": "65a38a514d2ab8f960a817ecc0ecb655c28397339087de5e35fe435c2514e8df",
+      "size_bytes": 656472,
+      "needed": [
+        {
+          "soname": "libpthread.so.0",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libpthread.so.0"
+        },
+        {
+          "soname": "librt.so.1",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/librt.so.1"
+        },
+        {
+          "soname": "libc.so.6",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+        },
+        {
+          "soname": "libdl.so.2",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libdl.so.2"
+        }
+      ],
+      "dynamic": [
+        "0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]",
+        "0x0000000000000001 (NEEDED)             Shared library: [librt.so.1]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libdl.so.2]",
+        "0x000000000000000e (SONAME)             Library soname: [libnvidia-glsi.so.535.161.08]"
+      ]
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CPU_REPAIR_V1_r1/isolation/lib/libnvidia-glvkspirv.so.535.161.08",
+      "sha256": "dcad2e2952856817e636611ba821e807e2634328061775ef5078d98e991bc8f1",
+      "size_bytes": 40774960,
+      "needed": [
+        {
+          "soname": "libpthread.so.0",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libpthread.so.0"
+        },
+        {
+          "soname": "librt.so.1",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/librt.so.1"
+        },
+        {
+          "soname": "libdl.so.2",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libdl.so.2"
+        },
+        {
+          "soname": "libm.so.6",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libm.so.6"
+        },
+        {
+          "soname": "libc.so.6",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+        },
+        {
+          "soname": "ld-linux-x86-64.so.2",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2"
+        }
+      ],
+      "dynamic": [
+        "0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]",
+        "0x0000000000000001 (NEEDED)             Shared library: [librt.so.1]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libdl.so.2]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]",
+        "0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]",
+        "0x000000000000000e (SONAME)             Library soname: [libnvidia-glvkspirv.so.535.161.08]"
+      ]
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libdl.so.2",
+      "sha256": "d71263682766154c159a63504fec543e3ea64a932e5f30d5f50758fab0405fa2",
+      "size_bytes": 14480,
+      "needed": [
+        {
+          "soname": "libc.so.6",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+        }
+      ],
+      "dynamic": [
+        "0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]",
+        "0x000000000000000e (SONAME)             Library soname: [libdl.so.2]"
+      ]
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+      "sha256": "88024463c275711c29f6ac2920a5d3174349d8802720e2df1656637c18d8efba",
+      "size_bytes": 1922136,
+      "needed": [
+        {
+          "soname": "ld-linux-x86-64.so.2",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2"
+        }
+      ],
+      "dynamic": [
+        "0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]",
+        "0x000000000000000e (SONAME)             Library soname: [libc.so.6]"
+      ]
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libpthread.so.0",
+      "sha256": "df8e371a04bcf4ea2d455277ecc9cd47fc9b4c58ed27a7f4e6c8343122a4d270",
+      "size_bytes": 14480,
+      "needed": [
+        {
+          "soname": "libc.so.6",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+        }
+      ],
+      "dynamic": [
+        "0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]",
+        "0x000000000000000e (SONAME)             Library soname: [libpthread.so.0]"
+      ]
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/librt.so.1",
+      "sha256": "6445c275f2477ebf619b1e4ec6fe5a0e460b9745e360ef9b671cb5a2f9f362ae",
+      "size_bytes": 14640,
+      "needed": [
+        {
+          "soname": "libc.so.6",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+        }
+      ],
+      "dynamic": [
+        "0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]",
+        "0x000000000000000e (SONAME)             Library soname: [librt.so.1]"
+      ]
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libm.so.6",
+      "sha256": "958fd4988943ab6713d04d4c7de8e468e358c5671db2acf9a7b025b465d10910",
+      "size_bytes": 907784,
+      "needed": [
+        {
+          "soname": "libc.so.6",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+        },
+        {
+          "soname": "ld-linux-x86-64.so.2",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2"
+        }
+      ],
+      "dynamic": [
+        "0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]",
+        "0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]",
+        "0x000000000000000e (SONAME)             Library soname: [libm.so.6]"
+      ]
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/lib/libX11.so.6.4.0",
+      "sha256": "cbcaa0293ddf2513e6933a2090cd2f079ae075892e7ea442e804fd5032a43d5a",
+      "size_bytes": 1472000,
+      "needed": [
+        {
+          "soname": "libpthread.so.0",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libpthread.so.0"
+        },
+        {
+          "soname": "libxcb.so.1",
+          "static_candidate": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/lib/libxcb.so.1.1.0"
+        },
+        {
+          "soname": "libdl.so.2",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libdl.so.2"
+        },
+        {
+          "soname": "libc.so.6",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+        }
+      ],
+      "dynamic": [
+        "0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libxcb.so.1]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libdl.so.2]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]",
+        "0x000000000000000e (SONAME)             Library soname: [libX11.so.6]",
+        "0x000000000000000f (RPATH)              Library rpath: [$ORIGIN/.]"
+      ]
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+      "sha256": "6d8337d3d1648ed3f42eccdc90044505bd19b042c496d05c4c4cd3dfdddd9b24",
+      "size_bytes": 210904,
+      "needed": [],
+      "dynamic": [
+        "0x000000000000000e (SONAME)             Library soname: [ld-linux-x86-64.so.2]"
+      ]
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/lib/libxcb.so.1.1.0",
+      "sha256": "fadbc18909741294d01b1622a00ca935fa5dc344b3b3e1465d632e01215dce5e",
+      "size_bytes": 228624,
+      "needed": [
+        {
+          "soname": "libXau.so.6",
+          "static_candidate": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/lib/libXau.so.6.0.0"
+        },
+        {
+          "soname": "libXdmcp.so.6",
+          "static_candidate": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/lib/libXdmcp.so.6.0.0"
+        },
+        {
+          "soname": "libc.so.6",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+        }
+      ],
+      "dynamic": [
+        "0x0000000000000001 (NEEDED)             Shared library: [libXau.so.6]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libXdmcp.so.6]",
+        "0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]",
+        "0x000000000000000e (SONAME)             Library soname: [libxcb.so.1]",
+        "0x000000000000000f (RPATH)              Library rpath: [$ORIGIN/.]"
+      ]
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/lib/libXau.so.6.0.0",
+      "sha256": "3215cdb2f94e1cf8518bec6ca225e8c8196b8f3cf686c48e3baa5239dcf805b1",
+      "size_bytes": 17144,
+      "needed": [
+        {
+          "soname": "libc.so.6",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+        }
+      ],
+      "dynamic": [
+        "0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]",
+        "0x000000000000000e (SONAME)             Library soname: [libXau.so.6]",
+        "0x000000000000000f (RPATH)              Library rpath: [$ORIGIN/.]"
+      ]
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/lib/libXdmcp.so.6.0.0",
+      "sha256": "eb02389b91538cd24b21edb970ee25604dc32230f2d525b0d27983d772ff3ddb",
+      "size_bytes": 30144,
+      "needed": [
+        {
+          "soname": "libc.so.6",
+          "static_candidate": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+        }
+      ],
+      "dynamic": [
+        "0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]",
+        "0x000000000000000e (SONAME)             Library soname: [libXdmcp.so.6]",
+        "0x000000000000000f (RPATH)              Library rpath: [$ORIGIN/.]"
+      ]
+    }
+  ],
+  "unresolved_DT_NEEDED": [],
+  "dynamic_shader_library_staged": true,
+  "optional_feature_libraries_not_required_by_scene": [
+    "libnvidia-rtcore.so.535.161.08 ray tracing",
+    "libnvidia-vulkan-producer.so Vulkan interop"
+  ],
+  "scope_limit": "Static ELF resolution candidates, not proof of loader behavior or device graphics support"
+}

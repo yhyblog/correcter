@@ -1,0 +1,498 @@
+{
+  "schema": "corrector_B_event_audit_v1",
+  "event_id": "B_720b05f54224e945fc8df00ea6e171c3",
+  "task_id": "B_D24_SPRINT_V1",
+  "run_id": "D24_LIBERO_REPAIR_r2",
+  "at_utc": "2026-09-21T16:20:15.168696+00:00",
+  "outcome": "audited_complete",
+  "scope": "failed batch audited; prior authorized continuation already admitted; not a claim that the science succeeded",
+  "event": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/outbox/B_720b05f54224e945fc8df00ea6e171c3.json",
+    "sha256": "05f15aea66af3461254f78930b591b99d81232694fe21cf8279dd4ffe61529ab"
+  },
+  "original_claim": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_LIBERO_REPAIR_r2/CLAIM.json",
+    "sha256": "535c7856f136b915e40acf2679f103d78295cce49e26f75c6810ae98ba16d09e"
+  },
+  "claim_sha_verified": true,
+  "terminal_result": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_LIBERO_REPAIR_r2/RESULT.json",
+    "sha256": "4a82594177d30a9f4070935b1e624a05aa9e6ffddd803e3b75c7f533a84a018d"
+  },
+  "original_exit_code": 1,
+  "original_outcome_preserved": "failed",
+  "failure_cause": "CONTROL.json ENOENT in old batch reader during authorization; same fault already repaired in the private recovery runner",
+  "error_summary": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_LIBERO_REPAIR_r2/supervisor.log",
+    "sha256": "d12ac32a491ec06f901426fd735b43baedafd577e892f98db33f1b9448b09797"
+  },
+  "drain": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_LIBERO_REPAIR_r2/DRAIN.json",
+    "sha256": "4a1552962a2d75fed2f361ec865bc13e19db95fe8d39e0689b404d0d249ae80e"
+  },
+  "original_supervisor_identity_exited": true,
+  "original_occupancy_handoff_reported_complete": true,
+  "original_jobs": [
+    {
+      "job_id": "pi05official_N_libero_object_r2",
+      "completed": 6,
+      "technical_failures": [
+        "D24_LIBERO_libero_object_t00_e06"
+      ],
+      "unknown": [],
+      "claimed_count": 7,
+      "processes": {
+        "PROCESS.json": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 476495,
+          "start_ticks": 92193031,
+          "session_id": 476495
+        },
+        "CLIENT_PROCESS.json": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 479303,
+          "start_ticks": 92195641,
+          "session_id": 476495
+        },
+        "SERVER_PROCESS.json": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 476499,
+          "start_ticks": 92193037,
+          "session_id": 476495
+        }
+      },
+      "all_recorded_process_identities_exited": true,
+      "episode_results": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/pi05official_N_libero_object_r2/episodes.jsonl",
+        "sha256": "59728a89a4383c81bcf3bc3e223aa2def9c76e8434286606a6a66733a36af78d"
+      },
+      "status": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/pi05official_N_libero_object_r2/status.json",
+        "sha256": "ebb58bd7531d04676baed6e7923035c1dbfb4ed060dd57b6c99be3cceee8cbb1"
+      }
+    },
+    {
+      "job_id": "pi05official_N_libero_goal_r2",
+      "completed": 6,
+      "technical_failures": [
+        "D24_LIBERO_libero_goal_t00_e06",
+        "D24_LIBERO_libero_goal_t00_e07"
+      ],
+      "unknown": [
+        "D24_LIBERO_libero_goal_t00_e08"
+      ],
+      "claimed_count": 9,
+      "processes": {
+        "PROCESS.json": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 476496,
+          "start_ticks": 92193032,
+          "session_id": 476496
+        },
+        "CLIENT_PROCESS.json": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 479307,
+          "start_ticks": 92195642,
+          "session_id": 476496
+        },
+        "SERVER_PROCESS.json": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 476503,
+          "start_ticks": 92193038,
+          "session_id": 476496
+        }
+      },
+      "all_recorded_process_identities_exited": true,
+      "episode_results": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/pi05official_N_libero_goal_r2/episodes.jsonl",
+        "sha256": "5ce8c5730fb85099f8341a1b22fe65ac4eeb0fb2205af51b430f7c29ce4b61a4"
+      },
+      "status": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/pi05official_N_libero_goal_r2/status.json",
+        "sha256": "41b3d8eaf4cf46dc3181dbe8dee252e2c0e2ec54f3b524810395005417d18698"
+      }
+    },
+    {
+      "job_id": "pi05official_N_libero_10_r2",
+      "completed": 3,
+      "technical_failures": [
+        "D24_LIBERO_libero_10_t00_e03",
+        "D24_LIBERO_libero_10_t00_e04"
+      ],
+      "unknown": [],
+      "claimed_count": 5,
+      "processes": {
+        "PROCESS.json": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 476497,
+          "start_ticks": 92193033,
+          "session_id": 476497
+        },
+        "CLIENT_PROCESS.json": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 479313,
+          "start_ticks": 92195643,
+          "session_id": 476497
+        },
+        "SERVER_PROCESS.json": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 476509,
+          "start_ticks": 92193040,
+          "session_id": 476497
+        }
+      },
+      "all_recorded_process_identities_exited": true,
+      "episode_results": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/pi05official_N_libero_10_r2/episodes.jsonl",
+        "sha256": "1aed58335180a89b9a7b61abf95bd928a2b15208b4499ee9799b2bc266b3bcbb"
+      },
+      "status": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/pi05official_N_libero_10_r2/status.json",
+        "sha256": "dec8ba6afeef7e558685469588015d7ff33d28f8a92f546e3ea9071e7eba7f98"
+      }
+    }
+  ],
+  "original_source_counts": {
+    "completed": 15,
+    "technical_failure": 5,
+    "unknown": 1,
+    "unstarted": 279
+  },
+  "unknown_disposition": "retained as unknown; no replay",
+  "technical_failure_disposition": "retained with success=null; excluded from the unstarted-only continuation",
+  "continuation": {
+    "run_id": "D24_LIBERO_UNSTARTED_r3",
+    "previously_admitted": true,
+    "episode_count": 279,
+    "eight_GPU_workers": 8,
+    "no_overlap_with_any_old_claim": true,
+    "additional_retries": 0,
+    "new_compute_launches_in_this_handler": 0,
+    "after_batches": [
+      "D24_N_CONTROL_REPAIR_r2",
+      "D24_XVLA_r2"
+    ]
+  },
+  "current_authorization": {
+    "queue_control_revision": 10,
+    "root_control_revision": 54,
+    "B_enabled": true,
+    "global_stop": false,
+    "stop_requested": false,
+    "effective_science": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/AUTHORIZATION_V1.json",
+      "sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80"
+    }
+  },
+  "stable_handoff": {
+    "at_utc": "2026-09-21T16:20:15.168696+00:00",
+    "observer_process": {
+      "hostname": "trial-303225685-trialrun-303225685-worker-0",
+      "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+      "pid": 452085,
+      "start_ticks": 91710679,
+      "session_id": 452085
+    },
+    "observer_alive": true,
+    "observer_heartbeat": {
+      "at_utc": "2026-09-21T16:20:09.674644+00:00",
+      "cycles": 403,
+      "event_states": {
+        "B_226aaaad83007274bf5ab893d5e6b0ac": "another event awaiting original-handler ACK",
+        "B_422445bd68021930284fe3fd62016937": "another event awaiting original-handler ACK",
+        "B_720b05f54224e945fc8df00ea6e171c3": "transport_accepted",
+        "B_99ff50dfc5242547a4f45ca077bc485b": "another event awaiting original-handler ACK",
+        "B_b19457ac2e48eb664d4cc3c842a4f42b": "another event awaiting original-handler ACK",
+        "B_d7421c534b86bcdc0a5f8337058fe7eb": "another event awaiting original-handler ACK",
+        "B_e23469d0140e993de8cdc5b045fd0c3e": "another event awaiting original-handler ACK"
+      },
+      "identity": {
+        "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+        "hostname": "trial-303225685-trialrun-303225685-worker-0",
+        "pid": 452085,
+        "session_id": 452085,
+        "start_ticks": 91710679
+      },
+      "original_turn": {
+        "completed_at": null,
+        "started_at": 1790007450,
+        "status": "inProgress",
+        "turn_id": "01a0c4c2-1c76-7e73-acc7-690f45d897b6"
+      },
+      "scientific_model_calls": 0,
+      "state": "supervising",
+      "wakeup_readiness": "original_thread_ACK_verified_offline_pending",
+      "writer_locked": true
+    },
+    "queues": [
+      {
+        "run_id": "D24_N_CONTROL_REPAIR_r2",
+        "process": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 481853,
+          "start_ticks": 92237773,
+          "session_id": 481853
+        },
+        "alive": true,
+        "claim": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_N_CONTROL_REPAIR_r2/CLAIM.json",
+          "sha256": "cde7a7e1014c761306fd46468e64d5da6eb794e99ac0216807354b2d805f7157"
+        },
+        "configuration": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/BASELINE_BATCH.json",
+          "sha256": "5fe5b705ed26845a7f6ce8b13b75c47b3c0fc4b6d92419ea77ba4acd6b1dc6c8"
+        },
+        "progress": {
+          "at_utc": "2026-09-21T16:20:14.504337+00:00",
+          "status": "running",
+          "active": [
+            "smol50k_N_control_r2_shard0",
+            "smol50k_N_control_r2_shard1",
+            "smol50k_N_control_r2_shard2",
+            "smol50k_N_control_r2_shard3",
+            "smol50k_N_control_r2_shard4",
+            "smol50k_N_control_r2_shard5",
+            "smol50k_N_control_r2_shard6",
+            "pi05official_N_libero_spatial_control_r2"
+          ],
+          "queued": 0,
+          "completed": 0,
+          "resolved": 0,
+          "auxiliary_gpus": []
+        },
+        "trigger": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_N_CONTROL_REPAIR_r2__D24_N_CONTROL_REPAIR_r2__1.json",
+          "sha256": "c74f718cc79543da79170880ce8fb60ed8f67ab5118daea18fc3548b2ee8fb4a"
+        },
+        "jobs": [
+          {
+            "job_id": "smol50k_N_control_r2_shard0",
+            "gpus": [
+              0
+            ],
+            "process": {
+              "hostname": "trial-303225685-trialrun-303225685-worker-0",
+              "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+              "pid": 482103,
+              "start_ticks": 92245868,
+              "session_id": 482103
+            },
+            "process_alive": true,
+            "status": "running",
+            "completed_episodes": 34,
+            "technical_failures": 0,
+            "progress_at_utc": "2026-09-21T16:19:47.731467+00:00"
+          },
+          {
+            "job_id": "smol50k_N_control_r2_shard1",
+            "gpus": [
+              1
+            ],
+            "process": {
+              "hostname": "trial-303225685-trialrun-303225685-worker-0",
+              "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+              "pid": 482107,
+              "start_ticks": 92245869,
+              "session_id": 482107
+            },
+            "process_alive": true,
+            "status": "running",
+            "completed_episodes": 32,
+            "technical_failures": 0,
+            "progress_at_utc": "2026-09-21T16:19:52.873764+00:00"
+          },
+          {
+            "job_id": "smol50k_N_control_r2_shard2",
+            "gpus": [
+              2
+            ],
+            "process": {
+              "hostname": "trial-303225685-trialrun-303225685-worker-0",
+              "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+              "pid": 482113,
+              "start_ticks": 92245871,
+              "session_id": 482113
+            },
+            "process_alive": true,
+            "status": "running",
+            "completed_episodes": 27,
+            "technical_failures": 0,
+            "progress_at_utc": "2026-09-21T16:19:57.543594+00:00"
+          },
+          {
+            "job_id": "smol50k_N_control_r2_shard3",
+            "gpus": [
+              3
+            ],
+            "process": {
+              "hostname": "trial-303225685-trialrun-303225685-worker-0",
+              "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+              "pid": 482118,
+              "start_ticks": 92245872,
+              "session_id": 482118
+            },
+            "process_alive": true,
+            "status": "running",
+            "completed_episodes": 29,
+            "technical_failures": 0,
+            "progress_at_utc": "2026-09-21T16:19:49.613196+00:00"
+          },
+          {
+            "job_id": "smol50k_N_control_r2_shard4",
+            "gpus": [
+              4
+            ],
+            "process": {
+              "hostname": "trial-303225685-trialrun-303225685-worker-0",
+              "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+              "pid": 482124,
+              "start_ticks": 92245873,
+              "session_id": 482124
+            },
+            "process_alive": true,
+            "status": "running",
+            "completed_episodes": 28,
+            "technical_failures": 0,
+            "progress_at_utc": "2026-09-21T16:20:03.107714+00:00"
+          },
+          {
+            "job_id": "smol50k_N_control_r2_shard5",
+            "gpus": [
+              5
+            ],
+            "process": {
+              "hostname": "trial-303225685-trialrun-303225685-worker-0",
+              "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+              "pid": 482129,
+              "start_ticks": 92245874,
+              "session_id": 482129
+            },
+            "process_alive": true,
+            "status": "running",
+            "completed_episodes": 26,
+            "technical_failures": 0,
+            "progress_at_utc": "2026-09-21T16:19:44.655955+00:00"
+          },
+          {
+            "job_id": "smol50k_N_control_r2_shard6",
+            "gpus": [
+              6
+            ],
+            "process": {
+              "hostname": "trial-303225685-trialrun-303225685-worker-0",
+              "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+              "pid": 482134,
+              "start_ticks": 92245876,
+              "session_id": 482134
+            },
+            "process_alive": true,
+            "status": "running",
+            "completed_episodes": 36,
+            "technical_failures": 0,
+            "progress_at_utc": "2026-09-21T16:20:00.663419+00:00"
+          },
+          {
+            "job_id": "pi05official_N_libero_spatial_control_r2",
+            "gpus": [
+              7
+            ],
+            "process": {
+              "hostname": "trial-303225685-trialrun-303225685-worker-0",
+              "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+              "pid": 482139,
+              "start_ticks": 92245877,
+              "session_id": 482139
+            },
+            "process_alive": true,
+            "status": "running",
+            "completed_episodes": 20,
+            "technical_failures": 0,
+            "progress_at_utc": "2026-09-21T16:19:41.454937+00:00"
+          }
+        ],
+        "completed_episodes_at_snapshot": 232
+      },
+      {
+        "run_id": "D24_XVLA_r2",
+        "process": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 481854,
+          "start_ticks": 92237779,
+          "session_id": 481854
+        },
+        "alive": true,
+        "claim": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_XVLA_r2/CLAIM.json",
+          "sha256": "190714febeda2161ea632276f0904c0fe731350f501ca6cc105fcff5fb7d6d8a"
+        },
+        "configuration": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/XVLA_BATCH.json",
+          "sha256": "7a62921156cc8951a19125120889ef159f60bba17f3fb5cd934c9cf8f3fddb84"
+        },
+        "progress": {
+          "status": "waiting_for_predecessor",
+          "predecessor": "D24_N_CONTROL_REPAIR_r2",
+          "at_utc": "2026-09-21T16:20:02.730892+00:00",
+          "scientific_operations": 0
+        },
+        "trigger": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_XVLA_r2__D24_XVLA_r2__1.json",
+          "sha256": "b3658b9e5131995271309919e750549b0273777d8accd6b12c794b07f7aa8178"
+        }
+      },
+      {
+        "run_id": "D24_LIBERO_UNSTARTED_r3",
+        "process": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 485196,
+          "start_ticks": 92263845,
+          "session_id": 485196
+        },
+        "alive": true,
+        "claim": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_LIBERO_UNSTARTED_r3/CLAIM.json",
+          "sha256": "d97099bb2bec92d46b82eb8667c77d03a1f13eab165e2b350b76d87a7b64d9e6"
+        },
+        "configuration": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/LIBERO_UNSTARTED_BATCH.json",
+          "sha256": "064bbf8fed3bacaa041514071b1b007fc564491df6f79c37da77a7a52d727f14"
+        },
+        "progress": {
+          "status": "waiting_for_predecessor",
+          "predecessor": "D24_N_CONTROL_REPAIR_r2",
+          "at_utc": "2026-09-21T16:20:02.731209+00:00",
+          "scientific_operations": 0
+        },
+        "trigger": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_LIBERO_UNSTARTED_r3__D24_LIBERO_UNSTARTED_r3__1.json",
+          "sha256": "b6ed9b1bab5226fdaec6b62867d894dee078551ce441e6edaee832fcd599a597"
+        }
+      }
+    ],
+    "all_completion_triggers_registered_and_verified": true,
+    "formal_active_jobs": 8,
+    "auxiliary_gpu_holders": []
+  },
+  "previous_repair_audit": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/events/B_422445bd68021930284fe3fd62016937_AUDIT.json",
+    "sha256": "375b2f9e01fcc80c556f423064898946769161717934618f849fdb8f1ef24766"
+  },
+  "repair_checks": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/REPAIR_CHECKS.json",
+    "sha256": "49f6388e279386b4179cfa29adb00ba4ad52ff4358ee198423a56bad64e25cd6"
+  },
+  "A_waits_for_B": false,
+  "no_duplicate_launch": true
+}

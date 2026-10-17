@@ -1,0 +1,127 @@
+{
+  "task_id": "C_D24_MW_VELOCITY_V1",
+  "at_utc": "2026-09-22T07:14:38.705729+00:00",
+  "status": "complete",
+  "groups": [
+    {
+      "base": "smolvla",
+      "method": "Full-Velocity-transfer",
+      "planned": 500,
+      "entered": 500,
+      "valid": 500,
+      "successes": 247,
+      "technical_failures": 0,
+      "unknown": 0,
+      "unstarted": 0,
+      "success_rate_pct": 49.4,
+      "success_wilson95_pct": [
+        45.039013091903215,
+        53.770136116650654
+      ],
+      "N_valid": 496,
+      "N_successes": 234,
+      "Post_valid": 500,
+      "Post_successes": 240,
+      "versus_N": {
+        "paired_valid": 496,
+        "rescued": 35,
+        "harmed": 23,
+        "new_successes": 246,
+        "old_successes": 234,
+        "difference_pp": 2.4193548387096775,
+        "task_cluster_bootstrap_95_ci_pp": [
+          -0.40404040404040403,
+          5.05050505050505
+        ],
+        "uncertainty": "descriptive paired task-cluster percentile bootstrap, 2000 draws, seed20260922; fixed-source missingness retained"
+      },
+      "versus_Post": {
+        "paired_valid": 500,
+        "rescued": 11,
+        "harmed": 4,
+        "new_successes": 247,
+        "old_successes": 240,
+        "difference_pp": 1.4,
+        "task_cluster_bootstrap_95_ci_pp": [
+          0.0,
+          3.0
+        ],
+        "uncertainty": "descriptive paired task-cluster percentile bootstrap, 2000 draws, seed20260922; fixed-source missingness retained"
+      },
+      "interventions": 420,
+      "policy_calls": 10276,
+      "flow_calls": 102760,
+      "action_gradients": 1260,
+      "total_episode_seconds": 12423.103417573497,
+      "total_base_inference_seconds": 1994.7876735124737,
+      "total_corrector_seconds": 1889.2982456367463,
+      "missing": []
+    },
+    {
+      "base": "xvla",
+      "method": "Full-Velocity-transfer",
+      "planned": 500,
+      "entered": 500,
+      "valid": 500,
+      "successes": 403,
+      "technical_failures": 0,
+      "unknown": 0,
+      "unstarted": 0,
+      "success_rate_pct": 80.6,
+      "success_wilson95_pct": [
+        76.9060370280767,
+        83.82735333567634
+      ],
+      "N_valid": 500,
+      "N_successes": 403,
+      "Post_valid": 500,
+      "Post_successes": 407,
+      "versus_N": {
+        "paired_valid": 500,
+        "rescued": 25,
+        "harmed": 25,
+        "new_successes": 403,
+        "old_successes": 403,
+        "difference_pp": 0.0,
+        "task_cluster_bootstrap_95_ci_pp": [
+          -4.6,
+          4.0
+        ],
+        "uncertainty": "descriptive paired task-cluster percentile bootstrap, 2000 draws, seed20260922; fixed-source missingness retained"
+      },
+      "versus_Post": {
+        "paired_valid": 500,
+        "rescued": 7,
+        "harmed": 11,
+        "new_successes": 403,
+        "old_successes": 407,
+        "difference_pp": -0.8,
+        "task_cluster_bootstrap_95_ci_pp": [
+          -2.2,
+          0.4
+        ],
+        "uncertainty": "descriptive paired task-cluster percentile bootstrap, 2000 draws, seed20260922; fixed-source missingness retained"
+      },
+      "interventions": 411,
+      "policy_calls": 6807,
+      "flow_calls": 68070,
+      "action_gradients": 1233,
+      "total_episode_seconds": 7287.587881531566,
+      "total_base_inference_seconds": 689.4403667859733,
+      "total_corrector_seconds": 1187.3354594726115,
+      "missing": []
+    }
+  ],
+  "model_optimizer_updates": 0,
+  "head_optimizer_updates": 0,
+  "development_attempts": 0,
+  "prior_technical_attempts": 8,
+  "planned_total_physical_attempt_cap": 1008,
+  "prior_failures_preserved": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/D24_C_MW_VELOCITY_r1/SUMMARY.json",
+  "protocol": "B fixed500 per base, unchanged source/seeds/native Mesa/physics, H50/H30 K10 NFE10, G0>.05 once, C10",
+  "adaptation": "Smol native velocity/Euler; X velocity-reparameterized native clean-prediction remixer (not Euler); native mean/std+true clamp, independent own radius",
+  "transfer": "frozen pi05 external features/PCA/D/G0/Q with historical five-task training coverage",
+  "runtime": "C8H100; whole-wave holders off; sampled GPU utilization in gpu_metrics.jsonl; cross-host raw time does not establish algorithm speed advantage",
+  "cost_note": "base inference time includes synchronous gradient RPC; corrector time overlaps it; do not add these totals",
+  "source_manifest": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/MW_VELOCITY_BATCH.json"
+}

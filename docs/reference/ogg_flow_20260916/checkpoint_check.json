@@ -1,0 +1,270 @@
+{
+  "status": "passed",
+  "device": "cpu",
+  "outcomes_read": false,
+  "source_selection": "Fixed first old-v3 preflight source and its saved cut010 context; no outcome selection",
+  "a0_semantics": "Clipped saved full_plan prefix, arbitrary numerical reference only; not a new real-study replan",
+  "inputs": {
+    "context": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_ogg_research_v3_20260916/sources/single/disassemble-v3__2026102900/cut010/context.npz",
+    "context_sha256": "7355349592d17d8b84816f486db8d695c3bc9ae6306175cfd6232c6ac8c2d7d9",
+    "context_array_sha256": {
+      "history": "069d9b612247f6a90ae5bd6ee7b9ff99c1f125136f1b3c952c2c19a5f38545f8",
+      "history_mask": "377a23f52c6b357696238c3318f677a082dd3430bb6691042bd550a5cda28ebb",
+      "proprio": "3ca22aa137f358a5aaea06f5dd2c3d23284c00103b053cd22d2684b454e7df55",
+      "proprio_mask": "377a23f52c6b357696238c3318f677a082dd3430bb6691042bd550a5cda28ebb",
+      "past_actions": "f49a1fffa5d673bb501795ef8696d8cf87bef2d92bf431cea3c2bbb01b4327ab",
+      "language": "09797b350c4f7b5ed8293c6b2dbd9dcd8dfb1b554ae877f3736d55505ee7445e",
+      "remaining": "5407002778675f615e4ca6d47a6f3b98a51adc88e25d791b48f7ae6dc2bf7239"
+    },
+    "a0_commands_sha256": "efc89b7996b4154e0220aec6dc852126b12db1ef66fa98464bc1aa0e2bd211e0",
+    "model_files": {
+      "1041": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_ogg_research_v3_20260916/learning/models/refit/member_1041/selected.pt",
+        "sha256": "9f5b8c8be268b507c612701069f3b835274fe8460d82b790f7d6a710c04c976c"
+      },
+      "1042": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_ogg_research_v3_20260916/learning/models/refit/member_1042/selected.pt",
+        "sha256": "3cb9551ff3e3f05c8bb5adaffa6fd00543d84aac8b8de57b6905aa39d30a272b"
+      },
+      "1043": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_ogg_research_v3_20260916/learning/models/refit/member_1043/selected.pt",
+        "sha256": "18ccbc5ca557fe40468d61d530a2e99f1498dda6dcd6af84ac910ec422c96777"
+      },
+      "1044": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_ogg_research_v3_20260916/learning/models/refit/member_1044/selected.pt",
+        "sha256": "a7d053daffc6f909e5acaad977c87292bd394bc5e9b7670ace3bbdba54e61def"
+      }
+    },
+    "ranking_sha256": "fa8e2b4b0ee166372a036e1656036812be8d34335a1f287240a80f34a3d3436c"
+  },
+  "zero_anchor": {
+    "reward": 0.0,
+    "member_probabilities": [
+      [
+        0.6889703273773193,
+        0.6889703273773193
+      ],
+      [
+        0.6889131665229797,
+        0.6889131665229797
+      ],
+      [
+        0.684767484664917,
+        0.684767484664917
+      ],
+      [
+        0.6964786648750305,
+        0.6964786648750305
+      ]
+    ]
+  },
+  "slot_comparison": {
+    "old_slots": 9,
+    "new_slots": 2,
+    "candidate_slot": 1,
+    "fixed_a0_slot": 0,
+    "old_member_probabilities": [
+      [
+        0.6889703273773193,
+        0.6898698806762695
+      ],
+      [
+        0.6889131665229797,
+        0.689775288105011
+      ],
+      [
+        0.684767484664917,
+        0.6854701042175293
+      ],
+      [
+        0.6964786648750305,
+        0.697108805179596
+      ]
+    ],
+    "new_member_probabilities": [
+      [
+        0.6889703273773193,
+        0.6898698806762695
+      ],
+      [
+        0.6889131665229797,
+        0.6897749900817871
+      ],
+      [
+        0.684767484664917,
+        0.6854702234268188
+      ],
+      [
+        0.6964786648750305,
+        0.697108805179596
+      ]
+    ],
+    "maximum_absolute_probability_difference": 2.980232238769531e-07,
+    "tolerance": 1e-06,
+    "interpretation": "Float32 GEMM batch-shape rounding; same frozen state and weights"
+  },
+  "finite_difference": {
+    "epsilon": 0.001,
+    "symmetric_interior_margin": 0.05,
+    "feasible_coordinates": 20,
+    "total_coordinates": 40,
+    "candidate_clipping_applied": false,
+    "direction": [
+      [
+        -0.0,
+        -0.0,
+        -0.2189866304397583,
+        -0.1614680141210556
+      ],
+      [
+        -0.0,
+        0.0,
+        -0.3460555076599121,
+        -0.045513395220041275
+      ],
+      [
+        -0.0,
+        -0.0,
+        0.03698605298995972,
+        -0.06905459612607956
+      ],
+      [
+        0.0,
+        -0.0,
+        0.146553173661232,
+        0.0499606654047966
+      ],
+      [
+        -0.0,
+        -0.0,
+        -0.21555674076080322,
+        0.05030401796102524
+      ],
+      [
+        -0.0,
+        -0.0,
+        -0.13378667831420898,
+        -0.2515731751918793
+      ],
+      [
+        0.0,
+        -0.0,
+        -0.49749740958213806,
+        -0.24003039300441742
+      ],
+      [
+        -0.0,
+        -0.0,
+        0.13940663635730743,
+        -0.3003216087818146
+      ],
+      [
+        -0.0,
+        0.0,
+        0.14542663097381592,
+        -0.36226150393486023
+      ],
+      [
+        0.0,
+        0.0,
+        -0.053173210471868515,
+        -0.27184224128723145
+      ]
+    ],
+    "direction_norm": 0.9999999403953552,
+    "gradient": {
+      "value": 0.0,
+      "member_probabilities": [
+        [
+          0.6889703273773193,
+          0.6889703273773193
+        ],
+        [
+          0.6889131665229797,
+          0.6889131665229797
+        ],
+        [
+          0.684767484664917,
+          0.684767484664917
+        ],
+        [
+          0.6964786648750305,
+          0.6964786648750305
+        ]
+      ],
+      "gradient_norm": 1.5890707969665527,
+      "gradient_linf": 0.7524039149284363,
+      "gradient_xyz_rms": 0.2740361988544464,
+      "gradient_grip_rms": 0.1650063693523407,
+      "gradient_per_dimension_rms": [
+        0.23330721259117126,
+        0.3716621994972229,
+        0.18089352548122406,
+        0.1650063842535019
+      ],
+      "zero_gradient_fraction": 0.0
+    },
+    "positive_reward": 0.0007735639810562134,
+    "negative_reward": -0.0007749944925308228,
+    "numerical_directional_derivative": 0.7742792367935181,
+    "analytic_represented_directional_derivative": 0.7742742896080017,
+    "absolute_error": 4.947185516357422e-06,
+    "tolerance": 0.004071371448040009
+  },
+  "invariants": {
+    "state_detached": true,
+    "a0_detached": true,
+    "input_state_grad_absent": true,
+    "input_a0_grad_absent": true,
+    "a0_probabilities_candidate_independent": true,
+    "context_file_unchanged": true,
+    "context_arrays_unchanged": true,
+    "a0_unchanged": true,
+    "critic_features_unchanged": true,
+    "critic_state_hashes_unchanged": true,
+    "weight_files_sha256_unchanged": true,
+    "protected_implementation_unchanged": true
+  },
+  "cpu_threads": {
+    "canonical_critic_threads": 2,
+    "caller_threads": 4,
+    "observations": {
+      "after_constructor": 4,
+      "after_forward": 4,
+      "after_backward": 4,
+      "after_historical_scorer": 4,
+      "after_outer_inference_hook": 4
+    },
+    "restored_original_threads": 2
+  },
+  "inference_mode_check": {
+    "passed": true,
+    "real_frozen_critic": true,
+    "synthetic_cpu_velocity": true,
+    "actual_vla_sampler": false,
+    "backwards": 1,
+    "gradient_norm": 1.5890706777572632,
+    "gradient_outside_ten_step_window": 0.0
+  },
+  "objective_counts": {
+    "objective_forward_calls": 6,
+    "critic_member_forward_calls": 24,
+    "objective_backward_calls": 2,
+    "critic_member_backward_calls": 8,
+    "critic_forward_seconds": 0.006681285798549652
+  },
+  "protected_code_sha256": {
+    "src/ac_tmil/ogg_flow/guidance.py": "9fdbe35af31336364fe71efa241bf2d19418553961e0c1b83eec5b3c773f3ed5",
+    "tests/test_ogg_flow_guidance.py": "446e17186922b3ad67889e9d06ad80d123ce366ac7d935f25f994276a6cb51bf"
+  },
+  "old_implementation_sha256": {
+    "src/ac_tmil/ogg_research_v3/learning.py": "e21a83fdbf6b052d2ed610c6adfeaaf186e64e9db122d6e02cb03ff372a21432",
+    "src/ac_tmil/ogg_research_v3/learning_data.py": "f8d80004fd70e2b120e670dc44b78215f510ba3af6851820982ccf3a52f452a4",
+    "src/ac_tmil/ogg_research_v3/learning_protocol.py": "f1f784e73ed04b0d69bfc4e3c86c0a9b585f08dfacd23922d73bd10bf2fff2f5",
+    "src/ac_tmil/ogg_research_v3/learning_collection.py": "b2945b32fc9b95a64e764d65467d8b6f7f5dc5c7c8d39fb08b63c39f77300a3d",
+    "src/ac_tmil/ogg_research_v3/learning_evaluation.py": "2e4af555f2ae43495568a412cbfb9f1eb66806ca00dec0f21d1db0d55561cfec"
+  },
+  "script_sha256": "8e4fba749c0de22219221c70c83bcf40da2700cf350d0e48cf4ed68454c31b13",
+  "torch_version": "2.7.1+cu126",
+  "numpy_version": "2.2.6"
+}

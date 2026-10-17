@@ -1,0 +1,80 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "accepted_at_utc": "2026-09-19T19:33:46.649379+00:00",
+  "status": "CPU_native_EGL_integration_accepted_for_one_native_V2_preflight",
+  "task_id": "A10_NATIVE_EGL_INTEGRATION_CPU_V1",
+  "receipt": {
+    "path": "receipts/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1_RESULT.json",
+    "sha256": "33f2a829475d66b04f5c9e449ca994d900a5931065422f487034c5c0fec63399"
+  },
+  "report": {
+    "path": "receipts/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1_REPORT.md",
+    "sha256": "1bde1b6666b3ec0ae533f194c0679131d2c097ad113ab9a07335c7a44f08e813"
+  },
+  "CPU_READY": {
+    "path": "results/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1/CPU_READY.json",
+    "sha256": "0f41cebdb68444a39de29fe4ed9f49a11df2324853fe01f7fca90eb72daf6156"
+  },
+  "proposal": {
+    "path": "results/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1/proposal/PROPOSAL.json",
+    "sha256": "5aefe16520dbd95c03d3e60cde19965122bc1fea3dcd0a7dd8322f8bf1401dd6"
+  },
+  "code_manifest": {
+    "path": "results/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1/code/CODE_MANIFEST.json",
+    "sha256": "cc77bcc589965bd59435640ca98060d8ace1f76f8e1f5e0a8b5ffc3ad63a29c9"
+  },
+  "integration_manifest": {
+    "path": "results/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1/INTEGRATION_MANIFEST.json",
+    "sha256": "3c07f509df5ae7f2bb1a01cfaef612b7daf437d383698303e7284b15fe750266"
+  },
+  "root_verification": {
+    "RESULT_artifact_references_SHA_and_size": 23,
+    "code_manifest_files_SHA_and_size": 419,
+    "integration_references_SHA_and_size": 22,
+    "runtime_probes": 0,
+    "tests_rerun": 0,
+    "large_model_hash_passes": 0
+  },
+  "executor_CPU_evidence": {
+    "distinct_fake_tests_passed": 18,
+    "fake_test_executions": 22,
+    "authorization_denials": 3,
+    "changed_source_AST": 11,
+    "shell_syntax": 2
+  },
+  "independent_reviews": [
+    {
+      "agent": "/root/native_v2_integration_review",
+      "scope": "native EGL shim, actual Gymnasium viewer reuse, UUID binding,108 graphics caps and cleanup",
+      "blocking_findings": []
+    },
+    {
+      "agent": "/root/native_v2_release_guard_review",
+      "scope": "unique claim, current release/host identity guards, A-only lifecycle and process group",
+      "blocking_findings": []
+    }
+  ],
+  "accepted_scope": [
+    "Private EGL handle route with shared packages unchanged",
+    "One reusable viewer/context for two corner2 native RGB observations",
+    "All8 device mapping before policy UUID selection and Torch text UUID confirmation",
+    "Frozen initialization52resets/26000substeps;5native50flow and1policy step13substeps",
+    "Explicit graphics API scope distinguished from unmetered framework internals",
+    "Exclusive claim before full input verification; reservation held through process-group exit"
+  ],
+  "not_yet_validated": [
+    "Real native MetaWorld observations and policy/535 graphics compatibility",
+    "Five real native plans and one real transition under this integrated bundle",
+    "D/G0/Q/Post/Velocity, complete rollout and any task performance"
+  ],
+  "required_success_evidence": [
+    "Both saved native RGB images inspected against the task scene",
+    "Separate reset/full observation/usable artifact accounting",
+    "Policy GPU UUID and graphics physical GPU/renderer identity",
+    "Five-H paired-noise/raw50 queue checks and real transition",
+    "Initialization, resource and graphics ledgers reconciled; cleanup and8holder restoration"
+  ],
+  "new_release": "releases/P10_A_NATIVE_PREFLIGHT_V2.json",
+  "old_releases_reusable": false,
+  "next_full_training_or_evaluation_authorized": false
+}

@@ -1,0 +1,110 @@
+{
+  "task_id": "A_D24_CROSSBASE_H_SWEEP_V1",
+  "utc": "2026-09-23T12:12:51.973678+00:00",
+  "status": "STARTED_HANDOFF_PENDING",
+  "actual_command_started": 1,
+  "claim": 1,
+  "model_readiness_not_yet_claimed": true,
+  "auto_review_initial_rejection": "Old 20:00 cutoff; command was not created. Same command approved after latest direct-user22:45/23:00 override evidence was checked.",
+  "approval_evidence": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1/AUTO_REVIEW_DEADLINE_EVIDENCE.json",
+  "records": {
+    "DAEMON_READY.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1/DAEMON_READY.json",
+      "sha256": "3d03d03c3874729e59d0b72cc60ad0fe7803b43f0a5d6905b1945e5ff07e3dc0",
+      "value": {
+        "authorization_sha256": "4f8406e67e2d0b73beda277b3bc633749060f30e8420e8513285780a06952c5f",
+        "code": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1/CODE_MANIFEST.json",
+          "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1/CODE_MANIFEST.json",
+          "sha256": "6f06bd262cca65c3a45380e9e13c34c455f21788bf392c24df27d7786e4ba240",
+          "size_bytes": 10616
+        },
+        "host": "trial-303224955-trialrun-303224955-worker-0",
+        "host_reboot_requires_restart": true,
+        "independent_of_Codex_window": true,
+        "logical_context_target": 192,
+        "process": {
+          "boot_id": "9011c00c-6953-4cb3-a724-1a6f90d196d4",
+          "host": "trial-303224955-trialrun-303224955-worker-0",
+          "pgid": 3422301,
+          "pid": 3422301,
+          "ppid": 1,
+          "start_ticks": 420539744,
+          "state": "R"
+        },
+        "session": 3422301,
+        "status": "READY",
+        "stdin": "DEVNULL",
+        "utc": "2026-09-23T12:11:52.981850+00:00",
+        "worker_target": 8
+      }
+    },
+    "CHAIN_COMMAND.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1/CHAIN_COMMAND.json",
+      "sha256": "4ad8973b2756250accaf1629114c140dcb188d38e5d4c8688adb7358952ddca9",
+      "value": {
+        "argv": [
+          "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_lifecycle.sh",
+          "run",
+          "--",
+          "/usr/bin/python",
+          "-B",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1/code/manager.py",
+          "--chain",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1/chain"
+        ],
+        "automatic_retry": false,
+        "opportunity_consumed": true,
+        "task_id": "A_D24_CROSSBASE_H_SWEEP_V1",
+        "utc": "2026-09-23T12:11:53.026842+00:00"
+      }
+    },
+    "CLAIM.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1/CLAIM.json",
+      "sha256": "435a2879b8590717539829c6d3236e5ed990ccad979e0330f43509d9e75822ca",
+      "value": {
+        "Q_fit_seed": 9101,
+        "Q_loss": "L11",
+        "authorization_sha256": "4f8406e67e2d0b73beda277b3bc633749060f30e8420e8513285780a06952c5f",
+        "contexts_per_GPU": 24,
+        "cumulative_cap": 36700,
+        "environment_processes_target": 192,
+        "external_encoder_processes": 8,
+        "model_processes": 8,
+        "new_evaluations": 4000,
+        "no_blind_retry": true,
+        "prior_A_attempts": 25296,
+        "process": {
+          "boot_id": "9011c00c-6953-4cb3-a724-1a6f90d196d4",
+          "host": "trial-303224955-trialrun-303224955-worker-0",
+          "pgid": 3422301,
+          "pid": 3422301,
+          "ppid": 1,
+          "start_ticks": 420539744,
+          "state": "R"
+        },
+        "reused_evaluations": 0,
+        "stage_attempt_cap": 4400,
+        "task_id": "A_D24_CROSSBASE_H_SWEEP_V1",
+        "utc": "2026-09-23T12:11:53.022062+00:00"
+      }
+    },
+    "RUN_TIME_BUDGET.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1/RUN_TIME_BUDGET.json",
+      "sha256": "a399e6332e8e46831ecc03fb43dc067d24538aa5892993574c804ae39aef0891",
+      "value": {
+        "absolute_end_unix": 1790175420.0,
+        "admission_cutoff_unix": 1790174700.0,
+        "new_independent_stage": true,
+        "old_attempts_not_reset": true,
+        "publication_target_unix": 1790175600.0,
+        "utc": "2026-09-23T12:11:53.017553+00:00",
+        "wall_seconds": 9906.98243689537
+      }
+    }
+  },
+  "result_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1",
+  "completion_event": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1/outbox/chain_terminal.json",
+  "fixed_executor_thread": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+  "handler_gate": false
+}

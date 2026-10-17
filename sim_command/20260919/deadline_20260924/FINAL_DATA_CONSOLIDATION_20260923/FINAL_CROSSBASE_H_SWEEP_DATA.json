@@ -1,0 +1,2812 @@
+{
+  "checked_utc": "2026-09-23T17:06:18.313165+00:00",
+  "status": "all_24_new_cells_complete",
+  "new_cells": 24,
+  "valid_episodes": 12000,
+  "expected_per_cell": 500,
+  "H10_reused_excluded": true,
+  "fixed_loss": "L11 = BCE + gain + 0.5 pair",
+  "fit_seed": 9101,
+  "Q_members": [
+    1041,
+    1042,
+    1043,
+    1044
+  ],
+  "nodes": {
+    "A": {
+      "terminal_utc": "2026-09-23T13:50:35.206990+00:00",
+      "terminal_status": "complete",
+      "all_owned_descendants_exited": true,
+      "valid": 4000,
+      "total_episode_attempts": 4381,
+      "preserved_technical_failure_attempts": 381,
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/RESULT.json",
+      "source_index": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/COMBINED_VALID_EPISODES.csv"
+    },
+    "B": {
+      "terminal_utc": "2026-09-23T14:10:15.578023+00:00",
+      "terminal_status": "complete",
+      "all_owned_descendants_exited": true,
+      "valid": 4000,
+      "total_episode_attempts": 4384,
+      "preserved_technical_failure_attempts": 384,
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/RESULT.json",
+      "source_index": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/FINAL_EPISODES.csv"
+    },
+    "C": {
+      "terminal_utc": "2026-09-23T13:36:34.856439+00:00",
+      "terminal_status": "authorized_H_sweep_complete",
+      "all_owned_descendants_exited": true,
+      "valid": 4000,
+      "total_episode_attempts": 4000,
+      "preserved_technical_failure_attempts": 0,
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/RESULT.json",
+      "source_index": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv"
+    }
+  },
+  "cells": [
+    {
+      "node": "A",
+      "model": "SmolVLA",
+      "method": "N",
+      "H": 20,
+      "mode": "native",
+      "Q_loss": null,
+      "Q_fit_seed": null,
+      "Q_members": [],
+      "raw_plan_length": 50,
+      "C": null,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 226,
+      "success_rate": 0.452,
+      "success_percent": 45.2,
+      "sampling_mean": 9.996,
+      "flow_mean": 99.96,
+      "interventions_mean": 0.0,
+      "action_gradients_mean": 0.0,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 4998,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 9.996
+        },
+        "flow_calls": {
+          "known_total": 49980,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 99.96
+        },
+        "natural_sampling_calls": {
+          "known_total": 4998,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 9.996
+        },
+        "candidate_sampling_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 0,
+          "unknown_rows": 500,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_member_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "D_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "G0_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "interventions": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/COMBINED_VALID_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/RESULT.json",
+      "terminal_utc": "2026-09-23T13:50:35.206990+00:00"
+    },
+    {
+      "node": "A",
+      "model": "SmolVLA",
+      "method": "N",
+      "H": 30,
+      "mode": "native",
+      "Q_loss": null,
+      "Q_fit_seed": null,
+      "Q_members": [],
+      "raw_plan_length": 50,
+      "C": null,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 205,
+      "success_rate": 0.41,
+      "success_percent": 41.0,
+      "sampling_mean": 7.036,
+      "flow_mean": 70.36,
+      "interventions_mean": 0.0,
+      "action_gradients_mean": 0.0,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 3518,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 7.036
+        },
+        "flow_calls": {
+          "known_total": 35180,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 70.36
+        },
+        "natural_sampling_calls": {
+          "known_total": 3518,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 7.036
+        },
+        "candidate_sampling_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 0,
+          "unknown_rows": 500,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_member_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "D_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "G0_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "interventions": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/COMBINED_VALID_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/RESULT.json",
+      "terminal_utc": "2026-09-23T13:50:35.206990+00:00"
+    },
+    {
+      "node": "A",
+      "model": "SmolVLA",
+      "method": "Post",
+      "H": 20,
+      "mode": "G0-multi",
+      "Q_loss": "L11",
+      "Q_fit_seed": 9101,
+      "Q_members": [
+        1041,
+        1042,
+        1043,
+        1044
+      ],
+      "raw_plan_length": 50,
+      "C": 10,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 251,
+      "success_rate": 0.502,
+      "success_percent": 50.2,
+      "sampling_mean": 13.338,
+      "flow_mean": 133.38,
+      "interventions_mean": 3.096,
+      "action_gradients_mean": 3.096,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 6669,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 13.338
+        },
+        "flow_calls": {
+          "known_total": 66690,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 133.38
+        },
+        "natural_sampling_calls": {
+          "known_total": 5121,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 10.242
+        },
+        "candidate_sampling_calls": {
+          "known_total": 1548,
+          "explicit_rows": 466,
+          "structural_zero_rows": 0,
+          "unknown_rows": 34,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 1548,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.096
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 1548,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.096
+        },
+        "Q_member_forward_calls": {
+          "known_total": 6192,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 12.384
+        },
+        "D_forward_calls": {
+          "known_total": 34526,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 69.052
+        },
+        "G0_forward_calls": {
+          "known_total": 34526,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 69.052
+        },
+        "interventions": {
+          "known_total": 1548,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.096
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/COMBINED_VALID_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/RESULT.json",
+      "terminal_utc": "2026-09-23T13:50:35.206990+00:00"
+    },
+    {
+      "node": "A",
+      "model": "SmolVLA",
+      "method": "Post",
+      "H": 30,
+      "mode": "G0-multi",
+      "Q_loss": "L11",
+      "Q_fit_seed": 9101,
+      "Q_members": [
+        1041,
+        1042,
+        1043,
+        1044
+      ],
+      "raw_plan_length": 50,
+      "C": 10,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 238,
+      "success_rate": 0.476,
+      "success_percent": 47.6,
+      "sampling_mean": 11.098,
+      "flow_mean": 110.98,
+      "interventions_mean": 3.194,
+      "action_gradients_mean": 3.194,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 5549,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 11.098
+        },
+        "flow_calls": {
+          "known_total": 55490,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 110.98
+        },
+        "natural_sampling_calls": {
+          "known_total": 3952,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 7.904
+        },
+        "candidate_sampling_calls": {
+          "known_total": 1597,
+          "explicit_rows": 473,
+          "structural_zero_rows": 0,
+          "unknown_rows": 27,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 1597,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.194
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 1597,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.194
+        },
+        "Q_member_forward_calls": {
+          "known_total": 6388,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 12.776
+        },
+        "D_forward_calls": {
+          "known_total": 35190,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 70.38
+        },
+        "G0_forward_calls": {
+          "known_total": 35190,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 70.38
+        },
+        "interventions": {
+          "known_total": 1597,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.194
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/COMBINED_VALID_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/RESULT.json",
+      "terminal_utc": "2026-09-23T13:50:35.206990+00:00"
+    },
+    {
+      "node": "A",
+      "model": "SmolVLA",
+      "method": "R",
+      "H": 20,
+      "mode": "G0-multi",
+      "Q_loss": null,
+      "Q_fit_seed": null,
+      "Q_members": [],
+      "raw_plan_length": 50,
+      "C": 10,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 246,
+      "success_rate": 0.492,
+      "success_percent": 49.2,
+      "sampling_mean": 13.328,
+      "flow_mean": 133.28,
+      "interventions_mean": 3.044,
+      "action_gradients_mean": 0.0,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 6664,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 13.328
+        },
+        "flow_calls": {
+          "known_total": 66640,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 133.28
+        },
+        "natural_sampling_calls": {
+          "known_total": 5142,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 10.284
+        },
+        "candidate_sampling_calls": {
+          "known_total": 1522,
+          "explicit_rows": 466,
+          "structural_zero_rows": 0,
+          "unknown_rows": 34,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_member_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "D_forward_calls": {
+          "known_total": 34832,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 69.664
+        },
+        "G0_forward_calls": {
+          "known_total": 34832,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 69.664
+        },
+        "interventions": {
+          "known_total": 1522,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.044
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/COMBINED_VALID_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/RESULT.json",
+      "terminal_utc": "2026-09-23T13:50:35.206990+00:00"
+    },
+    {
+      "node": "A",
+      "model": "SmolVLA",
+      "method": "R",
+      "H": 30,
+      "mode": "G0-multi",
+      "Q_loss": null,
+      "Q_fit_seed": null,
+      "Q_members": [],
+      "raw_plan_length": 50,
+      "C": 10,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 234,
+      "success_rate": 0.468,
+      "success_percent": 46.8,
+      "sampling_mean": 11.212,
+      "flow_mean": 112.12,
+      "interventions_mean": 3.224,
+      "action_gradients_mean": 0.0,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 5606,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 11.212
+        },
+        "flow_calls": {
+          "known_total": 56060,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 112.12
+        },
+        "natural_sampling_calls": {
+          "known_total": 3994,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 7.988
+        },
+        "candidate_sampling_calls": {
+          "known_total": 1612,
+          "explicit_rows": 473,
+          "structural_zero_rows": 0,
+          "unknown_rows": 27,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_member_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "D_forward_calls": {
+          "known_total": 35658,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 71.316
+        },
+        "G0_forward_calls": {
+          "known_total": 35658,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 71.316
+        },
+        "interventions": {
+          "known_total": 1612,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.224
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/COMBINED_VALID_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/RESULT.json",
+      "terminal_utc": "2026-09-23T13:50:35.206990+00:00"
+    },
+    {
+      "node": "A",
+      "model": "SmolVLA",
+      "method": "Velocity",
+      "H": 20,
+      "mode": "G0-multi",
+      "Q_loss": "L11",
+      "Q_fit_seed": 9101,
+      "Q_members": [
+        1041,
+        1042,
+        1043,
+        1044
+      ],
+      "raw_plan_length": 50,
+      "C": 10,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 245,
+      "success_rate": 0.49,
+      "success_percent": 49.0,
+      "sampling_mean": 16.68,
+      "flow_mean": 166.8,
+      "interventions_mean": 3.142,
+      "action_gradients_mean": 9.426,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 8340,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 16.68
+        },
+        "flow_calls": {
+          "known_total": 83400,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 166.8
+        },
+        "natural_sampling_calls": {
+          "known_total": 5198,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 10.396
+        },
+        "candidate_sampling_calls": {
+          "known_total": 3142,
+          "explicit_rows": 459,
+          "structural_zero_rows": 0,
+          "unknown_rows": 41,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 4713,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 9.426
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 4713,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 9.426
+        },
+        "Q_member_forward_calls": {
+          "known_total": 18852,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 37.704
+        },
+        "D_forward_calls": {
+          "known_total": 35036,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 70.072
+        },
+        "G0_forward_calls": {
+          "known_total": 35036,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 70.072
+        },
+        "interventions": {
+          "known_total": 1571,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.142
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/COMBINED_VALID_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/RESULT.json",
+      "terminal_utc": "2026-09-23T13:50:35.206990+00:00"
+    },
+    {
+      "node": "A",
+      "model": "SmolVLA",
+      "method": "Velocity",
+      "H": 30,
+      "mode": "G0-multi",
+      "Q_loss": "L11",
+      "Q_fit_seed": 9101,
+      "Q_members": [
+        1041,
+        1042,
+        1043,
+        1044
+      ],
+      "raw_plan_length": 50,
+      "C": 10,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 234,
+      "success_rate": 0.468,
+      "success_percent": 46.8,
+      "sampling_mean": 14.728,
+      "flow_mean": 147.28,
+      "interventions_mean": 3.324,
+      "action_gradients_mean": 9.972,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 7364,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 14.728
+        },
+        "flow_calls": {
+          "known_total": 73640,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 147.28
+        },
+        "natural_sampling_calls": {
+          "known_total": 4040,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 8.08
+        },
+        "candidate_sampling_calls": {
+          "known_total": 3324,
+          "explicit_rows": 473,
+          "structural_zero_rows": 0,
+          "unknown_rows": 27,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 4986,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 9.972
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 4986,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 9.972
+        },
+        "Q_member_forward_calls": {
+          "known_total": 19944,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 39.888
+        },
+        "D_forward_calls": {
+          "known_total": 35678,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 71.356
+        },
+        "G0_forward_calls": {
+          "known_total": 35678,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 71.356
+        },
+        "interventions": {
+          "known_total": 1662,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.324
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/COMBINED_VALID_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/RESULT.json",
+      "terminal_utc": "2026-09-23T13:50:35.206990+00:00"
+    },
+    {
+      "node": "B",
+      "model": "SmolVLA",
+      "method": "N",
+      "H": 40,
+      "mode": "native",
+      "Q_loss": null,
+      "Q_fit_seed": null,
+      "Q_members": [],
+      "raw_plan_length": 50,
+      "C": null,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 191,
+      "success_rate": 0.382,
+      "success_percent": 38.2,
+      "sampling_mean": 5.78,
+      "flow_mean": 57.8,
+      "interventions_mean": 0.0,
+      "action_gradients_mean": 0.0,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 2890,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 5.78
+        },
+        "flow_calls": {
+          "known_total": 28900,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 57.8
+        },
+        "natural_sampling_calls": {
+          "known_total": 2890,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 5.78
+        },
+        "candidate_sampling_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 0,
+          "unknown_rows": 500,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 500,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 500,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_member_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 500,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "D_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 500,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "G0_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 500,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "interventions": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/FINAL_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/RESULT.json",
+      "terminal_utc": "2026-09-23T14:10:15.578023+00:00"
+    },
+    {
+      "node": "B",
+      "model": "SmolVLA",
+      "method": "N",
+      "H": 50,
+      "mode": "native",
+      "Q_loss": null,
+      "Q_fit_seed": null,
+      "Q_members": [],
+      "raw_plan_length": 50,
+      "C": null,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 169,
+      "success_rate": 0.338,
+      "success_percent": 33.8,
+      "sampling_mean": 4.576,
+      "flow_mean": 45.76,
+      "interventions_mean": 0.0,
+      "action_gradients_mean": 0.0,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 2288,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 4.576
+        },
+        "flow_calls": {
+          "known_total": 22880,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 45.76
+        },
+        "natural_sampling_calls": {
+          "known_total": 2288,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 4.576
+        },
+        "candidate_sampling_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 0,
+          "unknown_rows": 500,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 500,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 500,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_member_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 500,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "D_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 500,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "G0_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 500,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "interventions": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/FINAL_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/RESULT.json",
+      "terminal_utc": "2026-09-23T14:10:15.578023+00:00"
+    },
+    {
+      "node": "B",
+      "model": "SmolVLA",
+      "method": "Post",
+      "H": 40,
+      "mode": "G0-multi",
+      "Q_loss": "L11",
+      "Q_fit_seed": 9101,
+      "Q_members": [
+        1041,
+        1042,
+        1043,
+        1044
+      ],
+      "raw_plan_length": 50,
+      "C": 10,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 223,
+      "success_rate": 0.446,
+      "success_percent": 44.6,
+      "sampling_mean": 10.134,
+      "flow_mean": 101.34,
+      "interventions_mean": 3.2,
+      "action_gradients_mean": 3.2,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 5067,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 10.134
+        },
+        "flow_calls": {
+          "known_total": 50670,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 101.34
+        },
+        "natural_sampling_calls": {
+          "known_total": 3467,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 6.934
+        },
+        "candidate_sampling_calls": {
+          "known_total": 1600,
+          "explicit_rows": 472,
+          "structural_zero_rows": 0,
+          "unknown_rows": 28,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 1600,
+          "explicit_rows": 443,
+          "structural_zero_rows": 57,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.2
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 1600,
+          "explicit_rows": 443,
+          "structural_zero_rows": 57,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.2
+        },
+        "Q_member_forward_calls": {
+          "known_total": 6400,
+          "explicit_rows": 443,
+          "structural_zero_rows": 57,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 12.8
+        },
+        "D_forward_calls": {
+          "known_total": 36486,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 72.972
+        },
+        "G0_forward_calls": {
+          "known_total": 36486,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 72.972
+        },
+        "interventions": {
+          "known_total": 1600,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.2
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/FINAL_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/RESULT.json",
+      "terminal_utc": "2026-09-23T14:10:15.578023+00:00"
+    },
+    {
+      "node": "B",
+      "model": "SmolVLA",
+      "method": "Post",
+      "H": 50,
+      "mode": "G0-multi",
+      "Q_loss": "L11",
+      "Q_fit_seed": 9101,
+      "Q_members": [
+        1041,
+        1042,
+        1043,
+        1044
+      ],
+      "raw_plan_length": 50,
+      "C": 10,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 228,
+      "success_rate": 0.456,
+      "success_percent": 45.6,
+      "sampling_mean": 9.28,
+      "flow_mean": 92.8,
+      "interventions_mean": 3.172,
+      "action_gradients_mean": 3.172,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 4640,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 9.28
+        },
+        "flow_calls": {
+          "known_total": 46400,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 92.8
+        },
+        "natural_sampling_calls": {
+          "known_total": 3054,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 6.108
+        },
+        "candidate_sampling_calls": {
+          "known_total": 1586,
+          "explicit_rows": 473,
+          "structural_zero_rows": 0,
+          "unknown_rows": 27,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 1586,
+          "explicit_rows": 443,
+          "structural_zero_rows": 57,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.172
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 1586,
+          "explicit_rows": 443,
+          "structural_zero_rows": 57,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.172
+        },
+        "Q_member_forward_calls": {
+          "known_total": 6344,
+          "explicit_rows": 443,
+          "structural_zero_rows": 57,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 12.688
+        },
+        "D_forward_calls": {
+          "known_total": 36180,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 72.36
+        },
+        "G0_forward_calls": {
+          "known_total": 36180,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 72.36
+        },
+        "interventions": {
+          "known_total": 1586,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.172
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/FINAL_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/RESULT.json",
+      "terminal_utc": "2026-09-23T14:10:15.578023+00:00"
+    },
+    {
+      "node": "B",
+      "model": "SmolVLA",
+      "method": "R",
+      "H": 40,
+      "mode": "G0-multi",
+      "Q_loss": null,
+      "Q_fit_seed": null,
+      "Q_members": [],
+      "raw_plan_length": 50,
+      "C": 10,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 222,
+      "success_rate": 0.444,
+      "success_percent": 44.4,
+      "sampling_mean": 10.302,
+      "flow_mean": 103.02,
+      "interventions_mean": 3.276,
+      "action_gradients_mean": 0.0,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 5151,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 10.302
+        },
+        "flow_calls": {
+          "known_total": 51510,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 103.02
+        },
+        "natural_sampling_calls": {
+          "known_total": 3513,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 7.026
+        },
+        "candidate_sampling_calls": {
+          "known_total": 1638,
+          "explicit_rows": 472,
+          "structural_zero_rows": 0,
+          "unknown_rows": 28,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 500,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 500,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_member_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 500,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "D_forward_calls": {
+          "known_total": 36790,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 73.58
+        },
+        "G0_forward_calls": {
+          "known_total": 36790,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 73.58
+        },
+        "interventions": {
+          "known_total": 1638,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.276
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/FINAL_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/RESULT.json",
+      "terminal_utc": "2026-09-23T14:10:15.578023+00:00"
+    },
+    {
+      "node": "B",
+      "model": "SmolVLA",
+      "method": "R",
+      "H": 50,
+      "mode": "G0-multi",
+      "Q_loss": null,
+      "Q_fit_seed": null,
+      "Q_members": [],
+      "raw_plan_length": 50,
+      "C": 10,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 226,
+      "success_rate": 0.452,
+      "success_percent": 45.2,
+      "sampling_mean": 9.462,
+      "flow_mean": 94.62,
+      "interventions_mean": 3.264,
+      "action_gradients_mean": 0.0,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 4731,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 9.462
+        },
+        "flow_calls": {
+          "known_total": 47310,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 94.62
+        },
+        "natural_sampling_calls": {
+          "known_total": 3099,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 6.198
+        },
+        "candidate_sampling_calls": {
+          "known_total": 1632,
+          "explicit_rows": 473,
+          "structural_zero_rows": 0,
+          "unknown_rows": 27,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 500,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 500,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_member_forward_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 500,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "D_forward_calls": {
+          "known_total": 36462,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 72.924
+        },
+        "G0_forward_calls": {
+          "known_total": 36462,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 72.924
+        },
+        "interventions": {
+          "known_total": 1632,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.264
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/FINAL_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/RESULT.json",
+      "terminal_utc": "2026-09-23T14:10:15.578023+00:00"
+    },
+    {
+      "node": "B",
+      "model": "SmolVLA",
+      "method": "Velocity",
+      "H": 40,
+      "mode": "G0-multi",
+      "Q_loss": "L11",
+      "Q_fit_seed": 9101,
+      "Q_members": [
+        1041,
+        1042,
+        1043,
+        1044
+      ],
+      "raw_plan_length": 50,
+      "C": 10,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 219,
+      "success_rate": 0.438,
+      "success_percent": 43.8,
+      "sampling_mean": 13.816,
+      "flow_mean": 138.16,
+      "interventions_mean": 3.36,
+      "action_gradients_mean": 10.08,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 6908,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 13.816
+        },
+        "flow_calls": {
+          "known_total": 69080,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 138.16
+        },
+        "natural_sampling_calls": {
+          "known_total": 3548,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 7.096
+        },
+        "candidate_sampling_calls": {
+          "known_total": 3360,
+          "explicit_rows": 472,
+          "structural_zero_rows": 0,
+          "unknown_rows": 28,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 5040,
+          "explicit_rows": 443,
+          "structural_zero_rows": 57,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 10.08
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 5040,
+          "explicit_rows": 443,
+          "structural_zero_rows": 57,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 10.08
+        },
+        "Q_member_forward_calls": {
+          "known_total": 20160,
+          "explicit_rows": 443,
+          "structural_zero_rows": 57,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 40.32
+        },
+        "D_forward_calls": {
+          "known_total": 36858,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 73.716
+        },
+        "G0_forward_calls": {
+          "known_total": 36858,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 73.716
+        },
+        "interventions": {
+          "known_total": 1680,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.36
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/FINAL_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/RESULT.json",
+      "terminal_utc": "2026-09-23T14:10:15.578023+00:00"
+    },
+    {
+      "node": "B",
+      "model": "SmolVLA",
+      "method": "Velocity",
+      "H": 50,
+      "mode": "G0-multi",
+      "Q_loss": "L11",
+      "Q_fit_seed": 9101,
+      "Q_members": [
+        1041,
+        1042,
+        1043,
+        1044
+      ],
+      "raw_plan_length": 50,
+      "C": 10,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 218,
+      "success_rate": 0.436,
+      "success_percent": 43.6,
+      "sampling_mean": 12.994,
+      "flow_mean": 129.94,
+      "interventions_mean": 3.344,
+      "action_gradients_mean": 10.032,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 6497,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 12.994
+        },
+        "flow_calls": {
+          "known_total": 64970,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 129.94
+        },
+        "natural_sampling_calls": {
+          "known_total": 3153,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 6.306
+        },
+        "candidate_sampling_calls": {
+          "known_total": 3344,
+          "explicit_rows": 473,
+          "structural_zero_rows": 0,
+          "unknown_rows": 27,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 5016,
+          "explicit_rows": 443,
+          "structural_zero_rows": 57,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 10.032
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 5016,
+          "explicit_rows": 443,
+          "structural_zero_rows": 57,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 10.032
+        },
+        "Q_member_forward_calls": {
+          "known_total": 20064,
+          "explicit_rows": 443,
+          "structural_zero_rows": 57,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 40.128
+        },
+        "D_forward_calls": {
+          "known_total": 36832,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 73.664
+        },
+        "G0_forward_calls": {
+          "known_total": 36832,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 73.664
+        },
+        "interventions": {
+          "known_total": 1672,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.344
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/FINAL_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r3/RESULT.json",
+      "terminal_utc": "2026-09-23T14:10:15.578023+00:00"
+    },
+    {
+      "node": "C",
+      "model": "X-VLA",
+      "method": "N",
+      "H": 20,
+      "mode": "native",
+      "Q_loss": null,
+      "Q_fit_seed": null,
+      "Q_members": [],
+      "raw_plan_length": 30,
+      "C": null,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 388,
+      "success_rate": 0.776,
+      "success_percent": 77.6,
+      "sampling_mean": 6.612,
+      "flow_mean": 66.12,
+      "interventions_mean": 0.0,
+      "action_gradients_mean": 0.0,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 3306.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 6.612
+        },
+        "flow_calls": {
+          "known_total": 33060.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 66.12
+        },
+        "natural_sampling_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 0,
+          "unknown_rows": 500,
+          "mean_per_valid_episode": null
+        },
+        "candidate_sampling_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 0,
+          "unknown_rows": 500,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 0.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 0.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_member_forward_calls": {
+          "known_total": 0.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "D_forward_calls": {
+          "known_total": 0.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "G0_forward_calls": {
+          "known_total": 0.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "interventions": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/RESULT.json",
+      "terminal_utc": "2026-09-23T13:36:34.856439+00:00"
+    },
+    {
+      "node": "C",
+      "model": "X-VLA",
+      "method": "N",
+      "H": 30,
+      "mode": "native",
+      "Q_loss": null,
+      "Q_fit_seed": null,
+      "Q_members": [],
+      "raw_plan_length": 30,
+      "C": null,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 385,
+      "success_rate": 0.77,
+      "success_percent": 77.0,
+      "sampling_mean": 4.572,
+      "flow_mean": 45.72,
+      "interventions_mean": 0.0,
+      "action_gradients_mean": 0.0,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 2286.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 4.572
+        },
+        "flow_calls": {
+          "known_total": 22860.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 45.72
+        },
+        "natural_sampling_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 0,
+          "unknown_rows": 500,
+          "mean_per_valid_episode": null
+        },
+        "candidate_sampling_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 0,
+          "unknown_rows": 500,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 0.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 0.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_member_forward_calls": {
+          "known_total": 0.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "D_forward_calls": {
+          "known_total": 0.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "G0_forward_calls": {
+          "known_total": 0.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "interventions": {
+          "known_total": 0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/RESULT.json",
+      "terminal_utc": "2026-09-23T13:36:34.856439+00:00"
+    },
+    {
+      "node": "C",
+      "model": "X-VLA",
+      "method": "Post",
+      "H": 20,
+      "mode": "G0-multi",
+      "Q_loss": "L11",
+      "Q_fit_seed": 9101,
+      "Q_members": [
+        1041,
+        1042,
+        1043,
+        1044
+      ],
+      "raw_plan_length": 30,
+      "C": 10,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 398,
+      "success_rate": 0.796,
+      "success_percent": 79.6,
+      "sampling_mean": 10.352,
+      "flow_mean": 103.52,
+      "interventions_mean": 3.396,
+      "action_gradients_mean": 3.396,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 5176.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 10.352
+        },
+        "flow_calls": {
+          "known_total": 51760.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 103.52
+        },
+        "natural_sampling_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 0,
+          "unknown_rows": 500,
+          "mean_per_valid_episode": null
+        },
+        "candidate_sampling_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 0,
+          "unknown_rows": 500,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 1698.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.396
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 1698.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.396
+        },
+        "Q_member_forward_calls": {
+          "known_total": 6792.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 13.584
+        },
+        "D_forward_calls": {
+          "known_total": 14230.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 28.46
+        },
+        "G0_forward_calls": {
+          "known_total": 14230.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 28.46
+        },
+        "interventions": {
+          "known_total": 1698,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.396
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/RESULT.json",
+      "terminal_utc": "2026-09-23T13:36:34.856439+00:00"
+    },
+    {
+      "node": "C",
+      "model": "X-VLA",
+      "method": "Post",
+      "H": 30,
+      "mode": "G0-multi",
+      "Q_loss": "L11",
+      "Q_fit_seed": 9101,
+      "Q_members": [
+        1041,
+        1042,
+        1043,
+        1044
+      ],
+      "raw_plan_length": 30,
+      "C": 10,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 385,
+      "success_rate": 0.77,
+      "success_percent": 77.0,
+      "sampling_mean": 9.898,
+      "flow_mean": 98.98,
+      "interventions_mean": 3.848,
+      "action_gradients_mean": 3.848,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 4949.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 9.898
+        },
+        "flow_calls": {
+          "known_total": 49490.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 98.98
+        },
+        "natural_sampling_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 0,
+          "unknown_rows": 500,
+          "mean_per_valid_episode": null
+        },
+        "candidate_sampling_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 0,
+          "unknown_rows": 500,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 1924.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.848
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 1924.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.848
+        },
+        "Q_member_forward_calls": {
+          "known_total": 7696.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 15.392
+        },
+        "D_forward_calls": {
+          "known_total": 15696.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 31.392
+        },
+        "G0_forward_calls": {
+          "known_total": 15696.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 31.392
+        },
+        "interventions": {
+          "known_total": 1924,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.848
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/RESULT.json",
+      "terminal_utc": "2026-09-23T13:36:34.856439+00:00"
+    },
+    {
+      "node": "C",
+      "model": "X-VLA",
+      "method": "R",
+      "H": 20,
+      "mode": "G0-multi",
+      "Q_loss": null,
+      "Q_fit_seed": null,
+      "Q_members": [],
+      "raw_plan_length": 30,
+      "C": 10,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 393,
+      "success_rate": 0.786,
+      "success_percent": 78.6,
+      "sampling_mean": 10.524,
+      "flow_mean": 105.24,
+      "interventions_mean": 3.49,
+      "action_gradients_mean": 0.0,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 5262.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 10.524
+        },
+        "flow_calls": {
+          "known_total": 52620.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 105.24
+        },
+        "natural_sampling_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 0,
+          "unknown_rows": 500,
+          "mean_per_valid_episode": null
+        },
+        "candidate_sampling_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 0,
+          "unknown_rows": 500,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 0.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 0.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_member_forward_calls": {
+          "known_total": 0.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "D_forward_calls": {
+          "known_total": 14202.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 28.404
+        },
+        "G0_forward_calls": {
+          "known_total": 14202.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 28.404
+        },
+        "interventions": {
+          "known_total": 1745,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.49
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/RESULT.json",
+      "terminal_utc": "2026-09-23T13:36:34.856439+00:00"
+    },
+    {
+      "node": "C",
+      "model": "X-VLA",
+      "method": "R",
+      "H": 30,
+      "mode": "G0-multi",
+      "Q_loss": null,
+      "Q_fit_seed": null,
+      "Q_members": [],
+      "raw_plan_length": 30,
+      "C": 10,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 394,
+      "success_rate": 0.788,
+      "success_percent": 78.8,
+      "sampling_mean": 9.584,
+      "flow_mean": 95.84,
+      "interventions_mean": 3.716,
+      "action_gradients_mean": 0.0,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 4792.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 9.584
+        },
+        "flow_calls": {
+          "known_total": 47920.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 95.84
+        },
+        "natural_sampling_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 0,
+          "unknown_rows": 500,
+          "mean_per_valid_episode": null
+        },
+        "candidate_sampling_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 0,
+          "unknown_rows": 500,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 0.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 0.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "Q_member_forward_calls": {
+          "known_total": 0.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 0.0
+        },
+        "D_forward_calls": {
+          "known_total": 15242.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 30.484
+        },
+        "G0_forward_calls": {
+          "known_total": 15242.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 30.484
+        },
+        "interventions": {
+          "known_total": 1858,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.716
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/RESULT.json",
+      "terminal_utc": "2026-09-23T13:36:34.856439+00:00"
+    },
+    {
+      "node": "C",
+      "model": "X-VLA",
+      "method": "Velocity",
+      "H": 20,
+      "mode": "G0-multi",
+      "Q_loss": "L11",
+      "Q_fit_seed": 9101,
+      "Q_members": [
+        1041,
+        1042,
+        1043,
+        1044
+      ],
+      "raw_plan_length": 30,
+      "C": 10,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 399,
+      "success_rate": 0.798,
+      "success_percent": 79.8,
+      "sampling_mean": 13.586,
+      "flow_mean": 135.86,
+      "interventions_mean": 3.346,
+      "action_gradients_mean": 10.038,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 6793.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 13.586
+        },
+        "flow_calls": {
+          "known_total": 67930.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 135.86
+        },
+        "natural_sampling_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 0,
+          "unknown_rows": 500,
+          "mean_per_valid_episode": null
+        },
+        "candidate_sampling_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 0,
+          "unknown_rows": 500,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 5019.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 10.038
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 5019.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 10.038
+        },
+        "Q_member_forward_calls": {
+          "known_total": 20076.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 40.152
+        },
+        "D_forward_calls": {
+          "known_total": 14098.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 28.196
+        },
+        "G0_forward_calls": {
+          "known_total": 14098.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 28.196
+        },
+        "interventions": {
+          "known_total": 1673,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.346
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/RESULT.json",
+      "terminal_utc": "2026-09-23T13:36:34.856439+00:00"
+    },
+    {
+      "node": "C",
+      "model": "X-VLA",
+      "method": "Velocity",
+      "H": 30,
+      "mode": "G0-multi",
+      "Q_loss": "L11",
+      "Q_fit_seed": 9101,
+      "Q_members": [
+        1041,
+        1042,
+        1043,
+        1044
+      ],
+      "raw_plan_length": 30,
+      "C": 10,
+      "NFE": 10,
+      "planned": 500,
+      "valid": 500,
+      "unique_sources": 500,
+      "unique_units": 500,
+      "task_count": 50,
+      "per_task_count": 10,
+      "successes": 388,
+      "success_rate": 0.776,
+      "success_percent": 77.6,
+      "sampling_mean": 13.654,
+      "flow_mean": 136.54,
+      "interventions_mean": 3.822,
+      "action_gradients_mean": 11.466,
+      "all_sources_match": true,
+      "identity_checks_pass": true,
+      "flow_equals_10_sampling_every_episode": true,
+      "costs": {
+        "sampling_calls": {
+          "known_total": 6827.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 13.654
+        },
+        "flow_calls": {
+          "known_total": 68270.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 136.54
+        },
+        "natural_sampling_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 0,
+          "unknown_rows": 500,
+          "mean_per_valid_episode": null
+        },
+        "candidate_sampling_calls": {
+          "known_total": 0,
+          "explicit_rows": 0,
+          "structural_zero_rows": 0,
+          "unknown_rows": 500,
+          "mean_per_valid_episode": null
+        },
+        "action_gradient_calls": {
+          "known_total": 5733.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 11.466
+        },
+        "Q_ensemble_forward_calls": {
+          "known_total": 5733.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 11.466
+        },
+        "Q_member_forward_calls": {
+          "known_total": 22932.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 45.864
+        },
+        "D_forward_calls": {
+          "known_total": 15656.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 31.312
+        },
+        "G0_forward_calls": {
+          "known_total": 15656.0,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 31.312
+        },
+        "interventions": {
+          "known_total": 1911,
+          "explicit_rows": 500,
+          "structural_zero_rows": 0,
+          "unknown_rows": 0,
+          "mean_per_valid_episode": 3.822
+        }
+      },
+      "source_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv",
+      "cost_export_sources": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv"
+      ],
+      "terminal_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_CROSSBASE_H_SWEEP_V1/RESULT.json",
+      "terminal_utc": "2026-09-23T13:36:34.856439+00:00"
+    }
+  ],
+  "metric_definition": "Mean costs aggregate only the 500 unique valid terminal episodes in each cell, including successes and scientific failures. Technical-failure attempts are excluded from these means and retained separately. Sampling is returned policy_queries; flow=NFE10*sampling.",
+  "sparse_counter_policy": "Explicit_rows and structural_zero_rows are separate. A zero-intervention episode cannot execute a correction gradient; N/R cannot execute Q/action-gradient. Missing nonstructural values are left unknown, never filled as zero.",
+  "caveats": [
+    "No new blind test: fixed already revealed MT50 500-source set. No selection or calibration on these values.",
+    "Frozen per-model L11 fit9101 and native10 D/G0 heads; no per-H retraining/calibration.",
+    "SmolVLA raw50, X-VLA raw30; natural H independent of correction C10.",
+    "Velocity remains other-work data, excluded from Post paper.",
+    "A publication retried on CPU; publication attempts are not scientific episode attempts. B r2 startup failure consumed no episode and is preserved; r3 terminates complete.",
+    "No new compute, hardware query, large hashes, weights/images or whole-event logs read."
+  ],
+  "valid_episode_records_file": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/FINAL_DATA_CONSOLIDATION_20260923/FINAL_CROSSBASE_H_SWEEP_VALID_EPISODES.csv",
+  "aggregation_script": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/FINAL_DATA_CONSOLIDATION_20260923/aggregate_final_crossbase.py",
+  "post_paired_comparisons": [
+    {
+      "model": "SmolVLA",
+      "H": 20,
+      "comparison": "Post-N",
+      "paired_valid": 500,
+      "rescued": 47,
+      "harmed": 22,
+      "success_change_pp": 5.0
+    },
+    {
+      "model": "SmolVLA",
+      "H": 20,
+      "comparison": "Post-R",
+      "paired_valid": 500,
+      "rescued": 16,
+      "harmed": 11,
+      "success_change_pp": 1.0
+    },
+    {
+      "model": "SmolVLA",
+      "H": 30,
+      "comparison": "Post-N",
+      "paired_valid": 500,
+      "rescued": 56,
+      "harmed": 23,
+      "success_change_pp": 6.6
+    },
+    {
+      "model": "SmolVLA",
+      "H": 30,
+      "comparison": "Post-R",
+      "paired_valid": 500,
+      "rescued": 12,
+      "harmed": 8,
+      "success_change_pp": 0.8
+    },
+    {
+      "model": "SmolVLA",
+      "H": 40,
+      "comparison": "Post-N",
+      "paired_valid": 500,
+      "rescued": 58,
+      "harmed": 26,
+      "success_change_pp": 6.4
+    },
+    {
+      "model": "SmolVLA",
+      "H": 40,
+      "comparison": "Post-R",
+      "paired_valid": 500,
+      "rescued": 12,
+      "harmed": 11,
+      "success_change_pp": 0.2
+    },
+    {
+      "model": "SmolVLA",
+      "H": 50,
+      "comparison": "Post-N",
+      "paired_valid": 500,
+      "rescued": 82,
+      "harmed": 23,
+      "success_change_pp": 11.8
+    },
+    {
+      "model": "SmolVLA",
+      "H": 50,
+      "comparison": "Post-R",
+      "paired_valid": 500,
+      "rescued": 12,
+      "harmed": 10,
+      "success_change_pp": 0.4
+    },
+    {
+      "model": "X-VLA",
+      "H": 20,
+      "comparison": "Post-N",
+      "paired_valid": 500,
+      "rescued": 36,
+      "harmed": 26,
+      "success_change_pp": 2.0
+    },
+    {
+      "model": "X-VLA",
+      "H": 20,
+      "comparison": "Post-R",
+      "paired_valid": 500,
+      "rescued": 15,
+      "harmed": 10,
+      "success_change_pp": 1.0
+    },
+    {
+      "model": "X-VLA",
+      "H": 30,
+      "comparison": "Post-N",
+      "paired_valid": 500,
+      "rescued": 33,
+      "harmed": 33,
+      "success_change_pp": 0.0
+    },
+    {
+      "model": "X-VLA",
+      "H": 30,
+      "comparison": "Post-R",
+      "paired_valid": 500,
+      "rescued": 12,
+      "harmed": 21,
+      "success_change_pp": -1.8
+    }
+  ],
+  "temporary_origin": {
+    "valid_episode_records_file": "/tmp/FINAL_CROSSBASE_H_SWEEP_VALID_EPISODES.csv",
+    "aggregation_script": "/tmp/aggregate_final_crossbase.py"
+  }
+}

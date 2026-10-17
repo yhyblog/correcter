@@ -1,0 +1,143 @@
+{
+  "status": "P00 CPU preparation; formal execution is disabled",
+  "GAF-v1-adapted": {
+    "public_repo": "https://github.com/ylhaichen/guided-action-flow",
+    "commit": "ee67a70e576dc7f02a00cff86c9dd97f868c896f",
+    "official_association_verified": false,
+    "paper_version": "v1",
+    "paper_reference": "https://arxiv.org/abs/2607.02092v1",
+    "target": "discounted success-to-go / MSE",
+    "gamma": 0.99,
+    "discount_unit": "one actually executed control action",
+    "first_success_convention": "A records first successful result at state j+1; upstream action-index target at i is gamma**(j-i). Thus gamma**(first_success_state-i-1). After first success target=1; complete failed episode target=0. Censored outcome excluded.",
+    "chunk_horizon": 10,
+    "generated_policy_length": 50,
+    "physical_action_dim": 4,
+    "padded_policy_action_dim": 32,
+    "state_feature": "four normalized policy state coordinates, never privileged env state",
+    "language_feature": "frozen pi05 task embedding, planned dimension2048; exact extraction and manifest SHA required before training",
+    "feature_binding": null,
+    "input_scope": "same common manifest; complete contiguous true per-step trajectories; parent split; no branch concatenation",
+    "ensemble_members": 3,
+    "critic_hidden": [
+      768,
+      768,
+      768,
+      768
+    ],
+    "guide_frequency": "Every native complete pi05 sample; each actual denoise step. No G0 gate, no max-one limitation.",
+    "flow_steps": 10,
+    "beta": 2.0,
+    "grad_clip_norm": 1.0,
+    "uncertainty_scale": 10.0,
+    "min_gate": 0.1,
+    "guidance_settings_status": "single engineering candidate for development approval; no test selection; any change requires versioned config",
+    "gradient": "detached clean action x_t-t*v; ensemble mean action gradient; reverse-time velocity subtraction; only first10x4 coordinates; no VLA backward",
+    "sampling_cost_per_call_upper_bound": {
+      "full_vla": 1,
+      "flow_forward": 10,
+      "critic_forward": 30,
+      "critic_action_backward": 10,
+      "vla_backward": 0
+    },
+    "hyperparameter_basis": "v1 paper section IV-B:3 critics,hidden768 depth4,beta2,clip1,gate scale10,min.1; finite training proposal uses fixed10000 updates rather than claiming paper30 epochs"
+  },
+  "VLA-Corrector-adapted": {
+    "old_model": {
+      "model": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/corrector_pi05_mt50/h1_k10/best_cosine_model.pt",
+        "sha256": "0efadcfdfde814fc4e929d007ed0b95894de33f0d51e3d3cae512605e223d168",
+        "bytes": 170051647
+      },
+      "model_config": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/corrector_pi05_mt50/h1_k10/config.json",
+        "sha256": "4f7cc842b2e17bb5ff526dfcdfd7e94a680d1431bd9cf7af1b9f88373bc0b232",
+        "bytes": 981
+      }
+    },
+    "new_view": "normal demonstrations in the same common manifest, parent split, t to t+10 within actual episode",
+    "token_shape": [
+      256,
+      2048
+    ],
+    "h_window": 1,
+    "k_step": 10,
+    "target": "delta_z=z_(t+10)-z_t; original cosine loss flattening all token coordinates",
+    "old_checkpoint_read_only": true,
+    "old_feature_pool_missing": true,
+    "new_token_extraction": "One common extraction after a separate finite release; no per-method duplicate feature calls",
+    "native_trigger": "Original per-step safety check with original cooldown10 and repeated intervention allowed; never rebrand as G0 once",
+    "threshold": "original/development calibration under common new model; identity not yet frozen",
+    "training_command_status": "requires actual normal-demo token view and finite recipe approval; no original random frame-pair split replay"
+  },
+  "E6-D5-R": {
+    "predictor": "same two D checkpoints used by G0, members241/242",
+    "history": [
+      5,
+      4096
+    ],
+    "prediction_shape": [
+      2,
+      5,
+      4096
+    ],
+    "state_history": [
+      5,
+      4
+    ],
+    "past_actions": [
+      4,
+      4
+    ],
+    "language_dim": 2048,
+    "future_commands": [
+      5,
+      4
+    ],
+    "score": "mean over both members, all5 arrivals and4096 coordinates of ((prediction-actual)/member.delta_scale)**2; D returns raw feature units",
+    "causality": "Store prediction at s from available history and next5 commanded actions; score only at s+5 using actual arrived features; physical rollout/branch/reset identity and exact executed actions must match",
+    "warmup": "First eligible mature prediction after5 steps with valid padded/history masks; no future observations",
+    "missing": "No alarm, score=null and reason for missing/misaligned/invalid prediction; coverage logged separately",
+    "downstream": "R",
+    "H": 10,
+    "C": 10,
+    "monitor_interval": 5,
+    "max_interventions": 1,
+    "budget": 300,
+    "threshold": null,
+    "threshold_rule": "Development-only nearest episode intervention count to frozen G0; ties prefer fewer and higher threshold; no success outcomes; retain no-alarm episodes. Precision at best1/Ndev, coarser for tied scores or unavailable windows.",
+    "development_identity": null,
+    "missing_reason": "Historical bank has no complete aligned D prediction/observed-feature trace; inspect A raw index before any new collection request"
+  },
+  "E8": {
+    "SmolVLA": {
+      "asset": "step50000",
+      "generated": 50,
+      "execute": 10,
+      "raw_action_dim": 4,
+      "continued_training": false
+    },
+    "X-VLA": {
+      "asset": "base + seed42 initialization only",
+      "generated": 30,
+      "execute": 10,
+      "raw_action_dim": 4,
+      "padded_action_dim": 20,
+      "domain_id": 0,
+      "trained_MT50_checkpoint": null
+    },
+    "pi05_LIBERO": {
+      "asset": "own final29999/30k",
+      "generated": 10,
+      "execute": 5,
+      "action_dim": 7,
+      "state_dim": 8,
+      "cameras": [
+        "scene",
+        "wrist"
+      ],
+      "normalizer": "own final processor/assets, not official reference normalization"
+    },
+    "required": "Per-backbone feature/action adapter and D/G0/Q training identities; separate release H/C, no copying external E3 matrix or autonomous VLA SFT"
+  }
+}

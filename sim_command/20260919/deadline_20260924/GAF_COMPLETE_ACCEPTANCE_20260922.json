@@ -1,0 +1,45 @@
+{
+  "recorded_at_utc": "2026-09-22T05:48:13.470401+00:00",
+  "task_id": "A_D24_GAF_INTERNAL_HOLDOUT_V1",
+  "parent_task": "A_D24_CORE_REMAINDER_V1",
+  "status": "complete_accepted",
+  "receipt": {
+    "path": "receipts/A/A_D24_GAF_INTERNAL_HOLDOUT_V1_RESULT_r3.json",
+    "sha256": "d77f0237338d6ba57ca588efcd5618b31eee376167975dd43181c482654a6198"
+  },
+  "summary": {
+    "path": "results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/FINAL_SUMMARY.json",
+    "sha256": "eab865186e5fd4bfdee72e758017dc3e02c1c754da64830cf3b4f084e8e6f6e9"
+  },
+  "chain_result": {
+    "path": "results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/chain/CHAIN_RESULT.json",
+    "sha256": "a13d2b923ba36933acfe0cb4b13376c973d644c5a0138541763d48899946753b"
+  },
+  "restoration": {
+    "path": "results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/chain/RESTORATION.json",
+    "sha256": "e70963582b7cc2bab083e06e2bc299a316886a8f9cfdc01dc3b90351707e94f4"
+  },
+  "terminal_episodes": 500,
+  "successes": 315,
+  "success_rate": 0.63,
+  "technical_failures": 0,
+  "fit_updates": 30000,
+  "fit_members": 3,
+  "training_parents": 15,
+  "internal_holdout_parents": 2,
+  "training_windows": 27830,
+  "internal_holdout_windows": 8494,
+  "all_formal_workers_exited": true,
+  "holder_restoration_utc": "2026-09-22T05:26:34.025126+00:00",
+  "acceptance_scope": "small final receipts, per-task totals, saved process-exit and restoration records; no new compute or full consistency audit",
+  "limitations": [
+    "GAF-v1 adapted; not official protocol reproduction",
+    "Existing training inputs differ across methods; no matched-training-data claim",
+    "Each native sampling flow step guided; no G0/once gate",
+    "500 episode times are a concurrent sum, not wall time or pure deployment inference cost",
+    "Terminal event ACK reflects active executor inspection, not verified offline wakeup"
+  ],
+  "new_launches": 0,
+  "new_claims": 0,
+  "remaining_this_stage_episodes": 0
+}

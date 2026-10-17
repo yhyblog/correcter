@@ -1,0 +1,110 @@
+{
+  "status": "passed_bounded_zero_resource_selection_entry_review",
+  "created_utc": "2026-09-17T03:26:50.162864+00:00",
+  "scope": "Only metadata selection entry, exact contract and scientific/resource boundary; held runner deferred until actual selection seal.",
+  "blockers": [],
+  "inputs": {
+    "handoff": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_FINAL_SELECTION_HELD_PREPARATION_HANDOFF.md",
+      "sha256": "30b1c12fa952490847c4e38bfad1f2bb08693fe1ca6954f9c14f867dd4f9d47f"
+    },
+    "future_ready_fields": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/execution_control/final_selection_held_preparation_v1/selection_future_ready_fields.json",
+      "sha256": "b40054f8ff54cf75d760a3e6103973876a0b39b8fe17e6b4c6be81d841558b6d"
+    },
+    "pending": {
+      "status": "pending_selection_seal",
+      "expected_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_selections/final_selection_v1",
+      "preparation": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_selection_preparations/final_selection_pending_v1",
+        "seal_sha256": "c1c052e98228be5c371fbefe5aef264383f2bb5fd376f4cf1fc302d4aa616a2c"
+      },
+      "payload": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_selection_preparations/final_selection_pending_v1/payload.json",
+        "sha256": "f9e528e6f4ab740a4f7424349649705df791d2a149cbd3b0caba5cd9008e4796"
+      }
+    },
+    "integration_cpu": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/final_selection_heldout_cpu_20260917_v1",
+      "seal_sha256": "ef8ec8b07f14d145df49ba64733cc08596e591cf7b7e2a70a3f0efb70d793822"
+    },
+    "statistics_cpu": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/heldout_statistics_cpu_20260917_v1",
+      "seal_sha256": "687482c2464a89eed63aaad857a6bb6deeb3b631c4d87eb0035f2fcfa0598720"
+    },
+    "entry": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/final_selection_v1.py",
+      "sha256": "6dcddb3c281f7371342aa5e4cd453880eaf5f81bbe08bc1084a984cd291c7373"
+    }
+  },
+  "actual_entry_checks": {
+    "entry_order": "seal_selection reads READY; _scope rejects before pending/CPU/model metadata; validates completed pending and exact ready_contract; verifies all reference hashes before creating a new output directory.",
+    "authorization": "task_id native10-training-20260916; status approved or protocol_approved_ prefix; released_scope contains calibration_selection_seal; READY.calibration_selection_seal equals exact future block.",
+    "resources": "simulator_attempts_limit, optimizer_updates_limit, training_updates, model_calls_limit, pca_fits_limit must be integer zero. Entry reads metadata/hashes and writes selection metadata only; no workflow/model/environment/optimizer execution.",
+    "freeze": "Captures READY bytes; includes original and copied recursive authorization references, payload dependencies and entry code in dependency freeze; rechecks READY and all file digests before complete seal.",
+    "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_selections/final_selection_v1",
+    "output_binding_keys": [
+      "path",
+      "seal_sha256",
+      "result_sha256"
+    ],
+    "held_boundary": "Result and complete retain heldout_release=false; selection verifier never authorizes held. Current held template cannot run and must be rebuilt against actual selection path/seal/result, followed by separate explicit held READY.",
+    "current_v12_denial": "Reused sealed binding_validation.json confirms selection and held reject current v12; this review did not invoke either entry."
+  },
+  "scientific_checks": {
+    "model": "Fixed A4000 four member checkpoint hashes, selected seal and selected reload audit equal previously approved artifacts; this review did not reload model tensors.",
+    "selected_seal_sha256": "f40ff4f3356ee8f14d687348f9f9cc7addf1b1e93233b81645312973f7e02d6a",
+    "member_sha256": [
+      "39bbbb9e2fa2cb14695c4ce31a9d91c806dfd690a888d2a9c44d9eb3bf0be129",
+      "dab0dd69ad2bd4a132aede8c37ae4734cac2c12d7533d1c96cc058e1b52bad1d",
+      "ce2a29d123d1c3eea25b90ba0999cacc793ad25346709a94d6b52cf92a8ffca2",
+      "178c052783502646085fdb78be115e54d6d7ffc1225dac9af24d1cc64cafebf9"
+    ],
+    "calibration_basis": {
+      "sources": 100,
+      "outcomes_per_arm": 200,
+      "net_success_difference": 14,
+      "mean_source_difference": 0.07,
+      "rule": "mean_paired_post_minus_replan_strictly_positive",
+      "q_used": false,
+      "ci_used": false,
+      "task_routing": false
+    },
+    "method": "post enabled globally on alarm; no-cut common outcomes retained.",
+    "primary_comparison": "post_minus_alarm_replan10",
+    "complete_matching_dependencies": [
+      "velocity",
+      "direct",
+      "post",
+      "reverse",
+      "random"
+    ],
+    "physical_methods": [
+      "continue_native10",
+      "alarm_replan10",
+      "velocity",
+      "direct",
+      "post"
+    ],
+    "parameters_exact_to_calibration_config": true,
+    "matching_boundary": "Preserve shared mask and feasible radius from velocity/direct/post/reverse/random; cannot replace with standalone native post radius.",
+    "held_payload_only": "100 original held slots, 20 per task, four replicates, five physical arms, 2200 simulator cap and zero optimizer; no held implementation approval in this review."
+  },
+  "cpu_evidence_review": {
+    "integration_tests": 75,
+    "statistics_tests": 17,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "new_code_hashes_checked": 11,
+    "before_after_current_exact": true,
+    "cpu_and_pending_sealed_files_checked": 10,
+    "old720_unchanged": "Executor evidence reused; not rehashed by this review.",
+    "new_test_runs": 0
+  },
+  "limitations": [
+    "No new model call, environment initialization, PCA, simulation, optimization or CPU test.",
+    "No repeated calibration outcome/trajectory audit; reuse sealed independent reviews.",
+    "Does not attest an actual selection seal or held launch exists; future READY and execution remain separate."
+  ]
+}

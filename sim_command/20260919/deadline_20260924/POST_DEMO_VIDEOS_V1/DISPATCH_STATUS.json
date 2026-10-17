@@ -1,0 +1,48 @@
+{
+  "issued_at_utc": "2026-09-23T15:44:03.439665+00:00",
+  "nodes": {
+    "A": {
+      "task_id": "A_POST_DEMO_VIDEOS_V1",
+      "status": "complete",
+      "candidate_pairs": 79,
+      "transport": {
+        "receipt": "A_QUEUE_TRANSPORT_r2.json",
+        "returncode": 0
+      },
+      "ACK_received": true,
+      "acknowledgement": "receipts/A/A_POST_DEMO_VIDEOS_V1_ACK.json",
+      "recording_launch_observed": true,
+      "first_preview_event": "A_POST_DEMO_VIDEOS_V1_first_preview_v1",
+      "first_preview_review": "deadline_20260924/POST_DEMO_VIDEOS_V1/analysis/A_FIRST_PREVIEW_REVIEW.json",
+      "reviewed_qualified_pairs": 4,
+      "execution_stage": "analysis_accepted_video_capture_complete",
+      "remaining_recording_candidates": 0,
+      "qualified_pairs": 53,
+      "video_tasks_completed": 20,
+      "unused_allowance_closed": true,
+      "demo_recording_admissions_enabled": false,
+      "analysis_final_acceptance": {
+        "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/analysis/A_TERMINAL_ACCEPTANCE.json",
+        "sha256": "93240be26ece0db2891084ef485c14d5da783bad59e434eb75c3ba2c686fe269"
+      }
+    },
+    "B": {
+      "task_id": "B_POST_DEMO_VIDEOS_V1",
+      "status": "original_executor_turn_active_task_ACK_pending",
+      "candidate_pairs": 78,
+      "ACK_received": false,
+      "recording_launch_observed": false
+    },
+    "C": {
+      "task_id": "C_POST_DEMO_VIDEOS_V1",
+      "status": "cancelled_unclaimed_transferred_A_B",
+      "candidate_pairs": 0
+    }
+  },
+  "review_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923",
+  "authorization": {
+    "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION_V2.json",
+    "sha256": "632b9cde9a7cf0528c8c0d5a974f526f08b4faa590bde3d80c7ffa1e2fbd4024"
+  },
+  "updated_at_utc": "2026-09-23T16:17:28.371949+00:00"
+}

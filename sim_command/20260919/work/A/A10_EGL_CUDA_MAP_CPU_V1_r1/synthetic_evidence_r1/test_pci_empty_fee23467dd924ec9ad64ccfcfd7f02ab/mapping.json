@@ -1,0 +1,55 @@
+{
+  "method": "EGL_CUDA_DEVICE_NV handle -> cuDeviceGetPCIBusId -> kernel PCI/UUID -> frozen NVML target",
+  "devices": [
+    {
+      "egl_index": 0,
+      "egl_handle": 83,
+      "extensions_raw": {
+        "kind": "bytes",
+        "bytes_hex": "45474c5f4e565f6465766963655f637564612045474c5f4558545f6465766963655f71756572795f6e616d65",
+        "utf8_with_replacement": "EGL_NV_device_cuda EGL_EXT_device_query_name"
+      },
+      "attribute": {
+        "return_code": 1,
+        "value": 5
+      },
+      "cuda_pci": {
+        "return_code": 0,
+        "buffer": {
+          "kind": "bytes",
+          "bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+          "utf8_with_replacement": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+        }
+      },
+      "mapping": null,
+      "decision": "refused",
+      "extensions": [
+        "EGL_NV_device_cuda",
+        "EGL_EXT_device_query_name"
+      ]
+    }
+  ],
+  "selected_egl_index": null,
+  "ordinal_assumption": false,
+  "stage": "candidate_0_PCI",
+  "cuda_init_return_code": 0,
+  "enumeration": {
+    "return_code": 1,
+    "count": 8,
+    "handles": [
+      83,
+      21,
+      48,
+      72,
+      64,
+      91,
+      36,
+      55
+    ]
+  },
+  "failure": {
+    "error_type": "Refused",
+    "error": "Malformed PCI identity",
+    "stage": "candidate_0_PCI"
+  }
+}

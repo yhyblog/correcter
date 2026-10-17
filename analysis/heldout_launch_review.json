@@ -1,0 +1,140 @@
+{
+  "status": "passed_bounded_heldout_launch_binding_review",
+  "reviewed_utc": "2026-09-17T03:49:36.448836+00:00",
+  "scope": "Launch identity and new freeze authorization-inventory binding only. Reused existing entry,method and actual-selection reviews; no repeated historical code/model/trajectory audits.",
+  "blockers": [],
+  "checks": {
+    "ready_sha256": true,
+    "config_sha256": true,
+    "freeze_sha256": true,
+    "launch_identity": true,
+    "full_reference_inventory_matches_READY": true,
+    "all_original_and_snapshot_refs_in_freeze": true,
+    "actual_selection_complete.json": true,
+    "actual_selection_result.json": true,
+    "selection_identity_pinned": true,
+    "registered_primary_ids": true,
+    "per_task20": true,
+    "backup200": true,
+    "methods_and_suffixes": true,
+    "stage_budget": true,
+    "shared_reserve_original": true,
+    "global_caps": true,
+    "lifecycle_saved_launch_evidence": true,
+    "fixed_selection_boundary": true,
+    "mutable_logs_not_frozen_as_auth_refs": true,
+    "800scene_before_snapshot": true,
+    "completed_selection_and_calibration_locked": true,
+    "no_technical_failure_reported": true
+  },
+  "actual_launch": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/execution_control/heldout_v1/actual_launch.json",
+    "sha256": "0100f3266662d3ac557d74b81fac7bf170750a6ffce8a8a1ddf619b30d53511d",
+    "started_utc": "2026-09-17T03:46:47.203537+00:00",
+    "pid": 665568
+  },
+  "bindings": {
+    "ready_sha256": "b4241436b80706e2edc3ed9f5c16ef3dca02dab029732776c7411f73779f5d3d",
+    "config_sha256": "d86dc14afddf81a37587ff020cd36cc07e85869bf315502dc1778a97bda8f795",
+    "freeze_sha256": "a2db97fd0c76650e730b58836b0cd6059d25c76f42e5da4e2ce06611784d11b8"
+  },
+  "authorization_inventory": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_protocols/heldout_v1/authorization_inventory.json",
+    "sha256": "b83b1a4f7d5ae19bf52b182fdd44a6039485ac3280dff3919b69ffe99c01509f",
+    "reference_count": 205,
+    "all_original_and_snapshot_entries_in_freeze": true,
+    "critical_actual_selection_refs_byte_hashed": [
+      {
+        "original_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_selections/final_selection_v1/complete.json",
+        "snapshot_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_protocols/heldout_v1/authorization_references/0143_complete.json",
+        "sha256": "2afa80bc07c9cf3f87c5bb8a21bcc8b36baf2a129d25e86b37731de386c7144e"
+      },
+      {
+        "original_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_selections/final_selection_v1/result.json",
+        "snapshot_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_protocols/heldout_v1/authorization_references/0144_result.json",
+        "sha256": "87f1a411e8e82ecc4274875f93a264962824566271231338226d0a01e788f658"
+      }
+    ],
+    "all_noncritical_original_files_rehashed": false
+  },
+  "registered_scope": {
+    "primary_slots": 100,
+    "per_task": {
+      "disassemble-v3": 20,
+      "pick-place-wall-v3": 20,
+      "shelf-place-v3": 20,
+      "stick-pull-v3": 20,
+      "stick-push-v3": 20
+    },
+    "ordered_backup_slots": 200,
+    "physical_arms": [
+      "continue_native10",
+      "alarm_replan10",
+      "velocity",
+      "direct",
+      "post"
+    ],
+    "suffixes_per_source": 4,
+    "stage_simulator_cap": 2200,
+    "optimizer_updates": 0,
+    "shared_existing_reserve_cap": 1200,
+    "additional_reserve": 0,
+    "global_simulator_cap": 50000,
+    "global_optimizer_cap": 51200
+  },
+  "technical_progress_snapshot": {
+    "utc": "2026-09-17T03:49:20.310294+00:00",
+    "phase": "running",
+    "loaded_worker_count": 0,
+    "completed_worker_count": 0,
+    "terminal_primary_slots": 0,
+    "completed_primary_slots": 0,
+    "source_initial_scene_seals": 0,
+    "failure_paths": [],
+    "scientific_outcomes_read": false,
+    "resources": {
+      "global_totals": {
+        "simulator_attempts": 46025,
+        "training_updates": 51200
+      },
+      "stage": {},
+      "by_kind": {},
+      "by_stage": {
+        "p0": {
+          "simulator_attempts": 564
+        },
+        "round1_labels": {
+          "simulator_attempts": 22915
+        },
+        "training_round1": {
+          "training_updates": 19200
+        },
+        "round1_development_policy": {
+          "simulator_attempts": 1995
+        },
+        "round2_labels": {
+          "simulator_attempts": 17400
+        },
+        "training_final": {
+          "training_updates": 32000
+        },
+        "round2_development_policy": {
+          "simulator_attempts": 1995
+        },
+        "calibration": {
+          "simulator_attempts": 1156
+        },
+        "heldout": {}
+      },
+      "technical_reserve": {},
+      "reserve_by_kind": {},
+      "records": 97225,
+      "ledger_sha256": "4f289c308a418803fcf291553823378ddefebf1714de1da19d9f0ea43274a7f5"
+    }
+  },
+  "runtime_interpretation": "Loading counts are not completed data. Saved progress may lag; only the timestamped technical counters above are reported. This review does not infer any success rate or treatment effect.",
+  "gpu_lifecycle_evidence": "Actual launch is runner-owned lifecycle,32 workers with hold_idle=false. No GPU probe,signal,holder command or runtime intervention by review.",
+  "interim_success_results_read": false,
+  "new_model_simulator_test_calls": 0,
+  "runtime_or_scientific_inputs_modified": false
+}

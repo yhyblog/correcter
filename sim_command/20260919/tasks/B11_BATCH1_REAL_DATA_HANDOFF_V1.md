@@ -1,0 +1,9 @@
+# B11 Batch1 真实数据CPU交接
+
+B原任务 `B11_COMMON_POOL_VIEWS_CPU_V1` 和CPU release不变，无计算授权。先读最新CONTROL/TASK_BOARD/DISPATCH_B；旧DISPATCH中的历史acknowledged时间不代表本任务已接单，请写本任务ACK再做工作。
+
+新索引 `manifests/COMMON_POOL_ACCEPTED_PARENTS_V2.json` SHA=460d8144bbd82057673613541aa7a53beb6fb4be5831e43b0016beb9d3b146a0，累计8个配对train父源；覆盖表 `manifests/COMMON_POOL_SOURCE_DISPOSITIONS_V1.json` SHA=6df22e9b29a43daab80dc1daa99af042157774b6b1766550fed010717a4e586a，累计9已处理源，其中p04 normal s48成功早于cut55，后14未启动、4targets null/maskfalse。不能将p04补成paired negative，也不能重采；其真实normal轨迹保留用于逐窗口资格检查。
+
+原public v1、sidecar_v1、supplement_v2及首父源交接保持。以canonical paths/index和parent/source IDs去重，排除partial硬链接别名。Q-C10和G0-C5结果不可共享；承诺内/边界成功的完整Q终局可以用于其已冻结target，但不能给不存在的十步动作窗口/GAF/LVM endpoint伪造字段。D5/GAF只依据已有真实窗口验证，短窗口严格mask；normal policy rollout不等于demonstration，LVM positive仍缺对应示范/token资格。
+
+只允许CPU解析既有JSON/小数组并建立引用视图、synthetic兼容测试，不跑Torch/encoder/特征抽取或重编码全库，不重新hash全部17GB输出，不运行旧B GPU提案。增量覆盖至少cut5、cut55、p04 cut前终局与Q承诺内终局，并汇报每方法可用/缺项原因。按原CPU任务交RESULT；当前没有训练或B采集授权。

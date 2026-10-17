@@ -1,0 +1,139 @@
+{
+  "created_at_utc": "2026-09-21T16:45:56.071929+00:00",
+  "status": "PRIMARY_R_POST_ACCEPTED_VELOCITY_PENDING",
+  "source_receipt": "receipts/A/A_D24_MULTI_INTERVENTION_PILOT_V1_RESULT_r4.json",
+  "review_scope": "saved summary and paired counts only; no implementation, hardware, strict consistency checks or new experiments",
+  "completed_primary_rollouts": 80,
+  "technical_failures": 0,
+  "old_initial_states": 20,
+  "repeat": 0,
+  "cells": {
+    "R_once": {
+      "completed": 20,
+      "entered": 20,
+      "episode_wall_seconds_sum": 211.79632293293253,
+      "flow_calls": 3790,
+      "intervention_distribution": {
+        "0": 0,
+        "1": 20,
+        "2": 0,
+        "3+": 0
+      },
+      "planned": 20,
+      "sampling_calls": 379,
+      "success_rate": 0.65,
+      "successes": 13,
+      "technical_failures": 0
+    },
+    "R_multi": {
+      "completed": 20,
+      "entered": 20,
+      "episode_wall_seconds_sum": 196.74697136459872,
+      "flow_calls": 3810,
+      "intervention_distribution": {
+        "0": 0,
+        "1": 14,
+        "2": 4,
+        "3+": 2
+      },
+      "planned": 20,
+      "sampling_calls": 381,
+      "success_rate": 0.65,
+      "successes": 13,
+      "technical_failures": 0
+    },
+    "Post_once": {
+      "completed": 20,
+      "entered": 20,
+      "episode_wall_seconds_sum": 157.54717988008633,
+      "flow_calls": 2970,
+      "intervention_distribution": {
+        "0": 0,
+        "1": 20,
+        "2": 0,
+        "3+": 0
+      },
+      "planned": 20,
+      "sampling_calls": 297,
+      "success_rate": 0.8,
+      "successes": 16,
+      "technical_failures": 0
+    },
+    "Post_multi": {
+      "completed": 20,
+      "entered": 20,
+      "episode_wall_seconds_sum": 158.17479149159044,
+      "flow_calls": 3010,
+      "intervention_distribution": {
+        "0": 0,
+        "1": 16,
+        "2": 3,
+        "3+": 1
+      },
+      "planned": 20,
+      "sampling_calls": 301,
+      "success_rate": 0.8,
+      "successes": 16,
+      "technical_failures": 0
+    }
+  },
+  "comparisons": {
+    "Post_multi-Post_once": {
+      "harmed": [],
+      "paired_complete": 20,
+      "percentage_point_delta": 0,
+      "rescued": [],
+      "success_count_delta": 0
+    },
+    "Post_multi-R_multi": {
+      "harmed": [
+        "disassemble-v3__2026111765",
+        "disassemble-v3__2026111885"
+      ],
+      "paired_complete": 20,
+      "percentage_point_delta": 15,
+      "rescued": [
+        "disassemble-v3__2026111750",
+        "disassemble-v3__2026111755",
+        "disassemble-v3__2026111855",
+        "disassemble-v3__2026111865",
+        "disassemble-v3__2026111880"
+      ],
+      "success_count_delta": 3
+    },
+    "R_multi-R_once": {
+      "harmed": [],
+      "paired_complete": 20,
+      "percentage_point_delta": 0,
+      "rescued": [],
+      "success_count_delta": 0
+    }
+  },
+  "interpretation": {
+    "multi_vs_once": "Both R and Post have identical per-source binary outcomes; empirical gain 0 pp. Not proof of equivalence on other sources/tasks.",
+    "multiple_interventions_observed": {
+      "R_multi": 6,
+      "Post_multi": 4
+    },
+    "Post_vs_R": "15 pp on revealed development20; 5 rescued / 2 harmed; correction comparison, not benefit from lifting intervention cap.",
+    "cost": "Post_multi301 versus R_multi381 total sampling calls over20episodes each; 21.0% lower observed total, includes different termination times. Not latency speedup or samples per successful episode."
+  },
+  "main_matrix_decision": {
+    "cap": 1,
+    "methods": [
+      "R",
+      "Post",
+      "Velocity"
+    ],
+    "status": "retain_existing_protocol",
+    "same_trigger_and_algorithm": true,
+    "no_new_MT50_multi_matrix": true,
+    "no_extra_initial_states_or_repeats": true,
+    "no_further_per_job_release": true,
+    "pilot_Velocity_continues": true,
+    "next_after_pilot_group_exit": "existing D24 H10 R/Post/Velocity, then Post/Velocity H30/H50 then H20/H40; reuse completed N and canonical500test source identities; no new pool collection",
+    "new_Velocity_findings": "report complete pilot results; no automatic method-specific cap selection on test outcomes"
+  },
+  "execution_note": "Existing pilot remains running; this analysis does not declare group exit or holder restoration.",
+  "authority": "existing deadline AUTHORIZATION_V1 plus direct user approval; no new compute scope"
+}

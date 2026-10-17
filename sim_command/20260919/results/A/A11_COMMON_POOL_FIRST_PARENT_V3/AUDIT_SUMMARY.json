@@ -1,0 +1,110 @@
+{
+  "task_id": "A11_COMMON_POOL_FIRST_PARENT_V3",
+  "status": "TECHNICAL_FAILURE",
+  "command_invocations": 1,
+  "claims": 1,
+  "exit_code": 3,
+  "elapsed_seconds": 292.3574890107848,
+  "started_branches": [
+    "normal"
+  ],
+  "ledger_event_pairs": {
+    "launcher_numeric": 1,
+    "child_numeric": 13,
+    "initialization": 5464,
+    "graphics": 71
+  },
+  "actual_nonzero_operation_units": {
+    "cuda_device_pci_queries": 8,
+    "cuda_driver_initializations": 1,
+    "egl_device_attribute_queries": 8,
+    "egl_device_enumerations": 1,
+    "egl_device_string_queries": 8,
+    "egl_error_queries": 23,
+    "egl_release_thread_calls": 1,
+    "encoder_forward_calls": 1,
+    "environment_instances": 2,
+    "environment_reset_calls": 51,
+    "environment_seed_calls": 1,
+    "initialization_do_simulation_calls": 5100,
+    "initialization_mj_forward_calls": 206,
+    "initialization_physics_substeps": 25500,
+    "initialization_reset_calls": 51,
+    "language_embedding_forwards": 1,
+    "model_initializations": 1,
+    "native_mj_forward_calls": 206,
+    "native_nvml_identity_queries": 2,
+    "numpy_rng_seed_calls": 1,
+    "policy_device_property_queries": 1,
+    "policy_device_selections": 1,
+    "policy_model_loads": 1,
+    "policy_state_dict_loads": 1,
+    "policy_state_file_loads": 1,
+    "postprocessor_loads": 1,
+    "preprocessor_loads": 1,
+    "probe_explicit_cuda_symbol_lookups": 2,
+    "probe_explicit_driver_library_loads": 2,
+    "probe_explicit_egl_core_symbol_lookups": 11,
+    "probe_explicit_egl_get_proc_address_calls": 4,
+    "projection_loads": 1,
+    "python_rng_seed_calls": 1,
+    "reset_model_calls": 102,
+    "simulator_attempts": 1,
+    "taskset_constructions": 1,
+    "taskset_reset_calls": 50,
+    "tokenizer_calls": 1,
+    "tokenizer_loads": 1,
+    "torch_global_seed_calls": 2,
+    "wrapper_initialization_reset_calls": 1,
+    "wrapper_instances": 1
+  },
+  "actual_failed_meter_events": 0,
+  "actual_incomplete_meter_events": 0,
+  "primary_failure": "Invalid observation phase",
+  "cleanup_failures": 0,
+  "resource_counts_complete": true,
+  "within_116_caps": true,
+  "holder_count_restored": 8,
+  "runtime_reference_count": 9,
+  "run_files": 56,
+  "source_refs": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1/proposal/PROPOSAL.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1/proposal/PROPOSAL.json",
+      "sha256": "fd8df97f301d9d2d8c436ca79d571dc6fcbce97bb42ed3dbf0476d44b2e1e671",
+      "size_bytes": 16563
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1/config/CONFIG.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1/config/CONFIG.json",
+      "sha256": "55bfe541ff923ca268c38e06808029a2138f0cc6a8d6bfe6f3787053be92ecb7",
+      "size_bytes": 14367
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1/proposal/SOURCE_PROPOSAL.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1/proposal/SOURCE_PROPOSAL.json",
+      "sha256": "9576ca336be6287f22962acc977a4984be98ce5635633f6be0059939cf11acc8",
+      "size_bytes": 776
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1/INPUT_MANIFEST.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1/INPUT_MANIFEST.json",
+      "sha256": "8c1180db2f8cf2d6a4253b65da54be7625432e3b9380e6725d7c32dc023a131d",
+      "size_bytes": 498
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1/code/CODE_MANIFEST.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1/code/CODE_MANIFEST.json",
+      "sha256": "cfdf40be3c88978f57cadfbf3c7863914034a2052ddf48ef2f13b4f2c2d0e539",
+      "size_bytes": 7167
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_COLLECTOR_CPU_V1/proposal/SOURCE_PROPOSAL.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_COLLECTOR_CPU_V1/proposal/SOURCE_PROPOSAL.json",
+      "sha256": "9576ca336be6287f22962acc977a4984be98ce5635633f6be0059939cf11acc8",
+      "size_bytes": 776
+    }
+  ],
+  "release_consumed": true,
+  "retries": 0
+}

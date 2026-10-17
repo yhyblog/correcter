@@ -1,0 +1,744 @@
+{
+  "host": "trial-303224955-trialrun-303224955-worker-0",
+  "OS_sets": [
+    {
+      "index": 1,
+      "utc": "2026-09-21T14:21:04.743090+00:00",
+      "elapsed_seconds": 6.497837603092194e-06,
+      "files": {
+        "/proc/meminfo": {
+          "text": "MemTotal:       2112577612 kB\nMemFree:        1867389040 kB\nMemAvailable:   1740303344 kB\nBuffers:        14353336 kB\nCached:         148281792 kB\nSwapCached:            0 kB\nActive:         50747180 kB\nInactive:       128303864 kB\nActive(anon):     257760 kB\nInactive(anon): 16387100 kB\nActive(file):   50489420 kB\nInactive(file): 111916764 kB\nUnevictable:       58040 kB\nMlocked:           58040 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              1280 kB\nWriteback:             0 kB\nAnonPages:      16476196 kB\nMapped:          3749140 kB\nShmem:            542284 kB\nKReclaimable:    8994424 kB\nSlab:           24226836 kB\nSReclaimable:    8994424 kB\nSUnreclaim:     15232412 kB\nKernelStack:      156016 kB\nPageTables:       182544 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    1056288804 kB\nCommitted_AS:   94067972 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:     2566232 kB\nVmallocChunk:          0 kB\nPercpu:          2994432 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:    71960376 kB\nDirectMap2M:    1713387520 kB\nDirectMap1G:    363855872 kB\n"
+        },
+        "/proc/self/cgroup": {
+          "text": "11:memory:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n10:cpuset:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n9:devices:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n8:perf_event:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n7:hugetlb:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n6:pids:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n5:net_cls,net_prio:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n4:blkio:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n3:cpu,cpuacct:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n2:freezer:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n1:name=systemd:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n0::/\n"
+        },
+        "/proc/self/status": {
+          "text": "Name:\tpython\nUmask:\t0022\nState:\tR (running)\nTgid:\t1206170\nNgid:\t0\nPid:\t1206170\nPPid:\t1206169\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t \nNStgid:\t1206170\nNSpid:\t1206170\nNSpgid:\t1206169\nNSsid:\t1206169\nVmPeak:\t   23324 kB\nVmSize:\t   23256 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t   12528 kB\nVmRSS:\t   12528 kB\nRssAnon:\t    6108 kB\nRssFile:\t    6420 kB\nRssShmem:\t       0 kB\nVmData:\t    7928 kB\nVmStk:\t     188 kB\nVmExe:\t    2772 kB\nVmLib:\t    2388 kB\nVmPTE:\t      80 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nThreads:\t1\nSigQ:\t0/8252054\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000000000002\nCapInh:\t00000000a88465fb\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t00000000a88465fb\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffffffff,ffffffff,ffffffff,ffffffff,ffffffff,ffffffff,ffffffff\nCpus_allowed_list:\t0-223\nMems_allowed:\t00000000,00000003\nMems_allowed_list:\t0-1\nvoluntary_ctxt_switches:\t82\nnonvoluntary_ctxt_switches:\t0\n"
+        },
+        "/proc/pressure/memory": {
+          "text": "some avg10=0.00 avg60=0.00 avg300=0.00 total=5801285822\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=5651060139\n"
+        },
+        "/proc/pressure/cpu": {
+          "text": "some avg10=6.82 avg60=4.66 avg300=4.38 total=157767262687\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n"
+        },
+        "/proc/pressure/io": {
+          "text": "some avg10=0.00 avg60=0.00 avg300=0.00 total=8239876445\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=7715311547\n"
+        },
+        "/proc/loadavg": {
+          "text": "6.89 7.50 9.15 5/9508 1206170\n"
+        },
+        "/proc/1/comm": {
+          "text": "python\n"
+        },
+        "/proc/sys/kernel/random/boot_id": {
+          "text": "9011c00c-6953-4cb3-a724-1a6f90d196d4\n"
+        },
+        "/sys/fs/cgroup/memory.max": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/memory.max'"
+        },
+        "/sys/fs/cgroup/memory.current": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/memory.current'"
+        },
+        "/sys/fs/cgroup/memory.peak": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/memory.peak'"
+        },
+        "/sys/fs/cgroup/memory.events": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/memory.events'"
+        },
+        "/sys/fs/cgroup/cpu.max": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/cpu.max'"
+        },
+        "/sys/fs/cgroup/cpu.stat": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/cpu.stat'"
+        },
+        "/sys/fs/cgroup/cpuset.cpus.effective": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/cpuset.cpus.effective'"
+        },
+        "/sys/fs/cgroup/io.stat": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/io.stat'"
+        },
+        "/sys/fs/cgroup/memory/memory.limit_in_bytes": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/memory/memory.limit_in_bytes'"
+        },
+        "/sys/fs/cgroup/memory/memory.usage_in_bytes": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/memory/memory.usage_in_bytes'"
+        },
+        "/sys/fs/cgroup/memory/memory.max_usage_in_bytes": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/memory/memory.max_usage_in_bytes'"
+        },
+        "/sys/fs/cgroup/memory/memory.failcnt": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/memory/memory.failcnt'"
+        },
+        "/sys/fs/cgroup/cpu/cpu.cfs_quota_us": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/cpu/cpu.cfs_quota_us'"
+        },
+        "/sys/fs/cgroup/cpu/cpu.cfs_period_us": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/cpu/cpu.cfs_period_us'"
+        },
+        "/sys/fs/cgroup/cpuset/cpuset.cpus": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/cpuset/cpuset.cpus'"
+        }
+      },
+      "sched_affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223
+      ],
+      "systemctl_path": "/usr/bin/systemctl",
+      "systemd_runtime_exists": false,
+      "statvfs": {
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A": {
+          "f_bavail": 2747837259579,
+          "f_frsize": 4096,
+          "f_favail": 9984689415,
+          "f_blocks": 2748779069440,
+          "available_bytes": 11255141415235584
+        },
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A": {
+          "f_bavail": 2747837259579,
+          "f_frsize": 4096,
+          "f_favail": 9984689415,
+          "f_blocks": 2748779069440,
+          "available_bytes": 11255141415235584
+        },
+        "/tmp": {
+          "f_bavail": 824641256,
+          "f_frsize": 4096,
+          "f_favail": 233816550,
+          "f_blocks": 922681050,
+          "available_bytes": 3377730584576
+        }
+      }
+    },
+    {
+      "index": 2,
+      "utc": "2026-09-21T14:21:07.978313+00:00",
+      "elapsed_seconds": 3.235256461892277,
+      "files": {
+        "/proc/meminfo": {
+          "text": "MemTotal:       2112577612 kB\nMemFree:        1867413872 kB\nMemAvailable:   1740328540 kB\nBuffers:        14353336 kB\nCached:         148282512 kB\nSwapCached:            0 kB\nActive:         50747736 kB\nInactive:       128322688 kB\nActive(anon):     258164 kB\nInactive(anon): 16405512 kB\nActive(file):   50489572 kB\nInactive(file): 111917176 kB\nUnevictable:       58040 kB\nMlocked:           58040 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              2892 kB\nWriteback:             0 kB\nAnonPages:      16496188 kB\nMapped:          3765352 kB\nShmem:            542392 kB\nKReclaimable:    8994584 kB\nSlab:           24227092 kB\nSReclaimable:    8994584 kB\nSUnreclaim:     15232508 kB\nKernelStack:      155920 kB\nPageTables:       180712 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    1056288804 kB\nCommitted_AS:   92674612 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:     2566328 kB\nVmallocChunk:          0 kB\nPercpu:          2994432 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:    71960376 kB\nDirectMap2M:    1713387520 kB\nDirectMap1G:    363855872 kB\n"
+        },
+        "/proc/self/cgroup": {
+          "text": "11:memory:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n10:cpuset:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n9:devices:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n8:perf_event:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n7:hugetlb:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n6:pids:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n5:net_cls,net_prio:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n4:blkio:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n3:cpu,cpuacct:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n2:freezer:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n1:name=systemd:/kubepods/podc3345f9c-4aa4-40cb-a2ca-79eea735ea03/8d9959dbc22b1dabd9a770521ed0b10cf8cac831db4c1de7d7683d019de8b38a\n0::/\n"
+        },
+        "/proc/self/status": {
+          "text": "Name:\tpython\nUmask:\t0022\nState:\tR (running)\nTgid:\t1206170\nNgid:\t0\nPid:\t1206170\nPPid:\t1206169\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t \nNStgid:\t1206170\nNSpid:\t1206170\nNSpgid:\t1206169\nNSsid:\t1206169\nVmPeak:\t   23324 kB\nVmSize:\t   23256 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t   12528 kB\nVmRSS:\t   12528 kB\nRssAnon:\t    6108 kB\nRssFile:\t    6420 kB\nRssShmem:\t       0 kB\nVmData:\t    7928 kB\nVmStk:\t     188 kB\nVmExe:\t    2772 kB\nVmLib:\t    2388 kB\nVmPTE:\t      80 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nThreads:\t1\nSigQ:\t0/8252054\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000000000002\nCapInh:\t00000000a88465fb\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t00000000a88465fb\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffffffff,ffffffff,ffffffff,ffffffff,ffffffff,ffffffff,ffffffff\nCpus_allowed_list:\t0-223\nMems_allowed:\t00000000,00000003\nMems_allowed_list:\t0-1\nvoluntary_ctxt_switches:\t98\nnonvoluntary_ctxt_switches:\t0\n"
+        },
+        "/proc/pressure/memory": {
+          "text": "some avg10=0.00 avg60=0.00 avg300=0.00 total=5801285822\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=5651060139\n"
+        },
+        "/proc/pressure/cpu": {
+          "text": "some avg10=8.18 avg60=5.04 avg300=4.46 total=157767566720\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n"
+        },
+        "/proc/pressure/io": {
+          "text": "some avg10=0.00 avg60=0.00 avg300=0.00 total=8239876508\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=7715311610\n"
+        },
+        "/proc/loadavg": {
+          "text": "6.98 7.51 9.14 7/9523 1206252\n"
+        },
+        "/proc/1/comm": {
+          "text": "python\n"
+        },
+        "/proc/sys/kernel/random/boot_id": {
+          "text": "9011c00c-6953-4cb3-a724-1a6f90d196d4\n"
+        },
+        "/sys/fs/cgroup/memory.max": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/memory.max'"
+        },
+        "/sys/fs/cgroup/memory.current": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/memory.current'"
+        },
+        "/sys/fs/cgroup/memory.peak": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/memory.peak'"
+        },
+        "/sys/fs/cgroup/memory.events": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/memory.events'"
+        },
+        "/sys/fs/cgroup/cpu.max": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/cpu.max'"
+        },
+        "/sys/fs/cgroup/cpu.stat": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/cpu.stat'"
+        },
+        "/sys/fs/cgroup/cpuset.cpus.effective": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/cpuset.cpus.effective'"
+        },
+        "/sys/fs/cgroup/io.stat": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/io.stat'"
+        },
+        "/sys/fs/cgroup/memory/memory.limit_in_bytes": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/memory/memory.limit_in_bytes'"
+        },
+        "/sys/fs/cgroup/memory/memory.usage_in_bytes": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/memory/memory.usage_in_bytes'"
+        },
+        "/sys/fs/cgroup/memory/memory.max_usage_in_bytes": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/memory/memory.max_usage_in_bytes'"
+        },
+        "/sys/fs/cgroup/memory/memory.failcnt": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/memory/memory.failcnt'"
+        },
+        "/sys/fs/cgroup/cpu/cpu.cfs_quota_us": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/cpu/cpu.cfs_quota_us'"
+        },
+        "/sys/fs/cgroup/cpu/cpu.cfs_period_us": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/cpu/cpu.cfs_period_us'"
+        },
+        "/sys/fs/cgroup/cpuset/cpuset.cpus": {
+          "error": "FileNotFoundError:[Errno 2] No such file or directory: '/sys/fs/cgroup/cpuset/cpuset.cpus'"
+        }
+      },
+      "sched_affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223
+      ],
+      "systemctl_path": "/usr/bin/systemctl",
+      "systemd_runtime_exists": false,
+      "statvfs": {
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A": {
+          "f_bavail": 2747837259579,
+          "f_frsize": 4096,
+          "f_favail": 9984689415,
+          "f_blocks": 2748779069440,
+          "available_bytes": 11255141415235584
+        },
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A": {
+          "f_bavail": 2747837259579,
+          "f_frsize": 4096,
+          "f_favail": 9984689415,
+          "f_blocks": 2748779069440,
+          "available_bytes": 11255141415235584
+        },
+        "/tmp": {
+          "f_bavail": 824641108,
+          "f_frsize": 4096,
+          "f_favail": 233816549,
+          "f_blocks": 922681050,
+          "available_bytes": 3377729978368
+        }
+      }
+    }
+  ],
+  "GPU_snapshot": {
+    "argv": [
+      "nvidia-smi",
+      "--query-gpu=index,uuid,pci.bus_id,name,driver_version,memory.total,memory.used,memory.free,utilization.gpu",
+      "--format=csv,noheader,nounits"
+    ],
+    "utc": "2026-09-21T14:21:04.978225+00:00",
+    "returncode": 0,
+    "stdout": "0, GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe, 00000000:0F:00.0, NVIDIA H100 80GB HBM3, 535.161.08, 81559, 1013, 79994, 51\n1, GPU-64240b2e-5845-da58-e703-61322f21cbf6, 00000000:2D:00.0, NVIDIA H100 80GB HBM3, 535.161.08, 81559, 1013, 79994, 50\n2, GPU-2254f286-1a7d-edf8-e4a4-f24c051cab83, 00000000:44:00.0, NVIDIA H100 80GB HBM3, 535.161.08, 81559, 1013, 79994, 50\n3, GPU-8a8b08b1-2a03-ae94-bac7-4f690cf5c5d8, 00000000:5B:00.0, NVIDIA H100 80GB HBM3, 535.161.08, 81559, 1013, 79994, 50\n4, GPU-ec35bc25-f521-4261-e3a3-cf536a41aa64, 00000000:89:00.0, NVIDIA H100 80GB HBM3, 535.161.08, 81559, 1013, 79994, 50\n5, GPU-7a3ce392-0958-db98-bd25-b95810298e5f, 00000000:A8:00.0, NVIDIA H100 80GB HBM3, 535.161.08, 81559, 1013, 79994, 49\n6, GPU-b63ae919-c2a3-ff8c-3527-2f924152251f, 00000000:C0:00.0, NVIDIA H100 80GB HBM3, 535.161.08, 81559, 1013, 79994, 49\n7, GPU-893accc7-1601-840b-ea72-5d8302ef6d44, 00000000:D8:00.0, NVIDIA H100 80GB HBM3, 535.161.08, 81559, 1013, 79994, 50\n",
+    "stderr": "",
+    "read_only_full_GPU_snapshot_invocations": 1,
+    "CUDA_EGL_contexts_created": 0
+  },
+  "existing_guard_cache": {
+    "pid": 27508,
+    "updated": 1790000465.141518,
+    "gpus": {
+      "0": {
+        "state": "holder",
+        "manager_pid": 1190678,
+        "driver_pids": [
+          3357120
+        ]
+      },
+      "1": {
+        "state": "holder",
+        "manager_pid": 1190679,
+        "driver_pids": [
+          3357124
+        ]
+      },
+      "2": {
+        "state": "holder",
+        "manager_pid": 1190680,
+        "driver_pids": [
+          3357123
+        ]
+      },
+      "3": {
+        "state": "holder",
+        "manager_pid": 1190681,
+        "driver_pids": [
+          3357126
+        ]
+      },
+      "4": {
+        "state": "holder",
+        "manager_pid": 1190682,
+        "driver_pids": [
+          3357128
+        ]
+      },
+      "5": {
+        "state": "holder",
+        "manager_pid": 1190683,
+        "driver_pids": [
+          3357130
+        ]
+      },
+      "6": {
+        "state": "holder",
+        "manager_pid": 1190684,
+        "driver_pids": [
+          3357132
+        ]
+      },
+      "7": {
+        "state": "holder",
+        "manager_pid": 1190685,
+        "driver_pids": [
+          3357134
+        ]
+      }
+    }
+  },
+  "observation_window_seconds": 3.2364548295736313,
+  "new_model_environment_calls": 0,
+  "holder_start_stop_calls": 0,
+  "metadata_only": true
+}

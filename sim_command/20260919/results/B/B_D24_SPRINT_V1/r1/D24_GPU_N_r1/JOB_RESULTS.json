@@ -1,0 +1,106 @@
+{
+  "pi05official_N_libero_object": {
+    "status": "failed",
+    "exit_code": 1,
+    "timeout": false,
+    "worker_status": {
+      "status": "failed",
+      "job_id": "pi05official_N_libero_object",
+      "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+      "suite": "libero_object",
+      "H": 10,
+      "K": 5,
+      "method": "N",
+      "source_policy": "new deterministic task randomization from frozen seeds; save pre-settle simulator state for paired comparisons; distinct from official 50-init-state benchmark protocol",
+      "planned_episodes": 100,
+      "completed_episodes": 0,
+      "technical_failures": 0,
+      "error": "ImportError('Cannot initialize a EGL device display. This likely means that your EGL driver does not support the PLATFORM_DEVICE extension, which is required for creating a headless rendering context.')",
+      "elapsed_seconds": 4.545614307047799,
+      "at_utc": "2026-09-21T15:41:35.634240+00:00",
+      "job_error": "RuntimeError('LIBERO client exited: 1')"
+    },
+    "all_owned_descendants_exited": true
+  },
+  "pi05official_N_libero_goal": {
+    "status": "failed",
+    "exit_code": 1,
+    "timeout": false,
+    "worker_status": {
+      "status": "failed",
+      "job_id": "pi05official_N_libero_goal",
+      "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+      "suite": "libero_goal",
+      "H": 10,
+      "K": 5,
+      "method": "N",
+      "source_policy": "new deterministic task randomization from frozen seeds; save pre-settle simulator state for paired comparisons; distinct from official 50-init-state benchmark protocol",
+      "planned_episodes": 100,
+      "completed_episodes": 0,
+      "technical_failures": 0,
+      "error": "ImportError('Cannot initialize a EGL device display. This likely means that your EGL driver does not support the PLATFORM_DEVICE extension, which is required for creating a headless rendering context.')",
+      "elapsed_seconds": 4.54494270705618,
+      "at_utc": "2026-09-21T15:41:35.633250+00:00",
+      "job_error": "RuntimeError('LIBERO client exited: 1')"
+    },
+    "all_owned_descendants_exited": true
+  },
+  "pi05official_N_libero_10": {
+    "status": "failed",
+    "exit_code": 1,
+    "timeout": false,
+    "worker_status": {
+      "status": "failed",
+      "job_id": "pi05official_N_libero_10",
+      "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+      "suite": "libero_10",
+      "H": 10,
+      "K": 5,
+      "method": "N",
+      "source_policy": "new deterministic task randomization from frozen seeds; save pre-settle simulator state for paired comparisons; distinct from official 50-init-state benchmark protocol",
+      "planned_episodes": 100,
+      "completed_episodes": 0,
+      "technical_failures": 0,
+      "error": "ImportError('Cannot initialize a EGL device display. This likely means that your EGL driver does not support the PLATFORM_DEVICE extension, which is required for creating a headless rendering context.')",
+      "elapsed_seconds": 4.519189117942005,
+      "at_utc": "2026-09-21T15:41:35.618619+00:00",
+      "job_error": "RuntimeError('LIBERO client exited: 1')"
+    },
+    "all_owned_descendants_exited": true
+  },
+  "pi05official_N_libero_spatial": {
+    "status": "failed",
+    "exit_code": 1,
+    "timeout": false,
+    "worker_status": {
+      "status": "failed",
+      "job_id": "pi05official_N_libero_spatial",
+      "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+      "suite": "libero_spatial",
+      "H": 10,
+      "K": 5,
+      "method": "N",
+      "source_policy": "new deterministic task randomization from frozen seeds; save pre-settle simulator state for paired comparisons; distinct from official 50-init-state benchmark protocol",
+      "planned_episodes": 100,
+      "completed_episodes": 27,
+      "technical_failures": 1,
+      "server": {
+        "model": "pi05",
+        "config": "pi05_libero",
+        "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+        "H": 10,
+        "NFE": 10,
+        "policy_rng": "fixed per source, reset before first query",
+        "load_seconds": 13.493457661941648,
+        "job_id": "pi05official_N_libero_spatial",
+        "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479"
+      },
+      "latest_source": "D24_LIBERO_libero_spatial_t02_e07",
+      "at_utc": "2026-09-21T15:57:36.517512+00:00",
+      "error": "FileNotFoundError(2, 'No such file or directory')",
+      "elapsed_seconds": 965.7660148290452,
+      "job_error": "RuntimeError('LIBERO client exited: 1')"
+    },
+    "all_owned_descendants_exited": true
+  }
+}

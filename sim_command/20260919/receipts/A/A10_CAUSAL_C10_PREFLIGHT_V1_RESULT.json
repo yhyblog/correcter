@@ -1,0 +1,687 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A10_CAUSAL_C10_PREFLIGHT_V1",
+  "revision": 1,
+  "owner": "A",
+  "hostname": "trial-303224955-trialrun-303224955-worker-0",
+  "status": "TECHNICAL_FAILURE",
+  "at_utc": "2026-09-20T00:18:00.439684+00:00",
+  "ACK": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_CAUSAL_C10_PREFLIGHT_V1_ACK.json",
+    "sha256": "5bdb42df6d5011610b023ec63e11e069c77030e38bc436ef4d0d6683fc6c03e6",
+    "size_bytes": 4127
+  },
+  "release": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_CAUSAL_C10_PREFLIGHT_V1.json",
+    "sha256": "71b1ddc1d214f564988551b0c6138b953ae3d43a3140e76b05d2c684b40b9cd8",
+    "size_bytes": 18754
+  },
+  "claim": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_release_claims/P10_A_CAUSAL_C10_PREFLIGHT_V1.json",
+    "sha256": "41d57757519912ad6f55fe71a9eb394efa59c9bfa831fbc36015c86f5d9ca00c",
+    "size_bytes": 327
+  },
+  "command_invocations": 1,
+  "claim_count": 1,
+  "actual_branch_attempts": 1,
+  "release_consumed": true,
+  "release_closure_by_analysis_pending": true,
+  "remaining_caps_reusable": false,
+  "automatic_retry": false,
+  "raw_exit_code": 3,
+  "elapsed_seconds": 279.66643508011475,
+  "failure": {
+    "type": "TypeError",
+    "message": "dict() got multiple values for keyword argument 'branch'"
+  },
+  "failure_stage": "Post branch_start private event serialization before environment reset",
+  "source_analysis": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_PREFLIGHT_V1/FAILURE_SOURCE_ANALYSIS.json",
+    "sha256": "2b9e1f4b264d75781a1cc49b9b279aa5a59d35d4253e332d994e51e5fe83e02e",
+    "size_bytes": 2386
+  },
+  "planned_branches": [
+    "Post",
+    "Velocity"
+  ],
+  "actually_started_branches": [
+    "Post"
+  ],
+  "completed_C10_branches": [],
+  "per_branch_coverage": [
+    {
+      "branch": "Post",
+      "planned": true,
+      "process_started": true,
+      "diagnostic_attempt_entered": 1,
+      "legal_cut_reached": false,
+      "cut_record": null,
+      "real_G0_trigger": null,
+      "forced_engineering_intervention": null,
+      "trigger_record": null,
+      "native_controls_entered": 0,
+      "native_controls_returned": 0,
+      "causal_transition_records": 0,
+      "causal_transition_count_complete": true,
+      "prefix_steps_saved": 0,
+      "C10_steps_saved": 0,
+      "C10_steps_actual": 0,
+      "C10_tail_discarded": false,
+      "H20_refill_raw_plan_saved": false,
+      "H20_first_steps_saved": 0,
+      "H20_restored": false,
+      "H20_remaining": null,
+      "completed_C10_and_H20": false,
+      "branch_result": null,
+      "failure": {
+        "type": "TypeError",
+        "message": "dict() got multiple values for keyword argument 'branch'"
+      },
+      "missing_stage_reason": "{'type': 'TypeError', 'message': \"dict() got multiple values for keyword argument 'branch'\"}"
+    },
+    {
+      "branch": "Velocity",
+      "planned": true,
+      "process_started": false,
+      "diagnostic_attempt_entered": 0,
+      "legal_cut_reached": false,
+      "cut_record": null,
+      "real_G0_trigger": null,
+      "forced_engineering_intervention": null,
+      "trigger_record": null,
+      "native_controls_entered": 0,
+      "native_controls_returned": 0,
+      "causal_transition_records": 0,
+      "causal_transition_count_complete": true,
+      "prefix_steps_saved": 0,
+      "C10_steps_saved": 0,
+      "C10_steps_actual": 0,
+      "C10_tail_discarded": false,
+      "H20_refill_raw_plan_saved": false,
+      "H20_first_steps_saved": 0,
+      "H20_restored": false,
+      "H20_remaining": null,
+      "completed_C10_and_H20": false,
+      "branch_result": null,
+      "failure": null,
+      "missing_stage_reason": "not started: first branch did not complete C10_and_H20_checked or launcher failed before branch entry"
+    }
+  ],
+  "resource_entered": {
+    "D_forward_calls": 0,
+    "D_model_initializations": 2,
+    "D_model_loads": 2,
+    "G0_forward_calls": 0,
+    "G0_model_initializations": 2,
+    "G0_model_loads": 2,
+    "action_expert_forwards": 0,
+    "action_gradient_calls": 0,
+    "baseline_rollouts": 0,
+    "completed_rollouts": 0,
+    "context_builds": 0,
+    "control_observation_calls": 0,
+    "critic_backward_calls": 0,
+    "critic_feature_transforms": 0,
+    "critic_forward_calls": 0,
+    "critic_model_loads": 4,
+    "critic_parameter_updates": 0,
+    "cuda_device_count_queries": 0,
+    "cuda_device_pci_queries": 8,
+    "cuda_driver_initializations": 1,
+    "cuda_error_string_queries": 0,
+    "cuda_uuid_queries": 0,
+    "deletions": 0,
+    "diagnostic_reset_calls": 0,
+    "egl_bind_api_calls": 0,
+    "egl_choose_config_calls": 0,
+    "egl_destroy_context_calls": 0,
+    "egl_device_attribute_queries": 8,
+    "egl_device_binary_queries": 0,
+    "egl_device_enumerations": 1,
+    "egl_device_string_queries": 8,
+    "egl_drm_string_queries": 0,
+    "egl_error_queries": 23,
+    "egl_initialize_calls": 0,
+    "egl_make_current_calls": 0,
+    "egl_platform_display_calls": 0,
+    "egl_query_string_calls": 0,
+    "egl_release_thread_calls": 1,
+    "egl_terminate_calls": 0,
+    "encoder_forward_calls": 1,
+    "env_steps": 0,
+    "environment_instances": 0,
+    "environment_reset_calls": 0,
+    "environment_state_restores": 0,
+    "explicit_mj_forward_calls": 0,
+    "flow_forward_calls": 0,
+    "graphics_context_creations": 0,
+    "image_preprocessing_calls": 0,
+    "initialization_do_simulation_calls": 0,
+    "initialization_mj_forward_calls": 0,
+    "initialization_physics_substeps": 0,
+    "initialization_reset_calls": 0,
+    "language_embedding_forwards": 1,
+    "model_gpu_inference_calls": 0,
+    "model_initializations": 9,
+    "monitor_calls": 0,
+    "mujoco_render_context_creations": 0,
+    "mujoco_render_context_frees": 0,
+    "mujoco_scene_updates": 0,
+    "mujoco_set_buffer_calls": 0,
+    "native_mj_forward_calls": 0,
+    "native_nvml_identity_queries": 2,
+    "noise_draws": 0,
+    "normalizer_transform_loads": 1,
+    "objective_forward_calls": 0,
+    "observation_calls": 0,
+    "offscreen_viewer_creations": 0,
+    "optimizer_updates": 0,
+    "own_projection_calls": 0,
+    "policy_device_property_queries": 1,
+    "policy_device_selections": 1,
+    "policy_do_simulation_calls": 0,
+    "policy_mj_forward_calls": 0,
+    "policy_model_loads": 1,
+    "policy_physics_substeps": 0,
+    "policy_state_dict_loads": 1,
+    "policy_state_file_loads": 1,
+    "post_action_gradient_calls": 0,
+    "postprocessor_calls": 0,
+    "postprocessor_loads": 1,
+    "prefix_transformer_forwards": 0,
+    "preprocessor_calls": 0,
+    "preprocessor_loads": 1,
+    "probe_explicit_cuda_symbol_lookups": 2,
+    "probe_explicit_driver_library_loads": 2,
+    "probe_explicit_egl_core_symbol_lookups": 11,
+    "probe_explicit_egl_get_proc_address_calls": 4,
+    "probe_explicit_gl_string_queries": 0,
+    "projection_loads": 1,
+    "raw_constraint_audits": 0,
+    "render_calls": 0,
+    "reset_model_calls": 0,
+    "reset_observation_calls": 0,
+    "retries": 0,
+    "rgb_readback_calls": 0,
+    "simulator_attempts": 1,
+    "spatial_projection_calls": 0,
+    "static_scene_constructions": 0,
+    "static_scene_data_constructions": 0,
+    "taskset_constructions": 0,
+    "taskset_reset_calls": 0,
+    "tokenizer_calls": 1,
+    "tokenizer_loads": 1,
+    "training_updates": 0,
+    "velocity_action_gradient_calls": 0,
+    "visual_encoder_forwards": 0,
+    "vla_backward_calls": 0,
+    "vla_parameter_backward_calls": 0,
+    "vla_sampling_calls": 0,
+    "wrapper_initialization_reset_calls": 0,
+    "wrapper_instances": 0
+  },
+  "resource_returned": {
+    "D_forward_calls": 0,
+    "D_model_initializations": 2,
+    "D_model_loads": 2,
+    "G0_forward_calls": 0,
+    "G0_model_initializations": 2,
+    "G0_model_loads": 2,
+    "action_expert_forwards": 0,
+    "action_gradient_calls": 0,
+    "baseline_rollouts": 0,
+    "completed_rollouts": 0,
+    "context_builds": 0,
+    "control_observation_calls": 0,
+    "critic_backward_calls": 0,
+    "critic_feature_transforms": 0,
+    "critic_forward_calls": 0,
+    "critic_model_loads": 4,
+    "critic_parameter_updates": 0,
+    "cuda_device_count_queries": 0,
+    "cuda_device_pci_queries": 8,
+    "cuda_driver_initializations": 1,
+    "cuda_error_string_queries": 0,
+    "cuda_uuid_queries": 0,
+    "deletions": 0,
+    "diagnostic_reset_calls": 0,
+    "egl_bind_api_calls": 0,
+    "egl_choose_config_calls": 0,
+    "egl_destroy_context_calls": 0,
+    "egl_device_attribute_queries": 8,
+    "egl_device_binary_queries": 0,
+    "egl_device_enumerations": 1,
+    "egl_device_string_queries": 8,
+    "egl_drm_string_queries": 0,
+    "egl_error_queries": 23,
+    "egl_initialize_calls": 0,
+    "egl_make_current_calls": 0,
+    "egl_platform_display_calls": 0,
+    "egl_query_string_calls": 0,
+    "egl_release_thread_calls": 1,
+    "egl_terminate_calls": 0,
+    "encoder_forward_calls": 1,
+    "env_steps": 0,
+    "environment_instances": 0,
+    "environment_reset_calls": 0,
+    "environment_state_restores": 0,
+    "explicit_mj_forward_calls": 0,
+    "flow_forward_calls": 0,
+    "graphics_context_creations": 0,
+    "image_preprocessing_calls": 0,
+    "initialization_do_simulation_calls": 0,
+    "initialization_mj_forward_calls": 0,
+    "initialization_physics_substeps": 0,
+    "initialization_reset_calls": 0,
+    "language_embedding_forwards": 1,
+    "model_gpu_inference_calls": 0,
+    "model_initializations": 9,
+    "monitor_calls": 0,
+    "mujoco_render_context_creations": 0,
+    "mujoco_render_context_frees": 0,
+    "mujoco_scene_updates": 0,
+    "mujoco_set_buffer_calls": 0,
+    "native_mj_forward_calls": 0,
+    "native_nvml_identity_queries": 2,
+    "noise_draws": 0,
+    "normalizer_transform_loads": 1,
+    "objective_forward_calls": 0,
+    "observation_calls": 0,
+    "offscreen_viewer_creations": 0,
+    "optimizer_updates": 0,
+    "own_projection_calls": 0,
+    "policy_device_property_queries": 1,
+    "policy_device_selections": 1,
+    "policy_do_simulation_calls": 0,
+    "policy_mj_forward_calls": 0,
+    "policy_model_loads": 1,
+    "policy_physics_substeps": 0,
+    "policy_state_dict_loads": 1,
+    "policy_state_file_loads": 1,
+    "post_action_gradient_calls": 0,
+    "postprocessor_calls": 0,
+    "postprocessor_loads": 1,
+    "prefix_transformer_forwards": 0,
+    "preprocessor_calls": 0,
+    "preprocessor_loads": 1,
+    "probe_explicit_cuda_symbol_lookups": 2,
+    "probe_explicit_driver_library_loads": 2,
+    "probe_explicit_egl_core_symbol_lookups": 11,
+    "probe_explicit_egl_get_proc_address_calls": 4,
+    "probe_explicit_gl_string_queries": 0,
+    "projection_loads": 1,
+    "raw_constraint_audits": 0,
+    "render_calls": 0,
+    "reset_model_calls": 0,
+    "reset_observation_calls": 0,
+    "retries": 0,
+    "rgb_readback_calls": 0,
+    "simulator_attempts": 1,
+    "spatial_projection_calls": 0,
+    "static_scene_constructions": 0,
+    "static_scene_data_constructions": 0,
+    "taskset_constructions": 0,
+    "taskset_reset_calls": 0,
+    "tokenizer_calls": 1,
+    "tokenizer_loads": 1,
+    "training_updates": 0,
+    "velocity_action_gradient_calls": 0,
+    "visual_encoder_forwards": 0,
+    "vla_backward_calls": 0,
+    "vla_parameter_backward_calls": 0,
+    "vla_sampling_calls": 0,
+    "wrapper_initialization_reset_calls": 0,
+    "wrapper_instances": 0
+  },
+  "counts_complete": true,
+  "within_caps": true,
+  "private_ledger_event_pairs": {
+    "parent": 1,
+    "Post_numeric": 28,
+    "Post_initialization": 0,
+    "Post_graphics": 71,
+    "Velocity_not_entered": true
+  },
+  "stage_unavailable": [
+    "live observations/RGB",
+    "native prefix actions/transitions",
+    "legal cut",
+    "matured D residual",
+    "G0 decision/real-vs-forced flag",
+    "Post/Velocity new anchor/noise/flow/numerics/constraints",
+    "C10 execution",
+    "raw tail discard",
+    "H20 restore/remaining19",
+    "final parameter-version verification"
+  ],
+  "G0_real_trigger": null,
+  "forced_engineering_intervention": null,
+  "final_frozen_parameter_version_check": null,
+  "process_family_cleanup": {
+    "status": "all_formal_group_members_exited",
+    "process_group": 305957,
+    "actions": [],
+    "elapsed_seconds": 0.0013105240650475025,
+    "scope": "guard-created isolated session; native diagnostic forbids detached descendants"
+  },
+  "holder_restoration": {
+    "status": "occupancy_resolved",
+    "guard_status": {
+      "pid": 27508,
+      "updated": 1789863187.6137702,
+      "gpus": {
+        "0": {
+          "state": "holder",
+          "manager_pid": 306666,
+          "driver_pids": [
+            3216247
+          ]
+        },
+        "1": {
+          "state": "holder",
+          "manager_pid": 306667,
+          "driver_pids": [
+            3216255
+          ]
+        },
+        "2": {
+          "state": "holder",
+          "manager_pid": 306668,
+          "driver_pids": [
+            3216250
+          ]
+        },
+        "3": {
+          "state": "holder",
+          "manager_pid": 306669,
+          "driver_pids": [
+            3216262
+          ]
+        },
+        "4": {
+          "state": "holder",
+          "manager_pid": 306670,
+          "driver_pids": [
+            3216258
+          ]
+        },
+        "5": {
+          "state": "holder",
+          "manager_pid": 306671,
+          "driver_pids": [
+            3216260
+          ]
+        },
+        "6": {
+          "state": "holder",
+          "manager_pid": 306672,
+          "driver_pids": [
+            3216266
+          ]
+        },
+        "7": {
+          "state": "holder",
+          "manager_pid": 306673,
+          "driver_pids": [
+            3216264
+          ]
+        }
+      }
+    },
+    "external_jobs_preserved": true,
+    "observed_at": {
+      "monotonic_seconds": 3903072.495712199,
+      "unix_seconds": 1789863187.946141,
+      "utc": "2026-09-20T00:13:07.946143+00:00"
+    }
+  },
+  "holder_count_restored": 8,
+  "guard_daemon_restarted": false,
+  "timing": {
+    "parent_full_checks_and_identity_seconds": 14.904900058172643,
+    "observed_lifecycle_request_to_reserved_entry_seconds": 67.38673368282616,
+    "Post_timed_child_seconds": 187.95053769322112,
+    "post_reservation_group_exit_to_restoration_observed_seconds": 9.00432444922626,
+    "outer_command_seconds": 279.66643508011475,
+    "whole_end_to_end_hard_cap": null,
+    "handoff_nominal_cap_seconds": 300,
+    "per_child_timeout_seconds": 1800,
+    "per_child_kill_grace_seconds": 30,
+    "guard_successful_poll_count": null,
+    "guard_poll_scope": "not included in parent/branch NVML identity calls; successful raw polling sequence absent",
+    "GPU_seconds": null,
+    "peak_RAM_bytes": null,
+    "peak_VRAM_bytes": null
+  },
+  "artifacts": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_PREFLIGHT_V1/REPORT.md",
+      "sha256": "66cf4255f53cb5b7506012b97a0fe7708de58afdb997b432603370cd45f8339f",
+      "size_bytes": 2821
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_PREFLIGHT_V1/LAUNCH_RESULT.json",
+      "sha256": "0d15fb38c7b822957aecc125d3076e82163d4393de6feefd4660faf76a593d07",
+      "size_bytes": 52978
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_PREFLIGHT_V1/EVIDENCE_MANIFEST.json",
+      "sha256": "f8f042056b26a143d479e98183a1df97ec2db796f21bae660d835afca3cb6068",
+      "size_bytes": 16932
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_PREFLIGHT_V1/BRANCH_COVERAGE.json",
+      "sha256": "3f10e22e7c023a663125084a5743e859d02197c5d99470bcc12cd2c90bfe370b",
+      "size_bytes": 2179
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_PREFLIGHT_V1/INDEPENDENT_LEDGER_AUDIT.json",
+      "sha256": "71ee85264311ede357261902af55880dd3da9a0055e77efcda596f4c7a7f58e4",
+      "size_bytes": 49715
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_PREFLIGHT_V1/EXIT_AND_RESTORATION.json",
+      "sha256": "78bbe2c15c49722f5d4b65be7a862f58eb9b8ff07ce44d13688dbbb45956ed2a",
+      "size_bytes": 5426
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_PREFLIGHT_V1/TIMING_AND_HOLDER_AUDIT.json",
+      "sha256": "00a0f624bd688a0f49abc6cd38b80445be80950e16f01b4a8d869faa229e24e4",
+      "size_bytes": 4307
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_PREFLIGHT_V1/HOLDER_LOG_WINDOW.txt",
+      "sha256": "da8925ccdfe943042a59cd70f40135f0c1a4a4ebe64623be8dde64ecf152c78e",
+      "size_bytes": 976
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_PREFLIGHT_V1/FAILURE_SOURCE_ANALYSIS.json",
+      "sha256": "2b9e1f4b264d75781a1cc49b9b279aa5a59d35d4253e332d994e51e5fe83e02e",
+      "size_bytes": 2386
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_PREFLIGHT_V1/STAGE_AVAILABILITY.json",
+      "sha256": "3a49cfe779b2ce608ac689d3525ad9fd9fe75382f0d98352b556c36be542f186",
+      "size_bytes": 1232
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_PREFLIGHT_V1/SAVED_RGB_ARRAY_AUDIT.json",
+      "sha256": "1a8b7ec67cc28dc2e21d0134c5dc84489a0da957c9142127aafcbf5b3bb46e36",
+      "size_bytes": 298
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_PREFLIGHT_V1/RUNTIME_MANIFEST_AUDIT.json",
+      "sha256": "02325834a952d918753b055aa59dcfb2aa4c5f60e228da8a0c4faa7042d52c14",
+      "size_bytes": 573
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_CAUSAL_C10_PREFLIGHT_V1_r1/COMMAND_ENTERED.json",
+      "sha256": "2cec4cf1f812ec7ac188d8b450b4b3d8b3f5cb64a97449407471ec29354fcaef",
+      "size_bytes": 666
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_CAUSAL_C10_PREFLIGHT_V1_r1/COMMAND_PROCESS.json",
+      "sha256": "4774867cf9c92648347897742a17bdeaea197c2db01106b0cc779b90dcf4ce3f",
+      "size_bytes": 367
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_CAUSAL_C10_PREFLIGHT_V1_r1/COMMAND_RESULT.json",
+      "sha256": "6f1beb0dc6a17eb8eb9e3878114f68acb3457bee52124471d9c69b38c5e9eed3",
+      "size_bytes": 1053
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_CAUSAL_C10_PREFLIGHT_V1_r1/command.stdout",
+      "sha256": "01159d4b736de45b89c3bba72d43a3f10dbb3f1515cedc2e5634e7810d00d519",
+      "size_bytes": 462
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_CAUSAL_C10_PREFLIGHT_V1_r1/command.stderr",
+      "sha256": "9985948798f29dcae94afadbc1369488e413a02d9dba3faafbfa6416018dab17",
+      "size_bytes": 316
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/LAUNCH_RESULT.json",
+      "sha256": "0d15fb38c7b822957aecc125d3076e82163d4393de6feefd4660faf76a593d07",
+      "size_bytes": 52978
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/launch_identity.json",
+      "sha256": "60336470ba11dc2488f5b4feebff7d3d0cc1936893674969ab0317352457ff63",
+      "size_bytes": 20199
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/pre_reservation_device.json",
+      "sha256": "e5f737a0352a0391fb839d7e9609880b445c99284222dfbd18f4000afaa0348c",
+      "size_bytes": 1421
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/handoff_environment.json",
+      "sha256": "6d3b85ac0ab7ee0cfabcdbaa2018fda8d703790e97823fd75d073ea19232edb2",
+      "size_bytes": 502
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/launcher_events.jsonl",
+      "sha256": "93bc607d26381e3e3d3d568d5ca085e3765fd846c51015b2d0d6f79a713b79fd",
+      "size_bytes": 255
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/wave_timing.jsonl",
+      "sha256": "f5e47a6273163c86f258a15d60021bd2a299362b636f3d172ab974ec00fe074f",
+      "size_bytes": 1544
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/process_family_cleanup.json",
+      "sha256": "a51da4a251507bda0648303579719ada36040145d0c22a0fe45aa318f58281f9",
+      "size_bytes": 231
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/branch_process_exit.json",
+      "sha256": "9cf8fbe9eee337b2e615b829eb30d772183c18a30abf17f25ae4cba0d5885e15",
+      "size_bytes": 139
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/Post/ARTIFACT_MANIFEST.json",
+      "sha256": "c9278eeb703df228c8d97294952407ad1d62895e6e85b730b4e8441a55ee8c71",
+      "size_bytes": 4729
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/Post/RESOURCE_LEDGER.json",
+      "sha256": "3e7f689cc22298d8dddcbe0a7f91f744cac49233292cc5a0143fb6e4e3f81e39",
+      "size_bytes": 16976
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/Post/failure.json",
+      "sha256": "76eb0e4dfaa519cb57cc4fef6d55c0fdbeff4bff55d284361e2f8cb4a22e7c4e",
+      "size_bytes": 99
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/Post/numeric_events.jsonl",
+      "sha256": "77b7b9b388cc998a111cb4f8996ab7e3c3f20def433439931827e99f07ab1936",
+      "size_bytes": 7412
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/Post/initialization_events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/Post/graphics_events.jsonl",
+      "sha256": "be61409cfb9ffa142c1be00b4d7c6086c53a5d8426e7574a320a59080c506d40",
+      "size_bytes": 33729
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/Post/graphics_receipt.json",
+      "sha256": "12c18600e3480e933466023977cebce6b0038b5685cd5a9da1d8c0510d22a109",
+      "size_bytes": 1563
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/Post/graphics_cleanup.json",
+      "sha256": "e9c6894542872e91fe072776db3c50d1768ea68b2dd4ec9e917f15f4256937d6",
+      "size_bytes": 86
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/Post/graphics_api_results.jsonl",
+      "sha256": "2bc25668fb905649e2709f5a61f5aba0c74930a14a4882dd57be9bb6d78f505e",
+      "size_bytes": 16348
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/Post/device_mapping.json",
+      "sha256": "98a625347c39480e40fd708f32e3c5b9e5acedfda84e930d241506af620aa571",
+      "size_bytes": 14986
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/Post/loader_identity.json",
+      "sha256": "730b62f260ce7ade73b8c3fef9e6f8802fb31594d63eab79e64ef3226f619c18",
+      "size_bytes": 1544
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/Post/policy_device_type.json",
+      "sha256": "b06a7f28d0820383dfef4400766ae9a51a52f89074e0b933d5bcba45a824e16b",
+      "size_bytes": 1029
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/Post/policy_device.json",
+      "sha256": "198e23672ebcec07784a6d3d2ef9d41b9bbeea728e6718720164f53ca6fe70e4",
+      "size_bytes": 1092
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/Post/policy_loader.json",
+      "sha256": "9948f1ba495f18b14a1f3d80cadec56f4c63b1011704c87ae19448a09ba830ce",
+      "size_bytes": 438
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/Post/model_identity.json",
+      "sha256": "6ab04e29b42f9ee28349dc14627a3d1a3b7d21b323311b001dcdb56ec6ef5ede",
+      "size_bytes": 2155
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_CAUSAL_C10_V1_launcher_runs/A10_CAUSAL_C10_PREFLIGHT_V1_r1_A_wave09/Post/nvml_identity.json",
+      "sha256": "e5f737a0352a0391fb839d7e9609880b445c99284222dfbd18f4000afaa0348c",
+      "size_bytes": 1421
+    }
+  ],
+  "runtime_manifest_verified_files": 15,
+  "evidence_manifest_files": 55,
+  "audit_operations": {
+    "saved_file_reads_only": true,
+    "additional_GPU_NVML_EGL_queries": 0,
+    "extra_render": 0,
+    "extra_models": 0,
+    "weight_rehashes": 0
+  },
+  "deletions": 0,
+  "shared_installations": 0,
+  "training_updates": 0,
+  "B_participated": false,
+  "old_releases_reused": false,
+  "public_interface_modified": false,
+  "conclusion": "new event emitter integration failed before environment/cut; no numerical or method-success inference",
+  "scientific_interpretation": {
+    "success_rate_sample": false,
+    "ranking": false,
+    "paired_performance": false,
+    "full_hidden_state_equivalence": false,
+    "MT50_training_completed": false
+  },
+  "next_action": "await analysis close; no automatic repair/rerun/next stage"
+}

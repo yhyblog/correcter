@@ -1,0 +1,43 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "accepted_at_utc": "2026-09-19T16:11:36.552961+00:00",
+  "scope": "read_only_storage_supplement_only",
+  "artifacts": [
+    {
+      "path": "receipts/A/A10_STORAGE_FOLLOWUP_r1.md",
+      "sha256": "d923653b8e1899b68eb600d6bf2ff71e6bcd97ccd577c114aede37010a721363"
+    },
+    {
+      "path": "receipts/A/A10_STORAGE_FOLLOWUP_r1.json",
+      "sha256": "9ed76dc22d26e1a695a13fc634d75d9222bd2ade0d7d8180b58290027d910f7f"
+    },
+    {
+      "path": "receipts/A/STORAGE_REFERENCE_CHECK_r1.json",
+      "sha256": "bb28d51ddbdb955e38b4bc44f638e2f06d1962728f64b78f1bca6db5b9e3c2b5"
+    }
+  ],
+  "accepted_facts": [
+    "95 bounded reference documents checked by A",
+    "Smol last points to retained050000",
+    "A confirmed B two X-VLA partial-download paths/sizes and existence of full replacement",
+    "No deletion or formal compute performed"
+  ],
+  "limitations": [
+    "No proof yet of absence of both-host writers/recovery dependencies",
+    "Existence of X-VLA complete payload does not replace full identity verification",
+    "Report CONTROL5/TASK_BOARD7 and v3 budget are superseded by current CONTROL6/TASK_BOARD9 and CPU correction tasks"
+  ],
+  "storage_decision_manifest": "manifests/STORAGE_DECISIONS_V1.json",
+  "decision_counts": {
+    "keep": 4,
+    "defer": 11,
+    "delete": 0
+  },
+  "compute_release_authorized": false,
+  "current_followup_tasks": [
+    "A10_PREFLIGHT_REVISION_R2",
+    "B10_PREFLIGHT_REVISION_R2"
+  ],
+  "existing_queue_message_for_A": "01a0ba6d-c13b-7262-a0c0-472754ed61c4",
+  "note": "No restart and no duplicate new task: continue the already published CPU revisions. Supplement does not authorize v3 execution or deletion."
+}

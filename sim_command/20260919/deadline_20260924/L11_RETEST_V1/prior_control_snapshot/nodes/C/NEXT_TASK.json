@@ -1,0 +1,133 @@
+{
+  "issued_at_utc": "2026-09-22T10:35:32.000396+00:00",
+  "node": "C",
+  "task_id": "C_D24_PI05_SELECTED_H40_H50_V1",
+  "task_revision": 1,
+  "task": "tasks/C_D24_PI05_SELECTED_H40_H50_V1.md",
+  "authorization": {
+    "path": "deadline_20260924/FULL_Q_AUTORUN_AUTHORIZATION_V2.json",
+    "sha256": "fb15e23ad4ed75eaa1b9490784d58dc9dc925e440194e99cab066ae11af6414f"
+  },
+  "desired_action": "prepare_and_deploy_finite_autorun_chain_with_selection_gate",
+  "new_task_started": false,
+  "previous_task_complete": true,
+  "random_schedule": {
+    "path": "deadline_20260924/RANDOM_ONCE_SCHEDULE_V1.json",
+    "sha256": "2a51139a422c3c5b88fdfc5d32c803db345619650e466fb1780f8da732e54a5f"
+  },
+  "control_plane_followups": [
+    {
+      "task_id": "C_TASK_DISCOVERY_SERVICE_V1",
+      "revision": 1,
+      "task": "tasks/C_TASK_DISCOVERY_SERVICE_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/C_TASK_DISCOVERY_AUTHORIZATION_V1.json",
+        "sha256": "eea53f22757c4976bb54b9995d79cc2abcb16d769adb4003d7ebf3ebb6583a5a"
+      },
+      "scope": "CPU_only_deploy_no_extra_scientific_compute",
+      "does_not_replace_primary_task": true
+    },
+    {
+      "task_id": "C_D24_AUTORECOVERY_QUEUE_RULE_V1",
+      "task_revision": 1,
+      "revision": 1,
+      "task": "tasks/C_D24_AUTORECOVERY_QUEUE_RULE_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V2.json",
+        "sha256": "0e0c6a309bf90c1d79d75d34a7d96470704c60e084c9b05b76621115341f82f7"
+      },
+      "scope": "CPU_only_operational_recovery_and_queue_progress",
+      "does_not_replace_primary_task": true
+    },
+    {
+      "task_id": "C_D24_QUOTA_INDEPENDENT_QUEUE_V1",
+      "task_revision": 1,
+      "revision": 1,
+      "task": "tasks/C_D24_QUOTA_INDEPENDENT_QUEUE_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+        "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+      },
+      "scope": "CPU_only_quota_independent_queue_deployment",
+      "does_not_replace_primary_task": true
+    }
+  ],
+  "updated_at_utc": "2026-09-22T17:24:44.988414+00:00",
+  "authorized_followups": [
+    {
+      "task_id": "C_D24_XVLA_MULTI_EVAL_V1",
+      "task_revision": 1,
+      "task": "tasks/C_D24_XVLA_MULTI_EVAL_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/MULTI_PRIMARY_VALIDATION_AUTHORIZATION_V1.json",
+        "sha256": "767685a6fd14840f1f04001e14cf01980a17810be5d044dd0db9d665d7d05699"
+      },
+      "start_condition": "CPU_now; GPU_after_own_original_chain_terminal",
+      "predecessor": "C_D24_XVLA_AUX_RETRAIN_V1",
+      "planned_episodes": 1500,
+      "stage_attempt_cap": 1650,
+      "cumulative_attempt_cap": 14000
+    },
+    {
+      "task_id": "C_D24_FULL_Q_LOSS_REFRESH_V1",
+      "task_revision": 1,
+      "task": "tasks/C_D24_FULL_Q_LOSS_REFRESH_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/FULL_Q_LOSS_SELECTION_AUTHORIZATION_V1.json",
+        "sha256": "8fc0bf2c7c0c761d9fba424fb7fb127af8a9c505668fccd7231126535c6422c1"
+      },
+      "admission_override": {
+        "path": "deadline_20260924/Q_LOSS_PRIORITY_OVERRIDE_V1.json",
+        "sha256": "7e7c84f47284a71dee130bae1239ee3d18f04b176bbea7ad5a66e06da792b5a7"
+      },
+      "priority": "P0_current_user_request"
+    },
+    {
+      "task_id": "C_D24_PI05_SELECTED_H40_H50_V1",
+      "task_revision": 1,
+      "task": "tasks/C_D24_PI05_SELECTED_H40_H50_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/FULL_Q_AUTORUN_AUTHORIZATION_V2.json",
+        "sha256": "fb15e23ad4ed75eaa1b9490784d58dc9dc925e440194e99cab066ae11af6414f"
+      },
+      "priority": "P0_current_user_autorun"
+    }
+  ],
+  "urgent_user_override": {
+    "path": "deadline_20260924/Q_LOSS_PRIORITY_OVERRIDE_V1.json",
+    "sha256": "7e7c84f47284a71dee130bae1239ee3d18f04b176bbea7ad5a66e06da792b5a7"
+  },
+  "instruction": "User requires selection first then serial automatic remaining jobs. Prepare own task now, preserve live DEV/native waiters, no duplicate launch. Read V2 exact ownership and24worker protocol.",
+  "previous_primary_task": "C_D24_FULL_Q_LOSS_REFRESH_V1",
+  "priority_task": "C_D24_PI05_SELECTED_H40_H50_V1",
+  "admission_override": {
+    "path": "deadline_20260924/Q_LOSS_PRIORITY_OVERRIDE_V1.json",
+    "sha256": "7e7c84f47284a71dee130bae1239ee3d18f04b176bbea7ad5a66e06da792b5a7"
+  },
+  "evaluation_concurrency_policy": {
+    "path": "deadline_20260924/EVALUATION_CONCURRENCY_24_V1.md",
+    "sha256": "8b13ba1b96d286b1be68f6d96c300017af95ae637120bb7c34c69ac943e33b29"
+  },
+  "status": "published_auto_chain_handoff",
+  "ACK_received": false,
+  "scientific_launch_observed": false,
+  "acknowledgement_path": "receipts/C/C_D24_PI05_SELECTED_H40_H50_V1_ACK.json",
+  "selection_rule_override": {
+    "path": "deadline_20260924/POST_LED_SELECTION_OVERRIDE_V1.json",
+    "sha256": "fa907477112320e7f8356282c5ba64742452172dee998e9efc20a82b92b9c4b1"
+  },
+  "urgent_instruction": "Latest user: select only by Post complete dev; Velocity inherits and still runs, but separate from current paper. Patch private selector/admission gate before any selected tests; preserve completed fits/dev.",
+  "runtime_compatibility_directive": {
+    "path": "deadline_20260924/AUTORUN_LIVE_CHAIN_COMPATIBILITY_V1.json",
+    "sha256": "2ae5a001cec168399a9733d038ed56d1ebeefd311081999f45429dc75e24ac16"
+  },
+  "autonomous_recovery_policy": {
+    "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V2.json",
+    "sha256": "0e0c6a309bf90c1d79d75d34a7d96470704c60e084c9b05b76621115341f82f7"
+  },
+  "analysis_wait_timeout_seconds": 1800,
+  "quota_independent_autorun": {
+    "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+    "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+  }
+}

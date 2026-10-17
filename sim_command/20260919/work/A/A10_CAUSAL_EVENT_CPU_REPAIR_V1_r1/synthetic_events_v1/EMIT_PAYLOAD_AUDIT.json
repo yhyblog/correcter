@@ -1,0 +1,156 @@
+{
+  "synthetic": true,
+  "calls": [
+    {
+      "file": "causal_contract.py",
+      "line": 63,
+      "event": "'branch_start'",
+      "keys": [
+        "shared_prefix",
+        "state_restored"
+      ],
+      "expanded_payloads": []
+    },
+    {
+      "file": "causal_contract.py",
+      "line": 71,
+      "event": "'forecast_created'",
+      "keys": [
+        "available_observations",
+        "created_at",
+        "planned_actions",
+        "target_steps"
+      ],
+      "expanded_payloads": []
+    },
+    {
+      "file": "causal_contract.py",
+      "line": 79,
+      "event": "'cut_legality'",
+      "keys": [
+        "age",
+        "legal",
+        "reason",
+        "remaining",
+        "step"
+      ],
+      "expanded_payloads": []
+    },
+    {
+      "file": "causal_contract.py",
+      "line": 90,
+      "event": "'trigger_decision'",
+      "keys": [
+        "G0_target",
+        "Q_acceptance_gate",
+        "execute_intervention",
+        "forced_engineering_intervention",
+        "real_G0_score",
+        "real_G0_trigger",
+        "residual",
+        "residual_used_by_G0",
+        "scheduled_engineering_enabled",
+        "step",
+        "threshold"
+      ],
+      "expanded_payloads": []
+    },
+    {
+      "file": "causal_contract.py",
+      "line": 95,
+      "event": "'old_H20_queue_discarded'",
+      "keys": [],
+      "expanded_payloads": [
+        "old"
+      ]
+    },
+    {
+      "file": "causal_contract.py",
+      "line": 106,
+      "event": "'C10_tail_discarded'",
+      "keys": [
+        "hidden_policy_queue_empty"
+      ],
+      "expanded_payloads": [
+        "tail"
+      ]
+    },
+    {
+      "file": "causal_contract.py",
+      "line": 112,
+      "event": "'native_H20_restored'",
+      "keys": [
+        "first_restore_action_executed",
+        "first_success",
+        "native_terminated",
+        "native_truncated",
+        "remaining",
+        "step"
+      ],
+      "expanded_payloads": []
+    },
+    {
+      "file": "runtime_engine.py",
+      "line": 52,
+      "event": "name",
+      "keys": [],
+      "expanded_payloads": [
+        "data"
+      ]
+    },
+    {
+      "file": "runtime_engine.py",
+      "line": 94,
+      "event": "'native_transition_returned'",
+      "keys": [],
+      "expanded_payloads": [
+        "row"
+      ]
+    },
+    {
+      "file": "runtime_engine.py",
+      "line": 103,
+      "event": "'observation_saved'",
+      "keys": [
+        "pixel_sha256",
+        "proprio_sha256",
+        "step"
+      ],
+      "expanded_payloads": []
+    },
+    {
+      "file": "runtime_engine.py",
+      "line": 122,
+      "event": "'causal_features'",
+      "keys": [
+        "context_shas",
+        "future_observations_used",
+        "observations",
+        "past_action_indices",
+        "step"
+      ],
+      "expanded_payloads": []
+    },
+    {
+      "file": "runtime_engine.py",
+      "line": 139,
+      "event": "'independent_prefix_comparison'",
+      "keys": [
+        "hidden_state_equivalence_proven",
+        "observed_matches"
+      ],
+      "expanded_payloads": []
+    }
+  ],
+  "dynamic_payloads": "controller old/tail exercised by real run_branch; runtime transition row statically checked",
+  "reserved_fields": [
+    "branch",
+    "episode_id",
+    "event",
+    "event_id",
+    "parent_source_id",
+    "schema",
+    "source_id",
+    "split"
+  ]
+}

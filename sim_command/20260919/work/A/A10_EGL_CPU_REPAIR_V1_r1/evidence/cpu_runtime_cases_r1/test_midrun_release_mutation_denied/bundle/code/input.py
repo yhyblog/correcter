@@ -1,0 +1,1 @@
+# synthetic CPU input

@@ -1,0 +1,43 @@
+{
+  "task_id": "B_LONG_TASK_WAKEUP_V1",
+  "revision": 1,
+  "node": "B",
+  "hostname": "trial-303225685-trialrun-303225685-worker-0",
+  "executor_thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+  "status": "pending_live_validation",
+  "at_utc": "2026-09-21T14:37:13.453394+00:00",
+  "authorization": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/LONG_TASK_EVENT_WAKEUP_V1.json",
+    "sha256": "6cd1233b0e345bbea2a8320f6126897364c89c6964e92975be4d80c1291766f6"
+  },
+  "work": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_LONG_TASK_WAKEUP_V1_r1",
+  "state": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup",
+  "code": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_LONG_TASK_WAKEUP_V1_r1/wakeup.py",
+    "sha256": "e638727b0faa3c08de6adff9c02443c568165ab308680d7a3f9c16a8ee18db0e"
+  },
+  "cpu_tests": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_LONG_TASK_WAKEUP_V1_r1/CPU_TEST_RESULT.json",
+    "sha256": "4e2a2cc5756924269d825f2a7f65479ec7e46d801c23970d9c74865ff1164404"
+  },
+  "cpu_tests_passed": 11,
+  "background_install_authorized": true,
+  "actual_handler_ACK_verified": false,
+  "headless_original_thread_resume_verified": false,
+  "wakeup_ready": false,
+  "live_synthetic_events_max": 2,
+  "per_synthetic_transport_attempts_max": 1,
+  "scientific_GPU_operations": 0,
+  "new_training_or_evaluation_started": false,
+  "original_join_waiter_preserved": true,
+  "A_waits_for_B": false,
+  "OS_autostart_installed": false,
+  "readiness_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/WAKEUP_STATUS.json",
+  "READY_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/WAKEUP_READY.json",
+  "completion_gate": "actual fixed original UUID unattended callback ACK; no transport-only ready claim",
+  "remaining": [
+    "install and arm after current turn",
+    "real same-thread ACK",
+    "fixed UUID headless resume after original writer releases normally"
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "status": "failed_run_reconciled",
+  "audited_at_utc": "2026-09-19T17:09:21.998530+00:00",
+  "public_records_validated": 4,
+  "initialization_records_reconciled": 10724,
+  "planned_entered_returned_failed": [
+    {
+      "resource": "simulator_attempts",
+      "planned_cap": 1,
+      "entered": 1,
+      "returned": 0,
+      "failed": 1,
+      "missing_terminal": 0
+    },
+    {
+      "resource": "env_steps",
+      "planned_cap": 1,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "missing_terminal": 0
+    },
+    {
+      "resource": "vla_sampling_calls",
+      "planned_cap": 5,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "missing_terminal": 0
+    },
+    {
+      "resource": "flow_forward_calls",
+      "planned_cap": 50,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "missing_terminal": 0
+    },
+    {
+      "resource": "vla_backward_calls",
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "missing_terminal": 0
+    },
+    {
+      "resource": "critic_forward_calls",
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "missing_terminal": 0
+    },
+    {
+      "resource": "critic_backward_calls",
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "missing_terminal": 0
+    },
+    {
+      "resource": "monitor_calls",
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "missing_terminal": 0
+    },
+    {
+      "resource": "optimizer_updates",
+      "planned_cap": 0,
+      "entered": 0,
+      "returned": 0,
+      "failed": 0,
+      "missing_terminal": 0
+    }
+  ],
+  "initialization": {
+    "caps": {
+      "model_initializations": 1,
+      "environment_instances": 2,
+      "wrapper_instances": 1,
+      "taskset_constructions": 1,
+      "taskset_reset_calls": 50,
+      "wrapper_initialization_reset_calls": 1,
+      "initialization_reset_calls": 51,
+      "diagnostic_reset_calls": 1,
+      "environment_reset_calls": 52,
+      "reset_model_calls": 104,
+      "initialization_do_simulation_calls": 5200,
+      "initialization_physics_substeps": 26000,
+      "policy_do_simulation_calls": 1,
+      "policy_physics_substeps": 13
+    },
+    "entered_budget_usage": {
+      "model_initializations": 1,
+      "environment_instances": 2,
+      "wrapper_instances": 1,
+      "taskset_constructions": 1,
+      "taskset_reset_calls": 50,
+      "wrapper_initialization_reset_calls": 1,
+      "initialization_reset_calls": 51,
+      "diagnostic_reset_calls": 1,
+      "environment_reset_calls": 52,
+      "reset_model_calls": 104,
+      "initialization_do_simulation_calls": 5200,
+      "initialization_physics_substeps": 26000,
+      "policy_do_simulation_calls": 0,
+      "policy_physics_substeps": 0
+    },
+    "returned_operation_units": {
+      "model_initializations": 1,
+      "environment_instances": 2,
+      "wrapper_instances": 1,
+      "taskset_constructions": 1,
+      "taskset_reset_calls": 50,
+      "wrapper_initialization_reset_calls": 1,
+      "initialization_reset_calls": 51,
+      "diagnostic_reset_calls": 1,
+      "environment_reset_calls": 52,
+      "reset_model_calls": 104,
+      "initialization_do_simulation_calls": 5200,
+      "initialization_physics_substeps": 26000,
+      "policy_do_simulation_calls": 0,
+      "policy_physics_substeps": 0
+    },
+    "entered_usage_by_source": {
+      "initialization:MetaWorldPi05Backend.__init__": {
+        "model_initializations": 1
+      },
+      "wrapper_initialization:MetaworldEnv.__init__": {
+        "wrapper_instances": 1
+      },
+      "wrapper_initialization:MetaworldEnv._make_envs_task": {},
+      "taskset:metaworld._make_tasks": {
+        "taskset_constructions": 1
+      },
+      "taskset:SawyerShelfPlaceEnvV3.__init__": {
+        "environment_instances": 1
+      },
+      "taskset:SawyerXYZEnv.reset": {
+        "environment_reset_calls": 50,
+        "taskset_reset_calls": 50,
+        "initialization_reset_calls": 50
+      },
+      "taskset:SawyerShelfPlaceEnvV3.reset_model": {
+        "reset_model_calls": 100
+      },
+      "taskset:MujocoEnv.do_simulation": {
+        "initialization_do_simulation_calls": 5000,
+        "initialization_physics_substeps": 25000
+      },
+      "wrapper_initialization:SawyerShelfPlaceEnvV3.__init__": {
+        "environment_instances": 1
+      },
+      "wrapper_initialization:SawyerXYZEnv.reset": {
+        "environment_reset_calls": 1,
+        "wrapper_initialization_reset_calls": 1,
+        "initialization_reset_calls": 1
+      },
+      "wrapper_initialization:SawyerShelfPlaceEnvV3.reset_model": {
+        "reset_model_calls": 2
+      },
+      "wrapper_initialization:MujocoEnv.do_simulation": {
+        "initialization_do_simulation_calls": 100,
+        "initialization_physics_substeps": 500
+      },
+      "diagnostic_reset:SawyerXYZEnv.reset": {
+        "environment_reset_calls": 1,
+        "diagnostic_reset_calls": 1
+      },
+      "diagnostic_reset:SawyerShelfPlaceEnvV3.reset_model": {
+        "reset_model_calls": 2
+      },
+      "diagnostic_reset:MujocoEnv.do_simulation": {
+        "initialization_do_simulation_calls": 100,
+        "initialization_physics_substeps": 500
+      }
+    },
+    "failed_events": 0,
+    "incomplete_event_ids": [],
+    "count_semantics": "durable entry attempts; terminal repeats metadata, no refund; returned units report completed calls separately",
+    "physics_semantics": "initialization frames are internal do_simulation work, not policy controls or diagnostic episodes; entered frames need not have all completed on failure"
+  },
+  "planned_diagnostic_count": 1,
+  "entered_diagnostic_count": 1,
+  "completed_diagnostic_count": 0,
+  "technical_failed_diagnostic_count": 1,
+  "incomplete_event_count": 0,
+  "task_success": null,
+  "task_success_missing_reason": "Technical render failure before any policy step; no task-success label",
+  "checkpoint_loaded_all_keys": true,
+  "model_call_scope": "one initialization only; no sampling/inference forward entered",
+  "diagnostic_native_reset_returned": 1,
+  "full_diagnostic_observation_returned": 0,
+  "usable_initial_observation_artifacts": 0,
+  "raw_receipt_naming_correction": {
+    "field": "resource_receipt.json.diagnostic_initial_states_returned",
+    "raw_value": 1,
+    "actual_meaning": "Counted successful native diagnostic reset from private counter. Backend.reset_episode failed while formatting/rendering; this is not a successfully returned RGB observation or usable diagnostic artifact.",
+    "recommended_future_name": "diagnostic_native_resets_returned",
+    "raw_receipt_changed": false
+  },
+  "timing": {
+    "preparation_seconds": 42.648372893221676,
+    "reservation_and_holder_release_seconds": 37.63029297813773,
+    "reserved_wrapper_setup_seconds": 0.004426763858646154,
+    "timed_diagnostic_process_seconds": 215.42992777284235,
+    "reservation_release_overhead_seconds": 0.032796706072986126,
+    "restoration_observation_seconds": 14.005729374941438,
+    "end_to_end_observed_seconds": 309.7515464890748,
+    "timeout_scope": "GNU timeout child: repeated input verification, imports, model load, all environment initialization, five samples, one policy control, diagnostic cleanup",
+    "timeout_seconds": 1800,
+    "kill_grace_seconds": 30,
+    "end_to_end_strict_upper_bound_seconds": null,
+    "missing_reason": "Pre-launch CPU SHA/device checks, reservation, release and restoration are outside the child timeout; missing markers yield null, never fabricated zero durations"
+  },
+  "sampled_NVML_peak_MiB_by_gpu_during_timed_child": {
+    "0": 9675,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0
+  },
+  "NVML_samples_in_timed_child": 184,
+  "NVML_peak_is_sampled_lower_bound_not_allocator_peak": true,
+  "CUDA_allocator_peak_bytes": null,
+  "CUDA_peak_missing_reason": "Failure before checks.json; no unreported allocator peak invented",
+  "child_family_maxrss_GiB": 39.30687713623047,
+  "RAM_scope": "OS child-family ru_maxrss maximum, not sum of simultaneous process RSS or machine used RAM",
+  "actual_GPU_compute_seconds": null,
+  "GPU_seconds_missing_reason": "No device-time events; timed process wall includes CPU/hash/load/initialization and is not a GPU-utilization integral",
+  "holder_restored_count": 8,
+  "retries": 0,
+  "deletions": 0,
+  "read_only_probe_failure": {
+    "kind": "sandbox_proc_io_permission_denied",
+    "operation": "read launcher /proc/PID/io",
+    "impact": "No runtime impact; observed progress via owned heartbeat/event files; no retry of the experiment"
+  }
+}

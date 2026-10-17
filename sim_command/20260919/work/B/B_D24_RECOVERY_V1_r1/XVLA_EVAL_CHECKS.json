@@ -1,0 +1,32 @@
+{
+  "at_utc": "2026-09-21T21:00:19.813109+00:00",
+  "status": "pass",
+  "checks": [
+    "final checkpoint COMPLETE and training_step both30000; required saved files nonempty",
+    "model and normalization metadata use physical state4/action4 and H30",
+    "saved preprocessor image rename matches existing MetaWorld evaluator",
+    "X-VLA denoising knob matches inspected upstream select_action implementation",
+    "exactly500 unique unchanged predeclared D24 test sources over50 tasks",
+    "eight disjoint worker configurations and distinct new claims",
+    "Python syntax; no model or GPU preflight"
+  ],
+  "worker_source_counts": [
+    70,
+    70,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60
+  ],
+  "host_memory_bytes": {
+    "MemTotal": 2163279470592,
+    "MemAvailable": 1704919293952
+  },
+  "VRAM_admission_basis": "same X model completed eight-rank training on this host with roughly24GiB perGPU in observed runtime metrics; inference uses existing one-worker-perGPU entry",
+  "storage_admission_basis": "reference existing model in place; metadata and episode summaries only, no per-frame images or copied weights",
+  "models_loaded": 0,
+  "GPU_queries": 0,
+  "scientific_operations": 0
+}

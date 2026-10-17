@@ -1,0 +1,134 @@
+{
+  "schema": "native10_round1_policy_deployment_review_v1",
+  "reviewed_utc": "2026-09-16T20:34:46.772795+00:00",
+  "status": "passed",
+  "pass_scope": "Deployment scientific contract and isolated guard/auditor synthetic CPU evidence. Actual prepare/runner integration and independent protocol freeze remain required execution conditions; this review does not launch or itself authorize simulation.",
+  "reviewer": "analysis/critic_data_audit",
+  "scope": "Read-only v2 logs/seal/code-hash bindings, compare v1/v2 inventory and latest deployment-preparation status; no simulation, bank generation, model inference, tests or freeze called. New analysis report only.",
+  "new_simulator_calls": 0,
+  "new_optimizer_updates": 0,
+  "new_model_calls": 0,
+  "cpu_evidence": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/policy_deployment_cpu_20260916_v2",
+    "complete_sha256": "791db4b5a52fc904260c7d86ef29b9791bf1eec123574992f3f23a537810cfa5",
+    "result_sha256": "43450244480380bba19131a81176779688665368e62223d0a89020ba79b5635e",
+    "pytest_log_sha256": "a7099f4f2f3eff168415c41a06c49bdc3f452078f8c67fa4df7da2f287996b74",
+    "tests_passed": 31,
+    "returncode": 0,
+    "status": "passed",
+    "all_sealed_evidence_files_match": true,
+    "all_current_tested_code_hashes_match": true,
+    "code_unchanged_during_test": true,
+    "changed_files_since_v1": [
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/tests/test_native10_policy5_audit_v1.py",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/policy_deployment_v1.py"
+    ],
+    "prior_failed_record_retained": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/policy_deployment_cpu_20260916_v1",
+    "prior_failure_reason": "Synthetic suffix fixture lacked canonical task/env_seed; fixed only new test; previous collection indentation error also retained in v1",
+    "code_sha256": {
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/policy_deployment_v1.py": "98a3cca54a5d6bdf4240d8aa3e1a178a33d972c2d6b85c5bb3d42f48fe4df89d",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/test_policy_deployment_v1.py": "fbffd7aa7a065c2b09f92ee40ea59ca5896485d57c10c8c4318261063e61a56f",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/policy5_audit_v1.py": "aba60838635f04570148d7e061ff0c746b415f0e69a7303aebaf0e2821161571",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/tests/test_native10_policy5_audit_v1.py": "146507fd9d07c55ccc3688865d870798037d2b8613019f6f79a294bb9ede4c20",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/main_collection.py": "d1bb68267efc5cb1de6853231989e83c2011a1243e0b65ca738eb4465d980213",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/main_runner.py": "1c3c2dda50cab69fd78d15b3d6dc5d727a2c8e3a087ec687beeb56770a687883",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/engine.py": "43bfe0799c3815e29b06be26475dfbb6c70df7bf431cedc630d9eb7622dd65ea",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/adapter.py": "cfabfad16910f1ee3aecd98ffbc869674cf93a90fd7a9aaf17635d5129620560",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/bank_audit.py": "a94477e9c1ac1d8c2f064af9e0b4e94add1a691d8977be971fbe7922195b702b",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/protocol.py": "2e2a34e5f66dbfb92bb41fdffa372442d9e7b3e2ab55d0de96380ee76350b5c9",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/storage.py": "af2582337032796638fb1b56681bd43ef4a6141254671bdd43c45bf981735a3a"
+    },
+    "implementation_unchanged_between_cpu_archives": false,
+    "implementation_revision_note": {
+      "v1_guard_sha256": "a0f7a0356413b279e717b0fd3840094cea7ad5cbd178c8b4655a4abd1062cb41",
+      "v2_current_guard_sha256": "98a3cca54a5d6bdf4240d8aa3e1a178a33d972c2d6b85c5bb3d42f48fe4df89d",
+      "guard_changed_between_cpu_archives": true,
+      "interpretation": "The v2 result explanation describes the synthetic-fixture failure repair; it must not be read as a complete assertion that implementation bytes did not change. The current v2 guard contract was directly inspected in the preceding selected-model review and rechecked here. No original v1 source snapshot was diffed.",
+      "current_v2_scientific_contract_independently_rechecked": true,
+      "current_v2_observed_constraints": "100 original dev slots,95 alarm cuts+5 common; same VLA/D/G0/horizons/guidance/matching/seed_namespace; exact original raw50 a0/noise/mask before branches; new trained-critic bank; resource-specific2100/0 budget; no extra acceptance threshold, shrink policy or source selection."
+    }
+  },
+  "selected_model_review": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/round1_selected_model_review.json",
+    "sha256": "9b939bb0d99fbb8e6d632f7cfdc4c0c38fb40200de76ac8306aecf8bfe5ddd90",
+    "unchanged_from_previous_review": true
+  },
+  "selected_model_binding": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected",
+    "complete_sha256": "931c6f6043db92b5d9003eb2833dfc8edd0ab6c860a1979db3983cd7d893725f",
+    "all6_sealed_file_hashes_match": true,
+    "model_hashes": {
+      "0": "bc93c9035409cd2b7e413dffd0e0f9f3053ac34add4b47fc5cd57be9a5cdceb3",
+      "1": "639e78888f9ef9657cef73da4f21f0676593a58ec4bfa0f8f098d0885432fb2f",
+      "2": "e1f06c0214243ec9fd8952cab93139feafafbc8e84a74e432e9498d68d422df3",
+      "3": "ae18f18e36b878b37b1085778136f6faf62f7146ad0d4ca015076671b2a074eb"
+    },
+    "all4_export_checkpoint_files_equal_corresponding_B200_sha": true,
+    "all4_export_tensor_keys_and_values_equal_corresponding_B200": true,
+    "all4_preprocessing_buffers_equal_corresponding_prefit_B_initial": true,
+    "all4_have_changed_trainable_weights_vs_prefit": true,
+    "members": 4
+  },
+  "deployment_contract": {
+    "stage": "round1_development_policy",
+    "scope": "round1_development_policy",
+    "simulator_attempts_ceiling": 2100,
+    "training_updates_ceiling": 0,
+    "planned_development_slots": 100,
+    "planned_initial_states_per_task": 20,
+    "existing_cut_sources": 95,
+    "known_common_outcome_sources": 5,
+    "methods": [
+      "normal",
+      "replan",
+      "velocity",
+      "direct",
+      "post"
+    ],
+    "paired_suffix_repeats": 4,
+    "expected_attempts_without_failures": 1995,
+    "normal_behavior": "Finish the original legal native10 queue; once exhausted continue original native10 baseline.",
+    "intervention_behavior": "First eligible original alarm; one intervention only; replan raw a0 versus velocity/direct/post matched corrections.",
+    "unchanged_scientific_parameters": [
+      "G0 and threshold",
+      "raw command semantics",
+      "horizons/control budget",
+      "guidance settings",
+      "feasible mask and matched amplitude rule",
+      "VLA/D",
+      "source manifest and source/suffix seed namespace"
+    ],
+    "new_acceptance_threshold_or_radius_tuning": false,
+    "original_a0_protection": "Regenerated raw50 a0, base seed, initial-noise hash and mask must match the original labels13 development bank before any new branch. Old guided candidates are not substituted for new trained-critic candidates.",
+    "source_protection": "Reuse original sealed captures/resolutions; no source capture/replacement; 5 no-cut common outcomes remain in denominator.",
+    "resource_accounting": "Stage and global usage count simulator_attempts separately from training_updates; 19200 optimizer journal rows do not consume the50000 simulation limit.",
+    "comparison_limit": "Within-wave paired comparisons are primary; cross-stage paired model-improvement claims require the actual saved random-stream relationship and aligned source/action semantics."
+  },
+  "latest_preparation_status": {
+    "status": "isolated_modules_cpu_checked_not_frozen_or_run",
+    "cpu_evidence": "outputs/native10_training_20260916/preparation/policy_deployment_cpu_20260916_v2",
+    "cpu_seal_sha256": "791db4b5a52fc904260c7d86ef29b9791bf1eec123574992f3f23a537810cfa5",
+    "tests_passed": 31,
+    "prior_failed_cpu_evidence": "outputs/native10_training_20260916/preparation/policy_deployment_cpu_20260916_v1",
+    "simulator_calls": 0,
+    "optimizer_updates": 0,
+    "model_calls": 0,
+    "formal_deployment_config_created": false,
+    "runner_bound": false,
+    "stage_scope_required": "round1_development_policy",
+    "remaining": [
+      "Analysis stage release bound to selected trained critic",
+      "New independent prepare and runner integration using guarded collector",
+      "Verify actual final-command matched amplitudes in future real bank audit"
+    ]
+  },
+  "remaining_execution_conditions": [
+    "Independent prepare/runner must explicitly invoke the guarded collector and existing-slot path; existing main runner does not automatically use the guard.",
+    "Freeze a new deployment protocol/READY/selected model/source bindings/code inventory and enforce the stage-specific resource budget before launch.",
+    "Audit raw anchors, matched final-command amplitudes and paired suffix identities on the future actual candidate banks/branches."
+  ],
+  "not_claimed": [
+    "No actual deployment bank has been generated by this review.",
+    "Synthetic checks do not establish real simulator outcomes or correction success."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "corrector_queue8_scheduling_decision_v1",
+  "id": "QUEUE8_NEXT_WAVE_V1",
+  "issued_at_utc": "2026-09-21T13:22:19.724377+00:00",
+  "requested_formal_parent_concurrency": 8,
+  "one_independent_parent_per_GPU": true,
+  "fixed_plan": {
+    "path": "persistent_queue/plan/NEXT8_FORMAL_CONCURRENCY_V1.json",
+    "sha256": "ec9c9cd227b30162baa3c1678e77c24409c68fddbd49f021120107ed31a2e3e2"
+  },
+  "preparation_release": {
+    "path": "releases/P00_A_QUEUE8_ADMISSION_PREP_V1.json",
+    "sha256": "94e1b52a7d26e4be252b74cecce144bdca14db70bd1acb7e841e4fcf5e674b73"
+  },
+  "precedence": "supersedes optional2_to4_ramp_and_automatic_first_A_collection_activation_only; retains_V2_sources_total_authority_and_occupancy_override",
+  "first_migrated_A_formal_wave_gate": {
+    "state": "awaiting_resource_and_executable_entry_evidence_then_independent_analysis_release",
+    "required_release_id": "P11_A_COMMON_POOL_QUEUE8_FIRST_V1",
+    "fallback_requires_explicit_maximum_and_hard_limit_evidence": true,
+    "no_extra_GPU_probe_or_unplanned_source": true
+  },
+  "no_per_batch_manual_loop_after_first8_gate": true,
+  "current_Batch3_frozen_no_new_parent_or_claim": true,
+  "B_independent_unaffected": true,
+  "holder_utilization_is_not_formal_throughput": true
+}

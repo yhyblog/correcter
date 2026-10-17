@@ -1,0 +1,59 @@
+{
+  "status": "ready",
+  "pid": 3925502,
+  "kind": "smolvla",
+  "native": {
+    "model": "SmolVLA",
+    "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model",
+    "device": "cuda:0",
+    "raw_horizon": 50,
+    "natural_H": 10,
+    "NFE": 10,
+    "image_resize": [
+      512,
+      512
+    ],
+    "native_patch_size": 16,
+    "vision_tower_dimension": 768,
+    "vision_tower_tokens": 1024,
+    "connector_scale_factor": 4,
+    "visual_token_grid": [
+      8,
+      8
+    ],
+    "visual_tokens": 64,
+    "visual_dimension": 960,
+    "language_dimension": 960,
+    "frames_per_feedback": 5,
+    "visual_batch_size": 1,
+    "feature_stage": "native vision_model + connector + native sqrt(hidden_size) prefix scale",
+    "language_stage": "native text embedding + native sqrt(hidden_size) scale; masked token mean",
+    "parameters": 450046176,
+    "external_encoder": null,
+    "PI05_loaded": false,
+    "shared_native_model": true,
+    "separate_plan_and_feedback_processors": true,
+    "native_action_queue_used": false,
+    "noise": "explicit local torch.Generator; no global RNG reset",
+    "sampling_autocast": "cuda bfloat16",
+    "per_action_CPU_transfer": false
+  },
+  "D": [
+    4474116,
+    4474116
+  ],
+  "G0": [
+    1468033,
+    1468033
+  ],
+  "heads_initialization": "random; zero mean and unit scale; no old PI05 feature weights",
+  "visual_input": "native 960-channel spatial tokens -> 4x4 pooling -> fixed random orthogonal channel projection to 256 -> 4096",
+  "language_input": "native masked token embedding mean; zero padded to 2048; task cache",
+  "plan_cuda_stream": 94923769983184,
+  "feedback_cuda_stream": 94923745709840,
+  "extra_PI05_model": false,
+  "extra_PI05_features": false,
+  "no_training": true,
+  "Q_included": false,
+  "load_seconds": 39.006163351237774
+}

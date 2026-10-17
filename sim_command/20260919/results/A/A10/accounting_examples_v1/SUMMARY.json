@@ -1,0 +1,112 @@
+{
+  "synthetic": true,
+  "examples": [
+    {
+      "case": "successful_return",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/accounting_examples_v1/successful_return.jsonl",
+      "sha256": "d3f8033c595cfce02306cafad3b80cd1d46c43071b0137c6c6eece0c3182127c",
+      "summary": {
+        "ledger": "experiment_actual",
+        "counts": {
+          "simulator_attempts": 0,
+          "env_steps": 0,
+          "vla_sampling_calls": 1,
+          "flow_forward_calls": 1,
+          "vla_backward_calls": 0,
+          "critic_forward_calls": 0,
+          "critic_backward_calls": 0,
+          "monitor_calls": 0,
+          "optimizer_updates": 0
+        },
+        "counted_event_ids": [
+          "8138a492ef8f46678b001d27b7470ae5",
+          "fcbf87778cbf43ceb46c96d4faea41aa"
+        ],
+        "returned_events": 2,
+        "failed_events": 0,
+        "incomplete_events": [],
+        "wall_union_by_clock": {
+          "synthetic-clock": 0.004578618332743645
+        },
+        "outermost_measured_device_seconds_by_clock": {},
+        "device_scope": "parent/child overlap excluded; sums measured intervals only, not total device utilization; compare only fixed single-worker timing subsets",
+        "time_scope": "observed event interval union, not measured full episode or wave time",
+        "missing_device_measurements": 2
+      }
+    },
+    {
+      "case": "partial_failure",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/accounting_examples_v1/partial_failure.jsonl",
+      "sha256": "2c8958e0ee03cf417b6aea054ac3bb92c62923c11f47f37a6b7c28c15cfc3c15",
+      "summary": {
+        "ledger": "experiment_actual",
+        "counts": {
+          "simulator_attempts": 0,
+          "env_steps": 0,
+          "vla_sampling_calls": 1,
+          "flow_forward_calls": 1,
+          "vla_backward_calls": 0,
+          "critic_forward_calls": 0,
+          "critic_backward_calls": 0,
+          "monitor_calls": 0,
+          "optimizer_updates": 0
+        },
+        "counted_event_ids": [
+          "98da072d130b4555adbc35e847960c18",
+          "a22dbb5ad4f34d749e82e49627f1f1e3"
+        ],
+        "returned_events": 0,
+        "failed_events": 2,
+        "incomplete_events": [],
+        "wall_union_by_clock": {
+          "synthetic-clock": 0.004626603331416845
+        },
+        "outermost_measured_device_seconds_by_clock": {},
+        "device_scope": "parent/child overlap excluded; sums measured intervals only, not total device utilization; compare only fixed single-worker timing subsets",
+        "time_scope": "observed event interval union, not measured full episode or wave time",
+        "missing_device_measurements": 2
+      }
+    },
+    {
+      "case": "missing_terminal",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/accounting_examples_v1/missing_terminal.jsonl",
+      "sha256": "83cf74d05485d331c4fc2c400f8cfb10c6cffffdf2fc29485223552d4199a02f",
+      "summary": {
+        "ledger": "experiment_actual",
+        "counts": {
+          "simulator_attempts": 0,
+          "env_steps": 0,
+          "vla_sampling_calls": 1,
+          "flow_forward_calls": 1,
+          "vla_backward_calls": 0,
+          "critic_forward_calls": 0,
+          "critic_backward_calls": 0,
+          "monitor_calls": 0,
+          "optimizer_updates": 0
+        },
+        "counted_event_ids": [
+          "7182ded3c10544f1ada5a55a49c569f5",
+          "ee5511a3e039421998a5085b379bf4e6"
+        ],
+        "returned_events": 0,
+        "failed_events": 0,
+        "incomplete_events": [
+          "7182ded3c10544f1ada5a55a49c569f5",
+          "ee5511a3e039421998a5085b379bf4e6"
+        ],
+        "wall_union_by_clock": {},
+        "outermost_measured_device_seconds_by_clock": {},
+        "device_scope": "parent/child overlap excluded; sums measured intervals only, not total device utilization; compare only fixed single-worker timing subsets",
+        "time_scope": "observed event interval union, not measured full episode or wave time",
+        "missing_device_measurements": 2
+      }
+    }
+  ],
+  "charge_rule": "resource_units are identical metadata, entered counted once; terminal absence retains counts/incomplete status",
+  "real_resource_counts": {
+    "simulator_attempts": 0,
+    "vla_sampling_calls": 0,
+    "optimizer_updates": 0,
+    "gpu_seconds": 0
+  }
+}

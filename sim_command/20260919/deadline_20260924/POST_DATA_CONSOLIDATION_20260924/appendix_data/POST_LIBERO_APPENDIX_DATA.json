@@ -1,0 +1,1768 @@
+{
+  "status": "READ_ONLY_EXISTING_RESULTS_AGGREGATED",
+  "science_version": "Post operator transfer (BCE native LIBERO head), not L11 Full Post",
+  "protocol": {
+    "base": "official pi05 LIBERO checkpoint and normalizer",
+    "raw_plan_H": 10,
+    "execution_K": 5,
+    "NFE": 10,
+    "mode": "once, fixed natural replan after20 executed commands; no D/G0 trigger",
+    "source": "frozen random-reset/policy seeds, not official fixed-init benchmark",
+    "Q_loss": "BCE logits with train-only class weight",
+    "Q_members": 4,
+    "member_fit_seeds": [
+      9301,
+      9302,
+      9303,
+      9304
+    ],
+    "updates_per_member": 4000,
+    "L11": false,
+    "correction": "5 XYZ/gripper commands; rotation and unused tail unchanged; native K5 afterwards",
+    "fit_train_candidates": 120,
+    "fit_train_parents": 24,
+    "fit_train_negative_candidates": 5,
+    "descriptive_validation_candidates": 40,
+    "descriptive_validation_parents": 8,
+    "validation_negative_candidates": 0
+  },
+  "suite_rows": [
+    {
+      "suite": "libero_spatial",
+      "planned_per_method": 100,
+      "N": {
+        "valid": 100,
+        "successes": 98,
+        "success_rate_pct": 98.0,
+        "policy_calls": 2199,
+        "mean_policy_calls": 21.99,
+        "policy_call_coverage": 100,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 100,
+        "successes": 96,
+        "success_rate_pct": 96.0,
+        "policy_calls": 2213,
+        "mean_policy_calls": 22.13,
+        "policy_call_coverage": 100,
+        "interventions": 38,
+        "mean_interventions": 0.38,
+        "unknown": 0
+      },
+      "paired": {
+        "valid": 100,
+        "Post_successes": 96,
+        "N_successes": 98,
+        "rescued": 0,
+        "harmed": 2,
+        "difference_pp": -2.0,
+        "CI95_pp": [
+          -4.7578237650712785,
+          0.757823765071278
+        ],
+        "p_exact_mcnemar": 0.5,
+        "uncertainty_method": "B paired episode normal 95% and exact McNemar; same frozen formula",
+        "N_policy_calls": 2199,
+        "Post_policy_calls": 2213,
+        "N_mean_policy_calls": 21.99,
+        "Post_mean_policy_calls": 22.13
+      }
+    },
+    {
+      "suite": "libero_object",
+      "planned_per_method": 100,
+      "N": {
+        "valid": 100,
+        "successes": 100,
+        "success_rate_pct": 100.0,
+        "policy_calls": 2859,
+        "mean_policy_calls": 28.59,
+        "policy_call_coverage": 100,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 100,
+        "successes": 100,
+        "success_rate_pct": 100.0,
+        "policy_calls": 2828,
+        "mean_policy_calls": 28.28,
+        "policy_call_coverage": 100,
+        "interventions": 87,
+        "mean_interventions": 0.87,
+        "unknown": 0
+      },
+      "paired": {
+        "valid": 100,
+        "Post_successes": 100,
+        "N_successes": 100,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "CI95_pp": [
+          0.0,
+          0.0
+        ],
+        "p_exact_mcnemar": 1.0,
+        "uncertainty_method": "B paired episode normal 95% and exact McNemar; same frozen formula",
+        "N_policy_calls": 2859,
+        "Post_policy_calls": 2828,
+        "N_mean_policy_calls": 28.59,
+        "Post_mean_policy_calls": 28.28
+      }
+    },
+    {
+      "suite": "libero_goal",
+      "planned_per_method": 100,
+      "N": {
+        "valid": 99,
+        "successes": 98,
+        "success_rate_pct": 98.98989898989899,
+        "policy_calls": 2254,
+        "mean_policy_calls": 22.767676767676768,
+        "policy_call_coverage": 99,
+        "unknown": 1
+      },
+      "Post_operator": {
+        "valid": 100,
+        "successes": 100,
+        "success_rate_pct": 100.0,
+        "policy_calls": 2268,
+        "mean_policy_calls": 22.68,
+        "policy_call_coverage": 100,
+        "interventions": 58,
+        "mean_interventions": 0.58,
+        "unknown": 0
+      },
+      "paired": {
+        "valid": 99,
+        "Post_successes": 99,
+        "N_successes": 98,
+        "rescued": 1,
+        "harmed": 0,
+        "difference_pp": 1.0101010101010102,
+        "CI95_pp": [
+          -0.9696969696969695,
+          2.9898989898989896
+        ],
+        "p_exact_mcnemar": 1.0,
+        "uncertainty_method": "B paired episode normal 95% and exact McNemar; same frozen formula",
+        "N_policy_calls": 2254,
+        "Post_policy_calls": 2244,
+        "N_mean_policy_calls": 22.767676767676768,
+        "Post_mean_policy_calls": 22.666666666666668
+      }
+    },
+    {
+      "suite": "libero_10",
+      "planned_per_method": 100,
+      "N": {
+        "valid": 100,
+        "successes": 91,
+        "success_rate_pct": 91.0,
+        "policy_calls": 5532,
+        "mean_policy_calls": 55.32,
+        "policy_call_coverage": 100,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 100,
+        "successes": 91,
+        "success_rate_pct": 91.0,
+        "policy_calls": 5520,
+        "mean_policy_calls": 55.2,
+        "policy_call_coverage": 100,
+        "interventions": 64,
+        "mean_interventions": 0.64,
+        "unknown": 0
+      },
+      "paired": {
+        "valid": 100,
+        "Post_successes": 91,
+        "N_successes": 91,
+        "rescued": 4,
+        "harmed": 4,
+        "difference_pp": 0.0,
+        "CI95_pp": [
+          -5.571645387426619,
+          5.571645387426619
+        ],
+        "p_exact_mcnemar": 1.0,
+        "uncertainty_method": "B paired episode normal 95% and exact McNemar; same frozen formula",
+        "N_policy_calls": 5532,
+        "Post_policy_calls": 5520,
+        "N_mean_policy_calls": 55.32,
+        "Post_mean_policy_calls": 55.2
+      }
+    },
+    {
+      "suite": "all_four_suites",
+      "planned_per_method": 400,
+      "N": {
+        "valid": 399,
+        "successes": 387,
+        "success_rate_pct": 96.99248120300751,
+        "policy_calls": 12844,
+        "mean_policy_calls": 32.19047619047619,
+        "policy_call_coverage": 399,
+        "unknown": 1
+      },
+      "Post_operator": {
+        "valid": 400,
+        "successes": 387,
+        "success_rate_pct": 96.75,
+        "policy_calls": 12829,
+        "mean_policy_calls": 32.0725,
+        "policy_call_coverage": 400,
+        "interventions": 247,
+        "mean_interventions": 0.6175,
+        "unknown": 0
+      },
+      "paired": {
+        "valid": 399,
+        "Post_successes": 386,
+        "N_successes": 387,
+        "rescued": 5,
+        "harmed": 6,
+        "difference_pp": -0.2506265664160401,
+        "CI95_pp": [
+          -1.8817053892615114,
+          1.3804522564294313
+        ],
+        "p_exact_mcnemar": 1.0,
+        "uncertainty_method": "B paired episode normal 95% and exact McNemar; same frozen formula",
+        "N_policy_calls": 12844,
+        "Post_policy_calls": 12805,
+        "N_mean_policy_calls": 32.19047619047619,
+        "Post_mean_policy_calls": 32.092731829573935
+      }
+    }
+  ],
+  "task_rows": [
+    {
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "task_name": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 9,
+        "success_rate_pct": 90.0,
+        "policy_calls": 217,
+        "mean_policy_calls": 21.7,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 9,
+        "success_rate_pct": 90.0,
+        "policy_calls": 199,
+        "mean_policy_calls": 19.9,
+        "policy_call_coverage": 10,
+        "interventions": 1,
+        "mean_interventions": 0.1
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 9,
+        "N_successes": 9,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 217,
+        "Post_policy_calls": 199,
+        "N_mean_policy_calls": 21.7,
+        "Post_mean_policy_calls": 19.9
+      }
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "task_name": "pick up the black bowl next to the ramekin and place it on the plate",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 221,
+        "mean_policy_calls": 22.1,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 222,
+        "mean_policy_calls": 22.2,
+        "policy_call_coverage": 10,
+        "interventions": 0,
+        "mean_interventions": 0.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 221,
+        "Post_policy_calls": 222,
+        "N_mean_policy_calls": 22.1,
+        "Post_mean_policy_calls": 22.2
+      }
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "task_name": "pick up the black bowl from table center and place it on the plate",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 195,
+        "mean_policy_calls": 19.5,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 193,
+        "mean_policy_calls": 19.3,
+        "policy_call_coverage": 10,
+        "interventions": 7,
+        "mean_interventions": 0.7
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 195,
+        "Post_policy_calls": 193,
+        "N_mean_policy_calls": 19.5,
+        "Post_mean_policy_calls": 19.3
+      }
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "task_name": "pick up the black bowl on the cookie box and place it on the plate",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 172,
+        "mean_policy_calls": 17.2,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 173,
+        "mean_policy_calls": 17.3,
+        "policy_call_coverage": 10,
+        "interventions": 0,
+        "mean_interventions": 0.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 172,
+        "Post_policy_calls": 173,
+        "N_mean_policy_calls": 17.2,
+        "Post_mean_policy_calls": 17.3
+      }
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "task_name": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 253,
+        "mean_policy_calls": 25.3,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 254,
+        "mean_policy_calls": 25.4,
+        "policy_call_coverage": 10,
+        "interventions": 5,
+        "mean_interventions": 0.5
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 253,
+        "Post_policy_calls": 254,
+        "N_mean_policy_calls": 25.3,
+        "Post_mean_policy_calls": 25.4
+      }
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 5,
+      "task_name": "pick up the black bowl on the ramekin and place it on the plate",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 207,
+        "mean_policy_calls": 20.7,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 9,
+        "success_rate_pct": 90.0,
+        "policy_calls": 226,
+        "mean_policy_calls": 22.6,
+        "policy_call_coverage": 10,
+        "interventions": 5,
+        "mean_interventions": 0.5
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 9,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 1,
+        "difference_pp": -10.0,
+        "N_policy_calls": 207,
+        "Post_policy_calls": 226,
+        "N_mean_policy_calls": 20.7,
+        "Post_mean_policy_calls": 22.6
+      }
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 6,
+      "task_name": "pick up the black bowl next to the cookie box and place it on the plate",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 215,
+        "mean_policy_calls": 21.5,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 214,
+        "mean_policy_calls": 21.4,
+        "policy_call_coverage": 10,
+        "interventions": 0,
+        "mean_interventions": 0.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 215,
+        "Post_policy_calls": 214,
+        "N_mean_policy_calls": 21.5,
+        "Post_mean_policy_calls": 21.4
+      }
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 7,
+      "task_name": "pick up the black bowl on the stove and place it on the plate",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 245,
+        "mean_policy_calls": 24.5,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 241,
+        "mean_policy_calls": 24.1,
+        "policy_call_coverage": 10,
+        "interventions": 10,
+        "mean_interventions": 1.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 245,
+        "Post_policy_calls": 241,
+        "N_mean_policy_calls": 24.5,
+        "Post_mean_policy_calls": 24.1
+      }
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 8,
+      "task_name": "pick up the black bowl next to the plate and place it on the plate",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 206,
+        "mean_policy_calls": 20.6,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 207,
+        "mean_policy_calls": 20.7,
+        "policy_call_coverage": 10,
+        "interventions": 0,
+        "mean_interventions": 0.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 206,
+        "Post_policy_calls": 207,
+        "N_mean_policy_calls": 20.6,
+        "Post_mean_policy_calls": 20.7
+      }
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 9,
+      "task_name": "pick up the black bowl on the wooden cabinet and place it on the plate",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 9,
+        "success_rate_pct": 90.0,
+        "policy_calls": 268,
+        "mean_policy_calls": 26.8,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 8,
+        "success_rate_pct": 80.0,
+        "policy_calls": 284,
+        "mean_policy_calls": 28.4,
+        "policy_call_coverage": 10,
+        "interventions": 10,
+        "mean_interventions": 1.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 8,
+        "N_successes": 9,
+        "rescued": 0,
+        "harmed": 1,
+        "difference_pp": -10.0,
+        "N_policy_calls": 268,
+        "Post_policy_calls": 284,
+        "N_mean_policy_calls": 26.8,
+        "Post_mean_policy_calls": 28.4
+      }
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 0,
+      "task_name": "pick up the alphabet soup and place it in the basket",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 306,
+        "mean_policy_calls": 30.6,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 309,
+        "mean_policy_calls": 30.9,
+        "policy_call_coverage": 10,
+        "interventions": 10,
+        "mean_interventions": 1.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 306,
+        "Post_policy_calls": 309,
+        "N_mean_policy_calls": 30.6,
+        "Post_mean_policy_calls": 30.9
+      }
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 1,
+      "task_name": "pick up the cream cheese and place it in the basket",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 293,
+        "mean_policy_calls": 29.3,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 272,
+        "mean_policy_calls": 27.2,
+        "policy_call_coverage": 10,
+        "interventions": 9,
+        "mean_interventions": 0.9
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 293,
+        "Post_policy_calls": 272,
+        "N_mean_policy_calls": 29.3,
+        "Post_mean_policy_calls": 27.2
+      }
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 2,
+      "task_name": "pick up the salad dressing and place it in the basket",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 255,
+        "mean_policy_calls": 25.5,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 249,
+        "mean_policy_calls": 24.9,
+        "policy_call_coverage": 10,
+        "interventions": 10,
+        "mean_interventions": 1.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 255,
+        "Post_policy_calls": 249,
+        "N_mean_policy_calls": 25.5,
+        "Post_mean_policy_calls": 24.9
+      }
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 3,
+      "task_name": "pick up the bbq sauce and place it in the basket",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 269,
+        "mean_policy_calls": 26.9,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 261,
+        "mean_policy_calls": 26.1,
+        "policy_call_coverage": 10,
+        "interventions": 0,
+        "mean_interventions": 0.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 269,
+        "Post_policy_calls": 261,
+        "N_mean_policy_calls": 26.9,
+        "Post_mean_policy_calls": 26.1
+      }
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 4,
+      "task_name": "pick up the ketchup and place it in the basket",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 293,
+        "mean_policy_calls": 29.3,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 290,
+        "mean_policy_calls": 29.0,
+        "policy_call_coverage": 10,
+        "interventions": 10,
+        "mean_interventions": 1.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 293,
+        "Post_policy_calls": 290,
+        "N_mean_policy_calls": 29.3,
+        "Post_mean_policy_calls": 29.0
+      }
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 5,
+      "task_name": "pick up the tomato sauce and place it in the basket",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 294,
+        "mean_policy_calls": 29.4,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 275,
+        "mean_policy_calls": 27.5,
+        "policy_call_coverage": 10,
+        "interventions": 8,
+        "mean_interventions": 0.8
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 294,
+        "Post_policy_calls": 275,
+        "N_mean_policy_calls": 29.4,
+        "Post_mean_policy_calls": 27.5
+      }
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 6,
+      "task_name": "pick up the butter and place it in the basket",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 312,
+        "mean_policy_calls": 31.2,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 318,
+        "mean_policy_calls": 31.8,
+        "policy_call_coverage": 10,
+        "interventions": 10,
+        "mean_interventions": 1.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 312,
+        "Post_policy_calls": 318,
+        "N_mean_policy_calls": 31.2,
+        "Post_mean_policy_calls": 31.8
+      }
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 7,
+      "task_name": "pick up the milk and place it in the basket",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 262,
+        "mean_policy_calls": 26.2,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 274,
+        "mean_policy_calls": 27.4,
+        "policy_call_coverage": 10,
+        "interventions": 10,
+        "mean_interventions": 1.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 262,
+        "Post_policy_calls": 274,
+        "N_mean_policy_calls": 26.2,
+        "Post_mean_policy_calls": 27.4
+      }
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 8,
+      "task_name": "pick up the chocolate pudding and place it in the basket",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 316,
+        "mean_policy_calls": 31.6,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 327,
+        "mean_policy_calls": 32.7,
+        "policy_call_coverage": 10,
+        "interventions": 10,
+        "mean_interventions": 1.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 316,
+        "Post_policy_calls": 327,
+        "N_mean_policy_calls": 31.6,
+        "Post_mean_policy_calls": 32.7
+      }
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 9,
+      "task_name": "pick up the orange juice and place it in the basket",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 259,
+        "mean_policy_calls": 25.9,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 253,
+        "mean_policy_calls": 25.3,
+        "policy_call_coverage": 10,
+        "interventions": 10,
+        "mean_interventions": 1.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 259,
+        "Post_policy_calls": 253,
+        "N_mean_policy_calls": 25.9,
+        "Post_mean_policy_calls": 25.3
+      }
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 0,
+      "task_name": "open the middle drawer of the cabinet",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 9,
+        "successes": 9,
+        "success_rate_pct": 100.0,
+        "policy_calls": 220,
+        "mean_policy_calls": 24.444444444444443,
+        "policy_call_coverage": 9,
+        "unknown": 1
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 255,
+        "mean_policy_calls": 25.5,
+        "policy_call_coverage": 10,
+        "interventions": 8,
+        "mean_interventions": 0.8
+      },
+      "paired": {
+        "valid": 9,
+        "Post_successes": 9,
+        "N_successes": 9,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 220,
+        "Post_policy_calls": 231,
+        "N_mean_policy_calls": 24.444444444444443,
+        "Post_mean_policy_calls": 25.666666666666668
+      }
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 1,
+      "task_name": "put the bowl on the stove",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 9,
+        "success_rate_pct": 90.0,
+        "policy_calls": 214,
+        "mean_policy_calls": 21.4,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 173,
+        "mean_policy_calls": 17.3,
+        "policy_call_coverage": 10,
+        "interventions": 1,
+        "mean_interventions": 0.1
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 9,
+        "rescued": 1,
+        "harmed": 0,
+        "difference_pp": 10.0,
+        "N_policy_calls": 214,
+        "Post_policy_calls": 173,
+        "N_mean_policy_calls": 21.4,
+        "Post_mean_policy_calls": 17.3
+      }
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 2,
+      "task_name": "put the wine bottle on top of the cabinet",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 180,
+        "mean_policy_calls": 18.0,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 182,
+        "mean_policy_calls": 18.2,
+        "policy_call_coverage": 10,
+        "interventions": 10,
+        "mean_interventions": 1.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 180,
+        "Post_policy_calls": 182,
+        "N_mean_policy_calls": 18.0,
+        "Post_mean_policy_calls": 18.2
+      }
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 3,
+      "task_name": "open the top drawer and put the bowl inside",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 388,
+        "mean_policy_calls": 38.8,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 395,
+        "mean_policy_calls": 39.5,
+        "policy_call_coverage": 10,
+        "interventions": 10,
+        "mean_interventions": 1.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 388,
+        "Post_policy_calls": 395,
+        "N_mean_policy_calls": 38.8,
+        "Post_mean_policy_calls": 39.5
+      }
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 4,
+      "task_name": "put the bowl on top of the cabinet",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 183,
+        "mean_policy_calls": 18.3,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 179,
+        "mean_policy_calls": 17.9,
+        "policy_call_coverage": 10,
+        "interventions": 10,
+        "mean_interventions": 1.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 183,
+        "Post_policy_calls": 179,
+        "N_mean_policy_calls": 18.3,
+        "Post_mean_policy_calls": 17.9
+      }
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 5,
+      "task_name": "push the plate to the front of the stove",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 304,
+        "mean_policy_calls": 30.4,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 325,
+        "mean_policy_calls": 32.5,
+        "policy_call_coverage": 10,
+        "interventions": 10,
+        "mean_interventions": 1.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 304,
+        "Post_policy_calls": 325,
+        "N_mean_policy_calls": 30.4,
+        "Post_mean_policy_calls": 32.5
+      }
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 6,
+      "task_name": "put the cream cheese in the bowl",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 187,
+        "mean_policy_calls": 18.7,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 186,
+        "mean_policy_calls": 18.6,
+        "policy_call_coverage": 10,
+        "interventions": 0,
+        "mean_interventions": 0.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 187,
+        "Post_policy_calls": 186,
+        "N_mean_policy_calls": 18.7,
+        "Post_mean_policy_calls": 18.6
+      }
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 7,
+      "task_name": "turn on the stove",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 154,
+        "mean_policy_calls": 15.4,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 151,
+        "mean_policy_calls": 15.1,
+        "policy_call_coverage": 10,
+        "interventions": 0,
+        "mean_interventions": 0.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 154,
+        "Post_policy_calls": 151,
+        "N_mean_policy_calls": 15.4,
+        "Post_mean_policy_calls": 15.1
+      }
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 8,
+      "task_name": "put the bowl on the plate",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 153,
+        "mean_policy_calls": 15.3,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 151,
+        "mean_policy_calls": 15.1,
+        "policy_call_coverage": 10,
+        "interventions": 6,
+        "mean_interventions": 0.6
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 153,
+        "Post_policy_calls": 151,
+        "N_mean_policy_calls": 15.3,
+        "Post_mean_policy_calls": 15.1
+      }
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 9,
+      "task_name": "put the wine bottle on the rack",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 271,
+        "mean_policy_calls": 27.1,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 271,
+        "mean_policy_calls": 27.1,
+        "policy_call_coverage": 10,
+        "interventions": 3,
+        "mean_interventions": 0.3
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 271,
+        "Post_policy_calls": 271,
+        "N_mean_policy_calls": 27.1,
+        "Post_mean_policy_calls": 27.1
+      }
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 0,
+      "task_name": "put both the alphabet soup and the tomato sauce in the basket",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 538,
+        "mean_policy_calls": 53.8,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 9,
+        "success_rate_pct": 90.0,
+        "policy_calls": 579,
+        "mean_policy_calls": 57.9,
+        "policy_call_coverage": 10,
+        "interventions": 9,
+        "mean_interventions": 0.9
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 9,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 1,
+        "difference_pp": -10.0,
+        "N_policy_calls": 538,
+        "Post_policy_calls": 579,
+        "N_mean_policy_calls": 53.8,
+        "Post_mean_policy_calls": 57.9
+      }
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 1,
+      "task_name": "put both the cream cheese box and the butter in the basket",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 509,
+        "mean_policy_calls": 50.9,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 504,
+        "mean_policy_calls": 50.4,
+        "policy_call_coverage": 10,
+        "interventions": 10,
+        "mean_interventions": 1.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 509,
+        "Post_policy_calls": 504,
+        "N_mean_policy_calls": 50.9,
+        "Post_mean_policy_calls": 50.4
+      }
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 2,
+      "task_name": "turn on the stove and put the moka pot on it",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 9,
+        "success_rate_pct": 90.0,
+        "policy_calls": 569,
+        "mean_policy_calls": 56.9,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 9,
+        "success_rate_pct": 90.0,
+        "policy_calls": 575,
+        "mean_policy_calls": 57.5,
+        "policy_call_coverage": 10,
+        "interventions": 3,
+        "mean_interventions": 0.3
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 9,
+        "N_successes": 9,
+        "rescued": 1,
+        "harmed": 1,
+        "difference_pp": 0.0,
+        "N_policy_calls": 569,
+        "Post_policy_calls": 575,
+        "N_mean_policy_calls": 56.9,
+        "Post_mean_policy_calls": 57.5
+      }
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 3,
+      "task_name": "put the black bowl in the bottom drawer of the cabinet and close it",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 9,
+        "success_rate_pct": 90.0,
+        "policy_calls": 506,
+        "mean_policy_calls": 50.6,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 451,
+        "mean_policy_calls": 45.1,
+        "policy_call_coverage": 10,
+        "interventions": 4,
+        "mean_interventions": 0.4
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 9,
+        "rescued": 1,
+        "harmed": 0,
+        "difference_pp": 10.0,
+        "N_policy_calls": 506,
+        "Post_policy_calls": 451,
+        "N_mean_policy_calls": 50.6,
+        "Post_mean_policy_calls": 45.1
+      }
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 4,
+      "task_name": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 9,
+        "success_rate_pct": 90.0,
+        "policy_calls": 521,
+        "mean_policy_calls": 52.1,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 462,
+        "mean_policy_calls": 46.2,
+        "policy_call_coverage": 10,
+        "interventions": 10,
+        "mean_interventions": 1.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 9,
+        "rescued": 1,
+        "harmed": 0,
+        "difference_pp": 10.0,
+        "N_policy_calls": 521,
+        "Post_policy_calls": 462,
+        "N_mean_policy_calls": 52.1,
+        "Post_mean_policy_calls": 46.2
+      }
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 5,
+      "task_name": "pick up the book and place it in the back compartment of the caddy",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 360,
+        "mean_policy_calls": 36.0,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 386,
+        "mean_policy_calls": 38.6,
+        "policy_call_coverage": 10,
+        "interventions": 0,
+        "mean_interventions": 0.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 360,
+        "Post_policy_calls": 386,
+        "N_mean_policy_calls": 36.0,
+        "Post_mean_policy_calls": 38.6
+      }
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 6,
+      "task_name": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 9,
+        "success_rate_pct": 90.0,
+        "policy_calls": 508,
+        "mean_policy_calls": 50.8,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 9,
+        "success_rate_pct": 90.0,
+        "policy_calls": 505,
+        "mean_policy_calls": 50.5,
+        "policy_call_coverage": 10,
+        "interventions": 10,
+        "mean_interventions": 1.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 9,
+        "N_successes": 9,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 508,
+        "Post_policy_calls": 505,
+        "N_mean_policy_calls": 50.8,
+        "Post_mean_policy_calls": 50.5
+      }
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 7,
+      "task_name": "put both the alphabet soup and the cream cheese box in the basket",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 546,
+        "mean_policy_calls": 54.6,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 560,
+        "mean_policy_calls": 56.0,
+        "policy_call_coverage": 10,
+        "interventions": 8,
+        "mean_interventions": 0.8
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 546,
+        "Post_policy_calls": 560,
+        "N_mean_policy_calls": 54.6,
+        "Post_mean_policy_calls": 56.0
+      }
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 8,
+      "task_name": "put both moka pots on the stove",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 5,
+        "success_rate_pct": 50.0,
+        "policy_calls": 933,
+        "mean_policy_calls": 93.3,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 4,
+        "success_rate_pct": 40.0,
+        "policy_calls": 957,
+        "mean_policy_calls": 95.7,
+        "policy_call_coverage": 10,
+        "interventions": 0,
+        "mean_interventions": 0.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 4,
+        "N_successes": 5,
+        "rescued": 1,
+        "harmed": 2,
+        "difference_pp": -10.0,
+        "N_policy_calls": 933,
+        "Post_policy_calls": 957,
+        "N_mean_policy_calls": 93.3,
+        "Post_mean_policy_calls": 95.7
+      }
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 9,
+      "task_name": "put the yellow and white mug in the microwave and close it",
+      "planned_per_method": 10,
+      "N": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 542,
+        "mean_policy_calls": 54.2,
+        "policy_call_coverage": 10,
+        "unknown": 0
+      },
+      "Post_operator": {
+        "valid": 10,
+        "successes": 10,
+        "success_rate_pct": 100.0,
+        "policy_calls": 541,
+        "mean_policy_calls": 54.1,
+        "policy_call_coverage": 10,
+        "interventions": 10,
+        "mean_interventions": 1.0
+      },
+      "paired": {
+        "valid": 10,
+        "Post_successes": 10,
+        "N_successes": 10,
+        "rescued": 0,
+        "harmed": 0,
+        "difference_pp": 0.0,
+        "N_policy_calls": 542,
+        "Post_policy_calls": 541,
+        "N_mean_policy_calls": 54.2,
+        "Post_mean_policy_calls": 54.1
+      }
+    }
+  ],
+  "missing_N_sources": [
+    {
+      "source_id": "D24_LIBERO_libero_goal_t00_e08",
+      "status": "unknown",
+      "success": null
+    }
+  ],
+  "full_status": {
+    "status": "SCIENTIFIC_GAP",
+    "Full_Post_test_attempts": 0,
+    "Full_Post_success_rate_pct": null,
+    "small_network_updates": 0,
+    "new_development_attempts": 40,
+    "new_valid_development": 30,
+    "new_technical_failures": 10,
+    "G0_train_pairs": 7,
+    "G0_validation_pairs": 4,
+    "all_G0_gains_zero": true,
+    "missing_reason": "No nonconstant replanning-gain targets; D2/G0/L11 system was not trained or evaluated."
+  },
+  "cost_semantics": "queries is saved complete policy-call count, not steps or flow calls; all N399 and Post400 have saved queries. Fixed once intervention is not multi-event current MT50 rule. Inference seconds include incompatible saved scope across N/Post and are retained only in raw sources, not used to rank runtime. Suite/task main mean calls use each method own valid denominator; paired cost values are also provided, excluding unknown N source from both.",
+  "sources": {
+    "Post_summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/D24_E8_LIBERO_POST_r1/N_POST_SUMMARY.json",
+    "Post_batch": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_LIBERO_POST_V1_r1/LIBERO_POST_BATCH.json",
+    "N_combined_index": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_BASELINE_GAPS_E8_TABLES_V1/COMBINED_N_INDEX.json",
+    "paired_published": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/revisions/r03/E8_PAIRED.csv",
+    "full_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_LIBERO_FULL_NATIVE_V1_RESULT_r13.json",
+    "Post_episode_jsonls": [
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/jobs/pi05official_Post_libero_spatial_s0_r1/episodes.jsonl",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/jobs/pi05official_Post_libero_spatial_s1_r1/episodes.jsonl",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/jobs/pi05official_Post_libero_object_s0_r1/episodes.jsonl",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/jobs/pi05official_Post_libero_object_s1_r1/episodes.jsonl",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/jobs/pi05official_Post_libero_goal_s0_r1/episodes.jsonl",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/jobs/pi05official_Post_libero_goal_s1_r1/episodes.jsonl",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/jobs/pi05official_Post_libero_10_s0_r1/episodes.jsonl",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/jobs/pi05official_Post_libero_10_s1_r1/episodes.jsonl"
+    ]
+  },
+  "checks": [
+    "399 unique N and400 unique Post test sources",
+    "387 successes each, N unknown1 excluded",
+    "all valid N source IDs and reset/policy seeds match Post",
+    "Post sums match12829 calls and247 interventions",
+    "five suite/all paired rows match published r03 counts exactly"
+  ]
+}

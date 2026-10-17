@@ -1,0 +1,101 @@
+{
+  "schema": "single_pass_data_training_spec_v1",
+  "date": "2026-09-26",
+  "execution_status": "not_executed",
+  "user_decisions": {
+    "train_sources_per_task": {
+      "G": 20,
+      "Q": 50
+    },
+    "validation_sources": 0,
+    "single_fit_per_member": true
+  },
+  "proposed_specifications": {
+    "test_sources_per_task": {
+      "G": 5,
+      "Q": 10
+    },
+    "R_Q": 4,
+    "R_G": 4,
+    "G_sources_subset_of_Q": true,
+    "reuse_Q_or_reference_outcomes_for_G_labels": false,
+    "one_H_per_source": true,
+    "cut_grid": [
+      5,
+      15,
+      35,
+      55
+    ],
+    "task_count": 50,
+    "max_episode_control_steps": 300,
+    "extra_interaction_budget_fraction": 0.2,
+    "source_seed": 20260926,
+    "train_D_window_cap": 1000000,
+    "test_D_window_cap": 100000,
+    "D_width": 768,
+    "G_width": 256,
+    "Q_width": 512,
+    "updates": {
+      "D": 20000,
+      "Q": 20000,
+      "G": 16000
+    },
+    "members": {
+      "D": [
+        241,
+        242
+      ],
+      "Q": [
+        1041,
+        1042,
+        1043,
+        1044
+      ],
+      "G": [
+        341,
+        342
+      ]
+    },
+    "hardware": "8 x NVIDIA H100 80GB HBM3; one GPU per training member",
+    "training_dtype": "float32",
+    "scheduler": null,
+    "warmup": null,
+    "early_stopping": null,
+    "checkpoint_selection": "fixed last update"
+  },
+  "models": {
+    "pi05": {
+      "H": [
+        10,
+        20,
+        30,
+        40,
+        50
+      ],
+      "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model"
+    },
+    "smolvla": {
+      "H": [
+        10,
+        20,
+        30,
+        40,
+        50
+      ],
+      "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model"
+    },
+    "xvla": {
+      "H": [
+        10,
+        20,
+        30
+      ],
+      "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/xvla_mt50_s42_D24_r2/training/checkpoints/030000/pretrained_model"
+    }
+  },
+  "presentation_revision": {
+    "numeric_policy": "use actual logs/configs; proposed repeat/test/window/update budgets removed from presentation",
+    "previous_proposed_specifications_status": "archived unexecuted proposal; not runtime evidence or default values",
+    "current_platform_evidence": "PLATFORM_PROTOCOL_AUDIT.json"
+  }
+}

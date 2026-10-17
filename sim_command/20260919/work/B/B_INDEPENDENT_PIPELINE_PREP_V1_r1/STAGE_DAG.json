@@ -1,0 +1,520 @@
+{
+  "A_runtime_dependencies_on_B": [],
+  "B_collection_sources": 0,
+  "auxiliary_gpu_accounting": "holder runtime/utilization/duty and handoff recorded separately; scientific counters0 never imply total machine GPU activity0; disclose occupancy in timing comparisons",
+  "dispatch": "authorized + dependencies-ready FIFO, skipping only blocked stage; independent methods/seeds/shards up to local resource-admitted8; refill after owned descendants exit",
+  "environment": {
+    "bytes": 336,
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B10_r1_trial-303225685-trialrun-303225685-worker-0_20260919T150956Z/DEPENDENCIES.json",
+    "sha256": "5e1f5daecd9c3d6c9e93b37bfbb5b4b6cd151ae698354a670524b706d9bb4bb5"
+  },
+  "failure": "ordinary B failure cannot change A/global stop; retry0, unknown entered claim blocks replay; known partial publication records unstarted work without refill",
+  "model_work_performed": false,
+  "operational_overrides_sha256": {
+    "persistent_queue/OCCUPANCY_OVERRIDE_V1.json": "0e896062a9c69dc51e6d1332eca5413c683d2c9bbed113b9346f8dba27310916"
+  },
+  "reservation": "one inherited node reservation for runnable formal queue including CPU model jobs; original guard holders released; new supervised auxiliary fill only on genuinely inactive GPUs under current override; stop/reap auxiliaries before original guard resumes after full drain",
+  "root_authorization_sha256": "d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928",
+  "stages": [
+    {
+      "A_runtime_waits_for_this": false,
+      "GPU_jobs": 0,
+      "argv": null,
+      "automatic_retry": false,
+      "blocked_input": [],
+      "commands_in": "proposal.jobs[*].argv",
+      "complete_fit_seeds": [
+        9101,
+        9102,
+        9103
+      ],
+      "concurrency_limit": 8,
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "dependencies": [],
+      "id": "B13_E1_FIT_TRAIN600_V1",
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1",
+      "owner": "B",
+      "proposal_ref": {
+        "bytes": 130082,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/proposals/B13_E1_FIT_TRAIN600_V1.json",
+        "sha256": "e996ddb40b903c89518123a865457827e064d02b5e7c9e93034c59ec51cd7440"
+      },
+      "resource_note": "Frozen E1 CPU recipe retained; 8 CPU workers do not establish 8-card GPU utilization.",
+      "status": "ready_for_once_stage_freeze",
+      "total_optimizer_updates": 192000
+    },
+    {
+      "A_runtime_waits_for_this": false,
+      "argv": [
+        "/usr/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/calibrate_e6.py",
+        "--manifest",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_inputs/E6_DEV_TRACE.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E6_D5_THRESHOLD/threshold.json"
+      ],
+      "automatic_retry": false,
+      "blocked_input": [
+        "real development D predictions/arrivals/actions/reset trace",
+        "frozen original G0 intervention decisions and exact D/G0 identities"
+      ],
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "dependencies": [],
+      "entry_status": "implemented metadata-only command; missing input path is explicitly future input",
+      "id": "B13_E6_D5_THRESHOLD",
+      "model_calls": 0,
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E6_D5_THRESHOLD",
+      "owner": "B",
+      "required_monitor": {
+        "C": 10,
+        "D_members": [
+          241,
+          242
+        ],
+        "H": 10,
+        "action_dim": 4,
+        "arrival_horizon": 5,
+        "downstream": "R",
+        "features": 4096,
+        "max_interventions": 1
+      },
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 2147483648,
+        "shared_bytes": 10737418,
+        "tmp_bytes": 0,
+        "vram_bytes_per_gpu": 0
+      },
+      "status": "blocked_input",
+      "threshold_selection": "closest G0 episode count; ties fewer then higher threshold; all dev including no alarm; no test outcomes"
+    },
+    {
+      "A_runtime_waits_for_this": false,
+      "argv": null,
+      "automatic_retry": false,
+      "available_modules": [
+        {
+          "bytes": 18583,
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/b10_adapters.py",
+          "sha256": "cf08292125befac6c712944da2c4eb8c783181b66a2cde9bcbe78cd73cc71092"
+        }
+      ],
+      "blocked_input": [
+        "P20_B_MECHANISM frozen episode/seed/source and exact G0/D/Q identity"
+      ],
+      "concurrency_limit": 8,
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "dependencies": [
+        "B13_E1_FIT_TRAIN600_V1",
+        "B13_E6_D5_THRESHOLD"
+      ],
+      "episode_cap": null,
+      "formula": {
+        "E1_fit_calls": "0 during evaluation",
+        "E6_D_member_forwards": "<=120E",
+        "E6_extra_resampling": "<=E",
+        "VLA_calls_E6": "<=31E",
+        "actions": "<=300E"
+      },
+      "id": "B21_E1_E6_H10_EVAL",
+      "implementation_missing": [
+        "new-protocol closed-loop driver connecting frozen D5->R and E1 four loss ensembles",
+        "E5 operation accounting and stage-aware queue wrapper"
+      ],
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B21_E1_E6_H10_EVAL",
+      "owner": "B",
+      "released_episodes": 0,
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 4,
+        "gpus": 1,
+        "ram_bytes": 68719476736,
+        "shared_bytes": 4294967296,
+        "tmp_bytes": 17179869184,
+        "vram_bytes_per_gpu": 25769803776
+      },
+      "source_policy": "historical five tasks; shared within-method planned evaluation sources; E is set once by P20, no auto-created seeds",
+      "status": "blocked_engineering_and_input"
+    },
+    {
+      "A_runtime_waits_for_this": false,
+      "B11_interface_only_ref": {
+        "bytes": 88906,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B11_COMMON_POOL_VIEWS_CPU_V1/REAL_VIEW_SUMMARY.json",
+        "sha256": "1d4b271b51cd54a7dc9530211cce66a1556f03e2552094808e5a1026b6871a42"
+      },
+      "argv": null,
+      "automatic_retry": false,
+      "blocked_input": [
+        "final same A pool SHA",
+        "train/development tensor materialization"
+      ],
+      "commands_in": "proposal.jobs[*].argv",
+      "concurrency_limit": 3,
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "dependencies": [
+        "A11 immutable final pool",
+        "B11"
+      ],
+      "id": "B12_GAF_FIT_FINALPOOL_V1",
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B12_GAF_FIT_FINALPOOL_V1",
+      "owner": "B",
+      "proposal_ref": {
+        "bytes": 10540,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/proposals/B12_GAF_FIT_FINALPOOL_V1.json",
+        "sha256": "25094ec1e374d68b4268eea1bcd1879d123eddf7c813c8a7d73a5f8404d4624c"
+      },
+      "status": "blocked_input_and_engineering",
+      "total_optimizer_updates": 30000,
+      "training_views": {
+        "action_shape": [
+          10,
+          4
+        ],
+        "first_success": "action-after state, exponent success_state-start-1",
+        "gamma": 0.99,
+        "language": 2048,
+        "state": 4
+      },
+      "view_materializer_status": "B11 provides immutable indices; tensor writer for final runtime needs binding/implementation; not passed off as existing shell command"
+    },
+    {
+      "A_runtime_waits_for_this": false,
+      "argv": null,
+      "automatic_retry": false,
+      "blocked_input": [
+        "normal demonstration t/t+10 frame eligibility",
+        "256x2048 endpoint tokens",
+        "finite encoder/train/selection budget"
+      ],
+      "bytes_per_frame": 2097152,
+      "concurrency_limit": 8,
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "dependencies": [
+        "A11 immutable final pool",
+        "B11"
+      ],
+      "frame_dtype": "float32",
+      "historical_checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/vla-corrector-h1-k10",
+      "id": "B12_LVM_TOKENS_AND_FIT",
+      "implementation_missing": [
+        "released feature extraction and normal-demo trainer connected to queue"
+      ],
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B12_LVM_TOKENS_AND_FIT",
+      "owner": "B",
+      "recipe": {
+        "h_window": 1,
+        "k_step": 10,
+        "loss": "cosine over flattened tokens",
+        "split": "parent split; never original random frame-pair split",
+        "target": "z[t+10]-z[t]"
+      },
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 4,
+        "gpus": 1,
+        "ram_bytes": 68719476736,
+        "shared_bytes": 17179869184,
+        "tmp_bytes": 34359738368,
+        "vram_bytes_per_gpu": 25769803776
+      },
+      "retrain_authorized": false,
+      "status": "blocked_engineering_and_input",
+      "storage_formula": "2097152 * unique needed frames plus manifests/temp; extraction once shared by methods"
+    },
+    {
+      "A_runtime_waits_for_this": false,
+      "LVM_trigger": "original native safety every step/cooldown10 and repeated interventions; not G0-once",
+      "argv": null,
+      "automatic_retry": false,
+      "blocked_input": [
+        "P20_B_EXTERNAL immutable source/seed/split/budget"
+      ],
+      "concurrency_limit": 8,
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "dependencies": [
+        "B12_GAF_FIT_FINALPOOL_V1",
+        "B12_LVM_TOKENS_AND_FIT",
+        "P20_A immutable evaluation identity"
+      ],
+      "episode_cap": null,
+      "fairness": [
+        "same final common pool as A",
+        "same checkpoint/normalizer/H10/total horizon/env assets/planned init identities",
+        "baseline selection frozen before A test outcomes",
+        "host-specific E5; no raw cross-host latency ranking"
+      ],
+      "id": "B20_EXTERNAL_H10_EVAL",
+      "implementation_missing": [
+        "GAF denoiser hook + original LVM repeated/cooldown trigger in real new-protocol runtime with E5"
+      ],
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B20_EXTERNAL_H10_EVAL",
+      "owner": "B",
+      "per_E_GAF_caps": {
+        "VLA_calls": 30,
+        "action_backwards": 300,
+        "actions": 300,
+        "critic_member_forwards": 900,
+        "flow_calls": 300
+      },
+      "released_episodes": 0,
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 4,
+        "gpus": 1,
+        "ram_bytes": 68719476736,
+        "shared_bytes": 4294967296,
+        "tmp_bytes": 17179869184,
+        "vram_bytes_per_gpu": 25769803776
+      },
+      "status": "blocked_engineering_and_input"
+    },
+    {
+      "A_runtime_waits_for_this": false,
+      "argv": null,
+      "automatic_retry": false,
+      "blocked_input": [
+        "Smol-specific D/G0/Q views and finite P20_B_SMOL recipe"
+      ],
+      "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model",
+      "concurrency_limit": 8,
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "dependencies": [],
+      "episode_cap": null,
+      "executed_K": 10,
+      "generated_H": 50,
+      "id": "B30_SMOL50K_CORRECTOR",
+      "implementation_missing": [
+        "real Smol sampler Post/Velocity hooks",
+        "Smol-specific Corrector training/evaluation stage entry"
+      ],
+      "legacy_baseline_results_are_current_results": false,
+      "no_resume_to_100k": true,
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B30_SMOL50K_CORRECTOR",
+      "owner": "B",
+      "physical_action_dim": 4,
+      "released_episodes": 0,
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 4,
+        "gpus": 1,
+        "ram_bytes": 68719476736,
+        "shared_bytes": 4294967296,
+        "tmp_bytes": 17179869184,
+        "vram_bytes_per_gpu": 25769803776
+      },
+      "sequence": [
+        "bind retained50k checkpoint and its own normalizer",
+        "freeze feature/D/G0/Q adaptation stage",
+        "freeze independent N/R/Post/Velocity evaluation with E5"
+      ],
+      "status": "blocked_engineering_and_input"
+    },
+    {
+      "A_runtime_waits_for_this": false,
+      "DDP_rank_count": 8,
+      "NFE": 10,
+      "aggregate_rank_optimizer_attempt_limit_proposal": 240000,
+      "argv": null,
+      "automatic_retry": false,
+      "backend_argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-xvla-lr044/bin/python",
+        "-m",
+        "accelerate.commands.launch",
+        "--num_processes=8",
+        "--mixed_precision=bf16",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/xvla_train.py",
+        "xvla",
+        "--world-size",
+        "8",
+        "--run-id",
+        "B30-xvla-s42-v1",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B30_XVLA_MT50_SFT/seed42",
+        "--execute"
+      ],
+      "backend_code": {
+        "bytes": 5477,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/xvla_train.py",
+        "sha256": "c6aa5a835131758b113007cb113ff3971aad2ac320209aa8676f8f726de42311"
+      },
+      "backend_is_queue_entry": false,
+      "blocked_input": [],
+      "budget_status": "scientific forward/optimizer cap proposed, dataloader/eval/checkpoint/code identities still require bounded wrapper; not ready for execution",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "dependencies": [],
+      "executed_K": 10,
+      "existing_recipe_ref": {
+        "bytes": 1748,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/configs/experiments.json",
+        "sha256": "1df82ec10b71ee32b7a72719fad598ec45080384c0facd88d0998dabd7448b19"
+      },
+      "generated_H": 30,
+      "global_batch": 64,
+      "id": "B30_XVLA_MT50_SFT",
+      "implementation_missing": [
+        "stage-gated DDP wrapper with inherited reservation, durable scientific claim, entered/completed per-rank counters and cancellation",
+        "B-local runtime identities/admission, no standalone GPU probe"
+      ],
+      "internal_action_dimension": 20,
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B30_XVLA_MT50_SFT",
+      "owner": "B",
+      "per_rank_forward_and_backward_limit_proposal": 30000,
+      "physical_action_dim": 4,
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 32,
+        "gpus": 8,
+        "ram_bytes": 549755813888,
+        "shared_bytes": 85899345920,
+        "tmp_bytes": 137438953472,
+        "vram_bytes_per_gpu": 75161927680
+      },
+      "scientific_status": "local candidate MT50 adaptation; not claimed exact upstream paper recipe",
+      "seed": 42,
+      "status": "blocked_engineering_and_stage_freeze",
+      "storage_basis": "80 GiB admission proposal must be recalculated against resolved optimizer/shards/checkpoint policy before freeze; not measured",
+      "total_complete_training_seeds": 1,
+      "updates_proposal": 30000,
+      "wall_timeout_basis": "engineering ceiling only; no throughput measured",
+      "wall_timeout_proposal_seconds": 172800
+    },
+    {
+      "A_runtime_waits_for_this": false,
+      "argv": null,
+      "automatic_retry": false,
+      "blocked_input": [
+        "trained X checkpoint",
+        "X-specific D/G0/Q views and frozen evaluation sources"
+      ],
+      "concurrency_limit": 8,
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "dependencies": [
+        "B30_XVLA_MT50_SFT"
+      ],
+      "episode_cap": null,
+      "executed_K": 10,
+      "generated_H": 30,
+      "id": "B30_XVLA_CORRECTOR_EVAL",
+      "implementation_missing": [
+        "X sampler Post/Velocity hooks",
+        "new-protocol E5/runtime wrapper"
+      ],
+      "internal_action_dimension": 20,
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B30_XVLA_CORRECTOR_EVAL",
+      "owner": "B",
+      "physical_action_dim": 4,
+      "released_episodes": 0,
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 4,
+        "gpus": 1,
+        "ram_bytes": 68719476736,
+        "shared_bytes": 4294967296,
+        "tmp_bytes": 17179869184,
+        "vram_bytes_per_gpu": 34359738368
+      },
+      "status": "blocked_engineering_and_input"
+    },
+    {
+      "A_runtime_waits_for_this": false,
+      "argv": null,
+      "automatic_retry": false,
+      "blocked_input": [
+        "choose/freeze local29999 checkpoint + own normalization or official weights + official normalization",
+        "LIBERO-specific Corrector views and finite training/eval source recipes"
+      ],
+      "concurrency_limit": 8,
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "dependencies": [],
+      "episode_cap": null,
+      "existing_baseline_entries": [
+        {
+          "bytes": 1698,
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/serve_pi05.py",
+          "sha256": "d0faa47e3887a27d6ccb3ed70263f6f5ab9780bb0fcd6424a20150b57aff7e1b"
+        },
+        {
+          "bytes": 6434,
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/eval_libero.py",
+          "sha256": "755b4cdb06b66db1b6e24898fb49db736b8a4d9d1f752f2c775578c31602a210"
+        }
+      ],
+      "id": "B30_PI05_LIBERO_CORRECTOR",
+      "implementation_missing": [
+        "JAX/OpenPI R/Post/Velocity integration and 7D action derivative/normalization semantics",
+        "D/G0/Q adaptation for state8 and two images",
+        "persistent model server+client lifecycle with shared single node reservation and per-job ports/cache/E5"
+      ],
+      "interfaces": {
+        "NFE": 10,
+        "action_dim": 7,
+        "executed_K": 5,
+        "generated_H": 10,
+        "images": 2,
+        "legacy_suite_action_caps": {
+          "libero_10": 520,
+          "libero_goal": 300,
+          "libero_object": 280,
+          "libero_spatial": 220
+        },
+        "settle_wait_steps": 10,
+        "state_dim": 8
+      },
+      "local_checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/libero/pi05/pi05_libero/libero-pi05-s42-ma-20260912-v1/29999",
+      "official_checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+      "old_baseline_evaluations_are_complete_current_method_results": false,
+      "optimizer_resume_available": false,
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B30_PI05_LIBERO_CORRECTOR",
+      "owner": "B",
+      "released_episodes": 0,
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 4,
+        "gpus": 1,
+        "ram_bytes": 68719476736,
+        "shared_bytes": 4294967296,
+        "tmp_bytes": 17179869184,
+        "vram_bytes_per_gpu": 34359738368
+      },
+      "seed_policy": "P20 freezes suite/task/init-state/model RNG jointly; do not transplant MetaWorld seeds or 300/4D caps",
+      "sequence": [
+        "freeze one checkpoint history and matching normalizer",
+        "freeze feature/D/G0/Q adaptation",
+        "freeze suites/source/seed and E5 evaluation independently of MW work"
+      ],
+      "status": "blocked_engineering_and_input"
+    }
+  ],
+  "storage": {
+    "A_next8_floor_bytes": 93952475136,
+    "ledger_lock": "short atomic accounting transaction; never across job or publication",
+    "quota": "unknown",
+    "selection_helper": {
+      "bytes": 2368,
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/resource_admission.py",
+      "sha256": "438cab9bfb2c1336471e1f115c75eac213cb4f679cd638e913f3f901e443a506"
+    }
+  },
+  "telemetry": {
+    "distinguish": [
+      "loading",
+      "CPU simulation",
+      "model inference",
+      "dependency wait"
+    ],
+    "log_bytes_cap": 33554432,
+    "no_GPU_diagnostic_jobs": true,
+    "per_GPU": [
+      "actual utilization",
+      "VRAM",
+      "active owned tasks",
+      "queue length",
+      "rolling mean",
+      "idle seconds"
+    ],
+    "period_seconds": 15
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "B10_PREFLIGHT_REVISION_R2",
+  "revision": 1,
+  "accepted_at_utc": "2026-09-20T09:05:29.938522+00:00",
+  "status": "CPU_revision_accepted_not_GPU_release",
+  "receipt": {
+    "path": "receipts/B/B10_PREFLIGHT_REVISION_R2_RESULT.json",
+    "sha256": "7fd23157417d9e03168ebec3b9b3c99fc1c911df2533c994ea598f189ec0f24a"
+  },
+  "report": {
+    "path": "receipts/B/B10_PREFLIGHT_REVISION_R2_REPORT.md",
+    "sha256": "b2eccbae5ce5b88d5ea55d72acc10ac40dd4eecdcb9aa56bc4d6392572b60aa1"
+  },
+  "manifest": {
+    "path": "results/B/B10_PREFLIGHT_REVISION_R2/B10_PREFLIGHT_REVISION_R2_r1_B_20260920/ARTIFACT_MANIFEST.json",
+    "sha256": "a4a241436b95640b848431ba59228caf3ebc03d342e02e8ee47751717b299020"
+  },
+  "independent_reviewer": "/root/b_pending_receipts_review",
+  "verification": {
+    "artifact_refs": 9,
+    "manifest_files": 69,
+    "code_files": 9,
+    "authority_snapshots": 13,
+    "checks": 101,
+    "unique_paths": 94,
+    "CPU_tests": 9,
+    "rejection_subcases": 36
+  },
+  "compute": {
+    "models": 0,
+    "simulation": 0,
+    "training": 0,
+    "deletion": 0,
+    "read_only_nvidia_smi_identity_inspection": "performed as explicitly permitted; sandbox failure then escalated successful queries; not all hardware queries zero"
+  },
+  "GPU_proposal_disposition": "Retain immutable draft; no standalone two-forward probe released now. Before any actual B compute, bind current runtime/lifecycle/caps in a new reviewed package.",
+  "future_runtime_corrections": [
+    "old entry still defaults to90s handoff; must explicitly bind reviewed300s setting if using this guard",
+    "gpu_seconds_upper_bound200 and reservation1600 are not proven precise-GPU or end-to-end bounds; separate measured/estimated/unknown and timeout scopes"
+  ],
+  "next_task": "B11_COMMON_POOL_VIEWS_CPU_V1",
+  "future_compute_authorized": false
+}

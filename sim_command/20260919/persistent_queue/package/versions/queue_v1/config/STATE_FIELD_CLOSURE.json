@@ -1,0 +1,248 @@
+{
+  "Box_bound_metadata": "exact runtime gymnasium.spaces.Box low/high numeric ndarray only; dtype/shape/raw bytes retained including +/-inf; NaN and all nonfinite physical arrays/scalars rejected; exact Dict traversed",
+  "actual_environment_calls": 0,
+  "actual_full_state_verified_attempts": 0,
+  "canonical_boundary": "after actual cut5/cut55 observation/history, before bank generation or intervention",
+  "comparison": "exact typed arrays/scalars, dtype/shape/little-endian bytes including signed zero; zero tolerance",
+  "excluded_or_derived": [
+    {
+      "basis": "MJB identity serialization; no object address comparison",
+      "classification": "captured",
+      "field": "native.model"
+    },
+    {
+      "basis": "getState flags",
+      "classification": "captured",
+      "field": "native.data integration"
+    },
+    {
+      "basis": "frozen native step/do_simulation computes derived fields before reward/observation; no extra _get_obs or forward during comparison",
+      "classification": "recomputed",
+      "field": "native.data derived kinematics/contact workspace",
+      "runtime_proof": false
+    },
+    {
+      "basis": "not physics state; same frozen native viewer config/compiled camera and exact actual prefix RGB/features; never reuse/restore a handle",
+      "classification": "irrelevant",
+      "field": "native.mujoco_renderer GL handle addresses",
+      "runtime_proof": false
+    },
+    {
+      "basis": "fixed policy class identity; this collector never calls expert policy",
+      "classification": "irrelevant",
+      "field": "wrapper.expert_policy"
+    },
+    {
+      "basis": "blocks full_state_verified; no tolerance relaxation",
+      "classification": "unknown",
+      "field": "unknown attrs/plugin/callback or undeclared model modification"
+    }
+  ],
+  "groups": {
+    "callbacks_plugins": {
+      "basis": [
+        "unsupported extension state rejected, no fallback"
+      ],
+      "classification": "captured",
+      "fields": [
+        "8 callback getter results must None",
+        "nplugin/npluginstate must0"
+      ]
+    },
+    "clocks": {
+      "basis": [
+        "controller and native runtime_engine.step floor schedule"
+      ],
+      "classification": "captured",
+      "fields": [
+        "absolute control index",
+        "data.time",
+        "frame_skip",
+        "(absolute_step*400)%30",
+        "action_scale .015",
+        "H10/target s300"
+      ]
+    },
+    "identity": {
+      "basis": [
+        "frozen config/input/code/external manifests",
+        "exact prefix_records check"
+      ],
+      "classification": "immutable",
+      "fields": [
+        "task class",
+        "source signature",
+        "policy/encoder/normalizer/projection/config/package SHAs",
+        "prefix plans and frame/action/feature SHA"
+      ]
+    },
+    "integration": {
+      "basis": [
+        "mujoco3.6.0 mjdata.h state flag",
+        "bindings_test.py stateSize/getState shape behavior"
+      ],
+      "classification": "captured",
+      "dtype": "float64",
+      "fields": [
+        "mjSTATE_INTEGRATION: time,qpos,qvel,act,history,qacc_warmstart,ctrl,qfrc_applied,xfrc_applied,eq_active,mocap_pos,mocap_quat,userdata,plugin_state"
+      ],
+      "reads": [
+        "mj_stateSize",
+        "mj_getState"
+      ]
+    },
+    "mutable_model": {
+      "basis": [
+        "installed mj_saveModel declaration and size API"
+      ],
+      "classification": "captured",
+      "fields": [
+        "MJB complete compiled model byte image including per-task bodies/sites and corner2 camera/options"
+      ],
+      "purpose": "identity serialization only, never restore",
+      "reads": [
+        "mj_sizeModel",
+        "mj_saveModel"
+      ],
+      "runtime_unknown": [
+        "MJB Python buffer binding and deterministic exact bytes across fresh children are unmeasured",
+        "header/declaration alone is not real mutation coverage proof"
+      ]
+    },
+    "queue_history": {
+      "basis": [
+        "RTC disabled and H10 controller owns queue; strict frozen eval policy"
+      ],
+      "classification": "captured",
+      "fields": [
+        "raw50 exact bytes,age5,remaining5",
+        "policy queues required empty",
+        "causal last5 features/proprio and last4 actual actions",
+        "parameter/buffer version integers"
+      ]
+    },
+    "rng": {
+      "basis": [
+        "reset global/env seeds before explicit reset",
+        "all policy noise uses a separate device torch.Generator",
+        "candidate/local/Q/G0 namespaces bound in source proposal"
+      ],
+      "classification": "captured",
+      "fields": [
+        "Python/NumPy states as prior contract; Torch CPU and the parent-assigned target device state, never hardcoded CUDA0"
+      ],
+      "intentional_difference": "run/branch IDs and repeat suffix streams applied only after state verification"
+    },
+    "task_python": {
+      "basis": [
+        "MT50 task source/base and unchanged typed serializer; no omitted task attributes"
+      ],
+      "classification": "captured",
+      "fields": [
+        "all actual __dict__ entries, not a selective reward-cache list",
+        "_prev_obs/_last_stable_obs",
+        "_target_pos/_last_rand_vec/_freeze_rand_vec/seeded_rand_vec",
+        "curr_path_length/max_path_length/_did_see_sim_exception",
+        "init_qpos/init_qvel/init_tcp/hand_init_pos",
+        "obj_init_pos/angle/init_config",
+        "liftThresh/objHeight/heightTarget/maxPlacingDist",
+        "nested spaces and RNG engine/state"
+      ],
+      "unknown": "any unclassified object rejects"
+    },
+    "wrapper_python": {
+      "basis": [
+        "private MetaworldEnv.__dict__ plus native task captured separately"
+      ],
+      "classification": "captured",
+      "fields": [
+        "all actual wrapper vars",
+        "task/camera/render_mode/dimensions/_max_episode_steps",
+        "spaces including nested dictionary Box bounds/dtype/RNG"
+      ]
+    }
+  },
+  "other45": "static source support only; no live initialization or state proof",
+  "physical_equality_proven": null,
+  "prior_contract": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_REVISION_CPU_V2/RESTORE_FIELD_CONTRACT.json",
+    "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_REVISION_CPU_V2/RESTORE_FIELD_CONTRACT.json",
+    "sha256": "4723921911dc659983096b01d93e06ee8c7a7f3fe1ab090622cea385550b37a3",
+    "size_bytes": 10385
+  },
+  "privileged_fields_used_as_model_input": false,
+  "repair_decision_ref": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/COMMON_POOL_COLLECTOR_REPAIR_DECISIONS_V1.md",
+    "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/COMMON_POOL_COLLECTOR_REPAIR_DECISIONS_V1.md",
+    "sha256": "28d94f8d38fe598ae1ca10eca402c0b036ce781e53b2acf01950b9d70964777d",
+    "size_bytes": 4315
+  },
+  "runtime_unknown_policy": "unsupported fields/mismatch stop this parent; system identity/storage faults stop whole wave",
+  "schema": "common_pool_five_task_full_state_v2",
+  "schema_name_retained": "legacy common_pool_five_task_full_state_v2 encoding/fields/tolerance unchanged; allowlist extended via table",
+  "source_evidence": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/TASK_SOURCE_EVIDENCE.json",
+    "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/TASK_SOURCE_EVIDENCE.json",
+    "sha256": "eb38573b02773f25cf4a0051b3f119547681a607af9ee59ed1db979ebc24a67b",
+    "size_bytes": 411384
+  },
+  "status": "CPU_STATIC_TABLE_REUSED;BATCH3_PARENT_ACTUAL_CLOSURE_UNPROVEN",
+  "task_allowlist": [
+    "metaworld.envs.sawyer_assembly_peg_v3.SawyerNutAssemblyEnvV3",
+    "metaworld.envs.sawyer_basketball_v3.SawyerBasketballEnvV3",
+    "metaworld.envs.sawyer_bin_picking_v3.SawyerBinPickingEnvV3",
+    "metaworld.envs.sawyer_box_close_v3.SawyerBoxCloseEnvV3",
+    "metaworld.envs.sawyer_button_press_topdown_v3.SawyerButtonPressTopdownEnvV3",
+    "metaworld.envs.sawyer_button_press_topdown_wall_v3.SawyerButtonPressTopdownWallEnvV3",
+    "metaworld.envs.sawyer_button_press_v3.SawyerButtonPressEnvV3",
+    "metaworld.envs.sawyer_button_press_wall_v3.SawyerButtonPressWallEnvV3",
+    "metaworld.envs.sawyer_coffee_button_v3.SawyerCoffeeButtonEnvV3",
+    "metaworld.envs.sawyer_coffee_pull_v3.SawyerCoffeePullEnvV3",
+    "metaworld.envs.sawyer_coffee_push_v3.SawyerCoffeePushEnvV3",
+    "metaworld.envs.sawyer_dial_turn_v3.SawyerDialTurnEnvV3",
+    "metaworld.envs.sawyer_disassemble_peg_v3.SawyerNutDisassembleEnvV3",
+    "metaworld.envs.sawyer_door_close_v3.SawyerDoorCloseEnvV3",
+    "metaworld.envs.sawyer_door_lock_v3.SawyerDoorLockEnvV3",
+    "metaworld.envs.sawyer_door_v3.SawyerDoorEnvV3",
+    "metaworld.envs.sawyer_door_unlock_v3.SawyerDoorUnlockEnvV3",
+    "metaworld.envs.sawyer_hand_insert_v3.SawyerHandInsertEnvV3",
+    "metaworld.envs.sawyer_drawer_close_v3.SawyerDrawerCloseEnvV3",
+    "metaworld.envs.sawyer_drawer_open_v3.SawyerDrawerOpenEnvV3",
+    "metaworld.envs.sawyer_faucet_open_v3.SawyerFaucetOpenEnvV3",
+    "metaworld.envs.sawyer_faucet_close_v3.SawyerFaucetCloseEnvV3",
+    "metaworld.envs.sawyer_hammer_v3.SawyerHammerEnvV3",
+    "metaworld.envs.sawyer_handle_press_side_v3.SawyerHandlePressSideEnvV3",
+    "metaworld.envs.sawyer_handle_press_v3.SawyerHandlePressEnvV3",
+    "metaworld.envs.sawyer_handle_pull_side_v3.SawyerHandlePullSideEnvV3",
+    "metaworld.envs.sawyer_handle_pull_v3.SawyerHandlePullEnvV3",
+    "metaworld.envs.sawyer_lever_pull_v3.SawyerLeverPullEnvV3",
+    "metaworld.envs.sawyer_peg_insertion_side_v3.SawyerPegInsertionSideEnvV3",
+    "metaworld.envs.sawyer_pick_place_wall_v3.SawyerPickPlaceWallEnvV3",
+    "metaworld.envs.sawyer_pick_out_of_hole_v3.SawyerPickOutOfHoleEnvV3",
+    "metaworld.envs.sawyer_reach_v3.SawyerReachEnvV3",
+    "metaworld.envs.sawyer_push_back_v3.SawyerPushBackEnvV3",
+    "metaworld.envs.sawyer_push_v3.SawyerPushEnvV3",
+    "metaworld.envs.sawyer_pick_place_v3.SawyerPickPlaceEnvV3",
+    "metaworld.envs.sawyer_plate_slide_v3.SawyerPlateSlideEnvV3",
+    "metaworld.envs.sawyer_plate_slide_side_v3.SawyerPlateSlideSideEnvV3",
+    "metaworld.envs.sawyer_plate_slide_back_v3.SawyerPlateSlideBackEnvV3",
+    "metaworld.envs.sawyer_plate_slide_back_side_v3.SawyerPlateSlideBackSideEnvV3",
+    "metaworld.envs.sawyer_peg_unplug_side_v3.SawyerPegUnplugSideEnvV3",
+    "metaworld.envs.sawyer_soccer_v3.SawyerSoccerEnvV3",
+    "metaworld.envs.sawyer_stick_push_v3.SawyerStickPushEnvV3",
+    "metaworld.envs.sawyer_stick_pull_v3.SawyerStickPullEnvV3",
+    "metaworld.envs.sawyer_push_wall_v3.SawyerPushWallEnvV3",
+    "metaworld.envs.sawyer_reach_wall_v3.SawyerReachWallEnvV3",
+    "metaworld.envs.sawyer_shelf_place_v3.SawyerShelfPlaceEnvV3",
+    "metaworld.envs.sawyer_sweep_into_goal_v3.SawyerSweepIntoGoalEnvV3",
+    "metaworld.envs.sawyer_sweep_v3.SawyerSweepEnvV3",
+    "metaworld.envs.sawyer_window_open_v3.SawyerWindowOpenEnvV3",
+    "metaworld.envs.sawyer_window_close_v3.SawyerWindowCloseEnvV3"
+  ],
+  "unresolved_for_future_parent": [
+    "each new task/source needs the original exact captured-field/MJB gate in its planned parent",
+    "unsupported fields or unequal prefix stop parent without fallback/tolerance change",
+    "static initialization caps do not prove physical equality",
+    "independent Batch3 storage risk acceptance required; earlier grants confer no authority"
+  ]
+}

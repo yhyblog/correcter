@@ -1,0 +1,38 @@
+{
+  "issued_at_utc": "2026-09-23T15:44:03.439665+00:00",
+  "nodes": {
+    "A": {
+      "task_id": "A_POST_DEMO_VIDEOS_V1",
+      "status": "first_preview_published_and_reviewed_recording_not_complete",
+      "candidate_pairs": 79,
+      "transport": {
+        "receipt": "A_QUEUE_TRANSPORT_r2.json",
+        "returncode": 0
+      },
+      "ACK_received": true,
+      "acknowledgement": "receipts/A/A_POST_DEMO_VIDEOS_V1_ACK.json",
+      "recording_launch_observed": true,
+      "first_preview_event": "A_POST_DEMO_VIDEOS_V1_first_preview_v1",
+      "first_preview_review": "deadline_20260924/POST_DEMO_VIDEOS_V1/analysis/A_FIRST_PREVIEW_REVIEW.json",
+      "reviewed_qualified_pairs": 4
+    },
+    "B": {
+      "task_id": "B_POST_DEMO_VIDEOS_V1",
+      "status": "original_executor_turn_active_task_ACK_pending",
+      "candidate_pairs": 78,
+      "ACK_received": false,
+      "recording_launch_observed": false
+    },
+    "C": {
+      "task_id": "C_POST_DEMO_VIDEOS_V1",
+      "status": "cancelled_unclaimed_transferred_A_B",
+      "candidate_pairs": 0
+    }
+  },
+  "review_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923",
+  "authorization": {
+    "path": "deadline_20260924/POST_DEMO_VIDEOS_V1/AUTHORIZATION_V2.json",
+    "sha256": "632b9cde9a7cf0528c8c0d5a974f526f08b4faa590bde3d80c7ffa1e2fbd4024"
+  },
+  "updated_at_utc": "2026-09-23T16:13:10.371693+00:00"
+}

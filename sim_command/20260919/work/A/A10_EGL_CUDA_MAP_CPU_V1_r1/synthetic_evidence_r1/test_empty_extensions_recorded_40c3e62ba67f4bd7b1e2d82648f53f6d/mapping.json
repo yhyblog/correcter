@@ -1,0 +1,41 @@
+{
+  "method": "EGL_CUDA_DEVICE_NV handle -> cuDeviceGetPCIBusId -> kernel PCI/UUID -> frozen NVML target",
+  "devices": [
+    {
+      "egl_index": 0,
+      "egl_handle": 83,
+      "extensions_raw": {
+        "kind": "empty",
+        "bytes_hex": "",
+        "utf8_with_replacement": ""
+      },
+      "attribute": null,
+      "cuda_pci": null,
+      "mapping": null,
+      "decision": "refused"
+    }
+  ],
+  "selected_egl_index": null,
+  "ordinal_assumption": false,
+  "stage": "candidate_0_extension",
+  "cuda_init_return_code": 0,
+  "enumeration": {
+    "return_code": 1,
+    "count": 8,
+    "handles": [
+      83,
+      21,
+      48,
+      72,
+      64,
+      91,
+      36,
+      55
+    ]
+  },
+  "failure": {
+    "error_type": "Refused",
+    "error": "Missing device extensions; NULL and empty retained separately",
+    "stage": "candidate_0_extension"
+  }
+}

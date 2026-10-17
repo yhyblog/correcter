@@ -1,0 +1,9 @@
+# E1 renderer audit and corrected continuation
+
+The r1 supervisor and all8 workers exited successfully, with1,200 nominally complete episodes. Audit detected a reproducible observation failure after each worker closed its first environment. The legacy Gymnasium offscreen viewer released the EGL context while retaining the MuJoCo render context. A three-environment CPU-only reproduction on old development identities yielded normal reset images followed by all-zero images after task changes. This is an engineering failure, not evidence of loss/seed performance.
+
+The private repair releases the MuJoCo render context while its own GL context is current, then releases EGL; cleanup is idempotent and rendering makes its context current. An all-zero RGB observation now causes an explicit technical failure. A matched CPU reproduction preserves every initial-environment image and reproduces all six initial/step images exactly after recreating that same environment. No model, scientific algorithm, threshold, source, or policy seed was changed.
+
+Preserve the first80 valid episodes, including the one valid scientific failure. Mark all1,120 post-close episodes technical-invalid regardless of their reported outcome. Keep original files immutable. One distinct corrected attempt, D24_E1_RENDER_REPAIR_r2, covers precisely those1,120 identities with8 resident GPU workers; no valid episode is repeated. The unfinished full matrix remains24 cells with50 planned sources per cell.
+
+The6 short CPU diagnostic attempts used2 old development identities and5 actions per attempt, with no VLA calls or completed scientific rollouts. They remain counted separately in the conservative B attempt budget. The repaired batch would bring total attempts to at most3,727 of16,000. Holders remain disabled on all8 GPUs throughout the formal batch and resume after all workers finish, including failure exits. E6 and E8 integration remain pending; A never waits for B.

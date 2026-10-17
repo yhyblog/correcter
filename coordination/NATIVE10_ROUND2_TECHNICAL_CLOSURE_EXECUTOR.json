@@ -1,0 +1,2662 @@
+{
+  "schema": "native10_round2_technical_closure_executor_v1",
+  "status": "technical_metadata_closed",
+  "created_utc": "2026-09-16T23:34:58.099401+00:00",
+  "scope": "只读技术元数据；未读取分支结局、方法成功率、正式数据数组；不替代独立全轨迹审计。",
+  "stage": "round2_labels",
+  "bank_version": "round2_labels_v1",
+  "wave_id": "round2_v1_01",
+  "config_sha256": "13ff72cbec4aa8fe92354d55e3a5e0ce0babc934d8cfeb72124af8eb4abc1944",
+  "freeze_sha256": "b1755f37303b914c2da362d59f390a91f8c1c46651023a7150810dff31a5ebcb",
+  "protocol_sha256": "a25c2e599a9fe656c02f253ee32add30c197eed8458a0afd491234ca68cfaaa2",
+  "ledger": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/budget/attempts.jsonl",
+    "sha256": "189cdf5c04a3782b5e540c3761fa682481dedad6ea91e703e705713e2d076973",
+    "bytes": 20580679,
+    "records": 62074,
+    "consecutive_unique_numbers": true,
+    "all_amounts_one": true,
+    "resources": {
+      "simulator_attempts": 42874,
+      "training_updates": 19200
+    },
+    "by_stage": {
+      "p0": {
+        "simulator_attempts": 564
+      },
+      "round1_labels": {
+        "simulator_attempts": 22915
+      },
+      "training_round1": {
+        "training_updates": 19200
+      },
+      "round1_development_policy": {
+        "simulator_attempts": 1995
+      },
+      "round2_labels": {
+        "simulator_attempts": 17400
+      }
+    },
+    "by_stage_resource_kind": [
+      {
+        "stage": "p0",
+        "resource": "simulator_attempts",
+        "kind": "branch_including_restore",
+        "amount": 400
+      },
+      {
+        "stage": "p0",
+        "resource": "simulator_attempts",
+        "kind": "candidate_restore",
+        "amount": 20
+      },
+      {
+        "stage": "p0",
+        "resource": "simulator_attempts",
+        "kind": "concurrency_branch_including_restore",
+        "amount": 32
+      },
+      {
+        "stage": "p0",
+        "resource": "simulator_attempts",
+        "kind": "concurrency_candidate_restore",
+        "amount": 32
+      },
+      {
+        "stage": "p0",
+        "resource": "simulator_attempts",
+        "kind": "legacy_branch_including_restore",
+        "amount": 24
+      },
+      {
+        "stage": "p0",
+        "resource": "simulator_attempts",
+        "kind": "legacy_generation_including_restore",
+        "amount": 6
+      },
+      {
+        "stage": "p0",
+        "resource": "simulator_attempts",
+        "kind": "native_queue_probe",
+        "amount": 5
+      },
+      {
+        "stage": "p0",
+        "resource": "simulator_attempts",
+        "kind": "raw_clipped_physical_probe",
+        "amount": 20
+      },
+      {
+        "stage": "p0",
+        "resource": "simulator_attempts",
+        "kind": "raw_queue_probe",
+        "amount": 5
+      },
+      {
+        "stage": "p0",
+        "resource": "simulator_attempts",
+        "kind": "source_capture",
+        "amount": 20
+      },
+      {
+        "stage": "round1_development_policy",
+        "resource": "simulator_attempts",
+        "kind": "branch_including_restore",
+        "amount": 1900
+      },
+      {
+        "stage": "round1_development_policy",
+        "resource": "simulator_attempts",
+        "kind": "candidate_restore",
+        "amount": 95
+      },
+      {
+        "stage": "round1_labels",
+        "resource": "simulator_attempts",
+        "kind": "branch_including_restore",
+        "amount": 22120
+      },
+      {
+        "stage": "round1_labels",
+        "resource": "simulator_attempts",
+        "kind": "candidate_restore",
+        "amount": 395
+      },
+      {
+        "stage": "round1_labels",
+        "resource": "simulator_attempts",
+        "kind": "source_capture",
+        "amount": 400
+      },
+      {
+        "stage": "round2_labels",
+        "resource": "simulator_attempts",
+        "kind": "branch_including_restore",
+        "amount": 16800
+      },
+      {
+        "stage": "round2_labels",
+        "resource": "simulator_attempts",
+        "kind": "candidate_restore",
+        "amount": 300
+      },
+      {
+        "stage": "round2_labels",
+        "resource": "simulator_attempts",
+        "kind": "source_capture",
+        "amount": 300
+      },
+      {
+        "stage": "training_round1",
+        "resource": "training_updates",
+        "kind": "critic_optimizer_update",
+        "amount": 19200
+      }
+    ],
+    "stage_attempt_numbers": [
+      44675,
+      62074
+    ],
+    "stage_count": 17400,
+    "stage_kinds": {
+      "source_capture": 300,
+      "candidate_restore": 300,
+      "branch_including_restore": 16800
+    },
+    "stage_duplicate_kind_identity_count": 0,
+    "technical_reserve_used": {},
+    "simulator_hard_limit": 50000,
+    "remaining_global_simulator_budget": 7126,
+    "optimizer_workflow_hard_limit": 51200,
+    "remaining_workflow_optimizer_budget": 32000
+  },
+  "closure": {
+    "primary_planned": 300,
+    "primary_completed": 300,
+    "unique_actual_source_ids": 300,
+    "per_task": {
+      "disassemble-v3": 60,
+      "shelf-place-v3": 60,
+      "stick-push-v3": 60,
+      "pick-place-wall-v3": 60,
+      "stick-pull-v3": 60
+    },
+    "source_captures": 300,
+    "independent_candidate_restores": 300,
+    "branches": 16800,
+    "branches_per_source": 56,
+    "candidates_including_normal": 14,
+    "repeats": 4,
+    "workers_complete": 32,
+    "worker_failures": 0,
+    "metadata_errors": 0,
+    "missing_slots": 0,
+    "no_cut_sources": 0,
+    "preaction_rejections": 0,
+    "resolved_replacements": 0,
+    "stage_retry_identities": 0,
+    "technical_reserve_used": 0,
+    "all_stage_attempts_retained": true,
+    "completion_denominator_not_filtered": true,
+    "full_trajectory_audit_separate": true
+  },
+  "cost": {
+    "wall_seconds_including_lifecycle": 5715.038629705086,
+    "wall_minutes": 95.2506438284181,
+    "nominal_all8_gpu_wave_hours": 12.700085843789081,
+    "gpu_hours_definition": "整波8GPU保留窗口，不是kernel活跃GPU时间或实际功耗",
+    "completed_sources_per_hour": 188.97510060325374,
+    "branch_outputs_per_second": 2.9396126760506136,
+    "charged_attempts_per_second": 3.044598843052421,
+    "worker_loading_seconds": {
+      "min": 165.63541215658188,
+      "median": 172.05377791263163,
+      "max": 173.79933831840754,
+      "sum": 5501.022694375366
+    },
+    "worker_wall_seconds": {
+      "min": 2880.734205553308,
+      "median": 4653.679686361924,
+      "max": 5685.947391631082,
+      "sum": 149647.64466206543
+    },
+    "worker_after_loading_seconds": {
+      "min": 2708.294540900737,
+      "median": 4481.645945392549,
+      "max": 5513.78402762115,
+      "sum": 144146.62196769007
+    },
+    "worker_times_overlap_do_not_add_as_wall": true,
+    "workers_by_assigned_count": {
+      "10": 12,
+      "9": 20
+    },
+    "workers_per_gpu": 4,
+    "assignment": "原300源注册顺序按rank stride32，rank不进入随机种子",
+    "per_worker": [
+      {
+        "rank": 0,
+        "gpu": 0,
+        "assigned_count": 10,
+        "completed_count": 10,
+        "by_task": {
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2
+        },
+        "actual_branch_count": 560,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 172.73363775387406,
+        "wall_seconds": 5048.4410384483635,
+        "after_loading_seconds": 4875.7074006944895,
+        "started_utc": "2026-09-16T21:53:21.093643+00:00",
+        "finished_utc": "2026-09-16T23:17:29.530635+00:00",
+        "worker_seal_sha256": "011a23d982016ad72cd21dfa2cd88e9f51cdde6dbb362c48685354f58ab3178b"
+      },
+      {
+        "rank": 1,
+        "gpu": 1,
+        "assigned_count": 10,
+        "completed_count": 10,
+        "by_task": {
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2
+        },
+        "actual_branch_count": 560,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 173.03786795213819,
+        "wall_seconds": 4154.479549624026,
+        "after_loading_seconds": 3981.4416816718876,
+        "started_utc": "2026-09-16T21:53:20.968807+00:00",
+        "finished_utc": "2026-09-16T23:02:35.443875+00:00",
+        "worker_seal_sha256": "48485670b1160d2c514dc553cdda175dc0474983198ffc477baf991e72549814"
+      },
+      {
+        "rank": 2,
+        "gpu": 2,
+        "assigned_count": 10,
+        "completed_count": 10,
+        "by_task": {
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2
+        },
+        "actual_branch_count": 560,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 172.9601121507585,
+        "wall_seconds": 4606.373316645622,
+        "after_loading_seconds": 4433.413204494864,
+        "started_utc": "2026-09-16T21:53:20.833290+00:00",
+        "finished_utc": "2026-09-16T23:10:07.202177+00:00",
+        "worker_seal_sha256": "fdf724d405681196807dc53f43c052edc4b7582f33464214c4da00428c07878e"
+      },
+      {
+        "rank": 3,
+        "gpu": 3,
+        "assigned_count": 10,
+        "completed_count": 10,
+        "by_task": {
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2
+        },
+        "actual_branch_count": 560,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 165.63541215658188,
+        "wall_seconds": 5437.022554317489,
+        "after_loading_seconds": 5271.387142160907,
+        "started_utc": "2026-09-16T21:53:21.617777+00:00",
+        "finished_utc": "2026-09-16T23:23:58.637126+00:00",
+        "worker_seal_sha256": "005618ccda7ff56dbe947bf86e15e246aef2229634c40d9b8c4a1ff34eaf7936"
+      },
+      {
+        "rank": 4,
+        "gpu": 4,
+        "assigned_count": 10,
+        "completed_count": 10,
+        "by_task": {
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2
+        },
+        "actual_branch_count": 560,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 170.98815613612533,
+        "wall_seconds": 5662.790282327682,
+        "after_loading_seconds": 5491.802126191556,
+        "started_utc": "2026-09-16T21:53:21.695837+00:00",
+        "finished_utc": "2026-09-16T23:27:44.482105+00:00",
+        "worker_seal_sha256": "ea415c047754dfb6aa330d7e46125e067925d6ff9ff04752b9cabe8c25dffee5"
+      },
+      {
+        "rank": 5,
+        "gpu": 5,
+        "assigned_count": 10,
+        "completed_count": 10,
+        "by_task": {
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2
+        },
+        "actual_branch_count": 560,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 172.76667803898454,
+        "wall_seconds": 5211.879144599661,
+        "after_loading_seconds": 5039.112466560677,
+        "started_utc": "2026-09-16T21:53:21.091096+00:00",
+        "finished_utc": "2026-09-16T23:20:12.966951+00:00",
+        "worker_seal_sha256": "ee5945b8c8bbe58dcac4a949b7c024cb87b89484ef24beb11e134e697a417981"
+      },
+      {
+        "rank": 6,
+        "gpu": 6,
+        "assigned_count": 10,
+        "completed_count": 10,
+        "by_task": {
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2
+        },
+        "actual_branch_count": 560,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 172.17773069255054,
+        "wall_seconds": 5336.472403278574,
+        "after_loading_seconds": 5164.294672586024,
+        "started_utc": "2026-09-16T21:53:21.765195+00:00",
+        "finished_utc": "2026-09-16T23:22:18.234570+00:00",
+        "worker_seal_sha256": "b03c97fd015c7156def4195830e81f0f3e2efeb95ab96bef09f51cdd5ef8e3e3"
+      },
+      {
+        "rank": 7,
+        "gpu": 7,
+        "assigned_count": 10,
+        "completed_count": 10,
+        "by_task": {
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2
+        },
+        "actual_branch_count": 560,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 173.23477626405656,
+        "wall_seconds": 4404.389334611595,
+        "after_loading_seconds": 4231.154558347538,
+        "started_utc": "2026-09-16T21:53:20.244214+00:00",
+        "finished_utc": "2026-09-16T23:06:44.628662+00:00",
+        "worker_seal_sha256": "9e2f2e6125cb6b8c4f8b5e06f55f2915c92b7c396c35f6d67dbbf7030744e306"
+      },
+      {
+        "rank": 8,
+        "gpu": 0,
+        "assigned_count": 10,
+        "completed_count": 10,
+        "by_task": {
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2
+        },
+        "actual_branch_count": 560,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 172.16336400993168,
+        "wall_seconds": 5685.947391631082,
+        "after_loading_seconds": 5513.78402762115,
+        "started_utc": "2026-09-16T21:53:21.745282+00:00",
+        "finished_utc": "2026-09-16T23:28:07.689056+00:00",
+        "worker_seal_sha256": "d0a671c238655767c823d5958f8a236788bc1b1ff2669a832a6c67cee203a855"
+      },
+      {
+        "rank": 9,
+        "gpu": 1,
+        "assigned_count": 10,
+        "completed_count": 10,
+        "by_task": {
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2
+        },
+        "actual_branch_count": 560,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 173.58961687982082,
+        "wall_seconds": 4436.659235080704,
+        "after_loading_seconds": 4263.069618200883,
+        "started_utc": "2026-09-16T21:53:20.423458+00:00",
+        "finished_utc": "2026-09-16T23:07:17.079126+00:00",
+        "worker_seal_sha256": "db2cd108c96d12a8ac9a42b58c334df195f353b45b93d73c75f1c59d0d1664a5"
+      },
+      {
+        "rank": 10,
+        "gpu": 2,
+        "assigned_count": 10,
+        "completed_count": 10,
+        "by_task": {
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2
+        },
+        "actual_branch_count": 560,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 171.7455096077174,
+        "wall_seconds": 4826.493923595175,
+        "after_loading_seconds": 4654.748413987458,
+        "started_utc": "2026-09-16T21:53:21.707753+00:00",
+        "finished_utc": "2026-09-16T23:13:48.198421+00:00",
+        "worker_seal_sha256": "cc0e57514f28abc27539f76ddbd1566bd2b614143b126feea28cd06b0403f2a4"
+      },
+      {
+        "rank": 11,
+        "gpu": 3,
+        "assigned_count": 10,
+        "completed_count": 10,
+        "by_task": {
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2
+        },
+        "actual_branch_count": 560,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 171.90276841633022,
+        "wall_seconds": 5105.999382825568,
+        "after_loading_seconds": 4934.096614409238,
+        "started_utc": "2026-09-16T21:53:21.607352+00:00",
+        "finished_utc": "2026-09-16T23:18:27.603476+00:00",
+        "worker_seal_sha256": "d690ff060db2e8e15f56d15539f28c1c6bfb3c48288e571b76498a0f04af0e2a"
+      },
+      {
+        "rank": 12,
+        "gpu": 4,
+        "assigned_count": 9,
+        "completed_count": 9,
+        "by_task": {
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2,
+          "disassemble-v3": 1
+        },
+        "actual_branch_count": 504,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 171.8846853747964,
+        "wall_seconds": 5060.845557061955,
+        "after_loading_seconds": 4888.960871687159,
+        "started_utc": "2026-09-16T21:53:21.759206+00:00",
+        "finished_utc": "2026-09-16T23:17:42.601412+00:00",
+        "worker_seal_sha256": "631184ecf1c1fd11acb7be5ed8fcb56c5288047b1c3e2b30652fb1e85c174090"
+      },
+      {
+        "rank": 13,
+        "gpu": 5,
+        "assigned_count": 9,
+        "completed_count": 9,
+        "by_task": {
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 1
+        },
+        "actual_branch_count": 504,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 172.4818428605795,
+        "wall_seconds": 5015.665629575029,
+        "after_loading_seconds": 4843.1837867144495,
+        "started_utc": "2026-09-16T21:53:21.405612+00:00",
+        "finished_utc": "2026-09-16T23:16:57.067837+00:00",
+        "worker_seal_sha256": "28670a21d7b798308c3c0666aaa54f05b50a61b8f496cca5202f0ac4de47a141"
+      },
+      {
+        "rank": 14,
+        "gpu": 6,
+        "assigned_count": 9,
+        "completed_count": 9,
+        "by_task": {
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2,
+          "shelf-place-v3": 1
+        },
+        "actual_branch_count": 504,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 171.80140930600464,
+        "wall_seconds": 4272.9614716768265,
+        "after_loading_seconds": 4101.160062370822,
+        "started_utc": "2026-09-16T21:53:21.705515+00:00",
+        "finished_utc": "2026-09-16T23:04:34.663206+00:00",
+        "worker_seal_sha256": "0771e292ed03257aefed5a11470cfc086f8925fd3c24ab63bc26b75525260c7b"
+      },
+      {
+        "rank": 15,
+        "gpu": 7,
+        "assigned_count": 9,
+        "completed_count": 9,
+        "by_task": {
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 1
+        },
+        "actual_branch_count": 504,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 172.43966465257108,
+        "wall_seconds": 2880.734205553308,
+        "after_loading_seconds": 2708.294540900737,
+        "started_utc": "2026-09-16T21:53:21.242867+00:00",
+        "finished_utc": "2026-09-16T22:41:21.972406+00:00",
+        "worker_seal_sha256": "bc051655ec67487b973d4d74a86265cfa2df2ed1ac122deb23a0a4b1d2ef75b9"
+      },
+      {
+        "rank": 16,
+        "gpu": 0,
+        "assigned_count": 9,
+        "completed_count": 9,
+        "by_task": {
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2,
+          "stick-push-v3": 1
+        },
+        "actual_branch_count": 504,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 172.16603531129658,
+        "wall_seconds": 5167.128311080858,
+        "after_loading_seconds": 4994.9622757695615,
+        "started_utc": "2026-09-16T21:53:21.432684+00:00",
+        "finished_utc": "2026-09-16T23:19:28.557976+00:00",
+        "worker_seal_sha256": "ab7187ee729a528ec17558948347ea6aaf7f3bc843ecb07c54d272a23bdac11f"
+      },
+      {
+        "rank": 17,
+        "gpu": 1,
+        "assigned_count": 9,
+        "completed_count": 9,
+        "by_task": {
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2,
+          "disassemble-v3": 1
+        },
+        "actual_branch_count": 504,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 171.1414429154247,
+        "wall_seconds": 4312.928489379585,
+        "after_loading_seconds": 4141.78704646416,
+        "started_utc": "2026-09-16T21:53:20.984956+00:00",
+        "finished_utc": "2026-09-16T23:05:13.909997+00:00",
+        "worker_seal_sha256": "efc09db9709d49d9cc26839d03e246318329286911d5393c92870b69a8e5648d"
+      },
+      {
+        "rank": 18,
+        "gpu": 2,
+        "assigned_count": 9,
+        "completed_count": 9,
+        "by_task": {
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 1
+        },
+        "actual_branch_count": 504,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 172.3042397070676,
+        "wall_seconds": 3738.23739304021,
+        "after_loading_seconds": 3565.9331533331424,
+        "started_utc": "2026-09-16T21:53:21.535326+00:00",
+        "finished_utc": "2026-09-16T22:55:39.768318+00:00",
+        "worker_seal_sha256": "45bd07802ccea4b909206cdf0af02545ba5f5f73274ef828d495958ee74d9220"
+      },
+      {
+        "rank": 19,
+        "gpu": 3,
+        "assigned_count": 9,
+        "completed_count": 9,
+        "by_task": {
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2,
+          "shelf-place-v3": 1
+        },
+        "actual_branch_count": 504,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 171.7468561846763,
+        "wall_seconds": 3902.7802418936044,
+        "after_loading_seconds": 3731.033385708928,
+        "started_utc": "2026-09-16T21:53:21.858395+00:00",
+        "finished_utc": "2026-09-16T22:58:24.634396+00:00",
+        "worker_seal_sha256": "e7e1b26bd4ff365b372a8de55654ff159154635d0e98fdb88c6058f18ac6ac43"
+      },
+      {
+        "rank": 20,
+        "gpu": 4,
+        "assigned_count": 9,
+        "completed_count": 9,
+        "by_task": {
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 1
+        },
+        "actual_branch_count": 504,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 171.08488053828478,
+        "wall_seconds": 4534.165577206761,
+        "after_loading_seconds": 4363.080696668476,
+        "started_utc": "2026-09-16T21:53:21.642553+00:00",
+        "finished_utc": "2026-09-16T23:08:55.803932+00:00",
+        "worker_seal_sha256": "0dd7efce4544502690c205569e6df8b5fb4456b5bf5b20270dcd1094e3195f85"
+      },
+      {
+        "rank": 21,
+        "gpu": 5,
+        "assigned_count": 9,
+        "completed_count": 9,
+        "by_task": {
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2,
+          "stick-push-v3": 1
+        },
+        "actual_branch_count": 504,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 171.12011831626296,
+        "wall_seconds": 3494.005465948954,
+        "after_loading_seconds": 3322.8853476326913,
+        "started_utc": "2026-09-16T21:53:21.590097+00:00",
+        "finished_utc": "2026-09-16T22:51:35.591157+00:00",
+        "worker_seal_sha256": "f5d28084952ae2e898b04db9cd2663dada1e57b9d958c82c54105b56f077049f"
+      },
+      {
+        "rank": 22,
+        "gpu": 6,
+        "assigned_count": 9,
+        "completed_count": 9,
+        "by_task": {
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2,
+          "disassemble-v3": 1
+        },
+        "actual_branch_count": 504,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 171.7407721672207,
+        "wall_seconds": 5375.948738412932,
+        "after_loading_seconds": 5204.207966245711,
+        "started_utc": "2026-09-16T21:53:21.750444+00:00",
+        "finished_utc": "2026-09-16T23:22:57.696135+00:00",
+        "worker_seal_sha256": "3640be744ba4587db954101727cdc4dcf239f86bf7588daef133524faee186e9"
+      },
+      {
+        "rank": 23,
+        "gpu": 7,
+        "assigned_count": 9,
+        "completed_count": 9,
+        "by_task": {
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 1
+        },
+        "actual_branch_count": 504,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 172.05400027520955,
+        "wall_seconds": 5150.406027812511,
+        "after_loading_seconds": 4978.352027537301,
+        "started_utc": "2026-09-16T21:53:21.771404+00:00",
+        "finished_utc": "2026-09-16T23:19:12.173528+00:00",
+        "worker_seal_sha256": "7db88e66a35919bb71dc26343ef0c8616c38316283d0d64deb37459615d64b83"
+      },
+      {
+        "rank": 24,
+        "gpu": 0,
+        "assigned_count": 9,
+        "completed_count": 9,
+        "by_task": {
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2,
+          "shelf-place-v3": 1
+        },
+        "actual_branch_count": 504,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 172.09456687234342,
+        "wall_seconds": 5614.441287022084,
+        "after_loading_seconds": 5442.346720149741,
+        "started_utc": "2026-09-16T21:53:21.628840+00:00",
+        "finished_utc": "2026-09-16T23:26:56.066118+00:00",
+        "worker_seal_sha256": "c89930831059eab45a89298bc68592b948e5d6f64a2336475a0f0f5910c4ec87"
+      },
+      {
+        "rank": 25,
+        "gpu": 1,
+        "assigned_count": 9,
+        "completed_count": 9,
+        "by_task": {
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 1
+        },
+        "actual_branch_count": 504,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 170.42060240358114,
+        "wall_seconds": 3632.888953367248,
+        "after_loading_seconds": 3462.468350963667,
+        "started_utc": "2026-09-16T21:53:20.429579+00:00",
+        "finished_utc": "2026-09-16T22:53:53.315290+00:00",
+        "worker_seal_sha256": "57b78abf3849f766f8bd7d6746eacf58599e02ced952f24c0381f02a8635c88e"
+      },
+      {
+        "rank": 26,
+        "gpu": 2,
+        "assigned_count": 9,
+        "completed_count": 9,
+        "by_task": {
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2,
+          "stick-push-v3": 1
+        },
+        "actual_branch_count": 504,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 172.03461487963796,
+        "wall_seconds": 4574.01545563899,
+        "after_loading_seconds": 4401.980840759352,
+        "started_utc": "2026-09-16T21:53:21.737583+00:00",
+        "finished_utc": "2026-09-16T23:09:35.749379+00:00",
+        "worker_seal_sha256": "7d923eb7fb32a037ae4a20b8f9b87729eb6e869c738cc5e6d6ac1246c7343419"
+      },
+      {
+        "rank": 27,
+        "gpu": 3,
+        "assigned_count": 9,
+        "completed_count": 9,
+        "by_task": {
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2,
+          "disassemble-v3": 1
+        },
+        "actual_branch_count": 504,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 171.10736978799105,
+        "wall_seconds": 4700.986056078225,
+        "after_loading_seconds": 4529.878686290234,
+        "started_utc": "2026-09-16T21:53:21.618888+00:00",
+        "finished_utc": "2026-09-16T23:11:42.601435+00:00",
+        "worker_seal_sha256": "82da55c46f760c6d7246ce25801d19f67b77af0d194dc7de2ffedc0c55df980a"
+      },
+      {
+        "rank": 28,
+        "gpu": 4,
+        "assigned_count": 9,
+        "completed_count": 9,
+        "by_task": {
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 1
+        },
+        "actual_branch_count": 504,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 172.05355555005372,
+        "wall_seconds": 5094.732755431905,
+        "after_loading_seconds": 4922.679199881852,
+        "started_utc": "2026-09-16T21:53:21.610080+00:00",
+        "finished_utc": "2026-09-16T23:18:16.338720+00:00",
+        "worker_seal_sha256": "35cdf85cd0a704e6e8a313b873c4d2f8fcc316f678431099ac878744500d4c6a"
+      },
+      {
+        "rank": 29,
+        "gpu": 5,
+        "assigned_count": 9,
+        "completed_count": 9,
+        "by_task": {
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2,
+          "shelf-place-v3": 1
+        },
+        "actual_branch_count": 504,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 172.68475030362606,
+        "wall_seconds": 4221.504060028121,
+        "after_loading_seconds": 4048.819309724495,
+        "started_utc": "2026-09-16T21:53:20.901880+00:00",
+        "finished_utc": "2026-09-16T23:03:42.401510+00:00",
+        "worker_seal_sha256": "c760888f6e2563305160ee0484f2f9bb4dca70c6a994f4fa51dd54f7c98419a0"
+      },
+      {
+        "rank": 30,
+        "gpu": 6,
+        "assigned_count": 9,
+        "completed_count": 9,
+        "by_task": {
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2,
+          "stick-push-v3": 2,
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 1
+        },
+        "actual_branch_count": 504,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 171.92631859146059,
+        "wall_seconds": 4495.882473053411,
+        "after_loading_seconds": 4323.95615446195,
+        "started_utc": "2026-09-16T21:53:21.738587+00:00",
+        "finished_utc": "2026-09-16T23:08:17.617738+00:00",
+        "worker_seal_sha256": "0396b537100c183d41363eadde942b121974a1aa74bcfdfe251474741fefa2c6"
+      },
+      {
+        "rank": 31,
+        "gpu": 7,
+        "assigned_count": 9,
+        "completed_count": 9,
+        "by_task": {
+          "pick-place-wall-v3": 2,
+          "stick-pull-v3": 2,
+          "disassemble-v3": 2,
+          "shelf-place-v3": 2,
+          "stick-push-v3": 1
+        },
+        "actual_branch_count": 504,
+        "no_cut_sources": 0,
+        "attempted_replacement_records": 0,
+        "loading_seconds": 173.79933831840754,
+        "wall_seconds": 4490.438955817372,
+        "after_loading_seconds": 4316.639617498964,
+        "started_utc": "2026-09-16T21:53:20.189144+00:00",
+        "finished_utc": "2026-09-16T23:08:10.623859+00:00",
+        "worker_seal_sha256": "60412548144b025e45cf4fbd831e553e790fc5dd90350dce127c4de7cddd46b7"
+      }
+    ]
+  },
+  "generation_model_identity": {
+    "status": "passed",
+    "selected_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected",
+    "model_hashes": {
+      "0": "bc93c9035409cd2b7e413dffd0e0f9f3053ac34add4b47fc5cd57be9a5cdceb3",
+      "1": "639e78888f9ef9657cef73da4f21f0676593a58ec4bfa0f8f098d0885432fb2f",
+      "2": "e1f06c0214243ec9fd8952cab93139feafafbc8e84a74e432e9498d68d422df3",
+      "3": "ae18f18e36b878b37b1085778136f6faf62f7146ad0d4ca015076671b2a074eb"
+    },
+    "model_paths": [
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/models/refit/member_0/selected.pt",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/models/refit/member_1/selected.pt",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/models/refit/member_2/selected.pt",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/models/refit/member_3/selected.pt"
+    ],
+    "selected_seal_sha256": "931c6f6043db92b5d9003eb2833dfc8edd0ab6c860a1979db3983cd7d893725f",
+    "checks": [
+      "actual_selector_paths",
+      "checkpoint_file_sha",
+      "frozen_parameter_buffer_versions",
+      "eval_cpu_no_parameter_grad"
+    ],
+    "candidate_generation_only": true,
+    "optimizer_updates": 0
+  },
+  "occupancy": {
+    "source": "/tmp/gpu_occupancy_guard/status.json",
+    "source_sha256": "3b3e89c0506d84eaaebea72d85b1dd0504693c4328e872c911866c86d282dafa",
+    "updated_utc": "2026-09-16T23:34:53.377235+00:00",
+    "raw_status": {
+      "pid": 26616,
+      "updated": 1789601693.3772347,
+      "gpus": {
+        "0": {
+          "state": "holder",
+          "manager_pid": 414210,
+          "driver_pids": [
+            2245008
+          ]
+        },
+        "1": {
+          "state": "holder",
+          "manager_pid": 414211,
+          "driver_pids": [
+            2245015
+          ]
+        },
+        "2": {
+          "state": "holder",
+          "manager_pid": 414212,
+          "driver_pids": [
+            2245017
+          ]
+        },
+        "3": {
+          "state": "holder",
+          "manager_pid": 414213,
+          "driver_pids": [
+            2245024
+          ]
+        },
+        "4": {
+          "state": "holder",
+          "manager_pid": 414214,
+          "driver_pids": [
+            2245031
+          ]
+        },
+        "5": {
+          "state": "holder",
+          "manager_pid": 414215,
+          "driver_pids": [
+            2245038
+          ]
+        },
+        "6": {
+          "state": "holder",
+          "manager_pid": 414216,
+          "driver_pids": [
+            2245043
+          ]
+        },
+        "7": {
+          "state": "holder",
+          "manager_pid": 414217,
+          "driver_pids": [
+            2245045
+          ]
+        }
+      }
+    },
+    "all_eight_recorded_holder_states": true,
+    "evidence_scope": "只读守卫现有status；未另调NVML或操作GPU。宿主holder现场状态由执行root另行确认。",
+    "gpu_lifecycle_actions_taken": 0
+  },
+  "disk": {
+    "ledger_bytes": 20580679,
+    "verified_worker_metadata_bytes": 274623,
+    "dataset_or_rollout_total_bytes": null,
+    "reason": "不扫描轨迹或全挂载目录，不把metadata大小当完整实验磁盘占用"
+  },
+  "execution": {
+    "new_simulator_calls": 0,
+    "new_model_calls": 0,
+    "new_optimizer_updates": 0,
+    "new_tests": 0,
+    "worker_or_watcher_launches": 0,
+    "source_or_branch_success_outcomes_read": false
+  },
+  "inputs": {
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/launch_result.json": {
+      "sha256": "36ee55319720710290316f2633edd0970925c276f05c959b53e3433576d1dd09",
+      "bytes": 723
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/wave_spec.json": {
+      "sha256": "d5ad6e3ff1852c733a5e3595e7c573e9dcc08214b898fc49888fab6d17bb8674",
+      "bytes": 6801
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/config.json": {
+      "sha256": "13ff72cbec4aa8fe92354d55e3a5e0ce0babc934d8cfeb72124af8eb4abc1944",
+      "bytes": 1249434
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/budget/attempts.jsonl": {
+      "sha256": "189cdf5c04a3782b5e540c3761fa682481dedad6ea91e703e705713e2d076973",
+      "bytes": 20580679
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_00/complete.json": {
+      "sha256": "011a23d982016ad72cd21dfa2cd88e9f51cdde6dbb362c48685354f58ab3178b",
+      "bytes": 1491
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_00/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_00/slots/disassemble-v3__2026111300.json": {
+      "sha256": "1dcf9a7d790840611bddafddf9e02725a7860d8e325b08130f75546592415aa2",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_00/slots/disassemble-v3__2026111460.json": {
+      "sha256": "2d4ae9648449b06e3308e07bd07b84e17f8e3baf3882f1d27857b1452814bf55",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_00/slots/pick-place-wall-v3__2026111396.json": {
+      "sha256": "0233b7fcca04b81cb0b237b658c2ca580d40bd826ccfbb44fffb074504f45436",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_00/slots/pick-place-wall-v3__2026111556.json": {
+      "sha256": "2090f58031d8796e8302cd0988639034f04bfcff5528069fe051ce710d6ee5f1",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_00/slots/shelf-place-v3__2026111332.json": {
+      "sha256": "1c29ee5002c2f9eaabadc3e1eb9180ebe10b348eb1985853f254af728aef29b4",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_00/slots/shelf-place-v3__2026111492.json": {
+      "sha256": "543106a0cd50ad82c171562f689f8179e69fe7c1874789b1179e50701fac2726",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_00/slots/stick-pull-v3__2026111428.json": {
+      "sha256": "6f0a77a0d1154075599c1dc363424dcfba25a00aeb55a152650739f7b6c3ef27",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_00/slots/stick-pull-v3__2026111588.json": {
+      "sha256": "d58fd53e4f55a3c67ec50581b53a4889e3cca42f0f0c7b85e95b2e24a9f47cb4",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_00/slots/stick-push-v3__2026111364.json": {
+      "sha256": "90cf918307985c02ff2291c946ac6ff7ff4a9a5893ae57f9391760f7fe51eb17",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_00/slots/stick-push-v3__2026111524.json": {
+      "sha256": "9c51fda8f587280d2c9b46e9b4ce827c0bfab89defd62a08802c782a66a6c2af",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_00/status.json": {
+      "sha256": "3521811587d9ade4d5e9c5f699d3c0f76b9f5337a2d325e24cd2a339e9a16e28",
+      "bytes": 1288
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_01/complete.json": {
+      "sha256": "48485670b1160d2c514dc553cdda175dc0474983198ffc477baf991e72549814",
+      "bytes": 1491
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_01/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_01/slots/disassemble-v3__2026111365.json": {
+      "sha256": "0fab1e019c113d0999b9c17f15009429c60766a9d22c37bcb54233d330838340",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_01/slots/disassemble-v3__2026111525.json": {
+      "sha256": "59021305f2501cef7624195764f2e3a769e26afa150aa49b9a5d7c487273e991",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_01/slots/pick-place-wall-v3__2026111301.json": {
+      "sha256": "ece9f8e14468f3a3f569c2bf0d6b5706c00c52a88b4d77f27d14577e0fba2235",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_01/slots/pick-place-wall-v3__2026111461.json": {
+      "sha256": "dced30d07878eed3df1076668a807205d62dbc8a2cb6f5d4b97972b0b667b59c",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_01/slots/shelf-place-v3__2026111397.json": {
+      "sha256": "170b89c7b031900ac06e9a128e8a6fadf057df3ffbaeff379197f0e8b587082f",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_01/slots/shelf-place-v3__2026111557.json": {
+      "sha256": "121594254edd7a83089f64e025d30c9064f15006ad60b025f57dbbe32a2375b2",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_01/slots/stick-pull-v3__2026111333.json": {
+      "sha256": "27249bb2b4b4e6c02fd261078d85d5cf5f3bb3c6ab4b917e25a8fc4a5bfd927a",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_01/slots/stick-pull-v3__2026111493.json": {
+      "sha256": "12b3ebf0e78d3746a371f42639f638fb7e7fc6242725d346e06651a72de87dec",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_01/slots/stick-push-v3__2026111429.json": {
+      "sha256": "b58af4eb21f8b9598cac5dd672e80be690561e665f41b7df50aad993608c8dd2",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_01/slots/stick-push-v3__2026111589.json": {
+      "sha256": "fcb1d3460397184ba90c972ea82905c1903a86984a216f3e26bc22ed2544b9e7",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_01/status.json": {
+      "sha256": "550c5e737ffeb9466eff9823edbd8814d6cfbf23f762300096421ba1ee8b36b6",
+      "bytes": 1287
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_02/complete.json": {
+      "sha256": "fdf724d405681196807dc53f43c052edc4b7582f33464214c4da00428c07878e",
+      "bytes": 1491
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_02/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_02/slots/disassemble-v3__2026111430.json": {
+      "sha256": "46e9589970bb35b6a54ff6460891af446344f80cba4f3b011494ec0b2668e6d7",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_02/slots/disassemble-v3__2026111590.json": {
+      "sha256": "e903c382402774da600ea5cc0013523ee53cb1d30f8fe5a2aeb4965c51f32bf4",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_02/slots/pick-place-wall-v3__2026111366.json": {
+      "sha256": "460e07fc806e1f08d3ba3105c4ee3b4ad47f10ea893bffddd51dfa2668b40216",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_02/slots/pick-place-wall-v3__2026111526.json": {
+      "sha256": "daca66ed03f651d8163adda91d21adffacbb782e318c21c6fa546e2fa5b2d0a1",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_02/slots/shelf-place-v3__2026111302.json": {
+      "sha256": "755d0422f7b1f614769b6dc445de680c94111057f253d635a270d8058f59eb52",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_02/slots/shelf-place-v3__2026111462.json": {
+      "sha256": "143b98ea8f5316386e500e51de2299ceaebe73e617ef4b8286e46c7d2626ad34",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_02/slots/stick-pull-v3__2026111398.json": {
+      "sha256": "8e77d2d9c2318fcc925a287ae0fa952446877104a399c596e7e2a29ebafdd66d",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_02/slots/stick-pull-v3__2026111558.json": {
+      "sha256": "b2e10fb0b652c610340e56facf25b1603e52d2332e5303a83429e8a0e534be54",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_02/slots/stick-push-v3__2026111334.json": {
+      "sha256": "2c9e89eb60a29fddfc61c9d8e17a40aa89f045533f0a6ecdb5778987ac2b48f6",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_02/slots/stick-push-v3__2026111494.json": {
+      "sha256": "de871e7cc71262e04022af8300bd1eb201f1db315d07dc3037797c5f9256aacb",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_02/status.json": {
+      "sha256": "b09614d16b663256d1ce3a47d83d27f01ad67d60851ab89291709421bbbabb78",
+      "bytes": 1286
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_03/complete.json": {
+      "sha256": "005618ccda7ff56dbe947bf86e15e246aef2229634c40d9b8c4a1ff34eaf7936",
+      "bytes": 1491
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_03/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_03/slots/disassemble-v3__2026111335.json": {
+      "sha256": "65e5417de1e396962130d6c1ceb14f3fcd9063f00b01d4be5baca6b907a732b2",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_03/slots/disassemble-v3__2026111495.json": {
+      "sha256": "c303fb690d0c29189a4ca3fe84cecfe0872e28b943d6209c6215f0ad2582a552",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_03/slots/pick-place-wall-v3__2026111431.json": {
+      "sha256": "62bc2ea615c3299d0641617822bc1134d785a9a308af7aa9134718bb1ad96b35",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_03/slots/pick-place-wall-v3__2026111591.json": {
+      "sha256": "ed18fbdecb760e88a3e3540496d99d15fb5991f4657be02cf514201f2ca296d7",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_03/slots/shelf-place-v3__2026111367.json": {
+      "sha256": "c57d50073554eec726d521fa72010ebc4d9e2e64c893f17a6c7c9324ff79194a",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_03/slots/shelf-place-v3__2026111527.json": {
+      "sha256": "df9dc42b64911a08ef3944d8f0a717ae44b42d86cbde5f36a89716aa6eec20dc",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_03/slots/stick-pull-v3__2026111303.json": {
+      "sha256": "f035ec9080fbc6c6bb87fc53f261e2369904616ba26b6dacc912ad72bc65c30a",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_03/slots/stick-pull-v3__2026111463.json": {
+      "sha256": "d99bf18a2ad47693ded71b33bd9513dcad50d889079d83106b7176ac8c449bae",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_03/slots/stick-push-v3__2026111399.json": {
+      "sha256": "2768f73714e656ffd0530738fb00cc9ffee5bdb82fb0634c983b7a7472c3c7d6",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_03/slots/stick-push-v3__2026111559.json": {
+      "sha256": "23dbc6dbd277b6a06324c898d27d6125fb76cb442910e03acfe59ab3180b77ca",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_03/status.json": {
+      "sha256": "1e7dfbd3de20e473df0ed8091462496869c7dd4b5a81a9a3f550b2eef4f78dad",
+      "bytes": 1287
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_04/complete.json": {
+      "sha256": "ea415c047754dfb6aa330d7e46125e067925d6ff9ff04752b9cabe8c25dffee5",
+      "bytes": 1491
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_04/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_04/slots/disassemble-v3__2026111400.json": {
+      "sha256": "8a39c77757b3e047aaa658c917e5c6a30ea3d9e5fded0add9f097dbcc056f72e",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_04/slots/disassemble-v3__2026111560.json": {
+      "sha256": "583960a3793b25c2a7425e424ca0fad16bb07777bf7fa82715d69a192e4fa487",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_04/slots/pick-place-wall-v3__2026111336.json": {
+      "sha256": "920bd5e921833d494ea7ff5492e861db91a027c93a4058ff57da4f6cf308b635",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_04/slots/pick-place-wall-v3__2026111496.json": {
+      "sha256": "6291237e046c774a30a7590c7ab6bd89d5c0b041e0b82fb270e6fcbd409a2975",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_04/slots/shelf-place-v3__2026111432.json": {
+      "sha256": "1f7869eda29324c77a1c3f1e338dec5ed7247784ecec4bc2191389b3e7c186a6",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_04/slots/shelf-place-v3__2026111592.json": {
+      "sha256": "ae5ec1f450b2f6f5b94c44ec914cfca4d71e4d752709816e5cfa3b3dc0ff5aac",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_04/slots/stick-pull-v3__2026111368.json": {
+      "sha256": "219def3d8684b890f0dec9288b0684aacdd68235ef5034a1b4a971941a55579d",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_04/slots/stick-pull-v3__2026111528.json": {
+      "sha256": "ba85414f9cc3d1206a70b665053212c0302be016c04197efa1018e8ef2b5bb19",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_04/slots/stick-push-v3__2026111304.json": {
+      "sha256": "02d727c37a5fd521e20cd04bcb78ec51cf348696618859ec3a6b73ecbfbf7878",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_04/slots/stick-push-v3__2026111464.json": {
+      "sha256": "403e45391b1e3bc680e288aa7bb6b7fd717958627f783ec09a9be19060f1b5f9",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_04/status.json": {
+      "sha256": "2ef8a3e9263d31588ada3f49c0a7982f1765afff476c0b7f795d0cffac4de26c",
+      "bytes": 1287
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_05/complete.json": {
+      "sha256": "ee5945b8c8bbe58dcac4a949b7c024cb87b89484ef24beb11e134e697a417981",
+      "bytes": 1491
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_05/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_05/slots/disassemble-v3__2026111305.json": {
+      "sha256": "c03caa88b8e5c791407765519d1599f64beb71783c6daeb4f2452947da841006",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_05/slots/disassemble-v3__2026111465.json": {
+      "sha256": "5a1c4abadd5185b7de892bc5758cdf077e24afb385205813f018e6c5bb748ab4",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_05/slots/pick-place-wall-v3__2026111401.json": {
+      "sha256": "ebf045a17311773a2aed5df095e4a3a2969f1e1d82b663ef80263778b9f2bd71",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_05/slots/pick-place-wall-v3__2026111561.json": {
+      "sha256": "14986f606e591b2047bd53a1394737bcbe9a44a91d8a7b9647903740a54e1767",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_05/slots/shelf-place-v3__2026111337.json": {
+      "sha256": "c7943da709da5b0a912ad05943c0325dd12f3a07a316ec84de44ba775c3d21b7",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_05/slots/shelf-place-v3__2026111497.json": {
+      "sha256": "7b2de9cc7ff5c0352702206e09e7fe70dae9e5ece3871b9f0d01c9f23ccef2d6",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_05/slots/stick-pull-v3__2026111433.json": {
+      "sha256": "7e15113412e2107c75a8b6294da5d7d53d61990e7d107b3547235b852cef9572",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_05/slots/stick-pull-v3__2026111593.json": {
+      "sha256": "1704735fdfc414c851f6e635bef85bf9d0fb9b7a5c05204b8706e593a86ce7bf",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_05/slots/stick-push-v3__2026111369.json": {
+      "sha256": "9839fff77dd82edd5c8c336221730d34f939525db9cd106c858c6a750d1da618",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_05/slots/stick-push-v3__2026111529.json": {
+      "sha256": "f168f817b87432a78a0e61c6008beb1a53318087f472bb0954f57ab418d9b453",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_05/status.json": {
+      "sha256": "a8a089ff300dbb2b01380d39109fb9ea3aa755a1c6146fb4788253097bde24e4",
+      "bytes": 1287
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_06/complete.json": {
+      "sha256": "b03c97fd015c7156def4195830e81f0f3e2efeb95ab96bef09f51cdd5ef8e3e3",
+      "bytes": 1491
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_06/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_06/slots/disassemble-v3__2026111370.json": {
+      "sha256": "dc7315d2c6bde18401b47d83db2c92c7f2f5633b2efed9cd7bc50bed58a4cc62",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_06/slots/disassemble-v3__2026111530.json": {
+      "sha256": "e94a69ddc3cbfbb8bf68cbcc38811ea3d6908b24e8657fd577bd421ff082e09b",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_06/slots/pick-place-wall-v3__2026111306.json": {
+      "sha256": "29c8422a54df849617f0ac3eb05468239f1d8429bf4286b498d889d011ceff67",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_06/slots/pick-place-wall-v3__2026111466.json": {
+      "sha256": "302badc4e1ccf316eb1792855aca9b5697d8aab5137adc363742c5b0e625daef",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_06/slots/shelf-place-v3__2026111402.json": {
+      "sha256": "211b90108c653c7b38617d7ed244332990a9ac288f6e4d73fb10e9e2bb0c3800",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_06/slots/shelf-place-v3__2026111562.json": {
+      "sha256": "f3796776e70672fcdfda21bb6cf6cfe0e300a8d3a4bca30b21f8f021871c25c3",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_06/slots/stick-pull-v3__2026111338.json": {
+      "sha256": "289191fbdf2cb8c311750bac2b85d7a1e5765e1bbae7254eaf64f2f7a459c58d",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_06/slots/stick-pull-v3__2026111498.json": {
+      "sha256": "c07ebe4b1d2bc4d12681a9816bd2dd41079a4add35aba0375bfab620adb74a6c",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_06/slots/stick-push-v3__2026111434.json": {
+      "sha256": "8124fe101888a8fd4fa36ab6285e942174b92dc6400ae52b865a2404020db9f5",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_06/slots/stick-push-v3__2026111594.json": {
+      "sha256": "7f3cce5cf0c0e0b84f1c05cc1ba7bacc67d8fe4f37f7cc4e20a45ae48efbe53c",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_06/status.json": {
+      "sha256": "90367f63cba6a365544569f9ec40e554c22f79609cae5c861bdbba11a5f79285",
+      "bytes": 1287
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_07/complete.json": {
+      "sha256": "9e2f2e6125cb6b8c4f8b5e06f55f2915c92b7c396c35f6d67dbbf7030744e306",
+      "bytes": 1491
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_07/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_07/slots/disassemble-v3__2026111435.json": {
+      "sha256": "03e0564a4b7598ec07aaa81e060c074325eb2e3e0a8e7e9fd369efb175174948",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_07/slots/disassemble-v3__2026111595.json": {
+      "sha256": "3ea05affb251be576dd9b8486573d51af1bd49d11ed509a9ee284edfdc8a1295",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_07/slots/pick-place-wall-v3__2026111371.json": {
+      "sha256": "be614f4ffd7f918801599203d87a9045766c239c1e88de3909c82366f478e7b6",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_07/slots/pick-place-wall-v3__2026111531.json": {
+      "sha256": "e80e8bae001898ee77b94b2e90afea1b9f9826f83debd7e7e1098d7f79efd17f",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_07/slots/shelf-place-v3__2026111307.json": {
+      "sha256": "d85d7ed3544165501c04f5922ecab2c21f763b83a9edad5d6befc640309eaf89",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_07/slots/shelf-place-v3__2026111467.json": {
+      "sha256": "c0043513e0bc8b9bb6f9bb5c550c226fcecbea6b41e07969c18627822b5162f8",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_07/slots/stick-pull-v3__2026111403.json": {
+      "sha256": "45916eb830fe93560e76bee3f1af2e5591169d361bc993e89bb8d33f52a56cf3",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_07/slots/stick-pull-v3__2026111563.json": {
+      "sha256": "34ae62efe77523cba47f0472bdb9528d5045a2eb9164fa017b31199ac205ed3e",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_07/slots/stick-push-v3__2026111339.json": {
+      "sha256": "6c13daf8b2cfd024d8c8c0585193869042b31b609c3ef306f1c7dc3835c6d8d5",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_07/slots/stick-push-v3__2026111499.json": {
+      "sha256": "6dfe2300165d4ca92dad1c0925206c6dfd98824ba71cd9fda936c316ec47190a",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_07/status.json": {
+      "sha256": "005bb7cf72b7863673e2484e1cb2550191744c78afec83cf345708f15208a01e",
+      "bytes": 1287
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_08/complete.json": {
+      "sha256": "d0a671c238655767c823d5958f8a236788bc1b1ff2669a832a6c67cee203a855",
+      "bytes": 1491
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_08/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_08/slots/disassemble-v3__2026111340.json": {
+      "sha256": "d4f15346b0fb699f6615fb12060307819cdc98625dccc874c8842ae372fa1f1b",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_08/slots/disassemble-v3__2026111500.json": {
+      "sha256": "580571127518ea98b461315c9d081da94bb4c089041363ee12e7d92f224d3782",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_08/slots/pick-place-wall-v3__2026111436.json": {
+      "sha256": "00999193012f3436122f8ce21f5db2309954ff4f67599577b09035438f5eaa0c",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_08/slots/pick-place-wall-v3__2026111596.json": {
+      "sha256": "8020d1ce2158daa4c57153fe281f9a182f1f1914be300778e2e2b5f467db88ac",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_08/slots/shelf-place-v3__2026111372.json": {
+      "sha256": "55c74b121d81e6d697b2ad1769b81e967e8f818bef0fed77452d5ca5ffaf7f8d",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_08/slots/shelf-place-v3__2026111532.json": {
+      "sha256": "57e089c1b466cbc1af79071f97245141ac33c994370278c3486c13599ba51de3",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_08/slots/stick-pull-v3__2026111308.json": {
+      "sha256": "93b189b93f0848ae2007b3840c0dd9be707d2801a8a067ad874dc050a1ff5d71",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_08/slots/stick-pull-v3__2026111468.json": {
+      "sha256": "8c122c14c49f5a3bc528667ef81d426dc9bf2bcc97d7b3480f9f4c9fd4cc6d11",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_08/slots/stick-push-v3__2026111404.json": {
+      "sha256": "41d41afa9d10ec8d51332d25ed190cf851aab259867cb96a1a1b0288acf378b4",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_08/slots/stick-push-v3__2026111564.json": {
+      "sha256": "7f6ddf3b418a32c7c481a33e5502df7b7e1528cd54afe82a164fb14d76d90026",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_08/status.json": {
+      "sha256": "6aa470fb80a39804447dfd8eaeddba3add6e3004b073ee40f97f7ce267cc0a76",
+      "bytes": 1287
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_09/complete.json": {
+      "sha256": "db2cd108c96d12a8ac9a42b58c334df195f353b45b93d73c75f1c59d0d1664a5",
+      "bytes": 1491
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_09/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_09/slots/disassemble-v3__2026111405.json": {
+      "sha256": "8912fa9bef562760af194358b7a1255be7af88157493d34d25abf2befef758e2",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_09/slots/disassemble-v3__2026111565.json": {
+      "sha256": "835ced401216d33a26edb34864d54ed13ddb05b31810084a2f6dc79441b7cd0f",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_09/slots/pick-place-wall-v3__2026111341.json": {
+      "sha256": "f0072f885d35274d68f124d2deeee448a3d4ca51945eab4947fb83e04ebebde0",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_09/slots/pick-place-wall-v3__2026111501.json": {
+      "sha256": "eb134c8c398db4e52953760393f6c5c901c2f0b24d7e7ba80d0e68f8fbbb1fd1",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_09/slots/shelf-place-v3__2026111437.json": {
+      "sha256": "79b49e78a7d35f56f827c35d9a60ac85ed328e4c78f05968d0362ebfb678b1da",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_09/slots/shelf-place-v3__2026111597.json": {
+      "sha256": "bcff66310c3759e99c6e22d29d0dc2b32e0f7f3189f18e53a7597f307199b525",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_09/slots/stick-pull-v3__2026111373.json": {
+      "sha256": "8d3425e0124879f7f22d120cf4e1d7d973118bef4218b2b71d7d1d59797d46bd",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_09/slots/stick-pull-v3__2026111533.json": {
+      "sha256": "fb6d005d5a290cdb91cc1dca7ef1a395315d11eb0eafb8438cc6eca628d7978d",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_09/slots/stick-push-v3__2026111309.json": {
+      "sha256": "7fc215dc00205e1553633c2aa6bc8eec393248830493f4cdedc8df04062fb8ab",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_09/slots/stick-push-v3__2026111469.json": {
+      "sha256": "c7c4ec96c4df5fee0b584d6337021a472d94195523cc2e3b3b4b9f81afcf11b5",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_09/status.json": {
+      "sha256": "348947c837e90332726a5e88d6632a8241962fd70c2316d5e7b477b9763d8cb0",
+      "bytes": 1287
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_10/complete.json": {
+      "sha256": "cc0e57514f28abc27539f76ddbd1566bd2b614143b126feea28cd06b0403f2a4",
+      "bytes": 1491
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_10/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_10/slots/disassemble-v3__2026111310.json": {
+      "sha256": "145b38294d63012b13a94dfa04b842e2e3a987000e37d7ff4e1e62730fd1bb79",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_10/slots/disassemble-v3__2026111470.json": {
+      "sha256": "c6d48161d5456f9821900e9a557b3f3e99da68f699fc98c92c863f3d1a527bbf",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_10/slots/pick-place-wall-v3__2026111406.json": {
+      "sha256": "f2685184e4bf55b3280d5049a8366c1a949b3e8d723b9f96aeae83b1e4dc5d57",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_10/slots/pick-place-wall-v3__2026111566.json": {
+      "sha256": "44cb86774e50121ce76bd14bc7fa4db70d701651a601310bb06f6e2de0eaec47",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_10/slots/shelf-place-v3__2026111342.json": {
+      "sha256": "aa8fdcf59567156d21be156bc168a260585b729fd159fe220030c36a73884dff",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_10/slots/shelf-place-v3__2026111502.json": {
+      "sha256": "3db2ea8008aabaf6d5bad3c9eff202e84ab6255bcc340002b0a927032b5d634b",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_10/slots/stick-pull-v3__2026111438.json": {
+      "sha256": "69ddb2f531ba61a437291318da01da1819fd578f74d72b7917504085db05c9c9",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_10/slots/stick-pull-v3__2026111598.json": {
+      "sha256": "370e99b0d54eba126289753a750ea8ccec2987ce1448567b955f67de4b3a4923",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_10/slots/stick-push-v3__2026111374.json": {
+      "sha256": "0b472d3635712f8b3880e7493f68250f2218ed1aa80b4fbb6f263ddcab909534",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_10/slots/stick-push-v3__2026111534.json": {
+      "sha256": "486a0ba2caf96820853a1bb40d96f641edfcb3a282c0dfce0e089adfb063e8df",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_10/status.json": {
+      "sha256": "f373b8cf67384c891de1ac575a61bde3c9b426af6ec245319bbed6870512b710",
+      "bytes": 1287
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_11/complete.json": {
+      "sha256": "d690ff060db2e8e15f56d15539f28c1c6bfb3c48288e571b76498a0f04af0e2a",
+      "bytes": 1491
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_11/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_11/slots/disassemble-v3__2026111375.json": {
+      "sha256": "d166676698454a48915e39c7d50a6c6f53f86d571eb0163bb3cc5d55565846d2",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_11/slots/disassemble-v3__2026111535.json": {
+      "sha256": "549b920133d865ed040836191f3c5f9dda4e114d576da51bcd9bf316da24afc7",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_11/slots/pick-place-wall-v3__2026111311.json": {
+      "sha256": "043d4802a02b9a307e0f0175ce7d0ac59c0490fa524d037f8be80f4886e231c7",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_11/slots/pick-place-wall-v3__2026111471.json": {
+      "sha256": "adf88ce75357e0e1277787781d87fd2436fc9e9f0c3b1983580e181627ce0463",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_11/slots/shelf-place-v3__2026111407.json": {
+      "sha256": "3d50521b74915e976e1bec2469f01fb63278725853ab2fee19399b5c2d49970b",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_11/slots/shelf-place-v3__2026111567.json": {
+      "sha256": "d6d8dad6577243a91270707f8d4541946d1fb2584ca4539c1d50652295eca13a",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_11/slots/stick-pull-v3__2026111343.json": {
+      "sha256": "760122506ff163c9533fbd9c9416a2afd40b9feffa1fc9cc9c084ab7dc3f96aa",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_11/slots/stick-pull-v3__2026111503.json": {
+      "sha256": "eb619071264bc0813e701f5a2bec88a7727f26de31de300f6c47909b10801858",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_11/slots/stick-push-v3__2026111439.json": {
+      "sha256": "a4d3a2ddcab2b884bf2b058b8d2af5f4e78bdc420424238275d4c4beaec6b887",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_11/slots/stick-push-v3__2026111599.json": {
+      "sha256": "290df202a929680bf3e23a15dfeec717710c254e726ccbf0b6709eaed2572ca0",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_11/status.json": {
+      "sha256": "8beeed417f5b3adeab3fc56011dbcbd29669a7d0357184201cc5de1a502f7a48",
+      "bytes": 1288
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_12/complete.json": {
+      "sha256": "631184ecf1c1fd11acb7be5ed8fcb56c5288047b1c3e2b30652fb1e85c174090",
+      "bytes": 1378
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_12/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_12/slots/disassemble-v3__2026111440.json": {
+      "sha256": "34f4befaf1cd3f7545923cd217e4d1bc92c4ebbe131ee076a4678eab7dde1020",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_12/slots/pick-place-wall-v3__2026111376.json": {
+      "sha256": "173cd80687441cdc233561201808832f54082699ed616da2c4f7cd42b2648924",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_12/slots/pick-place-wall-v3__2026111536.json": {
+      "sha256": "2a5d8191856411e443b9c62b0b9c5e08f85887003aba85c6fb9a89b7e39150b6",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_12/slots/shelf-place-v3__2026111312.json": {
+      "sha256": "4cc269d65fd9784a619625d78d2d3270e259a991c07538656a466245c34f24bb",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_12/slots/shelf-place-v3__2026111472.json": {
+      "sha256": "92f828fcd7bc7556377882ca1fd42d661725f5a61aef9cd5c7f45e4dcf66e0bc",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_12/slots/stick-pull-v3__2026111408.json": {
+      "sha256": "e7489ac3a67ef62342b80a5d7771ba096f073e2ed7f85a999a53596126714552",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_12/slots/stick-pull-v3__2026111568.json": {
+      "sha256": "8de79bc1b32915d04f6ede2250d38423636b9c1094a3472bca4173e1dae07e57",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_12/slots/stick-push-v3__2026111344.json": {
+      "sha256": "5f17a96356a953e00912934a12197875e51781fe6b127f0de465998d2f20920e",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_12/slots/stick-push-v3__2026111504.json": {
+      "sha256": "892eee8016f4d0fa9bd7b5e59fbf16581ebd9e23246f3d6620c901a66a56ca77",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_12/status.json": {
+      "sha256": "a0b23fdb1535dc83579edee58a1c82794559f0a38637f69aaaa8ce1d02709392",
+      "bytes": 1252
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_13/complete.json": {
+      "sha256": "28670a21d7b798308c3c0666aaa54f05b50a61b8f496cca5202f0ac4de47a141",
+      "bytes": 1374
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_13/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_13/slots/disassemble-v3__2026111345.json": {
+      "sha256": "1d021748b53c2e57b44dce3d3bb101ece4d49b8c3622c38a661e37b7f52b2acf",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_13/slots/disassemble-v3__2026111505.json": {
+      "sha256": "bf3e8609b058e9bb9e680cd7aef8f9f7d7ccf27e044189fe1980a6bb4dad4312",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_13/slots/pick-place-wall-v3__2026111441.json": {
+      "sha256": "f0885b80bb6807d9cffc2f19d1722871483aa5a05959b75cb5e259720551cc83",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_13/slots/shelf-place-v3__2026111377.json": {
+      "sha256": "ba4946210a65b98492599ca87a8891fbf46bbde634923b11e219f1322e620eaf",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_13/slots/shelf-place-v3__2026111537.json": {
+      "sha256": "4d6b65fe1cc0dd221757a3bc51f294294a0e0a5217b5ab3e35985ad25b9d0524",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_13/slots/stick-pull-v3__2026111313.json": {
+      "sha256": "94842e3970e45ea9f911adc83475956ee97e776de2f8d049890f23843c7904ff",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_13/slots/stick-pull-v3__2026111473.json": {
+      "sha256": "1cb46fbc6aa07c5baa73e2d31cae580ded54c1c71705eadf2260bceabc398fa8",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_13/slots/stick-push-v3__2026111409.json": {
+      "sha256": "5e760412cfff81c8133a79e909ad24bda3453041c8658dadb6c2ee1c051e3dca",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_13/slots/stick-push-v3__2026111569.json": {
+      "sha256": "e5b1de68f051ebfe4c973bcb873f11b44d55ddc454a31d4017a1f28aaa6caa4e",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_13/status.json": {
+      "sha256": "95eb5eeab8c9c71ebc7155f03aab3681e949d7e07092099896b33df99f718e80",
+      "bytes": 1248
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_14/complete.json": {
+      "sha256": "0771e292ed03257aefed5a11470cfc086f8925fd3c24ab63bc26b75525260c7b",
+      "bytes": 1378
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_14/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_14/slots/disassemble-v3__2026111410.json": {
+      "sha256": "8b062d81cd0280392edec2a23ad007810a84b28a72a18f6246f2e99f76da5c38",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_14/slots/disassemble-v3__2026111570.json": {
+      "sha256": "ad37859bea5c8a332033e625e60282cb5b997311b90e055dadb39f3077ae95b6",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_14/slots/pick-place-wall-v3__2026111346.json": {
+      "sha256": "b49cb0f5fbaef0b3fb757795218c274c4d8da3d83f9a68d7bd65aac9d715966b",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_14/slots/pick-place-wall-v3__2026111506.json": {
+      "sha256": "843e15e02c49bf38e5ff4fae89406688f566343d314b5a4e84b9231ac89a6187",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_14/slots/shelf-place-v3__2026111442.json": {
+      "sha256": "6f5a038110678b9b3bdfa0d4759ef9fa26a354f71d1205d516cf9cad5a692910",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_14/slots/stick-pull-v3__2026111378.json": {
+      "sha256": "92f47eccd6a546f3bf2fe1da8945713e4a7f1308622b3cf2f3df1ce46c3f9b5a",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_14/slots/stick-pull-v3__2026111538.json": {
+      "sha256": "750291dba8aa35abeecbed6891ec71890266dde801501604c3aafc6234f45091",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_14/slots/stick-push-v3__2026111314.json": {
+      "sha256": "13bd3076ddf76495bf08e81f7d4ee5b87443330077a5a4d6efc2673e5ddaef4f",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_14/slots/stick-push-v3__2026111474.json": {
+      "sha256": "5b776cc099e4d700caf7c09e88a5592af2467cf8d53d220c5357f9035150bb26",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_14/status.json": {
+      "sha256": "0837038520e1c8e968967c5a46d88f60ef6d1f77b0c05c2a3ef414db27f8f8cd",
+      "bytes": 1254
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_15/complete.json": {
+      "sha256": "bc051655ec67487b973d4d74a86265cfa2df2ed1ac122deb23a0a4b1d2ef75b9",
+      "bytes": 1379
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_15/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_15/slots/disassemble-v3__2026111315.json": {
+      "sha256": "a49312f3bac48a54eff206565b05817ee28c7534c46d8f0a351db86df1c90bd4",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_15/slots/disassemble-v3__2026111475.json": {
+      "sha256": "67bc118f0080a742f3b8b17bc807a4b1aba3442c3b2704a602cdf6f90340ac5c",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_15/slots/pick-place-wall-v3__2026111411.json": {
+      "sha256": "4c0d48b41d24e327dd4e13a1c45d8f43c8c2d499f78e7850febfca669ea161e4",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_15/slots/pick-place-wall-v3__2026111571.json": {
+      "sha256": "eceb8aac4cc70451ceeab3b60ab17deed14f0579c51d35c3615dc78f570e2379",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_15/slots/shelf-place-v3__2026111347.json": {
+      "sha256": "fdc9e1be81171c3af420830bb06dd4e01ba8ea3c009600bfab7df050286b753e",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_15/slots/shelf-place-v3__2026111507.json": {
+      "sha256": "702ed9269a2c62de556dc69eb4494339b3cf670174be721875953a054cc73269",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_15/slots/stick-pull-v3__2026111443.json": {
+      "sha256": "9306c0711a4b8487eba0947e9188696ae9d9071fadabc442553160b677af80eb",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_15/slots/stick-push-v3__2026111379.json": {
+      "sha256": "57b1d516c84c81ba727b6c01f589960cd406775aaa6f8e666dcf71e094e2dbff",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_15/slots/stick-push-v3__2026111539.json": {
+      "sha256": "022f100a7febb89f2cf0dec8783cdaba3792a201cff2e2b987bbe248a6631d40",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_15/status.json": {
+      "sha256": "15a45446f39ef47e4c5617bf39a94a70610c2ac51453b1b25b099b4a265e44b7",
+      "bytes": 1254
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_16/complete.json": {
+      "sha256": "ab7187ee729a528ec17558948347ea6aaf7f3bc843ecb07c54d272a23bdac11f",
+      "bytes": 1379
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_16/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_16/slots/disassemble-v3__2026111380.json": {
+      "sha256": "c8aaaf3dd2846488f1cb9de76a83ec2efaa49597e1669f6acd5b757796181455",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_16/slots/disassemble-v3__2026111540.json": {
+      "sha256": "9deb14a571ef8e3a3b3e8763db49acbe5feba18e7779281c7793ca0769db8e0d",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_16/slots/pick-place-wall-v3__2026111316.json": {
+      "sha256": "459f1b07bfb497a447e974d1b77ec2838cd9da510b6707550312ddbc249ab745",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_16/slots/pick-place-wall-v3__2026111476.json": {
+      "sha256": "38e9dcd41ea51f9a55592be55ec30ae079406c02551ba57275ee638102b80726",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_16/slots/shelf-place-v3__2026111412.json": {
+      "sha256": "7d16d9c3e898fc18204c7735d696dd38b4d5131805af08507f154bae2ed54e0e",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_16/slots/shelf-place-v3__2026111572.json": {
+      "sha256": "fe2ec1e2b525adb6a9443217c32b93e0dfeb733bc850d2fb888415946b1002b4",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_16/slots/stick-pull-v3__2026111348.json": {
+      "sha256": "d1cb5b754489967d37d908914e79d708496076af7cc8b11ed53023e8b5869653",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_16/slots/stick-pull-v3__2026111508.json": {
+      "sha256": "39074d551942283fdcdc46407c0c77ed2e5fbb08435da0b7d763a590b91ace52",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_16/slots/stick-push-v3__2026111444.json": {
+      "sha256": "03c3d1f340c80f14e112e8f295bdef1e10704b0455f1ee0b82657205072234b9",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_16/status.json": {
+      "sha256": "3884b95e4f68408164f3bac18293f4501495e0e26b60ca113733be85136e4080",
+      "bytes": 1254
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_17/complete.json": {
+      "sha256": "efc09db9709d49d9cc26839d03e246318329286911d5393c92870b69a8e5648d",
+      "bytes": 1378
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_17/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_17/slots/disassemble-v3__2026111445.json": {
+      "sha256": "de42784d8ea4e7555e982c972ef7698e6ffe8097c648d6f441f2c5ceecb2708c",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_17/slots/pick-place-wall-v3__2026111381.json": {
+      "sha256": "a45053d44b0f389f487414b8b25e8ef9c32b4fb45f57c4da261cd1629964961e",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_17/slots/pick-place-wall-v3__2026111541.json": {
+      "sha256": "40c57d467f604010539f9cbe034d31dd1345db4387879e03fa681fe931f21bad",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_17/slots/shelf-place-v3__2026111317.json": {
+      "sha256": "40bfe07729deea23e1e39c6eedd7b2df22b98db60972fc356ac34473292c2139",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_17/slots/shelf-place-v3__2026111477.json": {
+      "sha256": "3b20bfa8ef60b96d8fcee7223576f308072fd069e9c615a6be648a7a00bdbfa2",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_17/slots/stick-pull-v3__2026111413.json": {
+      "sha256": "86b2c61a086bcec9baa7a59f3638187a184b9e8426d2023e1ee7f5c6920e148d",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_17/slots/stick-pull-v3__2026111573.json": {
+      "sha256": "6ff0d28a8a49d6538330936bb9f1f7c840456b9c4c20c7815a93cdff44e76009",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_17/slots/stick-push-v3__2026111349.json": {
+      "sha256": "fee4e8ef46732254ddbf531c8359108b2142bbd47379a60a0a2138574fcf5c85",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_17/slots/stick-push-v3__2026111509.json": {
+      "sha256": "ef362c755e4a4616e47f678c987e23877494001eef31c99818844d2a80f22fc6",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_17/status.json": {
+      "sha256": "9c19925a9cd805d80aeee3526a56450804c941c6f63bdd684823a2c6b6d95e58",
+      "bytes": 1252
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_18/complete.json": {
+      "sha256": "45bd07802ccea4b909206cdf0af02545ba5f5f73274ef828d495958ee74d9220",
+      "bytes": 1374
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_18/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_18/slots/disassemble-v3__2026111350.json": {
+      "sha256": "4c8b8eee69fbad000299f5e62d5e7c100d471e6008cbb9030610f0e2197b3fe7",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_18/slots/disassemble-v3__2026111510.json": {
+      "sha256": "d6e1c91d2c50f667a1261cd6e6508493c90fbe1e7ee2eade92f563073a1780f3",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_18/slots/pick-place-wall-v3__2026111446.json": {
+      "sha256": "1b2da019f14700595b0421d5f84cf747c64bcb53b2f7b9e6c9d577ffb7bb3ba4",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_18/slots/shelf-place-v3__2026111382.json": {
+      "sha256": "b6f83205ad24adf65135fa814b883a72b6048dc481cf25ab9aed2f3ac3b8fde7",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_18/slots/shelf-place-v3__2026111542.json": {
+      "sha256": "2282a20b63caa97604ff1276855587e5fb1f14b0b0c3f8c6903a0c98c966c7b9",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_18/slots/stick-pull-v3__2026111318.json": {
+      "sha256": "7598cb5c0de8decf00e7228f03f7e3885d083a162c17455200af0160e79d0acd",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_18/slots/stick-pull-v3__2026111478.json": {
+      "sha256": "90820ba668273c762cf19f329ec1b60d5487e60c2d0d3b116ac91f4e28ae6ef7",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_18/slots/stick-push-v3__2026111414.json": {
+      "sha256": "8911739129abe967fe5c04614771b779e6660e39a66085e32f3303d3425ddc26",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_18/slots/stick-push-v3__2026111574.json": {
+      "sha256": "e4ea3d7cebe5ffeeb9e948e7a848ab1bcad7476355bdd7203d05f6b693a2e674",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_18/status.json": {
+      "sha256": "ac7579252b423ba9f61c60a15a27270b7a7b3a7d03ffe6386cfae0ab58e46ffe",
+      "bytes": 1247
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_19/complete.json": {
+      "sha256": "e7e1b26bd4ff365b372a8de55654ff159154635d0e98fdb88c6058f18ac6ac43",
+      "bytes": 1378
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_19/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_19/slots/disassemble-v3__2026111415.json": {
+      "sha256": "571d058632dc893edc3b96aec5af52467167e2411cf8b42873407228b9d9298a",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_19/slots/disassemble-v3__2026111575.json": {
+      "sha256": "3a3e7dca6e1a3438de1ea60fa306a46a6df4ebfa9fb7972a96db17c3d367b522",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_19/slots/pick-place-wall-v3__2026111351.json": {
+      "sha256": "57eb2becbf3b510d1c19375bac535a00526bfc31dde44bfcc9ab7574acbb130d",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_19/slots/pick-place-wall-v3__2026111511.json": {
+      "sha256": "22b68149b0a630baeaeeb0555430429d18aeef641219dc227d20df7f84d2ea9e",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_19/slots/shelf-place-v3__2026111447.json": {
+      "sha256": "66de9809ef563e9eaf68948fd84b6be9d246387e6db2e10b713cb27afb7b740f",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_19/slots/stick-pull-v3__2026111383.json": {
+      "sha256": "15d82445e64706ef302ce53d1f41b2ff217159917f7db1297912f96700c933c2",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_19/slots/stick-pull-v3__2026111543.json": {
+      "sha256": "b2cecdba427ed266460f50645dffdbfba435e96474ce558342d324b97c509baf",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_19/slots/stick-push-v3__2026111319.json": {
+      "sha256": "c77b77f101141bde9470bfc669da5f4efb57cf470526f3d03ff6605e24d5688d",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_19/slots/stick-push-v3__2026111479.json": {
+      "sha256": "0a73d118db8b1a46462a8fb2027c0143ce3057ee399e486a9c1bff18cec335b5",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_19/status.json": {
+      "sha256": "593c84fa99a9db70dc5e54dd386147f039f21b418890a2d3b1ea4de4f522eadc",
+      "bytes": 1253
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_20/complete.json": {
+      "sha256": "0dd7efce4544502690c205569e6df8b5fb4456b5bf5b20270dcd1094e3195f85",
+      "bytes": 1379
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_20/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_20/slots/disassemble-v3__2026111320.json": {
+      "sha256": "05dc9a95466c9342c622956965027651f9758103428030f704e1f14430844226",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_20/slots/disassemble-v3__2026111480.json": {
+      "sha256": "1c1017d54bd5c8aaf5400077e30ec1961c603cfe80d1d1b37009fa1c1cf734f1",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_20/slots/pick-place-wall-v3__2026111416.json": {
+      "sha256": "21af2ae0c6496d607526901900426e3b87aae71b722cdff809775f822e94c55f",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_20/slots/pick-place-wall-v3__2026111576.json": {
+      "sha256": "bb6f8664644bd6787fb91a1d4e7ea7c57abc8150d84b7cd77a75854221194ccf",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_20/slots/shelf-place-v3__2026111352.json": {
+      "sha256": "ae1e25e05e9ae4823a583a7067d3b5f358dfeff01a1986ac8ed89f359dcfdcff",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_20/slots/shelf-place-v3__2026111512.json": {
+      "sha256": "6646087504e1bcf3cc1c691178cdbd87e2633a3ae543bdfe4e395e46fe152e06",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_20/slots/stick-pull-v3__2026111448.json": {
+      "sha256": "dcd4ee30101ad51ff8408edc14a60b1b35a13087b14ae53dfd4983d988068b5d",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_20/slots/stick-push-v3__2026111384.json": {
+      "sha256": "1d1b007f5f5deabb7c93a17b7a56653f06ba98a2a86333e3e73b4a382f37c982",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_20/slots/stick-push-v3__2026111544.json": {
+      "sha256": "3e67dfa27e0464b3920704ff5a42080d1c763ce754d364a5b27ea850d26109cf",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_20/status.json": {
+      "sha256": "a3291677cfe6cfcbeca46eb82e29a68074681e55b8dc07bbe334e9b16618c309",
+      "bytes": 1254
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_21/complete.json": {
+      "sha256": "f5d28084952ae2e898b04db9cd2663dada1e57b9d958c82c54105b56f077049f",
+      "bytes": 1379
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_21/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_21/slots/disassemble-v3__2026111385.json": {
+      "sha256": "082068ac37ab69ec08e9a73733afbbf29f88377c549ab0f7fc1cb0b0ebbfec90",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_21/slots/disassemble-v3__2026111545.json": {
+      "sha256": "1245ab2eafd6a71c7f90fff60a2a77b812565244a328466ca12ee79931079346",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_21/slots/pick-place-wall-v3__2026111321.json": {
+      "sha256": "f6a74c4ea7379265418e78973fdf8232764f1c37f14bcc85c13068727e8f4775",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_21/slots/pick-place-wall-v3__2026111481.json": {
+      "sha256": "87ab1732e7e88db15a9fdcf99ecbe54baf91bc8317335942716477d0926fac41",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_21/slots/shelf-place-v3__2026111417.json": {
+      "sha256": "41fffed5b3a87997ea81f6f66ea2a62d11fb68c1ff76863bf605fe90415eb6c3",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_21/slots/shelf-place-v3__2026111577.json": {
+      "sha256": "cedcd1c835f273030b9dd74a5508a4c2022b913780f21b8ede5646b665e69a93",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_21/slots/stick-pull-v3__2026111353.json": {
+      "sha256": "7110a573604e6737ff5bbd199d7b0fac7596f434a124d734d9255107615a085a",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_21/slots/stick-pull-v3__2026111513.json": {
+      "sha256": "643b5b1ed3fe3a22fbd83f50337d5dde5a89462fa8fb52c2fa574ebd589e6ade",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_21/slots/stick-push-v3__2026111449.json": {
+      "sha256": "6a1d98ed0fb2df9b22f3a473585f9c72eb9ead2f9d1f8f45d14e583a0e56b162",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_21/status.json": {
+      "sha256": "556fcc4ec3cce503c8d5173ccec741ee55385ab6ed3f069f4488a7f87796cf48",
+      "bytes": 1254
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_22/complete.json": {
+      "sha256": "3640be744ba4587db954101727cdc4dcf239f86bf7588daef133524faee186e9",
+      "bytes": 1378
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_22/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_22/slots/disassemble-v3__2026111450.json": {
+      "sha256": "491dea21f363df5f070e629a561f0650d17cc573e1a2c82d12820ea8c7ee0d40",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_22/slots/pick-place-wall-v3__2026111386.json": {
+      "sha256": "0be4aefdb316d7dba606a070306ac331c6bab4852a1e30f741993248be3985c2",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_22/slots/pick-place-wall-v3__2026111546.json": {
+      "sha256": "cc6de12dfccfb6943ecdd6d73704b497726cdaf4939ec2bec15b5bba191b1f89",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_22/slots/shelf-place-v3__2026111322.json": {
+      "sha256": "f10c78a2f413ca1f0663fa1bec40a8d943a836fa4e8b72388246a4433ea5f898",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_22/slots/shelf-place-v3__2026111482.json": {
+      "sha256": "38a91886a31b95c27dd4c68fa5f4f65870da94d21efc0279bbcd0f097d7254c6",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_22/slots/stick-pull-v3__2026111418.json": {
+      "sha256": "d7a512e621ba9eafba4ca65aa38747f80ffd2a03bbcf8edf96d84f9b67d7d408",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_22/slots/stick-pull-v3__2026111578.json": {
+      "sha256": "6871e61a57dfbeb769e313182856fb83babc8b52847b11886e9687d9e5806371",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_22/slots/stick-push-v3__2026111354.json": {
+      "sha256": "9c7eecc278e8e94ff5b3c0934748975f642064fd817136e63200f19230db940f",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_22/slots/stick-push-v3__2026111514.json": {
+      "sha256": "ed8cdd704edf49bf43a5d3b3f2ee1bd0d987b474cf0856401087f7c2a81fa2c0",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_22/status.json": {
+      "sha256": "101d25b8b30410473ef1e8fdf835a4fe8bd8349a7fa3accada1869ec9edc25d4",
+      "bytes": 1252
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_23/complete.json": {
+      "sha256": "7db88e66a35919bb71dc26343ef0c8616c38316283d0d64deb37459615d64b83",
+      "bytes": 1374
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_23/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_23/slots/disassemble-v3__2026111355.json": {
+      "sha256": "270fa4fdc9bd99faa5d4eeb3a21980a2555da47df0965f30a9884e4ce2dfa194",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_23/slots/disassemble-v3__2026111515.json": {
+      "sha256": "1a3577ce32ecfe3df4ad6cdb0615e9fe74ac7daa8f81be7df93957b1fb87944a",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_23/slots/pick-place-wall-v3__2026111451.json": {
+      "sha256": "c1fe199cc9558afc437913385200eb683abb36f14f972eb934e6060f08055199",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_23/slots/shelf-place-v3__2026111387.json": {
+      "sha256": "79bf89792db63411fdba3f7fe718a7199b1265272466a48ff82f8e9317b1dc10",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_23/slots/shelf-place-v3__2026111547.json": {
+      "sha256": "f5d0a2446e1ee7210d9dc0f2b70c0b16b65520436af4cde6ddc3477276036a42",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_23/slots/stick-pull-v3__2026111323.json": {
+      "sha256": "fe2551585927429ceb5a701c0e32f6fe98a5fe0488b02dede78df65659ccf7ac",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_23/slots/stick-pull-v3__2026111483.json": {
+      "sha256": "064e641941b442e2de8dc10ec85930a89b13aaf126721e7632665e2db067893c",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_23/slots/stick-push-v3__2026111419.json": {
+      "sha256": "188ea02dfb6a96a43b86a8b3971110bfe6dfc7ba68e4fa5f4c72460e1d3dc790",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_23/slots/stick-push-v3__2026111579.json": {
+      "sha256": "5ee71b04e0b8fb4452b0028a197911703dbb2d6b22ab9bfbca5ccf7f0269f3e7",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_23/status.json": {
+      "sha256": "56995f7c4fb202f1adf712c82a4c547593603171519e324aa4f3024389a82cb7",
+      "bytes": 1249
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_24/complete.json": {
+      "sha256": "c89930831059eab45a89298bc68592b948e5d6f64a2336475a0f0f5910c4ec87",
+      "bytes": 1378
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_24/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_24/slots/disassemble-v3__2026111420.json": {
+      "sha256": "99d46361d2a0ea20671fd57eabea6d0b60c7c24f8e5f5714ededb0db4ea5d90d",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_24/slots/disassemble-v3__2026111580.json": {
+      "sha256": "c1c43f4a57d3821aba763f293d4b99fab859ace43979100be160bb62f22362af",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_24/slots/pick-place-wall-v3__2026111356.json": {
+      "sha256": "7e6add68bb491b40e95bae99b9725c1db945f23e49579e02c2917d387aa962c4",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_24/slots/pick-place-wall-v3__2026111516.json": {
+      "sha256": "19d0899d63e6d6a7b2c00043d0c0fab6b1d330f5e64ce1faa933725968d33fdf",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_24/slots/shelf-place-v3__2026111452.json": {
+      "sha256": "acd0273589298cf61b5099f6a2d6c531f3e241141196fed05df97d71929acf1c",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_24/slots/stick-pull-v3__2026111388.json": {
+      "sha256": "5c97de6165c68fa753a89dabb2caf7c9a3737fc1cc0e843e9b213868b1052a6e",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_24/slots/stick-pull-v3__2026111548.json": {
+      "sha256": "2fdd186467e712955dafad7bb929b54b542ae61f8dfec8be3692c74229e8d284",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_24/slots/stick-push-v3__2026111324.json": {
+      "sha256": "17afb40de5c83e0c4bd2e144622da526a729ec63e2bf93403ebe1c845382b96c",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_24/slots/stick-push-v3__2026111484.json": {
+      "sha256": "01aaf514a06a4bec0919041b6b0e0df18743c4422d3151997dffbfe9e30436bc",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_24/status.json": {
+      "sha256": "5a44d6e9c6243b2b93ff977bfb7bf90b6be8f72c64ed9abc7945ae64af652db7",
+      "bytes": 1253
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_25/complete.json": {
+      "sha256": "57b78abf3849f766f8bd7d6746eacf58599e02ced952f24c0381f02a8635c88e",
+      "bytes": 1379
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_25/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_25/slots/disassemble-v3__2026111325.json": {
+      "sha256": "64e9b32e0f256d969ae52c15b1ff01607e42b8f81fe2238b50944eebb511f133",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_25/slots/disassemble-v3__2026111485.json": {
+      "sha256": "1a0f18ade709c68c0a5f54eb74e00b198756f9f7761be97b70c6a84e7f4e56b2",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_25/slots/pick-place-wall-v3__2026111421.json": {
+      "sha256": "4146e336e45d9fd66859a710effb8af88bbbabf7fd80602709f67a79af8baa16",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_25/slots/pick-place-wall-v3__2026111581.json": {
+      "sha256": "9e9c55b41f13c2713d352e334424b7fb4f2251b9ea123544f08ab5680e86fa21",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_25/slots/shelf-place-v3__2026111357.json": {
+      "sha256": "5b84203fa249ea689b2e4f3985acafddf2b5aabc5cbc139a635d6eabd38f6fca",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_25/slots/shelf-place-v3__2026111517.json": {
+      "sha256": "0536462fd2ee804acfb19b2d599b47ca00e4318bf9c910898d256302c6a80b92",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_25/slots/stick-pull-v3__2026111453.json": {
+      "sha256": "cbf3c1dde7df4e4490f44032819783302411cbd17001cd7e73ad5ce0f2556ebf",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_25/slots/stick-push-v3__2026111389.json": {
+      "sha256": "276fd867af9569478f816ecd4d61562e976321a6d8857854f9acaff61b2c61aa",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_25/slots/stick-push-v3__2026111549.json": {
+      "sha256": "f0da8b15be5e93f1c22b5e2c8d1ae75bf3ae2150fff852186ed136237689e7e9",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_25/status.json": {
+      "sha256": "bcbada0ba5c96c9979167786c37fda30640370891bcc3bb7ce789ed5f95e73e7",
+      "bytes": 1254
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_26/complete.json": {
+      "sha256": "7d923eb7fb32a037ae4a20b8f9b87729eb6e869c738cc5e6d6ac1246c7343419",
+      "bytes": 1379
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_26/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_26/slots/disassemble-v3__2026111390.json": {
+      "sha256": "95cb857c0a51bd0afc96cd92433834b0a7eaa79c9b06a86aff32151565ddedb3",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_26/slots/disassemble-v3__2026111550.json": {
+      "sha256": "91f8ed16a11ecd44f945ebc6b5981329d018ac789ef694e07077e56dc3107934",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_26/slots/pick-place-wall-v3__2026111326.json": {
+      "sha256": "36af1e0ae5cec5a3fe4d1438b19ea550f39b6afe36fca92cf169695fbb36e8d6",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_26/slots/pick-place-wall-v3__2026111486.json": {
+      "sha256": "80bbd10cf0b49d5e4840a028382495e91ba960674073e419f315b3d47f8a78f4",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_26/slots/shelf-place-v3__2026111422.json": {
+      "sha256": "44eb7dfe4a6b665d03f5ede8a281d49d54bbe252706ff5899000ad6b87b6d399",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_26/slots/shelf-place-v3__2026111582.json": {
+      "sha256": "e03072913d50d4fa95d203b516a6955cb1369cefdcc0ac60e25bf6bf4f882533",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_26/slots/stick-pull-v3__2026111358.json": {
+      "sha256": "8361da07f968f36b13a898db577db88c5a6a89262eda5c722f3258a20e360d9d",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_26/slots/stick-pull-v3__2026111518.json": {
+      "sha256": "d8b204df68e55ddfc9a2415df2f95e90b9a4b8e8a56e04cd427ebf0466e80f6c",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_26/slots/stick-push-v3__2026111454.json": {
+      "sha256": "433bd7690ae6f15ca856c152d7e43a95c48133c744df77d7b0b1124f4562a3d5",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_26/status.json": {
+      "sha256": "99c99f6b3da778201014e67bbad042e4cb5c7040a829d3a0da78b669d9a89c8c",
+      "bytes": 1253
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_27/complete.json": {
+      "sha256": "82da55c46f760c6d7246ce25801d19f67b77af0d194dc7de2ffedc0c55df980a",
+      "bytes": 1378
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_27/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_27/slots/disassemble-v3__2026111455.json": {
+      "sha256": "03c3ae3df47db15a73c83a829b7a1c0b4fd03648c08649c5730bdc6452c1aaf3",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_27/slots/pick-place-wall-v3__2026111391.json": {
+      "sha256": "b8b7b3fa473df9f185a5b9b765aa05eb88bdbf2ab9ba9fb695b36b32db2f68e3",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_27/slots/pick-place-wall-v3__2026111551.json": {
+      "sha256": "af3587451799f5d6f05a85dd0d634f6953a7443a0c941f25761258aa2e84c881",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_27/slots/shelf-place-v3__2026111327.json": {
+      "sha256": "2e44097cd5d9f661a3ef9ae4ec73546dc13f1754e538367aebc7d1be644a401a",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_27/slots/shelf-place-v3__2026111487.json": {
+      "sha256": "8b074be8a2574739af731dc83cd30b06f247ba35174ccbd6b640db54419b6745",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_27/slots/stick-pull-v3__2026111423.json": {
+      "sha256": "4d91be1c6b70b77c13fa3a32e6e53a13635fc515fd1ace9acf898f2c047f14bc",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_27/slots/stick-pull-v3__2026111583.json": {
+      "sha256": "edca99b709e50283f836f63519aad6c7617d70a375389a17788c2e5d6ecfd0c6",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_27/slots/stick-push-v3__2026111359.json": {
+      "sha256": "d011a2ed78579c79277f82c637dcc61e247c98bdcb8f5b1350779f5020ee835e",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_27/slots/stick-push-v3__2026111519.json": {
+      "sha256": "b4facf18464cdd4dac48f29d793ef86bd4ae273ddb21fb9b17e39a793b367770",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_27/status.json": {
+      "sha256": "d2f155fdcf76e6544ed46aa85354fd77626e197a73eeff14ae4b6fd5f4822b69",
+      "bytes": 1253
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_28/complete.json": {
+      "sha256": "35cdf85cd0a704e6e8a313b873c4d2f8fcc316f678431099ac878744500d4c6a",
+      "bytes": 1374
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_28/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_28/slots/disassemble-v3__2026111360.json": {
+      "sha256": "decdeedb3ce4a5b9cf78b441e920bd6b9404b69cd7f03c4dab71f43014781440",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_28/slots/disassemble-v3__2026111520.json": {
+      "sha256": "d4b78f2589b1c3825e50cce9bf9dc53982b0f3cf45ce813e4a500b964396cf0e",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_28/slots/pick-place-wall-v3__2026111456.json": {
+      "sha256": "ceeaf7845fb5ab14a974a01adaf5bf40c25a9171f762af0bf9634b354a9b3ac4",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_28/slots/shelf-place-v3__2026111392.json": {
+      "sha256": "86e37e521f516cafe78d96c858dad5cd24afcabf8438ad4567ec108fa39e8563",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_28/slots/shelf-place-v3__2026111552.json": {
+      "sha256": "4513ebe2a43eba11ea551f5c842b5e217cd524a0b7b67a48d8d7c607c89eee7c",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_28/slots/stick-pull-v3__2026111328.json": {
+      "sha256": "6b37f6a3af78d3db0518209dcf8c96fd47d3ca2e788668cf2636ba135afd8f0e",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_28/slots/stick-pull-v3__2026111488.json": {
+      "sha256": "0dac5113b07eb9d784941f39bdcb8b994d43787edb4c2229bb41c5e9a4812a5c",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_28/slots/stick-push-v3__2026111424.json": {
+      "sha256": "30a4e9c9bbd382c52249fae18340c4d17cfb2c7193b39032962501b47e2bb39d",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_28/slots/stick-push-v3__2026111584.json": {
+      "sha256": "0de6a7915b86c30a51da89aa10697f519599d5b33387a4d1ac87b73b0ae9c799",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_28/status.json": {
+      "sha256": "0a606d3caf6153c22cc9e9d791a865964e2ab61c725e3bb0bbffac26aaeebaef",
+      "bytes": 1249
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_29/complete.json": {
+      "sha256": "c760888f6e2563305160ee0484f2f9bb4dca70c6a994f4fa51dd54f7c98419a0",
+      "bytes": 1378
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_29/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_29/slots/disassemble-v3__2026111425.json": {
+      "sha256": "a5b7a495ef0b533031a7fb61af1b2ac276d2ba6bc86dd50f9db9c123136882ac",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_29/slots/disassemble-v3__2026111585.json": {
+      "sha256": "18840f0d6327c08b9815f9e7be6dd9fe7350a47474c1be9d0ca6bc459755255e",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_29/slots/pick-place-wall-v3__2026111361.json": {
+      "sha256": "84f27838e227b059f8d800303be91f972cd0fa3177ffd709b7cc4c08053b09f6",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_29/slots/pick-place-wall-v3__2026111521.json": {
+      "sha256": "953c1c489c61fe0edafbf395b0428a0d3825e5b7c0baaeb2e88d5b00eabe00b3",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_29/slots/shelf-place-v3__2026111457.json": {
+      "sha256": "b26a0590d13eb0f2ad39fef11a6510e5adeb44f6c060e33c9143eb83c8c55fec",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_29/slots/stick-pull-v3__2026111393.json": {
+      "sha256": "3a47265fb8f8d4b4f1a449885b23c964b91ab955c940c7dcacb2548f5fef4c9e",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_29/slots/stick-pull-v3__2026111553.json": {
+      "sha256": "978583d38ae245fc8b20a0b3434aee6b21a9cce047c491f98b4304b944b29bcc",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_29/slots/stick-push-v3__2026111329.json": {
+      "sha256": "a25239c983f44d994fcbcb6cc6daf6001daabc8ce078fe153a0a80600c77b43e",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_29/slots/stick-push-v3__2026111489.json": {
+      "sha256": "0115d1a4f4a2cd7b0b19d6215addb09cd6e5f492cf1acfef0b10d4ad20cb28b7",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_29/status.json": {
+      "sha256": "9e80e57b5c0b95527c0afc2eb2938af7fa8f8a1579aaf8ba3df3f9227cf61cd3",
+      "bytes": 1253
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_30/complete.json": {
+      "sha256": "0396b537100c183d41363eadde942b121974a1aa74bcfdfe251474741fefa2c6",
+      "bytes": 1379
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_30/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_30/slots/disassemble-v3__2026111330.json": {
+      "sha256": "ab0bff01c3fdcbd93b331a1639b389e85874d27e4f8ca8e9c71e598bc888038c",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_30/slots/disassemble-v3__2026111490.json": {
+      "sha256": "9ae15bf348afc8d75d7016bcfdf59ebf04231ac78c67b5e614e45d82968f50f6",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_30/slots/pick-place-wall-v3__2026111426.json": {
+      "sha256": "4f418669c5e4f06c29c3dcdf9e4ce435fc0b5526ef91fa994652940d68a991c7",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_30/slots/pick-place-wall-v3__2026111586.json": {
+      "sha256": "8d86334106721adfacd20c5c1882f73a2a2f413e780ede4e1b7f2a7309d0c638",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_30/slots/shelf-place-v3__2026111362.json": {
+      "sha256": "3353c1da9b7ee01cee3e6c612cd0325fe37dcb57cdd0d8998aa74eb90a86a92d",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_30/slots/shelf-place-v3__2026111522.json": {
+      "sha256": "e817686c6e9f3d65c5b3603aac695641b8faf49289a1b45ecfa320e9b4892e00",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_30/slots/stick-pull-v3__2026111458.json": {
+      "sha256": "da98282ebd98ab10f7214c19963455bd6ea08de479effae52fa4ab9363972e77",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_30/slots/stick-push-v3__2026111394.json": {
+      "sha256": "cc991d6ead2df9640ff9c16f0cc7716f13ff05a2b42dfb3628bad08d61932e52",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_30/slots/stick-push-v3__2026111554.json": {
+      "sha256": "307ca9e467a6437673e20d8861773b44b00b423bf87bdd172e294c1e4ed17b20",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_30/status.json": {
+      "sha256": "0a9ce2280748a1d13af4c1f13ca04dd34478cf814a9bd4d108a95af1c19eda51",
+      "bytes": 1254
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_31/complete.json": {
+      "sha256": "60412548144b025e45cf4fbd831e553e790fc5dd90350dce127c4de7cddd46b7",
+      "bytes": 1379
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_31/loaded_model_identity.json": {
+      "sha256": "41f7ba31ccd0f0530817e1c4d8b86aa8db9a49f39eb6342558b874aaa1fd8fa0",
+      "bytes": 1461
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_31/slots/disassemble-v3__2026111395.json": {
+      "sha256": "8be6e6b6516a657e96a95f5e4a65487ebabb5004c9f0c09bd52eab909589df3b",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_31/slots/disassemble-v3__2026111555.json": {
+      "sha256": "a365862d0b880b486578e1fecf719e08a89d3888abf821597b74ace8c4adc3cb",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_31/slots/pick-place-wall-v3__2026111331.json": {
+      "sha256": "e81d22cb80f8ffacfc91c7fc3e4a2aab40428fa8a3845691a085e2224cb7fba7",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_31/slots/pick-place-wall-v3__2026111491.json": {
+      "sha256": "d1d152f030c187fbbbefe15576885a6784a2dd12067922a6ad37c3e0c8f53679",
+      "bytes": 639
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_31/slots/shelf-place-v3__2026111427.json": {
+      "sha256": "14fd8644a24cc91fe781deff5504d1fc5f341bfd610a3cb93f75442d530e3c86",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_31/slots/shelf-place-v3__2026111587.json": {
+      "sha256": "0c277c983f536253aa0ae6a965783643e9aed5be6b0599525e55e5ed19fe6fdb",
+      "bytes": 623
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_31/slots/stick-pull-v3__2026111363.json": {
+      "sha256": "dc257184179ca5144db8f1238aea1bb95857a375b915b2f2d2d383d5c2a19b4d",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_31/slots/stick-pull-v3__2026111523.json": {
+      "sha256": "73b038157360df7f3de81c427236a9bedc0bfed0c94c5486d61f888756111a54",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_31/slots/stick-push-v3__2026111459.json": {
+      "sha256": "a0de4e4d6c629deda642b220e0129a6cb13e72e3aa7920a3c0dc0e1becbf41d8",
+      "bytes": 619
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/workers/worker_31/status.json": {
+      "sha256": "230af12b37bdedb200367da96ebf91e0aca6dd3bc1f97fbbcf989499a4d506df",
+      "bytes": 1254
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/progress_audits/round2_runtime/round2_v1_01/latest.json": {
+      "sha256": "bd0ac6486dab6a347bc9ccc06927244bd0769fb702fa96dd59def9405514b6bb",
+      "bytes": 48898
+    },
+    "/tmp/gpu_occupancy_guard/status.json": {
+      "sha256": "3b3e89c0506d84eaaebea72d85b1dd0504693c4328e872c911866c86d282dafa",
+      "bytes": 1020
+    }
+  }
+}

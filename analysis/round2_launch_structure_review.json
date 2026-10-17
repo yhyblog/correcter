@@ -1,0 +1,127 @@
+{
+  "schema": "round2_launch_structure_review_v1",
+  "status": "passed",
+  "created_utc": "2026-09-16T21:54:07.208317+00:00",
+  "scope": "bounded static review of separately frozen round2 collector/runner/CPU linkage; not a new release gate",
+  "blockers": [],
+  "simulator_attempts": 0,
+  "model_calls": 0,
+  "optimizer_updates": 0,
+  "intermediate_outcomes_read": false,
+  "evidence": {
+    "config": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/config.json",
+      "sha256": "13ff72cbec4aa8fe92354d55e3a5e0ce0babc934d8cfeb72124af8eb4abc1944"
+    },
+    "freeze": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/freeze.json",
+      "sha256": "b1755f37303b914c2da362d59f390a91f8c1c46651023a7150810dff31a5ebcb"
+    },
+    "frozen_ready": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ANALYSIS_READY.json",
+      "sha256": "decbf30a364e1cc8e56bdc225bc99cce9fe1a5d810aaa1a869604bb3aeb89ec5"
+    },
+    "cpu_complete": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/round2_integration_cpu_20260916_v1/complete.json",
+      "sha256": "20e6cda6b4f359bc20c37c6b2c8914cede9690b76945d8e3e4e7c09ed1e307fe"
+    },
+    "cpu_result": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/round2_integration_cpu_20260916_v1/result.json",
+      "sha256": "317aa5a9f6f58429731db5305130edf11c6ac3435f5d7c6544229387c03718f2"
+    },
+    "selected_model_seal": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1",
+      "seal_sha256": "ff460f12c598a34a15a28ed7619ed071a60be195a3dd2f0c1c963a202ee22287",
+      "selected_seal_sha256": "931c6f6043db92b5d9003eb2833dfc8edd0ab6c860a1979db3983cd7d893725f"
+    }
+  },
+  "cpu": {
+    "tests_passed": 51,
+    "pytest_log_contains_51_passed": true,
+    "returncode": 0,
+    "shell_returncode": 0,
+    "sealed_cpu_files_verified": 5,
+    "code_hashes_checked": 19,
+    "before_after_current_equal": true,
+    "all_19_bound_in_new_freeze": true,
+    "tests_rerun_by_this_review": false
+  },
+  "structure_checks": {
+    "entry_chain": [
+      "run_round2_gpu_v1.sh",
+      "round2_runner_v1.worker",
+      "create_round2_collector",
+      "Round2Collector(MainCollector)",
+      "collect_round2_slot",
+      "main_runner.resolve_slot",
+      "collector.collect_episode"
+    ],
+    "new_capture": "Allowed for registered round2 primaries. resolve_slot reaches normal MainCollector capture and pre-action replacement resolution. It does not call policy5 collect_existing_slot.",
+    "no_historical_a0_requirement": "validate_round2_inputs explicitly reports cross_bank_a0_identity_required=false and old_guided_action_reuse_allowed=false. New source bank uses frozen B200.",
+    "loaded_model_guard": "Actual selector assets path, all four model paths, checkpoint SHA and frozen parameter/buffer versions checked after factory construction; source authorization checks frozen config and registered case before collection.",
+    "four_member_hashes": {
+      "0": "bc93c9035409cd2b7e413dffd0e0f9f3053ac34add4b47fc5cd57be9a5cdceb3",
+      "1": "639e78888f9ef9657cef73da4f21f0676593a58ec4bfa0f8f098d0885432fb2f",
+      "2": "e1f06c0214243ec9fd8952cab93139feafafbc8e84a74e432e9498d68d422df3",
+      "3": "ae18f18e36b878b37b1085778136f6faf62f7146ad0d4ca015076671b2a074eb"
+    },
+    "labels": "Bank kind labels13; inherited LABEL_METHODS is CANDIDATE_ORDER plus continue_native10; branch reserve permits only this set and repeats0..3. Training split repeats4. 13 candidate actions and separate normal are retained.",
+    "cut_policy": {
+      "policy": "analysis_lead_v1",
+      "scheduled_priority": {
+        "15": [
+          15,
+          5
+        ],
+        "45": [
+          45,
+          15,
+          5
+        ],
+        "95": [
+          95,
+          45,
+          15,
+          5
+        ]
+      },
+      "no_alarm_training_priority": [
+        15,
+        5
+      ],
+      "eligible": "reached_live_midpoint_with_at_least_10_steps_remaining",
+      "original_request_fields_preserved": true
+    },
+    "cut_selection_implementation": "Inherited select_cut selects first available reached legal anchor in the recorded LEAD priority; training fallback recorded, outcome labels not used. Requested cut fields preserved.",
+    "scope_to_stage": {
+      "round2_native10_local_labels": "round2_labels",
+      "preregistered_initialization_replacements": "technical_reserve"
+    },
+    "budget": {
+      "round2_primary_capture": 300,
+      "round2_candidate_restore": 300,
+      "round2_branch_upper_bound": 16800,
+      "round2_simulator_cap": 17400,
+      "round2_optimizer_cap": 0,
+      "separate_technical_reserve_simulator_cap": 1200,
+      "global_simulator_hard_cap": 50000
+    },
+    "reserve_accounting": "_Round2Ledger permits simulator_attempts requested1 only. Primary source_capture charges round2_labels; preregistered replacement source_capture charges technical_reserve; bank and branch charge round2_labels. Inherited pre-action rejection authorization prevents outcome-driven replacement.",
+    "append_only_scene_registry": "Freeze contains immutable scene_registry_before.jsonl, not live entries.jsonl. _scene_prefix hashes the snapshot and compares exactly those prefix bytes against live registry, allowing append-only growth; no old whole-live-file SHA assertion.",
+    "launch": "verify_frozen invokes frozen main verifier plus round2 guard; fixed32 workers,8 GPU×4. Worker requires lifecycle ancestry. Launch spec hold_idle=false, collector factory explicit, no following phase auto-start."
+  },
+  "checked_entry_file_sha256": {
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/round2_collection_v1.py": "a70a290bc3f6ec543076872a7c53a0a92f11a432a275170deb0e67f3e8adc2b4",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/round2_runner_v1.py": "9e4612da3535939c80be9976b654f69febf2eb95bbdd668c8ee11b52ac4cab8f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/run_round2_gpu_v1.sh": "51d72952dd19179ea65a6d658295b966588e6b461e792a7ecd53fd8971cac3f5",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/round2_prepare_v1.py": "7cd3286bb2064fb033b2b5d60797767a6e1bff9ff7f0d43fb988650e847566a6",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/main_collection.py": "d1bb68267efc5cb1de6853231989e83c2011a1243e0b65ca738eb4465d980213",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/main_runner.py": "1c3c2dda50cab69fd78d15b3d6dc5d727a2c8e3a087ec687beeb56770a687883",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/engine.py": "43bfe0799c3815e29b06be26475dfbb6c70df7bf431cedc630d9eb7622dd65ea"
+  },
+  "limits": [
+    "Did not rescan the full804-file freeze or old full artifact trees.",
+    "Did not instantiate collectors/models, run CPU tests, register attempts, capture scenes, or inspect intermediate outcomes.",
+    "This report validates frozen launch structure and archived CPU evidence; it does not claim completion or runtime outcomes of round2."
+  ]
+}

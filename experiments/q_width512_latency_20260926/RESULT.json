@@ -1,0 +1,54 @@
+{
+  "status": "complete",
+  "host": "trial-303269581-trialrun-303269581-worker-0",
+  "cpu": [
+    "Intel(R) Xeon(R) Platinum 8480+"
+  ],
+  "device": "CPU",
+  "dtype": "float32",
+  "threads": 2,
+  "batch_size": 1,
+  "action_slots": 2,
+  "torch_version": "2.7.1+cu126",
+  "initialization": "random, untrained",
+  "scope": "preprocessed 61D state -> anchored Q probabilities; forward only; ensemble mean",
+  "warmups_per_configuration": 20,
+  "timed_queries_per_configuration": 100,
+  "training_updates": 0,
+  "gradient_calls": 0,
+  "time": 1790389512.3901212,
+  "results": [
+    {
+      "width": 16,
+      "members": 1,
+      "parameters_per_member": 7058,
+      "n": 100,
+      "mean_ms": 0.2102363482117653,
+      "p95_ms": 0.22030891850590706
+    },
+    {
+      "width": 16,
+      "members": 4,
+      "parameters_per_member": 7058,
+      "n": 100,
+      "mean_ms": 0.7495438493788242,
+      "p95_ms": 0.7525521330535412
+    },
+    {
+      "width": 512,
+      "members": 1,
+      "parameters_per_member": 3781122,
+      "n": 100,
+      "mean_ms": 0.7683351822197437,
+      "p95_ms": 0.7089697755873203
+    },
+    {
+      "width": 512,
+      "members": 4,
+      "parameters_per_member": 3781122,
+      "n": 100,
+      "mean_ms": 2.807974871248007,
+      "p95_ms": 2.931017242372036
+    }
+  ]
+}

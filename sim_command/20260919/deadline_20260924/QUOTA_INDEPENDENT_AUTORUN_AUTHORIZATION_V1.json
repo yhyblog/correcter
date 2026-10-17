@@ -1,0 +1,48 @@
+{
+  "schema": "corrector_cpu_quota_independent_autorun_v1",
+  "status": "released",
+  "revision": 1,
+  "issued_at_utc": "2026-09-22T17:24:44.988414+00:00",
+  "authority": "User requests remaining authorized experiments prequeued to survive Codex quota exhaustion",
+  "rule": {
+    "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_V1.md",
+    "sha256": "28ee96191563eb354a90d1e4b377be82dda75494dbba8e055b844e80cb97be74"
+  },
+  "nodes": {
+    "A": {
+      "task_id": "A_D24_QUOTA_INDEPENDENT_QUEUE_V1",
+      "revision": 1,
+      "host": "trial-303224955-trialrun-303224955-worker-0",
+      "thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+      "CPU_prepare_now": true
+    },
+    "B": {
+      "task_id": "B_D24_QUOTA_INDEPENDENT_QUEUE_V1",
+      "revision": 1,
+      "host": "trial-303225685-trialrun-303225685-worker-0",
+      "thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+      "CPU_prepare_now": true
+    },
+    "C": {
+      "task_id": "C_D24_QUOTA_INDEPENDENT_QUEUE_V1",
+      "revision": 1,
+      "host": "trial-303269581-trialrun-303269581-worker-0",
+      "thread_id": "01a0c793-10d2-7791-a250-fd65d88e1ccb",
+      "CPU_prepare_now": true
+    }
+  },
+  "scientific_compute_added": 0,
+  "new_GPU_claims": 0,
+  "new_unique_scientific_units": 0,
+  "new_training_updates": 0,
+  "no_second_approval_required": true,
+  "existing_scientific_grants_and_caps_unchanged": true,
+  "must_not_replace_live_authorization": true,
+  "LLM_or_analysis_ACK_required_for_normal_next_stage": false,
+  "notification_failure_blocks_science": false,
+  "Post_only_selection_required": true,
+  "analysis_timeout_seconds": 1800,
+  "whole_wave_holders": "all_off",
+  "science_admission_cutoff_utc": "2026-09-23T12:00:00Z",
+  "tables_due_utc": "2026-09-23T15:00:00Z"
+}

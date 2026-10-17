@@ -1,0 +1,22 @@
+{
+  "non_compute_issues": [
+    {
+      "issue": "initial snapshot builder looked for normalize_pci in release.py; function is imported from cuda_mapping.py",
+      "resolved": "corrected extraction source; initial builder retained as prepare_snapshot_attempt01.py",
+      "real_compute_attempts": 0
+    },
+    {
+      "issue": "system Python3.11 AST cannot parse upstream Python3.12 generic class syntax in existing pipeline.py",
+      "resolved": "read relevant source text directly; executable runtime remains frozen Python3.12; no runtime package imported or changed",
+      "real_compute_attempts": 0
+    }
+  ],
+  "tests_runs_retained": 3,
+  "last_tests": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1_r1/targeted_tests_1789851884235227814/TEST_RESULT.json",
+    "sha256": "c3464a2f76b3c1e51483ae9b44f2ebe54e24b2785f6f253e8747a32a73832c24",
+    "size_bytes": 6356
+  },
+  "all_outputs_retained": true,
+  "old_task_resubmitted": false
+}

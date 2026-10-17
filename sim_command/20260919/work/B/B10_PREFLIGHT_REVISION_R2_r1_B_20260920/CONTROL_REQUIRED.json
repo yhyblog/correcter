@@ -1,0 +1,64 @@
+{
+  "notice": "Required future analysis-owned metadata, not an active CONTROL or release",
+  "CONTROL_fields": {
+    "campaign_id": "corrector-sim-20260919",
+    "stop_requested": false,
+    "formal_gpu_runs_enabled": true,
+    "active_compute_release_id": "P10_B_LVM_PREFLIGHT_V1",
+    "active_compute_release": "releases/P10_B_LVM_PREFLIGHT_V1.json",
+    "active_compute_task_ids": [
+      "B10_LVM_PREFLIGHT_V1"
+    ],
+    "allowed_task_ids_must_include": "B10_LVM_PREFLIGHT_V1",
+    "current_compute_limits_minimum": {
+      "simulator_attempts": 0,
+      "completed_rollouts": 0,
+      "vla_sampling_calls": 0,
+      "model_gpu_inference_calls": 2,
+      "optimizer_updates": 0,
+      "optimizer_attempts": 0,
+      "model_initializations": 1,
+      "training_forward_calls": 0,
+      "training_updates": 0,
+      "env_steps": 0,
+      "environment_reset_calls": 0,
+      "flow_forward_calls": 0,
+      "vla_backward_calls": 0,
+      "critic_forward_calls": 0,
+      "critic_backward_calls": 0
+    },
+    "per_task_compute_limits": {
+      "B10_LVM_PREFLIGHT_V1": {
+        "simulator_attempts": 0,
+        "completed_rollouts": 0,
+        "vla_sampling_calls": 0,
+        "model_gpu_inference_calls": 2,
+        "optimizer_updates": 0,
+        "optimizer_attempts": 0,
+        "model_initializations": 1,
+        "training_forward_calls": 0,
+        "training_updates": 0,
+        "env_steps": 0,
+        "environment_reset_calls": 0,
+        "flow_forward_calls": 0,
+        "vla_backward_calls": 0,
+        "critic_forward_calls": 0,
+        "critic_backward_calls": 0
+      }
+    },
+    "roles_B_hostname": "trial-303225685-trialrun-303225685-worker-0"
+  },
+  "TASK_BOARD_entry": {
+    "id": "B10_LVM_PREFLIGHT_V1",
+    "owner": "B",
+    "revision": 1,
+    "status": "ready",
+    "release": "releases/P10_B_LVM_PREFLIGHT_V1.json"
+  },
+  "release_fields_to_set_by_analysis": {
+    "status": "released",
+    "valid_from_utc": "timezone-aware ISO8601 start",
+    "expires_at_utc": "timezone-aware ISO8601 exclusive expiry"
+  },
+  "published_proposal_sha256": "7ed51f603bf29e36cbcac62f14cf119b82fa9844222ba5ccf99b01509cde1448"
+}

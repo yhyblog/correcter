@@ -1,0 +1,218 @@
+{
+  "schema": "native10_round2_policy_entry_independent_review_v1",
+  "status": "passed",
+  "created_utc": "2026-09-17T01:22:27.744539+00:00",
+  "reviewer": "analysis/critic_data_audit",
+  "blockers": [],
+  "decision": "Engineering entry chain and sealed synthetic evidence support conditional release of the one planned round2 development policy5 wave. This report itself grants no execution permission.",
+  "bindings": {
+    "handoff_md_sha256": "3945fbee2008be635f78efd468d17d2bbed9a64c6dcc545ccd72f6d86fb2c4fa",
+    "handoff_complete_sha256": "478a292ae194d2fef9c9a554ebcf79fdafdfc28c249c2ad4fc518984b4a4628f",
+    "handoff_summary_sha256": "f385ee5405f3f4ea9b83cefdea903da77b2300a83588c7882cd62afcad9fb906",
+    "ready_binding_supplement_sha256": "0baf6c1605ebdcd1d31b856037e469c99a0b905fa5f7b67bf078188068235e16",
+    "pending_complete_sha256": "f81ea00b85d3ccd936b68605db880eb9daef24f30afa6ede65d343db5ecaa7f7",
+    "ready_contract_sha256": "ee4480883eb7acd25da146286c5550f945ff50efe647717609546d3fa685232f",
+    "cpu_complete_sha256": "8dff6d4fba6b04c0a3673f6a42e5873aca659729c547388749801c4074ad0db1",
+    "cpu_result_sha256": "16e35a0c436aad534034663bcc55177776d2d50fa7e8016f22ce43686a5972d0",
+    "model_review_sha256": "51dc687f285e92c0b81032bad5694ebca7f649fba597e121943362871305a928",
+    "selected_critic": {
+      "path": "A",
+      "step": 4000,
+      "members": 4,
+      "directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected",
+      "training_model_seal": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/complete.json",
+        "sha256": "864c00cfa1cfcbcc8736a898ab22e5afa821f15afbe2b8dc687f7731f2eea83e"
+      },
+      "selected_seal": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/complete.json",
+        "sha256": "f40ff4f3356ee8f14d687348f9f9cc7addf1b1e93233b81645312973f7e02d6a"
+      },
+      "selected_reload_audit": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected_reload_audit.json",
+        "sha256": "b16b8183e6d6a69345375a266840afaffebf514873d62868f0327496bf795a92"
+      },
+      "member_checkpoint_sha256": [
+        "39bbbb9e2fa2cb14695c4ce31a9d91c806dfd690a888d2a9c44d9eb3bf0be129",
+        "dab0dd69ad2bd4a132aede8c37ae4734cac2c12d7533d1c96cc058e1b52bad1d",
+        "ce2a29d123d1c3eea25b90ba0999cacc793ad25346709a94d6b52cf92a8ffca2",
+        "178c052783502646085fdb78be115e54d6d7ffc1225dac9af24d1cc64cafebf9"
+      ],
+      "model_review": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/final_trained_model_review.json",
+        "sha256": "51dc687f285e92c0b81032bad5694ebca7f649fba597e121943362871305a928"
+      }
+    },
+    "episode_ids_canonical_sha256": "7febdc814dee2c203378865a8371de6698bc727e783ee537312dce734a37db89"
+  },
+  "actual_entry_chain": [
+    {
+      "entry": "policy5_round2_prepare_v1.release/inputs/freeze",
+      "finding": "Explicit round2_development_policy scope, A4000 seals/review, original ordered100 IDs and counts, stage2100/0. New inputs must bind the exact current READY SHA. Freeze validates CPU evidence and actual guard before writing an isolated runnable config/freeze."
+    },
+    {
+      "entry": "policy5_round2_runner_v1.verify_frozen/worker",
+      "finding": "Requires separately frozen new prepare/guard/runner, bound original source/resolution/bank seals and selected training assets. Actual worker uses create_policy_collector then collect_existing_slot; requires lifecycle and32 workers; missing or replaced slot fails without automatic retry."
+    },
+    {
+      "entry": "policy_deployment_round2_v1.create_policy_collector/GuardedPolicyCollector",
+      "finding": "Full input validation precedes engine creation; actual selector assets path, ordered weight paths, four SHA identities and frozen tensor versions checked and recorded. capture() explicitly rejects. No resolve_slot replacement path."
+    },
+    {
+      "entry": "MainCollector.prepare_bank via guarded overrides",
+      "finding": "Same frozen engine.make_bank generates a new policy5 bank with A4000. No copied old guided plans. Original bank supplies only anchor/noise/mask/provenance reference; new bank version and new protocol are mandatory."
+    },
+    {
+      "entry": "GuardedPolicyCollector._bank/prepare_bank and compare_bank_identity",
+      "finding": "Before the first new physical branch: exact raw50 a0 and original seed/initial noise, original mask, raw tail and masked coordinates, critic C(raw), original cut/source/suffix identities, raw-bank constraints and within-new-bank XYZ/gripper V/D/P matched RMS. Failure raises; guard report is sealed."
+    },
+    {
+      "entry": "_PolicyLedger and runner launch",
+      "finding": "Only95 candidate_restore plus1900 whitelisted branch_including_restore identities can reserve simulator attempts; capture/replacement/optimizer/unrelated identities rejected. Lifecycle covers the full eight-GPU wave with hold_idle=false."
+    },
+    {
+      "entry": "policy5_round2_audit_v1",
+      "finding": "Imports the original summarize and suffix identity audit; reports fixed five-arm internal comparisons with all100 sources; does not infer cross-stage pairing from same source identity."
+    }
+  ],
+  "scientific_contract": {
+    "critic": "single fixed A4000 four-member ensemble",
+    "original_sources": 100,
+    "per_task_distinct_scenes": 20,
+    "original_effective_cuts": 95,
+    "common_no_cut": {
+      "success": 4,
+      "failure": 1
+    },
+    "replicates": 4,
+    "arms": [
+      "continue_native10",
+      "alarm_replan10",
+      "velocity",
+      "direct",
+      "post"
+    ],
+    "per_arm_denominator": 400,
+    "source_collection_round": 1,
+    "new_candidate_generation_round": 2,
+    "unchanged": [
+      "G0/first eligible cut",
+      "native10 horizons",
+      "raw command mapping",
+      "flow parameters",
+      "matching formula and tolerance",
+      "source/repeat/decision-index random stream",
+      "one intervention and horizon300"
+    ],
+    "no_added_Q_gate_radius_alpha_or_model_selection": true,
+    "within_new_bank_matching_only": "No requirement for old and new critic correction radii to agree.",
+    "statistics": {
+      "comparisons_primary_correction": [
+        "velocity-alarm_replan10",
+        "direct-alarm_replan10",
+        "post-alarm_replan10"
+      ],
+      "comparison_interruption": "alarm_replan10-continue_native10",
+      "comparisons_system": [
+        "velocity-continue_native10",
+        "direct-continue_native10",
+        "post-continue_native10"
+      ],
+      "bootstrap_draws": 10000,
+      "bootstrap_seed": 2026091622,
+      "bootstrap_unit": "whole source within each task, preserve all arms and four suffixes",
+      "sampling": "NumPy default_rng.choice; freeze actual task and within-task source ordering in deployment config/report",
+      "ci": "percentile95",
+      "quantile_method": "linear",
+      "multiplicity_adjustment": "none; descriptive development intervals, not independent held validation"
+    },
+    "cross_stage_limitation": "Full new-bank and suffix equivalence is a future actual-artifact question; primary inference remains within this five-arm wave."
+  },
+  "cpu_evidence": {
+    "tests_passed": 41,
+    "test_log": "41 passed in 16.09s",
+    "process_wall_seconds": 18.144475193694234,
+    "before_after_current_code_hashes_equal": true,
+    "code_file_count": 11,
+    "old_frozen34_unchanged_reported": true,
+    "old_guard_core_AST_identity": {
+      "_raw": true,
+      "_noise": true,
+      "compare_bank_identity": true,
+      "verify_bank_anchor": true,
+      "_matched_rms": true,
+      "_PolicyLedger": true
+    },
+    "ledger_unchanged_in_preparation": true,
+    "new_tests_run_by_this_reviewer": 0,
+    "synthetic_does_not_establish_actual_bank_or_trajectory_success": true
+  },
+  "resource_contract": {
+    "scope": "round2_development_policy",
+    "stage": "round2_development_policy",
+    "expected_simulator_attempts": 1995,
+    "stage_simulator_hard_limit": 2100,
+    "optimizer_updates": 0,
+    "capture_attempts": 0,
+    "replacement_allowed": false,
+    "sixth_arm_allowed": false
+  },
+  "conditions_before_actual_execution": [
+    "READY must explicitly release and bind round2_development_policy with the prepared exact model/source/count/resource contract and this review.",
+    "Populate CPU provenance from the sealed41-test evidence, and pass that evidence directory into the actual new prepare freeze CPU gate. The pending guard_cpu_evidence=null is metadata only.",
+    "Generate fresh inputs under that exact READY SHA, then isolated config/freeze including actual new entry modules; verify before the one lifecycle launch.",
+    "Runtime loaded model identity and every new candidate bank must pass the existing hard guards before branches; actual outcomes and suffix audit remain pending."
+  ],
+  "authorization_interface_note": "release does not hard-code a special policy-entry-review field. A top-level round2_policy_entry_review path plus round2_policy_entry_review_sha256 is validated and copied through its generic reference binding. CPU is enforced by freeze(cpu_evidence=[sealed directory]); guard_cpu_evidence is provenance, not the sole gate.",
+  "future_stages_locked": [
+    "calibration",
+    "heldout",
+    "additional_training",
+    "additional_policy_waves"
+  ],
+  "verified_small_metadata_files": {
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/round2_policy_cpu_20260917_v1/code_before.json": "73b7fa2745df18097d3958ef2d63c9f3c11d4db3debda1c50d276e35d2137d10",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/round2_policy_cpu_20260917_v1/gpu_holder_after.json": "26716a722f89144f7bf99e62d726d86054858d1f8177d47839cb8f2a8bec00a6",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/round2_policy_cpu_20260917_v1/gpu_holder_before.json": "84a84110548bc46da5bc5e9b3bdec0b51f6b3d46fc0dbea31a99150036a225e8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/round2_policy_cpu_20260917_v1/old_dependencies_before.json": "1384b3818900a78ca9d5286131919d5499355ce60510c8fe444f9d6fb81297cc",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/round2_policy_cpu_20260917_v1/pytest.log": "066a433a6606538e9ecba07d913393708569161f796a71aab0177acf7b1cbe5c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/round2_policy_cpu_20260917_v1/result.json": "16e35a0c436aad534034663bcc55177776d2d50fa7e8016f22ce43686a5972d0",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_preparation_handoffs/round2_policy_v1/gpu_holder_snapshot.json": "3899931afe99da0fa14a39b6cbaaafdb7a9e3767ebf096ff116158f4e9b8c963",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_preparation_handoffs/round2_policy_v1/ready_binding_supplement.json": "0baf6c1605ebdcd1d31b856037e469c99a0b905fa5f7b67bf078188068235e16",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_preparation_handoffs/round2_policy_v1/report.md": "3945fbee2008be635f78efd468d17d2bbed9a64c6dcc545ccd72f6d86fb2c4fa",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_preparation_handoffs/round2_policy_v1/summary.json": "f385ee5405f3f4ea9b83cefdea903da77b2300a83588c7882cd62afcad9fb906",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_preparations/round2_policy_pending_v1/binding.json": "ea37e5ad2a6958b52a7cdf76c85254cfae79002f5e571c033f0b7a19dead403c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_preparations/round2_policy_pending_v1/provenance.json": "194fd10a6a2aa2cc79d4f1778f9a1910806015e12661ee8c2608cc1d4692a033",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_preparations/round2_policy_pending_v1/ready_contract.json": "ee4480883eb7acd25da146286c5550f945ff50efe647717609546d3fa685232f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_preparations/round2_policy_pending_v1/result.json": "4a43f6fd93e60ea54a36ca3519fc74762926ce014af70f3c96bbf28adca397ab",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_preparations/round2_policy_pending_v1/sources.json": "8e86147a7dc31c4809d57f3639dc4bf7565b581817f965ed77b256223228b98c"
+  },
+  "tested_code_current_sha256": {
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/policy5_round2_prepare_v1.py": "07ea004a10b33c7c9478b6e6b4d27d76e1187295f59d2c43d335f863805c4868",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/policy5_round2_runner_v1.py": "042b9e93d6c746e9e77227b324b09306befe5db753950d35941a7c5829381af4",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/run_policy5_round2_gpu_v1.sh": "3398830e8060be5f8dffa94bd0e8d36a83ac754ecabd8c862efb4d8c2f7e09b4",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/policy_deployment_round2_v1.py": "e30f3756a6e5ed9afd50ccad396c3f29b7353ca9859daf77716719cd36df8d6f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/policy5_round2_audit_v1.py": "05724e8dff197dc807f2990c715a3bcd0c2c9dff08abb689abe6f97f7138a382",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/policy5_audit_v1.py": "aba60838635f04570148d7e061ff0c746b415f0e69a7303aebaf0e2821161571",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/policy5_round2_pending_v1.py": "0dbfad39f32b10ece9706e9d0beb443771039b2c97dd92d70a16d8fd6908c7d2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/test_policy5_round2_entrypoints_v1.py": "6f6d2b597e5d5a3d89b31a0bac4f3a2f73472816c5ad52ed9e5da34f170d8ad9",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/test_policy_deployment_round2_v1.py": "449e8f824d949e7b9026fc8245a8922f080eadad03f3b3324168814cbc4ad698",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/test_policy5_round2_pending_v1.py": "687577c8490a21521ed11a570c2bc87767dc9dfe258c6ffcd1ae8667649d2590",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/execution_control/round2_policy_preparation_v1/runner.py": "d466f559ced993a3cd32e943a4cd07b72f7e3efa35bc7e4ee53570a0d3eb73c1"
+  },
+  "operations_performed": {
+    "model_calls": 0,
+    "model_or_weight_loading": 0,
+    "PCA_fits": 0,
+    "optimizer_updates": 0,
+    "simulator_calls": 0,
+    "tests_rerun": 0,
+    "freeze_calls": 0,
+    "READY_edits": 0
+  },
+  "limits": [
+    "Bounded static call-chain inspection and reuse of sealed synthetic41-test evidence; no runnable configuration or actual bank was created by this review.",
+    "Original training/model and input audits reused; no all-source trajectory replay or all-frozen-file rehash.",
+    "This review does not claim that actual deployment identities, matched-bank tests or success outcomes have already passed."
+  ]
+}

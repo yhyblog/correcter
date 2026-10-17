@@ -1,0 +1,61 @@
+{
+  "message": "A10_PREFLIGHT_NATIVE_V1专项回执重投：收到同一P10 release的执行指令，核对该release SHA与既有claim/结案记录一致，已真实执行一次，未重跑。\nACK：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PREFLIGHT_NATIVE_V1_ACK.json\nREPORT：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PREFLIGHT_NATIVE_V1_REPORT.md\nRESULT：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PREFLIGHT_NATIVE_V1_RESULT.json SHA=465f97bcb72b70ff3265ffc227cc4bf5583910b79cf80c987377f5e0fdd1178b\nLAUNCH_RESULT：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_launcher_runs/A10_PREFLIGHT_NATIVE_V1_r1_A_v4_wave01/LAUNCH_RESULT.json\n1. 原ACK16:56:32 UTC，v4真实sh于16:58执行，结束后17:09交RESULT、17:10 queue；17:11 release消耗关闭，17:15技术失败证据验收。当前CONTROL9为prepare、无active compute；TASK_BOARD15记录failed/attempt_consumed=true。\n2. SFT加载成功；实际1诊断attempt、2环境、52native reset/104reset_model/5200初始化do_sim/26000初始化物理子步，均在预算内。首帧EGL失败，完整观测0；采样/flow/策略步/完整rollout/反向/monitor/训练0，重试0。\n3. LAUNCH_RESULT exit1，初始化与公共账本无缺末事件；GPU计算秒数未知，未用墙钟充当GPU秒。原8holder恢复证据已验收；本次只读guard状态再确认8卡holder、管理进程均存活。\n4. 本次未运行独立CPU checker、未额外hash大权重、未改ACK/REPORT/RESULT、未启动任何GPU/reset/仿真或删除。任务书明确已存在claim不得重跑；只追加queue重投证据。\n5. 后续A10_EGL_CPU_REPAIR_V1已按新CPU任务完成并另queue，有限graphics提案尚未执行；不复用旧P10剩余额度。",
+  "verification": {
+    "release_sha256": "fdceafb353657b4c8942ff1b1dcbccdeca75f47dcfbc3783eda3812833d11d4a",
+    "result_sha256": "465f97bcb72b70ff3265ffc227cc4bf5583910b79cf80c987377f5e0fdd1178b",
+    "result_artifact_SHAs_verified": 8,
+    "claim_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_diagnostic_runs/38cde7a1357b92c1020f307cad6b912ea266bd15bc43fad077836ceff7a5fbe2/CLAIM.json",
+    "claim_sha256": "6625b1da7a7fdc5238e773c9c506016213e8e96e4bda8cb9d648e90f6baff1bc",
+    "original_result_unchanged": true
+  },
+  "current_occupancy": {
+    "observed_at_utc": "2026-09-19T17:50:15.564879+00:00",
+    "status_source": "/tmp/gpu_occupancy_guard/status.json",
+    "status_updated": 1789840212.9070306,
+    "gpu_count": 8,
+    "gpus": {
+      "0": {
+        "state": "holder",
+        "manager_pid": 193237,
+        "manager_alive": true
+      },
+      "1": {
+        "state": "holder",
+        "manager_pid": 193238,
+        "manager_alive": true
+      },
+      "2": {
+        "state": "holder",
+        "manager_pid": 193239,
+        "manager_alive": true
+      },
+      "3": {
+        "state": "holder",
+        "manager_pid": 193240,
+        "manager_alive": true
+      },
+      "4": {
+        "state": "holder",
+        "manager_pid": 193241,
+        "manager_alive": true
+      },
+      "5": {
+        "state": "holder",
+        "manager_pid": 193242,
+        "manager_alive": true
+      },
+      "6": {
+        "state": "holder",
+        "manager_pid": 193243,
+        "manager_alive": true
+      },
+      "7": {
+        "state": "holder",
+        "manager_pid": 193244,
+        "manager_alive": true
+      }
+    },
+    "NVML_queries": 0
+  },
+  "additional_compute_attempts": 0
+}

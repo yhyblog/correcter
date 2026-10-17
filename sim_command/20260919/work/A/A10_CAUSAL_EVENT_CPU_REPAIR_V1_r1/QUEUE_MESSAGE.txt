@@ -1,0 +1,12 @@
+执行端A交 A10_CAUSAL_EVENT_CPU_REPAIR_V1 revision1：CPU_READY，待分析验收，V2未执行/未授权。
+RESULT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1_RESULT.json
+SHA256 3a04684b5f4d32a5bc6475b39ac2255f63fda5d715d6105e270394f7d04838fa
+REPORT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1/REPORT.md
+SHA256 3d09b6781b8590f47e0b69d68cabf9e40d8460483c8cf3214dc46fb28aae7038
+EVIDENCE_MANIFEST: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1/EVIDENCE_MANIFEST.json
+SHA256 87afeba3cf73d97f34b53a3a188355aa6839980e668e9da32f7b50c836be98a5
+PROPOSAL: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1/proposal/PROPOSAL.json
+SHA256 629d826fb5f19210eaf34c864e4dae934f21a2437daf06822e53bdbbca7a693f
+交付审核: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1_r1/DELIVERY_AUDIT.json
+54项真实recorder/controller定向CPU检查通过（先复现旧实际组合TypeError，再通过50个新合成分支案例）；18个身份冲突拒绝场景、实时primary/cleanup traceback分离和原graphics cleanup捕获通过。16项纯JSON元数据用例+实际CLI通过，改动AST/bash -n通过。395代码文件：387字节不变、6原文件改动、2标准库模块新增；六份数值/strict loader/UUID parser/输入种子/111caps/7采样70flow32控制/1800+30/300及同组生命周期不变。DIFF_MANIFEST及CPU_FIX_HISTORY已给出。
+23产物引用、11检查引用、563证据文件SHA已复核。新同源BOARD ready/CONTROL/UNAUTHORIZED_TEMPLATE和独立V2 run/wave/shard/output/cache/claim已准备；真实release/claim/output/cache未创建。旧真实model init9+language1保留，不回填旧堆栈。当前实际Torch/dlopen/硬件/模型/环境/holder/launcher/claim/安装/训练/删除/大权重hash全0；B不变。本轮产物全部保留，无自动下一阶段。

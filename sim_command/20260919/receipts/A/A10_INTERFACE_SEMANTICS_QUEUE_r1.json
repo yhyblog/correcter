@@ -1,0 +1,13 @@
+{
+  "status": "delivered",
+  "started_at_utc": "2026-09-19T16:22:49.636637+00:00",
+  "finished_at_utc": "2026-09-19T16:22:49.817898+00:00",
+  "target_session": "01a0b91f-355f-7cd1-ae36-412500534ffb",
+  "returncode": 0,
+  "stdout": "Queued message 01a0ba7a-429c-7452-b7bf-f06fd1f81b5f for thread 01a0b91f-355f-7cd1-ae36-412500534ffb.\n",
+  "stderr": "",
+  "message": "A10 interface_v1 集成补充已完成，原v1/代码v3/旧RESULT均未改。\n回执：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_INTERFACE_SEMANTICS_r1.json\n短报告：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_INTERFACE_SEMANTICS_r1.md\n1. 10项定向CPU检查通过，READY及三文件SHA与PUBLIC_INTERFACE_V1登记一致。B已有v1消费兼容反馈，无需v2。\n2. resource_units固定操作向量：entered增量一次，returned/failed仅重述；成功/部分失败/缺末事件均保留1采样+1flow进入费用。缺末事件时间/结果未知，不伪造零值，不重试。\n3. event_id在合并账本中须唯一，实际UUID4；reconcile以event_id为键，跨run同ID/重复entered/终态身份漂移均拒绝，不做隐式复合键分桶；引用集合去重。\n4. E3空cut/entry摘要与3次原生采样事件同时合法。完整事件决定频率，单值摘要不限制次数。\n5. CONTROL6新增A10_PREFLIGHT_REVISION_R2已领取，ACK已写，正定向修正MetaWorld初始化预算与timeout作用域；GPU/仿真/reset/训练仍0，删除0。",
+  "result_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_INTERFACE_SEMANTICS_r1.json",
+  "result_sha256": "198614b544563b07f6e1371244386ec941f87911f3081fab3b1e6aacbd1ef0d2",
+  "analysis_acceptance": "not_implied"
+}

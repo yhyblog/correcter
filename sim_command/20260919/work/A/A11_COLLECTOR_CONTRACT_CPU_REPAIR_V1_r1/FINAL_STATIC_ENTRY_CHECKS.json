@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1/code/publication_check.py",
+        "--control",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1_r1/metadata_delta_v2/CONTROL.json",
+        "--board",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1_r1/metadata_delta_v2/BOARD.json",
+        "--release",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1_r1/metadata_delta_v2/RELEASE.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"board_status\": \"ready\", \"grants_authorization\": false, \"release_status\": \"released\", \"runtime_storage_admission_present\": true, \"status\": \"PASS\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.05863964790478349
+    },
+    {
+      "command": [
+        "bash",
+        "-n",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1/commands/run_proposed_first_parent.sh"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 0.0031635332852602005
+    }
+  ]
+}

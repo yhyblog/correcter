@@ -1,0 +1,3686 @@
+{
+  "schema": "d24_full_main_fixed_tasks_paired_v1",
+  "created_at_utc": "2026-09-21T18:52:08.462453+00:00",
+  "status": "COMPLETE_FINAL_16CELL_ANALYSIS",
+  "sources": {
+    "main_episodes_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_MAIN_ONCE_V1/FINAL_EPISODES.csv",
+    "main_cells_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_MAIN_ONCE_V1/FINAL_CELLS.csv",
+    "N_episode_pattern": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/A/runs/N_H*_*/RESULT.json",
+    "N_RESULT_files_read": 250
+  },
+  "scope": {
+    "cells": 16,
+    "episode_rows": 8000,
+    "unique_task_source_pairs": 500,
+    "fixed_tasks": 50,
+    "sources_per_task": 10,
+    "only_terminal_results": true,
+    "no_implementation_hash_hardware_or_experiment": true
+  },
+  "pairing": {
+    "keys": [
+      "task",
+      "source_id"
+    ],
+    "saved_env_seed_matches": true,
+    "saved_policy_seed_matches": true,
+    "issues": []
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20260921,
+    "generator": "numpy.default_rng",
+    "method": "Fixed50 equal-weight tasks; independently resample10 source IDs with replacement within each task; reuse same source draws for all16cells and26paired comparisons. Task/source ordering is identical to prior H10/H30 analyses.",
+    "CI": "Pointwise percentile2.5/97.5%; not multiplicity-adjusted. No additional hypothesis tests.",
+    "limits": "Conditional on fixed50tasks and empirical10sources/task; not task-population or training-seed uncertainty. Degenerate all0/all1 task strata contribute zero empirical within-task variance."
+  },
+  "cells": {
+    "N_H10": {
+      "method": "N",
+      "H": 10,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 308,
+      "success_rate_pct": 61.6,
+      "success_rate_ci95_pct": [
+        58.8,
+        64.6
+      ],
+      "technical_failures": 0,
+      "saved_field_stats": {
+        "policy_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 7565,
+            "mean": 15.13
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 308,
+            "recorded_episodes": 308,
+            "sum": 1805,
+            "mean": 5.86039
+          }
+        },
+        "sampling_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 308,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          }
+        },
+        "flow_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 75650,
+            "mean": 151.3
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 308,
+            "recorded_episodes": 308,
+            "sum": 18050,
+            "mean": 58.603896
+          }
+        },
+        "steps": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 74302,
+            "mean": 148.604
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 308,
+            "recorded_episodes": 308,
+            "sum": 16702,
+            "mean": 54.227273
+          }
+        },
+        "interventions": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 308,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          }
+        },
+        "elapsed_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2138.774264,
+            "mean": 4.277549
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 308,
+            "recorded_episodes": 308,
+            "sum": 511.705152,
+            "mean": 1.66138
+          }
+        },
+        "elapsed_control_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 308,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          }
+        },
+        "inference_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 1620.026089,
+            "mean": 3.240052
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 308,
+            "recorded_episodes": 308,
+            "sum": 389.88984,
+            "mean": 1.265876
+          }
+        },
+        "environment_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 514.822144,
+            "mean": 1.029644
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 308,
+            "recorded_episodes": 308,
+            "sum": 119.620766,
+            "mean": 0.388379
+          }
+        },
+        "reset_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 308,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          }
+        }
+      },
+      "time_scope_labels": null,
+      "intervention_distribution_0_1_2_3plus": null
+    },
+    "R_H10": {
+      "method": "R",
+      "H": 10,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 336,
+      "success_rate_pct": 67.2,
+      "success_rate_ci95_pct": [
+        64.2,
+        70.2
+      ],
+      "technical_failures": 0,
+      "saved_field_stats": {
+        "policy_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 7078,
+            "mean": 14.156
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 336,
+            "recorded_episodes": 336,
+            "sum": 2019,
+            "mean": 6.008929
+          }
+        },
+        "sampling_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 7078,
+            "mean": 14.156
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 336,
+            "recorded_episodes": 336,
+            "sum": 2019,
+            "mean": 6.008929
+          }
+        },
+        "flow_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 70780,
+            "mean": 141.56
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 336,
+            "recorded_episodes": 336,
+            "sum": 20190,
+            "mean": 60.089286
+          }
+        },
+        "steps": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 66776,
+            "mean": 133.552
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 336,
+            "recorded_episodes": 336,
+            "sum": 17576,
+            "mean": 52.309524
+          }
+        },
+        "interventions": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 391,
+            "mean": 0.782
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 336,
+            "recorded_episodes": 336,
+            "sum": 252,
+            "mean": 0.75
+          }
+        },
+        "elapsed_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 3432.813796,
+            "mean": 6.865628
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 336,
+            "recorded_episodes": 336,
+            "sum": 929.733983,
+            "mean": 2.767065
+          }
+        },
+        "elapsed_control_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 3409.697156,
+            "mean": 6.819394
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 336,
+            "recorded_episodes": 336,
+            "sum": 914.978664,
+            "mean": 2.723151
+          }
+        },
+        "inference_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 1639.453135,
+            "mean": 3.278906
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 336,
+            "recorded_episodes": 336,
+            "sum": 470.058298,
+            "mean": 1.398983
+          }
+        },
+        "environment_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 455.06451,
+            "mean": 0.910129
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 336,
+            "recorded_episodes": 336,
+            "sum": 116.40766,
+            "mean": 0.346451
+          }
+        },
+        "reset_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 18.647627,
+            "mean": 0.037295
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 336,
+            "recorded_episodes": 336,
+            "sum": 11.785107,
+            "mean": 0.035075
+          }
+        }
+      },
+      "time_scope_labels": [
+        "generation and correction only; context/DG0 included in episode wall time"
+      ],
+      "intervention_distribution_0_1_2_3plus": {
+        "0": 109,
+        "1": 391,
+        "2": 0,
+        "3+": 0
+      }
+    },
+    "Post_H10": {
+      "method": "Post",
+      "H": 10,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 345,
+      "success_rate_pct": 69.0,
+      "success_rate_ci95_pct": [
+        66.0,
+        72.0
+      ],
+      "technical_failures": 0,
+      "saved_field_stats": {
+        "policy_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 6866,
+            "mean": 13.732
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 345,
+            "recorded_episodes": 345,
+            "sum": 2086,
+            "mean": 6.046377
+          }
+        },
+        "sampling_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 6866,
+            "mean": 13.732
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 345,
+            "recorded_episodes": 345,
+            "sum": 2086,
+            "mean": 6.046377
+          }
+        },
+        "flow_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 68660,
+            "mean": 137.32
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 345,
+            "recorded_episodes": 345,
+            "sum": 20860,
+            "mean": 60.463768
+          }
+        },
+        "steps": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 64658,
+            "mean": 129.316
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 345,
+            "recorded_episodes": 345,
+            "sum": 18158,
+            "mean": 52.631884
+          }
+        },
+        "interventions": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 391,
+            "mean": 0.782
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 345,
+            "recorded_episodes": 345,
+            "sum": 261,
+            "mean": 0.756522
+          }
+        },
+        "elapsed_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 3312.172541,
+            "mean": 6.624345
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 345,
+            "recorded_episodes": 345,
+            "sum": 952.662644,
+            "mean": 2.761341
+          }
+        },
+        "elapsed_control_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 3297.192937,
+            "mean": 6.594386
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 345,
+            "recorded_episodes": 345,
+            "sum": 942.339615,
+            "mean": 2.731419
+          }
+        },
+        "inference_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 1588.365219,
+            "mean": 3.17673
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 345,
+            "recorded_episodes": 345,
+            "sum": 485.206503,
+            "mean": 1.406396
+          }
+        },
+        "environment_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 439.447656,
+            "mean": 0.878895
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 345,
+            "recorded_episodes": 345,
+            "sum": 120.310088,
+            "mean": 0.348725
+          }
+        },
+        "reset_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 10.594943,
+            "mean": 0.02119
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 345,
+            "recorded_episodes": 345,
+            "sum": 7.332679,
+            "mean": 0.021254
+          }
+        }
+      },
+      "time_scope_labels": [
+        "generation and correction only; context/DG0 included in episode wall time"
+      ],
+      "intervention_distribution_0_1_2_3plus": {
+        "0": 109,
+        "1": 391,
+        "2": 0,
+        "3+": 0
+      }
+    },
+    "Velocity_H10": {
+      "method": "Velocity",
+      "H": 10,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 340,
+      "success_rate_pct": 68.0,
+      "success_rate_ci95_pct": [
+        65.0,
+        71.2
+      ],
+      "technical_failures": 0,
+      "saved_field_stats": {
+        "policy_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 7397,
+            "mean": 14.794
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 340,
+            "recorded_episodes": 340,
+            "sum": 2327,
+            "mean": 6.844118
+          }
+        },
+        "sampling_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 7397,
+            "mean": 14.794
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 340,
+            "recorded_episodes": 340,
+            "sum": 2327,
+            "mean": 6.844118
+          }
+        },
+        "flow_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 73970,
+            "mean": 147.94
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 340,
+            "recorded_episodes": 340,
+            "sum": 23270,
+            "mean": 68.441176
+          }
+        },
+        "steps": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 66024,
+            "mean": 132.048
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 340,
+            "recorded_episodes": 340,
+            "sum": 18024,
+            "mean": 53.011765
+          }
+        },
+        "interventions": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 391,
+            "mean": 0.782
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 340,
+            "recorded_episodes": 340,
+            "sum": 256,
+            "mean": 0.752941
+          }
+        },
+        "elapsed_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 3475.995827,
+            "mean": 6.951992
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 340,
+            "recorded_episodes": 340,
+            "sum": 1006.051538,
+            "mean": 2.958975
+          }
+        },
+        "elapsed_control_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 3461.12542,
+            "mean": 6.922251
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 340,
+            "recorded_episodes": 340,
+            "sum": 995.933839,
+            "mean": 2.929217
+          }
+        },
+        "inference_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 1715.097823,
+            "mean": 3.430196
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 340,
+            "recorded_episodes": 340,
+            "sum": 542.609455,
+            "mean": 1.59591
+          }
+        },
+        "environment_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 449.589394,
+            "mean": 0.899179
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 340,
+            "recorded_episodes": 340,
+            "sum": 118.912411,
+            "mean": 0.349742
+          }
+        },
+        "reset_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 10.470255,
+            "mean": 0.020941
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 340,
+            "recorded_episodes": 340,
+            "sum": 7.189253,
+            "mean": 0.021145
+          }
+        }
+      },
+      "time_scope_labels": [
+        "generation and correction only; context/DG0 included in episode wall time"
+      ],
+      "intervention_distribution_0_1_2_3plus": {
+        "0": 109,
+        "1": 391,
+        "2": 0,
+        "3+": 0
+      }
+    },
+    "N_H20": {
+      "method": "N",
+      "H": 20,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 240,
+      "success_rate_pct": 48.0,
+      "success_rate_ci95_pct": [
+        45.4,
+        50.6
+      ],
+      "technical_failures": 0,
+      "saved_field_stats": {
+        "policy_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 4686,
+            "mean": 9.372
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 240,
+            "recorded_episodes": 240,
+            "sum": 786,
+            "mean": 3.275
+          }
+        },
+        "sampling_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 240,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          }
+        },
+        "flow_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 46860,
+            "mean": 93.72
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 240,
+            "recorded_episodes": 240,
+            "sum": 7860,
+            "mean": 32.75
+          }
+        },
+        "steps": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 91361,
+            "mean": 182.722
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 240,
+            "recorded_episodes": 240,
+            "sum": 13361,
+            "mean": 55.670833
+          }
+        },
+        "interventions": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 240,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          }
+        },
+        "elapsed_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 1638.865141,
+            "mean": 3.27773
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 240,
+            "recorded_episodes": 240,
+            "sum": 263.001989,
+            "mean": 1.095842
+          }
+        },
+        "elapsed_control_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 240,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          }
+        },
+        "inference_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 1013.490275,
+            "mean": 2.026981
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 240,
+            "recorded_episodes": 240,
+            "sum": 170.785712,
+            "mean": 0.711607
+          }
+        },
+        "environment_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 621.499718,
+            "mean": 1.242999
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 240,
+            "recorded_episodes": 240,
+            "sum": 90.580658,
+            "mean": 0.377419
+          }
+        },
+        "reset_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 240,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          }
+        }
+      },
+      "time_scope_labels": null,
+      "intervention_distribution_0_1_2_3plus": null
+    },
+    "Post_H20": {
+      "method": "Post",
+      "H": 20,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 322,
+      "success_rate_pct": 64.4,
+      "success_rate_ci95_pct": [
+        61.4,
+        67.2
+      ],
+      "technical_failures": 0,
+      "saved_field_stats": {
+        "policy_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 4265,
+            "mean": 8.53
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 322,
+            "recorded_episodes": 322,
+            "sum": 1324,
+            "mean": 4.111801
+          }
+        },
+        "sampling_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 4265,
+            "mean": 8.53
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 322,
+            "recorded_episodes": 322,
+            "sum": 1324,
+            "mean": 4.111801
+          }
+        },
+        "flow_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 42650,
+            "mean": 85.3
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 322,
+            "recorded_episodes": 322,
+            "sum": 13240,
+            "mean": 41.118012
+          }
+        },
+        "steps": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 70582,
+            "mean": 141.164
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 322,
+            "recorded_episodes": 322,
+            "sum": 17182,
+            "mean": 53.360248
+          }
+        },
+        "interventions": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 407,
+            "mean": 0.814
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 322,
+            "recorded_episodes": 322,
+            "sum": 260,
+            "mean": 0.807453
+          }
+        },
+        "elapsed_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2892.656451,
+            "mean": 5.785313
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 322,
+            "recorded_episodes": 322,
+            "sum": 754.475744,
+            "mean": 2.343092
+          }
+        },
+        "elapsed_control_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2877.824603,
+            "mean": 5.755649
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 322,
+            "recorded_episodes": 322,
+            "sum": 745.084173,
+            "mean": 2.313926
+          }
+        },
+        "inference_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 1002.902818,
+            "mean": 2.005806
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 322,
+            "recorded_episodes": 322,
+            "sum": 312.940196,
+            "mean": 0.971864
+          }
+        },
+        "environment_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 482.657561,
+            "mean": 0.965315
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 322,
+            "recorded_episodes": 322,
+            "sum": 114.485911,
+            "mean": 0.355546
+          }
+        },
+        "reset_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 10.358062,
+            "mean": 0.020716
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 322,
+            "recorded_episodes": 322,
+            "sum": 6.530745,
+            "mean": 0.020282
+          }
+        }
+      },
+      "time_scope_labels": [
+        "generation and correction only; context/DG0 included in episode wall time"
+      ],
+      "intervention_distribution_0_1_2_3plus": {
+        "0": 93,
+        "1": 407,
+        "2": 0,
+        "3+": 0
+      }
+    },
+    "Velocity_H20": {
+      "method": "Velocity",
+      "H": 20,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 316,
+      "success_rate_pct": 63.2,
+      "success_rate_ci95_pct": [
+        60.2,
+        66.4
+      ],
+      "technical_failures": 0,
+      "saved_field_stats": {
+        "policy_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 4742,
+            "mean": 9.484
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 316,
+            "recorded_episodes": 316,
+            "sum": 1547,
+            "mean": 4.89557
+          }
+        },
+        "sampling_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 4742,
+            "mean": 9.484
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 316,
+            "recorded_episodes": 316,
+            "sum": 1547,
+            "mean": 4.89557
+          }
+        },
+        "flow_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 47420,
+            "mean": 94.84
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 316,
+            "recorded_episodes": 316,
+            "sum": 15470,
+            "mean": 48.955696
+          }
+        },
+        "steps": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 71903,
+            "mean": 143.806
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 316,
+            "recorded_episodes": 316,
+            "sum": 16703,
+            "mean": 52.857595
+          }
+        },
+        "interventions": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 407,
+            "mean": 0.814
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 316,
+            "recorded_episodes": 316,
+            "sum": 254,
+            "mean": 0.803797
+          }
+        },
+        "elapsed_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 3044.524019,
+            "mean": 6.089048
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 316,
+            "recorded_episodes": 316,
+            "sum": 796.09388,
+            "mean": 2.519284
+          }
+        },
+        "elapsed_control_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 3029.460582,
+            "mean": 6.058921
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 316,
+            "recorded_episodes": 316,
+            "sum": 786.749438,
+            "mean": 2.489713
+          }
+        },
+        "inference_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 1118.214626,
+            "mean": 2.236429
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 316,
+            "recorded_episodes": 316,
+            "sum": 367.862258,
+            "mean": 1.164121
+          }
+        },
+        "environment_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 492.157025,
+            "mean": 0.984314
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 316,
+            "recorded_episodes": 316,
+            "sum": 110.680718,
+            "mean": 0.350255
+          }
+        },
+        "reset_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 10.578048,
+            "mean": 0.021156
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 316,
+            "recorded_episodes": 316,
+            "sum": 6.581634,
+            "mean": 0.020828
+          }
+        }
+      },
+      "time_scope_labels": [
+        "generation and correction only; context/DG0 included in episode wall time"
+      ],
+      "intervention_distribution_0_1_2_3plus": {
+        "0": 93,
+        "1": 407,
+        "2": 0,
+        "3+": 0
+      }
+    },
+    "N_H30": {
+      "method": "N",
+      "H": 30,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 205,
+      "success_rate_pct": 41.0,
+      "success_rate_ci95_pct": [
+        38.2,
+        43.6
+      ],
+      "technical_failures": 0,
+      "saved_field_stats": {
+        "policy_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 3482,
+            "mean": 6.964
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 205,
+            "recorded_episodes": 205,
+            "sum": 532,
+            "mean": 2.595122
+          }
+        },
+        "sampling_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 205,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          }
+        },
+        "flow_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 34820,
+            "mean": 69.64
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 205,
+            "recorded_episodes": 205,
+            "sum": 5320,
+            "mean": 25.95122
+          }
+        },
+        "steps": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 101377,
+            "mean": 202.754
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 205,
+            "recorded_episodes": 205,
+            "sum": 12877,
+            "mean": 62.814634
+          }
+        },
+        "interventions": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 205,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          }
+        },
+        "elapsed_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 1425.203917,
+            "mean": 2.850408
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 205,
+            "recorded_episodes": 205,
+            "sum": 202.026078,
+            "mean": 0.985493
+          }
+        },
+        "elapsed_control_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 205,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          }
+        },
+        "inference_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 744.757416,
+            "mean": 1.489515
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 205,
+            "recorded_episodes": 205,
+            "sum": 113.702336,
+            "mean": 0.554646
+          }
+        },
+        "environment_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 676.411917,
+            "mean": 1.352824
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 205,
+            "recorded_episodes": 205,
+            "sum": 86.86312,
+            "mean": 0.423723
+          }
+        },
+        "reset_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 205,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          }
+        }
+      },
+      "time_scope_labels": null,
+      "intervention_distribution_0_1_2_3plus": null
+    },
+    "Post_H30": {
+      "method": "Post",
+      "H": 30,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 316,
+      "success_rate_pct": 63.2,
+      "success_rate_ci95_pct": [
+        60.2,
+        66.0
+      ],
+      "technical_failures": 0,
+      "saved_field_stats": {
+        "policy_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 3284,
+            "mean": 6.568
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 316,
+            "recorded_episodes": 316,
+            "sum": 1137,
+            "mean": 3.598101
+          }
+        },
+        "sampling_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 3284,
+            "mean": 6.568
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 316,
+            "recorded_episodes": 316,
+            "sum": 1137,
+            "mean": 3.598101
+          }
+        },
+        "flow_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 32840,
+            "mean": 65.68
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 316,
+            "recorded_episodes": 316,
+            "sum": 11370,
+            "mean": 35.981013
+          }
+        },
+        "steps": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 73403,
+            "mean": 146.806
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 316,
+            "recorded_episodes": 316,
+            "sum": 18203,
+            "mean": 57.60443
+          }
+        },
+        "interventions": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 415,
+            "mean": 0.83
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 316,
+            "recorded_episodes": 316,
+            "sum": 255,
+            "mean": 0.806962
+          }
+        },
+        "elapsed_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2724.493253,
+            "mean": 5.448987
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 316,
+            "recorded_episodes": 316,
+            "sum": 738.058526,
+            "mean": 2.335628
+          }
+        },
+        "elapsed_control_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2709.415338,
+            "mean": 5.418831
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 316,
+            "recorded_episodes": 316,
+            "sum": 728.619135,
+            "mean": 2.305757
+          }
+        },
+        "inference_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 766.305569,
+            "mean": 1.532611
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 316,
+            "recorded_episodes": 316,
+            "sum": 268.225171,
+            "mean": 0.848814
+          }
+        },
+        "environment_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 499.279419,
+            "mean": 0.998559
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 316,
+            "recorded_episodes": 316,
+            "sum": 121.056472,
+            "mean": 0.38309
+          }
+        },
+        "reset_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 10.699906,
+            "mean": 0.0214
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 316,
+            "recorded_episodes": 316,
+            "sum": 6.685877,
+            "mean": 0.021158
+          }
+        }
+      },
+      "time_scope_labels": [
+        "generation and correction only; context/DG0 included in episode wall time"
+      ],
+      "intervention_distribution_0_1_2_3plus": {
+        "0": 85,
+        "1": 415,
+        "2": 0,
+        "3+": 0
+      }
+    },
+    "Velocity_H30": {
+      "method": "Velocity",
+      "H": 30,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 309,
+      "success_rate_pct": 61.8,
+      "success_rate_ci95_pct": [
+        58.8,
+        64.6
+      ],
+      "technical_failures": 0,
+      "saved_field_stats": {
+        "policy_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 3741,
+            "mean": 7.482
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 309,
+            "recorded_episodes": 309,
+            "sum": 1343,
+            "mean": 4.346278
+          }
+        },
+        "sampling_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 3741,
+            "mean": 7.482
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 309,
+            "recorded_episodes": 309,
+            "sum": 1343,
+            "mean": 4.346278
+          }
+        },
+        "flow_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 37410,
+            "mean": 74.82
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 309,
+            "recorded_episodes": 309,
+            "sum": 13430,
+            "mean": 43.462783
+          }
+        },
+        "steps": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 74714,
+            "mean": 149.428
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 309,
+            "recorded_episodes": 309,
+            "sum": 17414,
+            "mean": 56.355987
+          }
+        },
+        "interventions": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 415,
+            "mean": 0.83
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 309,
+            "recorded_episodes": 309,
+            "sum": 248,
+            "mean": 0.802589
+          }
+        },
+        "elapsed_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2883.661546,
+            "mean": 5.767323
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 309,
+            "recorded_episodes": 309,
+            "sum": 773.405223,
+            "mean": 2.50293
+          }
+        },
+        "elapsed_control_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2868.461786,
+            "mean": 5.736924
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 309,
+            "recorded_episodes": 309,
+            "sum": 764.12459,
+            "mean": 2.472895
+          }
+        },
+        "inference_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 882.871743,
+            "mean": 1.765743
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 309,
+            "recorded_episodes": 309,
+            "sum": 322.004888,
+            "mean": 1.042087
+          }
+        },
+        "environment_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 511.189577,
+            "mean": 1.022379
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 309,
+            "recorded_episodes": 309,
+            "sum": 116.918899,
+            "mean": 0.378378
+          }
+        },
+        "reset_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 10.725002,
+            "mean": 0.02145
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 309,
+            "recorded_episodes": 309,
+            "sum": 6.552961,
+            "mean": 0.021207
+          }
+        }
+      },
+      "time_scope_labels": [
+        "generation and correction only; context/DG0 included in episode wall time"
+      ],
+      "intervention_distribution_0_1_2_3plus": {
+        "0": 85,
+        "1": 415,
+        "2": 0,
+        "3+": 0
+      }
+    },
+    "N_H40": {
+      "method": "N",
+      "H": 40,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 205,
+      "success_rate_pct": 41.0,
+      "success_rate_ci95_pct": [
+        38.4,
+        43.6
+      ],
+      "technical_failures": 0,
+      "saved_field_stats": {
+        "policy_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2801,
+            "mean": 5.602
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 205,
+            "recorded_episodes": 205,
+            "sum": 441,
+            "mean": 2.15122
+          }
+        },
+        "sampling_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 205,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          }
+        },
+        "flow_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 28010,
+            "mean": 56.02
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 205,
+            "recorded_episodes": 205,
+            "sum": 4410,
+            "mean": 21.512195
+          }
+        },
+        "steps": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 101769,
+            "mean": 203.538
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 205,
+            "recorded_episodes": 205,
+            "sum": 13269,
+            "mean": 64.726829
+          }
+        },
+        "interventions": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 205,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          }
+        },
+        "elapsed_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 1297.802198,
+            "mean": 2.595604
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 205,
+            "recorded_episodes": 205,
+            "sum": 187.722782,
+            "mean": 0.915721
+          }
+        },
+        "elapsed_control_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 205,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          }
+        },
+        "inference_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 609.223698,
+            "mean": 1.218447
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 205,
+            "recorded_episodes": 205,
+            "sum": 96.651629,
+            "mean": 0.471471
+          }
+        },
+        "environment_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 684.67788,
+            "mean": 1.369356
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 205,
+            "recorded_episodes": 205,
+            "sum": 89.696589,
+            "mean": 0.437544
+          }
+        },
+        "reset_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 205,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          }
+        }
+      },
+      "time_scope_labels": null,
+      "intervention_distribution_0_1_2_3plus": null
+    },
+    "Post_H40": {
+      "method": "Post",
+      "H": 40,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 300,
+      "success_rate_pct": 60.0,
+      "success_rate_ci95_pct": [
+        57.0,
+        62.8
+      ],
+      "technical_failures": 0,
+      "saved_field_stats": {
+        "policy_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2879,
+            "mean": 5.758
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 300,
+            "recorded_episodes": 300,
+            "sum": 973,
+            "mean": 3.243333
+          }
+        },
+        "sampling_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2879,
+            "mean": 5.758
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 300,
+            "recorded_episodes": 300,
+            "sum": 973,
+            "mean": 3.243333
+          }
+        },
+        "flow_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 28790,
+            "mean": 57.58
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 300,
+            "recorded_episodes": 300,
+            "sum": 9730,
+            "mean": 32.433333
+          }
+        },
+        "steps": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 77215,
+            "mean": 154.43
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 300,
+            "recorded_episodes": 300,
+            "sum": 17215,
+            "mean": 57.383333
+          }
+        },
+        "interventions": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 415,
+            "mean": 0.83
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 300,
+            "recorded_episodes": 300,
+            "sum": 247,
+            "mean": 0.823333
+          }
+        },
+        "elapsed_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2750.488629,
+            "mean": 5.500977
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 300,
+            "recorded_episodes": 300,
+            "sum": 680.012469,
+            "mean": 2.266708
+          }
+        },
+        "elapsed_control_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2735.583528,
+            "mean": 5.471167
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 300,
+            "recorded_episodes": 300,
+            "sum": 671.277009,
+            "mean": 2.23759
+          }
+        },
+        "inference_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 680.944607,
+            "mean": 1.361889
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 300,
+            "recorded_episodes": 300,
+            "sum": 233.333675,
+            "mean": 0.777779
+          }
+        },
+        "environment_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 527.268772,
+            "mean": 1.054538
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 300,
+            "recorded_episodes": 300,
+            "sum": 115.962399,
+            "mean": 0.386541
+          }
+        },
+        "reset_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 10.504209,
+            "mean": 0.021008
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 300,
+            "recorded_episodes": 300,
+            "sum": 6.129667,
+            "mean": 0.020432
+          }
+        }
+      },
+      "time_scope_labels": [
+        "generation and correction only; context/DG0 included in episode wall time"
+      ],
+      "intervention_distribution_0_1_2_3plus": {
+        "0": 85,
+        "1": 415,
+        "2": 0,
+        "3+": 0
+      }
+    },
+    "Velocity_H40": {
+      "method": "Velocity",
+      "H": 40,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 295,
+      "success_rate_pct": 59.0,
+      "success_rate_ci95_pct": [
+        56.0,
+        61.8
+      ],
+      "technical_failures": 0,
+      "saved_field_stats": {
+        "policy_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 3318,
+            "mean": 6.636
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 295,
+            "recorded_episodes": 295,
+            "sum": 1189,
+            "mean": 4.030508
+          }
+        },
+        "sampling_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 3318,
+            "mean": 6.636
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 295,
+            "recorded_episodes": 295,
+            "sum": 1189,
+            "mean": 4.030508
+          }
+        },
+        "flow_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 33180,
+            "mean": 66.36
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 295,
+            "recorded_episodes": 295,
+            "sum": 11890,
+            "mean": 40.305085
+          }
+        },
+        "steps": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 78248,
+            "mean": 156.496
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 295,
+            "recorded_episodes": 295,
+            "sum": 16748,
+            "mean": 56.772881
+          }
+        },
+        "interventions": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 415,
+            "mean": 0.83
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 295,
+            "recorded_episodes": 295,
+            "sum": 242,
+            "mean": 0.820339
+          }
+        },
+        "elapsed_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2882.173368,
+            "mean": 5.764347
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 295,
+            "recorded_episodes": 295,
+            "sum": 716.408781,
+            "mean": 2.428504
+          }
+        },
+        "elapsed_control_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2867.148847,
+            "mean": 5.734298
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 295,
+            "recorded_episodes": 295,
+            "sum": 707.852601,
+            "mean": 2.3995
+          }
+        },
+        "inference_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 786.071189,
+            "mean": 1.572142
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 295,
+            "recorded_episodes": 295,
+            "sum": 284.43895,
+            "mean": 0.9642
+          }
+        },
+        "environment_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 533.505798,
+            "mean": 1.067012
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 295,
+            "recorded_episodes": 295,
+            "sum": 111.464484,
+            "mean": 0.377846
+          }
+        },
+        "reset_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 10.534822,
+            "mean": 0.02107
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 295,
+            "recorded_episodes": 295,
+            "sum": 5.959729,
+            "mean": 0.020202
+          }
+        }
+      },
+      "time_scope_labels": [
+        "generation and correction only; context/DG0 included in episode wall time"
+      ],
+      "intervention_distribution_0_1_2_3plus": {
+        "0": 85,
+        "1": 415,
+        "2": 0,
+        "3+": 0
+      }
+    },
+    "N_H50": {
+      "method": "N",
+      "H": 50,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 196,
+      "success_rate_pct": 39.2,
+      "success_rate_ci95_pct": [
+        36.2,
+        42.0
+      ],
+      "technical_failures": 0,
+      "saved_field_stats": {
+        "policy_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2156,
+            "mean": 4.312
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 196,
+            "recorded_episodes": 196,
+            "sum": 332,
+            "mean": 1.693878
+          }
+        },
+        "sampling_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 196,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          }
+        },
+        "flow_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 21560,
+            "mean": 43.12
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 196,
+            "recorded_episodes": 196,
+            "sum": 3320,
+            "mean": 16.938776
+          }
+        },
+        "steps": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 103332,
+            "mean": 206.664
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 196,
+            "recorded_episodes": 196,
+            "sum": 12132,
+            "mean": 61.897959
+          }
+        },
+        "interventions": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 196,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          }
+        },
+        "elapsed_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 1162.587191,
+            "mean": 2.325174
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 196,
+            "recorded_episodes": 196,
+            "sum": 154.821629,
+            "mean": 0.789906
+          }
+        },
+        "elapsed_control_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 196,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          }
+        },
+        "inference_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 466.852261,
+            "mean": 0.933705
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 196,
+            "recorded_episodes": 196,
+            "sum": 71.844348,
+            "mean": 0.366553
+          }
+        },
+        "environment_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 691.623466,
+            "mean": 1.383247
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 196,
+            "recorded_episodes": 196,
+            "sum": 81.562701,
+            "mean": 0.416136
+          }
+        },
+        "reset_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 196,
+            "recorded_episodes": 0,
+            "sum": null,
+            "mean": null
+          }
+        }
+      },
+      "time_scope_labels": null,
+      "intervention_distribution_0_1_2_3plus": null
+    },
+    "Post_H50": {
+      "method": "Post",
+      "H": 50,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 300,
+      "success_rate_pct": 60.0,
+      "success_rate_ci95_pct": [
+        56.995,
+        63.0
+      ],
+      "technical_failures": 0,
+      "saved_field_stats": {
+        "policy_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2401,
+            "mean": 4.802
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 300,
+            "recorded_episodes": 300,
+            "sum": 872,
+            "mean": 2.906667
+          }
+        },
+        "sampling_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2401,
+            "mean": 4.802
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 300,
+            "recorded_episodes": 300,
+            "sum": 872,
+            "mean": 2.906667
+          }
+        },
+        "flow_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 24010,
+            "mean": 48.02
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 300,
+            "recorded_episodes": 300,
+            "sum": 8720,
+            "mean": 29.066667
+          }
+        },
+        "steps": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 76478,
+            "mean": 152.956
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 300,
+            "recorded_episodes": 300,
+            "sum": 16478,
+            "mean": 54.926667
+          }
+        },
+        "interventions": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 408,
+            "mean": 0.816
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 300,
+            "recorded_episodes": 300,
+            "sum": 240,
+            "mean": 0.8
+          }
+        },
+        "elapsed_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2610.592024,
+            "mean": 5.221184
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 300,
+            "recorded_episodes": 300,
+            "sum": 630.425225,
+            "mean": 2.101417
+          }
+        },
+        "elapsed_control_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2595.571174,
+            "mean": 5.191142
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 300,
+            "recorded_episodes": 300,
+            "sum": 621.687971,
+            "mean": 2.072293
+          }
+        },
+        "inference_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 564.472961,
+            "mean": 1.128946
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 300,
+            "recorded_episodes": 300,
+            "sum": 206.756607,
+            "mean": 0.689189
+          }
+        },
+        "environment_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 522.934033,
+            "mean": 1.045868
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 300,
+            "recorded_episodes": 300,
+            "sum": 110.345171,
+            "mean": 0.367817
+          }
+        },
+        "reset_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 10.604252,
+            "mean": 0.021209
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 300,
+            "recorded_episodes": 300,
+            "sum": 6.138261,
+            "mean": 0.020461
+          }
+        }
+      },
+      "time_scope_labels": [
+        "generation and correction only; context/DG0 included in episode wall time"
+      ],
+      "intervention_distribution_0_1_2_3plus": {
+        "0": 92,
+        "1": 408,
+        "2": 0,
+        "3+": 0
+      }
+    },
+    "Velocity_H50": {
+      "method": "Velocity",
+      "H": 50,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 296,
+      "success_rate_pct": 59.2,
+      "success_rate_ci95_pct": [
+        56.2,
+        62.2
+      ],
+      "technical_failures": 0,
+      "saved_field_stats": {
+        "policy_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2823,
+            "mean": 5.646
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 296,
+            "recorded_episodes": 296,
+            "sum": 1090,
+            "mean": 3.682432
+          }
+        },
+        "sampling_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2823,
+            "mean": 5.646
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 296,
+            "recorded_episodes": 296,
+            "sum": 1090,
+            "mean": 3.682432
+          }
+        },
+        "flow_calls": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 28230,
+            "mean": 56.46
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 296,
+            "recorded_episodes": 296,
+            "sum": 10900,
+            "mean": 36.824324
+          }
+        },
+        "steps": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 77293,
+            "mean": 154.586
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 296,
+            "recorded_episodes": 296,
+            "sum": 16093,
+            "mean": 54.368243
+          }
+        },
+        "interventions": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 408,
+            "mean": 0.816
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 296,
+            "recorded_episodes": 296,
+            "sum": 236,
+            "mean": 0.797297
+          }
+        },
+        "elapsed_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2733.322933,
+            "mean": 5.466646
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 296,
+            "recorded_episodes": 296,
+            "sum": 674.043984,
+            "mean": 2.277176
+          }
+        },
+        "elapsed_control_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 2718.0577,
+            "mean": 5.436115
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 296,
+            "recorded_episodes": 296,
+            "sum": 665.198171,
+            "mean": 2.247291
+          }
+        },
+        "inference_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 666.700552,
+            "mean": 1.333401
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 296,
+            "recorded_episodes": 296,
+            "sum": 259.504401,
+            "mean": 0.876704
+          }
+        },
+        "environment_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 528.397558,
+            "mean": 1.056795
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 296,
+            "recorded_episodes": 296,
+            "sum": 108.01674,
+            "mean": 0.364921
+          }
+        },
+        "reset_seconds": {
+          "all_episodes": {
+            "denominator_episodes": 500,
+            "recorded_episodes": 500,
+            "sum": 10.790555,
+            "mean": 0.021581
+          },
+          "success_episodes_only": {
+            "denominator_episodes": 296,
+            "recorded_episodes": 296,
+            "sum": 6.259253,
+            "mean": 0.021146
+          }
+        }
+      },
+      "time_scope_labels": [
+        "generation and correction only; context/DG0 included in episode wall time"
+      ],
+      "intervention_distribution_0_1_2_3plus": {
+        "0": 92,
+        "1": 408,
+        "2": 0,
+        "3+": 0
+      }
+    }
+  },
+  "comparisons": {
+    "Post_H10-N_H10": {
+      "comparison": "Post_H10-N_H10",
+      "comparison_class": "within_H",
+      "A": "Post_H10",
+      "B": "N_H10",
+      "pairs": 500,
+      "delta_pp": 7.4,
+      "CI_low_pp": 4.4,
+      "CI_high_pp": 10.4,
+      "rescued": 64,
+      "harmed": 27,
+      "net_successes": 37,
+      "rescued_pct": 12.8,
+      "harmed_pct": 5.4,
+      "both_success": 281,
+      "both_fail": 128,
+      "tasks_positive_delta": 19,
+      "tasks_negative_delta": 8,
+      "tasks_zero_delta": 23
+    },
+    "Velocity_H10-N_H10": {
+      "comparison": "Velocity_H10-N_H10",
+      "comparison_class": "within_H",
+      "A": "Velocity_H10",
+      "B": "N_H10",
+      "pairs": 500,
+      "delta_pp": 6.4,
+      "CI_low_pp": 3.0,
+      "CI_high_pp": 9.605,
+      "rescued": 62,
+      "harmed": 30,
+      "net_successes": 32,
+      "rescued_pct": 12.4,
+      "harmed_pct": 6.0,
+      "both_success": 278,
+      "both_fail": 130,
+      "tasks_positive_delta": 19,
+      "tasks_negative_delta": 8,
+      "tasks_zero_delta": 23
+    },
+    "Post_H10-Velocity_H10": {
+      "comparison": "Post_H10-Velocity_H10",
+      "comparison_class": "within_H",
+      "A": "Post_H10",
+      "B": "Velocity_H10",
+      "pairs": 500,
+      "delta_pp": 1.0,
+      "CI_low_pp": -1.0,
+      "CI_high_pp": 2.8,
+      "rescued": 16,
+      "harmed": 11,
+      "net_successes": 5,
+      "rescued_pct": 3.2,
+      "harmed_pct": 2.2,
+      "both_success": 329,
+      "both_fail": 144,
+      "tasks_positive_delta": 8,
+      "tasks_negative_delta": 5,
+      "tasks_zero_delta": 37
+    },
+    "Post_H20-N_H20": {
+      "comparison": "Post_H20-N_H20",
+      "comparison_class": "within_H",
+      "A": "Post_H20",
+      "B": "N_H20",
+      "pairs": 500,
+      "delta_pp": 16.4,
+      "CI_low_pp": 13.0,
+      "CI_high_pp": 19.6,
+      "rescued": 95,
+      "harmed": 13,
+      "net_successes": 82,
+      "rescued_pct": 19.0,
+      "harmed_pct": 2.6,
+      "both_success": 227,
+      "both_fail": 165,
+      "tasks_positive_delta": 26,
+      "tasks_negative_delta": 1,
+      "tasks_zero_delta": 23
+    },
+    "Velocity_H20-N_H20": {
+      "comparison": "Velocity_H20-N_H20",
+      "comparison_class": "within_H",
+      "A": "Velocity_H20",
+      "B": "N_H20",
+      "pairs": 500,
+      "delta_pp": 15.2,
+      "CI_low_pp": 11.995,
+      "CI_high_pp": 18.6,
+      "rescued": 90,
+      "harmed": 14,
+      "net_successes": 76,
+      "rescued_pct": 18.0,
+      "harmed_pct": 2.8,
+      "both_success": 226,
+      "both_fail": 170,
+      "tasks_positive_delta": 27,
+      "tasks_negative_delta": 1,
+      "tasks_zero_delta": 22
+    },
+    "Post_H20-Velocity_H20": {
+      "comparison": "Post_H20-Velocity_H20",
+      "comparison_class": "within_H",
+      "A": "Post_H20",
+      "B": "Velocity_H20",
+      "pairs": 500,
+      "delta_pp": 1.2,
+      "CI_low_pp": -0.4,
+      "CI_high_pp": 2.6,
+      "rescued": 11,
+      "harmed": 5,
+      "net_successes": 6,
+      "rescued_pct": 2.2,
+      "harmed_pct": 1.0,
+      "both_success": 311,
+      "both_fail": 173,
+      "tasks_positive_delta": 6,
+      "tasks_negative_delta": 3,
+      "tasks_zero_delta": 41
+    },
+    "Post_H30-N_H30": {
+      "comparison": "Post_H30-N_H30",
+      "comparison_class": "within_H",
+      "A": "Post_H30",
+      "B": "N_H30",
+      "pairs": 500,
+      "delta_pp": 22.2,
+      "CI_low_pp": 18.8,
+      "CI_high_pp": 25.4,
+      "rescued": 122,
+      "harmed": 11,
+      "net_successes": 111,
+      "rescued_pct": 24.4,
+      "harmed_pct": 2.2,
+      "both_success": 194,
+      "both_fail": 173,
+      "tasks_positive_delta": 31,
+      "tasks_negative_delta": 2,
+      "tasks_zero_delta": 17
+    },
+    "Velocity_H30-N_H30": {
+      "comparison": "Velocity_H30-N_H30",
+      "comparison_class": "within_H",
+      "A": "Velocity_H30",
+      "B": "N_H30",
+      "pairs": 500,
+      "delta_pp": 20.8,
+      "CI_low_pp": 17.595,
+      "CI_high_pp": 24.0,
+      "rescued": 118,
+      "harmed": 14,
+      "net_successes": 104,
+      "rescued_pct": 23.6,
+      "harmed_pct": 2.8,
+      "both_success": 191,
+      "both_fail": 177,
+      "tasks_positive_delta": 30,
+      "tasks_negative_delta": 2,
+      "tasks_zero_delta": 18
+    },
+    "Post_H30-Velocity_H30": {
+      "comparison": "Post_H30-Velocity_H30",
+      "comparison_class": "within_H",
+      "A": "Post_H30",
+      "B": "Velocity_H30",
+      "pairs": 500,
+      "delta_pp": 1.4,
+      "CI_low_pp": -0.2,
+      "CI_high_pp": 3.0,
+      "rescued": 13,
+      "harmed": 6,
+      "net_successes": 7,
+      "rescued_pct": 2.6,
+      "harmed_pct": 1.2,
+      "both_success": 303,
+      "both_fail": 178,
+      "tasks_positive_delta": 9,
+      "tasks_negative_delta": 4,
+      "tasks_zero_delta": 37
+    },
+    "Post_H40-N_H40": {
+      "comparison": "Post_H40-N_H40",
+      "comparison_class": "within_H",
+      "A": "Post_H40",
+      "B": "N_H40",
+      "pairs": 500,
+      "delta_pp": 19.0,
+      "CI_low_pp": 15.8,
+      "CI_high_pp": 22.2,
+      "rescued": 114,
+      "harmed": 19,
+      "net_successes": 95,
+      "rescued_pct": 22.8,
+      "harmed_pct": 3.8,
+      "both_success": 186,
+      "both_fail": 181,
+      "tasks_positive_delta": 25,
+      "tasks_negative_delta": 5,
+      "tasks_zero_delta": 20
+    },
+    "Velocity_H40-N_H40": {
+      "comparison": "Velocity_H40-N_H40",
+      "comparison_class": "within_H",
+      "A": "Velocity_H40",
+      "B": "N_H40",
+      "pairs": 500,
+      "delta_pp": 18.0,
+      "CI_low_pp": 15.0,
+      "CI_high_pp": 21.2,
+      "rescued": 111,
+      "harmed": 21,
+      "net_successes": 90,
+      "rescued_pct": 22.2,
+      "harmed_pct": 4.2,
+      "both_success": 184,
+      "both_fail": 184,
+      "tasks_positive_delta": 24,
+      "tasks_negative_delta": 6,
+      "tasks_zero_delta": 20
+    },
+    "Post_H40-Velocity_H40": {
+      "comparison": "Post_H40-Velocity_H40",
+      "comparison_class": "within_H",
+      "A": "Post_H40",
+      "B": "Velocity_H40",
+      "pairs": 500,
+      "delta_pp": 1.0,
+      "CI_low_pp": -0.6,
+      "CI_high_pp": 2.6,
+      "rescued": 12,
+      "harmed": 7,
+      "net_successes": 5,
+      "rescued_pct": 2.4,
+      "harmed_pct": 1.4,
+      "both_success": 288,
+      "both_fail": 193,
+      "tasks_positive_delta": 8,
+      "tasks_negative_delta": 6,
+      "tasks_zero_delta": 36
+    },
+    "Post_H50-N_H50": {
+      "comparison": "Post_H50-N_H50",
+      "comparison_class": "within_H",
+      "A": "Post_H50",
+      "B": "N_H50",
+      "pairs": 500,
+      "delta_pp": 20.8,
+      "CI_low_pp": 17.4,
+      "CI_high_pp": 24.0,
+      "rescued": 114,
+      "harmed": 10,
+      "net_successes": 104,
+      "rescued_pct": 22.8,
+      "harmed_pct": 2.0,
+      "both_success": 186,
+      "both_fail": 190,
+      "tasks_positive_delta": 29,
+      "tasks_negative_delta": 2,
+      "tasks_zero_delta": 19
+    },
+    "Velocity_H50-N_H50": {
+      "comparison": "Velocity_H50-N_H50",
+      "comparison_class": "within_H",
+      "A": "Velocity_H50",
+      "B": "N_H50",
+      "pairs": 500,
+      "delta_pp": 20.0,
+      "CI_low_pp": 16.6,
+      "CI_high_pp": 23.2,
+      "rescued": 110,
+      "harmed": 10,
+      "net_successes": 100,
+      "rescued_pct": 22.0,
+      "harmed_pct": 2.0,
+      "both_success": 186,
+      "both_fail": 194,
+      "tasks_positive_delta": 26,
+      "tasks_negative_delta": 2,
+      "tasks_zero_delta": 22
+    },
+    "Post_H50-Velocity_H50": {
+      "comparison": "Post_H50-Velocity_H50",
+      "comparison_class": "within_H",
+      "A": "Post_H50",
+      "B": "Velocity_H50",
+      "pairs": 500,
+      "delta_pp": 0.8,
+      "CI_low_pp": -0.8,
+      "CI_high_pp": 2.4,
+      "rescued": 11,
+      "harmed": 7,
+      "net_successes": 4,
+      "rescued_pct": 2.2,
+      "harmed_pct": 1.4,
+      "both_success": 289,
+      "both_fail": 193,
+      "tasks_positive_delta": 6,
+      "tasks_negative_delta": 5,
+      "tasks_zero_delta": 39
+    },
+    "R_H10-N_H10": {
+      "comparison": "R_H10-N_H10",
+      "comparison_class": "H10_R_reference",
+      "A": "R_H10",
+      "B": "N_H10",
+      "pairs": 500,
+      "delta_pp": 5.6,
+      "CI_low_pp": 2.6,
+      "CI_high_pp": 8.6,
+      "rescued": 54,
+      "harmed": 26,
+      "net_successes": 28,
+      "rescued_pct": 10.8,
+      "harmed_pct": 5.2,
+      "both_success": 282,
+      "both_fail": 138,
+      "tasks_positive_delta": 17,
+      "tasks_negative_delta": 6,
+      "tasks_zero_delta": 27
+    },
+    "Post_H10-R_H10": {
+      "comparison": "Post_H10-R_H10",
+      "comparison_class": "H10_R_reference",
+      "A": "Post_H10",
+      "B": "R_H10",
+      "pairs": 500,
+      "delta_pp": 1.8,
+      "CI_low_pp": -0.2,
+      "CI_high_pp": 3.8,
+      "rescued": 22,
+      "harmed": 13,
+      "net_successes": 9,
+      "rescued_pct": 4.4,
+      "harmed_pct": 2.6,
+      "both_success": 323,
+      "both_fail": 142,
+      "tasks_positive_delta": 10,
+      "tasks_negative_delta": 7,
+      "tasks_zero_delta": 33
+    },
+    "Velocity_H10-R_H10": {
+      "comparison": "Velocity_H10-R_H10",
+      "comparison_class": "H10_R_reference",
+      "A": "Velocity_H10",
+      "B": "R_H10",
+      "pairs": 500,
+      "delta_pp": 0.8,
+      "CI_low_pp": -1.4,
+      "CI_high_pp": 3.0,
+      "rescued": 20,
+      "harmed": 16,
+      "net_successes": 4,
+      "rescued_pct": 4.0,
+      "harmed_pct": 3.2,
+      "both_success": 320,
+      "both_fail": 144,
+      "tasks_positive_delta": 10,
+      "tasks_negative_delta": 9,
+      "tasks_zero_delta": 31
+    },
+    "Post_H20-N_H10": {
+      "comparison": "Post_H20-N_H10",
+      "comparison_class": "cross_H_descriptive",
+      "A": "Post_H20",
+      "B": "N_H10",
+      "pairs": 500,
+      "delta_pp": 2.8,
+      "CI_low_pp": -1.0,
+      "CI_high_pp": 6.4,
+      "rescued": 63,
+      "harmed": 49,
+      "net_successes": 14,
+      "rescued_pct": 12.6,
+      "harmed_pct": 9.8,
+      "both_success": 259,
+      "both_fail": 129,
+      "tasks_positive_delta": 14,
+      "tasks_negative_delta": 12,
+      "tasks_zero_delta": 24
+    },
+    "Velocity_H20-N_H10": {
+      "comparison": "Velocity_H20-N_H10",
+      "comparison_class": "cross_H_descriptive",
+      "A": "Velocity_H20",
+      "B": "N_H10",
+      "pairs": 500,
+      "delta_pp": 1.6,
+      "CI_low_pp": -2.2,
+      "CI_high_pp": 5.2,
+      "rescued": 59,
+      "harmed": 51,
+      "net_successes": 8,
+      "rescued_pct": 11.8,
+      "harmed_pct": 10.2,
+      "both_success": 257,
+      "both_fail": 133,
+      "tasks_positive_delta": 13,
+      "tasks_negative_delta": 13,
+      "tasks_zero_delta": 24
+    },
+    "Post_H30-N_H10": {
+      "comparison": "Post_H30-N_H10",
+      "comparison_class": "cross_H_descriptive",
+      "A": "Post_H30",
+      "B": "N_H10",
+      "pairs": 500,
+      "delta_pp": 1.6,
+      "CI_low_pp": -2.2,
+      "CI_high_pp": 5.005,
+      "rescued": 60,
+      "harmed": 52,
+      "net_successes": 8,
+      "rescued_pct": 12.0,
+      "harmed_pct": 10.4,
+      "both_success": 256,
+      "both_fail": 132,
+      "tasks_positive_delta": 13,
+      "tasks_negative_delta": 17,
+      "tasks_zero_delta": 20
+    },
+    "Velocity_H30-N_H10": {
+      "comparison": "Velocity_H30-N_H10",
+      "comparison_class": "cross_H_descriptive",
+      "A": "Velocity_H30",
+      "B": "N_H10",
+      "pairs": 500,
+      "delta_pp": 0.2,
+      "CI_low_pp": -3.6,
+      "CI_high_pp": 3.6,
+      "rescued": 53,
+      "harmed": 52,
+      "net_successes": 1,
+      "rescued_pct": 10.6,
+      "harmed_pct": 10.4,
+      "both_success": 256,
+      "both_fail": 139,
+      "tasks_positive_delta": 12,
+      "tasks_negative_delta": 16,
+      "tasks_zero_delta": 22
+    },
+    "Post_H40-N_H10": {
+      "comparison": "Post_H40-N_H10",
+      "comparison_class": "cross_H_descriptive",
+      "A": "Post_H40",
+      "B": "N_H10",
+      "pairs": 500,
+      "delta_pp": -1.6,
+      "CI_low_pp": -5.6,
+      "CI_high_pp": 1.8,
+      "rescued": 57,
+      "harmed": 65,
+      "net_successes": -8,
+      "rescued_pct": 11.4,
+      "harmed_pct": 13.0,
+      "both_success": 243,
+      "both_fail": 135,
+      "tasks_positive_delta": 12,
+      "tasks_negative_delta": 16,
+      "tasks_zero_delta": 22
+    },
+    "Velocity_H40-N_H10": {
+      "comparison": "Velocity_H40-N_H10",
+      "comparison_class": "cross_H_descriptive",
+      "A": "Velocity_H40",
+      "B": "N_H10",
+      "pairs": 500,
+      "delta_pp": -2.6,
+      "CI_low_pp": -6.4,
+      "CI_high_pp": 0.8,
+      "rescued": 51,
+      "harmed": 64,
+      "net_successes": -13,
+      "rescued_pct": 10.2,
+      "harmed_pct": 12.8,
+      "both_success": 244,
+      "both_fail": 141,
+      "tasks_positive_delta": 13,
+      "tasks_negative_delta": 17,
+      "tasks_zero_delta": 20
+    },
+    "Post_H50-N_H10": {
+      "comparison": "Post_H50-N_H10",
+      "comparison_class": "cross_H_descriptive",
+      "A": "Post_H50",
+      "B": "N_H10",
+      "pairs": 500,
+      "delta_pp": -1.6,
+      "CI_low_pp": -5.6,
+      "CI_high_pp": 2.0,
+      "rescued": 54,
+      "harmed": 62,
+      "net_successes": -8,
+      "rescued_pct": 10.8,
+      "harmed_pct": 12.4,
+      "both_success": 246,
+      "both_fail": 138,
+      "tasks_positive_delta": 11,
+      "tasks_negative_delta": 19,
+      "tasks_zero_delta": 20
+    },
+    "Velocity_H50-N_H10": {
+      "comparison": "Velocity_H50-N_H10",
+      "comparison_class": "cross_H_descriptive",
+      "A": "Velocity_H50",
+      "B": "N_H10",
+      "pairs": 500,
+      "delta_pp": -2.4,
+      "CI_low_pp": -6.2,
+      "CI_high_pp": 1.2,
+      "rescued": 50,
+      "harmed": 62,
+      "net_successes": -12,
+      "rescued_pct": 10.0,
+      "harmed_pct": 12.4,
+      "both_success": 246,
+      "both_fail": 142,
+      "tasks_positive_delta": 11,
+      "tasks_negative_delta": 18,
+      "tasks_zero_delta": 21
+    }
+  },
+  "training_coverage_description": {
+    "basis": "Pre-existing5task training coverage supplied by parent; descriptive strata only, no intervals/tests or model/task selection.",
+    "training_tasks": [
+      "disassemble-v3",
+      "pick-place-wall-v3",
+      "shelf-place-v3",
+      "stick-pull-v3",
+      "stick-push-v3"
+    ],
+    "groups": {
+      "five_training_tasks": {
+        "tasks": 5,
+        "episodes_per_cell": 50,
+        "cells": {
+          "N_H10": {
+            "successes": 28,
+            "SR_pct": 56.0
+          },
+          "R_H10": {
+            "successes": 32,
+            "SR_pct": 64.0
+          },
+          "Post_H10": {
+            "successes": 36,
+            "SR_pct": 72.0
+          },
+          "Velocity_H10": {
+            "successes": 33,
+            "SR_pct": 66.0
+          },
+          "N_H20": {
+            "successes": 19,
+            "SR_pct": 38.0
+          },
+          "Post_H20": {
+            "successes": 36,
+            "SR_pct": 72.0
+          },
+          "Velocity_H20": {
+            "successes": 34,
+            "SR_pct": 68.0
+          },
+          "N_H30": {
+            "successes": 20,
+            "SR_pct": 40.0
+          },
+          "Post_H30": {
+            "successes": 38,
+            "SR_pct": 76.0
+          },
+          "Velocity_H30": {
+            "successes": 36,
+            "SR_pct": 72.0
+          },
+          "N_H40": {
+            "successes": 21,
+            "SR_pct": 42.0
+          },
+          "Post_H40": {
+            "successes": 37,
+            "SR_pct": 74.0
+          },
+          "Velocity_H40": {
+            "successes": 34,
+            "SR_pct": 68.0
+          },
+          "N_H50": {
+            "successes": 18,
+            "SR_pct": 36.0
+          },
+          "Post_H50": {
+            "successes": 36,
+            "SR_pct": 72.0
+          },
+          "Velocity_H50": {
+            "successes": 34,
+            "SR_pct": 68.0
+          }
+        },
+        "comparisons": {
+          "Post_H10-N_H10": {
+            "delta_pp": 16.0,
+            "rescued": 11,
+            "harmed": 3,
+            "net_successes": 8,
+            "paired": 50
+          },
+          "Velocity_H10-N_H10": {
+            "delta_pp": 10.0,
+            "rescued": 10,
+            "harmed": 5,
+            "net_successes": 5,
+            "paired": 50
+          },
+          "Post_H10-Velocity_H10": {
+            "delta_pp": 6.0,
+            "rescued": 4,
+            "harmed": 1,
+            "net_successes": 3,
+            "paired": 50
+          },
+          "Post_H20-N_H20": {
+            "delta_pp": 34.0,
+            "rescued": 19,
+            "harmed": 2,
+            "net_successes": 17,
+            "paired": 50
+          },
+          "Velocity_H20-N_H20": {
+            "delta_pp": 30.0,
+            "rescued": 17,
+            "harmed": 2,
+            "net_successes": 15,
+            "paired": 50
+          },
+          "Post_H20-Velocity_H20": {
+            "delta_pp": 4.0,
+            "rescued": 2,
+            "harmed": 0,
+            "net_successes": 2,
+            "paired": 50
+          },
+          "Post_H30-N_H30": {
+            "delta_pp": 36.0,
+            "rescued": 19,
+            "harmed": 1,
+            "net_successes": 18,
+            "paired": 50
+          },
+          "Velocity_H30-N_H30": {
+            "delta_pp": 32.0,
+            "rescued": 18,
+            "harmed": 2,
+            "net_successes": 16,
+            "paired": 50
+          },
+          "Post_H30-Velocity_H30": {
+            "delta_pp": 4.0,
+            "rescued": 4,
+            "harmed": 2,
+            "net_successes": 2,
+            "paired": 50
+          },
+          "Post_H40-N_H40": {
+            "delta_pp": 32.0,
+            "rescued": 19,
+            "harmed": 3,
+            "net_successes": 16,
+            "paired": 50
+          },
+          "Velocity_H40-N_H40": {
+            "delta_pp": 26.0,
+            "rescued": 16,
+            "harmed": 3,
+            "net_successes": 13,
+            "paired": 50
+          },
+          "Post_H40-Velocity_H40": {
+            "delta_pp": 6.0,
+            "rescued": 4,
+            "harmed": 1,
+            "net_successes": 3,
+            "paired": 50
+          },
+          "Post_H50-N_H50": {
+            "delta_pp": 36.0,
+            "rescued": 19,
+            "harmed": 1,
+            "net_successes": 18,
+            "paired": 50
+          },
+          "Velocity_H50-N_H50": {
+            "delta_pp": 32.0,
+            "rescued": 17,
+            "harmed": 1,
+            "net_successes": 16,
+            "paired": 50
+          },
+          "Post_H50-Velocity_H50": {
+            "delta_pp": 4.0,
+            "rescued": 3,
+            "harmed": 1,
+            "net_successes": 2,
+            "paired": 50
+          },
+          "R_H10-N_H10": {
+            "delta_pp": 8.0,
+            "rescued": 9,
+            "harmed": 5,
+            "net_successes": 4,
+            "paired": 50
+          },
+          "Post_H10-R_H10": {
+            "delta_pp": 8.0,
+            "rescued": 4,
+            "harmed": 0,
+            "net_successes": 4,
+            "paired": 50
+          },
+          "Velocity_H10-R_H10": {
+            "delta_pp": 2.0,
+            "rescued": 3,
+            "harmed": 2,
+            "net_successes": 1,
+            "paired": 50
+          },
+          "Post_H20-N_H10": {
+            "delta_pp": 16.0,
+            "rescued": 11,
+            "harmed": 3,
+            "net_successes": 8,
+            "paired": 50
+          },
+          "Velocity_H20-N_H10": {
+            "delta_pp": 12.0,
+            "rescued": 10,
+            "harmed": 4,
+            "net_successes": 6,
+            "paired": 50
+          },
+          "Post_H30-N_H10": {
+            "delta_pp": 20.0,
+            "rescued": 14,
+            "harmed": 4,
+            "net_successes": 10,
+            "paired": 50
+          },
+          "Velocity_H30-N_H10": {
+            "delta_pp": 16.0,
+            "rescued": 11,
+            "harmed": 3,
+            "net_successes": 8,
+            "paired": 50
+          },
+          "Post_H40-N_H10": {
+            "delta_pp": 18.0,
+            "rescued": 14,
+            "harmed": 5,
+            "net_successes": 9,
+            "paired": 50
+          },
+          "Velocity_H40-N_H10": {
+            "delta_pp": 12.0,
+            "rescued": 11,
+            "harmed": 5,
+            "net_successes": 6,
+            "paired": 50
+          },
+          "Post_H50-N_H10": {
+            "delta_pp": 16.0,
+            "rescued": 12,
+            "harmed": 4,
+            "net_successes": 8,
+            "paired": 50
+          },
+          "Velocity_H50-N_H10": {
+            "delta_pp": 12.0,
+            "rescued": 11,
+            "harmed": 5,
+            "net_successes": 6,
+            "paired": 50
+          }
+        }
+      },
+      "other45_tasks": {
+        "tasks": 45,
+        "episodes_per_cell": 450,
+        "cells": {
+          "N_H10": {
+            "successes": 280,
+            "SR_pct": 62.222222
+          },
+          "R_H10": {
+            "successes": 304,
+            "SR_pct": 67.555556
+          },
+          "Post_H10": {
+            "successes": 309,
+            "SR_pct": 68.666667
+          },
+          "Velocity_H10": {
+            "successes": 307,
+            "SR_pct": 68.222222
+          },
+          "N_H20": {
+            "successes": 221,
+            "SR_pct": 49.111111
+          },
+          "Post_H20": {
+            "successes": 286,
+            "SR_pct": 63.555556
+          },
+          "Velocity_H20": {
+            "successes": 282,
+            "SR_pct": 62.666667
+          },
+          "N_H30": {
+            "successes": 185,
+            "SR_pct": 41.111111
+          },
+          "Post_H30": {
+            "successes": 278,
+            "SR_pct": 61.777778
+          },
+          "Velocity_H30": {
+            "successes": 273,
+            "SR_pct": 60.666667
+          },
+          "N_H40": {
+            "successes": 184,
+            "SR_pct": 40.888889
+          },
+          "Post_H40": {
+            "successes": 263,
+            "SR_pct": 58.444444
+          },
+          "Velocity_H40": {
+            "successes": 261,
+            "SR_pct": 58.0
+          },
+          "N_H50": {
+            "successes": 178,
+            "SR_pct": 39.555556
+          },
+          "Post_H50": {
+            "successes": 264,
+            "SR_pct": 58.666667
+          },
+          "Velocity_H50": {
+            "successes": 262,
+            "SR_pct": 58.222222
+          }
+        },
+        "comparisons": {
+          "Post_H10-N_H10": {
+            "delta_pp": 6.444444,
+            "rescued": 53,
+            "harmed": 24,
+            "net_successes": 29,
+            "paired": 450
+          },
+          "Velocity_H10-N_H10": {
+            "delta_pp": 6.0,
+            "rescued": 52,
+            "harmed": 25,
+            "net_successes": 27,
+            "paired": 450
+          },
+          "Post_H10-Velocity_H10": {
+            "delta_pp": 0.444444,
+            "rescued": 12,
+            "harmed": 10,
+            "net_successes": 2,
+            "paired": 450
+          },
+          "Post_H20-N_H20": {
+            "delta_pp": 14.444444,
+            "rescued": 76,
+            "harmed": 11,
+            "net_successes": 65,
+            "paired": 450
+          },
+          "Velocity_H20-N_H20": {
+            "delta_pp": 13.555556,
+            "rescued": 73,
+            "harmed": 12,
+            "net_successes": 61,
+            "paired": 450
+          },
+          "Post_H20-Velocity_H20": {
+            "delta_pp": 0.888889,
+            "rescued": 9,
+            "harmed": 5,
+            "net_successes": 4,
+            "paired": 450
+          },
+          "Post_H30-N_H30": {
+            "delta_pp": 20.666667,
+            "rescued": 103,
+            "harmed": 10,
+            "net_successes": 93,
+            "paired": 450
+          },
+          "Velocity_H30-N_H30": {
+            "delta_pp": 19.555556,
+            "rescued": 100,
+            "harmed": 12,
+            "net_successes": 88,
+            "paired": 450
+          },
+          "Post_H30-Velocity_H30": {
+            "delta_pp": 1.111111,
+            "rescued": 9,
+            "harmed": 4,
+            "net_successes": 5,
+            "paired": 450
+          },
+          "Post_H40-N_H40": {
+            "delta_pp": 17.555556,
+            "rescued": 95,
+            "harmed": 16,
+            "net_successes": 79,
+            "paired": 450
+          },
+          "Velocity_H40-N_H40": {
+            "delta_pp": 17.111111,
+            "rescued": 95,
+            "harmed": 18,
+            "net_successes": 77,
+            "paired": 450
+          },
+          "Post_H40-Velocity_H40": {
+            "delta_pp": 0.444444,
+            "rescued": 8,
+            "harmed": 6,
+            "net_successes": 2,
+            "paired": 450
+          },
+          "Post_H50-N_H50": {
+            "delta_pp": 19.111111,
+            "rescued": 95,
+            "harmed": 9,
+            "net_successes": 86,
+            "paired": 450
+          },
+          "Velocity_H50-N_H50": {
+            "delta_pp": 18.666667,
+            "rescued": 93,
+            "harmed": 9,
+            "net_successes": 84,
+            "paired": 450
+          },
+          "Post_H50-Velocity_H50": {
+            "delta_pp": 0.444444,
+            "rescued": 8,
+            "harmed": 6,
+            "net_successes": 2,
+            "paired": 450
+          },
+          "R_H10-N_H10": {
+            "delta_pp": 5.333333,
+            "rescued": 45,
+            "harmed": 21,
+            "net_successes": 24,
+            "paired": 450
+          },
+          "Post_H10-R_H10": {
+            "delta_pp": 1.111111,
+            "rescued": 18,
+            "harmed": 13,
+            "net_successes": 5,
+            "paired": 450
+          },
+          "Velocity_H10-R_H10": {
+            "delta_pp": 0.666667,
+            "rescued": 17,
+            "harmed": 14,
+            "net_successes": 3,
+            "paired": 450
+          },
+          "Post_H20-N_H10": {
+            "delta_pp": 1.333333,
+            "rescued": 52,
+            "harmed": 46,
+            "net_successes": 6,
+            "paired": 450
+          },
+          "Velocity_H20-N_H10": {
+            "delta_pp": 0.444444,
+            "rescued": 49,
+            "harmed": 47,
+            "net_successes": 2,
+            "paired": 450
+          },
+          "Post_H30-N_H10": {
+            "delta_pp": -0.444444,
+            "rescued": 46,
+            "harmed": 48,
+            "net_successes": -2,
+            "paired": 450
+          },
+          "Velocity_H30-N_H10": {
+            "delta_pp": -1.555556,
+            "rescued": 42,
+            "harmed": 49,
+            "net_successes": -7,
+            "paired": 450
+          },
+          "Post_H40-N_H10": {
+            "delta_pp": -3.777778,
+            "rescued": 43,
+            "harmed": 60,
+            "net_successes": -17,
+            "paired": 450
+          },
+          "Velocity_H40-N_H10": {
+            "delta_pp": -4.222222,
+            "rescued": 40,
+            "harmed": 59,
+            "net_successes": -19,
+            "paired": 450
+          },
+          "Post_H50-N_H10": {
+            "delta_pp": -3.555556,
+            "rescued": 42,
+            "harmed": 58,
+            "net_successes": -16,
+            "paired": 450
+          },
+          "Velocity_H50-N_H10": {
+            "delta_pp": -4.0,
+            "rescued": 39,
+            "harmed": 57,
+            "net_successes": -18,
+            "paired": 450
+          }
+        }
+      }
+    }
+  },
+  "cost_interpretation": [
+    "Policy-call all-episode means and success-only conditional means use different denominators and are reported separately. Success-only subsets differ by method/H and are not paired equal-work cohorts.",
+    "Realized total calls/steps depend on success and termination times; fewer calls do not establish an intrinsic per-intervention cost reduction or total inference speedup.",
+    "Main inference_seconds records generation/correction only. Context/D/G0 time belongs to elapsed_seconds; do not read inference_seconds as total policy-stack time.",
+    "elapsed_seconds is saved host episode wall duration. Sum across overlapping jobs is worker-time accounting, not concurrent makespan or GPU time; do not subtract fields to infer net correction or D/G0 cost.",
+    "Worker model loads/job environment setup are not included unless explicitly represented by the per-episode field. No new timing audit was performed.",
+    "Absent fields remain null, including N explicit sampling_calls/interventions and unavailable time-scope labels. Saved policy_calls is retained under its own name.",
+    "Cross-H comparisons are descriptive, not equivalence/noninferiority claims. No optimization or follow-up experiment is implied."
+  ],
+  "output_files": {
+    "cells": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/MAIN_FINAL_CELLS_WITH_COSTS.csv",
+    "pairs": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/MAIN_FINAL_PAIRED_COMPARISONS.csv",
+    "tasks": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/MAIN_FINAL_TASKS.csv",
+    "stats": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/MAIN_FINAL_STATISTICS.json"
+  },
+  "saved_FINAL_CELLS_success_counts_agree": true
+}

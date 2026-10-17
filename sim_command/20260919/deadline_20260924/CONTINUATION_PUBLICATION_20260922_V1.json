@@ -1,0 +1,39 @@
+{
+  "published_at_utc": "2026-09-22T03:56:53.824907+00:00",
+  "control_revision": 57,
+  "board_revision": 83,
+  "queue_control_revision": 22,
+  "authorization": {
+    "path": "deadline_20260924/CONTINUATION_AUTHORIZATION_20260922_V1.json",
+    "sha256": "3e6a0aab7abe79365192c953d45b4e13b44139ab26ffadb6f7c3f82547107d8b"
+  },
+  "briefs": [
+    {
+      "path": "tasks/A_D24_CORE_REMAINDER_V1.md",
+      "sha256": "ca0c3bcec7ee0f20ddf702975ef783cd8a8122ec44beb276ae80ab24054974a2"
+    },
+    {
+      "path": "tasks/B_D24_EXTENSION_REMAINDER_V1.md",
+      "sha256": "8511ca0e0463324f209be6e7778b2dc94c3617d195c8d15f1761235edc08ba38"
+    }
+  ],
+  "A_delivery": {
+    "mode": "codex_queue_original_thread",
+    "queue_message_id": "01a0c742-e863-7941-b206-275bed1610bf",
+    "status": "executor_ACK_received_adapting",
+    "ack": "receipts/A/A_D24_CORE_REMAINDER_V1_ACK.json"
+  },
+  "B_delivery": {
+    "mode": "shared_ready_task_and_stage_authorization",
+    "observed_dependency_path": "persistent_queue/nodes/B/wakeup/DEPENDENCIES.json",
+    "new_task_seen": true,
+    "status": "observer_observed_not_executor_ACK",
+    "observed_at_utc": "2026-09-22T03:58:51.753894+00:00"
+  },
+  "executor_ACKs_observed": {
+    "A": true,
+    "B": false
+  },
+  "model_launch_claimed": false,
+  "E1_final_table_arrived_during_dispatch": "results/B/B_D24_SPRINT_V1/r1/D24_E1_RENDER_REPAIR_r3/E1_COMPLETE_SUMMARY.md"
+}

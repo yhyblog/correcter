@@ -1,0 +1,205 @@
+--- old/code/CODE_MANIFEST.json
++++ new/code/CODE_MANIFEST.json
+@@ -1,6 +1,6 @@
+ {
+   "schema": "PV_private_code_v1",
+-  "root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1/code",
++  "root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/code",
+   "files": [
+     {
+       "path": "core/__init__.py",
+@@ -9,8 +9,8 @@
+     },
+     {
+       "path": "core/contracts.py",
+-      "sha256": "811a8e7c3242b0b51b71134da67ee23236b19cc6dcdb8c420e2cf949466095f3",
+-      "size_bytes": 8542
++      "sha256": "18b909fa27d93d08d556eabccb02fab4dbcd119e2ea971b6a20c5c0125aed64e",
++      "size_bytes": 8545
+     },
+     {
+       "path": "core/identity.py",
+@@ -64,8 +64,8 @@
+     },
+     {
+       "path": "diagnostic.py",
+-      "sha256": "6854ce11120d54ec9b7447b7a8ee763f205cfcce50b89281401e3456560334de",
+-      "size_bytes": 22231
++      "sha256": "b5e0793d71f0110faa9ed44a0a26cf66290274696bf0a9ae39bbfd0ff3ec6fd9",
++      "size_bytes": 22237
+     },
+     {
+       "path": "feature_path.py",
+@@ -74,8 +74,8 @@
+     },
+     {
+       "path": "launch.py",
+-      "sha256": "61309af1933fd8e6765082c19bdaec386ce2273210ae6b5efe8d45128c6bcda5",
+-      "size_bytes": 5527
++      "sha256": "41fb0b2887b65f414c718ca5fedeade1c824700970ec78cae11072f582e64b53",
++      "size_bytes": 5533
+     },
+     {
+       "path": "reserved.py",
+--- old/proposal/PROPOSAL.json
++++ new/proposal/PROPOSAL.json
+@@ -1,9 +1,9 @@
+ {
+-  "proposal_id": "A10_PV_OFFLINE_PREFLIGHT_V1_proposal_r1",
++  "proposal_id": "A10_PV_OFFLINE_PREFLIGHT_V2_proposal_r1",
+   "status": "proposed_not_released",
+   "publication_is_authorization": false,
+   "campaign_id": "corrector-sim-20260919",
+-  "task_id": "A10_PV_OFFLINE_PREFLIGHT_V1",
++  "task_id": "A10_PV_OFFLINE_PREFLIGHT_V2",
+   "task_revision": 1,
+   "node_role": "A",
+   "owner_host": "trial-303224955-trialrun-303224955-worker-0",
+@@ -11,35 +11,35 @@
+     "A"
+   ],
+   "config": {
+-    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1/config/CONFIG.json",
++    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/config/CONFIG.json",
+     "sha256": "109bfe6482e7491cb8ad6ef4821bf55b536f4d8f9a734fd0100e71ee516cd48b",
+     "size_bytes": 6616
+   },
+   "input_manifest": {
+-    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1/INPUT_MANIFEST.json",
++    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/INPUT_MANIFEST.json",
+     "sha256": "706b2e94b543e404c7a3ce6baee88d1736c61cf2ea4e9e491643af95e1fc1fb0",
+     "size_bytes": 15890
+   },
+   "code_manifest": {
+-    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1/code/CODE_MANIFEST.json",
+-    "sha256": "4e790e12efdcb133e5ae9aca2b797aa35455409d052aa3067a15be2b8fbc1ada",
+-    "size_bytes": 73446
++    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/code/CODE_MANIFEST.json",
++    "sha256": "6aebda83f18a1698e815d522866106a0e84eb1adf669b7d097131f3f858ac161",
++    "size_bytes": 73442
+   },
+   "external_sources": {
+-    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1/EXTERNAL_SOURCE_MANIFEST.json",
++    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/EXTERNAL_SOURCE_MANIFEST.json",
+     "sha256": "088c97a731211ccb51f989fe024fe608c1d005838c505d8335768788a75b768c",
+     "size_bytes": 15482
+   },
+   "command": {
+-    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1/commands/run_proposed_pv_offline.sh",
+-    "sha256": "e0fc48d89d97ac357008a17137c2082c3e73d2362f325c1875bc6ae4270a84be",
+-    "size_bytes": 348
++    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/commands/run_proposed_pv_offline.sh",
++    "sha256": "965dfc3fa5e11aebd4976d5d0b84a546f26341fd52ac7757df9109f35728a9b7",
++    "size_bytes": 344
+   },
+   "real_command": [
+-    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1/commands/run_proposed_pv_offline.sh",
++    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/commands/run_proposed_pv_offline.sh",
+     "NEW_RELEASE_JSON"
+   ],
+-  "required_release_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V1.json",
++  "required_release_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V2.json",
+   "device": {
+     "gpu_uuid": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe",
+     "gpu_index": 0,
+@@ -329,5 +329,10 @@
+     "D/G0 triggers",
+     "C10 execution and complete task outcomes"
+   ],
+-  "successful_output_is_task_success_sample": false
++  "successful_output_is_task_success_sample": false,
++  "authorization_identity": {
++    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/proposal/IDENTITY.json",
++    "sha256": "c0d73ea44eba6c02cfa730c68da774dba832de5bc9d99479ef50848e717534c7",
++    "size_bytes": 1714
++  }
+ }
+--- old/proposal/RELEASE_TEMPLATE.json
++++ new/proposal/RELEASE_TEMPLATE.json
+@@ -2,16 +2,16 @@
+   "status": "UNAUTHORIZED_TEMPLATE",
+   "issuer": "analysis",
+   "campaign_id": "corrector-sim-20260919",
+-  "task_id": "A10_PV_OFFLINE_PREFLIGHT_V1",
++  "task_id": "A10_PV_OFFLINE_PREFLIGHT_V2",
+   "task_revision": 1,
+   "node_role": "A",
+   "owner_host": "trial-303224955-trialrun-303224955-worker-0",
+-  "release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V1",
+-  "wave_id": "ANALYSIS_ASSIGN_UNIQUE",
+-  "run_id": "ANALYSIS_ASSIGN_UNIQUE",
+-  "shard_id": "ANALYSIS_ASSIGN_UNIQUE",
+-  "proposal_sha256": "11619dc4d5b8a4575a9d988de6f785f15368bfa4860e2948cef98847b70e55d9",
+-  "code_manifest_sha256": "4e790e12efdcb133e5ae9aca2b797aa35455409d052aa3067a15be2b8fbc1ada",
++  "release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V2",
++  "wave_id": "corrector-sim-20260919-A-PV-offline-V2-wave07",
++  "run_id": "A10_PV_OFFLINE_PREFLIGHT_V2_r1_A_wave07",
++  "shard_id": "A-PV-offline-V2-shelf-place-step0-cached-once",
++  "proposal_sha256": "9e7a80a211eba6a4e3c65bd2fb3764fe0fbd974c4190c9f2e77091c04a62e02c",
++  "code_manifest_sha256": "6aebda83f18a1698e815d522866106a0e84eb1adf669b7d097131f3f858ac161",
+   "input_manifest_sha256": "706b2e94b543e404c7a3ce6baee88d1736c61cf2ea4e9e491643af95e1fc1fb0",
+   "config_sha256": "109bfe6482e7491cb8ad6ef4821bf55b536f4d8f9a734fd0100e71ee516cd48b",
+   "external_source_manifest_sha256": "088c97a731211ccb51f989fe024fe608c1d005838c505d8335768788a75b768c",
+@@ -103,7 +103,7 @@
+   "kill_grace_seconds": 30,
+   "template_is_authorization": false,
+   "real_command": [
+-    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1/commands/run_proposed_pv_offline.sh",
+-    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V1.json"
++    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/commands/run_proposed_pv_offline.sh",
++    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V2.json"
+   ]
+ }
+--- old/proposal/CONTROL_REQUIRED.json
++++ new/proposal/CONTROL_REQUIRED.json
+@@ -3,12 +3,12 @@
+   "mode": "preflight",
+   "formal_gpu_runs_enabled": true,
+   "stop_requested": false,
+-  "active_compute_release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V1",
+-  "active_compute_release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V1.json",
++  "active_compute_release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V2",
++  "active_compute_release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V2.json",
+   "active_compute_task_ids": [
+-    "A10_PV_OFFLINE_PREFLIGHT_V1"
++    "A10_PV_OFFLINE_PREFLIGHT_V2"
+   ],
+-  "allowed_task_id_to_add": "A10_PV_OFFLINE_PREFLIGHT_V1",
++  "allowed_task_id_to_add": "A10_PV_OFFLINE_PREFLIGHT_V2",
+   "current_compute_limits": {
+     "simulator_attempts": 0,
+     "environment_instances": 0,
+@@ -78,7 +78,7 @@
+     "postprocessor_calls": 1
+   },
+   "per_task_compute_limits": {
+-    "A10_PV_OFFLINE_PREFLIGHT_V1": {
++    "A10_PV_OFFLINE_PREFLIGHT_V2": {
+       "simulator_attempts": 0,
+       "environment_instances": 0,
+       "wrapper_instances": 0,
+@@ -148,11 +148,21 @@
+     }
+   },
+   "board_task": {
+-    "id": "A10_PV_OFFLINE_PREFLIGHT_V1",
++    "id": "A10_PV_OFFLINE_PREFLIGHT_V2",
+     "owner": "A",
+     "revision": 1,
+     "status": "ready",
+-    "release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V1.json"
++    "release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V2.json",
++    "dependencies": [
++      "A10_PV_AUTH_METADATA_CPU_V1"
++    ],
++    "dependency_outcome_required": "CPU_metadata_package_accepted_and_independent_compute_release_published",
++    "brief": "tasks/A10_PV_OFFLINE_PREFLIGHT_V2.md",
++    "wave_id": "corrector-sim-20260919-A-PV-offline-V2-wave07",
++    "run_id": "A10_PV_OFFLINE_PREFLIGHT_V2_r1_A_wave07",
++    "shard_id": "A-PV-offline-V2-shelf-place-step0-cached-once",
++    "acknowledgement": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V2_ACK.json",
++    "expected_result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V2_RESULT.json"
+   },
+-  "analysis_must": "Publish new task and released identity; preserve all old closures. This file does not alter CONTROL or grant compute. Use replacement finite cap table; do not inherit CPU zero Torch/model limits."
++  "analysis_must": "Publish this complete board_task with status ready (running accepted after ACK); release status released. Preserve all old closures. This requirements file and UNAUTHORIZED_TEMPLATE do not grant compute. Replace global and task caps exactly; do not inherit CPU zero Torch/model limits. Run the pure JSON publication checker before dispatch. Use the prepared V2 run/wave/shard identity consistently."
+ }

@@ -1,0 +1,148 @@
+{
+  "backbone": "pi05",
+  "D": {
+    "members": [
+      241,
+      242
+    ],
+    "parameters_per_member": 4474116,
+    "width": 256,
+    "training_phases": {
+      "pretrain_steps": 1600,
+      "finetune_steps": 1600,
+      "batch_size": 64,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.0001,
+      "pair_weight": 1.0,
+      "local_fraction": 0.5,
+      "validation_every": 400
+    },
+    "natural_episodes": 300,
+    "natural_observations": 58092,
+    "natural_window_positions": 57792,
+    "local_anchors": 80,
+    "local_sources_with_reached_cut": 40,
+    "batch": {
+      "natural_windows": 64,
+      "local_groups": 16,
+      "branches_per_local_group": 4
+    },
+    "sample_scheme": "uniform episode then uniform t for natural; uniform local anchor group; both replacement",
+    "pretrain_equivalent_window_epochs": 1.7718715393133997,
+    "full_budget_cumulative_natural_equivalent_epochs": 3.5437430786267994,
+    "full_budget_local_equivalent_epochs": 320.0,
+    "deployed_cumulative_natural_equivalent_epochs": 2.2148394241417497,
+    "deployed_local_equivalent_epochs": 80.0,
+    "checkpoints": [
+      "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241/finetune_400.pt",
+      "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242/finetune_400.pt"
+    ]
+  },
+  "G0": {
+    "members": [
+      341,
+      342
+    ],
+    "parameters_per_member": 1468033,
+    "width": 128,
+    "updates_per_member": 1600,
+    "selected_steps": [
+      1000,
+      1200
+    ],
+    "batch_anchors": 16,
+    "training_anchors": 80,
+    "full_budget_equivalent_epochs": 320.0,
+    "selected_equivalent_epochs": [
+      200.0,
+      240.0
+    ],
+    "optimizer": "AdamW",
+    "lr": 0.0001,
+    "weight_decay": 0.001,
+    "clip_norm": 1,
+    "loss": "smooth_l1(beta=.1), mean of three fresh success rates minus old",
+    "checkpoints": [
+      "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_341/selected.pt",
+      "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_342/selected.pt"
+    ]
+  },
+  "Q": {
+    "train_config": {
+      "train_arrays": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/input_bundles/final_train600_input_v1/train/arrays.npz",
+      "train_rows": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/input_bundles/final_train600_input_v1/train/rows.json",
+      "preprocessing_only_assets": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/assets/critic",
+      "trainable_parameters": 7058,
+      "modules": [
+        "state",
+        "action",
+        "head",
+        "residual",
+        "advantage"
+      ],
+      "losses": [
+        "L00",
+        "L10",
+        "L01",
+        "L11"
+      ],
+      "fit_seeds": [
+        9101,
+        9102,
+        9103
+      ],
+      "members": [
+        1041,
+        1042,
+        1043,
+        1044
+      ],
+      "batch_size": 32,
+      "updates_per_fit": 4000,
+      "total_updates": 192000,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.01,
+      "clip_norm": 1.0,
+      "training_processes": 12,
+      "CPU_threads_per_process": 2,
+      "device": "cpu",
+      "paired_seed_domain": "corrector_fullQ_paired_v1",
+      "paired_key_excludes_loss": true,
+      "preprocessing_fields": [
+        "norm_mean",
+        "norm_std",
+        "residual_scale",
+        "visual_center",
+        "visual_basis",
+        "visual_scale",
+        "language_center",
+        "language_basis",
+        "language_scale"
+      ],
+      "old_network_parameters_loaded_into_new_model": false,
+      "fixed_last_update": true
+    },
+    "deployed_loss": "L11",
+    "deployed_fit": 9101,
+    "training_source_groups": 600,
+    "batch_sources": 32,
+    "steps_per_member": 4000,
+    "equivalent_source_epochs": 213.33333333333334,
+    "bootstrap": "per task source bootstrap then replacement minibatches",
+    "checkpoint_paths": [
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/training/s9101_m1041/L11/final.pt",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/training/s9101_m1042/L11/final.pt",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/training/s9101_m1043/L11/final.pt",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/training/s9101_m1044/L11/final.pt"
+    ]
+  },
+  "evidence": [
+    "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/config.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/audits/train.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241/complete.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242/complete.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_341/complete.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_342/complete.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/config/TRAIN.json"
+  ]
+}

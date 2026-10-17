@@ -1,0 +1,110 @@
+{
+  "schema": "corrector_deadline_stage_authorization_v1",
+  "campaign_id": "corrector-sim-20260919",
+  "authorization_id": "D24_SPRINT_V1",
+  "revision": 1,
+  "status": "released",
+  "issued_at_utc": "2026-09-21T15:24:25.621594+00:00",
+  "issuer": "analysis",
+  "user_basis": "2026-09-21: submission September24 20:00 Beijing; finish before September24 midnight; necessary algorithm adaptation authorized; strict consistency checks explicitly removed",
+  "plan": {
+    "path": "deadline_20260924/PLAN.md",
+    "sha256": "3accfc89bda466888275cd84dcfda72fd197f3be68e17a56c97a06ece7a78ac6"
+  },
+  "timezone": "Asia/Shanghai",
+  "submission_at_utc": "2026-09-24T12:00:00Z",
+  "new_experiment_admission_cutoff_utc": "2026-09-23T12:00:00Z",
+  "final_tables_due_utc": "2026-09-23T15:00:00Z",
+  "scientific_execution_authorized": true,
+  "per_job_analysis_approval_required": false,
+  "shared_queue_READY_required": false,
+  "strict_consistency_audit_required": false,
+  "legacy_closed_release_reuse_allowed": false,
+  "remaining475_pool_collection_admissions": false,
+  "formal_GPU_concurrency_target_per_node": 8,
+  "occupancy_policy": "formal job priority; own holder exits before same-GPU model/hardware entry; auxiliary idleGPU holder allowed and separately accounted",
+  "authorized_operations": [
+    "necessary algorithm/interface adaptation",
+    "lightweight detached queues and model-resident evaluation workers",
+    "existing-model baseline and method evaluation",
+    "listed small-network training and bounded development",
+    "X-VLA finite SFT",
+    "summary statistics and figures"
+  ],
+  "minimum_checks": [
+    "correct model and action dimension/units",
+    "fixed model/config/source IDs before comparison",
+    "no train-test mixing or test-guided model selection",
+    "actual terminal success/technical failures recorded separately",
+    "same-GPU own-holder handoff and no unrelated process termination"
+  ],
+  "removed_requirements": [
+    "all-file and per-frame hashes",
+    "full hidden-state/MJB equality proofs",
+    "million-event ledgers",
+    "repeated inventory/full CPU suites",
+    "independent GPU preflight before every experiment",
+    "all500pool prerequisite",
+    "strict common-final-training-pool prerequisite for external systems",
+    "complete generic queue/callback certification before useful computation"
+  ],
+  "retry_policy": "one corrected retry for a concretely diagnosed failed job/episode; distinct run ID; never rerun completed episodes or reuse consumed legacy claim",
+  "results_policy": "report actual sample count, training coverage and missing cells; transfer/operator-only results labeled as such; no fabricated Full or same-data claims",
+  "nodes": {
+    "A": {
+      "task_id": "A_D24_SPRINT_V1",
+      "owner_host": "trial-303224955-trialrun-303224955-worker-0",
+      "thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+      "priorities": [
+        "MT50 pi05 N H10 now",
+        "H10 N/R/Post/Velocity",
+        "H10/30/50 curve",
+        "H20/40 completion",
+        "incremental tables"
+      ],
+      "max_physical_rollout_attempts_total": 18000,
+      "max_new_development_parents": 40,
+      "max_new_development_rollout_attempts": 200,
+      "max_small_network_optimizer_updates_total": 200000,
+      "main_training_seed_count": 1,
+      "first_test_sources_per_MW_task": 10,
+      "max_test_sources_per_MW_task": 20,
+      "base_model_SFT_authorized": false
+    },
+    "B": {
+      "task_id": "B_D24_SPRINT_V1",
+      "owner_host": "trial-303225685-trialrun-303225685-worker-0",
+      "thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+      "priorities": [
+        "Smol50k and pi05LIBERO N now",
+        "E1 CPU fits in parallel",
+        "bounded X-VLA SFT",
+        "Smol/X Post and compatible LIBERO Post",
+        "E1/E6 and existing VLA-Corrector comparison",
+        "GAF and extension Velocity when implemented"
+      ],
+      "max_physical_rollout_attempts_total": 16000,
+      "max_small_network_optimizer_updates_total": 500000,
+      "E1_complete_training_seeds": [
+        9101,
+        9102,
+        9103
+      ],
+      "E1_jobs": 48,
+      "E1_optimizer_updates": 192000,
+      "GAF_optimizer_updates_max": 30000,
+      "X_VLA_optimizer_updates_max": 30000,
+      "X_VLA_training_wall_window_hours_max": 6,
+      "X_VLA_checkpoint_selection": "last complete saved checkpoint in fixed training window; actual step disclosed; never test-best",
+      "Smol_additional_SFT_authorized": false,
+      "pi05_LIBERO_additional_SFT_authorized": false,
+      "first_test_sources_per_task": 10,
+      "max_test_sources_per_task": 20,
+      "E8_new_development_parents_per_setting_max": 40,
+      "E8_new_development_rollouts_per_setting_max": 200
+    }
+  },
+  "cross_node_dependency": "A scientific runtime never waits B; B can use existing models/data and its own runners without A shared package",
+  "resource_admission": "one ordinary host/RAM/VRAM/storage check for intended jobs; no fresh benchmark/inventory requirement; use observed fit capacity, record actual concurrency; do not claim8 if fewer useful jobs",
+  "data_retention": "keep original data/weights and results; no new deletion permission"
+}

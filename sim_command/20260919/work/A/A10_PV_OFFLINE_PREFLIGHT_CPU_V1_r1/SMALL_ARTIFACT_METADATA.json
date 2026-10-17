@@ -1,0 +1,2357 @@
+{
+  "schema": "PV_CPU_metadata_v1",
+  "torch_imports": 0,
+  "model_loads": 0,
+  "dlopen": 0,
+  "Q": {
+    "0": {
+      "identity": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/models/refit/member_0/selected.pt",
+        "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/models/refit/member_0/selected.pt",
+        "size_bytes": 700300,
+        "sha256": "39bbbb9e2fa2cb14695c4ce31a9d91c806dfd690a888d2a9c44d9eb3bf0be129"
+      },
+      "tensors": {
+        "norm_mean": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "0",
+            "location": "cpu",
+            "numel": 4096
+          },
+          "storage_offset": 0,
+          "shape": [
+            4096
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "d360bbd03acf404d15478d813faee6821f8cd3679916508509f1836875c779d2",
+          "finite": true,
+          "min": -252.422607421875,
+          "max": 334.2127990722656
+        },
+        "norm_std": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "1",
+            "location": "cpu",
+            "numel": 4096
+          },
+          "storage_offset": 0,
+          "shape": [
+            4096
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "39b7c67995b38e802f9e9d0fdc4f269563332ba72cc260feeb408c5582459b2f",
+          "finite": true,
+          "min": 12.710528373718262,
+          "max": 63.0966682434082
+        },
+        "residual_scale": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "2",
+            "location": "cpu",
+            "numel": 4
+          },
+          "storage_offset": 0,
+          "shape": [
+            4
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "e2a7f1d70152edafe737b3abec70709921bdc0fe6cb25681f206017de67bd718",
+          "finite": true,
+          "min": 0.15000000596046448,
+          "max": 0.4000000059604645
+        },
+        "visual_center": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "3",
+            "location": "cpu",
+            "numel": 8192
+          },
+          "storage_offset": 0,
+          "shape": [
+            8192
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "9171213bedf09333eb97da1ddf0115a834399a351af99573f745b3a1c1143ec9",
+          "finite": true,
+          "min": -1.768281102180481,
+          "max": 1.7227994203567505
+        },
+        "visual_basis": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "4",
+            "location": "cpu",
+            "numel": 131072
+          },
+          "storage_offset": 0,
+          "shape": [
+            8192,
+            16
+          ],
+          "stride": [
+            16,
+            1
+          ],
+          "storage_sha256": "f50f5eee5fd912fb78a02da68dfb87f8e47ed94bf2e14612a8cd47670bd1ef78",
+          "finite": true,
+          "min": -0.06478940695524216,
+          "max": 0.054315753281116486
+        },
+        "visual_scale": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "5",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "552931a1f5d7b482dea0464ecb9c35ae0f5d5437ed6333c52eef76957ce1755d",
+          "finite": true,
+          "min": 5.8228044509887695,
+          "max": 45.654842376708984
+        },
+        "language_center": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "6",
+            "location": "cpu",
+            "numel": 2048
+          },
+          "storage_offset": 0,
+          "shape": [
+            2048
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "eeb66be6014c3abd41abb7a98336d4a22930fd2762e71db699e023396e262552",
+          "finite": true,
+          "min": -13.45755386352539,
+          "max": 7.5667724609375
+        },
+        "language_basis": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "7",
+            "location": "cpu",
+            "numel": 16384
+          },
+          "storage_offset": 0,
+          "shape": [
+            2048,
+            8
+          ],
+          "stride": [
+            8,
+            1
+          ],
+          "storage_sha256": "8b84201425d2ca1b9b2623e81472a445155bf83a1d3bfd32c2dd0d903e1fc984",
+          "finite": true,
+          "min": -0.535080075263977,
+          "max": 0.7786893844604492
+        },
+        "language_scale": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "8",
+            "location": "cpu",
+            "numel": 8
+          },
+          "storage_offset": 0,
+          "shape": [
+            8
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "7e95099602ee948f5142b103c5eeee349da78c727b5298689f4f5bececf0ad6c",
+          "finite": true,
+          "min": 0.0010000000474974513,
+          "max": 2.8097007274627686
+        },
+        "state.0.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "9",
+            "location": "cpu",
+            "numel": 1952
+          },
+          "storage_offset": 0,
+          "shape": [
+            32,
+            61
+          ],
+          "stride": [
+            61,
+            1
+          ],
+          "storage_sha256": "6f3b56d83386f879ce4c63824ec7ae305322ebff338a30356c17e095c1702580"
+        },
+        "state.0.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "10",
+            "location": "cpu",
+            "numel": 32
+          },
+          "storage_offset": 0,
+          "shape": [
+            32
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "e5e4aca19907af455438b1e9a7e048a10c00f56f38047e4fa0066353118cc5de"
+        },
+        "state.2.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "11",
+            "location": "cpu",
+            "numel": 512
+          },
+          "storage_offset": 0,
+          "shape": [
+            16,
+            32
+          ],
+          "stride": [
+            32,
+            1
+          ],
+          "storage_sha256": "7e98d70798e4afeb209b0926d0d37b9940f77f8e64684dd8e9d2017726999ce7"
+        },
+        "state.2.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "12",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "bd62b60d4c3320e54c2750972699254b1cafe0b99cd42507ae67f00cc7a7cc25"
+        },
+        "action.0.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "13",
+            "location": "cpu",
+            "numel": 640
+          },
+          "storage_offset": 0,
+          "shape": [
+            16,
+            40
+          ],
+          "stride": [
+            40,
+            1
+          ],
+          "storage_sha256": "44844c5f951d06205f62bdf3fd6800fa7c9b92cc63b682e44084e1a40005f92a"
+        },
+        "action.0.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "14",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "aaf034301a53c152d1a5c66b2b31270d6bcd3d43c2a40a906e5118665a4a3324"
+        },
+        "action.2.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "15",
+            "location": "cpu",
+            "numel": 256
+          },
+          "storage_offset": 0,
+          "shape": [
+            16,
+            16
+          ],
+          "stride": [
+            16,
+            1
+          ],
+          "storage_sha256": "77dd2334441bbda4a93fba0f65ac5d668064c8488cd855d751e804193403fa6b"
+        },
+        "action.2.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "16",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "200addbb78b8395cbb4f7df76a9bb5a16a9e305e5788712983dc3be47dc71b19"
+        },
+        "residual.0.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "17",
+            "location": "cpu",
+            "numel": 640
+          },
+          "storage_offset": 0,
+          "shape": [
+            16,
+            40
+          ],
+          "stride": [
+            40,
+            1
+          ],
+          "storage_sha256": "ded6d4fe6f2d06689e8b77ff86ecc11a8fe1a6f48663550f1cf44ee8195c79f8"
+        },
+        "residual.0.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "18",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "5f8adc99e3776aeb467a519bc91c0b81a03b25fffe262e319a2e079b92674300"
+        },
+        "residual.2.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "19",
+            "location": "cpu",
+            "numel": 256
+          },
+          "storage_offset": 0,
+          "shape": [
+            16,
+            16
+          ],
+          "stride": [
+            16,
+            1
+          ],
+          "storage_sha256": "dd8abb3d101f0ec172d3d1334eab647a85610db6b409721b188db94e71382210"
+        },
+        "residual.2.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "20",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "091af8d43cf4df44825c29cb4000595e085c278671a2427570652eac1ec47dc3"
+        },
+        "head.0.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "21",
+            "location": "cpu",
+            "numel": 1024
+          },
+          "storage_offset": 0,
+          "shape": [
+            32,
+            32
+          ],
+          "stride": [
+            32,
+            1
+          ],
+          "storage_sha256": "f27fe941de9e6c9c04d8c175348b716ccea73ab02734c440b750bff6fcac48a9"
+        },
+        "head.0.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "22",
+            "location": "cpu",
+            "numel": 32
+          },
+          "storage_offset": 0,
+          "shape": [
+            32
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "b3d1a7ec27a79257ccdf7c8dbb40b01d1d894dd3dec4c91ec6010636e4467051"
+        },
+        "head.2.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "23",
+            "location": "cpu",
+            "numel": 32
+          },
+          "storage_offset": 0,
+          "shape": [
+            1,
+            32
+          ],
+          "stride": [
+            32,
+            1
+          ],
+          "storage_sha256": "3b2a698d14e76dbaad4686bde4ea7084cbdfe17e4713e459b91868916fe464b9"
+        },
+        "head.2.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "24",
+            "location": "cpu",
+            "numel": 1
+          },
+          "storage_offset": 0,
+          "shape": [
+            1
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "da1917ef3f648288087cd09e9813fb24010846c87712d04338befa6950381483"
+        },
+        "advantage.0.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "25",
+            "location": "cpu",
+            "numel": 1536
+          },
+          "storage_offset": 0,
+          "shape": [
+            32,
+            48
+          ],
+          "stride": [
+            48,
+            1
+          ],
+          "storage_sha256": "a44f32a6a2e8d3dd9fb93c0dc04c550b97f9ab147a07be8b832315bcec6cee85"
+        },
+        "advantage.0.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "26",
+            "location": "cpu",
+            "numel": 32
+          },
+          "storage_offset": 0,
+          "shape": [
+            32
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "d1d8ee7acf67e0577a36114794d4ae380670d506c120c8e25b584bf07fad63bb"
+        },
+        "advantage.2.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "27",
+            "location": "cpu",
+            "numel": 32
+          },
+          "storage_offset": 0,
+          "shape": [
+            1,
+            32
+          ],
+          "stride": [
+            32,
+            1
+          ],
+          "storage_sha256": "55a088b47359c8dbe502cf1e7e1eeb32c4dcb9999b30b6aefd9963ea56e87b9b"
+        },
+        "advantage.2.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "28",
+            "location": "cpu",
+            "numel": 1
+          },
+          "storage_offset": 0,
+          "shape": [
+            1
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "2f62e6ce9d73c31fe3e9be5c69db2e3fc9e73986ddd355982c0a9a1e543ce956"
+        }
+      }
+    },
+    "1": {
+      "identity": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/models/refit/member_1/selected.pt",
+        "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/models/refit/member_1/selected.pt",
+        "size_bytes": 700300,
+        "sha256": "dab0dd69ad2bd4a132aede8c37ae4734cac2c12d7533d1c96cc058e1b52bad1d"
+      },
+      "tensors": {
+        "norm_mean": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "0",
+            "location": "cpu",
+            "numel": 4096
+          },
+          "storage_offset": 0,
+          "shape": [
+            4096
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "d360bbd03acf404d15478d813faee6821f8cd3679916508509f1836875c779d2",
+          "finite": true,
+          "min": -252.422607421875,
+          "max": 334.2127990722656
+        },
+        "norm_std": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "1",
+            "location": "cpu",
+            "numel": 4096
+          },
+          "storage_offset": 0,
+          "shape": [
+            4096
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "39b7c67995b38e802f9e9d0fdc4f269563332ba72cc260feeb408c5582459b2f",
+          "finite": true,
+          "min": 12.710528373718262,
+          "max": 63.0966682434082
+        },
+        "residual_scale": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "2",
+            "location": "cpu",
+            "numel": 4
+          },
+          "storage_offset": 0,
+          "shape": [
+            4
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "e2a7f1d70152edafe737b3abec70709921bdc0fe6cb25681f206017de67bd718",
+          "finite": true,
+          "min": 0.15000000596046448,
+          "max": 0.4000000059604645
+        },
+        "visual_center": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "3",
+            "location": "cpu",
+            "numel": 8192
+          },
+          "storage_offset": 0,
+          "shape": [
+            8192
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "9171213bedf09333eb97da1ddf0115a834399a351af99573f745b3a1c1143ec9",
+          "finite": true,
+          "min": -1.768281102180481,
+          "max": 1.7227994203567505
+        },
+        "visual_basis": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "4",
+            "location": "cpu",
+            "numel": 131072
+          },
+          "storage_offset": 0,
+          "shape": [
+            8192,
+            16
+          ],
+          "stride": [
+            16,
+            1
+          ],
+          "storage_sha256": "f50f5eee5fd912fb78a02da68dfb87f8e47ed94bf2e14612a8cd47670bd1ef78",
+          "finite": true,
+          "min": -0.06478940695524216,
+          "max": 0.054315753281116486
+        },
+        "visual_scale": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "5",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "552931a1f5d7b482dea0464ecb9c35ae0f5d5437ed6333c52eef76957ce1755d",
+          "finite": true,
+          "min": 5.8228044509887695,
+          "max": 45.654842376708984
+        },
+        "language_center": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "6",
+            "location": "cpu",
+            "numel": 2048
+          },
+          "storage_offset": 0,
+          "shape": [
+            2048
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "eeb66be6014c3abd41abb7a98336d4a22930fd2762e71db699e023396e262552",
+          "finite": true,
+          "min": -13.45755386352539,
+          "max": 7.5667724609375
+        },
+        "language_basis": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "7",
+            "location": "cpu",
+            "numel": 16384
+          },
+          "storage_offset": 0,
+          "shape": [
+            2048,
+            8
+          ],
+          "stride": [
+            8,
+            1
+          ],
+          "storage_sha256": "8b84201425d2ca1b9b2623e81472a445155bf83a1d3bfd32c2dd0d903e1fc984",
+          "finite": true,
+          "min": -0.535080075263977,
+          "max": 0.7786893844604492
+        },
+        "language_scale": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "8",
+            "location": "cpu",
+            "numel": 8
+          },
+          "storage_offset": 0,
+          "shape": [
+            8
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "7e95099602ee948f5142b103c5eeee349da78c727b5298689f4f5bececf0ad6c",
+          "finite": true,
+          "min": 0.0010000000474974513,
+          "max": 2.8097007274627686
+        },
+        "state.0.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "9",
+            "location": "cpu",
+            "numel": 1952
+          },
+          "storage_offset": 0,
+          "shape": [
+            32,
+            61
+          ],
+          "stride": [
+            61,
+            1
+          ],
+          "storage_sha256": "edeafe464333868445a1e387c97d4a9d4ae1cec58e52045cc15ecf1fcedbbad1"
+        },
+        "state.0.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "10",
+            "location": "cpu",
+            "numel": 32
+          },
+          "storage_offset": 0,
+          "shape": [
+            32
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "0db3ff46c6f7d7bf74fad7af1174b9025dc22616f757f814947f1d3ac2715d57"
+        },
+        "state.2.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "11",
+            "location": "cpu",
+            "numel": 512
+          },
+          "storage_offset": 0,
+          "shape": [
+            16,
+            32
+          ],
+          "stride": [
+            32,
+            1
+          ],
+          "storage_sha256": "229eb2a68fe38ecea356299e0f4244b8ee945ee315431dc81850d493de814edf"
+        },
+        "state.2.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "12",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "ca300707aa0d78edf98c6c642440538684c13a1668acb3ac3129b25a551bbcc2"
+        },
+        "action.0.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "13",
+            "location": "cpu",
+            "numel": 640
+          },
+          "storage_offset": 0,
+          "shape": [
+            16,
+            40
+          ],
+          "stride": [
+            40,
+            1
+          ],
+          "storage_sha256": "b5faf7d4f9c0e7397a36f914541ab2cd5853dbf7ef8a35525020a3fad9388b4f"
+        },
+        "action.0.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "14",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "060de9a65f61820bc1b8ebcf1ec0d5bf61f0a0e114767207a9ee81ee34878b49"
+        },
+        "action.2.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "15",
+            "location": "cpu",
+            "numel": 256
+          },
+          "storage_offset": 0,
+          "shape": [
+            16,
+            16
+          ],
+          "stride": [
+            16,
+            1
+          ],
+          "storage_sha256": "b7cb04bff605690fa97e453519a5449efc58e10bd09cbddbad94053e0fa183e2"
+        },
+        "action.2.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "16",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "d9c4e50bc8db6dd689073eb0d85cbc57f2ae7978f7e69ae84eb790eaaeb67da0"
+        },
+        "residual.0.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "17",
+            "location": "cpu",
+            "numel": 640
+          },
+          "storage_offset": 0,
+          "shape": [
+            16,
+            40
+          ],
+          "stride": [
+            40,
+            1
+          ],
+          "storage_sha256": "c91206c5292fd1de7bebab7f2169fe3a2c08cfcb8e0a279810ef1b93052bb355"
+        },
+        "residual.0.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "18",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "66a72a67e93b5621601fcf938a017048c56eeaabaa6470d5f6f89b3b3650c8a1"
+        },
+        "residual.2.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "19",
+            "location": "cpu",
+            "numel": 256
+          },
+          "storage_offset": 0,
+          "shape": [
+            16,
+            16
+          ],
+          "stride": [
+            16,
+            1
+          ],
+          "storage_sha256": "c43d86ef8775b5def159033a6eaea70592ed37ead7aa463b7e7d3fe0329a5bad"
+        },
+        "residual.2.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "20",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "ceaa9671897889a31639b05bc6fddf6463848754b909cc080ab3111d8ec2dbae"
+        },
+        "head.0.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "21",
+            "location": "cpu",
+            "numel": 1024
+          },
+          "storage_offset": 0,
+          "shape": [
+            32,
+            32
+          ],
+          "stride": [
+            32,
+            1
+          ],
+          "storage_sha256": "d98c6deba81c86d189ae65590a422095c1bb7399f50863c30a9f7a3b63552d1b"
+        },
+        "head.0.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "22",
+            "location": "cpu",
+            "numel": 32
+          },
+          "storage_offset": 0,
+          "shape": [
+            32
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "7257625a3aee17feb4ddb91e2f6938ea091ad50961443d6a669a883b0f39a0b6"
+        },
+        "head.2.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "23",
+            "location": "cpu",
+            "numel": 32
+          },
+          "storage_offset": 0,
+          "shape": [
+            1,
+            32
+          ],
+          "stride": [
+            32,
+            1
+          ],
+          "storage_sha256": "482a8ef384cedeb7a5d96532d555205c85be43119e984afb341a1de86c9f9396"
+        },
+        "head.2.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "24",
+            "location": "cpu",
+            "numel": 1
+          },
+          "storage_offset": 0,
+          "shape": [
+            1
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "71fb0b404eef83475b88bd25417a670cf959ce3f16d4bdcaf6c6c70db3385ed7"
+        },
+        "advantage.0.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "25",
+            "location": "cpu",
+            "numel": 1536
+          },
+          "storage_offset": 0,
+          "shape": [
+            32,
+            48
+          ],
+          "stride": [
+            48,
+            1
+          ],
+          "storage_sha256": "d2bae341f690d1e4da57b1a4cc1d4dd01f5606118b6d4bbff1b29d855928ce31"
+        },
+        "advantage.0.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "26",
+            "location": "cpu",
+            "numel": 32
+          },
+          "storage_offset": 0,
+          "shape": [
+            32
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "cce6ba5ae6165a0c2a49addc51254dcc5b9a6902414b06d416888b3378b8b02c"
+        },
+        "advantage.2.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "27",
+            "location": "cpu",
+            "numel": 32
+          },
+          "storage_offset": 0,
+          "shape": [
+            1,
+            32
+          ],
+          "stride": [
+            32,
+            1
+          ],
+          "storage_sha256": "9bac65a50b635a38b960fb189e18d82d3c6b94ffea3b26d9d1f6d4144fe67d79"
+        },
+        "advantage.2.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "28",
+            "location": "cpu",
+            "numel": 1
+          },
+          "storage_offset": 0,
+          "shape": [
+            1
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "aff14fb57b3b03e226781b4659389e8daef273ef559bf0f10a1df14f7c1ceeea"
+        }
+      }
+    },
+    "2": {
+      "identity": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/models/refit/member_2/selected.pt",
+        "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/models/refit/member_2/selected.pt",
+        "size_bytes": 700300,
+        "sha256": "ce2a29d123d1c3eea25b90ba0999cacc793ad25346709a94d6b52cf92a8ffca2"
+      },
+      "tensors": {
+        "norm_mean": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "0",
+            "location": "cpu",
+            "numel": 4096
+          },
+          "storage_offset": 0,
+          "shape": [
+            4096
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "d360bbd03acf404d15478d813faee6821f8cd3679916508509f1836875c779d2",
+          "finite": true,
+          "min": -252.422607421875,
+          "max": 334.2127990722656
+        },
+        "norm_std": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "1",
+            "location": "cpu",
+            "numel": 4096
+          },
+          "storage_offset": 0,
+          "shape": [
+            4096
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "39b7c67995b38e802f9e9d0fdc4f269563332ba72cc260feeb408c5582459b2f",
+          "finite": true,
+          "min": 12.710528373718262,
+          "max": 63.0966682434082
+        },
+        "residual_scale": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "2",
+            "location": "cpu",
+            "numel": 4
+          },
+          "storage_offset": 0,
+          "shape": [
+            4
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "e2a7f1d70152edafe737b3abec70709921bdc0fe6cb25681f206017de67bd718",
+          "finite": true,
+          "min": 0.15000000596046448,
+          "max": 0.4000000059604645
+        },
+        "visual_center": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "3",
+            "location": "cpu",
+            "numel": 8192
+          },
+          "storage_offset": 0,
+          "shape": [
+            8192
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "9171213bedf09333eb97da1ddf0115a834399a351af99573f745b3a1c1143ec9",
+          "finite": true,
+          "min": -1.768281102180481,
+          "max": 1.7227994203567505
+        },
+        "visual_basis": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "4",
+            "location": "cpu",
+            "numel": 131072
+          },
+          "storage_offset": 0,
+          "shape": [
+            8192,
+            16
+          ],
+          "stride": [
+            16,
+            1
+          ],
+          "storage_sha256": "f50f5eee5fd912fb78a02da68dfb87f8e47ed94bf2e14612a8cd47670bd1ef78",
+          "finite": true,
+          "min": -0.06478940695524216,
+          "max": 0.054315753281116486
+        },
+        "visual_scale": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "5",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "552931a1f5d7b482dea0464ecb9c35ae0f5d5437ed6333c52eef76957ce1755d",
+          "finite": true,
+          "min": 5.8228044509887695,
+          "max": 45.654842376708984
+        },
+        "language_center": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "6",
+            "location": "cpu",
+            "numel": 2048
+          },
+          "storage_offset": 0,
+          "shape": [
+            2048
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "eeb66be6014c3abd41abb7a98336d4a22930fd2762e71db699e023396e262552",
+          "finite": true,
+          "min": -13.45755386352539,
+          "max": 7.5667724609375
+        },
+        "language_basis": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "7",
+            "location": "cpu",
+            "numel": 16384
+          },
+          "storage_offset": 0,
+          "shape": [
+            2048,
+            8
+          ],
+          "stride": [
+            8,
+            1
+          ],
+          "storage_sha256": "8b84201425d2ca1b9b2623e81472a445155bf83a1d3bfd32c2dd0d903e1fc984",
+          "finite": true,
+          "min": -0.535080075263977,
+          "max": 0.7786893844604492
+        },
+        "language_scale": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "8",
+            "location": "cpu",
+            "numel": 8
+          },
+          "storage_offset": 0,
+          "shape": [
+            8
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "7e95099602ee948f5142b103c5eeee349da78c727b5298689f4f5bececf0ad6c",
+          "finite": true,
+          "min": 0.0010000000474974513,
+          "max": 2.8097007274627686
+        },
+        "state.0.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "9",
+            "location": "cpu",
+            "numel": 1952
+          },
+          "storage_offset": 0,
+          "shape": [
+            32,
+            61
+          ],
+          "stride": [
+            61,
+            1
+          ],
+          "storage_sha256": "98039c4e8551dae517b722e4f1b9215c1050ad83d2639abd82856350db2fe9bf"
+        },
+        "state.0.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "10",
+            "location": "cpu",
+            "numel": 32
+          },
+          "storage_offset": 0,
+          "shape": [
+            32
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "1fb6603dcc8383f2e935ac3688f5facd84c88378779204f80837118e93e52b31"
+        },
+        "state.2.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "11",
+            "location": "cpu",
+            "numel": 512
+          },
+          "storage_offset": 0,
+          "shape": [
+            16,
+            32
+          ],
+          "stride": [
+            32,
+            1
+          ],
+          "storage_sha256": "351b8226b03491cab7b88dcf0fb9cf9a3a5669c6ebba8c26f473ffde02a34a9c"
+        },
+        "state.2.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "12",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "f5233b49f4754ec8387477e66d477a04b62d51799eb1a44d6e4164e81fe94bf3"
+        },
+        "action.0.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "13",
+            "location": "cpu",
+            "numel": 640
+          },
+          "storage_offset": 0,
+          "shape": [
+            16,
+            40
+          ],
+          "stride": [
+            40,
+            1
+          ],
+          "storage_sha256": "20754c152a4c487f933a8202969197f6d7f2f4d2bd93ae0e4a5f3b18d76f920c"
+        },
+        "action.0.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "14",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "679a951e19a61060f69aa3051e3f384218f8bb1553418edb6c97095c8b6414a4"
+        },
+        "action.2.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "15",
+            "location": "cpu",
+            "numel": 256
+          },
+          "storage_offset": 0,
+          "shape": [
+            16,
+            16
+          ],
+          "stride": [
+            16,
+            1
+          ],
+          "storage_sha256": "f3d2a2c37c5a95b21406cabbda3ce9d5a0879a55970e7a7ca0fdd85b4b7dbc15"
+        },
+        "action.2.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "16",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "4ac5920a819a00c5c0973ffaec0557bd4f91a3d9d71581ace0f9045951f92b60"
+        },
+        "residual.0.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "17",
+            "location": "cpu",
+            "numel": 640
+          },
+          "storage_offset": 0,
+          "shape": [
+            16,
+            40
+          ],
+          "stride": [
+            40,
+            1
+          ],
+          "storage_sha256": "d4d7f8b3a6e4adaafd883a99910f27d00fbd729366936ea208783171decc8b48"
+        },
+        "residual.0.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "18",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "9420b975cd655fff7d0e8922a3fe0a58247389d664aa67ae982ab972afffcf98"
+        },
+        "residual.2.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "19",
+            "location": "cpu",
+            "numel": 256
+          },
+          "storage_offset": 0,
+          "shape": [
+            16,
+            16
+          ],
+          "stride": [
+            16,
+            1
+          ],
+          "storage_sha256": "4f34ec7f2503e17ec3081b5d57db6b6ab352749b834f61bc82722bcf6b75b894"
+        },
+        "residual.2.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "20",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "e24b00d7eaf0da9f1d9508ee5968b9839b3293d4ccff77306c68486910dc55b2"
+        },
+        "head.0.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "21",
+            "location": "cpu",
+            "numel": 1024
+          },
+          "storage_offset": 0,
+          "shape": [
+            32,
+            32
+          ],
+          "stride": [
+            32,
+            1
+          ],
+          "storage_sha256": "bbf2991f71d8d05c47909584dfc2f6f52e3128f68a77582e7521f55ea50bd08b"
+        },
+        "head.0.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "22",
+            "location": "cpu",
+            "numel": 32
+          },
+          "storage_offset": 0,
+          "shape": [
+            32
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "f7b8b9dc91189dbaffff890bdb7c031a4a0edeb124d633332e5748b270e04c1d"
+        },
+        "head.2.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "23",
+            "location": "cpu",
+            "numel": 32
+          },
+          "storage_offset": 0,
+          "shape": [
+            1,
+            32
+          ],
+          "stride": [
+            32,
+            1
+          ],
+          "storage_sha256": "17913d3f43c063dd3a35b66d377c66e3c7b9c9e9b4b8eb572cb10801018605b5"
+        },
+        "head.2.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "24",
+            "location": "cpu",
+            "numel": 1
+          },
+          "storage_offset": 0,
+          "shape": [
+            1
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "3ebcd8a59a4f0e0d0452d43537fc5804337f4f60a14710c07c4e6553b63d33b0"
+        },
+        "advantage.0.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "25",
+            "location": "cpu",
+            "numel": 1536
+          },
+          "storage_offset": 0,
+          "shape": [
+            32,
+            48
+          ],
+          "stride": [
+            48,
+            1
+          ],
+          "storage_sha256": "3623a69a938e141c5a29040b50a64660546fe8c20ff887f75089a41b4757b3c1"
+        },
+        "advantage.0.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "26",
+            "location": "cpu",
+            "numel": 32
+          },
+          "storage_offset": 0,
+          "shape": [
+            32
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "3710c9e02789106755fe6465ad9d5964c48a7b1442d313358075590c0be66516"
+        },
+        "advantage.2.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "27",
+            "location": "cpu",
+            "numel": 32
+          },
+          "storage_offset": 0,
+          "shape": [
+            1,
+            32
+          ],
+          "stride": [
+            32,
+            1
+          ],
+          "storage_sha256": "01a8570a565b416a123e9adcab173155c0ab5ea2f63bed543b98684155894a99"
+        },
+        "advantage.2.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "28",
+            "location": "cpu",
+            "numel": 1
+          },
+          "storage_offset": 0,
+          "shape": [
+            1
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "703d7c1b36ef366e6fd83c01b58afa34b61ba8aff02fa538b44aea508e4e3212"
+        }
+      }
+    },
+    "3": {
+      "identity": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/models/refit/member_3/selected.pt",
+        "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/models/refit/member_3/selected.pt",
+        "size_bytes": 700300,
+        "sha256": "178c052783502646085fdb78be115e54d6d7ffc1225dac9af24d1cc64cafebf9"
+      },
+      "tensors": {
+        "norm_mean": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "0",
+            "location": "cpu",
+            "numel": 4096
+          },
+          "storage_offset": 0,
+          "shape": [
+            4096
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "d360bbd03acf404d15478d813faee6821f8cd3679916508509f1836875c779d2",
+          "finite": true,
+          "min": -252.422607421875,
+          "max": 334.2127990722656
+        },
+        "norm_std": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "1",
+            "location": "cpu",
+            "numel": 4096
+          },
+          "storage_offset": 0,
+          "shape": [
+            4096
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "39b7c67995b38e802f9e9d0fdc4f269563332ba72cc260feeb408c5582459b2f",
+          "finite": true,
+          "min": 12.710528373718262,
+          "max": 63.0966682434082
+        },
+        "residual_scale": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "2",
+            "location": "cpu",
+            "numel": 4
+          },
+          "storage_offset": 0,
+          "shape": [
+            4
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "e2a7f1d70152edafe737b3abec70709921bdc0fe6cb25681f206017de67bd718",
+          "finite": true,
+          "min": 0.15000000596046448,
+          "max": 0.4000000059604645
+        },
+        "visual_center": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "3",
+            "location": "cpu",
+            "numel": 8192
+          },
+          "storage_offset": 0,
+          "shape": [
+            8192
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "9171213bedf09333eb97da1ddf0115a834399a351af99573f745b3a1c1143ec9",
+          "finite": true,
+          "min": -1.768281102180481,
+          "max": 1.7227994203567505
+        },
+        "visual_basis": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "4",
+            "location": "cpu",
+            "numel": 131072
+          },
+          "storage_offset": 0,
+          "shape": [
+            8192,
+            16
+          ],
+          "stride": [
+            16,
+            1
+          ],
+          "storage_sha256": "f50f5eee5fd912fb78a02da68dfb87f8e47ed94bf2e14612a8cd47670bd1ef78",
+          "finite": true,
+          "min": -0.06478940695524216,
+          "max": 0.054315753281116486
+        },
+        "visual_scale": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "5",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "552931a1f5d7b482dea0464ecb9c35ae0f5d5437ed6333c52eef76957ce1755d",
+          "finite": true,
+          "min": 5.8228044509887695,
+          "max": 45.654842376708984
+        },
+        "language_center": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "6",
+            "location": "cpu",
+            "numel": 2048
+          },
+          "storage_offset": 0,
+          "shape": [
+            2048
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "eeb66be6014c3abd41abb7a98336d4a22930fd2762e71db699e023396e262552",
+          "finite": true,
+          "min": -13.45755386352539,
+          "max": 7.5667724609375
+        },
+        "language_basis": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "7",
+            "location": "cpu",
+            "numel": 16384
+          },
+          "storage_offset": 0,
+          "shape": [
+            2048,
+            8
+          ],
+          "stride": [
+            8,
+            1
+          ],
+          "storage_sha256": "8b84201425d2ca1b9b2623e81472a445155bf83a1d3bfd32c2dd0d903e1fc984",
+          "finite": true,
+          "min": -0.535080075263977,
+          "max": 0.7786893844604492
+        },
+        "language_scale": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "8",
+            "location": "cpu",
+            "numel": 8
+          },
+          "storage_offset": 0,
+          "shape": [
+            8
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "7e95099602ee948f5142b103c5eeee349da78c727b5298689f4f5bececf0ad6c",
+          "finite": true,
+          "min": 0.0010000000474974513,
+          "max": 2.8097007274627686
+        },
+        "state.0.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "9",
+            "location": "cpu",
+            "numel": 1952
+          },
+          "storage_offset": 0,
+          "shape": [
+            32,
+            61
+          ],
+          "stride": [
+            61,
+            1
+          ],
+          "storage_sha256": "1ea488b3fdffcb11b8a69229fad303533221f57d2234c51b5c5e07d7b11fb201"
+        },
+        "state.0.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "10",
+            "location": "cpu",
+            "numel": 32
+          },
+          "storage_offset": 0,
+          "shape": [
+            32
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "40fd662732f97cb5b9a92f0d62cf5d52978645394f46c4d930db0245ceed2aed"
+        },
+        "state.2.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "11",
+            "location": "cpu",
+            "numel": 512
+          },
+          "storage_offset": 0,
+          "shape": [
+            16,
+            32
+          ],
+          "stride": [
+            32,
+            1
+          ],
+          "storage_sha256": "940ce46d4c49a39146eb551fec6973515ecb90a6156067d855ed34fc045d1dc7"
+        },
+        "state.2.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "12",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "87e347b591133d34da485513b39c3fded729568209cd18438e7d00a49f94fa98"
+        },
+        "action.0.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "13",
+            "location": "cpu",
+            "numel": 640
+          },
+          "storage_offset": 0,
+          "shape": [
+            16,
+            40
+          ],
+          "stride": [
+            40,
+            1
+          ],
+          "storage_sha256": "1de0c4b33f503c008bfd59409357fb5cc994000327e1938b74b8d76c2c4e70ad"
+        },
+        "action.0.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "14",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "7d02effa615f9e549b67f488bbb443a975f8d2b82bf4e0e6e42fc51e995bac47"
+        },
+        "action.2.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "15",
+            "location": "cpu",
+            "numel": 256
+          },
+          "storage_offset": 0,
+          "shape": [
+            16,
+            16
+          ],
+          "stride": [
+            16,
+            1
+          ],
+          "storage_sha256": "369386a8ba39c7ed098a4eb4fa8199e053b4a12630539925761adf941bdfbdcb"
+        },
+        "action.2.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "16",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "f12a678859f4f6506f1755675b2dbe23dfa8444f062d1b8d5d22b5d55deda9c8"
+        },
+        "residual.0.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "17",
+            "location": "cpu",
+            "numel": 640
+          },
+          "storage_offset": 0,
+          "shape": [
+            16,
+            40
+          ],
+          "stride": [
+            40,
+            1
+          ],
+          "storage_sha256": "3ee325e604f4f9c145bcae779dfe450bc3b19cc183f5f4c6825ca58dadb24e1c"
+        },
+        "residual.0.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "18",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "03e7c2b879cff41feaa42bed701bf098d201d6fca84a1a85a450afff437fadd7"
+        },
+        "residual.2.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "19",
+            "location": "cpu",
+            "numel": 256
+          },
+          "storage_offset": 0,
+          "shape": [
+            16,
+            16
+          ],
+          "stride": [
+            16,
+            1
+          ],
+          "storage_sha256": "699b0ebfec860f2444d90599efa6619e3ed15b53849d7f3bb5db7d05dfa740d5"
+        },
+        "residual.2.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "20",
+            "location": "cpu",
+            "numel": 16
+          },
+          "storage_offset": 0,
+          "shape": [
+            16
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "f2946e0046e337d0b3c4530bbf55b24e16fa676e2cff606fd713ad6d8f70ebb7"
+        },
+        "head.0.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "21",
+            "location": "cpu",
+            "numel": 1024
+          },
+          "storage_offset": 0,
+          "shape": [
+            32,
+            32
+          ],
+          "stride": [
+            32,
+            1
+          ],
+          "storage_sha256": "27bc45d4c30ce0b2cec49d7474b45a4bfbc94c3ae4c6e78f55efd7b6c9148dc6"
+        },
+        "head.0.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "22",
+            "location": "cpu",
+            "numel": 32
+          },
+          "storage_offset": 0,
+          "shape": [
+            32
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "2e5ce40d70a73df7a8937d41748280015f122513479d5de48268273755d7b931"
+        },
+        "head.2.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "23",
+            "location": "cpu",
+            "numel": 32
+          },
+          "storage_offset": 0,
+          "shape": [
+            1,
+            32
+          ],
+          "stride": [
+            32,
+            1
+          ],
+          "storage_sha256": "f985c5f349c33f2a732dbca096b281c3c70314566d752df928c433a5b49f4e3f"
+        },
+        "head.2.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "24",
+            "location": "cpu",
+            "numel": 1
+          },
+          "storage_offset": 0,
+          "shape": [
+            1
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "c32e1e20a0d8c8cde3862d7fb99a0e40067be014c2658c42180f4d0721bde43c"
+        },
+        "advantage.0.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "25",
+            "location": "cpu",
+            "numel": 1536
+          },
+          "storage_offset": 0,
+          "shape": [
+            32,
+            48
+          ],
+          "stride": [
+            48,
+            1
+          ],
+          "storage_sha256": "ae220821cad65030d01666411171c4a963e79b3e9a669000138d56ad1fee87aa"
+        },
+        "advantage.0.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "26",
+            "location": "cpu",
+            "numel": 32
+          },
+          "storage_offset": 0,
+          "shape": [
+            32
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "16d75d4ef72a76943b982ecb11321ac0a7626a8c0d807d5c399a0f76ae99a3eb"
+        },
+        "advantage.2.weight": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "27",
+            "location": "cpu",
+            "numel": 32
+          },
+          "storage_offset": 0,
+          "shape": [
+            1,
+            32
+          ],
+          "stride": [
+            32,
+            1
+          ],
+          "storage_sha256": "ea9e35876add744469fcf5f3a42265971de5c41f92324898074913643471c3e5"
+        },
+        "advantage.2.bias": {
+          "storage": {
+            "dtype": "metadata_only_FloatStorage",
+            "key": "28",
+            "location": "cpu",
+            "numel": 1
+          },
+          "storage_offset": 0,
+          "shape": [
+            1
+          ],
+          "stride": [
+            1
+          ],
+          "storage_sha256": "c2459c490175d059b25cbd5c5ca41c91308ead109e6339d3b07c97829c7ee339"
+        }
+      }
+    }
+  },
+  "step0": {
+    "pixels.npy": {
+      "descr": "|u1",
+      "fortran_order": false,
+      "shape": [
+        480,
+        480,
+        3
+      ],
+      "data_sha256": "d109b7767bbaa958f20dc6a08999742a0b821654d11bbb3c98dc1ea24940223f",
+      "data_bytes": 691200
+    },
+    "proprioception.npy": {
+      "descr": "<f8",
+      "fortran_order": false,
+      "shape": [
+        4
+      ],
+      "data_sha256": "d07669099de0f2837950896a1ec106d6a905ad730a45ce725087ff31f4ffe9a7",
+      "data_bytes": 32
+    }
+  },
+  "raw": {
+    "header": {
+      "descr": "<f4",
+      "fortran_order": false,
+      "shape": [
+        5,
+        50,
+        4
+      ],
+      "data_sha256": "de25eaa8a246913cf61184bec4e38be2a946f6e78894c63f441979b2e82c2d22",
+      "data_bytes": 4000
+    },
+    "all_five_bit_equal": true,
+    "first_raw50_sha256": "2bc5fa612387cbce688a610fa2d3ba09ebc87b0f8dabd74be524f02234562464",
+    "slice_index": 0,
+    "bounded_anchor": "clip(raw_plans[0][:10],-1,1)",
+    "future_step1_read": false,
+    "full_internal_50x32_saved": false,
+    "full_internal_anchor_required": false
+  },
+  "normalizer": {
+    "identity": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model/policy_postprocessor_step_0_unnormalizer_processor.safetensors",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model/policy_postprocessor_step_0_unnormalizer_processor.safetensors",
+      "size_bytes": 10992,
+      "sha256": "4fff91faea9afc9208e5519088f2bc8fb9cb21102bfeec8a9b3f259863c5cf00"
+    },
+    "action": {
+      "action.count": {
+        "metadata": {
+          "dtype": "F32",
+          "shape": [
+            1
+          ],
+          "data_offsets": [
+            0,
+            4
+          ]
+        },
+        "values": [
+          204806.0
+        ]
+      },
+      "action.max": {
+        "metadata": {
+          "dtype": "F32",
+          "shape": [
+            4
+          ],
+          "data_offsets": [
+            4,
+            20
+          ]
+        },
+        "values": [
+          19.455713272094727,
+          12.468914985656738,
+          24.625469207763672,
+          1.0
+        ]
+      },
+      "action.mean": {
+        "metadata": {
+          "dtype": "F32",
+          "shape": [
+            4
+          ],
+          "data_offsets": [
+            20,
+            36
+          ]
+        },
+        "values": [
+          0.2547329068183899,
+          0.509698212146759,
+          -0.12689979374408722,
+          0.37601399421691895
+        ]
+      },
+      "action.min": {
+        "metadata": {
+          "dtype": "F32",
+          "shape": [
+            4
+          ],
+          "data_offsets": [
+            36,
+            52
+          ]
+        },
+        "values": [
+          -11.47459888458252,
+          -14.927048683166504,
+          -17.279014587402344,
+          -1.0
+        ]
+      },
+      "action.q01": {
+        "metadata": {
+          "dtype": "F32",
+          "shape": [
+            4
+          ],
+          "data_offsets": [
+            52,
+            68
+          ]
+        },
+        "values": [
+          -1.5353806018829346,
+          -1.3249585628509521,
+          -3.373821258544922,
+          -0.06166019290685654
+        ]
+      },
+      "action.q10": {
+        "metadata": {
+          "dtype": "F32",
+          "shape": [
+            4
+          ],
+          "data_offsets": [
+            68,
+            84
+          ]
+        },
+        "values": [
+          -0.9422012567520142,
+          -0.9179052710533142,
+          -2.4607884883880615,
+          0.006349900271743536
+        ]
+      },
+      "action.q50": {
+        "metadata": {
+          "dtype": "F32",
+          "shape": [
+            4
+          ],
+          "data_offsets": [
+            84,
+            100
+          ]
+        },
+        "values": [
+          0.15567804872989655,
+          0.3507966995239258,
+          -0.4984750747680664,
+          0.4647025465965271
+        ]
+      },
+      "action.q90": {
+        "metadata": {
+          "dtype": "F32",
+          "shape": [
+            4
+          ],
+          "data_offsets": [
+            100,
+            116
+          ]
+        },
+        "values": [
+          1.5446438789367676,
+          2.156794309616089,
+          2.503145456314087,
+          0.5436471700668335
+        ]
+      },
+      "action.q99": {
+        "metadata": {
+          "dtype": "F32",
+          "shape": [
+            4
+          ],
+          "data_offsets": [
+            116,
+            132
+          ]
+        },
+        "values": [
+          2.2434659004211426,
+          3.124026298522949,
+          3.2001125812530518,
+          0.5696560740470886
+        ]
+      },
+      "action.std": {
+        "metadata": {
+          "dtype": "F32",
+          "shape": [
+            4
+          ],
+          "data_offsets": [
+            132,
+            148
+          ]
+        },
+        "values": [
+          2.026134490966797,
+          2.0074992179870605,
+          3.3881943225860596,
+          0.7099483609199524
+        ]
+      }
+    }
+  },
+  "projection": {
+    "identity": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/projection.npy",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/projection.npy",
+      "size_bytes": 2097280,
+      "sha256": "c3b8173e5f01af3bd25c4f756811328d4728a2da778ad7ca81fcb088c0589062"
+    },
+    "header": {
+      "descr": "<f4",
+      "fortran_order": false,
+      "shape": [
+        2048,
+        256
+      ],
+      "data_sha256": "16b76c92408a58a99a163850ef38b1325d6f007d3430e77814bb1c58404a34fc",
+      "data_bytes": 2097152
+    }
+  },
+  "Q_support": "five-task A4000 compatibility diagnostic only; not MT50-trained",
+  "forbidden_read": "observation_step1.npz is not opened"
+}

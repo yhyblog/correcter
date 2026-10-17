@@ -1,0 +1,65 @@
+{
+  "task_id": "A_D24_VELOCITY_TRIGGER_MODES_V1",
+  "recovery": "r2",
+  "receipt_revision": 3,
+  "event_id": "D24_A_velocity_trigger_modes_recovery_r2_chain_terminal_v1",
+  "utc": "2026-09-22T11:54:39.541102+00:00",
+  "status": "PARTIAL_TERMINAL_MANAGER_EVIDENCE_SNAPSHOT_FAILURE",
+  "completed": false,
+  "raw_lifecycle_exit": 3,
+  "compute_complete": false,
+  "publication_completed": true,
+  "scientific_compute_this_handler": 0,
+  "total_actual_attempts": 1232,
+  "A_cumulative_attempts": 10592,
+  "valid_unique_terminals": 1216,
+  "unstarted_unique_units": 3776,
+  "unresolved_interruptions": 8,
+  "total_historical_interruption_records": 16,
+  "corrected_previous_interruptions": 8,
+  "new_interruptions": 8,
+  "all_claims_results_match_after_exit": true,
+  "all_owned_descendants_exited": true,
+  "holders_restored": 8,
+  "manager_failure": {
+    "message": "result without same source attempt claim",
+    "traceback": "Traceback (most recent call last):\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_VELOCITY_TRIGGER_MODES_V1_RECOVERY_r2/code/manager.py\", line 141, in main\n    if now-last_summary>=30:summarize(chain);last_summary=now\n                            ^^^^^^^^^^^^^^^^\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_VELOCITY_TRIGGER_MODES_V1_RECOVERY_r2/code/manager.py\", line 47, in summarize\n    jobs,attempts,claims,selected=load_evidence()\n                                  ^^^^^^^^^^^^^^^\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_VELOCITY_TRIGGER_MODES_V1_RECOVERY_r2/code/publication_data.py\", line 75, in load_evidence\n    if key not in claimed:raise EvidenceConflict('result without same source attempt claim')\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npublication_data.EvidenceConflict: result without same source attempt claim\n",
+    "type": "EvidenceConflict"
+  },
+  "report": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_VELOCITY_TRIGGER_MODES_V1_REPORT_r3.md",
+    "sha256": "dafb3ecfc7f3ffae3e81b8790187721498314ac3f49e8ada8b5fef418d2b5b73",
+    "size_bytes": 2651
+  },
+  "reconciliation": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_VELOCITY_TRIGGER_MODES_V1_RECOVERY_r2/notifications/chain_terminal/CPU_TERMINAL_RECONCILIATION.json",
+    "sha256": "0d95bbc1c10ceff09bb72ca72d47cb5513d3b2f9d585e0835692f0629153517b",
+    "size_bytes": 10821
+  },
+  "raw_result": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_VELOCITY_TRIGGER_MODES_V1_RECOVERY_r2/RESULT.json",
+    "sha256": "dc5fad8646c09a300c2f9247c08d0aa0fcdae90c58f022ad053c008c452ec948",
+    "size_bytes": 13589
+  },
+  "final_summary": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_VELOCITY_TRIGGER_MODES_V1_RECOVERY_r2/FINAL_SUMMARY.json",
+    "sha256": "00785d56a5c2beaaeb9ed6198c621c7b39a2a2d95b6ac365f4618ed6c90b3531",
+    "size_bytes": 9793
+  },
+  "resource_summary": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_VELOCITY_TRIGGER_MODES_V1_RECOVERY_r2/RESOURCE_SUMMARY.json",
+    "sha256": "fc05912eeb005337d270f50108fdf64e831b7ba557d8ed4393c852351116aab6",
+    "size_bytes": 57889
+  },
+  "publication": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_VELOCITY_TRIGGER_MODES_V1_RECOVERY_r2/PUBLICATION.json",
+    "sha256": "483d8b375748a28e1575710873f36027bcb12284da818856edfb0b73d3f572c1",
+    "size_bytes": 1108
+  },
+  "new_launches_this_handler": 0,
+  "configuration_changes": 0,
+  "next_actions": [
+    "Preserve1216 valid terminal units without replay; remaining3776 unentered and8 interrupted units explicitly recorded.",
+    "No recovery/configuration issued by this terminal handler."
+  ]
+}

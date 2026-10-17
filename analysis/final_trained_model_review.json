@@ -1,0 +1,338 @@
+{
+  "schema": "native10_final_trained_model_independent_review_v1",
+  "status": "passed",
+  "created_utc": "2026-09-17T00:41:43.868535+00:00",
+  "reviewer": "analysis/critic_data_audit",
+  "blockers": [],
+  "scope": "Bounded post-fit artifact, sealed preflight reuse and selected export/reload review. Reuses executor independent audit for all 56 member checkpoints; independently checks eight actual fit sampling records and twelve selected/initial/trained state dictionaries. No model evaluation or new checkpoint selection.",
+  "bindings": {
+    "model_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1",
+    "model_complete_sha256": "864c00cfa1cfcbcc8736a898ab22e5afa821f15afbe2b8dc687f7731f2eea83e",
+    "model_result_sha256": "ff4d7c11d81fb0c01617458f41c8e2d58645b3694ca0bc77ec56e56f3c35a1fd",
+    "executor_independent_audit_complete_sha256": "afa80b5e00286114be778607e1bf012654eaa8e3d1aa92e4c7dbcaac8b148809",
+    "executor_independent_audit_sha256": "38265eee5669fcc586b6393d97d0dc5210afd30dad02be7e862937e6b76015ba",
+    "prefit_binding": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1",
+      "seal_sha256": "eb1e39d4ee145ebecce9b16593a9c1fd901fd7dcc2a5c9e8746f657e4c202d3e",
+      "result_sha256": "d693a7d1fa4f1d5a0be4f2141966f35d97390e6e427c4c5cb6803bfc8791c79d"
+    },
+    "prefit_independent_review_sha256": "aa70cecf2c41f51fdff686449b9353a337cb10ff9890826822c44f253ea12b00",
+    "selected_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected",
+    "selected_complete_sha256": "f40ff4f3356ee8f14d687348f9f9cc7addf1b1e93233b81645312973f7e02d6a",
+    "selected_config_sha256": "cf85b5d033e3fb1dde64e5de4e0bdc5b00838a752f7e56bb3389137a4666ac0e",
+    "selected_ranking_sha256": "03bda2f021377e01e2608f541d0cde59ee3edc7b6dfe3bb50451a9003f0d62d7",
+    "selected_reload_audit_sha256": "b16b8183e6d6a69345375a266840afaffebf514873d62868f0327496bf795a92"
+  },
+  "selection": {
+    "path": "A",
+    "step": 4000,
+    "original_rule_preserved_by_sealed_executor_audit": true,
+    "compared_ensemble_checkpoints": 14,
+    "development_planned_denominator": 100,
+    "effective_development_cuts": 95,
+    "common_outcomes": 5,
+    "offline_gain": 0.045,
+    "offline_rescues": 23,
+    "offline_harms": 5,
+    "offline_gain_mse": 0.056607967428307496,
+    "interpretation": "Fixed-bank candidate-selection proxy on reused development data. Does not establish real flow-guidance gain or independent validation success."
+  },
+  "selected_models": [
+    {
+      "member": 0,
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/models/refit/member_0/selected.pt",
+      "sha256": "39bbbb9e2fa2cb14695c4ce31a9d91c806dfd690a888d2a9c44d9eb3bf0be129",
+      "exact_tensor_match_to_A4000_checkpoint": true,
+      "all_21_frozen_parameters_and_buffers_match_prefit": true,
+      "trainable_tensor_count": 8,
+      "changed_trainable_tensor_count": 8,
+      "all_finite": true
+    },
+    {
+      "member": 1,
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/models/refit/member_1/selected.pt",
+      "sha256": "dab0dd69ad2bd4a132aede8c37ae4734cac2c12d7533d1c96cc058e1b52bad1d",
+      "exact_tensor_match_to_A4000_checkpoint": true,
+      "all_21_frozen_parameters_and_buffers_match_prefit": true,
+      "trainable_tensor_count": 8,
+      "changed_trainable_tensor_count": 8,
+      "all_finite": true
+    },
+    {
+      "member": 2,
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/models/refit/member_2/selected.pt",
+      "sha256": "ce2a29d123d1c3eea25b90ba0999cacc793ad25346709a94d6b52cf92a8ffca2",
+      "exact_tensor_match_to_A4000_checkpoint": true,
+      "all_21_frozen_parameters_and_buffers_match_prefit": true,
+      "trainable_tensor_count": 8,
+      "changed_trainable_tensor_count": 8,
+      "all_finite": true
+    },
+    {
+      "member": 3,
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/models/refit/member_3/selected.pt",
+      "sha256": "178c052783502646085fdb78be115e54d6d7ffc1225dac9af24d1cc64cafebf9",
+      "exact_tensor_match_to_A4000_checkpoint": true,
+      "all_21_frozen_parameters_and_buffers_match_prefit": true,
+      "trainable_tensor_count": 8,
+      "changed_trainable_tensor_count": 8,
+      "all_finite": true
+    }
+  ],
+  "model_hashes": {
+    "0": "39bbbb9e2fa2cb14695c4ce31a9d91c806dfd690a888d2a9c44d9eb3bf0be129",
+    "1": "dab0dd69ad2bd4a132aede8c37ae4734cac2c12d7533d1c96cc058e1b52bad1d",
+    "2": "ce2a29d123d1c3eea25b90ba0999cacc793ad25346709a94d6b52cf92a8ffca2",
+    "3": "178c052783502646085fdb78be115e54d6d7ffc1225dac9af24d1cc64cafebf9"
+  },
+  "canonical_reload": {
+    "source_count": 95,
+    "episode_ids_equal_original_development_effective_set": true,
+    "members": 4,
+    "probability_slots": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "gradient_slots": [
+      0,
+      11
+    ],
+    "all_strict_recorded_checks_passed": true,
+    "offline_float64_vs_online_float32_max_gain_difference": 6.705522537231445e-08,
+    "inference_independently_rerun": false
+  },
+  "sealed_initialization_reuse": {
+    "science_identity_exactly_equals_prefit": true,
+    "input_bundle_and_child_source_bindings_preserved": true,
+    "preprocessing_refitted": false,
+    "new_initialization_generated": false,
+    "eight_actual_bootstraps_and_4000x32_minibatches_exactly_equal_sealed_prefit": true,
+    "all_eight_trainable_name_masks_match_prefit": true,
+    "A_selected_all_21_frozen_tensors_equal_prefit": true,
+    "all_56_checkpoint_frozen_values_evidence": "Executor sealed audit independently loaded all 56 checkpoint state_dicts; this bounded review verifies that audit identity and supplements it with the selected A four actual checkpoint/export comparisons."
+  },
+  "member_fit_checks": [
+    {
+      "path": "A",
+      "member": 0,
+      "updates": 4000,
+      "actual_bootstrap_and_minibatches_match_sealed_prefit": true,
+      "trainable_names_match_sealed_mask": true,
+      "train600_only": true,
+      "executor_audit_all_seven_checkpoints_frozen_tensors_bit_exact": true,
+      "changed_trainable_tensors_by_step": {
+        "200": 8,
+        "400": 8,
+        "800": 8,
+        "1600": 8,
+        "2400": 8,
+        "3200": 8,
+        "4000": 8
+      }
+    },
+    {
+      "path": "A",
+      "member": 1,
+      "updates": 4000,
+      "actual_bootstrap_and_minibatches_match_sealed_prefit": true,
+      "trainable_names_match_sealed_mask": true,
+      "train600_only": true,
+      "executor_audit_all_seven_checkpoints_frozen_tensors_bit_exact": true,
+      "changed_trainable_tensors_by_step": {
+        "200": 8,
+        "400": 8,
+        "800": 8,
+        "1600": 8,
+        "2400": 8,
+        "3200": 8,
+        "4000": 8
+      }
+    },
+    {
+      "path": "A",
+      "member": 2,
+      "updates": 4000,
+      "actual_bootstrap_and_minibatches_match_sealed_prefit": true,
+      "trainable_names_match_sealed_mask": true,
+      "train600_only": true,
+      "executor_audit_all_seven_checkpoints_frozen_tensors_bit_exact": true,
+      "changed_trainable_tensors_by_step": {
+        "200": 8,
+        "400": 8,
+        "800": 8,
+        "1600": 8,
+        "2400": 8,
+        "3200": 8,
+        "4000": 8
+      }
+    },
+    {
+      "path": "A",
+      "member": 3,
+      "updates": 4000,
+      "actual_bootstrap_and_minibatches_match_sealed_prefit": true,
+      "trainable_names_match_sealed_mask": true,
+      "train600_only": true,
+      "executor_audit_all_seven_checkpoints_frozen_tensors_bit_exact": true,
+      "changed_trainable_tensors_by_step": {
+        "200": 8,
+        "400": 8,
+        "800": 8,
+        "1600": 8,
+        "2400": 8,
+        "3200": 8,
+        "4000": 8
+      }
+    },
+    {
+      "path": "B",
+      "member": 0,
+      "updates": 4000,
+      "actual_bootstrap_and_minibatches_match_sealed_prefit": true,
+      "trainable_names_match_sealed_mask": true,
+      "train600_only": true,
+      "executor_audit_all_seven_checkpoints_frozen_tensors_bit_exact": true,
+      "changed_trainable_tensors_by_step": {
+        "200": 20,
+        "400": 20,
+        "800": 20,
+        "1600": 20,
+        "2400": 20,
+        "3200": 20,
+        "4000": 20
+      }
+    },
+    {
+      "path": "B",
+      "member": 1,
+      "updates": 4000,
+      "actual_bootstrap_and_minibatches_match_sealed_prefit": true,
+      "trainable_names_match_sealed_mask": true,
+      "train600_only": true,
+      "executor_audit_all_seven_checkpoints_frozen_tensors_bit_exact": true,
+      "changed_trainable_tensors_by_step": {
+        "200": 20,
+        "400": 20,
+        "800": 20,
+        "1600": 20,
+        "2400": 20,
+        "3200": 20,
+        "4000": 20
+      }
+    },
+    {
+      "path": "B",
+      "member": 2,
+      "updates": 4000,
+      "actual_bootstrap_and_minibatches_match_sealed_prefit": true,
+      "trainable_names_match_sealed_mask": true,
+      "train600_only": true,
+      "executor_audit_all_seven_checkpoints_frozen_tensors_bit_exact": true,
+      "changed_trainable_tensors_by_step": {
+        "200": 20,
+        "400": 20,
+        "800": 20,
+        "1600": 20,
+        "2400": 20,
+        "3200": 20,
+        "4000": 20
+      }
+    },
+    {
+      "path": "B",
+      "member": 3,
+      "updates": 4000,
+      "actual_bootstrap_and_minibatches_match_sealed_prefit": true,
+      "trainable_names_match_sealed_mask": true,
+      "train600_only": true,
+      "executor_audit_all_seven_checkpoints_frozen_tensors_bit_exact": true,
+      "changed_trainable_tensors_by_step": {
+        "200": 20,
+        "400": 20,
+        "800": 20,
+        "1600": 20,
+        "2400": 20,
+        "3200": 20,
+        "4000": 20
+      }
+    }
+  ],
+  "executor_audit_summary": {
+    "checks_passed": 233221,
+    "checkpoint_state_dicts_checked": 56,
+    "initial_state_dicts_checked": 8,
+    "selected_exports_checked": 4,
+    "model_instances_created": 0,
+    "model_forward_calls": 0,
+    "gradient_calls": 0,
+    "pca_calls": 0,
+    "simulator_calls": 0,
+    "optimizer_updates_by_auditor": 0,
+    "preprocessing_reused_without_refitting": true,
+    "all_actual_minibatches_equal_sealed_plans": true
+  },
+  "verified_small_artifacts": {
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/config.json": "cf85b5d033e3fb1dde64e5de4e0bdc5b00838a752f7e56bb3389137a4666ac0e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/models/refit/member_0/selected.pt": "39bbbb9e2fa2cb14695c4ce31a9d91c806dfd690a888d2a9c44d9eb3bf0be129",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/models/refit/member_1/selected.pt": "dab0dd69ad2bd4a132aede8c37ae4734cac2c12d7533d1c96cc058e1b52bad1d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/models/refit/member_2/selected.pt": "ce2a29d123d1c3eea25b90ba0999cacc793ad25346709a94d6b52cf92a8ffca2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/models/refit/member_3/selected.pt": "178c052783502646085fdb78be115e54d6d7ffc1225dac9af24d1cc64cafebf9",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/ranking.json": "03bda2f021377e01e2608f541d0cde59ee3edc7b6dfe3bb50451a9003f0d62d7",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/result.json": "ff4d7c11d81fb0c01617458f41c8e2d58645b3694ca0bc77ec56e56f3c35a1fd",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/registration.json": "c41a04a5a7f8c3f734da471810a747a1ca911fb3f424940b9e8afa315438af36",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/complete.json": "f40ff4f3356ee8f14d687348f9f9cc7addf1b1e93233b81645312973f7e02d6a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected_reload_audit.json": "b16b8183e6d6a69345375a266840afaffebf514873d62868f0327496bf795a92",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/A/member_0/fit.json": "1f50140d233e913876bcc59314889f0e156ba50a59ee7a53dd105516e9bd9d4c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/A/member_1/fit.json": "0128869e2e225994daf2f8a9aad9685892d90ddf82c4053983c477f5fa4e0bdd",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/A/member_2/fit.json": "b1488dc0d15ea91841887e2f03a02b5308ac70f8e9643f5067970948604e706a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/A/member_3/fit.json": "84c310e7541ca6f4038de1ba02a73cfab0a93b5dd35398bd91ccce0b23b5789b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/B/member_0/fit.json": "9eac1ec2b96efa20a9fd3da2fe47ad7a79c6ed787e80c2b654b6e88b240ac67e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/B/member_1/fit.json": "4f3ad9c18614dc08e491f36ed2efe476823d1a2e14881198bcebc24b5be54a7d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/B/member_2/fit.json": "8bd4d571da6b5cf00b0a67d71fd3c07e85c7c22e7c13eb11da0aad7e5ad8b144",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/B/member_3/fit.json": "ffa6a2fae7f9ec272b7a747e31209b21a9f2eda8bb04e2e8c46ac48b33a5aac8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/A/initial/models/refit/member_0/selected.pt": "8a08e1fbab88e17635a6cc4bec6f811a9fd435888a5298fd1782a6cb51fc0f09",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/A/member_0/step_4000/selected.pt": "39bbbb9e2fa2cb14695c4ce31a9d91c806dfd690a888d2a9c44d9eb3bf0be129",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/A/initial/models/refit/member_1/selected.pt": "699045cdf0c7b2965aeaf4fb4e8459cfb66ad8b72c8cc02a01d2cc8bc0fa87b3",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/A/member_1/step_4000/selected.pt": "dab0dd69ad2bd4a132aede8c37ae4734cac2c12d7533d1c96cc058e1b52bad1d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/A/initial/models/refit/member_2/selected.pt": "f12692a54285f95e3b905abc985a645e674569113bc254d31bfc069728e5f15c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/A/member_2/step_4000/selected.pt": "ce2a29d123d1c3eea25b90ba0999cacc793ad25346709a94d6b52cf92a8ffca2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/A/initial/models/refit/member_3/selected.pt": "88a560baa2d39a6b849173d040117ef72ee2ccec3949767b3b93652a34f3195a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/A/member_3/step_4000/selected.pt": "178c052783502646085fdb78be115e54d6d7ffc1225dac9af24d1cc64cafebf9"
+  },
+  "next_stage_assessment": {
+    "model_assets_eligible_for_planned_development_policy5": true,
+    "required_binding": "Use this exact A4000 selected directory/seal/four hashes for one fixed critic across the original 100 development scenes and original five arms; independent policy protocol/READY controls execution.",
+    "calibration_released_by_this_review": false,
+    "heldout_released_by_this_review": false,
+    "new_optimization_released_by_this_review": false,
+    "simulator_started_by_this_review": false
+  },
+  "operations_performed": {
+    "unique_checkpoint_files_read": 12,
+    "model_instances_created": 0,
+    "model_forward_calls": 0,
+    "gradient_calls": 0,
+    "PCA_fits": 0,
+    "optimizer_updates": 0,
+    "simulator_calls": 0,
+    "tests_rerun": 0,
+    "workflow_loader_runs": 0
+  },
+  "limits": [
+    "All-56-checkpoint coverage is taken from the sealed executor independent audit; selected four are additionally checked here.",
+    "Recorded selected reload numerical inference was not rerun.",
+    "No repeated raw-episode/scene/branch audit; prior input review remains the source.",
+    "This review establishes asset/protocol readiness, not success of the correction policy."
+  ]
+}

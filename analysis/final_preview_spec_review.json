@@ -1,0 +1,181 @@
+{
+  "schema": "native10_final_preview_spec_independent_review_v1",
+  "status": "passed_bounded_metadata_and_specification_review",
+  "reviewed_at_utc": "2026-09-16T23:49:33.211669+00:00",
+  "reviewer": "analysis/critic_data_audit",
+  "blockers": [],
+  "review_scope": "Read-only preview seals, exact source-design identity, selected science parameters and final decision; one bounded static inspection of actual preflight numerical coverage. Does not certify actual PCA, model initialization or numerical execution.",
+  "bindings": {
+    "preview": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_previews/final_input_preview_v1",
+    "preview_complete_sha256": "14c1d5b5e8efdcbeac910ddbc9137e3a861c996d6a84d6c3ff61364924037a3f",
+    "metadata_preview_sha256": "87329ae02a5b7c74afce1c474f02e978aff7bab34bd197af7cd662734f17b33a",
+    "input_bundle_binding_sha256": "bb76330d978aea372e772d4565c737e6f6f4a514e603aa66ca9b361034f96def",
+    "specification_sha256": "08891c3ee6feb71aa41a8cfa7cb0fbed61930e16eb8938cf5bfeff1dd24ad946",
+    "specification_identity_canonical_hash_matches": true,
+    "input_bundle": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/input_bundles/final_train600_input_v1",
+      "seal_sha256": "9e7798d534459e1f57dc32572f8634980faf963b246222ceb10e7fb1a2db805f",
+      "input_bundle_sha256": "d0395587afc390d5f9a4da9df075ae4b3797cbc7933bfeae42ebad4359053b87"
+    },
+    "design": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_preflight_v1/training_design.json",
+      "sha256": "3b9bbf7a67fc15123ac761c13358c0bfd8492ea9aea3c25649cefb02c66ef0cf"
+    },
+    "embedded_design_equals_exact_bound_source": true,
+    "real_input_review": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/final_real_input_review.json",
+      "sha256": "758186a4ba455d1859a6a737a3af986699094eb94239a41dddf5d8d0e53317c8"
+    },
+    "decision": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_FINAL_PREFLIGHT_DECISION.md",
+      "sha256": "ad1198cfb034149a560d744e7d89673ef3c6338b859011d1df39f116c0579543"
+    },
+    "final_pipeline_sha256": "9001691cec1f8e14de094787429ca35b9bba374da88d2ee5cae70b3451789dce"
+  },
+  "method_checks": {
+    "phase": "final",
+    "stop_after": {
+      "A": 4000,
+      "B": 4000
+    },
+    "source_protocols": {
+      "round1_train": "2456b73fd0728be1fe42f50c3421dddcf30e298d918c746290d3edadb13152d4",
+      "round2_train": "a25c2e599a9fe656c02f253ee32add30c197eed8458a0afd491234ca68cfaaa2",
+      "development": "2456b73fd0728be1fe42f50c3421dddcf30e298d918c746290d3edadb13152d4"
+    },
+    "planned_sources": {
+      "round1_train": 300,
+      "round2_train": 300,
+      "development": 100
+    },
+    "effective_sources_from_previously_sealed_input_review": {
+      "train": 600,
+      "development": 95,
+      "development_planned_denominator": 100,
+      "common_no_cut": 5
+    },
+    "canonical_original_features_preserved": "Input contract and prior sealed real-input review; different teacher PCA coordinates are not combined as training inputs.",
+    "A": {
+      "required": true,
+      "role": "residual adaptation reference",
+      "initialization": "read-only old four-member weights; fresh warm start for round1 and final fits",
+      "learning_rate": 0.0001,
+      "trainable": [
+        "residual",
+        "advantage"
+      ],
+      "frozen": [
+        "state",
+        "action",
+        "head",
+        "normalization_buffers",
+        "visual_PCA",
+        "language_PCA"
+      ],
+      "projection": "old frozen checkpoint projections"
+    },
+    "B": {
+      "required": true,
+      "role": "primary full small-critic retraining",
+      "initialization": "fresh initialization for all four members in round1 and final fits",
+      "learning_rate": 0.0003,
+      "trainable": [
+        "state",
+        "action",
+        "head",
+        "residual",
+        "advantage"
+      ],
+      "projection": "fit current-stage training split only; refit on combined rounds for final stage",
+      "visual_PCA_dimensions": 16,
+      "language_PCA_dimensions": 8,
+      "reuse_weights_after_incompatible_PCA_refit": false
+    },
+    "loss": {
+      "formula": "BCE_success + 1.0*MSE_gain_to_a0 + 0.5*MSE_positive_negative_probability_difference",
+      "weights": {
+        "bce": 1,
+        "gain": 1,
+        "pair_difference": 0.5
+      },
+      "average_order": "within valid distinct candidates/pairs, then across source groups",
+      "source_sampling": "uniform, no empirical-outcome informative-source upweighting",
+      "strict_a0_equal_action_zero_advantage": true,
+      "divide_binary_differences_by_radius": false,
+      "search_loss_weights": false
+    },
+    "optimizer_common": {
+      "name": "AdamW",
+      "weight_decay": 0.01,
+      "gradient_clip_norm": 1,
+      "batch_complete_sources": 32
+    },
+    "final_training_parameters": {
+      "planned_train_episodes": 600,
+      "max_updates_per_member": 4000,
+      "checkpoints": [
+        200,
+        400,
+        800,
+        1600,
+        2400,
+        3200,
+        4000
+      ]
+    },
+    "members_per_path": 4,
+    "future_optimizer_cap": 32000,
+    "PCA_and_bootstrap": "600 unique valid train sources; task-stratified source bootstrap draws 120 per task, total 600. Development excluded from PCA, bootstrap and optimization.",
+    "selection": "Original fixed development bank, 95 effective cuts plus 5 common outcomes, planned denominator 100; unchanged candidate and checkpoint criteria.",
+    "numeric_runtime": {
+      "torch": "2.7.1+cu126",
+      "numpy": "2.2.6",
+      "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+      "executable": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python3.12",
+      "device": "cpu",
+      "dtype": "float32",
+      "threads": 2,
+      "torch_distribution": "2.7.1",
+      "numpy_distribution": "2.2.6",
+      "torch_version_file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/lib/python3.12/site-packages/torch/version.py",
+        "sha256": "6ed9ff03113f2ceba7ad0f77cf4b160ea03f918ef010b5f662ce74786d182974"
+      }
+    },
+    "actual_preflight_numeric_scope": {
+      "paths": [
+        "A",
+        "B"
+      ],
+      "members_per_path": 4,
+      "train_effective_sources": 600,
+      "development_effective_sources": 95,
+      "canonical": "All 13 probabilities and action-gradient slots 0/11, member and ensemble, same-shape export/reload strict bit equality.",
+      "dense": "Both actual train and development effective source sets; report exact or observed differences, no new atol/rtol or toy-derived bound.",
+      "static_evidence": "final_training_pipeline_v1.py:365-369 loops over train and development for audit_reload, batch_singleton_diagnostics and _dense_ok; load_preflight also rechecks both purposes.",
+      "actual_numerical_results": "pending real preflight; metadata preview is not a numerical pass"
+    },
+    "historical_design_metadata": "The exact bound design retains round1 status and READY v5 precedence text as source history. Actual specification phase is final, stop_after A/B=4000, with two true collection protocols. Final READY/config/freeze governs authorization; historical text grants no new operation.",
+    "decision_assessment": "No unintended science or numeric changes found. Decision alone releases nothing; proposed final_fit_preflight is simulator=0 and optimizer=0. Actual fit, policy rollout, calibration and heldout remain separately gated. Fixed numeric runtime remains CPU float32/two threads; the generic GPU lifecycle reminder is not a runtime override."
+  },
+  "preview_reported_operations": {
+    "model_calls": 0,
+    "pca_fits": 0,
+    "optimizer_updates": 0,
+    "simulator_calls": 0,
+    "real_model_stage_released": false
+  },
+  "operations_performed_by_this_review": {
+    "simulator_calls": 0,
+    "model_calls": 0,
+    "pca_fits": 0,
+    "optimizer_updates": 0,
+    "test_runs": 0,
+    "data_loader_runs": 0
+  },
+  "limitations": [
+    "No raw trajectory or full dataset re-audit; prior immutable real-input review retained.",
+    "No actual PCA/model numerical execution; actual final preflight must provide its own sealed results.",
+    "No READY, frozen configuration, source code, thresholds or existing analysis files changed."
+  ]
+}

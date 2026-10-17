@@ -1,0 +1,841 @@
+{
+  "checked_at_utc": "2026-09-19T14:56:06.705636+00:00",
+  "data": {
+    "round1_train_full_v1": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_train_full_v1/complete.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_train_full_v1/complete.json",
+        "expected_sha256": null,
+        "verified_sha256": "08d8bf56408f65dc4302a588be987626ea2d4f420ab3a156c8c360ef8a7fd14a",
+        "kind": "file",
+        "bytes": 386,
+        "mtime_ns": 1789588057629063000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "rows": 300,
+      "task_counts": {
+        "disassemble-v3": 60,
+        "pick-place-wall-v3": 60,
+        "shelf-place-v3": 60,
+        "stick-pull-v3": 60,
+        "stick-push-v3": 60
+      },
+      "split_counts": {
+        "train": 300
+      },
+      "metadata_counts": {
+        "schema": "native10_dataset13_v1",
+        "purpose": "train",
+        "manifest_sha256": "51fd84cf569747ba703a3a9e12498e893a18bca459b6eb39b58a1445538bc473",
+        "registered_all_split_episode_count": 2720,
+        "registered_primary_episode_count": 920,
+        "planned_episode_count": 300,
+        "complete_critic_groups": 300,
+        "a0_slot": 0,
+        "repeats": 4,
+        "group_unit": "whole episode",
+        "normal_control_is_separate": true,
+        "real_input_artifact_audit_required_before_fit": true,
+        "complete_planned_selection_evidence": true,
+        "incomplete_episodes_never_imputed": true,
+        "future_outcome_files_read": false,
+        "simulator_calls": 0,
+        "training_updates": 0,
+        "physical_attempts_referenced": 16800,
+        "logical_critic_labels": 15600
+      },
+      "arrays": {
+        "history.npy": {
+          "shape": [
+            300,
+            5,
+            4096
+          ],
+          "dtype": "float32"
+        },
+        "history_mask.npy": {
+          "shape": [
+            300,
+            5
+          ],
+          "dtype": "bool"
+        },
+        "proprio.npy": {
+          "shape": [
+            300,
+            5,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "proprio_mask.npy": {
+          "shape": [
+            300,
+            5
+          ],
+          "dtype": "bool"
+        },
+        "past_actions.npy": {
+          "shape": [
+            300,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "language.npy": {
+          "shape": [
+            300,
+            2048
+          ],
+          "dtype": "float32"
+        },
+        "remaining.npy": {
+          "shape": [
+            300
+          ],
+          "dtype": "float32"
+        },
+        "actions.npy": {
+          "shape": [
+            300,
+            13,
+            10,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "raw_actions.npy": {
+          "shape": [
+            300,
+            13,
+            10,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "outcomes.npy": {
+          "shape": [
+            300,
+            13,
+            4
+          ],
+          "dtype": "bool"
+        },
+        "candidate_weights.npy": {
+          "shape": [
+            300,
+            13
+          ],
+          "dtype": "float32"
+        },
+        "gain_weights.npy": {
+          "shape": [
+            300,
+            13
+          ],
+          "dtype": "float32"
+        },
+        "pair_indices.npy": {
+          "shape": [
+            300,
+            5,
+            2
+          ],
+          "dtype": "int64"
+        },
+        "pair_weights.npy": {
+          "shape": [
+            300,
+            5
+          ],
+          "dtype": "float32"
+        },
+        "alias_indices.npy": {
+          "shape": [
+            300,
+            13
+          ],
+          "dtype": "int64"
+        },
+        "group_ids.npy": {
+          "shape": [
+            300,
+            13
+          ],
+          "dtype": "int64"
+        },
+        "physical_attempt_ids.npy": {
+          "shape": [
+            300,
+            13,
+            4
+          ],
+          "dtype": "int64"
+        },
+        "control_outcomes.npy": {
+          "shape": [
+            300,
+            4
+          ],
+          "dtype": "bool"
+        },
+        "control_valid.npy": {
+          "shape": [
+            300,
+            4
+          ],
+          "dtype": "bool"
+        },
+        "episode_id.npy": {
+          "shape": [
+            300
+          ],
+          "dtype": "<U30"
+        },
+        "split.npy": {
+          "shape": [
+            300
+          ],
+          "dtype": "<U5"
+        },
+        "task.npy": {
+          "shape": [
+            300
+          ],
+          "dtype": "<U18"
+        },
+        "cut_step.npy": {
+          "shape": [
+            300
+          ],
+          "dtype": "int64"
+        },
+        "round.npy": {
+          "shape": [
+            300
+          ],
+          "dtype": "int64"
+        },
+        "planned_slot_id.npy": {
+          "shape": [
+            300
+          ],
+          "dtype": "<U30"
+        }
+      }
+    },
+    "round2_train_full_v1": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round2_train_full_v1/complete.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round2_train_full_v1/complete.json",
+        "expected_sha256": null,
+        "verified_sha256": "9dcce602261a6cc2c680f8bb85b770c2a08d576c024ea38efe64f3d9e090dcba",
+        "kind": "file",
+        "bytes": 386,
+        "mtime_ns": 1789601609451388000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "rows": 300,
+      "task_counts": {
+        "disassemble-v3": 60,
+        "pick-place-wall-v3": 60,
+        "shelf-place-v3": 60,
+        "stick-pull-v3": 60,
+        "stick-push-v3": 60
+      },
+      "split_counts": {
+        "train": 300
+      },
+      "metadata_counts": {
+        "schema": "native10_dataset13_v1",
+        "purpose": "train",
+        "manifest_sha256": "51fd84cf569747ba703a3a9e12498e893a18bca459b6eb39b58a1445538bc473",
+        "registered_all_split_episode_count": 2720,
+        "registered_primary_episode_count": 920,
+        "planned_episode_count": 300,
+        "complete_critic_groups": 300,
+        "a0_slot": 0,
+        "repeats": 4,
+        "group_unit": "whole episode",
+        "normal_control_is_separate": true,
+        "real_input_artifact_audit_required_before_fit": true,
+        "complete_planned_selection_evidence": true,
+        "incomplete_episodes_never_imputed": true,
+        "future_outcome_files_read": false,
+        "simulator_calls": 0,
+        "training_updates": 0,
+        "physical_attempts_referenced": 16800,
+        "logical_critic_labels": 15600
+      },
+      "arrays": {
+        "history.npy": {
+          "shape": [
+            300,
+            5,
+            4096
+          ],
+          "dtype": "float32"
+        },
+        "history_mask.npy": {
+          "shape": [
+            300,
+            5
+          ],
+          "dtype": "bool"
+        },
+        "proprio.npy": {
+          "shape": [
+            300,
+            5,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "proprio_mask.npy": {
+          "shape": [
+            300,
+            5
+          ],
+          "dtype": "bool"
+        },
+        "past_actions.npy": {
+          "shape": [
+            300,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "language.npy": {
+          "shape": [
+            300,
+            2048
+          ],
+          "dtype": "float32"
+        },
+        "remaining.npy": {
+          "shape": [
+            300
+          ],
+          "dtype": "float32"
+        },
+        "actions.npy": {
+          "shape": [
+            300,
+            13,
+            10,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "raw_actions.npy": {
+          "shape": [
+            300,
+            13,
+            10,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "outcomes.npy": {
+          "shape": [
+            300,
+            13,
+            4
+          ],
+          "dtype": "bool"
+        },
+        "candidate_weights.npy": {
+          "shape": [
+            300,
+            13
+          ],
+          "dtype": "float32"
+        },
+        "gain_weights.npy": {
+          "shape": [
+            300,
+            13
+          ],
+          "dtype": "float32"
+        },
+        "pair_indices.npy": {
+          "shape": [
+            300,
+            5,
+            2
+          ],
+          "dtype": "int64"
+        },
+        "pair_weights.npy": {
+          "shape": [
+            300,
+            5
+          ],
+          "dtype": "float32"
+        },
+        "alias_indices.npy": {
+          "shape": [
+            300,
+            13
+          ],
+          "dtype": "int64"
+        },
+        "group_ids.npy": {
+          "shape": [
+            300,
+            13
+          ],
+          "dtype": "int64"
+        },
+        "physical_attempt_ids.npy": {
+          "shape": [
+            300,
+            13,
+            4
+          ],
+          "dtype": "int64"
+        },
+        "control_outcomes.npy": {
+          "shape": [
+            300,
+            4
+          ],
+          "dtype": "bool"
+        },
+        "control_valid.npy": {
+          "shape": [
+            300,
+            4
+          ],
+          "dtype": "bool"
+        },
+        "episode_id.npy": {
+          "shape": [
+            300
+          ],
+          "dtype": "<U30"
+        },
+        "split.npy": {
+          "shape": [
+            300
+          ],
+          "dtype": "<U5"
+        },
+        "task.npy": {
+          "shape": [
+            300
+          ],
+          "dtype": "<U18"
+        },
+        "cut_step.npy": {
+          "shape": [
+            300
+          ],
+          "dtype": "int64"
+        },
+        "round.npy": {
+          "shape": [
+            300
+          ],
+          "dtype": "int64"
+        },
+        "planned_slot_id.npy": {
+          "shape": [
+            300
+          ],
+          "dtype": "<U30"
+        }
+      }
+    },
+    "round1_development_full_v1": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_development_full_v1/complete.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_development_full_v1/complete.json",
+        "expected_sha256": null,
+        "verified_sha256": "ff4084fa637fc5c50cbad1ee2010084d7b2658f42902700069b09ec71fdf8865",
+        "kind": "file",
+        "bytes": 392,
+        "mtime_ns": 1789588061667150000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "rows": 95,
+      "task_counts": {
+        "disassemble-v3": 20,
+        "pick-place-wall-v3": 17,
+        "shelf-place-v3": 19,
+        "stick-pull-v3": 19,
+        "stick-push-v3": 20
+      },
+      "split_counts": {
+        "development": 95
+      },
+      "metadata_counts": {
+        "schema": "native10_dataset13_v1",
+        "purpose": "development",
+        "selected_rounds": null,
+        "manifest_sha256": "51fd84cf569747ba703a3a9e12498e893a18bca459b6eb39b58a1445538bc473",
+        "registered_all_split_episode_count": 2720,
+        "registered_primary_episode_count": 920,
+        "planned_episode_count": 100,
+        "complete_critic_groups": 95,
+        "a0_slot": 0,
+        "repeats": 4,
+        "group_unit": "whole episode",
+        "normal_control_is_separate": true,
+        "real_input_artifact_audit_required_before_fit": true,
+        "complete_planned_selection_evidence": true,
+        "incomplete_episodes_never_imputed": true,
+        "future_outcome_files_read": false,
+        "simulator_calls": 0,
+        "training_updates": 0,
+        "physical_attempts_referenced": 5320,
+        "logical_critic_labels": 4940
+      },
+      "arrays": {
+        "history.npy": {
+          "shape": [
+            95,
+            5,
+            4096
+          ],
+          "dtype": "float32"
+        },
+        "history_mask.npy": {
+          "shape": [
+            95,
+            5
+          ],
+          "dtype": "bool"
+        },
+        "proprio.npy": {
+          "shape": [
+            95,
+            5,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "proprio_mask.npy": {
+          "shape": [
+            95,
+            5
+          ],
+          "dtype": "bool"
+        },
+        "past_actions.npy": {
+          "shape": [
+            95,
+            4,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "language.npy": {
+          "shape": [
+            95,
+            2048
+          ],
+          "dtype": "float32"
+        },
+        "remaining.npy": {
+          "shape": [
+            95
+          ],
+          "dtype": "float32"
+        },
+        "actions.npy": {
+          "shape": [
+            95,
+            13,
+            10,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "raw_actions.npy": {
+          "shape": [
+            95,
+            13,
+            10,
+            4
+          ],
+          "dtype": "float32"
+        },
+        "outcomes.npy": {
+          "shape": [
+            95,
+            13,
+            4
+          ],
+          "dtype": "bool"
+        },
+        "candidate_weights.npy": {
+          "shape": [
+            95,
+            13
+          ],
+          "dtype": "float32"
+        },
+        "gain_weights.npy": {
+          "shape": [
+            95,
+            13
+          ],
+          "dtype": "float32"
+        },
+        "pair_indices.npy": {
+          "shape": [
+            95,
+            5,
+            2
+          ],
+          "dtype": "int64"
+        },
+        "pair_weights.npy": {
+          "shape": [
+            95,
+            5
+          ],
+          "dtype": "float32"
+        },
+        "alias_indices.npy": {
+          "shape": [
+            95,
+            13
+          ],
+          "dtype": "int64"
+        },
+        "group_ids.npy": {
+          "shape": [
+            95,
+            13
+          ],
+          "dtype": "int64"
+        },
+        "physical_attempt_ids.npy": {
+          "shape": [
+            95,
+            13,
+            4
+          ],
+          "dtype": "int64"
+        },
+        "control_outcomes.npy": {
+          "shape": [
+            95,
+            4
+          ],
+          "dtype": "bool"
+        },
+        "control_valid.npy": {
+          "shape": [
+            95,
+            4
+          ],
+          "dtype": "bool"
+        },
+        "episode_id.npy": {
+          "shape": [
+            95
+          ],
+          "dtype": "<U30"
+        },
+        "split.npy": {
+          "shape": [
+            95
+          ],
+          "dtype": "<U11"
+        },
+        "task.npy": {
+          "shape": [
+            95
+          ],
+          "dtype": "<U18"
+        },
+        "cut_step.npy": {
+          "shape": [
+            95
+          ],
+          "dtype": "int64"
+        },
+        "round.npy": {
+          "shape": [
+            95
+          ],
+          "dtype": "int64"
+        },
+        "planned_slot_id.npy": {
+          "shape": [
+            95
+          ],
+          "dtype": "<U30"
+        }
+      }
+    },
+    "train600_summary": {
+      "train_planned": 600,
+      "train_effective": 600,
+      "development_planned": 100,
+      "development_effective": 95,
+      "coverage": [
+        {
+          "source": "round1_train",
+          "task": "disassemble-v3",
+          "planned": 60,
+          "actual_initial_states": 60,
+          "effective_cut": 60,
+          "no_cut": 0,
+          "missing_reasons": {}
+        },
+        {
+          "source": "round1_train",
+          "task": "pick-place-wall-v3",
+          "planned": 60,
+          "actual_initial_states": 60,
+          "effective_cut": 60,
+          "no_cut": 0,
+          "missing_reasons": {}
+        },
+        {
+          "source": "round1_train",
+          "task": "shelf-place-v3",
+          "planned": 60,
+          "actual_initial_states": 60,
+          "effective_cut": 60,
+          "no_cut": 0,
+          "missing_reasons": {}
+        },
+        {
+          "source": "round1_train",
+          "task": "stick-pull-v3",
+          "planned": 60,
+          "actual_initial_states": 60,
+          "effective_cut": 60,
+          "no_cut": 0,
+          "missing_reasons": {}
+        },
+        {
+          "source": "round1_train",
+          "task": "stick-push-v3",
+          "planned": 60,
+          "actual_initial_states": 60,
+          "effective_cut": 60,
+          "no_cut": 0,
+          "missing_reasons": {}
+        },
+        {
+          "source": "round2_train",
+          "task": "disassemble-v3",
+          "planned": 60,
+          "actual_initial_states": 60,
+          "effective_cut": 60,
+          "no_cut": 0,
+          "missing_reasons": {}
+        },
+        {
+          "source": "round2_train",
+          "task": "pick-place-wall-v3",
+          "planned": 60,
+          "actual_initial_states": 60,
+          "effective_cut": 60,
+          "no_cut": 0,
+          "missing_reasons": {}
+        },
+        {
+          "source": "round2_train",
+          "task": "shelf-place-v3",
+          "planned": 60,
+          "actual_initial_states": 60,
+          "effective_cut": 60,
+          "no_cut": 0,
+          "missing_reasons": {}
+        },
+        {
+          "source": "round2_train",
+          "task": "stick-pull-v3",
+          "planned": 60,
+          "actual_initial_states": 60,
+          "effective_cut": 60,
+          "no_cut": 0,
+          "missing_reasons": {}
+        },
+        {
+          "source": "round2_train",
+          "task": "stick-push-v3",
+          "planned": 60,
+          "actual_initial_states": 60,
+          "effective_cut": 60,
+          "no_cut": 0,
+          "missing_reasons": {}
+        },
+        {
+          "source": "development",
+          "task": "disassemble-v3",
+          "planned": 20,
+          "actual_initial_states": 20,
+          "effective_cut": 20,
+          "no_cut": 0,
+          "missing_reasons": {}
+        },
+        {
+          "source": "development",
+          "task": "pick-place-wall-v3",
+          "planned": 20,
+          "actual_initial_states": 20,
+          "effective_cut": 17,
+          "no_cut": 3,
+          "missing_reasons": {
+            "success": 3
+          }
+        },
+        {
+          "source": "development",
+          "task": "shelf-place-v3",
+          "planned": 20,
+          "actual_initial_states": 20,
+          "effective_cut": 19,
+          "no_cut": 1,
+          "missing_reasons": {
+            "success": 1
+          }
+        },
+        {
+          "source": "development",
+          "task": "stick-pull-v3",
+          "planned": 20,
+          "actual_initial_states": 20,
+          "effective_cut": 19,
+          "no_cut": 1,
+          "missing_reasons": {
+            "environment_done": 1
+          }
+        },
+        {
+          "source": "development",
+          "task": "stick-push-v3",
+          "planned": 20,
+          "actual_initial_states": 20,
+          "effective_cut": 20,
+          "no_cut": 0,
+          "missing_reasons": {}
+        }
+      ],
+      "complete_planned_disposition": true,
+      "canonical_features_only": true,
+      "source_uniform": true,
+      "no_future_split_outcomes": true,
+      "model_calls": 0,
+      "simulator_calls": 0,
+      "optimizer_updates": 0,
+      "pca_fits": 0
+    }
+  }
+}

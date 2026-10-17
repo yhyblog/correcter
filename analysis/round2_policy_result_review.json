@@ -1,0 +1,5853 @@
+{
+  "schema": "round2_policy_result_review_v1",
+  "utc": "2026-09-17T01:47:58.705385+00:00",
+  "scope": "independent arithmetic from sealed100x5x4 outcome table; no new raw trajectory audit/model/optimizer/simulation/calibration/held access",
+  "input_hashes": {
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_audits/round2_policy_v1/complete.json": "2a0eab3cd529ba4eb41d4ebf25418c7a2c3ba22d1f583e06e6af9eb739f16974",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_audits/round2_policy_v1/result.json": "7f781889632af74073969e8c3f69845ff6db3e5f2fceb3ec66b999555b92c296",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/round1_policy_result_independent_review.json": "abcdeea1e982139b9d641cf2699ff768ab1be7e4d1b60d04a5f9138dc541c281"
+  },
+  "selected_training": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1",
+    "seal_sha256": "864c00cfa1cfcbcc8736a898ab22e5afa821f15afbe2b8dc687f7731f2eea83e",
+    "selected_seal_sha256": "f40ff4f3356ee8f14d687348f9f9cc7addf1b1e93233b81645312973f7e02d6a",
+    "selected_reload_audit_sha256": "b16b8183e6d6a69345375a266840afaffebf514873d62868f0327496bf795a92",
+    "model_review": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/final_trained_model_review.json",
+      "sha256": "51dc687f285e92c0b81032bad5694ebca7f649fba597e121943362871305a928"
+    }
+  },
+  "coverage": {
+    "sources": 100,
+    "tasks": {
+      "disassemble-v3": 20,
+      "pick-place-wall-v3": 20,
+      "shelf-place-v3": 20,
+      "stick-pull-v3": 20,
+      "stick-push-v3": 20
+    },
+    "cut": 95,
+    "common": 5,
+    "common_success_sources": 4,
+    "common_failure_sources": 1,
+    "suffix_slots_per_arm": 400,
+    "physical_scene_pairs_unique": 100
+  },
+  "bootstrap": {
+    "seed": 2026091622,
+    "replicates": 10000,
+    "sampling": "same frozen NumPy default_rng.choice, task-major lexical order, existing sealed source order, complete fourpaired suffixes andfive arms",
+    "interval": "percentile95 defaultlinear, unadjusted",
+    "all_seven_values_equal_sealed_result": true
+  },
+  "success_counts": {
+    "continue_native10": 221,
+    "alarm_replan10": 257,
+    "velocity": 270,
+    "direct": 268,
+    "post": 274
+  },
+  "comparisons": {
+    "alarm_replan10_minus_continue_native10": {
+      "gain_pp": 9.0,
+      "ci95_pp": [
+        2.75,
+        15.5
+      ],
+      "rescues": 52,
+      "harms": 16,
+      "positive_sources": 18,
+      "negative_sources": 8,
+      "zero_sources": 74
+    },
+    "velocity_minus_alarm_replan10": {
+      "gain_pp": 3.25,
+      "ci95_pp": [
+        -0.5,
+        7.5
+      ],
+      "rescues": 21,
+      "harms": 8,
+      "positive_sources": 9,
+      "negative_sources": 5,
+      "zero_sources": 86
+    },
+    "direct_minus_alarm_replan10": {
+      "gain_pp": 2.75,
+      "ci95_pp": [
+        -1.25,
+        7.249999999999999
+      ],
+      "rescues": 21,
+      "harms": 10,
+      "positive_sources": 9,
+      "negative_sources": 5,
+      "zero_sources": 86
+    },
+    "post_minus_alarm_replan10": {
+      "gain_pp": 4.25,
+      "ci95_pp": [
+        0.25,
+        8.75
+      ],
+      "rescues": 25,
+      "harms": 8,
+      "positive_sources": 10,
+      "negative_sources": 4,
+      "zero_sources": 86
+    },
+    "velocity_minus_continue_native10": {
+      "gain_pp": 12.25,
+      "ci95_pp": [
+        5.25,
+        19.5
+      ],
+      "rescues": 62,
+      "harms": 13,
+      "positive_sources": 20,
+      "negative_sources": 7,
+      "zero_sources": 73
+    },
+    "direct_minus_continue_native10": {
+      "gain_pp": 11.75,
+      "ci95_pp": [
+        4.5,
+        19.0
+      ],
+      "rescues": 64,
+      "harms": 17,
+      "positive_sources": 21,
+      "negative_sources": 6,
+      "zero_sources": 73
+    },
+    "post_minus_continue_native10": {
+      "gain_pp": 13.25,
+      "ci95_pp": [
+        6.25,
+        20.5
+      ],
+      "rescues": 65,
+      "harms": 12,
+      "positive_sources": 22,
+      "negative_sources": 5,
+      "zero_sources": 73
+    }
+  },
+  "task_breakdown": {
+    "disassemble-v3": {
+      "sources": 20,
+      "success_counts": {
+        "continue_native10": 68,
+        "alarm_replan10": 61,
+        "velocity": 68,
+        "direct": 61,
+        "post": 69
+      },
+      "gains_pp": {
+        "alarm_replan10_minus_continue_native10": -8.75,
+        "velocity_minus_alarm_replan10": 8.75,
+        "direct_minus_alarm_replan10": 0.0,
+        "post_minus_alarm_replan10": 10.0,
+        "velocity_minus_continue_native10": 0.0,
+        "direct_minus_continue_native10": -8.75,
+        "post_minus_continue_native10": 1.25
+      }
+    },
+    "pick-place-wall-v3": {
+      "sources": 20,
+      "success_counts": {
+        "continue_native10": 44,
+        "alarm_replan10": 69,
+        "velocity": 70,
+        "direct": 69,
+        "post": 69
+      },
+      "gains_pp": {
+        "alarm_replan10_minus_continue_native10": 31.25,
+        "velocity_minus_alarm_replan10": 1.25,
+        "direct_minus_alarm_replan10": 0.0,
+        "post_minus_alarm_replan10": 0.0,
+        "velocity_minus_continue_native10": 32.5,
+        "direct_minus_continue_native10": 31.25,
+        "post_minus_continue_native10": 31.25
+      }
+    },
+    "shelf-place-v3": {
+      "sources": 20,
+      "success_counts": {
+        "continue_native10": 21,
+        "alarm_replan10": 23,
+        "velocity": 24,
+        "direct": 25,
+        "post": 24
+      },
+      "gains_pp": {
+        "alarm_replan10_minus_continue_native10": 2.5,
+        "velocity_minus_alarm_replan10": 1.25,
+        "direct_minus_alarm_replan10": 2.5,
+        "post_minus_alarm_replan10": 1.25,
+        "velocity_minus_continue_native10": 3.75,
+        "direct_minus_continue_native10": 5.0,
+        "post_minus_continue_native10": 3.75
+      }
+    },
+    "stick-pull-v3": {
+      "sources": 20,
+      "success_counts": {
+        "continue_native10": 18,
+        "alarm_replan10": 24,
+        "velocity": 28,
+        "direct": 33,
+        "post": 32
+      },
+      "gains_pp": {
+        "alarm_replan10_minus_continue_native10": 7.5,
+        "velocity_minus_alarm_replan10": 5.0,
+        "direct_minus_alarm_replan10": 11.25,
+        "post_minus_alarm_replan10": 10.0,
+        "velocity_minus_continue_native10": 12.5,
+        "direct_minus_continue_native10": 18.75,
+        "post_minus_continue_native10": 17.5
+      }
+    },
+    "stick-push-v3": {
+      "sources": 20,
+      "success_counts": {
+        "continue_native10": 70,
+        "alarm_replan10": 80,
+        "velocity": 80,
+        "direct": 80,
+        "post": 80
+      },
+      "gains_pp": {
+        "alarm_replan10_minus_continue_native10": 12.5,
+        "velocity_minus_alarm_replan10": 0.0,
+        "direct_minus_alarm_replan10": 0.0,
+        "post_minus_alarm_replan10": 0.0,
+        "velocity_minus_continue_native10": 12.5,
+        "direct_minus_continue_native10": 12.5,
+        "post_minus_continue_native10": 12.5
+      }
+    }
+  },
+  "information": {
+    "any_A_positive_sources": 13,
+    "any_A_negative_sources": 6,
+    "any_A_discordant_sources": 17,
+    "all5_arms_paired_identical_sources": 69
+  },
+  "concentration": {
+    "alarm_replan10_minus_continue_native10": {
+      "positive_net_successes": 51,
+      "negative_net_successes": 15,
+      "top2_share_positive_net": 0.1568627450980392,
+      "top5_share_positive_net": 0.39215686274509803,
+      "positive": [
+        {
+          "episode_id": "pick-place-wall-v3__2026111606",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111611",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111621",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111656",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111691",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111696",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111633",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-push-v3__2026111614",
+          "task": "stick-push-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-push-v3__2026111644",
+          "task": "stick-push-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "disassemble-v3__2026111640",
+          "task": "disassemble-v3",
+          "cut": 15,
+          "net_successes": 3
+        },
+        {
+          "episode_id": "shelf-place-v3__2026111602",
+          "task": "shelf-place-v3",
+          "cut": 35,
+          "net_successes": 3
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111608",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 2
+        },
+        {
+          "episode_id": "stick-push-v3__2026111659",
+          "task": "stick-push-v3",
+          "cut": 5,
+          "net_successes": 2
+        },
+        {
+          "episode_id": "disassemble-v3__2026111625",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": 1
+        },
+        {
+          "episode_id": "disassemble-v3__2026111645",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": 1
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111636",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 1
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111683",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 1
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111693",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 1
+        }
+      ],
+      "negative": [
+        {
+          "episode_id": "disassemble-v3__2026111610",
+          "task": "disassemble-v3",
+          "cut": 15,
+          "net_successes": -4
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111613",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": -1
+        },
+        {
+          "episode_id": "disassemble-v3__2026111630",
+          "task": "disassemble-v3",
+          "cut": 15,
+          "net_successes": -1
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111658",
+          "task": "stick-pull-v3",
+          "cut": 35,
+          "net_successes": -1
+        },
+        {
+          "episode_id": "disassemble-v3__2026111665",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": -2
+        },
+        {
+          "episode_id": "shelf-place-v3__2026111667",
+          "task": "shelf-place-v3",
+          "cut": 35,
+          "net_successes": -1
+        },
+        {
+          "episode_id": "disassemble-v3__2026111685",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": -1
+        },
+        {
+          "episode_id": "disassemble-v3__2026111695",
+          "task": "disassemble-v3",
+          "cut": 15,
+          "net_successes": -4
+        }
+      ]
+    },
+    "velocity_minus_alarm_replan10": {
+      "positive_net_successes": 20,
+      "negative_net_successes": 7,
+      "top2_share_positive_net": 0.35,
+      "top5_share_positive_net": 0.75,
+      "positive": [
+        {
+          "episode_id": "disassemble-v3__2026111610",
+          "task": "disassemble-v3",
+          "cut": 15,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "disassemble-v3__2026111685",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": 3
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111683",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 3
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111693",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 3
+        },
+        {
+          "episode_id": "disassemble-v3__2026111695",
+          "task": "disassemble-v3",
+          "cut": 15,
+          "net_successes": 2
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111608",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 2
+        },
+        {
+          "episode_id": "disassemble-v3__2026111630",
+          "task": "disassemble-v3",
+          "cut": 15,
+          "net_successes": 1
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111636",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 1
+        },
+        {
+          "episode_id": "shelf-place-v3__2026111637",
+          "task": "shelf-place-v3",
+          "cut": 45,
+          "net_successes": 1
+        }
+      ],
+      "negative": [
+        {
+          "episode_id": "disassemble-v3__2026111615",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": -1
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111638",
+          "task": "stick-pull-v3",
+          "cut": 35,
+          "net_successes": -1
+        },
+        {
+          "episode_id": "disassemble-v3__2026111640",
+          "task": "disassemble-v3",
+          "cut": 15,
+          "net_successes": -1
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111658",
+          "task": "stick-pull-v3",
+          "cut": 35,
+          "net_successes": -3
+        },
+        {
+          "episode_id": "disassemble-v3__2026111665",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": -1
+        }
+      ]
+    },
+    "direct_minus_alarm_replan10": {
+      "positive_net_successes": 21,
+      "negative_net_successes": 10,
+      "top2_share_positive_net": 0.3333333333333333,
+      "top5_share_positive_net": 0.7619047619047619,
+      "positive": [
+        {
+          "episode_id": "disassemble-v3__2026111610",
+          "task": "disassemble-v3",
+          "cut": 15,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "disassemble-v3__2026111685",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": 3
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111638",
+          "task": "stick-pull-v3",
+          "cut": 35,
+          "net_successes": 3
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111683",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 3
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111693",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 3
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111608",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 2
+        },
+        {
+          "episode_id": "shelf-place-v3__2026111637",
+          "task": "shelf-place-v3",
+          "cut": 45,
+          "net_successes": 1
+        },
+        {
+          "episode_id": "shelf-place-v3__2026111667",
+          "task": "shelf-place-v3",
+          "cut": 35,
+          "net_successes": 1
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111603",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 1
+        }
+      ],
+      "negative": [
+        {
+          "episode_id": "disassemble-v3__2026111615",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": -2
+        },
+        {
+          "episode_id": "disassemble-v3__2026111630",
+          "task": "disassemble-v3",
+          "cut": 15,
+          "net_successes": -1
+        },
+        {
+          "episode_id": "disassemble-v3__2026111640",
+          "task": "disassemble-v3",
+          "cut": 15,
+          "net_successes": -3
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111658",
+          "task": "stick-pull-v3",
+          "cut": 35,
+          "net_successes": -3
+        },
+        {
+          "episode_id": "disassemble-v3__2026111665",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": -1
+        }
+      ]
+    },
+    "post_minus_alarm_replan10": {
+      "positive_net_successes": 24,
+      "negative_net_successes": 7,
+      "top2_share_positive_net": 0.3333333333333333,
+      "top5_share_positive_net": 0.7083333333333334,
+      "positive": [
+        {
+          "episode_id": "disassemble-v3__2026111610",
+          "task": "disassemble-v3",
+          "cut": 15,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "disassemble-v3__2026111695",
+          "task": "disassemble-v3",
+          "cut": 15,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "disassemble-v3__2026111685",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": 3
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111683",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 3
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111693",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 3
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111603",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 2
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111608",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 2
+        },
+        {
+          "episode_id": "disassemble-v3__2026111630",
+          "task": "disassemble-v3",
+          "cut": 15,
+          "net_successes": 1
+        },
+        {
+          "episode_id": "shelf-place-v3__2026111637",
+          "task": "shelf-place-v3",
+          "cut": 45,
+          "net_successes": 1
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111673",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 1
+        }
+      ],
+      "negative": [
+        {
+          "episode_id": "disassemble-v3__2026111615",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": -1
+        },
+        {
+          "episode_id": "disassemble-v3__2026111640",
+          "task": "disassemble-v3",
+          "cut": 15,
+          "net_successes": -1
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111658",
+          "task": "stick-pull-v3",
+          "cut": 35,
+          "net_successes": -3
+        },
+        {
+          "episode_id": "disassemble-v3__2026111665",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": -2
+        }
+      ]
+    },
+    "velocity_minus_continue_native10": {
+      "positive_net_successes": 62,
+      "negative_net_successes": 13,
+      "top2_share_positive_net": 0.12903225806451613,
+      "top5_share_positive_net": 0.3225806451612903,
+      "positive": [
+        {
+          "episode_id": "pick-place-wall-v3__2026111606",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111611",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111621",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111656",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111691",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111696",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111608",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111633",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111683",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111693",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-push-v3__2026111614",
+          "task": "stick-push-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-push-v3__2026111644",
+          "task": "stick-push-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "shelf-place-v3__2026111602",
+          "task": "shelf-place-v3",
+          "cut": 35,
+          "net_successes": 3
+        },
+        {
+          "episode_id": "disassemble-v3__2026111640",
+          "task": "disassemble-v3",
+          "cut": 15,
+          "net_successes": 2
+        },
+        {
+          "episode_id": "disassemble-v3__2026111685",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": 2
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111636",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 2
+        },
+        {
+          "episode_id": "stick-push-v3__2026111659",
+          "task": "stick-push-v3",
+          "cut": 5,
+          "net_successes": 2
+        },
+        {
+          "episode_id": "disassemble-v3__2026111625",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": 1
+        },
+        {
+          "episode_id": "disassemble-v3__2026111645",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": 1
+        },
+        {
+          "episode_id": "shelf-place-v3__2026111637",
+          "task": "shelf-place-v3",
+          "cut": 45,
+          "net_successes": 1
+        }
+      ],
+      "negative": [
+        {
+          "episode_id": "stick-pull-v3__2026111613",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": -1
+        },
+        {
+          "episode_id": "disassemble-v3__2026111615",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": -1
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111638",
+          "task": "stick-pull-v3",
+          "cut": 35,
+          "net_successes": -1
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111658",
+          "task": "stick-pull-v3",
+          "cut": 35,
+          "net_successes": -4
+        },
+        {
+          "episode_id": "disassemble-v3__2026111665",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": -3
+        },
+        {
+          "episode_id": "shelf-place-v3__2026111667",
+          "task": "shelf-place-v3",
+          "cut": 35,
+          "net_successes": -1
+        },
+        {
+          "episode_id": "disassemble-v3__2026111695",
+          "task": "disassemble-v3",
+          "cut": 15,
+          "net_successes": -2
+        }
+      ]
+    },
+    "direct_minus_continue_native10": {
+      "positive_net_successes": 63,
+      "negative_net_successes": 16,
+      "top2_share_positive_net": 0.12698412698412698,
+      "top5_share_positive_net": 0.31746031746031744,
+      "positive": [
+        {
+          "episode_id": "pick-place-wall-v3__2026111606",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111611",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111621",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111656",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111691",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111696",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111608",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111633",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111683",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111693",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-push-v3__2026111614",
+          "task": "stick-push-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-push-v3__2026111644",
+          "task": "stick-push-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "shelf-place-v3__2026111602",
+          "task": "shelf-place-v3",
+          "cut": 35,
+          "net_successes": 3
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111638",
+          "task": "stick-pull-v3",
+          "cut": 35,
+          "net_successes": 3
+        },
+        {
+          "episode_id": "disassemble-v3__2026111685",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": 2
+        },
+        {
+          "episode_id": "stick-push-v3__2026111659",
+          "task": "stick-push-v3",
+          "cut": 5,
+          "net_successes": 2
+        },
+        {
+          "episode_id": "disassemble-v3__2026111625",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": 1
+        },
+        {
+          "episode_id": "disassemble-v3__2026111645",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": 1
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111636",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 1
+        },
+        {
+          "episode_id": "shelf-place-v3__2026111637",
+          "task": "shelf-place-v3",
+          "cut": 45,
+          "net_successes": 1
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111603",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 1
+        }
+      ],
+      "negative": [
+        {
+          "episode_id": "stick-pull-v3__2026111613",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": -1
+        },
+        {
+          "episode_id": "disassemble-v3__2026111615",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": -2
+        },
+        {
+          "episode_id": "disassemble-v3__2026111630",
+          "task": "disassemble-v3",
+          "cut": 15,
+          "net_successes": -2
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111658",
+          "task": "stick-pull-v3",
+          "cut": 35,
+          "net_successes": -4
+        },
+        {
+          "episode_id": "disassemble-v3__2026111665",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": -3
+        },
+        {
+          "episode_id": "disassemble-v3__2026111695",
+          "task": "disassemble-v3",
+          "cut": 15,
+          "net_successes": -4
+        }
+      ]
+    },
+    "post_minus_continue_native10": {
+      "positive_net_successes": 64,
+      "negative_net_successes": 11,
+      "top2_share_positive_net": 0.125,
+      "top5_share_positive_net": 0.3125,
+      "positive": [
+        {
+          "episode_id": "pick-place-wall-v3__2026111606",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111611",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111621",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111656",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111691",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111696",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111608",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111633",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111683",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111693",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-push-v3__2026111614",
+          "task": "stick-push-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "stick-push-v3__2026111644",
+          "task": "stick-push-v3",
+          "cut": 5,
+          "net_successes": 4
+        },
+        {
+          "episode_id": "shelf-place-v3__2026111602",
+          "task": "shelf-place-v3",
+          "cut": 35,
+          "net_successes": 3
+        },
+        {
+          "episode_id": "disassemble-v3__2026111640",
+          "task": "disassemble-v3",
+          "cut": 15,
+          "net_successes": 2
+        },
+        {
+          "episode_id": "disassemble-v3__2026111685",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": 2
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111603",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 2
+        },
+        {
+          "episode_id": "stick-push-v3__2026111659",
+          "task": "stick-push-v3",
+          "cut": 5,
+          "net_successes": 2
+        },
+        {
+          "episode_id": "disassemble-v3__2026111625",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": 1
+        },
+        {
+          "episode_id": "disassemble-v3__2026111645",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": 1
+        },
+        {
+          "episode_id": "pick-place-wall-v3__2026111636",
+          "task": "pick-place-wall-v3",
+          "cut": 5,
+          "net_successes": 1
+        },
+        {
+          "episode_id": "shelf-place-v3__2026111637",
+          "task": "shelf-place-v3",
+          "cut": 45,
+          "net_successes": 1
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111673",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": 1
+        }
+      ],
+      "negative": [
+        {
+          "episode_id": "stick-pull-v3__2026111613",
+          "task": "stick-pull-v3",
+          "cut": 5,
+          "net_successes": -1
+        },
+        {
+          "episode_id": "disassemble-v3__2026111615",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": -1
+        },
+        {
+          "episode_id": "stick-pull-v3__2026111658",
+          "task": "stick-pull-v3",
+          "cut": 35,
+          "net_successes": -4
+        },
+        {
+          "episode_id": "disassemble-v3__2026111665",
+          "task": "disassemble-v3",
+          "cut": 5,
+          "net_successes": -4
+        },
+        {
+          "episode_id": "shelf-place-v3__2026111667",
+          "task": "shelf-place-v3",
+          "cut": 35,
+          "net_successes": -1
+        }
+      ]
+    }
+  },
+  "round1_descriptive_only": {
+    "round1_counts": {
+      "continue_native10": 221,
+      "alarm_replan10": 257,
+      "velocity": 265,
+      "direct": 268,
+      "post": 267
+    },
+    "round2_counts": {
+      "continue_native10": 221,
+      "alarm_replan10": 257,
+      "velocity": 270,
+      "direct": 268,
+      "post": 274
+    },
+    "round2_minus_round1_rate_pp": {
+      "continue_native10": 0.0,
+      "alarm_replan10": 0.0,
+      "velocity": 1.25,
+      "direct": 0.0,
+      "post": 1.75
+    },
+    "strict_cross_round_pairing_audit_performed": false,
+    "interpretation": "Descriptive comparison only; no paired cross-round CI or causal improvement attribution."
+  },
+  "development_method_recommendation": {
+    "primary": "post",
+    "reason": "highest observed incremental gain17successes=4.25pp;25rescues and8harms, harms tievelocity and lower thandirect; fewest negative sources4",
+    "secondary_diagnostics": [
+      "velocity",
+      "direct"
+    ],
+    "not_claims": [
+      "not statistically established superiority between injection methods",
+      "not independent success, selected on reused development sources",
+      "not meeting5pp point target or guarantee",
+      "no posthoc task-specific routing, new acceptance threshold or method-specific source exclusion"
+    ]
+  },
+  "per_source": [
+    {
+      "episode_id": "disassemble-v3__2026111600",
+      "task": "disassemble-v3",
+      "no_cut": false,
+      "actual_cut": 15,
+      "scene_fingerprint": "01290b7ff0976c66bbca6e23b14af28a8edcf6ef4cbbf4633111ee5cff92a94c",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111601",
+      "task": "pick-place-wall-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "7669d6e92bfb5f45819511b0fa126ca16d651fa14cf3cffd6a5a3497c02189d1",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111602",
+      "task": "shelf-place-v3",
+      "no_cut": false,
+      "actual_cut": 35,
+      "scene_fingerprint": "5fe4f78d4c2d82492d90a4746b75d81eb203c25bf22f05f0d62c6956aac20258",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 3,
+        "velocity": 3,
+        "direct": 3,
+        "post": 3
+      }
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111603",
+      "task": "stick-pull-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "6f8772e528a225774fb6376f4766de3aaabce0058b202b558451e6948bf1900f",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          true
+        ],
+        "post": [
+          false,
+          false,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 1,
+        "post": 2
+      }
+    },
+    {
+      "episode_id": "stick-push-v3__2026111604",
+      "task": "stick-push-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "ade37370fe486ba1e69ea74f33a3aee923b9f1804dabba990c7b9be5e9de5712",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "disassemble-v3__2026111605",
+      "task": "disassemble-v3",
+      "no_cut": false,
+      "actual_cut": 15,
+      "scene_fingerprint": "a320c0f3256515f865bcdd5f74baf88c7847bd4ef5998bd81eba351b38f696a6",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111606",
+      "task": "pick-place-wall-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "b22cb92bf5214d74978713e819bbbe287254961593034e7487ba24dc0d887c31",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111607",
+      "task": "shelf-place-v3",
+      "no_cut": false,
+      "actual_cut": 85,
+      "scene_fingerprint": "b828a0f29af026282d765d26ec3c65bb85747b3e42eb94f67f8c5286f284abe4",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111608",
+      "task": "stick-pull-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "5683195772d6540fe9450bd0e01964511f9473a5514fd51d6767e187b169fd36",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          false,
+          false
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 2,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "stick-push-v3__2026111609",
+      "task": "stick-push-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "c1c21a3380530f1e383b0051251d7491a6fb95e76c0bc141be7dd5201df7897d",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "disassemble-v3__2026111610",
+      "task": "disassemble-v3",
+      "no_cut": false,
+      "actual_cut": 15,
+      "scene_fingerprint": "4e19baf62a343bdd5a111cbe8a774c8dd8eee485131286bad707b3aa37ceff60",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 0,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111611",
+      "task": "pick-place-wall-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "bd967937cbb19dcd00bc476edf9571d436c600ffde6cc4fb578247b2cef32d9a",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111612",
+      "task": "shelf-place-v3",
+      "no_cut": false,
+      "actual_cut": 35,
+      "scene_fingerprint": "c0706f723e5b56400db1207be1515d2960b0f64b1ee120dc693fd347c0bf398b",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111613",
+      "task": "stick-pull-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "e15b0e70ceaa6f9e19f5e14c67d75701c67ea503a1feeccfdab70605a72ea639",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          true
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 1,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-push-v3__2026111614",
+      "task": "stick-push-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "26cb00b487efb29c0a5f47eb425a92db21bb7e8dc6c61564d145ef238dfee83b",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "disassemble-v3__2026111615",
+      "task": "disassemble-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "c91433535401cbf4dc3884b7492f528ff6642a78b1b82660bf6498e4cad228b4",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "direct": [
+          false,
+          true,
+          true,
+          false
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 3,
+        "direct": 2,
+        "post": 3
+      }
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111616",
+      "task": "pick-place-wall-v3",
+      "no_cut": true,
+      "actual_cut": null,
+      "scene_fingerprint": "0224d9c0eb1370b1f563b7dbdc170db706304e89960da3ec91ac71908c44e020",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111617",
+      "task": "shelf-place-v3",
+      "no_cut": false,
+      "actual_cut": 25,
+      "scene_fingerprint": "57aa2a4dbcc9b8c67c8be0701035ede3b11e8bbe151cf756d068e0e4b4b247ed",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111618",
+      "task": "stick-pull-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "6990c98edfb1e6581f3b1947775a92645a300715bc054a29790ad9016b26f71d",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-push-v3__2026111619",
+      "task": "stick-push-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "327a69447865a59f0705a2862a11f84cd67c71acf5793a49a945600f03bda5f0",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "disassemble-v3__2026111620",
+      "task": "disassemble-v3",
+      "no_cut": false,
+      "actual_cut": 15,
+      "scene_fingerprint": "0f4e0d58979daf1690501a2f52139430d964f0b6e40dab3ec804a6bb93b6ef6e",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111621",
+      "task": "pick-place-wall-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "4aaa0f2a2b398fadf5df5aa56184f84aa89d7959f0e671cc0feb09f5f5336bce",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111622",
+      "task": "shelf-place-v3",
+      "no_cut": false,
+      "actual_cut": 45,
+      "scene_fingerprint": "dbf88f037714dfabf39d76fdc19d75cd457296d11ee9ace97d7f18e23ebace02",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111623",
+      "task": "stick-pull-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "28e584313167fdaf4903928fe806960701a3b6c963e55223b23ca7c7beaa201f",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-push-v3__2026111624",
+      "task": "stick-push-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "5c4241228b06cfdc316d529911bde9221395c4b6855956e114bd859715eedca5",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "disassemble-v3__2026111625",
+      "task": "disassemble-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "16199f6876ee97c7371d2723db39d0d83e25a2d771d9b8d140e4177d4839cbf6",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 3,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111626",
+      "task": "pick-place-wall-v3",
+      "no_cut": false,
+      "actual_cut": 235,
+      "scene_fingerprint": "c3a3d389a2f49cfed4b7809c858648da2e82610de7850faae1faecb6d1c11e9b",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111627",
+      "task": "shelf-place-v3",
+      "no_cut": false,
+      "actual_cut": 25,
+      "scene_fingerprint": "4b9e0594edfa60668ef33250d87b8de4c378299fa3e7ce888e6a36efc8a713b2",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111628",
+      "task": "stick-pull-v3",
+      "no_cut": false,
+      "actual_cut": 25,
+      "scene_fingerprint": "6c502bfe68cfe916ed02fd0338bd6a7ebc99c3ba0a657dabf87e53b91baba18f",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-push-v3__2026111629",
+      "task": "stick-push-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "326b6f7d5dc8f9a09629f639b1d9df0de8bee1cddc16d6869d1dc5b0ec0c9ba9",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "disassemble-v3__2026111630",
+      "task": "disassemble-v3",
+      "no_cut": false,
+      "actual_cut": 15,
+      "scene_fingerprint": "d9c36815528641ca4d2df976ff00f2cb0271a51939235a02e3bbd91e2ae39520",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          false,
+          true,
+          true,
+          false
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 3,
+        "velocity": 4,
+        "direct": 2,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111631",
+      "task": "pick-place-wall-v3",
+      "no_cut": true,
+      "actual_cut": null,
+      "scene_fingerprint": "702aca8aa8ed7392002dbb9f69dc738657d7143dd3ce7719452c79f87ceb5689",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111632",
+      "task": "shelf-place-v3",
+      "no_cut": false,
+      "actual_cut": 25,
+      "scene_fingerprint": "35913c55d2d834ac9d4c68954f97a47ab00a119ae3c4c4b9360962dc2b6f2a4a",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111633",
+      "task": "stick-pull-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "fe6392ce4ac009c2d4576b88e993e4fbb07b34f6664b7ea431e5afadd63f048a",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "stick-push-v3__2026111634",
+      "task": "stick-push-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "00873e590c9ce06cfbe2ddcebf2f09c8628b573b55f5d3f5f7c2713ed1c84674",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "disassemble-v3__2026111635",
+      "task": "disassemble-v3",
+      "no_cut": false,
+      "actual_cut": 15,
+      "scene_fingerprint": "13ea11de6965c813eddaf9ec23ce91a250037105540dcdda42423255dae1aabf",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111636",
+      "task": "pick-place-wall-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "00afc8a07a785c126814060882db9c17a03aacd6c0985140ec6e35393af49d31",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          true,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          true,
+          true
+        ],
+        "direct": [
+          false,
+          false,
+          true,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          true,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 1,
+        "velocity": 2,
+        "direct": 1,
+        "post": 1
+      }
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111637",
+      "task": "shelf-place-v3",
+      "no_cut": false,
+      "actual_cut": 45,
+      "scene_fingerprint": "4d944c4f20cc86bdd0c8a32b3b9b81ce7633473254af9d126453027bcc5fb32c",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          true
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          true
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 1,
+        "direct": 1,
+        "post": 1
+      }
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111638",
+      "task": "stick-pull-v3",
+      "no_cut": false,
+      "actual_cut": 35,
+      "scene_fingerprint": "0a1a05cb333860ab9341d89a8cb06e002cb1bc9d1cd91f9e474586777f58bb15",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          true,
+          false
+        ],
+        "alarm_replan10": [
+          true,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          false,
+          true,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 1,
+        "alarm_replan10": 1,
+        "velocity": 0,
+        "direct": 4,
+        "post": 1
+      }
+    },
+    {
+      "episode_id": "stick-push-v3__2026111639",
+      "task": "stick-push-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "74081065d1bb82fdc55c322f3ac12d5b143f16106905b14a92d43c83dca06c5d",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "disassemble-v3__2026111640",
+      "task": "disassemble-v3",
+      "no_cut": false,
+      "actual_cut": 15,
+      "scene_fingerprint": "2c08d7c179bafcf6b22406d58fabc80bb42056bc0ff113a12c7e79858c4de7ed",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          true,
+          false,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          false,
+          true,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          true,
+          false,
+          true,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 3,
+        "velocity": 2,
+        "direct": 0,
+        "post": 2
+      }
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111641",
+      "task": "pick-place-wall-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "4eefa654e8fee025131e801e4e01fb37b27240592b9612fa6b8595bab5496600",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111642",
+      "task": "shelf-place-v3",
+      "no_cut": false,
+      "actual_cut": 35,
+      "scene_fingerprint": "e0c9ba63b6d9ff271fdccf6107892f51f15f665d3e3b0a1f012c879efb1587f8",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111643",
+      "task": "stick-pull-v3",
+      "no_cut": false,
+      "actual_cut": 35,
+      "scene_fingerprint": "1b817a9a9ef996b835d68681b709e402b49b747dd9addb600651fe02bde75165",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "stick-push-v3__2026111644",
+      "task": "stick-push-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "f3ecfeecac4142a054bb3ea4a17d8a223bfc8e24821867a5cd9e8f0be5dfc650",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "disassemble-v3__2026111645",
+      "task": "disassemble-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "0c910b38df1194486e18becc69f8d998f4b26acb146c15eaf6a510e5021b33aa",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 3,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111646",
+      "task": "pick-place-wall-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "63446526f4d0aabed756ca1e79e058e719d59b6d29773ffbaa002ff90c237d8b",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111647",
+      "task": "shelf-place-v3",
+      "no_cut": false,
+      "actual_cut": 35,
+      "scene_fingerprint": "422a39b00d071f8d7b1abbc99f08bb31cef182f36591e043ccb7e0d5eb434445",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111648",
+      "task": "stick-pull-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "f00adb3f5f0c3219b2e924206a866e08c88f0c2f53ac634199574a2e7c1254ce",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-push-v3__2026111649",
+      "task": "stick-push-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "844954eb60fe0cb4280a723a4203119c865d97a1645701eafd3654c71f7c0290",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "disassemble-v3__2026111650",
+      "task": "disassemble-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "e7506d9aaffa3ef045cd07d65ad357cccfc2068540018a2d33114b90d95c857f",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111651",
+      "task": "pick-place-wall-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "21a98d30b7edb544b05d6b99a36fedfa93f7fe7530ddabd637760771bec4802f",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111652",
+      "task": "shelf-place-v3",
+      "no_cut": false,
+      "actual_cut": 35,
+      "scene_fingerprint": "b203df7acb208a2bb3a847c04ce859e98ecb183ee526d3dbdea3a65022302b4a",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111653",
+      "task": "stick-pull-v3",
+      "no_cut": true,
+      "actual_cut": null,
+      "scene_fingerprint": "d1734e5072f45284ebe1a5b48c19e2ae04162175fb98763a8c01a4721111a9ab",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-push-v3__2026111654",
+      "task": "stick-push-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "824f6f00ea6ea0259a717409affecb2e386b2739da1d77a7f03afc2cdcf94023",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "disassemble-v3__2026111655",
+      "task": "disassemble-v3",
+      "no_cut": false,
+      "actual_cut": 15,
+      "scene_fingerprint": "11bda34fa658f02ae3f3e8e9dac921717731e512b166a60c89067b82d6de21cb",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111656",
+      "task": "pick-place-wall-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "05ad82f0e36b39484845ac871a1a0dacc662603ab3136b8cae2f592ff80d6c4e",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111657",
+      "task": "shelf-place-v3",
+      "no_cut": true,
+      "actual_cut": null,
+      "scene_fingerprint": "124861ec4cb55e09b6f83f9c217a1e82aa85033309828a114ccdf70f87f4390b",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111658",
+      "task": "stick-pull-v3",
+      "no_cut": false,
+      "actual_cut": 35,
+      "scene_fingerprint": "ca0850bc94074ab1ea92b774e8d86c1185b768b37d90ebf2b51a4c2f3f5596e6",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          false,
+          true,
+          true
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 3,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-push-v3__2026111659",
+      "task": "stick-push-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "8776b8acc2319cf55640dd972d4d731698da677426aa85ef39d7cab539c236cc",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          true,
+          true,
+          false
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 2,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "disassemble-v3__2026111660",
+      "task": "disassemble-v3",
+      "no_cut": false,
+      "actual_cut": 15,
+      "scene_fingerprint": "3e28e7773bb976006cd26550c4d9af82094d6f3a5e26e9d6a2d3cc79b3a754e0",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111661",
+      "task": "pick-place-wall-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "b2b01375ca74d59cc37b6878952c57977bb6884954890150b34c00f02163699d",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111662",
+      "task": "shelf-place-v3",
+      "no_cut": false,
+      "actual_cut": 35,
+      "scene_fingerprint": "9b637185fa581fc43b49479c2f7aa36f90136ddda3cbd6539ae43043490ddbba",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111663",
+      "task": "stick-pull-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "813e66ac82babd6796dfdd9e2a0a7e01869ad4ca19bdd0c1591fe96192fb9a23",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-push-v3__2026111664",
+      "task": "stick-push-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "9c8c07683ac54f438752f29ea16f8a04bf9c34dc218110cffe07a710d9845207",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "disassemble-v3__2026111665",
+      "task": "disassemble-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "3c73369b59b97676ef7aa83e10cc5514fffa91a0bbf4bcabf4df07e7e0bde090",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          false,
+          false,
+          true
+        ],
+        "velocity": [
+          false,
+          true,
+          false,
+          false
+        ],
+        "direct": [
+          true,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 2,
+        "velocity": 1,
+        "direct": 1,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111666",
+      "task": "pick-place-wall-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "e8e2a16f9998513bcbc15ed890604942753191207540bb506f83722fcaf2465e",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111667",
+      "task": "shelf-place-v3",
+      "no_cut": false,
+      "actual_cut": 35,
+      "scene_fingerprint": "f0f8be1761f5bbc1271438f0c188e0c714b2b0695412647f3f486e7ee125e62a",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          true,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          true,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 1,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 1,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111668",
+      "task": "stick-pull-v3",
+      "no_cut": false,
+      "actual_cut": 35,
+      "scene_fingerprint": "b6d7d8b7394d3561fa8cbb9f53f53760e129fab6d9368a68a13e2455d4a948c0",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "stick-push-v3__2026111669",
+      "task": "stick-push-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "14af1118fd120ea8aa26e4d3c552da8970fdf7f9cff6e7bbd7797a5a4fe727ca",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "disassemble-v3__2026111670",
+      "task": "disassemble-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "616a96befc7cda0741f1a28f7a686856f1fba3f727c96811405adc5b1d487c97",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111671",
+      "task": "pick-place-wall-v3",
+      "no_cut": true,
+      "actual_cut": null,
+      "scene_fingerprint": "ad8f0f6dcf45e64ccf35d3ac04135d84d4c9776658692b765d945253be1c9502",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111672",
+      "task": "shelf-place-v3",
+      "no_cut": false,
+      "actual_cut": 35,
+      "scene_fingerprint": "3ac208e0ab52cfc324cd2394ba0e08cd5664e53f760f194a89abacac0f068b9f",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111673",
+      "task": "stick-pull-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "9f130cb5906cbb5d82150cd3d9b4df619a2b1706da2477df908d443c3b638783",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          true,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 1
+      }
+    },
+    {
+      "episode_id": "stick-push-v3__2026111674",
+      "task": "stick-push-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "8545e4f6d597adf6a47ee7fe3aa9c8d512dcd2477c8006a1d8bd3918a05c8523",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "disassemble-v3__2026111675",
+      "task": "disassemble-v3",
+      "no_cut": false,
+      "actual_cut": 15,
+      "scene_fingerprint": "090986b8b470bdfa78fe3d60c7b1c30b61f148eb98ba85a9cee9abb37ef80976",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111676",
+      "task": "pick-place-wall-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "857e2e85118a7506d16cfee780ab297a63a5c02152b73ab22c44a7cc4edb7164",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111677",
+      "task": "shelf-place-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "b92f305d861503b93ac33ea6028c516715fed34b1823959054798563181f33c5",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111678",
+      "task": "stick-pull-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "395eae3952e6c5e576231bf20aa08a90d58cecee341eb038f52fbfb8843d5f83",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-push-v3__2026111679",
+      "task": "stick-push-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "a08955d3b27a3f334f676bef4bdfc9b435f924b90bb50a932ce6b8017552001d",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "disassemble-v3__2026111680",
+      "task": "disassemble-v3",
+      "no_cut": false,
+      "actual_cut": 15,
+      "scene_fingerprint": "3d48ded26b54745671ad64adebd7649943b8f8d66ce4cd8edc07cb8f93fcb9dd",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111681",
+      "task": "pick-place-wall-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "3f87ebb1861bf2a17ebb814d206af1bd1be0e5207cc269bdedd0bf84fe518a54",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111682",
+      "task": "shelf-place-v3",
+      "no_cut": false,
+      "actual_cut": 35,
+      "scene_fingerprint": "e0f6a7953acbbaa65e23de897bdbc91b1de6f9452645cbef778d16646e2ad18d",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111683",
+      "task": "stick-pull-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "1cdda4d94e932b091d987492694fb24bafe45ecd2624784e03ce5187e1f22a94",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          true,
+          false,
+          false
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 1,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "stick-push-v3__2026111684",
+      "task": "stick-push-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "81ae17b3b77c59d58ecb2bf29920581ba0b1cd56dd2679c4f500049de84c0a88",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "disassemble-v3__2026111685",
+      "task": "disassemble-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "2e01f56b9e5b174b3ef4bb97b56170c6bd5f9dbaa3f2594a5db29418f962eb9f",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          false,
+          true,
+          false
+        ],
+        "alarm_replan10": [
+          true,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 2,
+        "alarm_replan10": 1,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111686",
+      "task": "pick-place-wall-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "9192f5397da18ff124ee110b0a8716f9f66c18f2018aba0db156693e026a7861",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111687",
+      "task": "shelf-place-v3",
+      "no_cut": false,
+      "actual_cut": 35,
+      "scene_fingerprint": "52cde99d29489831e3aa3f92a57fcdbf814c5ef6f3412eb4accd6b41dda0c2a2",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111688",
+      "task": "stick-pull-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "bacaf08af67e27029bebfee76c72aa0ea2e6555e16830340cdeb553c60bc9cfb",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-push-v3__2026111689",
+      "task": "stick-push-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "be2862ec8e92c14de3444919ed7379d65bd64b3ad909e0235fbe98967cdf7147",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "disassemble-v3__2026111690",
+      "task": "disassemble-v3",
+      "no_cut": false,
+      "actual_cut": 15,
+      "scene_fingerprint": "3540f4871f5fb8da8b0775289a3a7023bb3cee41e890129b5928285ebe8d679f",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111691",
+      "task": "pick-place-wall-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "5469c8f9e6a101e87e89acf4bf075b3ed2c5baaedd972fb57e4d5190b434e5f8",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111692",
+      "task": "shelf-place-v3",
+      "no_cut": false,
+      "actual_cut": 35,
+      "scene_fingerprint": "65d1fa9892a1bbbf88c013c962c86c0dc831e148c3acc554ada9e693da8a5124",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 0,
+        "velocity": 0,
+        "direct": 0,
+        "post": 0
+      }
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111693",
+      "task": "stick-pull-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "7acc0806397f488e53613736807ecfa5ff892ec381e41090811a18cce142511d",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          false,
+          true,
+          false,
+          false
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 1,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "stick-push-v3__2026111694",
+      "task": "stick-push-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "8e0982080bdbd46758c6365a79a87b9251b881e29e02dfb50db1d672011ce844",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "disassemble-v3__2026111695",
+      "task": "disassemble-v3",
+      "no_cut": false,
+      "actual_cut": 15,
+      "scene_fingerprint": "e59b51d31f1befa511420b07c3f0be86a5460e1d693b10f7fcc2af26451ee959",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "velocity": [
+          true,
+          false,
+          false,
+          true
+        ],
+        "direct": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 0,
+        "velocity": 2,
+        "direct": 0,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111696",
+      "task": "pick-place-wall-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "782b63ed7c25f05bf1996cf89b8563d8a195f146e3bf36d8e38e265dc544ae0e",
+      "paired_outcomes": {
+        "continue_native10": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 0,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111697",
+      "task": "shelf-place-v3",
+      "no_cut": false,
+      "actual_cut": 25,
+      "scene_fingerprint": "deed7d627529e50a4f3eb927abda634b2bea61c91c99073f2fff415612c30f3d",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111698",
+      "task": "stick-pull-v3",
+      "no_cut": false,
+      "actual_cut": 35,
+      "scene_fingerprint": "4244fb16617c3d60361fc9098f10f00a023554102e9c6ed41ee822b4a9a5afe8",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    },
+    {
+      "episode_id": "stick-push-v3__2026111699",
+      "task": "stick-push-v3",
+      "no_cut": false,
+      "actual_cut": 5,
+      "scene_fingerprint": "71e177f3ff5ab7280ae118eceda259775d2d765709475befc588a16a44b2f112",
+      "paired_outcomes": {
+        "continue_native10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "alarm_replan10": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "velocity": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "direct": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "post": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "success_counts": {
+        "continue_native10": 4,
+        "alarm_replan10": 4,
+        "velocity": 4,
+        "direct": 4,
+        "post": 4
+      }
+    }
+  ],
+  "actions": {
+    "new_simulator_calls": 0,
+    "new_training_updates": 0,
+    "model_calls": 0,
+    "calibration_or_held_reads": false,
+    "sealed_artifacts_modified": false
+  }
+}

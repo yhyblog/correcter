@@ -1,0 +1,264 @@
+{
+  "status": "passed_bounded_readonly_metadata_check",
+  "created_utc": "2026-09-17T03:31:49.255563+00:00",
+  "ready": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_ANALYSIS_READY.json",
+    "sha256": "bf2dd9e154d8639860867d9bbb0333e9f9cc3f5930756f32bf0d0331a37bc086",
+    "version": 13,
+    "exact_future_selection_contract": true,
+    "heldout_scope_released": false
+  },
+  "selection": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_selections/final_selection_v1",
+    "seal_sha256": "2afa80bc07c9cf3f87c5bb8a21bcc8b36baf2a129d25e86b37731de386c7144e",
+    "result_sha256": "87f1a411e8e82ecc4274875f93a264962824566271231338226d0a01e788f658",
+    "status": "sealed",
+    "method": "post",
+    "post_enabled_on_alarm": true,
+    "resource_limits": {
+      "model_calls": 0,
+      "simulator_calls": 0,
+      "optimizer_updates": 0,
+      "pca_fits": 0
+    },
+    "core_metadata_verified": [
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_selections/final_selection_v1/result.json",
+        "sha256": "87f1a411e8e82ecc4274875f93a264962824566271231338226d0a01e788f658"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_selections/final_selection_v1/approved_payload.json",
+        "sha256": "f9e528e6f4ab740a4f7424349649705df791d2a149cbd3b0caba5cd9008e4796"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_selections/final_selection_v1/freeze.json",
+        "sha256": "fca8c163161eee6b53e5b59d6e375faf3b830af1708ccedc39febc6bc8ceaf70"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_selections/final_selection_v1/authorization_inventory.json",
+        "sha256": "20c221673d0cf6471f3acee4cc0615c0b8cf8da7603ce7e7871528a6760590a7"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_selections/final_selection_v1/NATIVE10_ANALYSIS_READY.json",
+        "sha256": "bf2dd9e154d8639860867d9bbb0333e9f9cc3f5930756f32bf0d0331a37bc086"
+      }
+    ]
+  },
+  "heldout_pending": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_preparations/heldout_pending_v2",
+    "seal_sha256": "2b4f8706b587da23f6c0df0197222f0561d2cb189b68bc27b1647878acd1a3d4",
+    "config_sha256": "3a60e99fe8fab7c7eff87801475c62d4354754ad73f375e3c538f84dfecfcf08",
+    "ready_contract_sha256": "94f77df34fb662cbf51f725906ae456831060879455752c23908fa53b46db9fa",
+    "runnable": false,
+    "actual_selection_binding": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_selections/final_selection_v1",
+      "seal_sha256": "2afa80bc07c9cf3f87c5bb8a21bcc8b36baf2a129d25e86b37731de386c7144e",
+      "result_sha256": "87f1a411e8e82ecc4274875f93a264962824566271231338226d0a01e788f658"
+    },
+    "explicit_selection_result_reference": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_selections/final_selection_v1/result.json",
+      "sha256": "87f1a411e8e82ecc4274875f93a264962824566271231338226d0a01e788f658"
+    },
+    "all_local_pending_files_verified": true
+  },
+  "science": {
+    "equals_calibration_scientific_parameters": true,
+    "base_config_sha256": "c04125ae474316783e7dd6ca74c799d5441299801f22cd0910889f98511d7382",
+    "base_freeze_sha256": "d181899e5ccf70177db5fee6267ec9f102f4aae6e437e42f7a0eb86dc9800d1e",
+    "preserved_keys": [
+      "source_horizon",
+      "prefix_horizon",
+      "suffix_horizon",
+      "control_budget",
+      "gate_threshold",
+      "guidance",
+      "matching",
+      "command_semantics",
+      "seed_namespace"
+    ],
+    "matching_dependencies": [
+      "velocity",
+      "direct",
+      "post",
+      "reverse",
+      "random"
+    ],
+    "fixed_critic": {
+      "path": "A",
+      "step": 4000,
+      "members": 4,
+      "selected_seal_sha256": "f40ff4f3356ee8f14d687348f9f9cc7addf1b1e93233b81645312973f7e02d6a"
+    },
+    "primary_comparison": "post_minus_alarm_replan10",
+    "statistics": {
+      "primary_comparison": "post_minus_alarm_replan10",
+      "secondary_comparisons": [
+        "alarm_replan10_minus_continue_native10",
+        "velocity_minus_alarm_replan10",
+        "direct_minus_alarm_replan10",
+        "velocity_minus_continue_native10",
+        "direct_minus_continue_native10",
+        "post_minus_continue_native10"
+      ],
+      "draws": 10000,
+      "seed": 2026091622,
+      "task_order": [
+        "disassemble-v3",
+        "pick-place-wall-v3",
+        "shelf-place-v3",
+        "stick-pull-v3",
+        "stick-push-v3"
+      ],
+      "source_order": [
+        "disassemble-v3__2026111750",
+        "pick-place-wall-v3__2026111751",
+        "shelf-place-v3__2026111752",
+        "stick-pull-v3__2026111753",
+        "stick-push-v3__2026111754",
+        "disassemble-v3__2026111755",
+        "pick-place-wall-v3__2026111756",
+        "shelf-place-v3__2026111757",
+        "stick-pull-v3__2026111758",
+        "stick-push-v3__2026111759",
+        "disassemble-v3__2026111760",
+        "pick-place-wall-v3__2026111761",
+        "shelf-place-v3__2026111762",
+        "stick-pull-v3__2026111763",
+        "stick-push-v3__2026111764",
+        "disassemble-v3__2026111765",
+        "pick-place-wall-v3__2026111766",
+        "shelf-place-v3__2026111767",
+        "stick-pull-v3__2026111768",
+        "stick-push-v3__2026111769",
+        "disassemble-v3__2026111770",
+        "pick-place-wall-v3__2026111771",
+        "shelf-place-v3__2026111772",
+        "stick-pull-v3__2026111773",
+        "stick-push-v3__2026111774",
+        "disassemble-v3__2026111775",
+        "pick-place-wall-v3__2026111776",
+        "shelf-place-v3__2026111777",
+        "stick-pull-v3__2026111778",
+        "stick-push-v3__2026111779",
+        "disassemble-v3__2026111780",
+        "pick-place-wall-v3__2026111781",
+        "shelf-place-v3__2026111782",
+        "stick-pull-v3__2026111783",
+        "stick-push-v3__2026111784",
+        "disassemble-v3__2026111785",
+        "pick-place-wall-v3__2026111786",
+        "shelf-place-v3__2026111787",
+        "stick-pull-v3__2026111788",
+        "stick-push-v3__2026111789",
+        "disassemble-v3__2026111790",
+        "pick-place-wall-v3__2026111791",
+        "shelf-place-v3__2026111792",
+        "stick-pull-v3__2026111793",
+        "stick-push-v3__2026111794",
+        "disassemble-v3__2026111795",
+        "pick-place-wall-v3__2026111796",
+        "shelf-place-v3__2026111797",
+        "stick-pull-v3__2026111798",
+        "stick-push-v3__2026111799",
+        "disassemble-v3__2026111850",
+        "pick-place-wall-v3__2026111851",
+        "shelf-place-v3__2026111852",
+        "stick-pull-v3__2026111853",
+        "stick-push-v3__2026111854",
+        "disassemble-v3__2026111855",
+        "pick-place-wall-v3__2026111856",
+        "shelf-place-v3__2026111857",
+        "stick-pull-v3__2026111858",
+        "stick-push-v3__2026111859",
+        "disassemble-v3__2026111860",
+        "pick-place-wall-v3__2026111861",
+        "shelf-place-v3__2026111862",
+        "stick-pull-v3__2026111863",
+        "stick-push-v3__2026111864",
+        "disassemble-v3__2026111865",
+        "pick-place-wall-v3__2026111866",
+        "shelf-place-v3__2026111867",
+        "stick-pull-v3__2026111868",
+        "stick-push-v3__2026111869",
+        "disassemble-v3__2026111870",
+        "pick-place-wall-v3__2026111871",
+        "shelf-place-v3__2026111872",
+        "stick-pull-v3__2026111873",
+        "stick-push-v3__2026111874",
+        "disassemble-v3__2026111875",
+        "pick-place-wall-v3__2026111876",
+        "shelf-place-v3__2026111877",
+        "stick-pull-v3__2026111878",
+        "stick-push-v3__2026111879",
+        "disassemble-v3__2026111880",
+        "pick-place-wall-v3__2026111881",
+        "shelf-place-v3__2026111882",
+        "stick-pull-v3__2026111883",
+        "stick-push-v3__2026111884",
+        "disassemble-v3__2026111885",
+        "pick-place-wall-v3__2026111886",
+        "shelf-place-v3__2026111887",
+        "stick-pull-v3__2026111888",
+        "stick-push-v3__2026111889",
+        "disassemble-v3__2026111890",
+        "pick-place-wall-v3__2026111891",
+        "shelf-place-v3__2026111892",
+        "stick-pull-v3__2026111893",
+        "stick-push-v3__2026111894",
+        "disassemble-v3__2026111895",
+        "pick-place-wall-v3__2026111896",
+        "shelf-place-v3__2026111897",
+        "stick-pull-v3__2026111898",
+        "stick-push-v3__2026111899"
+      ],
+      "unit": "whole logical primary source within task",
+      "quantile_method": "linear",
+      "interval": "percentile95",
+      "multiplicity_adjusted": false,
+      "source_denominator": 100,
+      "replicates": 4,
+      "practical_point_estimate_target": 0.05,
+      "no_method_selection_after_heldout": true,
+      "no_combining_calibration_and_heldout": true
+    }
+  },
+  "registration": {
+    "primary_slots": 100,
+    "backup_slots": 200,
+    "task_counts": {
+      "disassemble-v3": 20,
+      "pick-place-wall-v3": 20,
+      "shelf-place-v3": 20,
+      "stick-pull-v3": 20,
+      "stick-push-v3": 20
+    },
+    "primary_ids_sha256": "f05bbfeb92da78d8fb9242bd28b116cf6f5a4cff252b5ad0487506e0bd108afc",
+    "held_replacement_mapping_sha256": "6fb70dde59cfa22b496608e4ba7cddf30f387a9b6a7d5e45b5fdb09d0d24e5da",
+    "full_manifest_and_replacement_mapping_equal_calibration": true,
+    "metadata_shows_no_held_initialization": true,
+    "physical_held_scene_uniqueness_not_yet_measured": true
+  },
+  "scene_prefix": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_preparations/heldout_pending_v2/scene_registry_before.jsonl",
+    "sha256": "313bd9bd1a9cd8e35919abf42609677b9e45b1058fe33f17abd2e9eabfaa0250",
+    "records": 800,
+    "bytes": 539548,
+    "live_prefix_matches": true,
+    "held_ids_in_prefix": 0
+  },
+  "resources": {
+    "simulator_attempts_before_and_after": 46025,
+    "optimizer_updates_before_and_after": 51200,
+    "live_ledger_sha256_matches_frozen_preselection_snapshot": "4f289c308a418803fcf291553823378ddefebf1714de1da19d9f0ea43274a7f5",
+    "held_future_limit": 2200,
+    "held_future_replicates": 4,
+    "held_new_optimizer_updates": 0,
+    "reserve_shared_limit": 1200
+  },
+  "limits": [
+    "Only selection core metadata and the complete pending directory were rehashed; no repeated full old-model/trajectory audit.",
+    "No heldout outcomes, environment reset, models, PCA, optimizer, launcher or seal/freeze entry was executed.",
+    "This receipt is evidence only and cannot release heldout."
+  ],
+  "technical_blockers": []
+}

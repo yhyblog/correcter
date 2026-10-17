@@ -1,0 +1,13 @@
+{
+  "status": "delivered",
+  "finished_at_utc": "2026-09-19T17:48:33.679156+00:00",
+  "target_session": "01a0b91f-355f-7cd1-ae36-412500534ffb",
+  "returncode": 0,
+  "stdout": "Queued message 01a0bac8-bfd0-78b1-9b48-4a5060cfd722 for thread 01a0b91f-355f-7cd1-ae36-412500534ffb.\n",
+  "stderr": "",
+  "result_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_EGL_CPU_REPAIR_V1_RESULT.json",
+  "result_sha256": "aa2a258191fb86216d00d98e9e55f63c0e904927e0158c8680a318202ad7c16a",
+  "message": "A10_EGL_CPU_REPAIR_V1 CPU专项交付完成，所有GPU/graphics/EGL/仿真/reset/训练/删除计数0。\nRESULT：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_EGL_CPU_REPAIR_V1_RESULT.json SHA=aa2a258191fb86216d00d98e9e55f63c0e904927e0158c8680a318202ad7c16a\n短报告：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_EGL_CPU_REPAIR_V1_REPORT.md\n有限提案：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CPU_REPAIR_V1/proposal/PROPOSAL.json\n1. R2专项ACK/REPORT/RESULT已重投（QUEUE_redelivery_r1.json），v4原修正早已完成验收；本次按CONTROL9新增CPU修复任务推进，没有重跑旧A10或追加完整库存。\n2. 实际conda有GLVND1.7/libEGL；Python及_ctypes RPATH可找到私有库。实际加载路径缺NVIDIA EGL vendor/core/glsi和vendor JSON，compute,utility只是线索。\n3. 已隔离准备匹配内核535.161.08的NVIDIA4库+GLVND4库，共88,876,552bytes；3个NVIDIA官方拆分包21,961,782bytes，Packages SHA逐个通过；无系统/conda安装、无大驱动包。18 ELF的DT_NEEDED无未解析候选，尚未dlopen/执行EGL。\n4. 沙箱外只读确认nvidia0/ctl/uvm存在、dri/modeset缺失；sysfs card1/renderD128映射目标PCI0f:00.0及GPU UUID。未把沙箱/dev不可见误判成宿主不可用，也未断言缺DRM必定失败。\n5. 独立graphics-only提案：1attempt、1次EGL枚举、1display初始化/1context、1静态64x64场景、至多1显式mj_forward、1render/1RGB读回；模型/MetaWorld/reset/物理推进/训练0、重试0。EGL DRM路径经sysfs PCI与内核UUID映射，无法确认即失败，不按CUDA序号或逐卡试。\n6. 子进程120+10s；准备/预约/释放/恢复另计，无端到端130秒假上界。全A holder停算直至进程族退出，失败恢复；B不参与。工程估计显存1GiB/RAM2GiB/新运行输出32MiB，未实测。\n7. 新native_code_snapshot_v5仅拆分diagnostic_native_resets_returned/diagnostic_observations_returned/usable_observation_artifacts。旧失败对应1/0/0（总native reset52）；三合成例子和16定向CPU测试通过，旧回执/v4未改；v5没有新native授权。\n8. 9AST、2shell、3份旧/CPU release纯CPU拒绝、438发布文件SHA通过；新proposal SHA=f5ea6f220c760465ab4ee93e459bb3e63f508d2d51a22e5e477ea375446f319b，bundle SHA=40040cd0e6134d715ffc025156b0e7118a9f35e7d01bf6e7a36700b1a1ee6639。纯CPU命令在commands/check_authorization_cpu.sh NEW_RELEASE；真实commands/run_proposed_graphics_probe.sh尚未执行。\n9. 当前无已证实必须平台操作；若未来一次探针证明设备/接口缺项，再用work中的PLATFORM_FALLBACK.md启动配置建议。guard只读状态8holder活；所有新增下载/解包/证据保留，NEW_ARTIFACTS_INVENTORY.json已列，无删除release。\n",
+  "analysis_acceptance": "not_implied",
+  "graphics_release": "not_implied"
+}

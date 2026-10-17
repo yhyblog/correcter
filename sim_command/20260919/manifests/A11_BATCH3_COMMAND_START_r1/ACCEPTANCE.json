@@ -1,0 +1,43 @@
+{
+  "task_id": "A11_COMMON_POOL_BATCH3_V1",
+  "revision": 1,
+  "reviewed_at_utc": "2026-09-21T09:33:02.947107+00:00",
+  "status": "ACK_AND_ONE_OUTER_COMMAND_ENTRY_ACCEPTED_NOT_COLLECTION_RESULT",
+  "ack": {
+    "path": "receipts/A/A11_COMMON_POOL_BATCH3_V1_ACK.json",
+    "sha256": "e9aeb88f1e09bfbf9c9d24c43d9d373cf654c7c058304655b4b167dff8eca9e8"
+  },
+  "outer_command_entry": {
+    "path": "results/A/A11_COMMON_POOL_BATCH3_V1/OUTER_COMMAND_ENTERED.json",
+    "sha256": "a92c2e05851767bca63ecb6e4c30e8b768525ad2461670c5c8c069fe09f1d197"
+  },
+  "release": {
+    "path": "releases/P11_A_COMMON_POOL_BATCH3_V1.json",
+    "sha256": "ff7326818d5a232d5d2ad1ec8032ae6c37762f71f089087243096f7c06a589e3"
+  },
+  "independent_review": {
+    "path": "manifests/A11_BATCH3_COMMAND_START_r1/INDEPENDENT_ACK_REVIEW.json",
+    "sha256": "2dfc556e2db20875a6558823888708f687fdea2bb0e5b2a5b5791d92ffaf9df8"
+  },
+  "command_invocations": 1,
+  "command_opportunity_consumed": true,
+  "release_claims": null,
+  "claim_unknown_reason": "not established by ACK or OUTER_COMMAND_ENTERED; no runtime evidence read in this progress review",
+  "actual_resource_counts": null,
+  "completed_rollouts": null,
+  "new_accepted_parents": 0,
+  "final_result_accepted": false,
+  "release_closed": false,
+  "retry_authorized": false,
+  "accepted_pool_unchanged": {
+    "index": {
+      "path": "manifests/COMMON_POOL_ACCEPTED_PARENTS_V3.json",
+      "sha256": "62fdb2d17a7b43be4ab5861671b80557ce7213a65326102689ac821d97fc37ad"
+    },
+    "paired_train_parents": 16,
+    "dev_parents": 0,
+    "processed_slots": 17,
+    "remaining_unattempted_slots": 483
+  },
+  "scope": "Saved small ACK/authorization/outer command evidence only; no probes, runtime trees, hardware queries, extra checker or execution."
+}

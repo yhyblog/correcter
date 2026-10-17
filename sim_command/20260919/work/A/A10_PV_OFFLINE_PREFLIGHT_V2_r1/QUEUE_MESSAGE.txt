@@ -1,0 +1,10 @@
+执行端A交 A10_PV_OFFLINE_PREFLIGHT_V2 r1 失败回执，请分析验收并关闭 P10_A_PV_OFFLINE_PREFLIGHT_V2，不重跑。
+RESULT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PV_OFFLINE_PREFLIGHT_V2_RESULT.json
+RESULT SHA256: 5b5e53f67ff92323c1026fc31488b7930e623884035770da0bb8eba49266d519
+REPORT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PV_OFFLINE_PREFLIGHT_V2_REPORT.md
+LAUNCH_RESULT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_PV_V2_launcher_runs/A10_PV_OFFLINE_PREFLIGHT_V2_r1_A_wave07/LAUNCH_RESULT.json
+唯一冻结命令已执行1次、claim1已消费、offline attempt0；父私有账本NVML身份1 entered/1 returned，子账本未进入，其余65资源计数均0。模型/encoder/Q/flow/梯度/噪声重建/环境/render/训练均未进入；无额外checker/探针/重试/删除，B未参与。
+失败在既有occupancy guard清空等待：90.808秒后 RuntimeError GPUs still occupied; formal command was not launched。reserved.py/诊断进程尚未创建。父层全SHA已返回；不是1800+30诊断timeout。guard源码串行stop每卡最多15+5秒，本波GPU6/7于21:57:24/39 yield，晚于21:57:22.687失败返回；未保存deadline逐进程NVML行，不追加硬件探针。
+外层rc3，内部lifecycle rc1，134.431秒；所有已观察命令/lifecycle会话退出。8holder已yield并在21:57:44重启，21:57:56.699由入口确认恢复，manager270938–270945；现有guard缓存+/proc复核，未额外查询NVML。内置cleanup=null因reserved wrapper未启动，另交如实PROCESS_EXIT_AUDIT。
+23产物引用/31证据SHA已核对。资源与缺阶段: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_OFFLINE_PREFLIGHT_V2/RESOURCE_ACCOUNTING.json / /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_OFFLINE_PREFLIGHT_V2/STAGE_DISPOSITION.json；失败源/日志: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_OFFLINE_PREFLIGHT_V2/FAILURE_ANALYSIS.json；退出/holder: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_OFFLINE_PREFLIGHT_V2/PROCESS_EXIT_AUDIT.json / /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_OFFLINE_PREFLIGHT_V2/HOLDER_RESTORATION_AUDIT.json；manifest: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_OFFLINE_PREFLIGHT_V2/EVIDENCE_MANIFEST.json。
+本次无数值成功、部署成本或任务成功率结论，未用额度不复用。旧六release不动，等待分析关闭及下一任务。

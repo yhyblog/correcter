@@ -1,0 +1,325 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "version": 1,
+  "published_at_utc": "2026-09-21T14:28:27.136705+00:00",
+  "status": "target_specific_accepted_metadata_not_training_release",
+  "partial_target_parent_count": 1,
+  "parents": [
+    {
+      "source": {
+        "absolute_target": 300,
+        "cut": 5,
+        "env_seed": 1633517541,
+        "instruction": "Close a door with a revolving joint",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 5631881120775632798,
+        "ordinal": 0,
+        "parent_source_id": "PROPOSED_MT50_door_close_train_0000_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|door-close-v3|train|0|cut5",
+        "purpose": "next8 A train ordinal0/cut5 slots of original500 coverage plan",
+        "selection": "ASCII task names; exclude all17 processed identities including normal-only; first8; never skip unknown caps",
+        "source_id": "PROPOSED_MT50_door_close_train_0000",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "door-close-v3"
+      },
+      "node": "A",
+      "source_ordinal_within_task_train": 0,
+      "task": "door-close-v3",
+      "split": "train",
+      "cut": 5,
+      "native_H": 10,
+      "run_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5",
+      "release": {
+        "path": "releases/P11_A_COMMON_POOL_BATCH3_V1.json",
+        "sha256": "ff7326818d5a232d5d2ad1ec8032ae6c37762f71f089087243096f7c06a589e3"
+      },
+      "acceptance": {
+        "path": "manifests/A11_COMMON_POOL_BATCH3_V1_ACCEPTANCE.json",
+        "sha256": "a1ba9ecf9a6c6fa4a5fd35fd38d71cc338e2c2b7e71063521bcfa1aeca172592"
+      },
+      "runtime_manifest": {
+        "path": "results/A/A11_COMMON_POOL_BATCH3_V1/RUNTIME_FILES.jsonl",
+        "sha256": "ab73730299f3f99629fd7489ac6add967babdc5a7fd74efcc567deca2a3c60f2"
+      },
+      "runtime_manifest_format": "jsonl",
+      "attempt_coverage": {
+        "path": "results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/reserved/ATTEMPT_COVERAGE.json",
+        "sha256": "b9b434f2c2e1a5f76ca7ee75819ca44d74160b2d883c691712eb659d536f35df"
+      },
+      "paired_labels": {
+        "path": "results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/reserved/PAIRED_LABELS.json",
+        "sha256": "18fbe21e25f650f9b2953e96bd135eb672cf91048cab396e66602ff68e2dd83e"
+      },
+      "aggregate_indices": {
+        "G0": {
+          "path": "results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/reserved/AGGREGATE_INDEX_G0.json",
+          "sha256": "96dde452c6a50dcafe626070d23e554170a2fbf86dd385e1d86b26cc0f4df457"
+        },
+        "gain_local_minus": {
+          "path": "results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_minus.json",
+          "sha256": "91a0ebe4cd2b58e14b9fb65d61249ad2846ee67613b8f0e079883ecb706c4e3f"
+        },
+        "gain_local_plus": {
+          "path": "results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/reserved/AGGREGATE_INDEX_gain_local_plus.json",
+          "sha256": "982590111dbdb71fa585a9e826d133fc5675ffcf810b2a244f04244916e72ee2"
+        },
+        "pair": {
+          "path": "results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/reserved/AGGREGATE_INDEX_pair.json",
+          "sha256": "5fbe5f510ea7a21860e26b40a8f2a1be6325ea48ef85af539eacea06d1d01206"
+        }
+      },
+      "aggregate_sidecars": {
+        "G0": {
+          "path": "results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/reserved/SIDECAR_AGGREGATE_G0.json",
+          "sha256": "336244ceb9aa81ef0872cf3aae78a8aaf50432950ac107a99dc2de5bad43649c"
+        },
+        "gain_local_minus": {
+          "path": "results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_minus.json",
+          "sha256": "d37c3c35fca72c1de4070eb3980aa694049721fae32ef4fcc86e6e4f9964226c"
+        },
+        "gain_local_plus": {
+          "path": "results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/reserved/SIDECAR_AGGREGATE_gain_local_plus.json",
+          "sha256": "af94d4a1a16dbd1dd03b33e55c2d5dd1f5356a973b87cd8b43321da3f6064ee9"
+        },
+        "pair": {
+          "path": "results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/reserved/SIDECAR_AGGREGATE_pair.json",
+          "sha256": "4b3f26c4e4a1b4d09b75a3f7bd2c6d71a9bfc9e69bebd53e3ca074513d4e7285"
+        }
+      },
+      "bank": {
+        "path": "results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/normal/BANK.json",
+        "sha256": "b3df23ecefa2f8ec7af5a0d0a7af5d6b1bb18738122883ffd98dca872d3b1313"
+      },
+      "source_manifest": {
+        "format": "json",
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/proposal/SOURCE_4.json",
+        "sha256": "f03dca73afedbaa15552f189f97fcda60523905080a04a6eff114d8cf8d812f4"
+      },
+      "source_signature": "c3872528c13f67a2e03efa5f98180c48a99341a027d6da61462d0ba564f9665c",
+      "physical_attempts": 15,
+      "complete_repeat_groups": 7,
+      "independent_parent_count": 1,
+      "labels": {
+        "G0": 0.0,
+        "gain_local_minus": null,
+        "gain_local_plus": null,
+        "pair": null
+      },
+      "target_masks": {
+        "G0": true,
+        "gain_local_minus": false,
+        "gain_local_plus": false,
+        "pair": false
+      },
+      "full_state_verified_scope": "frozen captured-field/MJB closure",
+      "physical_equality_proven": null,
+      "partial_hardlink_paths_excluded_from_sample_count": true,
+      "views": {
+        "Q_G0_paired_metadata": "partial_only_G0;three_Q_difference_targets_masked",
+        "D5_GAF_raw_fields": "available_for_own_pipeline_window_index_qualification_not_certified_training_view",
+        "LVM_positive": "not_qualified_normal_rollout_not_demonstration_and_endpoint_tokens_absent",
+        "Q_absolute_success": {
+          "data_eligibility": "accepted_only_after_source_local_raw_C10_dedup_as_required_by_existing_protocol",
+          "canonical_arm": "Q_a0",
+          "canonical_repeat_ids": [
+            0,
+            1
+          ],
+          "unique_raw_action_groups": 1,
+          "physical_Q_branch_count": 6,
+          "supervised_repeat_examples_after_dedup": 2,
+          "alias_arm_replicates_not_additional_samples": true,
+          "qualifying_terminal_evidence": {
+            "path": "manifests/A11_BATCH3_COMPLETION_REVIEW/SCIENCE_REVIEW.json",
+            "sha256": "31b011d77c25ddc4b2a597a7cd1fddfce84cc7446dcdb73a7be6e1413384dab8"
+          },
+          "training_view_implementation_not_certified": true,
+          "qualified_data_details": {
+            "eligible": true,
+            "canonical_arm": "a0",
+            "canonical_selection_basis": "predesignated anchor; not selected by outcome",
+            "unique_raw_C10_group_count": 1,
+            "raw_C10_sha256": "2e923f6e7aee46a8a25cfef508cf3140ca8ecd735c0e27de4ebd55e7b3976ec8",
+            "valid_repeat_ids": [
+              0,
+              1
+            ],
+            "effective_repeat_count": 2,
+            "targets_by_repeat": {
+              "0": 1,
+              "1": 1
+            },
+            "mean_success": 1.0,
+            "physical_Q_attempts": 6,
+            "canonical_terminal_refs": [
+              {
+                "role": "Q_a0_r0",
+                "result": {
+                  "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/Q_a0_r0/BRANCH_RESULT.json",
+                  "sha256": "462c98b64822a4e81b7063108f5db6a550ef68526f8bf77c964a56dd5a6df198",
+                  "size_bytes": 572
+                },
+                "success": 1,
+                "reason": "success",
+                "outcome_complete": true,
+                "first_success_step": 42,
+                "last_observed_parent_state": 42,
+                "sidecar": {
+                  "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/Q_a0_r0/SIDECAR_V1.json",
+                  "sha256": "c9385b1471786c66954ce03e9455d981e975dabece2d4aac60710ea585c20185",
+                  "size_bytes": 78718
+                }
+              },
+              {
+                "role": "Q_a0_r1",
+                "result": {
+                  "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/Q_a0_r1/BRANCH_RESULT.json",
+                  "sha256": "ece20982673e509d62a67ded908b5541d88e5a48a887a73ff2343092cdb39b79",
+                  "size_bytes": 572
+                },
+                "success": 1,
+                "reason": "success",
+                "outcome_complete": true,
+                "first_success_step": 41,
+                "last_observed_parent_state": 41,
+                "sidecar": {
+                  "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/Q_a0_r1/SIDECAR_V1.json",
+                  "sha256": "0b94cfed4dfac191de6f305d960813a3bc3920b5820d2416c426f0c0a45b066c",
+                  "size_bytes": 78718
+                }
+              }
+            ],
+            "all_alias_terminal_refs": [
+              {
+                "role": "Q_a0_r0",
+                "result": {
+                  "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/Q_a0_r0/BRANCH_RESULT.json",
+                  "sha256": "462c98b64822a4e81b7063108f5db6a550ef68526f8bf77c964a56dd5a6df198",
+                  "size_bytes": 572
+                },
+                "success": 1,
+                "reason": "success",
+                "outcome_complete": true,
+                "first_success_step": 42,
+                "last_observed_parent_state": 42,
+                "sidecar": {
+                  "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/Q_a0_r0/SIDECAR_V1.json",
+                  "sha256": "c9385b1471786c66954ce03e9455d981e975dabece2d4aac60710ea585c20185",
+                  "size_bytes": 78718
+                }
+              },
+              {
+                "role": "Q_a0_r1",
+                "result": {
+                  "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/Q_a0_r1/BRANCH_RESULT.json",
+                  "sha256": "ece20982673e509d62a67ded908b5541d88e5a48a887a73ff2343092cdb39b79",
+                  "size_bytes": 572
+                },
+                "success": 1,
+                "reason": "success",
+                "outcome_complete": true,
+                "first_success_step": 41,
+                "last_observed_parent_state": 41,
+                "sidecar": {
+                  "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/Q_a0_r1/SIDECAR_V1.json",
+                  "sha256": "0b94cfed4dfac191de6f305d960813a3bc3920b5820d2416c426f0c0a45b066c",
+                  "size_bytes": 78718
+                }
+              },
+              {
+                "role": "Q_local_plus_r0",
+                "result": {
+                  "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/Q_local_plus_r0/BRANCH_RESULT.json",
+                  "sha256": "f80e735ca615977c67568ed36e73ecdd1978ef718bb1e6d2783e5d1a42164766",
+                  "size_bytes": 588
+                },
+                "success": 1,
+                "reason": "success",
+                "outcome_complete": true,
+                "first_success_step": 42,
+                "last_observed_parent_state": 42,
+                "sidecar": {
+                  "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/Q_local_plus_r0/SIDECAR_V1.json",
+                  "sha256": "7ab838fd66d64a6d0e2b1dd03f0805f1abeab45bfc72078e255cb6c4155b11ab",
+                  "size_bytes": 79081
+                }
+              },
+              {
+                "role": "Q_local_plus_r1",
+                "result": {
+                  "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/Q_local_plus_r1/BRANCH_RESULT.json",
+                  "sha256": "44d22e17cd90e0f1a6738f86fcb314d1f00a7c37c7747e4014220d037694fe2f",
+                  "size_bytes": 588
+                },
+                "success": 1,
+                "reason": "success",
+                "outcome_complete": true,
+                "first_success_step": 41,
+                "last_observed_parent_state": 41,
+                "sidecar": {
+                  "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/Q_local_plus_r1/SIDECAR_V1.json",
+                  "sha256": "ea068232e3dc49abc93cc28f3eeae41352a7b4ad13b5840a3402cb67fe555529",
+                  "size_bytes": 79081
+                }
+              },
+              {
+                "role": "Q_local_minus_r0",
+                "result": {
+                  "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/Q_local_minus_r0/BRANCH_RESULT.json",
+                  "sha256": "82f4366bd8698400a1fecb2f7b10212a98414c63a6ada59b5c6acb0a678cd5ec",
+                  "size_bytes": 590
+                },
+                "success": 1,
+                "reason": "success",
+                "outcome_complete": true,
+                "first_success_step": 42,
+                "last_observed_parent_state": 42,
+                "sidecar": {
+                  "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/Q_local_minus_r0/SIDECAR_V1.json",
+                  "sha256": "9844bdca63f483266a70e98d9d71c75c8ff66a1fd0069fe4f4a49d9435fbb1c9",
+                  "size_bytes": 79089
+                }
+              },
+              {
+                "role": "Q_local_minus_r1",
+                "result": {
+                  "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/Q_local_minus_r1/BRANCH_RESULT.json",
+                  "sha256": "1d0a65c33e44222c09679804faa35e9fc6b8156a5fd71ca5a6a6a3ca2f78b471",
+                  "size_bytes": 590
+                },
+                "success": 1,
+                "reason": "success",
+                "outcome_complete": true,
+                "first_success_step": 41,
+                "last_observed_parent_state": 41,
+                "sidecar": {
+                  "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_runs/PROPOSED_A11_batch3_A_V1/p04_door_close_train0000_cut5/Q_local_minus_r1/SIDECAR_V1.json",
+                  "sha256": "8de292aad92d703aefa79ea5292cc662fe00b973fcd26b8c1f4cc44d82f1813c",
+                  "size_bytes": 79089
+                }
+              }
+            ],
+            "source_loss_weight_unchanged": true,
+            "training_recipe_authorized_by_this_review": false
+          }
+        }
+      },
+      "full_four_target_eligible": false,
+      "view_decision": {
+        "path": "manifests/A11_BATCH3_VIEW_ACCEPTANCE_V1.json",
+        "sha256": "ef5492979778e9c83d59385438c2ccc88d7b7400649381a3a08458e247fcc948"
+      }
+    }
+  ],
+  "strict_full_target_index": "manifests/COMMON_POOL_ACCEPTED_PARENTS_V4.json",
+  "G0_union_parent_count": 24,
+  "source_level_no_double_counting": true,
+  "training_authorized": false,
+  "view_decision": {
+    "path": "manifests/A11_BATCH3_VIEW_ACCEPTANCE_V1.json",
+    "sha256": "ef5492979778e9c83d59385438c2ccc88d7b7400649381a3a08458e247fcc948"
+  }
+}

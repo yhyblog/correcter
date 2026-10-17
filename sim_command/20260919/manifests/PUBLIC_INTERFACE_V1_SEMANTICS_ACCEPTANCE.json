@@ -1,0 +1,35 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "accepted_at_utc": "2026-09-19T16:24:10.812342+00:00",
+  "interface_version": "corrector-sim-interface/1",
+  "receipt": {
+    "path": "receipts/A/A10_INTERFACE_SEMANTICS_r1.json",
+    "sha256": "198614b544563b07f6e1371244386ec941f87911f3081fab3b1e6aacbd1ef0d2"
+  },
+  "artifacts": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/interface_semantics_r1/CPU_CHECK.json",
+      "sha256": "8b7444d0d475537722f9b4bc29f3adb02ef0ded1884ae666482606eb9948d903"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_INTERFACE_SEMANTICS_r1.md",
+      "sha256": "531280f5aea154dc81d3d86e9ca2b105dc68d3452d89bfe9abc5281ac854f290"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/INTERFACE_V1_INTEGRATION_NOTES.md",
+      "sha256": "b842209c0f06a9968cd37826666b45a700dc106b1fcfb97713d417122f8e9377"
+    }
+  ],
+  "cpu_checks_passed": 10,
+  "schema_revision_needed": false,
+  "accepted_semantics": [
+    "Fixed resource vector charged once on unique entered; terminal repeats add no cost",
+    "Global event_id uniqueness with explicit collision/duplicate rejection",
+    "Container counters zero; flow entries counted separately",
+    "Missing terminal preserves attempted cost and unknown elapsed/outcome",
+    "E3 native frequency uses complete events, not single cut summary"
+  ],
+  "reporting_limit": "Entered establishes attempted-call/budget debit, not completed GPU work; measured completion/time and incomplete counts must remain separate.",
+  "compute_release_authorized": false,
+  "next_task": "A10_PREFLIGHT_REVISION_R2"
+}

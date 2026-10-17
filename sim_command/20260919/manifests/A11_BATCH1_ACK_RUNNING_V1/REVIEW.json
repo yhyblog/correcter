@@ -1,0 +1,76 @@
+{
+  "status": "ACK_and_saved_start_evidence_accepted_wave_running",
+  "task_id": "A11_COMMON_POOL_BATCH1_V1",
+  "revision": 1,
+  "at_utc": "2026-09-20T15:23:20.140674+00:00",
+  "references": {
+    "ack": {
+      "source_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A11_COMMON_POOL_BATCH1_V1_ACK.json",
+      "snapshot_path": "manifests/A11_BATCH1_ACK_RUNNING_V1/ack.json",
+      "sha256": "df1c900f28781f67e586b83d87f2116e3dbcb36f74474b1780487884a09457cf",
+      "size_bytes": 9411,
+      "observed_at_utc": "2026-09-20T15:23:20.140674+00:00"
+    },
+    "command": {
+      "source_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_commands/P11_A_COMMON_POOL_BATCH1_V1.json",
+      "snapshot_path": "manifests/A11_BATCH1_ACK_RUNNING_V1/command.json",
+      "sha256": "7010fa8023193cc7ca0975d69fe5db5c12fe39528ef04c8c98bea1ff63cf26a3",
+      "size_bytes": 155,
+      "observed_at_utc": "2026-09-20T15:23:20.140674+00:00"
+    },
+    "claim": {
+      "source_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_claims/P11_A_COMMON_POOL_BATCH1_V1.json",
+      "snapshot_path": "manifests/A11_BATCH1_ACK_RUNNING_V1/claim.json",
+      "sha256": "1c1ecc58b366254caaa3a76cc96261fab2e940c08f11b88bcb72103af106830c",
+      "size_bytes": 205,
+      "observed_at_utc": "2026-09-20T15:23:20.140674+00:00"
+    },
+    "storage_admission": {
+      "source_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/launcher/STORAGE_ADMISSION.json",
+      "snapshot_path": "manifests/A11_BATCH1_ACK_RUNNING_V1/storage_admission.json",
+      "sha256": "2df8fbb54a5114f40fd1f2bef43508d78a42278c60c7ab6f47097ff43b85c8b8",
+      "size_bytes": 1745,
+      "observed_at_utc": "2026-09-20T15:23:20.140674+00:00"
+    },
+    "lifecycle_request": {
+      "source_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/launcher/LIFECYCLE_REQUESTED.json",
+      "snapshot_path": "manifests/A11_BATCH1_ACK_RUNNING_V1/lifecycle_request.json",
+      "sha256": "764c24a97d0c4742044cda9385e00b69df91e3c52fbdf1ad9c517b5a102abb32",
+      "size_bytes": 141,
+      "observed_at_utc": "2026-09-20T15:23:20.140674+00:00"
+    },
+    "scheduler_snapshot": {
+      "source_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/reserved/SCHEDULER_EVENTS.jsonl",
+      "snapshot_path": "manifests/A11_BATCH1_ACK_RUNNING_V1/scheduler_snapshot.jsonl",
+      "sha256": "9b5f4ce43d7c5e9fcbfd6aa5e5b98e6d6e23c306b84dd55485853696c16ea8ad",
+      "size_bytes": 1610,
+      "observed_at_utc": "2026-09-20T15:23:20.140674+00:00"
+    }
+  },
+  "ACK_small_file_references_verified": 9,
+  "command_invocations": 1,
+  "release_claims": 1,
+  "command_started_at_utc": "2026-09-20T15:19:33.555445+00:00",
+  "started_branches_in_saved_snapshot": [
+    {
+      "parent_key": "p00_disassemble_train0000_cut5",
+      "attempt_role": "normal",
+      "gpu_uuid": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe"
+    },
+    {
+      "parent_key": "p01_pick_place_wall_train0000_cut5",
+      "attempt_role": "normal",
+      "gpu_uuid": "GPU-64240b2e-5845-da58-e703-61322f21cbf6"
+    }
+  ],
+  "branch_exit_result_in_saved_snapshot": false,
+  "final_actual_resource_counts": null,
+  "new_accepted_parents": 0,
+  "accepted_pool_count": 1,
+  "CONTROL_revision": 46,
+  "TASK_BOARD_revision_before": 53,
+  "TASK_BOARD_revision_after": 54,
+  "no_runtime_or_hardware_probe": true,
+  "release_remains_active_for_existing_wave_only": true,
+  "no_retry_or_new_authorization": true
+}

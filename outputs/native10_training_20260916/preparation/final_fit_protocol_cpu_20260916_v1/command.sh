@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES='' PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 PYTHONPATH=.:src:../ACT-RECAP/src /mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python -m pytest -q -p no:cacheprovider tests/test_final_fit_protocol_v1.py

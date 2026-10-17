@@ -1,0 +1,13 @@
+执行端A交 A10_PV_HANDOFF_CPU_REPAIR_V1 r1：CPU_READY，当前CONTROL27/TASK_BOARD34和共享guard未改，安装/重启/holder查询停止/真实launcher/claim/模型GPU/删除均0。
+RESULT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PV_HANDOFF_CPU_REPAIR_V1_RESULT.json
+RESULT SHA256: 957916c789aea9e546460c0ce5392274410b1f8f232c4d0d47b68bf05dc81ae1
+REPORT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PV_HANDOFF_CPU_REPAIR_V1_REPORT.md
+CPU_READY: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/CPU_READY.json
+V3 PROPOSAL: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/proposal/PROPOSAL.json
+PROPOSAL SHA256: c07750be489911e2d7363729d8ed186605f8792337c9f4118677e20a3af1ca2a
+共享唯一未来目标 gpu_occupancy_guard.py；原SHA d499982dff72c3b74ddab0e13e359edccb5f282900c534030b3816b58495fcaf；新SHA 7910c567a47ddf68294d92fc9698cc780aeb130ddefde0337414bfcd88cb85a4。私有patch/完整新旧字节: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/guard_patch/PATCH_IDENTITY.json。
+新run客户端有限参数CORRECTOR_OCCUPANCY_HANDOFF_TIMEOUT_SECONDS，默认90、ASCII整数1..300；V3实际sh固定300并由父NVML前的环境合同校验。daemon函数及spawn/signal/wait/锁尾部字节不变，无需重启。既有lifecycle active分支传给新run客户端，同一formal.lock/继承FD，无嵌套预约。失败只复用最后poll观测：1条JSON/最多64行NVML host PID，缺观测null，不追加query。300是160+140余量的名义等待，不是1800+30诊断或端到端上界。
+安装/回退具体命令与独立未授权模板: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/guard_patch/INSTALL_AND_ROLLBACK.md；/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/guard_patch/INSTALLATION_PROPOSAL.json。入口需独立file-transition release及CONTROL.active_guard_installation_release，prepare/计算0；只替换唯一共享路径，先比对原新SHA、保留原字节、私有暂存原子替换；当前未执行入口。
+独立未来A10_PV_OFFLINE_PREFLIGHT_V3/P10_A_PV_OFFLINE_PREFLIGHT_V3 revision1，board ready/release released同源；当前template未授权。两个运行时manifest的guard条目均只预期新SHA，旧SHA仅安装前置/回退。381代码中377字节不变，3处身份/路径与handoff门+1纯元数据helper；数值run/其他输入行/66caps/1800+30/私有账本不变，不hash大权重。
+26guard fake、10元数据、环境/manifest定向fixture、6安装元数据case、变更AST/bash-n和纯JSON发布CLI通过；120秒清空旧90拒绝而新300一次启动，持续占用/driver异常/非法值/晚返回空拒绝；同锁/信号/整组退出fake通过。35引用/79证据/381代码SHA核对。发布检查用法: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/PUBLICATION_CHECK_USAGE.md；manifest: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/EVIDENCE_MANIFEST.json。
+只交CPU准备，无实测成功或新算法结论；旧七release不复用，等待分析决定独立安装及V3计算授权，B不变。

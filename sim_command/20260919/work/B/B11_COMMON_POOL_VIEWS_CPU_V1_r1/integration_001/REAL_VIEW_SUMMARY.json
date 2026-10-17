@@ -1,0 +1,2713 @@
+{
+  "Q_complete_short_commitment_cases": [
+    {
+      "GAF_at_cut_eligible": false,
+      "Q_outcome": 1,
+      "controls": 63,
+      "cut": 55,
+      "parent": "PROPOSED_MT50_shelf_train_0001_parent",
+      "role": "Q_local_plus_r0"
+    },
+    {
+      "GAF_at_cut_eligible": false,
+      "Q_outcome": 1,
+      "controls": 63,
+      "cut": 55,
+      "parent": "PROPOSED_MT50_shelf_train_0001_parent",
+      "role": "Q_local_plus_r1"
+    },
+    {
+      "GAF_at_cut_eligible": false,
+      "Q_outcome": 1,
+      "controls": 64,
+      "cut": 55,
+      "parent": "PROPOSED_MT50_stick_pull_train_0001_parent",
+      "role": "Q_a0_r0"
+    },
+    {
+      "GAF_at_cut_eligible": false,
+      "Q_outcome": 1,
+      "controls": 64,
+      "cut": 55,
+      "parent": "PROPOSED_MT50_stick_pull_train_0001_parent",
+      "role": "Q_a0_r1"
+    },
+    {
+      "GAF_at_cut_eligible": false,
+      "Q_outcome": 1,
+      "controls": 64,
+      "cut": 55,
+      "parent": "PROPOSED_MT50_stick_pull_train_0001_parent",
+      "role": "Q_local_plus_r0"
+    },
+    {
+      "GAF_at_cut_eligible": false,
+      "Q_outcome": 1,
+      "controls": 64,
+      "cut": 55,
+      "parent": "PROPOSED_MT50_stick_pull_train_0001_parent",
+      "role": "Q_local_plus_r1"
+    }
+  ],
+  "all_model_input_keys": [
+    "observed causal features/proprio references",
+    "actual executed commands",
+    "frozen language reference"
+  ],
+  "by_parent": [
+    {
+      "D5_eligible_windows": 3744,
+      "G0_old_online_interventions": 0,
+      "GAF_eligible_windows": 3669,
+      "LVM_eligible_windows": 0,
+      "Q_BCE": [
+        {
+          "context_signature": "20378be5c561369e5d5dedc4c89e0686f30eca5ec6909b54ac7a54b3f4fe02ad",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_plus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_shelf_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_shelf_train_0000_parent__Q_local_plus_r0",
+            "PROPOSED_MT50_shelf_train_0000_parent__Q_local_plus_r1"
+          ],
+          "raw_C10_sha256": "77c4bab2bb583e9d914bcfbc6814b759b861690e3fe93cb3c8ce8c097ff4feb9",
+          "source_signature": "233d788ab1c412073667c943cb23126b61b67f97f73415693fb9adeaf7eebe83",
+          "split": "train",
+          "target": 0.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "20378be5c561369e5d5dedc4c89e0686f30eca5ec6909b54ac7a54b3f4fe02ad",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "a0"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_shelf_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_shelf_train_0000_parent__Q_a0_r0",
+            "PROPOSED_MT50_shelf_train_0000_parent__Q_a0_r1"
+          ],
+          "raw_C10_sha256": "942b5b0e0b1bee61e516b9e2691b30a432e4d59c754f08ec4c1289d5dc142020",
+          "source_signature": "233d788ab1c412073667c943cb23126b61b67f97f73415693fb9adeaf7eebe83",
+          "split": "train",
+          "target": 0.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "20378be5c561369e5d5dedc4c89e0686f30eca5ec6909b54ac7a54b3f4fe02ad",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_shelf_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_shelf_train_0000_parent__Q_local_minus_r0",
+            "PROPOSED_MT50_shelf_train_0000_parent__Q_local_minus_r1"
+          ],
+          "raw_C10_sha256": "f725cff803b8acb422bf7c1c9cb37eb8b05d9ef9b7ff5b12031bae6c8102f31d",
+          "source_signature": "233d788ab1c412073667c943cb23126b61b67f97f73415693fb9adeaf7eebe83",
+          "split": "train",
+          "target": 0.5,
+          "target_namespace": "Q_C10"
+        }
+      ],
+      "cut": 5,
+      "disposition": "paired_accepted",
+      "index_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/integration_001/indices/PROPOSED_MT50_shelf_train_0000_parent",
+      "labels": {
+        "G0": {
+          "arms": [
+            "old",
+            "fresh0",
+            "fresh1",
+            "fresh2"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.3333333333333333,
+          "target_mask": true,
+          "target_namespace": "G0_C5",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "arms": [
+            "local_minus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.5,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "arms": [
+            "local_plus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "arms": [
+            "local_plus",
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": -0.5,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "parent": "PROPOSED_MT50_shelf_train_0000_parent",
+      "physical_attempts": 15,
+      "source": "PROPOSED_MT50_shelf_train_0000",
+      "split": "train",
+      "task": "shelf-place-v3",
+      "unstarted_attempts": 0
+    },
+    {
+      "D5_eligible_windows": 3581,
+      "G0_old_online_interventions": 0,
+      "GAF_eligible_windows": 3506,
+      "LVM_eligible_windows": 0,
+      "Q_BCE": [
+        {
+          "context_signature": "b012460a3d26560817dea1ab801d431774099cfa7905107bcc34c150d2614c39",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_disassemble_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_disassemble_train_0000_parent__Q_local_minus_r0",
+            "PROPOSED_MT50_disassemble_train_0000_parent__Q_local_minus_r1"
+          ],
+          "raw_C10_sha256": "aa7be5bb806917afd0cc8d82d7cfa62d4f69868434afbde8fb8256bf7d335df9",
+          "source_signature": "9759d27148d574d1ffb05cccb621eb0baac2d58b1c32b4de3e27b48694465989",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "b012460a3d26560817dea1ab801d431774099cfa7905107bcc34c150d2614c39",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "a0"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_disassemble_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_disassemble_train_0000_parent__Q_a0_r0",
+            "PROPOSED_MT50_disassemble_train_0000_parent__Q_a0_r1"
+          ],
+          "raw_C10_sha256": "c893e9066f4d2b6d5ec320c25f63f766110a1dce3e2debd49d30dcffb9b52789",
+          "source_signature": "9759d27148d574d1ffb05cccb621eb0baac2d58b1c32b4de3e27b48694465989",
+          "split": "train",
+          "target": 0.5,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "b012460a3d26560817dea1ab801d431774099cfa7905107bcc34c150d2614c39",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_plus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_disassemble_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_disassemble_train_0000_parent__Q_local_plus_r0",
+            "PROPOSED_MT50_disassemble_train_0000_parent__Q_local_plus_r1"
+          ],
+          "raw_C10_sha256": "ec1b34c38971858f248bc52ff962c06ae0f15414e6aba4eeac4507d1c99efbab",
+          "source_signature": "9759d27148d574d1ffb05cccb621eb0baac2d58b1c32b4de3e27b48694465989",
+          "split": "train",
+          "target": 0.5,
+          "target_namespace": "Q_C10"
+        }
+      ],
+      "cut": 5,
+      "disposition": "paired_accepted",
+      "index_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/integration_001/indices/PROPOSED_MT50_disassemble_train_0000_parent",
+      "labels": {
+        "G0": {
+          "arms": [
+            "old",
+            "fresh0",
+            "fresh1",
+            "fresh2"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.16666666666666666,
+          "target_mask": true,
+          "target_namespace": "G0_C5",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "arms": [
+            "local_minus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.5,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "arms": [
+            "local_plus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "arms": [
+            "local_plus",
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": -0.5,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "parent": "PROPOSED_MT50_disassemble_train_0000_parent",
+      "physical_attempts": 15,
+      "source": "PROPOSED_MT50_disassemble_train_0000",
+      "split": "train",
+      "task": "disassemble-v3",
+      "unstarted_attempts": 0
+    },
+    {
+      "D5_eligible_windows": 1011,
+      "G0_old_online_interventions": 0,
+      "GAF_eligible_windows": 936,
+      "LVM_eligible_windows": 0,
+      "Q_BCE": [
+        {
+          "context_signature": "4eb61989d9c100b5586a4a2b177666b721d0d6ead9e394b79e5aa7c0291e7290",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_pick_place_wall_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_pick_place_wall_train_0000_parent__Q_local_minus_r0",
+            "PROPOSED_MT50_pick_place_wall_train_0000_parent__Q_local_minus_r1"
+          ],
+          "raw_C10_sha256": "8074dd782e6d36992f0625fa3534f776bde0e82deaf3fac7cf4933a4b65ce0ec",
+          "source_signature": "51e655c1e2510bd68bfb52fbcb2ef5b86e26f70ad98b9e1be47a3bff9b8ea1d0",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "4eb61989d9c100b5586a4a2b177666b721d0d6ead9e394b79e5aa7c0291e7290",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_plus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_pick_place_wall_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_pick_place_wall_train_0000_parent__Q_local_plus_r0",
+            "PROPOSED_MT50_pick_place_wall_train_0000_parent__Q_local_plus_r1"
+          ],
+          "raw_C10_sha256": "ab5a925282f5546aa2cc10126ddb807e3a038346b2a97072879440eea30db1bd",
+          "source_signature": "51e655c1e2510bd68bfb52fbcb2ef5b86e26f70ad98b9e1be47a3bff9b8ea1d0",
+          "split": "train",
+          "target": 0.5,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "4eb61989d9c100b5586a4a2b177666b721d0d6ead9e394b79e5aa7c0291e7290",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "a0"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_pick_place_wall_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_pick_place_wall_train_0000_parent__Q_a0_r0",
+            "PROPOSED_MT50_pick_place_wall_train_0000_parent__Q_a0_r1"
+          ],
+          "raw_C10_sha256": "cd656bd02568de3ffc41c837b6b164f3ae853ddd9ea393c624137e3b1925e624",
+          "source_signature": "51e655c1e2510bd68bfb52fbcb2ef5b86e26f70ad98b9e1be47a3bff9b8ea1d0",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        }
+      ],
+      "cut": 5,
+      "disposition": "paired_accepted",
+      "index_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/integration_001/indices/PROPOSED_MT50_pick_place_wall_train_0000_parent",
+      "labels": {
+        "G0": {
+          "arms": [
+            "old",
+            "fresh0",
+            "fresh1",
+            "fresh2"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "G0_C5",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "arms": [
+            "local_minus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "arms": [
+            "local_plus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": -0.5,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "arms": [
+            "local_plus",
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": -0.5,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "parent": "PROPOSED_MT50_pick_place_wall_train_0000_parent",
+      "physical_attempts": 15,
+      "source": "PROPOSED_MT50_pick_place_wall_train_0000",
+      "split": "train",
+      "task": "pick-place-wall-v3",
+      "unstarted_attempts": 0
+    },
+    {
+      "D5_eligible_windows": 4440,
+      "G0_old_online_interventions": 0,
+      "GAF_eligible_windows": 4365,
+      "LVM_eligible_windows": 0,
+      "Q_BCE": [
+        {
+          "context_signature": "eb6049ff02de19250ae5a06dfbdd0ed1363293d216859246cbbf95ba47a10cd0",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_stick_pull_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_stick_pull_train_0000_parent__Q_local_minus_r0",
+            "PROPOSED_MT50_stick_pull_train_0000_parent__Q_local_minus_r1"
+          ],
+          "raw_C10_sha256": "924c8e95713f5278333553f40d91ed42329062bba17c15f4c30c88b6ff408f8c",
+          "source_signature": "6c6607f8799a3465189e6d2f20581254d63a0a765a52c6ee7bfbdb3d182e075d",
+          "split": "train",
+          "target": 0.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "eb6049ff02de19250ae5a06dfbdd0ed1363293d216859246cbbf95ba47a10cd0",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_plus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_stick_pull_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_stick_pull_train_0000_parent__Q_local_plus_r0",
+            "PROPOSED_MT50_stick_pull_train_0000_parent__Q_local_plus_r1"
+          ],
+          "raw_C10_sha256": "9fb99e49ac518a000b700f862aeaa4940e927a31bad89356be58b48f4a04f057",
+          "source_signature": "6c6607f8799a3465189e6d2f20581254d63a0a765a52c6ee7bfbdb3d182e075d",
+          "split": "train",
+          "target": 0.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "eb6049ff02de19250ae5a06dfbdd0ed1363293d216859246cbbf95ba47a10cd0",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "a0"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_stick_pull_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_stick_pull_train_0000_parent__Q_a0_r0",
+            "PROPOSED_MT50_stick_pull_train_0000_parent__Q_a0_r1"
+          ],
+          "raw_C10_sha256": "ee640e9c80cb9f999dcb20d227ceb70ed45a339c411245e6500598f6caeacef3",
+          "source_signature": "6c6607f8799a3465189e6d2f20581254d63a0a765a52c6ee7bfbdb3d182e075d",
+          "split": "train",
+          "target": 0.0,
+          "target_namespace": "Q_C10"
+        }
+      ],
+      "cut": 5,
+      "disposition": "paired_accepted",
+      "index_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/integration_001/indices/PROPOSED_MT50_stick_pull_train_0000_parent",
+      "labels": {
+        "G0": {
+          "arms": [
+            "old",
+            "fresh0",
+            "fresh1",
+            "fresh2"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "G0_C5",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "arms": [
+            "local_minus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "arms": [
+            "local_plus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "arms": [
+            "local_plus",
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "parent": "PROPOSED_MT50_stick_pull_train_0000_parent",
+      "physical_attempts": 15,
+      "source": "PROPOSED_MT50_stick_pull_train_0000",
+      "split": "train",
+      "task": "stick-pull-v3",
+      "unstarted_attempts": 0
+    },
+    {
+      "D5_eligible_windows": 649,
+      "G0_old_online_interventions": 0,
+      "GAF_eligible_windows": 574,
+      "LVM_eligible_windows": 0,
+      "Q_BCE": [
+        {
+          "context_signature": "9365b1c7e167144b3f148a63036013f586844d06ed32b269e94bc1e01403e6d9",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_stick_push_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_stick_push_train_0000_parent__Q_local_minus_r0",
+            "PROPOSED_MT50_stick_push_train_0000_parent__Q_local_minus_r1"
+          ],
+          "raw_C10_sha256": "2aae18ae45f7ea10f9e73476979af5131703e33e1834442e351a7e12a1823a7e",
+          "source_signature": "fec095370cd7cfcaafe4858de8d48969c9f0c14da5db00f2ca0eec18855d29e9",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "9365b1c7e167144b3f148a63036013f586844d06ed32b269e94bc1e01403e6d9",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "a0"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_stick_push_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_stick_push_train_0000_parent__Q_a0_r0",
+            "PROPOSED_MT50_stick_push_train_0000_parent__Q_a0_r1"
+          ],
+          "raw_C10_sha256": "9aadb58952ab256c7d3c6999552d83987c9560a15d0824cc94425c74b428228d",
+          "source_signature": "fec095370cd7cfcaafe4858de8d48969c9f0c14da5db00f2ca0eec18855d29e9",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "9365b1c7e167144b3f148a63036013f586844d06ed32b269e94bc1e01403e6d9",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_plus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_stick_push_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_stick_push_train_0000_parent__Q_local_plus_r0",
+            "PROPOSED_MT50_stick_push_train_0000_parent__Q_local_plus_r1"
+          ],
+          "raw_C10_sha256": "fd1d55b61d3d69834124f4c39e1e3964c46bea00b4cd9340c4996439e8855244",
+          "source_signature": "fec095370cd7cfcaafe4858de8d48969c9f0c14da5db00f2ca0eec18855d29e9",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        }
+      ],
+      "cut": 5,
+      "disposition": "paired_accepted",
+      "index_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/integration_001/indices/PROPOSED_MT50_stick_push_train_0000_parent",
+      "labels": {
+        "G0": {
+          "arms": [
+            "old",
+            "fresh0",
+            "fresh1",
+            "fresh2"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "G0_C5",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "arms": [
+            "local_minus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "arms": [
+            "local_plus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "arms": [
+            "local_plus",
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "parent": "PROPOSED_MT50_stick_push_train_0000_parent",
+      "physical_attempts": 15,
+      "source": "PROPOSED_MT50_stick_push_train_0000",
+      "split": "train",
+      "task": "stick-push-v3",
+      "unstarted_attempts": 0
+    },
+    {
+      "D5_eligible_windows": 4440,
+      "G0_old_online_interventions": 0,
+      "GAF_eligible_windows": 4365,
+      "LVM_eligible_windows": 0,
+      "Q_BCE": [
+        {
+          "context_signature": "db08c7703d923594c40ae51750bf9fdebbba07dfea7f141e2fed14e58091592b",
+          "cut": 55,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_plus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_pick_place_wall_train_0001_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_pick_place_wall_train_0001_parent__Q_local_plus_r0",
+            "PROPOSED_MT50_pick_place_wall_train_0001_parent__Q_local_plus_r1"
+          ],
+          "raw_C10_sha256": "569415040dc8c8fbaabf2a1f28be5ba03459a80462c0c27087dac49c1787ce99",
+          "source_signature": "d8bcf5206f464646dc65c1cf7b8d25e93375cbe5e2223d0b646fcad06e8eceb8",
+          "split": "train",
+          "target": 0.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "db08c7703d923594c40ae51750bf9fdebbba07dfea7f141e2fed14e58091592b",
+          "cut": 55,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_pick_place_wall_train_0001_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_pick_place_wall_train_0001_parent__Q_local_minus_r0",
+            "PROPOSED_MT50_pick_place_wall_train_0001_parent__Q_local_minus_r1"
+          ],
+          "raw_C10_sha256": "59d7b8a97bce44b47184eb90c7c0b335a0ff76ab1db26ce27c3c06c232939165",
+          "source_signature": "d8bcf5206f464646dc65c1cf7b8d25e93375cbe5e2223d0b646fcad06e8eceb8",
+          "split": "train",
+          "target": 0.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "db08c7703d923594c40ae51750bf9fdebbba07dfea7f141e2fed14e58091592b",
+          "cut": 55,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "a0"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_pick_place_wall_train_0001_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_pick_place_wall_train_0001_parent__Q_a0_r0",
+            "PROPOSED_MT50_pick_place_wall_train_0001_parent__Q_a0_r1"
+          ],
+          "raw_C10_sha256": "976f5212a3459032ce6f00785ea4ae18b9fccd48f03830e4718244c6e37d0fe5",
+          "source_signature": "d8bcf5206f464646dc65c1cf7b8d25e93375cbe5e2223d0b646fcad06e8eceb8",
+          "split": "train",
+          "target": 0.0,
+          "target_namespace": "Q_C10"
+        }
+      ],
+      "cut": 55,
+      "disposition": "paired_accepted",
+      "index_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/integration_001/indices/PROPOSED_MT50_pick_place_wall_train_0001_parent",
+      "labels": {
+        "G0": {
+          "arms": [
+            "old",
+            "fresh0",
+            "fresh1",
+            "fresh2"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "G0_C5",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "arms": [
+            "local_minus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "arms": [
+            "local_plus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "arms": [
+            "local_plus",
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "parent": "PROPOSED_MT50_pick_place_wall_train_0001_parent",
+      "physical_attempts": 15,
+      "source": "PROPOSED_MT50_pick_place_wall_train_0001",
+      "split": "train",
+      "task": "pick-place-wall-v3",
+      "unstarted_attempts": 0
+    },
+    {
+      "D5_eligible_windows": 3966,
+      "G0_old_online_interventions": 0,
+      "GAF_eligible_windows": 3891,
+      "LVM_eligible_windows": 0,
+      "Q_BCE": [
+        {
+          "context_signature": "b7c33f6ef13b17859028c655d3c84272c36676a99a4b9f4f5524794740f44892",
+          "cut": 55,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_shelf_train_0001_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_shelf_train_0001_parent__Q_local_minus_r0",
+            "PROPOSED_MT50_shelf_train_0001_parent__Q_local_minus_r1"
+          ],
+          "raw_C10_sha256": "0c8b6481820edb00c8ade372a55dabdb6aadf48bc4734340c9816271c110aa00",
+          "source_signature": "c6714804af9a94f274af733e422e1184d4598f663fac74ec51fb82bd8949b5de",
+          "split": "train",
+          "target": 0.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "b7c33f6ef13b17859028c655d3c84272c36676a99a4b9f4f5524794740f44892",
+          "cut": 55,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_plus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_shelf_train_0001_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_shelf_train_0001_parent__Q_local_plus_r0",
+            "PROPOSED_MT50_shelf_train_0001_parent__Q_local_plus_r1"
+          ],
+          "raw_C10_sha256": "2750d4601376a3c713a18e6d9427e8d08d479bf9460f8ce16636f2d4c9af922c",
+          "source_signature": "c6714804af9a94f274af733e422e1184d4598f663fac74ec51fb82bd8949b5de",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "b7c33f6ef13b17859028c655d3c84272c36676a99a4b9f4f5524794740f44892",
+          "cut": 55,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "a0"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_shelf_train_0001_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_shelf_train_0001_parent__Q_a0_r0",
+            "PROPOSED_MT50_shelf_train_0001_parent__Q_a0_r1"
+          ],
+          "raw_C10_sha256": "ba2c05840c36ba514899765626f0aa54fb13c7f4900b720d6836230c9ab42ae0",
+          "source_signature": "c6714804af9a94f274af733e422e1184d4598f663fac74ec51fb82bd8949b5de",
+          "split": "train",
+          "target": 0.0,
+          "target_namespace": "Q_C10"
+        }
+      ],
+      "cut": 55,
+      "disposition": "paired_accepted",
+      "index_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/integration_001/indices/PROPOSED_MT50_shelf_train_0001_parent",
+      "labels": {
+        "G0": {
+          "arms": [
+            "old",
+            "fresh0",
+            "fresh1",
+            "fresh2"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "G0_C5",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "arms": [
+            "local_minus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "arms": [
+            "local_plus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 1.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "arms": [
+            "local_plus",
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 1.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "parent": "PROPOSED_MT50_shelf_train_0001_parent",
+      "physical_attempts": 15,
+      "source": "PROPOSED_MT50_shelf_train_0001",
+      "split": "train",
+      "task": "shelf-place-v3",
+      "unstarted_attempts": 0
+    },
+    {
+      "D5_eligible_windows": 914,
+      "G0_old_online_interventions": 0,
+      "GAF_eligible_windows": 839,
+      "LVM_eligible_windows": 0,
+      "Q_BCE": [
+        {
+          "context_signature": "d4d0570c7f40ec5f3280742b54783a0d9dd90aff867a0d40fb20a897e85ed3b8",
+          "cut": 55,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "a0"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_stick_pull_train_0001_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_stick_pull_train_0001_parent__Q_a0_r0",
+            "PROPOSED_MT50_stick_pull_train_0001_parent__Q_a0_r1"
+          ],
+          "raw_C10_sha256": "0ed32f57e827a8943a13f35fecf3964c1c960cc579ee10369eebbe809f5b804d",
+          "source_signature": "a1b98540473fdf9cf6e986647743bedb0b188e358f36acb48d123e1c9a8358a2",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "d4d0570c7f40ec5f3280742b54783a0d9dd90aff867a0d40fb20a897e85ed3b8",
+          "cut": 55,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_stick_pull_train_0001_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_stick_pull_train_0001_parent__Q_local_minus_r0",
+            "PROPOSED_MT50_stick_pull_train_0001_parent__Q_local_minus_r1"
+          ],
+          "raw_C10_sha256": "7f16639b60c02c84f4339c804141951ba79d41986db743bd3f1d837b752409da",
+          "source_signature": "a1b98540473fdf9cf6e986647743bedb0b188e358f36acb48d123e1c9a8358a2",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "d4d0570c7f40ec5f3280742b54783a0d9dd90aff867a0d40fb20a897e85ed3b8",
+          "cut": 55,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_plus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_stick_pull_train_0001_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_stick_pull_train_0001_parent__Q_local_plus_r0",
+            "PROPOSED_MT50_stick_pull_train_0001_parent__Q_local_plus_r1"
+          ],
+          "raw_C10_sha256": "95a0f67939be839104b9cabc8196a77d5273a37aa026d3e6e717aea540fb507f",
+          "source_signature": "a1b98540473fdf9cf6e986647743bedb0b188e358f36acb48d123e1c9a8358a2",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        }
+      ],
+      "cut": 55,
+      "disposition": "paired_accepted",
+      "index_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/integration_001/indices/PROPOSED_MT50_stick_pull_train_0001_parent",
+      "labels": {
+        "G0": {
+          "arms": [
+            "old",
+            "fresh0",
+            "fresh1",
+            "fresh2"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "G0_C5",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "arms": [
+            "local_minus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "arms": [
+            "local_plus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "arms": [
+            "local_plus",
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "parent": "PROPOSED_MT50_stick_pull_train_0001_parent",
+      "physical_attempts": 15,
+      "source": "PROPOSED_MT50_stick_pull_train_0001",
+      "split": "train",
+      "task": "stick-pull-v3",
+      "unstarted_attempts": 0
+    },
+    {
+      "D5_eligible_windows": 44,
+      "G0_old_online_interventions": 0,
+      "GAF_eligible_windows": 39,
+      "LVM_eligible_windows": 0,
+      "Q_BCE": [],
+      "cut": 55,
+      "disposition": "normal_complete_success_before_preplanned_cut",
+      "index_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/integration_001/indices/PROPOSED_MT50_disassemble_train_0001_parent",
+      "labels": {
+        "G0": {
+          "arms": [
+            "old",
+            "fresh0",
+            "fresh1",
+            "fresh2"
+          ],
+          "missing_reasons": [
+            "missing_complete_aligned_full_state_double_repeat",
+            "one_physical_attempt_reused_as_two_repeats",
+            "parent_cut_source_context_or_split_mismatch",
+            "raw_group_not_stable_across_repeats",
+            "repeat_streams_not_distinct"
+          ],
+          "raw_alias_masked": false,
+          "target": null,
+          "target_mask": false,
+          "target_namespace": "G0_C5",
+          "valid_pair_repeat_ids": []
+        },
+        "gain_local_minus": {
+          "arms": [
+            "local_minus",
+            "a0"
+          ],
+          "missing_reasons": [
+            "missing_complete_aligned_full_state_double_repeat",
+            "one_physical_attempt_reused_as_two_repeats",
+            "parent_cut_source_context_or_split_mismatch",
+            "raw_group_not_stable_across_repeats",
+            "repeat_streams_not_distinct"
+          ],
+          "raw_alias_masked": false,
+          "target": null,
+          "target_mask": false,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": []
+        },
+        "gain_local_plus": {
+          "arms": [
+            "local_plus",
+            "a0"
+          ],
+          "missing_reasons": [
+            "missing_complete_aligned_full_state_double_repeat",
+            "one_physical_attempt_reused_as_two_repeats",
+            "parent_cut_source_context_or_split_mismatch",
+            "raw_group_not_stable_across_repeats",
+            "repeat_streams_not_distinct"
+          ],
+          "raw_alias_masked": false,
+          "target": null,
+          "target_mask": false,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": []
+        },
+        "pair": {
+          "arms": [
+            "local_plus",
+            "local_minus"
+          ],
+          "missing_reasons": [
+            "missing_complete_aligned_full_state_double_repeat",
+            "one_physical_attempt_reused_as_two_repeats",
+            "parent_cut_source_context_or_split_mismatch",
+            "raw_group_not_stable_across_repeats",
+            "repeat_streams_not_distinct"
+          ],
+          "raw_alias_masked": false,
+          "target": null,
+          "target_mask": false,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": []
+        }
+      },
+      "parent": "PROPOSED_MT50_disassemble_train_0001_parent",
+      "physical_attempts": 1,
+      "source": "PROPOSED_MT50_disassemble_train_0001",
+      "split": "train",
+      "task": "disassemble-v3",
+      "unstarted_attempts": 14
+    },
+    {
+      "D5_eligible_windows": 4204,
+      "G0_old_online_interventions": 0,
+      "GAF_eligible_windows": 4129,
+      "LVM_eligible_windows": 0,
+      "Q_BCE": [
+        {
+          "context_signature": "1dc82e60ed3a4cee9af6b5d6f5390b0e1184c5a2c4985adc56113591daeb2098",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_plus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_assembly_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_assembly_train_0000_parent__Q_local_plus_r0",
+            "PROPOSED_MT50_assembly_train_0000_parent__Q_local_plus_r1"
+          ],
+          "raw_C10_sha256": "8fc1dee08b581c5ce247757012e0ed50a3a80bef051eb33c1a1ec59bc6ac3d7a",
+          "source_signature": "8827a57597c55630491482f09f2652998bbf261fefb748ec861d09e819e8c72b",
+          "split": "train",
+          "target": 0.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "1dc82e60ed3a4cee9af6b5d6f5390b0e1184c5a2c4985adc56113591daeb2098",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_assembly_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_assembly_train_0000_parent__Q_local_minus_r0",
+            "PROPOSED_MT50_assembly_train_0000_parent__Q_local_minus_r1"
+          ],
+          "raw_C10_sha256": "af077eef3971f4db6691ca3c573aace3c8ee8499670bf4bf80eed88a6b79e7b2",
+          "source_signature": "8827a57597c55630491482f09f2652998bbf261fefb748ec861d09e819e8c72b",
+          "split": "train",
+          "target": 0.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "1dc82e60ed3a4cee9af6b5d6f5390b0e1184c5a2c4985adc56113591daeb2098",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "a0"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_assembly_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_assembly_train_0000_parent__Q_a0_r0",
+            "PROPOSED_MT50_assembly_train_0000_parent__Q_a0_r1"
+          ],
+          "raw_C10_sha256": "dac3b3017dcfa6267310c042c5f9cf903811113c5e1dd35659f74e553cc56ba8",
+          "source_signature": "8827a57597c55630491482f09f2652998bbf261fefb748ec861d09e819e8c72b",
+          "split": "train",
+          "target": 0.5,
+          "target_namespace": "Q_C10"
+        }
+      ],
+      "cut": 5,
+      "disposition": "paired_accepted",
+      "index_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/integration_001/indices/PROPOSED_MT50_assembly_train_0000_parent",
+      "labels": {
+        "G0": {
+          "arms": [
+            "old",
+            "fresh0",
+            "fresh1",
+            "fresh2"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "G0_C5",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "arms": [
+            "local_minus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": -0.5,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "arms": [
+            "local_plus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": -0.5,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "arms": [
+            "local_plus",
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "parent": "PROPOSED_MT50_assembly_train_0000_parent",
+      "physical_attempts": 15,
+      "source": "PROPOSED_MT50_assembly_train_0000",
+      "split": "train",
+      "task": "assembly-v3",
+      "unstarted_attempts": 0
+    },
+    {
+      "D5_eligible_windows": 4440,
+      "G0_old_online_interventions": 0,
+      "GAF_eligible_windows": 4365,
+      "LVM_eligible_windows": 0,
+      "Q_BCE": [
+        {
+          "context_signature": "addbe70f17ed4c4690ef30a11440bfd2ad7c62766183e5bbab04cb5bb1aeecdd",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_plus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_basketball_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_basketball_train_0000_parent__Q_local_plus_r0",
+            "PROPOSED_MT50_basketball_train_0000_parent__Q_local_plus_r1"
+          ],
+          "raw_C10_sha256": "26cfb03dcd57c62e4328968e688ec7eb9e1310d44affd14f061f8933861732bb",
+          "source_signature": "9c4de76f86d35b61d4eb07ef9c4950852be05233c2364087313de058f4a994a5",
+          "split": "train",
+          "target": 0.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "addbe70f17ed4c4690ef30a11440bfd2ad7c62766183e5bbab04cb5bb1aeecdd",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "a0"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_basketball_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_basketball_train_0000_parent__Q_a0_r0",
+            "PROPOSED_MT50_basketball_train_0000_parent__Q_a0_r1"
+          ],
+          "raw_C10_sha256": "b4e2dc843b0e48b111890207012caf49793b1a04d0f2c25f0f23ba3f02a3c450",
+          "source_signature": "9c4de76f86d35b61d4eb07ef9c4950852be05233c2364087313de058f4a994a5",
+          "split": "train",
+          "target": 0.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "addbe70f17ed4c4690ef30a11440bfd2ad7c62766183e5bbab04cb5bb1aeecdd",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_basketball_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_basketball_train_0000_parent__Q_local_minus_r0",
+            "PROPOSED_MT50_basketball_train_0000_parent__Q_local_minus_r1"
+          ],
+          "raw_C10_sha256": "cf2fd5e9f890be59f712ec347b8ee7ed574a43ddaa3aa5797f50a3c7fd84d212",
+          "source_signature": "9c4de76f86d35b61d4eb07ef9c4950852be05233c2364087313de058f4a994a5",
+          "split": "train",
+          "target": 0.0,
+          "target_namespace": "Q_C10"
+        }
+      ],
+      "cut": 5,
+      "disposition": "paired_accepted",
+      "index_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/integration_001/indices/PROPOSED_MT50_basketball_train_0000_parent",
+      "labels": {
+        "G0": {
+          "arms": [
+            "old",
+            "fresh0",
+            "fresh1",
+            "fresh2"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "G0_C5",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "arms": [
+            "local_minus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "arms": [
+            "local_plus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "arms": [
+            "local_plus",
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "parent": "PROPOSED_MT50_basketball_train_0000_parent",
+      "physical_attempts": 15,
+      "source": "PROPOSED_MT50_basketball_train_0000",
+      "split": "train",
+      "task": "basketball-v3",
+      "unstarted_attempts": 0
+    },
+    {
+      "D5_eligible_windows": 2782,
+      "G0_old_online_interventions": 0,
+      "GAF_eligible_windows": 2707,
+      "LVM_eligible_windows": 0,
+      "Q_BCE": [
+        {
+          "context_signature": "edabdd0bd653c3c1bebf10c44b37cbf8c8abfb8079249826c78ac00b6523df91",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_plus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_bin_picking_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_bin_picking_train_0000_parent__Q_local_plus_r0",
+            "PROPOSED_MT50_bin_picking_train_0000_parent__Q_local_plus_r1"
+          ],
+          "raw_C10_sha256": "4c77616433e5faa7d82c810366666d82da5e2be777c61117e1266b5a8c0af80d",
+          "source_signature": "7bcb2f5353dd7110aa54eb6c2be8af25b9801d0db16183b712fcce4540fac574",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "edabdd0bd653c3c1bebf10c44b37cbf8c8abfb8079249826c78ac00b6523df91",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "a0"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_bin_picking_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_bin_picking_train_0000_parent__Q_a0_r0",
+            "PROPOSED_MT50_bin_picking_train_0000_parent__Q_a0_r1"
+          ],
+          "raw_C10_sha256": "6ded4f7b79b6249e1b7d83d03468f02da4b56658bdf35a17d3cc1b76894c64ce",
+          "source_signature": "7bcb2f5353dd7110aa54eb6c2be8af25b9801d0db16183b712fcce4540fac574",
+          "split": "train",
+          "target": 0.5,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "edabdd0bd653c3c1bebf10c44b37cbf8c8abfb8079249826c78ac00b6523df91",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_bin_picking_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_bin_picking_train_0000_parent__Q_local_minus_r0",
+            "PROPOSED_MT50_bin_picking_train_0000_parent__Q_local_minus_r1"
+          ],
+          "raw_C10_sha256": "984b2d473ad7ccad8de9580b0a739105ba36d9de66f17a4c9cdfe025c6283750",
+          "source_signature": "7bcb2f5353dd7110aa54eb6c2be8af25b9801d0db16183b712fcce4540fac574",
+          "split": "train",
+          "target": 0.0,
+          "target_namespace": "Q_C10"
+        }
+      ],
+      "cut": 5,
+      "disposition": "paired_accepted",
+      "index_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/integration_001/indices/PROPOSED_MT50_bin_picking_train_0000_parent",
+      "labels": {
+        "G0": {
+          "arms": [
+            "old",
+            "fresh0",
+            "fresh1",
+            "fresh2"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.16666666666666663,
+          "target_mask": true,
+          "target_namespace": "G0_C5",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "arms": [
+            "local_minus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": -0.5,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "arms": [
+            "local_plus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.5,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "arms": [
+            "local_plus",
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 1.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "parent": "PROPOSED_MT50_bin_picking_train_0000_parent",
+      "physical_attempts": 15,
+      "source": "PROPOSED_MT50_bin_picking_train_0000",
+      "split": "train",
+      "task": "bin-picking-v3",
+      "unstarted_attempts": 0
+    },
+    {
+      "D5_eligible_windows": 1143,
+      "G0_old_online_interventions": 0,
+      "GAF_eligible_windows": 1068,
+      "LVM_eligible_windows": 0,
+      "Q_BCE": [
+        {
+          "context_signature": "3102700d9dd3061dec25a6de8c87fe7ee5cacc5e40afd6f3cdf7690c6ea9def8",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_box_close_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_box_close_train_0000_parent__Q_local_minus_r0",
+            "PROPOSED_MT50_box_close_train_0000_parent__Q_local_minus_r1"
+          ],
+          "raw_C10_sha256": "088be409474d441f1eaab57cb1c7d204fbf5942d2ba6efd6040911f25a6f4ba2",
+          "source_signature": "646396f159b23334a2a7207244010245109d4534b5774711d92b863ae291bf1a",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "3102700d9dd3061dec25a6de8c87fe7ee5cacc5e40afd6f3cdf7690c6ea9def8",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "a0"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_box_close_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_box_close_train_0000_parent__Q_a0_r0",
+            "PROPOSED_MT50_box_close_train_0000_parent__Q_a0_r1"
+          ],
+          "raw_C10_sha256": "286015de41920dbea15873cb134c97e065f12ad1d0cce5f4a0f008afbc43f76b",
+          "source_signature": "646396f159b23334a2a7207244010245109d4534b5774711d92b863ae291bf1a",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "3102700d9dd3061dec25a6de8c87fe7ee5cacc5e40afd6f3cdf7690c6ea9def8",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_plus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_box_close_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_box_close_train_0000_parent__Q_local_plus_r0",
+            "PROPOSED_MT50_box_close_train_0000_parent__Q_local_plus_r1"
+          ],
+          "raw_C10_sha256": "ccabdcdd48b4718566f55b1089841d8e08dbd26f3f735ee232a2e0df71fc5e67",
+          "source_signature": "646396f159b23334a2a7207244010245109d4534b5774711d92b863ae291bf1a",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        }
+      ],
+      "cut": 5,
+      "disposition": "paired_accepted",
+      "existing_box_close_initialization_evidence": {
+        "B_initialization_calls": 0,
+        "entered": {
+          "diagnostic_reset_calls": 1,
+          "environment_instances": 2,
+          "environment_reset_calls": 52,
+          "initialization_do_simulation_calls": 5200,
+          "initialization_mj_forward_calls": 106,
+          "initialization_physics_substeps": 26520,
+          "initialization_reset_calls": 51,
+          "model_initializations": 0,
+          "native_mj_forward_calls": 406,
+          "policy_do_simulation_calls": 300,
+          "policy_mj_forward_calls": 300,
+          "policy_physics_substeps": 4000,
+          "reset_model_calls": 104,
+          "taskset_constructions": 1,
+          "taskset_reset_calls": 50,
+          "wrapper_initialization_reset_calls": 1,
+          "wrapper_instances": 1
+        },
+        "interpretation": "read-only actual A initialization accounting; no new initialization",
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH2_runs/PROPOSED_A11_batch2_A_V1/p03_box_close_train0000_cut5/normal/RESOURCE_LEDGER.json",
+        "sha256": "f321eb860191ac408cc94a95e08ddbd6f59e942683689e789db04b55799d38fc"
+      },
+      "index_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/integration_001/indices/PROPOSED_MT50_box_close_train_0000_parent",
+      "labels": {
+        "G0": {
+          "arms": [
+            "old",
+            "fresh0",
+            "fresh1",
+            "fresh2"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "G0_C5",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "arms": [
+            "local_minus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "arms": [
+            "local_plus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "arms": [
+            "local_plus",
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "parent": "PROPOSED_MT50_box_close_train_0000_parent",
+      "physical_attempts": 15,
+      "source": "PROPOSED_MT50_box_close_train_0000",
+      "split": "train",
+      "task": "box-close-v3",
+      "unstarted_attempts": 0
+    },
+    {
+      "D5_eligible_windows": 557,
+      "G0_old_online_interventions": 0,
+      "GAF_eligible_windows": 482,
+      "LVM_eligible_windows": 0,
+      "Q_BCE": [
+        {
+          "context_signature": "f00063cd15517f923ccf765478bf0d86b922c7618ac2ecb8f3354a2b21d1b715",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_plus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_button_press_topdown_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_button_press_topdown_train_0000_parent__Q_local_plus_r0",
+            "PROPOSED_MT50_button_press_topdown_train_0000_parent__Q_local_plus_r1"
+          ],
+          "raw_C10_sha256": "075e80b6206e2a9509303f2d484f4ac8378ae0ebe4ee220a93d1dd5d8631bf32",
+          "source_signature": "f9f4bceec2ae34161ca86dcd649c31c8a13b2b72e55c947e39b421f539f77747",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "f00063cd15517f923ccf765478bf0d86b922c7618ac2ecb8f3354a2b21d1b715",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_button_press_topdown_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_button_press_topdown_train_0000_parent__Q_local_minus_r0",
+            "PROPOSED_MT50_button_press_topdown_train_0000_parent__Q_local_minus_r1"
+          ],
+          "raw_C10_sha256": "a603623c68b2fc253f48d19324aaba4b9b4879c7ac971107ab0152914fc74e75",
+          "source_signature": "f9f4bceec2ae34161ca86dcd649c31c8a13b2b72e55c947e39b421f539f77747",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "f00063cd15517f923ccf765478bf0d86b922c7618ac2ecb8f3354a2b21d1b715",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "a0"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_button_press_topdown_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_button_press_topdown_train_0000_parent__Q_a0_r0",
+            "PROPOSED_MT50_button_press_topdown_train_0000_parent__Q_a0_r1"
+          ],
+          "raw_C10_sha256": "ec960645bebe4bf6c52019216550925d45429c83412a76612b595ce96a15969b",
+          "source_signature": "f9f4bceec2ae34161ca86dcd649c31c8a13b2b72e55c947e39b421f539f77747",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        }
+      ],
+      "cut": 5,
+      "disposition": "paired_accepted",
+      "index_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/integration_001/indices/PROPOSED_MT50_button_press_topdown_train_0000_parent",
+      "labels": {
+        "G0": {
+          "arms": [
+            "old",
+            "fresh0",
+            "fresh1",
+            "fresh2"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "G0_C5",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "arms": [
+            "local_minus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "arms": [
+            "local_plus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "arms": [
+            "local_plus",
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "parent": "PROPOSED_MT50_button_press_topdown_train_0000_parent",
+      "physical_attempts": 15,
+      "source": "PROPOSED_MT50_button_press_topdown_train_0000",
+      "split": "train",
+      "task": "button-press-topdown-v3",
+      "unstarted_attempts": 0
+    },
+    {
+      "D5_eligible_windows": 508,
+      "G0_old_online_interventions": 0,
+      "GAF_eligible_windows": 433,
+      "LVM_eligible_windows": 0,
+      "Q_BCE": [
+        {
+          "context_signature": "4f49abc76cb1a51c9e9234ffa9532112b0339028a3a33684f0893fe5150eea54",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_plus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_button_press_topdown_wall_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_button_press_topdown_wall_train_0000_parent__Q_local_plus_r0",
+            "PROPOSED_MT50_button_press_topdown_wall_train_0000_parent__Q_local_plus_r1"
+          ],
+          "raw_C10_sha256": "172486a017e198111dd7e1c447165ee77efb2b52b4fbf079398256c60e131fd2",
+          "source_signature": "d6369acd89d02cd3d86a5f37ec802af9863e358bb1942425088f69ecf863e4d1",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "4f49abc76cb1a51c9e9234ffa9532112b0339028a3a33684f0893fe5150eea54",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "a0"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_button_press_topdown_wall_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_button_press_topdown_wall_train_0000_parent__Q_a0_r0",
+            "PROPOSED_MT50_button_press_topdown_wall_train_0000_parent__Q_a0_r1"
+          ],
+          "raw_C10_sha256": "86c4ecc4464a0c0d3882945a816ae0130df7b6543dcf0e0aace8b4bced0b7758",
+          "source_signature": "d6369acd89d02cd3d86a5f37ec802af9863e358bb1942425088f69ecf863e4d1",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "4f49abc76cb1a51c9e9234ffa9532112b0339028a3a33684f0893fe5150eea54",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_button_press_topdown_wall_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_button_press_topdown_wall_train_0000_parent__Q_local_minus_r0",
+            "PROPOSED_MT50_button_press_topdown_wall_train_0000_parent__Q_local_minus_r1"
+          ],
+          "raw_C10_sha256": "ec863e1ba1b2861c9541166bc749400e67cd64375409c654029b58a5b262e79a",
+          "source_signature": "d6369acd89d02cd3d86a5f37ec802af9863e358bb1942425088f69ecf863e4d1",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        }
+      ],
+      "cut": 5,
+      "disposition": "paired_accepted",
+      "index_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/integration_001/indices/PROPOSED_MT50_button_press_topdown_wall_train_0000_parent",
+      "labels": {
+        "G0": {
+          "arms": [
+            "old",
+            "fresh0",
+            "fresh1",
+            "fresh2"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "G0_C5",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "arms": [
+            "local_minus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "arms": [
+            "local_plus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "arms": [
+            "local_plus",
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "parent": "PROPOSED_MT50_button_press_topdown_wall_train_0000_parent",
+      "physical_attempts": 15,
+      "source": "PROPOSED_MT50_button_press_topdown_wall_train_0000",
+      "split": "train",
+      "task": "button-press-topdown-wall-v3",
+      "unstarted_attempts": 0
+    },
+    {
+      "D5_eligible_windows": 504,
+      "G0_old_online_interventions": 0,
+      "GAF_eligible_windows": 429,
+      "LVM_eligible_windows": 0,
+      "Q_BCE": [
+        {
+          "context_signature": "aaff77cf9148c3af699643245d49c1e95ef210758a8211eb01096183966718a5",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_plus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_button_press_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_button_press_train_0000_parent__Q_local_plus_r0",
+            "PROPOSED_MT50_button_press_train_0000_parent__Q_local_plus_r1"
+          ],
+          "raw_C10_sha256": "531253d7514bf9fcfea1f69fbda0901775988c96c88daff23ffa35eb4cb741c7",
+          "source_signature": "23dae58759df9d372fb2a0fd59069656a0f0575fce5452df2818aaf86850f2cf",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "aaff77cf9148c3af699643245d49c1e95ef210758a8211eb01096183966718a5",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "a0"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_button_press_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_button_press_train_0000_parent__Q_a0_r0",
+            "PROPOSED_MT50_button_press_train_0000_parent__Q_a0_r1"
+          ],
+          "raw_C10_sha256": "b8b7e68e886e17b2132a171222c2fafaa4cdbf7dec45e55332d441055d78288f",
+          "source_signature": "23dae58759df9d372fb2a0fd59069656a0f0575fce5452df2818aaf86850f2cf",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "aaff77cf9148c3af699643245d49c1e95ef210758a8211eb01096183966718a5",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_button_press_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_button_press_train_0000_parent__Q_local_minus_r0",
+            "PROPOSED_MT50_button_press_train_0000_parent__Q_local_minus_r1"
+          ],
+          "raw_C10_sha256": "d516a3c71476fc532ae68212a50278b28cb852a5b47193fd0fb188f11390dcd0",
+          "source_signature": "23dae58759df9d372fb2a0fd59069656a0f0575fce5452df2818aaf86850f2cf",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        }
+      ],
+      "cut": 5,
+      "disposition": "paired_accepted",
+      "index_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/integration_001/indices/PROPOSED_MT50_button_press_train_0000_parent",
+      "labels": {
+        "G0": {
+          "arms": [
+            "old",
+            "fresh0",
+            "fresh1",
+            "fresh2"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "G0_C5",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "arms": [
+            "local_minus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "arms": [
+            "local_plus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "arms": [
+            "local_plus",
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "parent": "PROPOSED_MT50_button_press_train_0000_parent",
+      "physical_attempts": 15,
+      "source": "PROPOSED_MT50_button_press_train_0000",
+      "split": "train",
+      "task": "button-press-v3",
+      "unstarted_attempts": 0
+    },
+    {
+      "D5_eligible_windows": 602,
+      "G0_old_online_interventions": 0,
+      "GAF_eligible_windows": 527,
+      "LVM_eligible_windows": 0,
+      "Q_BCE": [
+        {
+          "context_signature": "24db4e6224b53479ca8c3381df4d86ee14338c55ad44a85d58e2efbf8a7ec749",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "a0"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_button_press_wall_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_button_press_wall_train_0000_parent__Q_a0_r0",
+            "PROPOSED_MT50_button_press_wall_train_0000_parent__Q_a0_r1"
+          ],
+          "raw_C10_sha256": "04471c030abb5a7c6dd30adda536e24bc34065ba180f43ffc4c2782ad515cbac",
+          "source_signature": "3fef0e37574f352a48615f563ac3442079e41acccf7cf2aec1d74ca9afbeed70",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "24db4e6224b53479ca8c3381df4d86ee14338c55ad44a85d58e2efbf8a7ec749",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_plus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_button_press_wall_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_button_press_wall_train_0000_parent__Q_local_plus_r0",
+            "PROPOSED_MT50_button_press_wall_train_0000_parent__Q_local_plus_r1"
+          ],
+          "raw_C10_sha256": "3295ccb8892fd422d1d40696561e3e3e5b2bcc45237f585b63e4280d91a53623",
+          "source_signature": "3fef0e37574f352a48615f563ac3442079e41acccf7cf2aec1d74ca9afbeed70",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        },
+        {
+          "context_signature": "24db4e6224b53479ca8c3381df4d86ee14338c55ad44a85d58e2efbf8a7ec749",
+          "cut": 5,
+          "effective_repeat_count": 2,
+          "effective_repeat_ids": [
+            0,
+            1
+          ],
+          "eligible": true,
+          "logical_arms": [
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "parent": "PROPOSED_MT50_button_press_wall_train_0000_parent",
+          "physical_attempt_refs": [
+            "PROPOSED_MT50_button_press_wall_train_0000_parent__Q_local_minus_r0",
+            "PROPOSED_MT50_button_press_wall_train_0000_parent__Q_local_minus_r1"
+          ],
+          "raw_C10_sha256": "e7562187b5a3eed02328f4686d953b81a3ce8ed5e2071dce92b2c1353e32b5c3",
+          "source_signature": "3fef0e37574f352a48615f563ac3442079e41acccf7cf2aec1d74ca9afbeed70",
+          "split": "train",
+          "target": 1.0,
+          "target_namespace": "Q_C10"
+        }
+      ],
+      "cut": 5,
+      "disposition": "paired_accepted",
+      "index_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/integration_001/indices/PROPOSED_MT50_button_press_wall_train_0000_parent",
+      "labels": {
+        "G0": {
+          "arms": [
+            "old",
+            "fresh0",
+            "fresh1",
+            "fresh2"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "G0_C5",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_minus": {
+          "arms": [
+            "local_minus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "gain_local_plus": {
+          "arms": [
+            "local_plus",
+            "a0"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        },
+        "pair": {
+          "arms": [
+            "local_plus",
+            "local_minus"
+          ],
+          "missing_reasons": [],
+          "raw_alias_masked": false,
+          "target": 0.0,
+          "target_mask": true,
+          "target_namespace": "Q_C10",
+          "valid_pair_repeat_ids": [
+            0,
+            1
+          ]
+        }
+      },
+      "parent": "PROPOSED_MT50_button_press_wall_train_0000_parent",
+      "physical_attempts": 15,
+      "source": "PROPOSED_MT50_button_press_wall_train_0000",
+      "split": "train",
+      "task": "button-press-wall-v3",
+      "unstarted_attempts": 0
+    }
+  ],
+  "full_state_scope": "existing SHA-bound captured-field/MJB closure and pre-intervention evidence; no new physical-equivalence proof",
+  "language_SHA_by_parent": {
+    "PROPOSED_MT50_assembly_train_0000_parent": [
+      "f089de4ababeb043da50307b22da70e8453dc400610309ac4ed7a7ffba5f35b7"
+    ],
+    "PROPOSED_MT50_basketball_train_0000_parent": [
+      "f08a2751e278bc2e9a5c603bd62cb498057207a2eb749921072cd0e72b920efe"
+    ],
+    "PROPOSED_MT50_bin_picking_train_0000_parent": [
+      "1b49c772719424c13dd3fd83ce8a745922fff575c23fad2978e01ea2d361eb54"
+    ],
+    "PROPOSED_MT50_box_close_train_0000_parent": [
+      "783eae7b22295a96ab41597cca8a88f76fcd870966176f6655808f18ebf3ea94"
+    ],
+    "PROPOSED_MT50_button_press_topdown_train_0000_parent": [
+      "1623e851cbfcf5f550e571b0f941479d966d1220d33e9eab3997f913cd8c68de"
+    ],
+    "PROPOSED_MT50_button_press_topdown_wall_train_0000_parent": [
+      "2bd97817950ffbee50bb5e39f02a368f50ae5627885d699ddfc8ffe9135850cf"
+    ],
+    "PROPOSED_MT50_button_press_train_0000_parent": [
+      "4da4fe48b690af3cf20e49365e694d579c115767f080f9c719d2be3ecc7755e7"
+    ],
+    "PROPOSED_MT50_button_press_wall_train_0000_parent": [
+      "45e221240aed9adf4a78bd72bfd9192c139366cfae3cf97e2db7be78224d8a2d"
+    ],
+    "PROPOSED_MT50_disassemble_train_0000_parent": [
+      "09797b350c4f7b5ed8293c6b2dbd9dcd8dfb1b554ae877f3736d55505ee7445e"
+    ],
+    "PROPOSED_MT50_disassemble_train_0001_parent": [
+      "09797b350c4f7b5ed8293c6b2dbd9dcd8dfb1b554ae877f3736d55505ee7445e"
+    ],
+    "PROPOSED_MT50_pick_place_wall_train_0000_parent": [
+      "908543b3946c271766bc44d9fd27948e950f6e1572ce6fa002ea7fe4e6b45b02"
+    ],
+    "PROPOSED_MT50_pick_place_wall_train_0001_parent": [
+      "908543b3946c271766bc44d9fd27948e950f6e1572ce6fa002ea7fe4e6b45b02"
+    ],
+    "PROPOSED_MT50_shelf_train_0000_parent": [
+      "60afbc18f6395ba0bfcd0c80e10647fc7d9a4f8780c4ca81994bff7ef8e65777"
+    ],
+    "PROPOSED_MT50_shelf_train_0001_parent": [
+      "60afbc18f6395ba0bfcd0c80e10647fc7d9a4f8780c4ca81994bff7ef8e65777"
+    ],
+    "PROPOSED_MT50_stick_pull_train_0000_parent": [
+      "e41a2dda96bb5e0e4cea8a2d6976b2cbd5d7d1b2a77a83edc1ee79580f09cbda"
+    ],
+    "PROPOSED_MT50_stick_pull_train_0001_parent": [
+      "e41a2dda96bb5e0e4cea8a2d6976b2cbd5d7d1b2a77a83edc1ee79580f09cbda"
+    ],
+    "PROPOSED_MT50_stick_push_train_0000_parent": [
+      "f01ba842303b7f0f28f334059d4b7bb9a2f4da76c18b077158a514f7d26d198f"
+    ]
+  },
+  "new_model_encoder_simulation_training_calls": 0,
+  "privileged_fields_in_model_inputs": [],
+  "public_cost_view": "missing; preserved as [] plus reason",
+  "qualification": "CPU reference indices; not materialized training tensors or scientific acceptance",
+  "rejected_window_reasons": {
+    "D5": {
+      "short_actual_window": 964
+    },
+    "GAF": {
+      "short_actual_window": 2169
+    }
+  },
+  "status": "PASS",
+  "synthetic": false,
+  "totals": {
+    "D5_eligible_windows": 37529,
+    "D5_rejected_windows": 964,
+    "G0_targets": 16,
+    "GAF_eligible_windows": 36324,
+    "GAF_rejected_windows": 2169,
+    "LVM_eligible_windows": 0,
+    "LVM_rejected_contiguous_11frame_windows": 36324,
+    "LVM_rejected_physical_records": 241,
+    "Q_BCE_groups": 48,
+    "Q_gain_targets": 32,
+    "Q_pair_targets": 16,
+    "development_parents": 0,
+    "logical_aggregates": 64,
+    "normal_only_parents": 1,
+    "paired_parents": 16,
+    "parents": 17,
+    "physical_attempts": 241,
+    "raw_controls": 38493,
+    "train_parents": 17
+  }
+}

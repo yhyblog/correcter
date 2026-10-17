@@ -1,0 +1,110 @@
+{
+  "schema": "native10_round1_selected_model_review_v1",
+  "reviewed_utc": "2026-09-16T20:31:39.810457+00:00",
+  "status": "passed",
+  "pass_scope": "Completed round1 A/B training export identity, original preflight preprocessing, sealed post-training reload records, and deployment-method contract. Does not itself release simulation.",
+  "reviewer": "analysis/critic_data_audit",
+  "new_simulator_calls": 0,
+  "new_optimizer_updates": 0,
+  "independent_actions": "Read sealed JSON and hash this training artifact inventory; load checkpoint tensors on CPU for equality only. No model forward/gradient evaluation, PCA fit, loader execution, tests, freeze or simulation.",
+  "training": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1",
+    "complete_sha256": "ff460f12c598a34a15a28ed7619ed071a60be195a3dd2f0c1c963a202ee22287",
+    "result_sha256": "2b9f668b24a7c94e86a75342bd981751c6627e2569cde1ddb7868afd14c3f03f",
+    "all_158_sealed_file_hashes_match": true,
+    "optimizer_updates": 19200,
+    "unique_optimizer_attempt_numbers": 19200,
+    "all8_member_updates": 2400,
+    "selected_path": "B",
+    "selected_step": 200,
+    "design_matches_prefit": true,
+    "datasets_match_prefit": true,
+    "code_binding_matches_prefit": true,
+    "all_current_bound_code_hashes_match": true,
+    "preflight_binding": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/round1/round1_preflight_v1",
+      "seal_sha256": "3a97fff5235b804ec05afd6cc4dc6f25e89319c393d2fa21f70eda2296ed3930"
+    }
+  },
+  "selected": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected",
+    "complete_sha256": "931c6f6043db92b5d9003eb2833dfc8edd0ab6c860a1979db3983cd7d893725f",
+    "all6_sealed_file_hashes_match": true,
+    "model_hashes": {
+      "0": "bc93c9035409cd2b7e413dffd0e0f9f3053ac34add4b47fc5cd57be9a5cdceb3",
+      "1": "639e78888f9ef9657cef73da4f21f0676593a58ec4bfa0f8f098d0885432fb2f",
+      "2": "e1f06c0214243ec9fd8952cab93139feafafbc8e84a74e432e9498d68d422df3",
+      "3": "ae18f18e36b878b37b1085778136f6faf62f7146ad0d4ca015076671b2a074eb"
+    },
+    "all4_export_checkpoint_files_equal_corresponding_B200_sha": true,
+    "all4_export_tensor_keys_and_values_equal_corresponding_B200": true,
+    "all4_preprocessing_buffers_equal_corresponding_prefit_B_initial": true,
+    "all4_have_changed_trainable_weights_vs_prefit": true,
+    "members": 4
+  },
+  "reload_audit": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected_reload_audit.json",
+    "sha256": "ce43fc0888f807ef048612ad733795bc1ad5aef24103f0ed89e3c1d51c4beb7b",
+    "audit": {
+      "status": "passed",
+      "source_count": 95,
+      "feature_cache_bit_exact": true,
+      "thirteen_candidate_member_probability_bit_exact": true,
+      "gradient_slots": [
+        0,
+        11
+      ],
+      "member_and_ensemble_gradient_bit_exact": true,
+      "members_checked": 4,
+      "a0_anchor_exactly_zero": true,
+      "state_and_anchor_immutable": true,
+      "input_action_representation": "bounded float32 [13,10,4]; designated slot0 a0 detached",
+      "ensemble_offline_float64_vs_online_float32_max_gain_difference": 0.0,
+      "ensemble_summary_difference_is_report_only": true,
+      "probability_comparison": "member float32; same singleton two-slot arithmetic",
+      "real_data_claim_requires_real_input_provenance": true
+    },
+    "episode_ids_exactly_ordered95_development_rows": true,
+    "selection_planned_episode_denominator": 100,
+    "common_no_cut_sources_retained": 5
+  },
+  "deployment_contract": {
+    "stage": "round1_development_policy",
+    "required_scope": "round1_development_policy",
+    "simulator_attempts_ceiling": 2100,
+    "optimizer_updates_ceiling": 0,
+    "expected_physical_attempts_if_no_failure": 1995,
+    "planned_episodes": 100,
+    "cut_sources": 95,
+    "common_sources": 5,
+    "methods": [
+      "normal",
+      "replan",
+      "velocity",
+      "direct",
+      "post"
+    ],
+    "paired_suffix_repeats": 4,
+    "guard_role": "Technical identity/restoration/command checks only; no new acceptance thresholds, radius tuning or G0 selection.",
+    "unchanged_fields": [
+      "episode_manifest",
+      "seed_namespace",
+      "source_horizon",
+      "prefix_horizon",
+      "suffix_horizon",
+      "control_budget",
+      "gate_threshold",
+      "guidance",
+      "matching",
+      "cpu",
+      "split_replicates",
+      "scene_identity"
+    ],
+    "new_bank_generation": "New bank/version under selected trained critic; old labels13 reference is used to verify raw50 a0, initial noise, base seed, mask and source/suffix provenance, not to substitute old guided candidates.",
+    "paired_randomness": "Configured source namespace unchanged, a0 raw50/base seed/initial-noise hash must equal original; suffix audit checks repeat/index seeds and cross-arm noise. Cross-stage effect comparisons still require actual pairing evidence.",
+    "resource_counting": "AttemptLedger totals and stage usage are keyed by resource; policy ledger permits simulator_attempts only. Policy artifact audit filters stage and simulator_attempts. Optimizer journal rows are not simulator budget.",
+    "cpu_readiness": "pending: policy_deployment_cpu_20260916_v1 is sealed failed (30 passed / 1 failed); prior policy5 summary4 tests passed. Await new passing evidence and independent deployment freeze before execution.",
+    "current_training_ready_releases_deployment": false,
+    "scientific_success_claim": false
+  }
+}

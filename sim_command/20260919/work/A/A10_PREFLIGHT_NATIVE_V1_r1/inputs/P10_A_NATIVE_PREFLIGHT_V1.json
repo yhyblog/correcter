@@ -1,0 +1,145 @@
+{
+  "status": "released",
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A10_PREFLIGHT_NATIVE_V1",
+  "task_revision": 1,
+  "node_role": "A",
+  "owner_host": "trial-303224955-trialrun-303224955-worker-0",
+  "release_id": "P10_A_NATIVE_PREFLIGHT_V1",
+  "wave_id": "corrector-sim-20260919-A-native-preflight-wave01",
+  "run_id": "A10_PREFLIGHT_NATIVE_V1_r1_A_v4_wave01",
+  "shard_id": "A-native-diagnostic-shelf-place-2026091900",
+  "proposal_sha256": "63caf8ce1cfc43f6dadd05a8a140a996645092f532b0ce770528cc45dad51bed",
+  "code_manifest_sha256": "9e07c74a850e457993c70e4138491c18ed31b0ef83d96088a0ef9f4c17a60b76",
+  "resource_caps": {
+    "simulator_attempts": 1,
+    "env_steps": 1,
+    "vla_sampling_calls": 5,
+    "flow_forward_calls": 50,
+    "vla_backward_calls": 0,
+    "critic_forward_calls": 0,
+    "critic_backward_calls": 0,
+    "monitor_calls": 0,
+    "optimizer_updates": 0
+  },
+  "max_retries": 0,
+  "timeout_seconds": 1800,
+  "wave_participants": [
+    "A"
+  ],
+  "gpu_index": 0,
+  "gpu_uuid": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe",
+  "gpu_model": "NVIDIA H100 80GB HBM3",
+  "driver": "535.161.08",
+  "runtime": "lerobot-python3.12.13-torch2.7.1-cu126",
+  "instructions": "Execute this one A-only v4 diagnostic once using the task brief; built-in CPU authorization and input checks precede lifecycle/GPU. No other training/inference/rollout/deletion authorized.",
+  "initialization_caps": {
+    "model_initializations": 1,
+    "environment_instances": 2,
+    "wrapper_instances": 1,
+    "taskset_constructions": 1,
+    "taskset_reset_calls": 50,
+    "wrapper_initialization_reset_calls": 1,
+    "initialization_reset_calls": 51,
+    "diagnostic_reset_calls": 1,
+    "environment_reset_calls": 52,
+    "reset_model_calls": 104,
+    "initialization_do_simulation_calls": 5200,
+    "initialization_physics_substeps": 26000,
+    "policy_do_simulation_calls": 1,
+    "policy_physics_substeps": 13
+  },
+  "kill_grace_seconds": 30,
+  "timeout_scope": "diagnostic_process_only_including_all_initialization",
+  "external_source_manifest_sha256": "8a6935bc6788aaaacd1de4ab3ba98419a65d764eaca7d8377e88cfbe961117b7",
+  "kind": "formal_compute",
+  "issued_at_utc": "2026-09-19T16:49:40.859903+00:00",
+  "issuer": "analysis",
+  "proposal_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PREFLIGHT_REVISION_R2/preflight_v4/PROPOSAL.json",
+  "code_manifest_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PREFLIGHT_REVISION_R2/code_snapshot_v4/CODE_MANIFEST.json",
+  "external_source_manifest_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PREFLIGHT_REVISION_R2/preflight_v4/external_source_manifest.json",
+  "source_manifest": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PREFLIGHT_REVISION_R2/preflight_v4/source_manifest.json",
+    "sha256": "d01e452e6e67aa90beef3b7ecc9157c5c8b96e28ea80e1eec4e47ef8400542eb"
+  },
+  "task_brief": {
+    "path": "tasks/A10_PREFLIGHT_NATIVE_V1.md",
+    "sha256": "0ca25efe5621c45169213948a1754eed128e1a1992cf8cac885de5b7d20d915f"
+  },
+  "command_manifest": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PREFLIGHT_REVISION_R2/commands_v4/COMMANDS.json",
+    "sha256": "4ff4f0900e6962ee387984ce8f868e82f0bfc7994b004028ac3d3125d8364d3f"
+  },
+  "participating_hosts": [
+    "trial-303224955-trialrun-303224955-worker-0"
+  ],
+  "completion_receipt": "receipts/A/A10_PREFLIGHT_NATIVE_V1_RESULT.json",
+  "output_retention": [
+    "claim",
+    "events",
+    "resource_receipt",
+    "queue_checks",
+    "raw5plans",
+    "RGB/proprio current+next",
+    "one real transition",
+    "failures",
+    "initialization_events_and_receipt",
+    "wave_timing",
+    "LAUNCH_RESULT",
+    "restoration_observation"
+  ],
+  "resource_estimates": {
+    "gpu_count": 1,
+    "reserved_GPU_wave": "all eight A holders paused for the whole A-only command",
+    "vram_peak_GiB_estimate": 40,
+    "host_ram_peak_GiB_estimate": 64,
+    "incremental_disk_GiB_estimate": 2,
+    "estimates_are_measured": false,
+    "disk_quota_known": false,
+    "model_weight_bytes_read": 9354050752,
+    "full_large_weight_hash_before_load": true,
+    "output_retention": [
+      "claim",
+      "events",
+      "resource_receipt",
+      "queue_checks",
+      "raw5plans",
+      "RGB/proprio current+next",
+      "one real transition",
+      "failures",
+      "initialization_events_and_receipt",
+      "wave_timing",
+      "LAUNCH_RESULT",
+      "restoration_observation"
+    ],
+    "full_large_weight_hash_passes_before_or_inside_timed_child": 2,
+    "model_weight_hash_bytes_read": 18708101504,
+    "initialization_journal_records_upper_bound": 10730,
+    "source_package_bytes_hashed": 728991,
+    "estimate_note": "40GiB VRAM/64GiB RAM/2GiB disk remain estimates; two full weight hash passes plus model loader I/O; no real runtime measurement"
+  },
+  "timeout_accounting": {
+    "inside": [
+      "repeated authorization/input SHA/device/runtime verification",
+      "heavy imports",
+      "model loading",
+      "all task-set/wrapper/diagnostic resets and initialization physics",
+      "five native samples",
+      "one policy control",
+      "diagnostic validation and cleanup"
+    ],
+    "outside": [
+      "prelaunch CPU authorization and full input hashing",
+      "NVML identity check and guard-active check",
+      "all-GPU reservation and holder release",
+      "reserved wrapper setup",
+      "reservation release",
+      "up to 120s occupancy-restoration observation"
+    ],
+    "actual_times": "LAUNCH_RESULT.json records preparation/reservation/timed-process/release/restoration/end-to-end; missing markers are null",
+    "not_an_end_to_end_1830_second_bound": true
+  },
+  "completed_rollouts_cap": 0,
+  "automatic_retries": 0,
+  "run_separate_cpu_checker_before_launch": false
+}

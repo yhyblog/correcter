@@ -1,0 +1,53 @@
+{
+  "task_id": "B_D24_EXTENSION_REMAINDER_V1",
+  "parent_task_id": "B_D24_SPRINT_V1",
+  "revision": 1,
+  "status": "accepted_adapting_E8_Post",
+  "at_utc": "2026-09-22T04:01:15.105923+00:00",
+  "authorization": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/CONTINUATION_AUTHORIZATION_20260922_V1.json",
+    "sha256": "3e6a0aab7abe79365192c953d45b4e13b44139ab26ffadb6f7c3f82547107d8b"
+  },
+  "root_control_revision": 57,
+  "queue_control_revision": 22,
+  "task_board_revision": 84,
+  "E1": {
+    "status": "1200_final_valid_published_no_rerun",
+    "summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_E1_RENDER_REPAIR_r3/E1_COMPLETE_SUMMARY.json",
+    "event_ack": "B_8bef6b4d53d13f423eb70d8f1c939974"
+  },
+  "E6": {
+    "owner": "A",
+    "B_admitted": false,
+    "claims": [],
+    "scientific_operations": 0,
+    "metadata": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E6_PREP_V1_r1/SOURCE_AND_IMPLEMENTATION_PREP.json",
+    "partial_unvalidated_code": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E6_V1_r1",
+    "code_status": "CPU drafting only; no entry checks, configs, sealed source table, registration, model load, simulation or launch; A may read but must not assume validated"
+  },
+  "E8": {
+    "priorities": [
+      "Smol_Post",
+      "X030000_Post",
+      "LIBERO_Post",
+      "ready_Velocity"
+    ],
+    "status": "adapting"
+  },
+  "whole_wave_holders": "all off until all formal descendants exit",
+  "A_waits_for_B": false,
+  "campaign_id": "corrector-sim-20260919",
+  "task_revision": 1,
+  "node_role": "B",
+  "hostname": "trial-303225685-trialrun-303225685-worker-0",
+  "executor_session_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+  "started_at_utc": "2026-09-22T04:01:15.105923+00:00",
+  "control_revision": 57,
+  "allowed_scope": "E1 CPU summaries; E8 Smol/X/LIBERO Post then readyVelocity within continuation and parent budgets",
+  "inputs_checked": [
+    "CONTROL rev57",
+    "queue CONTROL rev22",
+    "TASK_BOARD rev84",
+    "continuation authorization and B brief"
+  ]
+}

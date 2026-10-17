@@ -1,0 +1,30 @@
+{
+  "node": "C",
+  "hostname": "trial-303269581-trialrun-303269581-worker-0",
+  "target_SM_percent": 90,
+  "holder_active_duty": 0.9,
+  "period_seconds": 0.2,
+  "size": 8192,
+  "dtype": "bf16",
+  "devices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "formal_lock": "/tmp/gpu_occupancy_guard/formal.lock",
+  "daemon_lock": "/tmp/gpu_occupancy_guard/daemon.lock",
+  "private_guard": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_IDLE_OCCUPANCY_SM90_V1_r1/guard.py",
+  "original_guard": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_guard.py",
+  "original_guard_sha256": "7910c567a47ddf68294d92fc9698cc780aeb130ddefde0337414bfcd88cb85a4",
+  "user_authorization": "把空闲时的占卡sm提高到90%",
+  "issued_utc": "2026-09-22T16:36:19.227782+00:00",
+  "formal_policy": "all holders off throughout formal wave; restore90percent idle duty after entire family exits",
+  "measurement": "90percent duty is a setting, actual SM must be sampled",
+  "scientific_budgets_changed": false,
+  "shared_guard_modified": false
+}

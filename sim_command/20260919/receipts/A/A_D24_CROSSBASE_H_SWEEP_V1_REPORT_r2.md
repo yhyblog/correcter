@@ -1,0 +1,3 @@
+SmolVLA050000 H20/H30 private engineering recovery: only1939 incomplete units (1558 first entries +381 technical corrections), preserve2061 valid outcomes. Original4000 identities, L11/fit9101, stage4400 total attempts unchanged. Status: complete
+
+Raw terminal, attempts, result denominators, separate Post/Velocity tables and all-family exit/holder restoration are in /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2 . This new sweep preserves the original500 revealed sources; old H10 units are not rerun. Velocity is separate from the current paper.

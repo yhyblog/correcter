@@ -1,0 +1,32 @@
+{
+  "updated_utc": "2026-09-16T23:02:13.793368+00:00",
+  "status": "already_implemented_and_synthetic_cpu_verified",
+  "decision_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_FINAL_NUMERICAL_DECISION.md",
+  "decision_sha256": "3e556bad66cff0105c243b841cd24b619efdcc1c681bbf38b41bb0b71888cb1a",
+  "implementation_summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/final_model_preflight_implementation_20260916_v1/summary.json",
+  "implementation_summary_sha256": "86373a416107f7ebf686084779ccbad91fde35b56639af1d80fd6b92d6f8a914",
+  "combined_cpu_passed": 71,
+  "numeric_contract": "canonical_strict_passed_dense_reported",
+  "canonical_bitexact_including_one_ulp_cache_rejection_preserved": true,
+  "new_atol_or_rtol": false,
+  "dense_difference_alone_blocks": false,
+  "a0_zero_advantage_requires_zero_gradient": false,
+  "initial_toy_evidence": {
+    "directory": "final_numerical_contract_cpu_20260916_v1",
+    "torch": "2.6.0+cu124",
+    "numpy": "1.26.4",
+    "code_identity_boundary": "after-only; not before/after evidence",
+    "historical_evidence_unchanged": true
+  },
+  "separate_target_runtime_toy_evidence": {
+    "directory": "final_numerical_contract_cpu_20260916_v2",
+    "torch": "2.7.1+cu126",
+    "numpy": "2.2.6",
+    "code_identity_boundary": "separately archived before/after evidence",
+    "cross_runtime_bitexact_claim": false,
+    "toy_differences_are_real_data_thresholds": false
+  },
+  "actual_final_preflight_and_fit_runtime_bound_in_spec": true,
+  "real_model_stage_executed": false,
+  "repeated_tests_or_new_wave_for_this_receipt": false
+}

@@ -1,0 +1,157 @@
+{
+  "created_utc": "2026-09-26T02:37:57.474364+00:00",
+  "scope": "Assets and previously saved real inputs only; no new environment collection, policy/GPU execution or success-rate evaluation performed by this discovery step.",
+  "base": "pi05_MT50_SFT030000",
+  "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model",
+  "python": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/bin/python",
+  "runtime_environment_id": "mw-pi05-legacy",
+  "runtime_launcher": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/runtime.sh",
+  "historical_base_config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/BASE.json",
+  "historical_engine_config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/ENGINE.json",
+  "hf_home": "/mnt/bn/arnold-recommend/yaohaoyang/.cache/huggingface-vla-corrector",
+  "tokenizer_name": "google/paligemma-3b-pt-224",
+  "tokenizer_revision": "35e4f46485b4d07967e7e9935bc3786aad50687c",
+  "projection": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/projection.npy",
+  "accepted_code": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_COLLECTOR_CPU_V1/code",
+  "vendored_lerobot_src": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_COLLECTOR_CPU_V1/code/vendor_vla/src",
+  "model_repository": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector",
+  "python_paths": [
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/src",
+    "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/src",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_COLLECTOR_CPU_V1/code",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_COLLECTOR_CPU_V1/code/vendor_vla/src"
+  ],
+  "policy_loading_interface": "numeric_setup.initialize(base_config_with_current_device,out,meter,device); returns policy,model,features,projection,post",
+  "sampling_interface": "features._policy_batch(observation,instruction); policy._preprocess_images(batch); model.sample_actions(images,masks,tokens,attention_mask,noise=[1,50,32],num_steps=10); post(first4_action_dimensions)->float32[50,4]",
+  "policy_protocol": {
+    "raw_H": 50,
+    "normal_H": 10,
+    "NFE": 10,
+    "action_dimensions": 4,
+    "control_hz": 30,
+    "physics_hz": 400,
+    "action_scale": 0.015,
+    "camera": "corner2",
+    "pixels_shape": [
+      480,
+      480,
+      3
+    ]
+  },
+  "DG0": [
+    {
+      "D_member": 241,
+      "G0_member": 341,
+      "D_checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241/finetune_400.pt",
+      "D_normalization": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241/normalization.json",
+      "D_selection_metadata": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241/complete.json",
+      "G0_checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_341/selected.pt",
+      "D_constructor": "ac_tmil.future_aware.models.WorldModel(norm,width=256)",
+      "G0_constructor": "ac_tmil.future_aware.models.BenefitModel(norm,future=True,width=128)",
+      "load_interface": "load_state_dict(torch.load(checkpoint,map_location=device,weights_only=True),strict=True); eval().requires_grad_(False)"
+    },
+    {
+      "D_member": 242,
+      "G0_member": 342,
+      "D_checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242/finetune_400.pt",
+      "D_normalization": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242/normalization.json",
+      "D_selection_metadata": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242/complete.json",
+      "G0_checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_342/selected.pt",
+      "D_constructor": "ac_tmil.future_aware.models.WorldModel(norm,width=256)",
+      "G0_constructor": "ac_tmil.future_aware.models.BenefitModel(norm,future=True,width=128)",
+      "load_interface": "load_state_dict(torch.load(checkpoint,map_location=device,weights_only=True),strict=True); eval().requires_grad_(False)"
+    }
+  ],
+  "Q": {
+    "requested_hidden_width": 512,
+    "parameters_per_member": 3781122,
+    "members": 4,
+    "total_parameters": 15124488,
+    "training": "random initialization for timing only, zero optimizer updates",
+    "device": "cpu per current deployment; confirm final measurement scope in root",
+    "preprocessing_fields": [
+      "norm_mean",
+      "norm_std",
+      "residual_scale",
+      "visual_center",
+      "visual_basis",
+      "visual_scale",
+      "language_center",
+      "language_basis",
+      "language_scale"
+    ],
+    "preprocessing_per_member": [
+      {
+        "member": 1041,
+        "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/training/s9101_m1041/L11/final.pt",
+        "load_interface": "state=torch.load(path,map_location=\"cpu\",weights_only=True); prep={k:state[k] for k in preprocessing_fields}; initialize fresh width512 with prep only"
+      },
+      {
+        "member": 1042,
+        "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/training/s9101_m1042/L11/final.pt",
+        "load_interface": "state=torch.load(path,map_location=\"cpu\",weights_only=True); prep={k:state[k] for k in preprocessing_fields}; initialize fresh width512 with prep only"
+      },
+      {
+        "member": 1043,
+        "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/training/s9101_m1043/L11/final.pt",
+        "load_interface": "state=torch.load(path,map_location=\"cpu\",weights_only=True); prep={k:state[k] for k in preprocessing_fields}; initialize fresh width512 with prep only"
+      },
+      {
+        "member": 1044,
+        "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/training/s9101_m1044/L11/final.pt",
+        "load_interface": "state=torch.load(path,map_location=\"cpu\",weights_only=True); prep={k:state[k] for k in preprocessing_fields}; initialize fresh width512 with prep only"
+      }
+    ],
+    "historical_trained_small_Q_assets": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/ensembles/L11_s9101",
+    "historical_trained_small_Q_identity": "L11 fit9101; its network parameters are not loaded into the fresh width512 models",
+    "state_features": 61,
+    "anchor_shape": [
+      10,
+      4
+    ],
+    "action_difference_scale": [
+      0.15,
+      0.15,
+      0.15,
+      0.4
+    ]
+  },
+  "snapshot_fields": {
+    "pixels": "current raw RGB uint8[480,480,3]",
+    "agent_pos": "current proprio float64[4]",
+    "frames": "five actual RGB frames uint8[5,480,480,3] including current frame",
+    "props": "five matching proprio float64[5,4]",
+    "prefix": "actual raw executed prefix float32[cut,4]",
+    "raw": "old raw action plan float32[50,4]",
+    "age": "scalar int64 queue age",
+    "H": "scalar int64 normal horizon",
+    "observed__STATE_KEYS": "existing causal encoded tensors with leading batch1 dimension; can be used for CPU Q input but do not silently exclude real-time visual encoding when reporting full DG0 pipeline timing"
+  },
+  "load_interfaces": {
+    "npz": "np.load(state_path,allow_pickle=False)",
+    "observation": "dict(pixels=z[\"pixels\"].copy(),agent_pos=z[\"agent_pos\"].copy())",
+    "frames_props": "z[\"frames\"].copy(), z[\"props\"].copy()",
+    "past_actions": "z[\"prefix\"][-4:].copy(); preserve saved raw-command convention used by cpu_batch",
+    "old_next_five": "z[\"raw\"][int(z[\"age\"]):int(z[\"age\"])+5].copy(); WorldModel/BenefitModel clamp candidate actions internally",
+    "observed_batched": "{key:z[\"observed__\"+key].copy() for key in STATE_KEYS}",
+    "observed_unbatched_Q": "{key:z[\"observed__\"+key][0].copy() for key in STATE_KEYS}",
+    "language": "z[\"observed__language\"][0].copy(); instruction is contexts row instruction",
+    "reencode_features": "features._instruction=instruction; encode_visual_batch([dict(pixels=f,agent_pos=p) for f,p in zip(frames,props)],batch_size=1); canonical_decode+spatial_tokens with fixed projection; historical half().float() convention; cpu_batch(spatial,props,prefix[-4:],language,cut,device)"
+  },
+  "evidence": {
+    "DG0_loader": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_MECHANISM_20260924_V1/vendor/numeric_engine.py:25-35",
+    "snapshot_writer": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_MECHANISM_20260924_V1/worker.py:49-56",
+    "history_and_cut": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_MECHANISM_20260924_V1/worker.py:82-101",
+    "30hz_control": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_MECHANISM_20260924_V1/worker.py:28-43",
+    "cpu_batch": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_COLLECTOR_CPU_V1/code/feature_path.py:85-93",
+    "Q_buffer_origin": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/code/train_pair.py:35-41"
+  },
+  "runtime_identity": "Historical BASE contains prior-host device mappings; root must use currently observed local device and not reuse historical UUID/PID/thread.",
+  "path_check": {
+    "checked": 34,
+    "missing": [],
+    "weights_loaded_or_rehashed": false,
+    "GPU_initialized": false
+  }
+}

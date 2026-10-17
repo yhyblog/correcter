@@ -1,0 +1,214 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A10_PV_OFFLINE_PREFLIGHT_V3",
+  "accepted_at_utc": "2026-09-19T23:10:29.922093+00:00",
+  "status": "single_cached_snapshot_numeric_success_accepted",
+  "receipt": {
+    "path": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V3_RESULT.json",
+    "sha256": "1fa8dce0624c108ae0a02fa7ac401cc8bea684f80b18eb9325a6973e66578554"
+  },
+  "report": {
+    "path": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V3_REPORT.md",
+    "sha256": "9a4a8e3e1c693868b4470ddf1d604c648422f4a3978868b33383cf7c6d1c2470"
+  },
+  "launch_result": {
+    "path": "results/A/P10_PV_V3_launcher_runs/A10_PV_OFFLINE_PREFLIGHT_V3_r1_A_wave08/LAUNCH_RESULT.json",
+    "sha256": "309e78c764ad0634122409fa7eb51bcc6fef80655d8139deda519cc40693e592"
+  },
+  "root_verification": {
+    "RESULT_artifact_refs_SHA_size": 44,
+    "evidence_files_SHA_size": 72,
+    "runtime_manifest_refs_SHA_size": 18,
+    "parent_event_pairs_recomputed": 1,
+    "child_event_pairs_recomputed": 123,
+    "all66_entered_and_returned_equal_release": true,
+    "new_model_gradient_projection_or_hardware_calls": 0
+  },
+  "independent_numeric_review": {
+    "agent": "/root/pv_v3_numeric_acceptance_review",
+    "blocking_findings": [],
+    "saved_array_CPU_checks": [
+      "actual_delta exactly raw_plan minus raw_a0",
+      "XYZ RMS and own capacity",
+      "bounded b+delta",
+      "tail40 and mask raw bytes",
+      "finite nonzero stored gradients",
+      "per-member probabilities and J recomputation"
+    ],
+    "model_or_gradient_or_projection_reexecution": false
+  },
+  "anchor_ensemble_mean": 0.27757978439331055,
+  "branches": {
+    "Post": {
+      "ensemble_mean": 0.3306359648704529,
+      "J": 0.05305620655417442,
+      "actual_xyz_rms": 0.03921598688279535,
+      "own_xyz_capacity": 0.03921602374875499,
+      "gripper_rms": 0.0
+    },
+    "Velocity": {
+      "ensemble_mean": 0.33910590410232544,
+      "J": 0.06152614206075668,
+      "actual_xyz_rms": 0.0499999543762739,
+      "own_xyz_capacity": 0.05072144682933543,
+      "gripper_rms": 0.0
+    }
+  },
+  "accepted_scope": [
+    "Same-source saved step0 history00001, past actions0, no step1",
+    "One strict813tensor SFT load and state load; fixed UUID and exact noise SHA",
+    "1guided10flow4actiongrad10ensemble40member, frozen parameter semantics",
+    "Independent own-radius C10 update and tail/mask/zero raw bit constraints",
+    "Formal process group exited, saved all8 holder restoration evidence"
+  ],
+  "scientific_limits": [
+    "One development step0, not legal alarm cut or task-success sample",
+    "Historical five-task critic, no MT50 adaptation",
+    "One Q member decreases in both branches; ensemble mean improvement only",
+    "Velocity local J decreases at tau.3/.2; no monotonicity/acceptance gate claim",
+    "No nonzero z or gripper update coverage in this sample",
+    "No D/G0 trigger, real C10 execution or nativeH resume validation",
+    "No Post-versus-Velocity performance conclusion or deployment-cost comparison"
+  ],
+  "handoff": {
+    "status": "single successful frozen empty-compute-apps gate path; raw successful poll unavailable",
+    "nominal_wait_seconds": 300,
+    "observed_handoff_seconds": 64.60581387393177,
+    "GPU7_yielded_log_later_than_reserved_entry": true,
+    "interpretation": "yielded logged after manager stop returns, not timestamp of last GPU compute; late manager log alone does not demonstrate compute overlap",
+    "successful_poll_raw": null,
+    "successful_poll_count": null,
+    "daemon_poll_count": null,
+    "extra_probe_to_reconstruct": false,
+    "no_holder_restart_logged_before_lifecycle_return": true,
+    "not_claimed": [
+      "direct last GPU compute timestamp",
+      "measured all-device utilization trace",
+      "general handoff reliability"
+    ]
+  },
+  "process_cleanup": {
+    "status": "all_formal_group_members_exited",
+    "process_group": 285909,
+    "actions": [],
+    "elapsed_seconds": 0.002129453234374523,
+    "scope": "guard-created isolated session; native diagnostic forbids detached descendants"
+  },
+  "holder_restoration": {
+    "status": "accepted_from_saved_launcher_and_guard_evidence",
+    "manager_pids": [
+      286706,
+      286707,
+      286708,
+      286709,
+      286710,
+      286711,
+      286712,
+      286713
+    ],
+    "observed_at_utc": "2026-09-19T22:56:25.090548+00:00",
+    "current_live_health_not_requeried": true
+  },
+  "resource_counts": {
+    "simulator_attempts": 0,
+    "environment_instances": 0,
+    "wrapper_instances": 0,
+    "taskset_constructions": 0,
+    "environment_reset_calls": 0,
+    "reset_model_calls": 0,
+    "initialization_physics_substeps": 0,
+    "policy_physics_substeps": 0,
+    "physics_steps": 0,
+    "env_steps": 0,
+    "graphics_context_creations": 0,
+    "render_calls": 0,
+    "rgb_readback_calls": 0,
+    "explicit_EGL_calls": 0,
+    "explicit_CUDA_driver_calls": 0,
+    "explicit_driver_dlopen_calls": 0,
+    "completed_rollouts": 0,
+    "monitor_calls": 0,
+    "D_forward_calls": 0,
+    "G0_forward_calls": 0,
+    "vla_backward_calls": 0,
+    "vla_parameter_backward_calls": 0,
+    "critic_parameter_updates": 0,
+    "optimizer_updates": 0,
+    "training_updates": 0,
+    "retries": 0,
+    "deletions": 0,
+    "baseline_sampling_calls": 0,
+    "offline_attempts": 1,
+    "native_nvml_identity_queries": 2,
+    "policy_device_selections": 1,
+    "policy_device_property_queries": 1,
+    "model_initializations": 5,
+    "policy_model_loads": 1,
+    "policy_state_file_loads": 1,
+    "policy_state_dict_loads": 1,
+    "critic_model_loads": 4,
+    "tokenizer_loads": 1,
+    "preprocessor_loads": 1,
+    "postprocessor_loads": 1,
+    "normalizer_transform_loads": 1,
+    "projection_loads": 1,
+    "context_builds": 1,
+    "preprocessor_calls": 2,
+    "tokenizer_calls": 3,
+    "image_preprocessing_calls": 2,
+    "visual_encoder_forwards": 4,
+    "language_embedding_forwards": 2,
+    "encoder_forward_calls": 6,
+    "spatial_projection_calls": 1,
+    "prefix_transformer_forwards": 1,
+    "action_expert_forwards": 10,
+    "flow_forward_calls": 10,
+    "noise_draws": 1,
+    "vla_sampling_calls": 1,
+    "model_gpu_inference_calls": 1,
+    "critic_feature_transforms": 4,
+    "critic_forward_calls": 40,
+    "objective_forward_calls": 10,
+    "action_gradient_calls": 4,
+    "critic_backward_calls": 4,
+    "post_action_gradient_calls": 1,
+    "velocity_action_gradient_calls": 3,
+    "own_projection_calls": 4,
+    "raw_constraint_audits": 2,
+    "postprocessor_calls": 1
+  },
+  "timing": {
+    "preparation_seconds": 9.19238159712404,
+    "reservation_and_holder_release_seconds": 64.60581387393177,
+    "reserved_wrapper_setup_seconds": 0.004663508851081133,
+    "timed_diagnostic_process_seconds": 183.19202993111685,
+    "reservation_release_overhead_seconds": 0.018417179118841887,
+    "restoration_observation_seconds": 12.005145047791302,
+    "end_to_end_observed_seconds": 269.0184511379339,
+    "timeout_scope": "GNU timeout child: repeated complete SHA verification, imports, model loads, one-snapshot encoder/Post/Velocity and in-process cleanup; reservation wrapper also drains entire process group",
+    "timeout_seconds": 1800,
+    "kill_grace_seconds": 30,
+    "end_to_end_strict_upper_bound_seconds": null,
+    "missing_reason": "Pre-launch CPU SHA/device checks, reservation, release and restoration are outside the child timeout; missing markers yield null, never fabricated zero durations"
+  },
+  "gpu_utilization_seconds": null,
+  "peak_pytorch_allocated_bytes": 9552703488,
+  "peak_pytorch_reserved_bytes": 9896460288,
+  "cost_semantics": {
+    "kind": "cached single-snapshot numerical diagnostic",
+    "deployment_samples": {
+      "Post": 1,
+      "Velocity": 2
+    },
+    "diagnostic_samples": {
+      "Post": 0,
+      "Velocity": 1
+    },
+    "deployment_cost_comparison": false
+  },
+  "outer_CPU_audit_correction": "uint8 RGB field reader corrected to read only required proprio; retained error evidence, no formal rerun",
+  "task_success_rate_sample": false,
+  "remaining_caps_reusable": false,
+  "closure": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V3_CLOSED.json",
+  "next_scope": "CPU preparation for minimal causal legal-cut D/G0 and P/V C10/nativeH closed-loop integration, no extra offline sweep"
+}

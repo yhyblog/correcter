@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "id": "A10_PV_OFFLINE_PREFLIGHT_V3",
+      "owner": "A",
+      "revision": 1,
+      "status": "ready",
+      "release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V3.json",
+      "dependencies": [
+        "A10_PV_HANDOFF_CPU_REPAIR_V1"
+      ],
+      "dependency_outcome_required": "CPU_handoff_package_accepted_shared_patch_separately_installed_and_independent_compute_release_published",
+      "brief": "tasks/A10_PV_OFFLINE_PREFLIGHT_V3.md",
+      "wave_id": "corrector-sim-20260919-A-PV-offline-V3-wave08",
+      "run_id": "A10_PV_OFFLINE_PREFLIGHT_V3_r1_A_wave08",
+      "shard_id": "A-PV-offline-V3-shelf-place-step0-cached-once",
+      "acknowledgement": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V3_ACK.json",
+      "expected_result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V3_RESULT.json"
+    }
+  ],
+  "fixture_only_not_authorization": true
+}

@@ -1,0 +1,3089 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-09-16T14:50:19.910115+00:00",
+  "input_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916",
+  "independent_sources": 15,
+  "paired_suffixes_per_source": 8,
+  "denominator_per_method": 120,
+  "alarm_sources": 15,
+  "no_alarm_sources": 0,
+  "method_order": [
+    "replan",
+    "velocity_matched",
+    "direct_matched",
+    "post_matched",
+    "continue_old"
+  ],
+  "independent_outcome_shape": [
+    15,
+    5,
+    8
+  ],
+  "inference": {
+    "unit": "whole source",
+    "stratified_by": "task",
+    "bootstrap": 10000,
+    "seed": 29015,
+    "confidence_level": 0.95,
+    "multiple_comparisons_corrected": false,
+    "scope": "15 fresh sources only; small exploratory screening; not broad validation"
+  },
+  "verification": {
+    "completed_branches": 600,
+    "summary_labels_match_evaluation_rows": true,
+    "overall_and_per_task_statistics_match": true,
+    "audit_passed": true,
+    "sealed_files_and_audit_hashes_verified": true,
+    "inputs": {
+      "config.json": "b9bad6420031267d45d2ed30862a49f0a06a049f6bf981ae302774e2987f8328",
+      "formal_freeze.json": "bc151464e5f3250f83e42a77eb480b9577375ee0052ec89a2dbde80c6377631b",
+      "evaluation.json": "c1d9353113d4410d373bc586c7137f0e2303ab98d025bce15521b5af74e72ca0",
+      "audits/development.json": "49b86ece412f244c57855e412acd5e59221b018948be6d47c1fa06fbc215cec2"
+    },
+    "review_script_sha256": "ae60c20ff982bc71e9bde9bf23cc243a1106dacb99ca79c3ce1070c93ec3b646"
+  },
+  "methods": {
+    "replan": {
+      "method": "replan",
+      "reference": "replan",
+      "gain": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ],
+        "sources": 15
+      },
+      "rescues": 0,
+      "harms": 0,
+      "positive_sources": 0,
+      "negative_sources": 0,
+      "zero_sources": 15,
+      "per_source_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "success": {
+        "mean": 0.55,
+        "interval": [
+          0.4166666666666667,
+          0.6916666666666667
+        ],
+        "sources": 15
+      },
+      "successes": 66,
+      "paired_suffix_denominator": 120
+    },
+    "velocity_matched": {
+      "method": "velocity_matched",
+      "reference": "replan",
+      "gain": {
+        "mean": -0.016666666666666666,
+        "interval": [
+          -0.025,
+          0.0
+        ],
+        "sources": 15
+      },
+      "rescues": 0,
+      "harms": 2,
+      "positive_sources": 0,
+      "negative_sources": 2,
+      "zero_sources": 13,
+      "per_source_gain": [
+        0.0,
+        0.0,
+        0.0,
+        -0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.125,
+        0.0
+      ],
+      "success": {
+        "mean": 0.5333333333333333,
+        "interval": [
+          0.4,
+          0.6666666666666666
+        ],
+        "sources": 15
+      },
+      "successes": 64,
+      "paired_suffix_denominator": 120
+    },
+    "direct_matched": {
+      "method": "direct_matched",
+      "reference": "replan",
+      "gain": {
+        "mean": 0.008333333333333333,
+        "interval": [
+          0.0,
+          0.025
+        ],
+        "sources": 15
+      },
+      "rescues": 3,
+      "harms": 2,
+      "positive_sources": 1,
+      "negative_sources": 0,
+      "zero_sources": 14,
+      "per_source_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.125,
+        0.0
+      ],
+      "success": {
+        "mean": 0.5583333333333333,
+        "interval": [
+          0.4166666666666667,
+          0.7083333333333334
+        ],
+        "sources": 15
+      },
+      "successes": 67,
+      "paired_suffix_denominator": 120
+    },
+    "post_matched": {
+      "method": "post_matched",
+      "reference": "replan",
+      "gain": {
+        "mean": 0.0,
+        "interval": [
+          -0.025,
+          0.025
+        ],
+        "sources": 15
+      },
+      "rescues": 2,
+      "harms": 2,
+      "positive_sources": 1,
+      "negative_sources": 1,
+      "zero_sources": 13,
+      "per_source_gain": [
+        0.0,
+        0.0,
+        0.0,
+        -0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.125,
+        0.0
+      ],
+      "success": {
+        "mean": 0.55,
+        "interval": [
+          0.4,
+          0.7
+        ],
+        "sources": 15
+      },
+      "successes": 66,
+      "paired_suffix_denominator": 120
+    },
+    "continue_old": {
+      "method": "continue_old",
+      "reference": "replan",
+      "gain": {
+        "mean": -0.2916666666666667,
+        "interval": [
+          -0.45,
+          -0.16666666666666666
+        ],
+        "sources": 15
+      },
+      "rescues": 3,
+      "harms": 38,
+      "positive_sources": 1,
+      "negative_sources": 7,
+      "zero_sources": 7,
+      "per_source_gain": [
+        -1.0,
+        0.0,
+        0.0,
+        -0.125,
+        0.0,
+        -1.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.375,
+        -0.5,
+        -0.125,
+        0.0
+      ],
+      "success": {
+        "mean": 0.25833333333333336,
+        "interval": [
+          0.2,
+          0.325
+        ],
+        "sources": 15
+      },
+      "successes": 31,
+      "paired_suffix_denominator": 120
+    }
+  },
+  "comparisons": [
+    {
+      "method": "replan",
+      "reference": "continue_old",
+      "gain": {
+        "mean": 0.2916666666666667,
+        "interval": [
+          0.16666666666666666,
+          0.45
+        ],
+        "sources": 15
+      },
+      "rescues": 38,
+      "harms": 3,
+      "positive_sources": 7,
+      "negative_sources": 1,
+      "zero_sources": 7,
+      "per_source_gain": [
+        1.0,
+        0.0,
+        0.0,
+        0.125,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -0.375,
+        0.5,
+        0.125,
+        0.0
+      ]
+    },
+    {
+      "method": "velocity_matched",
+      "reference": "replan",
+      "gain": {
+        "mean": -0.016666666666666666,
+        "interval": [
+          -0.025,
+          0.0
+        ],
+        "sources": 15
+      },
+      "rescues": 0,
+      "harms": 2,
+      "positive_sources": 0,
+      "negative_sources": 2,
+      "zero_sources": 13,
+      "per_source_gain": [
+        0.0,
+        0.0,
+        0.0,
+        -0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.125,
+        0.0
+      ]
+    },
+    {
+      "method": "direct_matched",
+      "reference": "replan",
+      "gain": {
+        "mean": 0.008333333333333333,
+        "interval": [
+          0.0,
+          0.025
+        ],
+        "sources": 15
+      },
+      "rescues": 3,
+      "harms": 2,
+      "positive_sources": 1,
+      "negative_sources": 0,
+      "zero_sources": 14,
+      "per_source_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.125,
+        0.0
+      ]
+    },
+    {
+      "method": "post_matched",
+      "reference": "replan",
+      "gain": {
+        "mean": 0.0,
+        "interval": [
+          -0.025,
+          0.025
+        ],
+        "sources": 15
+      },
+      "rescues": 2,
+      "harms": 2,
+      "positive_sources": 1,
+      "negative_sources": 1,
+      "zero_sources": 13,
+      "per_source_gain": [
+        0.0,
+        0.0,
+        0.0,
+        -0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.125,
+        0.0
+      ]
+    },
+    {
+      "method": "direct_matched",
+      "reference": "velocity_matched",
+      "gain": {
+        "mean": 0.025,
+        "interval": [
+          0.0,
+          0.05
+        ],
+        "sources": 15
+      },
+      "rescues": 3,
+      "harms": 0,
+      "positive_sources": 2,
+      "negative_sources": 0,
+      "zero_sources": 13,
+      "per_source_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ]
+    },
+    {
+      "method": "post_matched",
+      "reference": "velocity_matched",
+      "gain": {
+        "mean": 0.016666666666666666,
+        "interval": [
+          0.0,
+          0.05
+        ],
+        "sources": 15
+      },
+      "rescues": 2,
+      "harms": 0,
+      "positive_sources": 1,
+      "negative_sources": 0,
+      "zero_sources": 14,
+      "per_source_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ]
+    },
+    {
+      "method": "post_matched",
+      "reference": "direct_matched",
+      "gain": {
+        "mean": -0.008333333333333333,
+        "interval": [
+          -0.025,
+          0.0
+        ],
+        "sources": 15
+      },
+      "rescues": 1,
+      "harms": 2,
+      "positive_sources": 0,
+      "negative_sources": 1,
+      "zero_sources": 14,
+      "per_source_gain": [
+        0.0,
+        0.0,
+        0.0,
+        -0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "per_task": {
+    "disassemble-v3": {
+      "methods": {
+        "replan": {
+          "method": "replan",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": {
+            "mean": 1.0,
+            "interval": [
+              1.0,
+              1.0
+            ],
+            "sources": 3
+          },
+          "successes": 24,
+          "paired_suffix_denominator": 24
+        },
+        "velocity_matched": {
+          "method": "velocity_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": {
+            "mean": 1.0,
+            "interval": [
+              1.0,
+              1.0
+            ],
+            "sources": 3
+          },
+          "successes": 24,
+          "paired_suffix_denominator": 24
+        },
+        "direct_matched": {
+          "method": "direct_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": {
+            "mean": 1.0,
+            "interval": [
+              1.0,
+              1.0
+            ],
+            "sources": 3
+          },
+          "successes": 24,
+          "paired_suffix_denominator": 24
+        },
+        "post_matched": {
+          "method": "post_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": {
+            "mean": 1.0,
+            "interval": [
+              1.0,
+              1.0
+            ],
+            "sources": 3
+          },
+          "successes": 24,
+          "paired_suffix_denominator": 24
+        },
+        "continue_old": {
+          "method": "continue_old",
+          "reference": "replan",
+          "gain": {
+            "mean": -1.0,
+            "interval": [
+              -1.0,
+              -1.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 24,
+          "positive_sources": 0,
+          "negative_sources": 3,
+          "zero_sources": 0,
+          "per_source_gain": [
+            -1.0,
+            -1.0,
+            -1.0
+          ],
+          "success": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "successes": 0,
+          "paired_suffix_denominator": 24
+        }
+      },
+      "comparisons": [
+        {
+          "method": "replan",
+          "reference": "continue_old",
+          "gain": {
+            "mean": 1.0,
+            "interval": [
+              1.0,
+              1.0
+            ],
+            "sources": 3
+          },
+          "rescues": 24,
+          "harms": 0,
+          "positive_sources": 3,
+          "negative_sources": 0,
+          "zero_sources": 0,
+          "per_source_gain": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "velocity_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "direct_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "post_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "direct_matched",
+          "reference": "velocity_matched",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "post_matched",
+          "reference": "velocity_matched",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "post_matched",
+          "reference": "direct_matched",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    "pick-place-wall-v3": {
+      "methods": {
+        "replan": {
+          "method": "replan",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": {
+            "mean": 0.3333333333333333,
+            "interval": [
+              0.0,
+              1.0
+            ],
+            "sources": 3
+          },
+          "successes": 8,
+          "paired_suffix_denominator": 24
+        },
+        "velocity_matched": {
+          "method": "velocity_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": {
+            "mean": 0.3333333333333333,
+            "interval": [
+              0.0,
+              1.0
+            ],
+            "sources": 3
+          },
+          "successes": 8,
+          "paired_suffix_denominator": 24
+        },
+        "direct_matched": {
+          "method": "direct_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": {
+            "mean": 0.3333333333333333,
+            "interval": [
+              0.0,
+              1.0
+            ],
+            "sources": 3
+          },
+          "successes": 8,
+          "paired_suffix_denominator": 24
+        },
+        "post_matched": {
+          "method": "post_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": {
+            "mean": 0.3333333333333333,
+            "interval": [
+              0.0,
+              1.0
+            ],
+            "sources": 3
+          },
+          "successes": 8,
+          "paired_suffix_denominator": 24
+        },
+        "continue_old": {
+          "method": "continue_old",
+          "reference": "replan",
+          "gain": {
+            "mean": -0.20833333333333334,
+            "interval": [
+              -1.0,
+              0.375
+            ],
+            "sources": 3
+          },
+          "rescues": 3,
+          "harms": 8,
+          "positive_sources": 1,
+          "negative_sources": 1,
+          "zero_sources": 1,
+          "per_source_gain": [
+            0.0,
+            -1.0,
+            0.375
+          ],
+          "success": {
+            "mean": 0.125,
+            "interval": [
+              0.0,
+              0.375
+            ],
+            "sources": 3
+          },
+          "successes": 3,
+          "paired_suffix_denominator": 24
+        }
+      },
+      "comparisons": [
+        {
+          "method": "replan",
+          "reference": "continue_old",
+          "gain": {
+            "mean": 0.20833333333333334,
+            "interval": [
+              -0.375,
+              1.0
+            ],
+            "sources": 3
+          },
+          "rescues": 8,
+          "harms": 3,
+          "positive_sources": 1,
+          "negative_sources": 1,
+          "zero_sources": 1,
+          "per_source_gain": [
+            0.0,
+            1.0,
+            -0.375
+          ]
+        },
+        {
+          "method": "velocity_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "direct_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "post_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "direct_matched",
+          "reference": "velocity_matched",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "post_matched",
+          "reference": "velocity_matched",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "post_matched",
+          "reference": "direct_matched",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    "shelf-place-v3": {
+      "methods": {
+        "replan": {
+          "method": "replan",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": {
+            "mean": 0.3333333333333333,
+            "interval": [
+              0.0,
+              1.0
+            ],
+            "sources": 3
+          },
+          "successes": 8,
+          "paired_suffix_denominator": 24
+        },
+        "velocity_matched": {
+          "method": "velocity_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": {
+            "mean": 0.3333333333333333,
+            "interval": [
+              0.0,
+              1.0
+            ],
+            "sources": 3
+          },
+          "successes": 8,
+          "paired_suffix_denominator": 24
+        },
+        "direct_matched": {
+          "method": "direct_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": {
+            "mean": 0.3333333333333333,
+            "interval": [
+              0.0,
+              1.0
+            ],
+            "sources": 3
+          },
+          "successes": 8,
+          "paired_suffix_denominator": 24
+        },
+        "post_matched": {
+          "method": "post_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": {
+            "mean": 0.3333333333333333,
+            "interval": [
+              0.0,
+              1.0
+            ],
+            "sources": 3
+          },
+          "successes": 8,
+          "paired_suffix_denominator": 24
+        },
+        "continue_old": {
+          "method": "continue_old",
+          "reference": "replan",
+          "gain": {
+            "mean": -0.16666666666666666,
+            "interval": [
+              -0.5,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 4,
+          "positive_sources": 0,
+          "negative_sources": 1,
+          "zero_sources": 2,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            -0.5
+          ],
+          "success": {
+            "mean": 0.16666666666666666,
+            "interval": [
+              0.0,
+              0.5
+            ],
+            "sources": 3
+          },
+          "successes": 4,
+          "paired_suffix_denominator": 24
+        }
+      },
+      "comparisons": [
+        {
+          "method": "replan",
+          "reference": "continue_old",
+          "gain": {
+            "mean": 0.16666666666666666,
+            "interval": [
+              0.0,
+              0.5
+            ],
+            "sources": 3
+          },
+          "rescues": 4,
+          "harms": 0,
+          "positive_sources": 1,
+          "negative_sources": 0,
+          "zero_sources": 2,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.5
+          ]
+        },
+        {
+          "method": "velocity_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "direct_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "post_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "direct_matched",
+          "reference": "velocity_matched",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "post_matched",
+          "reference": "velocity_matched",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "post_matched",
+          "reference": "direct_matched",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    "stick-pull-v3": {
+      "methods": {
+        "replan": {
+          "method": "replan",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": {
+            "mean": 0.08333333333333333,
+            "interval": [
+              0.0,
+              0.125
+            ],
+            "sources": 3
+          },
+          "successes": 2,
+          "paired_suffix_denominator": 24
+        },
+        "velocity_matched": {
+          "method": "velocity_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": -0.08333333333333333,
+            "interval": [
+              -0.125,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 2,
+          "positive_sources": 0,
+          "negative_sources": 2,
+          "zero_sources": 1,
+          "per_source_gain": [
+            -0.125,
+            0.0,
+            -0.125
+          ],
+          "success": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "successes": 0,
+          "paired_suffix_denominator": 24
+        },
+        "direct_matched": {
+          "method": "direct_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.041666666666666664,
+            "interval": [
+              0.0,
+              0.125
+            ],
+            "sources": 3
+          },
+          "rescues": 3,
+          "harms": 2,
+          "positive_sources": 1,
+          "negative_sources": 0,
+          "zero_sources": 2,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.125
+          ],
+          "success": {
+            "mean": 0.125,
+            "interval": [
+              0.0,
+              0.25
+            ],
+            "sources": 3
+          },
+          "successes": 3,
+          "paired_suffix_denominator": 24
+        },
+        "post_matched": {
+          "method": "post_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              -0.125,
+              0.125
+            ],
+            "sources": 3
+          },
+          "rescues": 2,
+          "harms": 2,
+          "positive_sources": 1,
+          "negative_sources": 1,
+          "zero_sources": 1,
+          "per_source_gain": [
+            -0.125,
+            0.0,
+            0.125
+          ],
+          "success": {
+            "mean": 0.08333333333333333,
+            "interval": [
+              0.0,
+              0.25
+            ],
+            "sources": 3
+          },
+          "successes": 2,
+          "paired_suffix_denominator": 24
+        },
+        "continue_old": {
+          "method": "continue_old",
+          "reference": "replan",
+          "gain": {
+            "mean": -0.08333333333333333,
+            "interval": [
+              -0.125,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 2,
+          "positive_sources": 0,
+          "negative_sources": 2,
+          "zero_sources": 1,
+          "per_source_gain": [
+            -0.125,
+            0.0,
+            -0.125
+          ],
+          "success": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "successes": 0,
+          "paired_suffix_denominator": 24
+        }
+      },
+      "comparisons": [
+        {
+          "method": "replan",
+          "reference": "continue_old",
+          "gain": {
+            "mean": 0.08333333333333333,
+            "interval": [
+              0.0,
+              0.125
+            ],
+            "sources": 3
+          },
+          "rescues": 2,
+          "harms": 0,
+          "positive_sources": 2,
+          "negative_sources": 0,
+          "zero_sources": 1,
+          "per_source_gain": [
+            0.125,
+            0.0,
+            0.125
+          ]
+        },
+        {
+          "method": "velocity_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": -0.08333333333333333,
+            "interval": [
+              -0.125,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 2,
+          "positive_sources": 0,
+          "negative_sources": 2,
+          "zero_sources": 1,
+          "per_source_gain": [
+            -0.125,
+            0.0,
+            -0.125
+          ]
+        },
+        {
+          "method": "direct_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.041666666666666664,
+            "interval": [
+              0.0,
+              0.125
+            ],
+            "sources": 3
+          },
+          "rescues": 3,
+          "harms": 2,
+          "positive_sources": 1,
+          "negative_sources": 0,
+          "zero_sources": 2,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.125
+          ]
+        },
+        {
+          "method": "post_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              -0.125,
+              0.125
+            ],
+            "sources": 3
+          },
+          "rescues": 2,
+          "harms": 2,
+          "positive_sources": 1,
+          "negative_sources": 1,
+          "zero_sources": 1,
+          "per_source_gain": [
+            -0.125,
+            0.0,
+            0.125
+          ]
+        },
+        {
+          "method": "direct_matched",
+          "reference": "velocity_matched",
+          "gain": {
+            "mean": 0.125,
+            "interval": [
+              0.0,
+              0.25
+            ],
+            "sources": 3
+          },
+          "rescues": 3,
+          "harms": 0,
+          "positive_sources": 2,
+          "negative_sources": 0,
+          "zero_sources": 1,
+          "per_source_gain": [
+            0.125,
+            0.0,
+            0.25
+          ]
+        },
+        {
+          "method": "post_matched",
+          "reference": "velocity_matched",
+          "gain": {
+            "mean": 0.08333333333333333,
+            "interval": [
+              0.0,
+              0.25
+            ],
+            "sources": 3
+          },
+          "rescues": 2,
+          "harms": 0,
+          "positive_sources": 1,
+          "negative_sources": 0,
+          "zero_sources": 2,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.25
+          ]
+        },
+        {
+          "method": "post_matched",
+          "reference": "direct_matched",
+          "gain": {
+            "mean": -0.041666666666666664,
+            "interval": [
+              -0.125,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 1,
+          "harms": 2,
+          "positive_sources": 0,
+          "negative_sources": 1,
+          "zero_sources": 2,
+          "per_source_gain": [
+            -0.125,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    "stick-push-v3": {
+      "methods": {
+        "replan": {
+          "method": "replan",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": {
+            "mean": 1.0,
+            "interval": [
+              1.0,
+              1.0
+            ],
+            "sources": 3
+          },
+          "successes": 24,
+          "paired_suffix_denominator": 24
+        },
+        "velocity_matched": {
+          "method": "velocity_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": {
+            "mean": 1.0,
+            "interval": [
+              1.0,
+              1.0
+            ],
+            "sources": 3
+          },
+          "successes": 24,
+          "paired_suffix_denominator": 24
+        },
+        "direct_matched": {
+          "method": "direct_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": {
+            "mean": 1.0,
+            "interval": [
+              1.0,
+              1.0
+            ],
+            "sources": 3
+          },
+          "successes": 24,
+          "paired_suffix_denominator": 24
+        },
+        "post_matched": {
+          "method": "post_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": {
+            "mean": 1.0,
+            "interval": [
+              1.0,
+              1.0
+            ],
+            "sources": 3
+          },
+          "successes": 24,
+          "paired_suffix_denominator": 24
+        },
+        "continue_old": {
+          "method": "continue_old",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "success": {
+            "mean": 1.0,
+            "interval": [
+              1.0,
+              1.0
+            ],
+            "sources": 3
+          },
+          "successes": 24,
+          "paired_suffix_denominator": 24
+        }
+      },
+      "comparisons": [
+        {
+          "method": "replan",
+          "reference": "continue_old",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "velocity_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "direct_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "post_matched",
+          "reference": "replan",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "direct_matched",
+          "reference": "velocity_matched",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "post_matched",
+          "reference": "velocity_matched",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "post_matched",
+          "reference": "direct_matched",
+          "gain": {
+            "mean": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ],
+            "sources": 3
+          },
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 3,
+          "per_source_gain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  },
+  "rows": [
+    {
+      "case_id": "disassemble-v3__2026106000",
+      "task": "disassemble-v3",
+      "env_seed": 2026106000,
+      "alarm": true,
+      "cut": 10,
+      "outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026106001",
+      "task": "pick-place-wall-v3",
+      "env_seed": 2026106001,
+      "alarm": true,
+      "cut": 5,
+      "outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__2026106002",
+      "task": "shelf-place-v3",
+      "env_seed": 2026106002,
+      "alarm": true,
+      "cut": 5,
+      "outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__2026106003",
+      "task": "stick-pull-v3",
+      "env_seed": 2026106003,
+      "alarm": true,
+      "cut": 5,
+      "outcomes": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__2026106004",
+      "task": "stick-push-v3",
+      "env_seed": 2026106004,
+      "alarm": true,
+      "cut": 5,
+      "outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__2026106005",
+      "task": "disassemble-v3",
+      "env_seed": 2026106005,
+      "alarm": true,
+      "cut": 10,
+      "outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026106006",
+      "task": "pick-place-wall-v3",
+      "env_seed": 2026106006,
+      "alarm": true,
+      "cut": 5,
+      "outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__2026106007",
+      "task": "shelf-place-v3",
+      "env_seed": 2026106007,
+      "alarm": true,
+      "cut": 5,
+      "outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__2026106008",
+      "task": "stick-pull-v3",
+      "env_seed": 2026106008,
+      "alarm": true,
+      "cut": 5,
+      "outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__2026106009",
+      "task": "stick-push-v3",
+      "env_seed": 2026106009,
+      "alarm": true,
+      "cut": 5,
+      "outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__2026106010",
+      "task": "disassemble-v3",
+      "env_seed": 2026106010,
+      "alarm": true,
+      "cut": 10,
+      "outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026106011",
+      "task": "pick-place-wall-v3",
+      "env_seed": 2026106011,
+      "alarm": true,
+      "cut": 5,
+      "outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__2026106012",
+      "task": "shelf-place-v3",
+      "env_seed": 2026106012,
+      "alarm": true,
+      "cut": 40,
+      "outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__2026106013",
+      "task": "stick-pull-v3",
+      "env_seed": 2026106013,
+      "alarm": true,
+      "cut": 5,
+      "outcomes": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__2026106014",
+      "task": "stick-push-v3",
+      "env_seed": 2026106014,
+      "alarm": true,
+      "cut": 5,
+      "outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    }
+  ],
+  "cost": {
+    "base_policy_seconds": {
+      "sources": 15,
+      "total": 3.1836713328957558,
+      "mean": 0.21224475552638372
+    },
+    "velocity_policy_seconds": {
+      "sources": 15,
+      "total": 3.6756930742412806,
+      "mean": 0.2450462049494187
+    },
+    "direct_policy_seconds": {
+      "sources": 15,
+      "total": 3.5069795064628124,
+      "mean": 0.2337986337641875
+    },
+    "post_gradient_seconds": {
+      "sources": 15,
+      "total": 0.04183282144367695,
+      "mean": 0.0027888547629117966
+    },
+    "source_restore_seconds": {
+      "sources": 15,
+      "total": 14.440843986347318,
+      "mean": 0.9627229324231545
+    },
+    "candidate_bank_seconds": {
+      "sources": 15,
+      "total": 11.04287531413138,
+      "mean": 0.7361916876087586
+    },
+    "all_candidate_generation_wall_seconds": {
+      "sources": 15,
+      "total": 25.4837062433362,
+      "mean": 1.6989137495557467
+    },
+    "standalone_post_latency_measured": false,
+    "post_shared_radius_depends_on_all_generated_directions": true
+  },
+  "budget": {
+    "attempts": 653,
+    "hard_maximum": 700,
+    "remaining": 47,
+    "by_kind": {
+      "source_capture": 20,
+      "preflight": 25,
+      "concurrency_check": 8,
+      "development": 600
+    },
+    "repeated_identity_attempts": 0,
+    "ledger_sha256": "9d25bca473b9246e0c0530b299c13396babfa8b547ff973f7398fed0fac94771",
+    "incomplete_and_failed_attempts_remain_counted": true
+  },
+  "diagnostics": {
+    "changed_outcome_sources": [
+      "stick-pull-v3__2026106003",
+      "stick-pull-v3__2026106013"
+    ],
+    "fallback_sources": {
+      "velocity_matched": 0,
+      "direct_matched": 0
+    },
+    "matching_groups": {
+      "xyz": {
+        "zero_sources": 0,
+        "shrunk_sources": 10
+      },
+      "gripper": {
+        "zero_sources": 2,
+        "shrunk_sources": 4
+      }
+    },
+    "predicted_mean_gain": {
+      "velocity_matched": 0.10045194840058684,
+      "direct_matched": 0.10130620201428732,
+      "post_matched": 0.10873869645098845
+    },
+    "late_alarm_sources": 0,
+    "budget_truncated_prefix_sources": 0
+  },
+  "target_gain_met": {
+    "velocity_matched": false,
+    "direct_matched": false,
+    "post_matched": false
+  },
+  "provisional_interpretation": "三种纠偏中的最高点估计为 Direct。三个纠偏两两差异的 nominal 区间均覆盖 0，当前无法确定稳定胜者。是否值得继续使用纠偏还需同时看其相对普通重规划的救回、损害、逐任务一致性和完整计算成本。",
+  "limitations": [
+    "Nominal intervals; no multiplicity correction; only three sources per task.",
+    "No-alarm sources use the observed common outcome for all arms and suffix positions.",
+    "Replan versus old includes interruption, fixed10/native50 cadence, and bounded/raw prefix differences.",
+    "Post gradient time excludes dependencies required by the shared-radius candidate comparison.",
+    "Old and intervention sampling times/counts differ despite shared suffix decision-index seed namespace."
+  ]
+}

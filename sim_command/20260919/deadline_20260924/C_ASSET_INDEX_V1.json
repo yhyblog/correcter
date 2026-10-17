@@ -1,0 +1,74 @@
+{
+  "issued_at_utc": "2026-09-22T05:39:27.417548+00:00",
+  "node": "C",
+  "input_usage": "read only, minimal private code copies, no full data/weight copies",
+  "paths": {
+    "post_bridge_package": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E8_POST_V1_r1",
+    "test_sources": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E8_POST_V1_r1/POST_SOURCES.json",
+    "Smol_N_batch": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/GPU_N_BATCH.json",
+    "X_N_batch": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/XVLA_EVAL_BATCH.json",
+    "Smol_checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model",
+    "X_checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/xvla_mt50_s42_D24_r2/training/checkpoints/030000/pretrained_model",
+    "external_pi05_encoder_base_config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E8_POST_V1_r1/BASE.json",
+    "correction_engine_config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E8_POST_V1_r1/ENGINE_CONFIG.json",
+    "D_G0_asset_root": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914",
+    "Q_selected": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected",
+    "N_Post_final_summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/D24_E8_MW_POST_r1/N_POST_SUMMARY.json",
+    "N_Post_paired_summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_EXTENSION_REMAINDER_V1/r1/D24_E8_MW_POST_r1/PAIRED_UNCERTAINTY.json",
+    "current_algorithm": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/docs/NATIVE10_CORRECTOR_ALGORITHM_ZH.md"
+  },
+  "existence_on_shared_storage_at_publication": {
+    "post_bridge_package": true,
+    "test_sources": true,
+    "Smol_N_batch": true,
+    "X_N_batch": true,
+    "Smol_checkpoint": true,
+    "X_checkpoint": true,
+    "external_pi05_encoder_base_config": true,
+    "correction_engine_config": true,
+    "D_G0_asset_root": true,
+    "Q_selected": true,
+    "N_Post_final_summary": true,
+    "N_Post_paired_summary": true,
+    "current_algorithm": true
+  },
+  "small_config_refs": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E8_POST_V1_r1/POST_SOURCES.json",
+      "sha256": "ea5a9b7e1190a73f3019cd2f9cfa427404e159d80a902147bd514488c7f163a9"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/GPU_N_BATCH.json",
+      "sha256": "fd3da4640754cc0b4cb4f93a58e7e932e2eb58359eb6260eda4c3ad8eaf1be3b"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_RECOVERY_V1_r1/XVLA_EVAL_BATCH.json",
+      "sha256": "39e3600d9accf64c6430af74c36ed12e047187e886209e0909fb97b03ddb7199"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E8_POST_V1_r1/BASE.json",
+      "sha256": "53cf111aaccbb433302e2668905da89a740dad26b61283e675ed2a19da904d2c"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E8_POST_V1_r1/ENGINE_CONFIG.json",
+      "sha256": "c68dffcaab361aa68acf50c90fb206a204f87268997d524a5cd06483c7e9a84b"
+    }
+  ],
+  "environments": {
+    "Smol": "mw-smolvla-lr044; resolve executable from frozen batch",
+    "X": "mw-xvla-lr044; resolve executable from frozen batch"
+  },
+  "D_binding": "numeric_engine.py references spatial_pair_241/242 normalization.json and complete.json selected; G0 gate_341/342 selected.pt",
+  "source_family": "D24_MW_tXX_eYY; two bases same frozen500; do not substitute A D24_NEW_TEST",
+  "existing_N_valid": {
+    "Smol": 496,
+    "Smol_unknown": 4,
+    "X": 500
+  },
+  "Post_completed": {
+    "Smol": 500,
+    "X": 500
+  },
+  "Velocity_admission_before_transfer": "pending_not_queued in B05:24 receipt; inherited engine config Velocity cells are not native bridge readiness",
+  "all_assets_CPU_or_protocol_checked_only_not_C_environment_proven": true
+}

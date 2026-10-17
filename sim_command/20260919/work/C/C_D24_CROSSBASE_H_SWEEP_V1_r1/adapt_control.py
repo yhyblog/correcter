@@ -1,0 +1,26 @@
+from pathlib import Path
+import json
+B=Path('/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919')
+R=B/'results/C/C_D24_CROSSBASE_H_SWEEP_V1'
+for name in ['code/paths.py','xcode/paths.py']:
+ p=R/name;s=p.read_text().replace('ca6f92258260815495a016d8c25eb079e9e0949a38a2c5ece6b836c2ef6d0ccc','4f8406e67e2d0b73beda277b3bc633749060f30e8420e8513285780a06952c5f').replace('C_D24_L11_RENDER_RECOVERY_V1','C_D24_CROSSBASE_H_SWEEP_V1').replace('D24_C_L11_RENDER_RECOVERY_r1','D24_C_CROSSBASE_H_SWEEP_r1');p.write_text(s)
+p=R/'code/admission.py';s=p.read_text().replace('deadline_20260924/L11_RECOVERY_V1','deadline_20260924/CROSSBASE_H_SWEEP_V1').replace("a['chosen_loss']!='L11' or a['fit_seed']!=9101","a['Q_loss']!='L11' or a['Q_fit_seed']!=9101")
+s=s.replace("    if unit['unit_id'] in read(ROOT/'PROTECTED_VALID_UNITS.json')['unit_ids']:raise AdmissionClosed('protected valid scientific unit')","    if unit['H'] not in (20,30) or unit['method'] not in ('N','Post','R','Velocity'):raise AdmissionClosed('unlisted horizon/method')")
+s=s.replace("attempt=1,lifetime_attempt=unit['prior_attempt_count']+1,prior_attempt_count=unit['prior_attempt_count'],recovery=True", "attempt=1,lifetime_attempt=1,prior_attempt_count=0,new_H_unit=True")
+s=s.replace("loss='L11',fit_seed=9101,authorization_sha256=AUTH_SHA", "model=unit['model'],H=unit['H'],method=unit['method'],mode=unit['mode'],loss=unit['Q_loss'],fit_seed=unit['Q_fit_seed'],source_id=unit['source_id'],authorization_sha256=AUTH_SHA")
+s=s.replace("    if job['loss']!='L11' or job['fit_seed']!=9101 or job['mode']!='G0-multi':raise ValueError('job scientific identity')", "    if job['method'] in ('Post','Velocity') and (job['loss']!='L11' or job['fit_seed']!=9101 or job['mode']!='G0-multi'):raise ValueError('job scientific identity')")
+p.write_text(s)
+p=R/'code/common.py';s=p.read_text();a=s.index('def claim_attempt(');b=s.index('def claim_work(',a);s=s[:a]+s[b:];p.write_text(s)
+p=R/'code/service.py';s=p.read_text().replace("prior_attempts=17693,stage_attempt_cap=2000,node_attempt_cap=20750,planned_recovery_units=1764,protected_valid_units=736,previous_task_attempts=2750", "prior_attempts=19457,stage_attempt_cap=4400,node_attempt_cap=25150,planned_new_units=4000,reused_H10_units=2000,previous_valid_units_protected=True")
+s=s.replace("'C_D24_L11_RETEST_V1/CLAIM.json'","'C_D24_L11_RENDER_RECOVERY_V1/CLAIM.json'")
+s=s.replace("summary['recovery_valid']==1764 and summary['valid']==2500", "summary['valid']==4000 and summary['cut_protocol_errors']==0")
+s=s.replace('authorized_recovery_complete','authorized_H_sweep_complete').replace('C_D24_L11_RENDER_RECOVERY_V1_RESULT_r1.json','C_D24_CROSSBASE_H_SWEEP_V1_RESULT_r1.json');p.write_text(s)
+p=R/'code/manager.py';s=p.read_text().replace('all-Post-then-Velocity chain','N/Post/R/Velocity horizon sweep').replace("stage.get('H','40_50')","stage.get('H','20_30')").replace("(u['ordinal'],u['task'],u['source_id'])","(u['ordinal'],u['task'],u['source_id'],u['H'])")
+s=s.replace("methods=[stage['method']],sources=", "methods=[stage['method']],units=selected,encoder_required=stage['method']!='N',sources=")
+s=s.replace("f'/tmp/cL11_", "f'/tmp/cHS_").replace('time.monotonic()-started>43200',"time.time()>=cfg['absolute_wall_deadline_unix']-60")
+p.write_text(s)
+p=R/'code/wave.py';s=p.read_text().replace('AUTH_SHA, TASK, JOB','AUTH_SHA, TASK, JOB, CONFIG').replace('time.monotonic()-started>=12*3600',"time.time()>=CONFIG['absolute_wall_deadline_unix']-45")
+s=s.replace('recovery_units=1764,protected_valid_units=736','new_H_units=4000,reused_H10_units=2000').replace('corrector_C_PI05_fd_','corrector_C_H_SWEEP_fd_');p.write_text(s)
+p=R/'xcode/feature_server.py';s=p.read_text().replace("        from selection import consumed_selection\n        selected=consumed_selection()\n        selector=FrozenSelector(selected['own_assets'])", "        if cfg['methods'][0] in ('Post','Velocity'):\n            from selection import consumed_selection\n            selected=consumed_selection()\n            selector=FrozenSelector(selected['own_assets'])")
+p.write_text(s)
+print('adapted_control_CPU_only')

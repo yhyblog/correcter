@@ -1,0 +1,125 @@
+{
+  "status": "complete_independently_reviewed_positive_heldout_primary_result",
+  "completed_utc": "2026-09-17T04:12:07.725919+00:00",
+  "analysis_role": "method_and_evidence_lead",
+  "fixed_policy": {
+    "critic": "A4000",
+    "method": "matched-post",
+    "complete_matching_dependencies": [
+      "velocity",
+      "direct",
+      "post",
+      "reverse",
+      "random"
+    ],
+    "post_enabled_on_alarm": true,
+    "posthoc_selection": false
+  },
+  "evaluation_scope": {
+    "split": "heldout",
+    "tasks": 5,
+    "sources_per_task": 20,
+    "total_sources": 100,
+    "paired_suffixes_per_source": 4,
+    "logical_outcomes_per_arm": 400,
+    "alarm_sources": 98,
+    "no_alarm_sources": 2,
+    "primary_comparison": "post_minus_alarm_replan10",
+    "calibration_pooled": false
+  },
+  "primary_result": {
+    "gain": 0.09,
+    "source_95ci": [
+      0.0325,
+      0.15
+    ],
+    "rescues": 46,
+    "harms": 10,
+    "positive_sources": 18,
+    "negative_sources": 6,
+    "zero_sources": 76,
+    "point_target": 0.05,
+    "point_target_met": true,
+    "interval_supports_positive_gain": true,
+    "true_gain_at_least_target_established": false
+  },
+  "success_counts": {
+    "continue_native10": 168,
+    "alarm_replan10": 214,
+    "velocity": 237,
+    "direct": 234,
+    "post": 250
+  },
+  "success_rates": {
+    "continue_native10": 0.42,
+    "alarm_replan10": 0.535,
+    "velocity": 0.5925,
+    "direct": 0.585,
+    "post": 0.625
+  },
+  "resources": {
+    "heldout_simulator_attempts": 2158,
+    "global_simulator_attempts": 48183,
+    "simulator_hard_limit": 50000,
+    "global_optimizer_updates": 51200,
+    "optimizer_hard_limit": 51200,
+    "technical_reserve_used": 0,
+    "gpu_holders_restored": 8,
+    "new_simulator_attempts_by_analysis": 0,
+    "new_optimizer_updates_by_analysis": 0
+  },
+  "workflow_disposition": {
+    "current_experiment_complete": true,
+    "no_additional_wave_authorized": true,
+    "no_retraining_or_posthoc_parameter_change": true,
+    "live_ready_version_retained": 14,
+    "completed_frozen_stage_not_reexecuted": true,
+    "archive_existing_freezes_unchanged": true
+  },
+  "evidence": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/heldout_result_review.json",
+      "sha256": "4374dc57b4672bc5c2f20cefcd2d33cb3ebac6bac1a9f95468826cd9296cc8cf"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/heldout_completion_review.json",
+      "sha256": "646bc68619acc4c02715228408231617cd5646552e7d60e564239e495c0af10f"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/heldout_method_review.json",
+      "sha256": "b402afa99ec61c5020060dcfaa5c01b52755442d963edd1b2e56de099409aac4"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_HELDOUT_EXECUTOR_HANDOFF.md",
+      "sha256": "f0b6bb48f6c86f291168ead065b8ff8cd60e5415a09ed122b5169b828a687499"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_HELDOUT_ANALYSIS.md",
+      "sha256": "a02637938e4f83161fb47d3b228cb42715b30b2c1fc19330430d16342d1f80cf"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_audits/heldout_v1/complete.json",
+      "sha256": "d776f54ceb94879bc1945a6e5e02736d04ba9d7e4652e02e06280be3a85a833e"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_independent_audits/heldout_v1/complete.json",
+      "sha256": "66fd7f8903d143822949dbddc297e31c16e132c06851f260ebf65cd8fcbd76ce"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_diagnostics/heldout_v1/complete.json",
+      "sha256": "617880a133121f3d1d60a4645f6fa2857545990c1b9aeb419017149c3d04d1d4"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_handoffs/heldout_v1/complete.json",
+      "sha256": "b8463a5588838bf4a06ffccde7048190d738921bcd14f11e3257ddd939c4fbd9"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_selections/final_selection_v1/complete.json",
+      "sha256": "2afa80bc07c9cf3f87c5bb8a21bcc8b36baf2a129d25e86b37731de386c7144e"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_selections/final_selection_v1/result.json",
+      "sha256": "87f1a411e8e82ecc4274875f93a264962824566271231338226d0a01e788f658"
+    }
+  ]
+}

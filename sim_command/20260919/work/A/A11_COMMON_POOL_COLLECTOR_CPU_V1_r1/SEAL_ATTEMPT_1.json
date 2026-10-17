@@ -1,0 +1,8 @@
+{
+  "status": "failed_before_artifact_write",
+  "operation": "build_CODE_DIFF",
+  "error": "KeyError origin_sha256",
+  "cause": "derived lineage rows use transformations/origin but have no origin_sha256 key",
+  "real_operations": 0,
+  "resolution": "treat derived rows explicitly and read original small source for precise origin SHA; no large inputs"
+}

@@ -1,0 +1,298 @@
+{
+  "event_id": "B_3019fe09306ca1c3e65b844007a5d7a0",
+  "task_id": "B_QUEUE_JOIN_V1",
+  "run_id": "6920c719e53e0be7ebc1a656018a20c856d4a632dbc489321a69d49e273fc1e1",
+  "outcome": "audited_complete",
+  "at_utc": "2026-09-22T04:34:47.637244+00:00",
+  "event_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/outbox/B_3019fe09306ca1c3e65b844007a5d7a0.json",
+  "event_sha256": "46d2a022f80a240b0f37b4709daf46b47f549a8d172b4796f1aa70410ab863a9",
+  "dependency_snapshot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/dependency_changes/6920c719e53e0be7ebc1a656018a20c856d4a632dbc489321a69d49e273fc1e1.json",
+  "stage_authorizations_verified": true,
+  "event_claim_identity": null,
+  "event_claim_note": "Dependency notification; existing scientific batch and worker claims verified",
+  "root_control_revision": 58,
+  "queue_control_revision": 23,
+  "task_board_revision": 86,
+  "change": "B extension task is now marked running with ACK/running receipt references; no new ready B task and no scientific scope change",
+  "decision": "Continue already-claimed Smol/X Post wave; no additional launch or legacy task replay",
+  "new_scientific_admissions_this_handler": 0,
+  "new_GPU_probes": 0,
+  "duplicate_launches": 0,
+  "background": {
+    "status": "stable_running",
+    "run_id": "D24_E8_MW_POST_r1",
+    "supervisor": {
+      "hostname": "trial-303225685-trialrun-303225685-worker-0",
+      "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+      "pid": 669327,
+      "start_ticks": 96593579,
+      "session_id": 669327
+    },
+    "workers": [
+      {
+        "job_id": "smol50k_Post_shard0_r1",
+        "gpus": [
+          0
+        ],
+        "completed": 51,
+        "technical_failures": 0,
+        "processes": {
+          "SERVER": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 669801,
+            "start_ticks": 96601886,
+            "session_id": 669796
+          },
+          "CLIENT": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 670962,
+            "start_ticks": 96619703,
+            "session_id": 669796
+          }
+        },
+        "progress": {
+          "source_id": "D24_MW_t20_e01",
+          "step": 1,
+          "method": "Full-Post-transfer",
+          "interventions": 0,
+          "at_utc": "2026-09-22T04:34:46.023299+00:00"
+        }
+      },
+      {
+        "job_id": "smol50k_Post_shard1_r1",
+        "gpus": [
+          1
+        ],
+        "completed": 57,
+        "technical_failures": 0,
+        "processes": {
+          "SERVER": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 669807,
+            "start_ticks": 96601887,
+            "session_id": 669797
+          },
+          "CLIENT": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 670963,
+            "start_ticks": 96619703,
+            "session_id": 669797
+          }
+        },
+        "progress": {
+          "source_id": "D24_MW_t21_e07",
+          "step": 1,
+          "method": "Full-Post-transfer",
+          "interventions": 0,
+          "at_utc": "2026-09-22T04:34:45.603004+00:00"
+        }
+      },
+      {
+        "job_id": "smol50k_Post_shard2_r1",
+        "gpus": [
+          2
+        ],
+        "completed": 41,
+        "technical_failures": 0,
+        "processes": {
+          "SERVER": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 669813,
+            "start_ticks": 96601888,
+            "session_id": 669798
+          },
+          "CLIENT": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 670968,
+            "start_ticks": 96619703,
+            "session_id": 669798
+          }
+        },
+        "progress": {
+          "source_id": "D24_MW_t18_e01",
+          "step": 79,
+          "method": "Full-Post-transfer",
+          "interventions": 1,
+          "at_utc": "2026-09-22T04:34:38.561333+00:00"
+        }
+      },
+      {
+        "job_id": "smol50k_Post_shard3_r1",
+        "gpus": [
+          3
+        ],
+        "completed": 54,
+        "technical_failures": 0,
+        "processes": {
+          "SERVER": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 669819,
+            "start_ticks": 96601889,
+            "session_id": 669799
+          },
+          "CLIENT": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 670987,
+            "start_ticks": 96619903,
+            "session_id": 669799
+          }
+        },
+        "progress": {
+          "source_id": "D24_MW_t23_e04",
+          "step": 171,
+          "method": "Full-Post-transfer",
+          "interventions": 1,
+          "at_utc": "2026-09-22T04:34:44.841974+00:00"
+        }
+      },
+      {
+        "job_id": "xvla30k_Post_shard0_r1",
+        "gpus": [
+          4
+        ],
+        "completed": 110,
+        "technical_failures": 0,
+        "processes": {
+          "SERVER": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 669825,
+            "start_ticks": 96601891,
+            "session_id": 669800
+          },
+          "CLIENT": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 670992,
+            "start_ticks": 96619904,
+            "session_id": 669800
+          }
+        },
+        "progress": {
+          "source_id": "D24_MW_t44_e00",
+          "step": 93,
+          "method": "Full-Post-transfer",
+          "interventions": 1,
+          "at_utc": "2026-09-22T04:34:44.249440+00:00"
+        }
+      },
+      {
+        "job_id": "xvla30k_Post_shard1_r1",
+        "gpus": [
+          5
+        ],
+        "completed": 62,
+        "technical_failures": 0,
+        "processes": {
+          "SERVER": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 669830,
+            "start_ticks": 96601892,
+            "session_id": 669805
+          },
+          "CLIENT": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 670997,
+            "start_ticks": 96619905,
+            "session_id": 669805
+          }
+        },
+        "progress": {
+          "source_id": "D24_MW_t25_e02",
+          "step": 92,
+          "method": "Full-Post-transfer",
+          "interventions": 1,
+          "at_utc": "2026-09-22T04:34:47.216652+00:00"
+        }
+      },
+      {
+        "job_id": "xvla30k_Post_shard2_r1",
+        "gpus": [
+          6
+        ],
+        "completed": 71,
+        "technical_failures": 0,
+        "processes": {
+          "SERVER": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 669833,
+            "start_ticks": 96601893,
+            "session_id": 669811
+          },
+          "CLIENT": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 670998,
+            "start_ticks": 96619905,
+            "session_id": 669811
+          }
+        },
+        "progress": {
+          "source_id": "D24_MW_t30_e01",
+          "step": 84,
+          "method": "Full-Post-transfer",
+          "interventions": 1,
+          "at_utc": "2026-09-22T04:34:40.474459+00:00"
+        }
+      },
+      {
+        "job_id": "xvla30k_Post_shard3_r1",
+        "gpus": [
+          7
+        ],
+        "completed": 67,
+        "technical_failures": 0,
+        "processes": {
+          "SERVER": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 669840,
+            "start_ticks": 96601894,
+            "session_id": 669817
+          },
+          "CLIENT": {
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "pid": 671007,
+            "start_ticks": 96619907,
+            "session_id": 669817
+          }
+        },
+        "progress": {
+          "source_id": "D24_MW_t27_e07",
+          "step": 161,
+          "method": "Full-Post-transfer",
+          "interventions": 0,
+          "at_utc": "2026-09-22T04:34:46.886280+00:00"
+        }
+      }
+    ],
+    "completed_Post_episodes": 513,
+    "technical_failures": 0,
+    "trigger_registration": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_E8_MW_POST_r1__D24_E8_MW_POST_r1__1.json",
+    "observer": {
+      "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+      "hostname": "trial-303225685-trialrun-303225685-worker-0",
+      "pid": 452085,
+      "session_id": 452085,
+      "start_ticks": 91710679
+    },
+    "observer_alive": true,
+    "all8_guard_reserved": true,
+    "holder_policy": "All holders off throughout entire formal wave, restore after whole group exits"
+  },
+  "remaining": "LIBERO native Post adaptation remains assigned to B; readyVelocity only after appropriate native mapping; new E6/E3 belongs to A",
+  "whole_scientific_task_complete": false,
+  "A_waits_for_B": false
+}

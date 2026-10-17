@@ -1,0 +1,226 @@
+{
+  "schema": "corrector_executor_cpu_final_v1",
+  "task_id": "A_D24_OURS_E5_REPORT_V1",
+  "revision": 1,
+  "status": "COMPLETE_CPU_REPORT",
+  "completed_at_utc": "2026-09-22T06:22:01.130589+00:00",
+  "host": "trial-303224955-trialrun-303224955-worker-0",
+  "executor_thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+  "authorization": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/OURS_FIRST_PRIORITY_V1.json",
+    "bytes": 2739,
+    "sha256": "f45e4048ff1da43328e5ac9576fbc4be9716e8778393e4ead3b731060e220ce8"
+  },
+  "ack": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_OURS_E5_REPORT_V1_ACK.json",
+  "input_control_revision": 62,
+  "input_board_revision": 93,
+  "scope": "Own-method pi05 MT50 E5 from existing16 cells; no new scientific run or external reproduction",
+  "completion": {
+    "cells": 16,
+    "existing_valid_episodes": 8000,
+    "unique_fixed_test_sources": 500,
+    "tasks": 50,
+    "sources_per_task": 10,
+    "existing_cell_technical_failures": 0,
+    "model_forwards": 0,
+    "new_episodes": 0,
+    "GPU_compute": 0,
+    "hardware_queries": 0,
+    "holder_queries": 0,
+    "holder_changes": 0,
+    "training": 0,
+    "optimizer_updates": 0,
+    "large_weight_hashes": 0,
+    "large_weight_payload_loads": 0,
+    "launches": 0,
+    "claims": 0,
+    "daemon_restarts": 0,
+    "deletion": 0
+  },
+  "CPU_operations": {
+    "small_state_dict_loads": 8,
+    "map_location": "cpu",
+    "small_checkpoint_file_bytes": 50574744,
+    "model_instantiations": 0,
+    "base_metadata": "config and139384-byte safetensors header; no tensor payload",
+    "saved_scalar_rows": 8000,
+    "saved_plan_timer_job_JSONs": 550,
+    "saved_plan_timer_logical_file_bytes": 127142692,
+    "saved_intervention_entry_timers": 4463,
+    "new_cost_bootstrap": {
+      "seed": 20260922,
+      "replicates": 2000,
+      "runs": 1
+    },
+    "existing_success_bootstrap_reexecuted": false
+  },
+  "parameters": {
+    "D_member": 4474116,
+    "D_ensemble": 8948232,
+    "G0_member": 1468033,
+    "G0_ensemble": 2936066,
+    "Q_member": 7058,
+    "Q_ensemble": 28232,
+    "total_added_unique_network_parameters": 11912530,
+    "historical_A4000_updated_parameters": 10116,
+    "buffer_elements_loaded_copies": 712816,
+    "buffer_bytes_loaded_copies": 2851264,
+    "base_unique_runtime_parameters": null,
+    "base_null_reason": "Serialized weight header cannot establish runtime tying/unused heads"
+  },
+  "headline": {
+    "H10_success_pct": {
+      "N": 61.6,
+      "R": 67.2,
+      "Post": 69.0,
+      "Velocity": 68.0
+    },
+    "H10_policy_calls_mean_all": {
+      "N": 15.13,
+      "R": 14.156,
+      "Post": 13.732,
+      "Velocity": 14.794
+    },
+    "H10_policy_calls_amortized_per_success": {
+      "N": 24.56168831168831,
+      "R": 21.06547619047619,
+      "Post": 19.901449275362317,
+      "Velocity": 21.75588235294118
+    },
+    "Post_minus_N_H10_success_pp": 7.4,
+    "reused_success_delta_ci95_pp": [
+      4.4,
+      10.4
+    ],
+    "rescued": 64,
+    "harmed": 27,
+    "Post_over_N_H10_amortized_policy_ratio": 0.8102638964721208,
+    "new_cost_ratio_ci95": [
+      0.7338730038655183,
+      0.8952024856058554
+    ]
+  },
+  "timing": {
+    "episode_times_and_observed_entry_timers_reported": true,
+    "entry_statistics": "mean/median/P95/range with actual entry denominator, no new timing run",
+    "shared_concurrency_and_historical_tail_holder_caveat": true,
+    "system_speedup_claim": false,
+    "net_DG0_context_and_correction_time": null,
+    "net_time_null_reason": "Not independently recorded; no subtraction inference"
+  },
+  "missingness": [
+    "N explicit sampling/interventions/reset/control-loop and per-entry timers remain unrecorded",
+    "VLA unique runtime parameter count not established by checkpoint header",
+    "No isolated D/G0/context latency, Q backward time, net correction increment, GPU kernel seconds/energy",
+    "No extrapolation of pi05 parameter totals to Smol/X bridge systems"
+  ],
+  "validation": {
+    "status": "PASS",
+    "evidence": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/CPU_CHECKS.json",
+    "final_checks": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/FINAL_CHECK.json"
+  },
+  "outputs": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/PAPER_COST_TABLE.csv",
+      "bytes": 8135,
+      "sha256": "0309a31341aef638106e0eb78cff9af069541c1139122bbd570d7d544889e3bc"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/PARAMETER_COUNTS.json",
+      "bytes": 22238,
+      "sha256": "930b5039c73af538021b31ec1399574ad8578492f59a9eac3536640af5c9df29"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/REPORT.md",
+      "bytes": 13756,
+      "sha256": "f289d71ab9b605b94606dbfb2c9dc7dc26b0e983ec847921600d9e010ca87ef5"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/SCALAR_COST_SUMMARY.json",
+      "bytes": 87209,
+      "sha256": "347c4e46232c4f497345c7739bb6956b00ea31931318951177d030ba67505997"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/TIMING_TABLE.csv",
+      "bytes": 24430,
+      "sha256": "c30d4501bae0cab20febf997c8f2a0e6c9054f13beddace1467be4671bc7c602"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/ENTRY_TIMING_TABLE.csv",
+      "bytes": 19863,
+      "sha256": "45edbf5689548928dc5aa9cfb5c623d8b9d77e2e3c50112af646a7216791e2e5"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/ENTRY_TIMING_SUMMARY.json",
+      "bytes": 128128,
+      "sha256": "ef696f4d16bf9edb93f971f000d783051878000fc8cb8e20d2e83019925fba71"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/CALL_ACCOUNTING.csv",
+      "bytes": 2985,
+      "sha256": "90b34abb1c035384f6a9e031c0676b56eb6fdd67b81c6610fe293d8bb5bc3d02"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/COST_COMPARISONS.csv",
+      "bytes": 6236,
+      "sha256": "dc4e89b24efab29981adc4cbce2a0989a9b510d926ef2196df137a872d04f7a0"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/COST_BOOTSTRAP.json",
+      "bytes": 6197,
+      "sha256": "a4672046db4faaecf98370b36581e7671c64835c1ee6b31d0f4fa3dd346783ea"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/FIELD_DEFINITIONS.json",
+      "bytes": 2361,
+      "sha256": "b1e58ea8b7e825939754032ada8e92b1093fe12896166a200e3552082e578d14"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/CPU_CHECKS.json",
+      "bytes": 4697,
+      "sha256": "3b0debda760d5d85d10c1d6ede4ab8b736854625a0a7603976ff872012194578"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/FINAL_CHECK.json",
+      "bytes": 998,
+      "sha256": "6eeb4f7a754ae3c8a572415eedbfe93668950d86d84c8658fc34e6277577a4ff"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/INPUT_INDEX.json",
+      "bytes": 35937,
+      "sha256": "edc7cdfa475965bbdfa2b30caf7f8eb98a87d1e1e4a09b14f23d7acf498884fa"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/SMALL_MODULE_SHAPES.json",
+      "bytes": 66695,
+      "sha256": "a7ae3b0f7aa18389e89af4760461ab2cc7e179b5d0a64b97aecd160bec68d673"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/MODULE_INPUTS.json",
+      "bytes": 2603,
+      "sha256": "4983b2844aaf0a9ac8150f344239a59dc26ff527659c9942b2d0a03ccc613e8f"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/build_e5_report_cpu.py",
+      "bytes": 39218,
+      "sha256": "21a394bef8f27c6129d1bce2a9cb5c735bdedefceb17c2929ce8d6a9dc5b8576"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/inspect_small_modules_cpu.py",
+      "bytes": 4386,
+      "sha256": "ac8c45267bf40318748fe1edf1c92bf0b8bdceffc3b822b3ce29f3040d6d54f8"
+    }
+  ],
+  "manifest": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_OURS_E5_REPORT_V1/MANIFEST.json",
+  "receipt": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_OURS_E5_REPORT_V1_RESULT.json",
+  "closed_runs_unchanged": [
+    "N2500",
+    "main R/P/V5500",
+    "pilot120",
+    "E6",
+    "VLA-Corrector",
+    "GAF"
+  ],
+  "next_action": "Final CPU delivery to analysis; no additional A task launched. B/C admitted applicability work is independent; remaining475 collection stays closed.",
+  "analysis_acceptance_claimed": false
+}

@@ -1,0 +1,759 @@
+{
+  "generated_at_utc": "2026-09-26T04:48:18.884151+00:00",
+  "scope": "Historical deployed VLA checkpoints, D/G0 and final L11 fit9101 Q; no retraining",
+  "epoch_definition": "optimizer_updates * effective_batch / actual sampling-pool size; per independent member; D streams separate; sampling exposure equivalent, not exact deterministic passes",
+  "base": {
+    "pi05": {
+      "steps": 30000,
+      "batch_size": 32,
+      "seed": 1000,
+      "optimizer": {
+        "type": "adamw",
+        "lr": 2.5e-05,
+        "weight_decay": 0.01,
+        "grad_clip_norm": 1.0,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "eps": 1e-08
+      },
+      "scheduler": {
+        "type": "cosine_decay_with_warmup",
+        "num_warmup_steps": 1000,
+        "num_decay_steps": 30000,
+        "peak_lr": 2.5e-05,
+        "decay_lr": 2.5e-06
+      },
+      "resume": false,
+      "use_policy_training_preset": true,
+      "policy": {
+        "type": "pi05",
+        "pretrained_path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/inputs/pi05_base_b211_weights_a538_processors",
+        "dtype": "bfloat16",
+        "freeze_vision_encoder": false,
+        "train_expert_only": false,
+        "use_peft": false,
+        "gradient_checkpointing": true,
+        "chunk_size": 50,
+        "n_action_steps": 50,
+        "optimizer_lr": 2.5e-05,
+        "optimizer_weight_decay": 0.01
+      },
+      "dataset": {
+        "repo_id": "lerobot/metaworld_mt50",
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "revision": "a59f742d218c903328164257ecf180f9b18018a1",
+        "episodes": null
+      },
+      "config_path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model/train_config.json",
+      "checkpoint_updates": 30000,
+      "world_size": 8,
+      "gradient_accumulation": 1,
+      "effective_batch": 256,
+      "training_frames": 204806,
+      "training_episodes": 2500,
+      "total_parameters": 4143404816,
+      "trainable_parameters": 4143404816,
+      "equivalent_frame_epochs": 37.49890139937307,
+      "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model/model.safetensors",
+      "initialization_origin": {
+        "repo": "lerobot/pi05_base",
+        "revision": "b211f3d44c36b6acfcf7ae94a64e8e96f75a64ba",
+        "description": "full public pi05 base, local processor compatibility packaging"
+      },
+      "environment_task_count": 50,
+      "unique_task_index_count": 49,
+      "demonstrations_per_environment_task": 50,
+      "epoch_scope": "local MT50 training; excludes public-model pretraining"
+    },
+    "smolvla": {
+      "steps": 100000,
+      "batch_size": 8,
+      "seed": 42,
+      "optimizer": {
+        "type": "adamw",
+        "lr": 0.0001,
+        "weight_decay": 1e-10,
+        "grad_clip_norm": 10.0,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "eps": 1e-08
+      },
+      "scheduler": {
+        "type": "cosine_decay_with_warmup",
+        "num_warmup_steps": 1000,
+        "num_decay_steps": 100000,
+        "peak_lr": 0.0001,
+        "decay_lr": 2.5e-06
+      },
+      "resume": false,
+      "use_policy_training_preset": true,
+      "policy": {
+        "type": "smolvla",
+        "pretrained_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/initializations/smolvla-mt50-s42",
+        "freeze_vision_encoder": true,
+        "train_expert_only": true,
+        "use_peft": false,
+        "num_vlm_layers": 16,
+        "chunk_size": 50,
+        "n_action_steps": 10,
+        "optimizer_lr": 0.0001,
+        "optimizer_weight_decay": 1e-10
+      },
+      "dataset": {
+        "repo_id": "lerobot/metaworld_mt50",
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50",
+        "revision": "a59f742d218c903328164257ecf180f9b18018a1",
+        "episodes": null
+      },
+      "config_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model/train_config.json",
+      "checkpoint_updates": 50000,
+      "world_size": 8,
+      "gradient_accumulation": 1,
+      "effective_batch": 64,
+      "training_frames": 204806,
+      "training_episodes": 2500,
+      "total_parameters": 450046176,
+      "trainable_parameters": 99880992,
+      "equivalent_frame_epochs": 15.624542249738777,
+      "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model/model.safetensors",
+      "initialization_origin": {
+        "repo": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+        "revision": "7b375e1b73b11138ff12fe22c8f2822d8fe03467",
+        "description": "pretrained VLM plus randomly initialized action expert and projections"
+      },
+      "environment_task_count": 50,
+      "unique_task_index_count": 49,
+      "demonstrations_per_environment_task": 50,
+      "epoch_scope": "local MT50 training; excludes public-model pretraining",
+      "observed_later_log_progress": 54580,
+      "termination_record": "SIGTERM after checkpoint050000; not a completed 100000-update run"
+    },
+    "xvla": {
+      "steps": 30000,
+      "batch_size": 8,
+      "seed": 42,
+      "optimizer": {
+        "type": "xvla-adamw",
+        "lr": 0.0001,
+        "weight_decay": 0.0001,
+        "grad_clip_norm": 10.0,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "eps": 1e-08,
+        "soft_prompt_lr_scale": 1.0,
+        "soft_prompt_warmup_lr_scale": null
+      },
+      "scheduler": {
+        "type": "cosine_decay_with_warmup",
+        "num_warmup_steps": 1000,
+        "num_decay_steps": 30000,
+        "peak_lr": 0.0001,
+        "decay_lr": 2.5e-06
+      },
+      "resume": false,
+      "use_policy_training_preset": true,
+      "policy": {
+        "type": "xvla",
+        "pretrained_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/initializations/xvla-mt50-s42",
+        "dtype": "float32",
+        "freeze_vision_encoder": false,
+        "use_peft": false,
+        "chunk_size": 30,
+        "n_action_steps": 10,
+        "optimizer_lr": 0.0001,
+        "optimizer_weight_decay": 0.0001
+      },
+      "dataset": {
+        "repo_id": "lerobot/metaworld_mt50",
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50",
+        "revision": "a59f742d218c903328164257ecf180f9b18018a1",
+        "episodes": null
+      },
+      "config_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/xvla_mt50_s42_D24_r2/training/checkpoints/030000/pretrained_model/train_config.json",
+      "checkpoint_updates": 30000,
+      "world_size": 8,
+      "gradient_accumulation": 1,
+      "effective_batch": 64,
+      "training_frames": 204806,
+      "training_episodes": 2500,
+      "total_parameters": 879482456,
+      "trainable_parameters": 879482456,
+      "equivalent_frame_epochs": 9.374725349843267,
+      "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/xvla_mt50_s42_D24_r2/training/checkpoints/030000/pretrained_model/model.safetensors",
+      "initialization_origin": {
+        "repo": "lerobot/xvla-base",
+        "revision": "cdb7964e4fe842935d671bfab5a5ebe00a96648c",
+        "description": "full public XVLA base loaded strict=True then MT50 interface adaptation"
+      },
+      "environment_task_count": 50,
+      "unique_task_index_count": 49,
+      "demonstrations_per_environment_task": 50,
+      "epoch_scope": "local MT50 training; excludes public-model pretraining"
+    }
+  },
+  "auxiliary": {
+    "pi05": {
+      "backbone": "pi05",
+      "D": {
+        "members": [
+          241,
+          242
+        ],
+        "parameters_per_member": 4474116,
+        "width": 256,
+        "training_phases": {
+          "pretrain_steps": 1600,
+          "finetune_steps": 1600,
+          "batch_size": 64,
+          "learning_rate": 0.0003,
+          "weight_decay": 0.0001,
+          "pair_weight": 1.0,
+          "local_fraction": 0.5,
+          "validation_every": 400
+        },
+        "natural_episodes": 300,
+        "natural_observations": 58092,
+        "natural_window_positions": 57792,
+        "local_anchors": 80,
+        "local_sources_with_reached_cut": 40,
+        "batch": {
+          "natural_windows": 64,
+          "local_groups": 16,
+          "branches_per_local_group": 4
+        },
+        "sample_scheme": "uniform episode then uniform t for natural; uniform local anchor group; both replacement",
+        "pretrain_equivalent_window_epochs": 1.7718715393133997,
+        "full_budget_cumulative_natural_equivalent_epochs": 3.5437430786267994,
+        "full_budget_local_equivalent_epochs": 320.0,
+        "deployed_cumulative_natural_equivalent_epochs": 2.2148394241417497,
+        "deployed_local_equivalent_epochs": 80.0,
+        "checkpoints": [
+          "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241/finetune_400.pt",
+          "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242/finetune_400.pt"
+        ]
+      },
+      "G0": {
+        "members": [
+          341,
+          342
+        ],
+        "parameters_per_member": 1468033,
+        "width": 128,
+        "updates_per_member": 1600,
+        "selected_steps": [
+          1000,
+          1200
+        ],
+        "batch_anchors": 16,
+        "training_anchors": 80,
+        "full_budget_equivalent_epochs": 320.0,
+        "selected_equivalent_epochs": [
+          200.0,
+          240.0
+        ],
+        "optimizer": "AdamW",
+        "lr": 0.0001,
+        "weight_decay": 0.001,
+        "clip_norm": 1,
+        "loss": "smooth_l1(beta=.1), mean of three fresh success rates minus old",
+        "checkpoints": [
+          "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_341/selected.pt",
+          "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_342/selected.pt"
+        ]
+      },
+      "Q": {
+        "train_config": {
+          "train_arrays": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/input_bundles/final_train600_input_v1/train/arrays.npz",
+          "train_rows": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/input_bundles/final_train600_input_v1/train/rows.json",
+          "preprocessing_only_assets": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/assets/critic",
+          "trainable_parameters": 7058,
+          "modules": [
+            "state",
+            "action",
+            "head",
+            "residual",
+            "advantage"
+          ],
+          "losses": [
+            "L00",
+            "L10",
+            "L01",
+            "L11"
+          ],
+          "fit_seeds": [
+            9101,
+            9102,
+            9103
+          ],
+          "members": [
+            1041,
+            1042,
+            1043,
+            1044
+          ],
+          "batch_size": 32,
+          "updates_per_fit": 4000,
+          "total_updates": 192000,
+          "learning_rate": 0.0003,
+          "weight_decay": 0.01,
+          "clip_norm": 1.0,
+          "training_processes": 12,
+          "CPU_threads_per_process": 2,
+          "device": "cpu",
+          "paired_seed_domain": "corrector_fullQ_paired_v1",
+          "paired_key_excludes_loss": true,
+          "preprocessing_fields": [
+            "norm_mean",
+            "norm_std",
+            "residual_scale",
+            "visual_center",
+            "visual_basis",
+            "visual_scale",
+            "language_center",
+            "language_basis",
+            "language_scale"
+          ],
+          "old_network_parameters_loaded_into_new_model": false,
+          "fixed_last_update": true
+        },
+        "deployed_loss": "L11",
+        "deployed_fit": 9101,
+        "training_source_groups": 600,
+        "batch_sources": 32,
+        "steps_per_member": 4000,
+        "equivalent_source_epochs": 213.33333333333334,
+        "bootstrap": "per task source bootstrap then replacement minibatches",
+        "checkpoint_paths": [
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/training/s9101_m1041/L11/final.pt",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/training/s9101_m1042/L11/final.pt",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/training/s9101_m1043/L11/final.pt",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/training/s9101_m1044/L11/final.pt"
+        ],
+        "hidden_dimensions": [
+          16,
+          32
+        ]
+      },
+      "evidence": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/config.json",
+        "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/audits/train.json",
+        "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241/complete.json",
+        "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242/complete.json",
+        "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_341/complete.json",
+        "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_342/complete.json",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/config/TRAIN.json"
+      ]
+    },
+    "smolvla": {
+      "planned_train_parents": 200,
+      "planned_dev_parents": 50,
+      "effective_train_cuts": 188,
+      "effective_dev_cuts": 47,
+      "D_ordinary_pool_train_parents": 200,
+      "D_ordinary_pool_trajectories": 1516,
+      "visual_features": "historical frozen external pi05 visual/language bridge, not 20260926 untrained native adapters",
+      "D": {
+        "width": 256,
+        "members": [
+          {
+            "seed": 1241,
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/fits/D_1241/final.pt"
+          },
+          {
+            "seed": 1242,
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/fits/D_1242/final.pt"
+          }
+        ],
+        "parameters_per_member": 4474116,
+        "updates_per_member": 4000,
+        "ordinary_windows": 267487,
+        "local_groups": 188,
+        "ordinary_batch": 64,
+        "local_group_batch": 16,
+        "branches_per_group": 4,
+        "ordinary_equivalent_epochs": 0.9570558569201494,
+        "local_equivalent_epochs": 340.4255319148936,
+        "optimizer": "AdamW",
+        "lr": 0.0003,
+        "weight_decay": 0.0001,
+        "clip_norm": 1,
+        "scheduler": null,
+        "window_enumeration": "range(minimum_step,length-1): masked partial future targets allowed"
+      },
+      "G0": {
+        "width": 128,
+        "members": [
+          {
+            "seed": 1341,
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/fits/G0_1341/final.pt"
+          },
+          {
+            "seed": 1342,
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/fits/G0_1342/final.pt"
+          }
+        ],
+        "parameters_per_member": 1468033,
+        "updates_per_member": 4000,
+        "pool_parents": 188,
+        "batch_parents": 16,
+        "equivalent_epochs": 340.4255319148936,
+        "optimizer": "AdamW",
+        "lr": 0.0001,
+        "weight_decay": 0.001,
+        "clip_norm": 1,
+        "scheduler": null,
+        "loss": "SmoothL1 beta=0.1; a0 success mean minus old success mean"
+      },
+      "initial_Q": {
+        "parameters_per_member": 7058,
+        "updates_per_member": 4000,
+        "pool_parents": 188,
+        "batch_parents": 16,
+        "equivalent_epochs": 340.4255319148936,
+        "members": [
+          19301,
+          19302,
+          19303,
+          19304
+        ],
+        "loss": "L11"
+      },
+      "Q": {
+        "parameters_per_member": 7058,
+        "members": [
+          {
+            "member": 1041,
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_FULL_Q_LOSS_REFRESH_V1/fit_r1/fits/L11_fit9101_member1041/final.pt"
+          },
+          {
+            "member": 1042,
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_FULL_Q_LOSS_REFRESH_V1/fit_r1/fits/L11_fit9101_member1042/final.pt"
+          },
+          {
+            "member": 1043,
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_FULL_Q_LOSS_REFRESH_V1/fit_r1/fits/L11_fit9101_member1043/final.pt"
+          },
+          {
+            "member": 1044,
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_FULL_Q_LOSS_REFRESH_V1/fit_r1/fits/L11_fit9101_member1044/final.pt"
+          }
+        ],
+        "updates_per_member": 4000,
+        "pool_parents": 188,
+        "batch_parents": 32,
+        "equivalent_epochs": 680.8510638297872,
+        "optimizer": "AdamW",
+        "lr": 0.0003,
+        "weight_decay": 0.01,
+        "clip_norm": 1,
+        "scheduler": null,
+        "fit_seed": 9101,
+        "loss": "L11=BCE+gain+0.5pair",
+        "full_scan_optimizer_updates": 64000,
+        "ranking": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_FULL_Q_LOSS_REFRESH_V1/models/L11/ranking.json"
+      },
+      "normalization": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/dataset/NORMALIZATION.json",
+      "evidence": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/DATA_SUMMARY.json",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/FIT_SUMMARY.json",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/dataset/TRAJECTORIES.json",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/code/prepare_data.py",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/code/train_head.py"
+      ]
+    },
+    "xvla": {
+      "planned_train_parents": 200,
+      "planned_dev_parents": 50,
+      "effective_train_cuts": 191,
+      "effective_dev_cuts": 49,
+      "D_ordinary_pool_train_parents": 200,
+      "D_ordinary_pool_trajectories": 1537,
+      "visual_features": "historical frozen external pi05 visual/language bridge, not 20260926 untrained native adapters",
+      "D": {
+        "width": 256,
+        "members": [
+          {
+            "seed": 2241,
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_XVLA_AUX_RETRAIN_V1/fits/D_2241/final.pt"
+          },
+          {
+            "seed": 2242,
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_XVLA_AUX_RETRAIN_V1/fits/D_2242/final.pt"
+          }
+        ],
+        "parameters_per_member": 4474116,
+        "updates_per_member": 4000,
+        "ordinary_windows": 142113,
+        "local_groups": 187,
+        "ordinary_batch": 64,
+        "local_group_batch": 16,
+        "branches_per_group": 4,
+        "ordinary_equivalent_epochs": 1.8013834061627014,
+        "local_equivalent_epochs": 342.24598930481284,
+        "optimizer": "AdamW",
+        "lr": 0.0003,
+        "weight_decay": 0.0001,
+        "clip_norm": 1,
+        "scheduler": null,
+        "normal_only_parent_windows": 324,
+        "window_enumeration": "range(minimum_step,length-5): requires complete five-step future"
+      },
+      "G0": {
+        "width": 128,
+        "members": [
+          {
+            "seed": 2341,
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_XVLA_AUX_RETRAIN_V1/fits/G0_2341/final.pt"
+          },
+          {
+            "seed": 2342,
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_XVLA_AUX_RETRAIN_V1/fits/G0_2342/final.pt"
+          }
+        ],
+        "parameters_per_member": 1468033,
+        "updates_per_member": 4000,
+        "pool_parents": 191,
+        "batch_parents": 16,
+        "equivalent_epochs": 335.0785340314136,
+        "optimizer": "AdamW",
+        "lr": 0.0001,
+        "weight_decay": 0.001,
+        "clip_norm": 1,
+        "scheduler": null,
+        "loss": "SmoothL1 beta=0.1; a0 success mean minus old success mean"
+      },
+      "initial_Q": {
+        "parameters_per_member": 7058,
+        "updates_per_member": 4000,
+        "pool_parents": 191,
+        "batch_parents": 16,
+        "equivalent_epochs": 335.0785340314136,
+        "members": [
+          29301,
+          29302,
+          29303,
+          29304
+        ],
+        "loss": "L11"
+      },
+      "Q": {
+        "parameters_per_member": 7058,
+        "members": [
+          {
+            "member": 1041,
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_FULL_Q_LOSS_REFRESH_V1/training/L11_s9101_m1041/final.pt"
+          },
+          {
+            "member": 1042,
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_FULL_Q_LOSS_REFRESH_V1/training/L11_s9101_m1042/final.pt"
+          },
+          {
+            "member": 1043,
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_FULL_Q_LOSS_REFRESH_V1/training/L11_s9101_m1043/final.pt"
+          },
+          {
+            "member": 1044,
+            "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_FULL_Q_LOSS_REFRESH_V1/training/L11_s9101_m1044/final.pt"
+          }
+        ],
+        "updates_per_member": 4000,
+        "pool_parents": 191,
+        "batch_parents": 32,
+        "equivalent_epochs": 670.1570680628272,
+        "optimizer": "AdamW",
+        "lr": 0.0003,
+        "weight_decay": 0.01,
+        "clip_norm": 1,
+        "scheduler": null,
+        "fit_seed": 9101,
+        "loss": "L11=BCE+gain+0.5pair",
+        "full_scan_optimizer_updates": 64000,
+        "ranking": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_FULL_Q_LOSS_REFRESH_V1/ensembles/L11_s9101/ranking.json"
+      },
+      "normalization": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_XVLA_AUX_RETRAIN_V1/dataset/NORMALIZATION.json",
+      "evidence": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_XVLA_AUX_RETRAIN_V1/DATA_SUMMARY.json",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_XVLA_AUX_RETRAIN_V1/FIT_SUMMARY.json",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_XVLA_AUX_RETRAIN_V1/dataset/TRAJECTORIES.json",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_XVLA_AUX_RETRAIN_V1/code/prepare_data.py",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_XVLA_AUX_RETRAIN_V1/code/train_head.py"
+      ]
+    }
+  },
+  "checkpoint_files": [
+    {
+      "base": "pi05",
+      "network": "VLA",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model/model.safetensors",
+      "exists": true
+    },
+    {
+      "base": "smolvla",
+      "network": "VLA",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model/model.safetensors",
+      "exists": true
+    },
+    {
+      "base": "xvla",
+      "network": "VLA",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/xvla_mt50_s42_D24_r2/training/checkpoints/030000/pretrained_model/model.safetensors",
+      "exists": true
+    },
+    {
+      "base": "pi05",
+      "network": "D",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241/finetune_400.pt",
+      "exists": true
+    },
+    {
+      "base": "pi05",
+      "network": "D",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242/finetune_400.pt",
+      "exists": true
+    },
+    {
+      "base": "pi05",
+      "network": "G0",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_341/selected.pt",
+      "exists": true
+    },
+    {
+      "base": "pi05",
+      "network": "G0",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_342/selected.pt",
+      "exists": true
+    },
+    {
+      "base": "pi05",
+      "network": "Q",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/training/s9101_m1041/L11/final.pt",
+      "exists": true
+    },
+    {
+      "base": "pi05",
+      "network": "Q",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/training/s9101_m1042/L11/final.pt",
+      "exists": true
+    },
+    {
+      "base": "pi05",
+      "network": "Q",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/training/s9101_m1043/L11/final.pt",
+      "exists": true
+    },
+    {
+      "base": "pi05",
+      "network": "Q",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/training/s9101_m1044/L11/final.pt",
+      "exists": true
+    },
+    {
+      "base": "smolvla",
+      "network": "D",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/fits/D_1241/final.pt",
+      "exists": true
+    },
+    {
+      "base": "smolvla",
+      "network": "D",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/fits/D_1242/final.pt",
+      "exists": true
+    },
+    {
+      "base": "smolvla",
+      "network": "G0",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/fits/G0_1341/final.pt",
+      "exists": true
+    },
+    {
+      "base": "smolvla",
+      "network": "G0",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/fits/G0_1342/final.pt",
+      "exists": true
+    },
+    {
+      "base": "smolvla",
+      "network": "Q",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_FULL_Q_LOSS_REFRESH_V1/fit_r1/fits/L11_fit9101_member1041/final.pt",
+      "exists": true
+    },
+    {
+      "base": "smolvla",
+      "network": "Q",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_FULL_Q_LOSS_REFRESH_V1/fit_r1/fits/L11_fit9101_member1042/final.pt",
+      "exists": true
+    },
+    {
+      "base": "smolvla",
+      "network": "Q",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_FULL_Q_LOSS_REFRESH_V1/fit_r1/fits/L11_fit9101_member1043/final.pt",
+      "exists": true
+    },
+    {
+      "base": "smolvla",
+      "network": "Q",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_FULL_Q_LOSS_REFRESH_V1/fit_r1/fits/L11_fit9101_member1044/final.pt",
+      "exists": true
+    },
+    {
+      "base": "xvla",
+      "network": "D",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_XVLA_AUX_RETRAIN_V1/fits/D_2241/final.pt",
+      "exists": true
+    },
+    {
+      "base": "xvla",
+      "network": "D",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_XVLA_AUX_RETRAIN_V1/fits/D_2242/final.pt",
+      "exists": true
+    },
+    {
+      "base": "xvla",
+      "network": "G0",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_XVLA_AUX_RETRAIN_V1/fits/G0_2341/final.pt",
+      "exists": true
+    },
+    {
+      "base": "xvla",
+      "network": "G0",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_XVLA_AUX_RETRAIN_V1/fits/G0_2342/final.pt",
+      "exists": true
+    },
+    {
+      "base": "xvla",
+      "network": "Q",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_FULL_Q_LOSS_REFRESH_V1/training/L11_s9101_m1041/final.pt",
+      "exists": true
+    },
+    {
+      "base": "xvla",
+      "network": "Q",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_FULL_Q_LOSS_REFRESH_V1/training/L11_s9101_m1042/final.pt",
+      "exists": true
+    },
+    {
+      "base": "xvla",
+      "network": "Q",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_FULL_Q_LOSS_REFRESH_V1/training/L11_s9101_m1043/final.pt",
+      "exists": true
+    },
+    {
+      "base": "xvla",
+      "network": "Q",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_FULL_Q_LOSS_REFRESH_V1/training/L11_s9101_m1044/final.pt",
+      "exists": true
+    }
+  ],
+  "recent_latency_only_models": {
+    "trained": false,
+    "updates": 0,
+    "equivalent_epochs": 0,
+    "description": "width512 Q and native-visual Smol/X D/G0 adaptations used only for latency; excluded from trained checkpoint inventory"
+  }
+}

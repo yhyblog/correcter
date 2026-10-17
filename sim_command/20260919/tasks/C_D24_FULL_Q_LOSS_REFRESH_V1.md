@@ -1,0 +1,11 @@
+# C_D24_FULL_Q_LOSS_REFRESH_V1
+
+owner C，revision1。用户已授权完整Q损失消融→开发选损失→正式验证；不得再询问每批许可。
+
+先立即读取并落实 deadline_20260924/Q_LOSS_PRIORITY_OVERRIDE_V1.json。取消Random-multi及该节点未进入的旧配置P/V范围，保留已进入结果，安全排空自有族；若运行器没有逐episode准入机制可取消自身runner并将缺项标user_cancelled/unknown，不能标任务失败或自动重跑旧配置。原授权/旧证据不覆盖。
+
+完整科学任务：deadline_20260924/FULL_Q_LOSS_SELECTION_PLAN_V1.md；授权：deadline_20260924/FULL_Q_LOSS_SELECTION_AUTHORIZATION_V1.json（SHA 8fc0bf2c7c0c761d9fba424fb7fb127af8a9c505668fccd7231126535c6422c1）。必须同时消费 deadline_20260924/EVALUATION_CONCURRENCY_24_V1.md：评测目标每GPU3worker、8GPU共24，容量不足报真实限制和最大可行并发，不能无证据沿用8。正式wave所有holder停算。
+
+C负责X-VLA专属数据复用，完整Q四loss×四成员固定fit9101，共16fits/64000更新；只训练Q，D/G0/底座/预处理冻结。CPU可立即准备，GPU须本机原正式族退出。R旧multi可继续或复用；P/V旧配置未进入暂缓。候选准备不等待A，CANDIDATES_READY后轻量后台等A的SELECTION.json，一经有效选择自动用本机同loss四权重评P/Vmulti各原500，共1000first/cap1100；不由本机test改loss、不用pi05 Q替代专属头。
+
+有限detached队列和唯一claim；普通容量/必要接口检查、首计划episode验证，不增加预检/完整一致性核查。原线程事件通知、稳定后STABLE_HANDOFF结束LLM等待。输出本节点results/C/C_D24_FULL_Q_LOSS_REFRESH_V1/与receipts/C/C_D24_FULL_Q_LOSS_REFRESH_V1_ACK.json、_RESULT_r*.json。记录撤销实际生效边界/已保存/在途/未启动量、取消原因与资源余量，队列投递不等于已停止或运行。

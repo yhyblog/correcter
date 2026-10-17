@@ -1,0 +1,117 @@
+{
+  "schema": "corrector_persistent_queue_authorization_v1",
+  "release_id": "QUEUE_AUTONOMY_V1",
+  "status": "authorized_with_machine_gated_activation",
+  "issued_at_utc": "2026-09-21T12:06:03.995391+00:00",
+  "issuer": "analysis_under_explicit_user_20260921_queue_instruction",
+  "task_ids": [
+    "A_QUEUE_BOOTSTRAP_V1",
+    "B_QUEUE_JOIN_V1"
+  ],
+  "task_revision": 1,
+  "hosts": {
+    "A": "trial-303224955-trialrun-303224955-worker-0",
+    "B": "trial-303225685-trialrun-303225685-worker-0"
+  },
+  "contract": {
+    "path": "persistent_queue/QUEUE_CONTRACT_V1.md",
+    "sha256": "f9a8a8914c33b0480437e701c103697effcf7315e2a0109f556494d793254255"
+  },
+  "plan": {
+    "AGGREGATE_LIMITS_V1.json": {
+      "path": "persistent_queue/plan/AGGREGATE_LIMITS_V1.json",
+      "sha256": "78f8c015f497ad3828a631dc1fc03a4a52b850b2655e98a9c26879216b1f1495"
+    },
+    "PER_TASK_PARENT_BUDGETS_V1.json": {
+      "path": "persistent_queue/plan/PER_TASK_PARENT_BUDGETS_V1.json",
+      "sha256": "257c8439b5536b2552d61eb3945f035c17ee801166d96ad8fad2bfb9b5c0cc0c"
+    },
+    "SOURCES_V1.json": {
+      "path": "persistent_queue/plan/SOURCES_V1.json",
+      "sha256": "799add7a1d105425343690f501dae0c8a6dae84359548fe735b400af35dafc7c"
+    },
+    "STAGE_DAG_V1.json": {
+      "path": "persistent_queue/plan/STAGE_DAG_V1.json",
+      "sha256": "3cc5ab8e3985e216679bcd6f46aede53f41f24a742ed5371befdf54c5f1382fb"
+    },
+    "TASK_ORDINAL_OWNER_V1.json": {
+      "path": "persistent_queue/plan/TASK_ORDINAL_OWNER_V1.json",
+      "sha256": "8a2287de563e6590f792b79724c30557f493b77c9f87019db0b35a00da9c1639"
+    }
+  },
+  "task_briefs": {
+    "A": {
+      "path": "tasks/A_QUEUE_BOOTSTRAP_V1.md",
+      "sha256": "47f68a4dee4956413f2218ce660f357d701b5c7d33604ea5315f08aa23ad701a"
+    },
+    "B": {
+      "path": "tasks/B_QUEUE_JOIN_V1.md",
+      "sha256": "9590316819b8173803a4327bb1e8e22f6ecc48035fc9761588adfed6da68cc5f"
+    }
+  },
+  "implementation_install_start_and_continuation_authorized": true,
+  "manual_per_batch_release_required": false,
+  "automatic_stage_collection_source_limit": 475,
+  "automatic_activation_gates": [
+    "frozen_science_unchanged_and_targeted_queue_checks_pass",
+    "immutable_package_SHA_manifest_READY",
+    "detached_singleton_control_plane_tests_pass",
+    "node_environment_and_fixed_GPU_identity_verified_in_existing_entry",
+    "A_legacy_wave_all_descendants_exit_and_publication_cleanup_complete",
+    "per_batch_shared_storage_reservation_and_current_capacity_gate"
+  ],
+  "B_first_planned_parent_concurrency": 1,
+  "B_automatic_concurrency_after_pass": 2,
+  "allow_new_standalone_GPU_probes": false,
+  "training_or_formal_evaluation_authorized": false,
+  "legacy_CONTROL_scope": "Keep bytes unchanged for currentBatch3. Queue_bootstrap/control-plane and migrated future jobs use this separate explicit authorization; no bypass of frozen legacy entry.",
+  "legacy_releases_reusable": false,
+  "holder_policy": "one_node_reservation_across_runnable_queue; all8off until no runnable work and all descendants/publication drained",
+  "storage_risk_acceptance": {
+    "mode": "bounded_queue_stage_v1",
+    "accepts_monitoring_gaps": true,
+    "project_quota_known": false,
+    "exclusive_filesystem_reservation": false,
+    "shared_reservation_ledger_required": true,
+    "per_parent_admission_bytes": 11609841664,
+    "batch_auxiliary_bytes": 536870912,
+    "free_floor_bytes": 536870912,
+    "per_parent_inodes": 70000,
+    "batch_auxiliary_inodes": 4096,
+    "unknown": [
+      "quota",
+      "outside_or_unlinked_temp",
+      "monitor_overshoot",
+      "RSS_VRAM_peaks",
+      "actual_IO"
+    ]
+  },
+  "automatic_retry": false,
+  "same_technical_signature_consecutive_failure_breaker": 3,
+  "deletion_authorized": false,
+  "methods_or_hyperparameters_change_authorized": false,
+  "allowed_code_changes": [
+    "queue_supervisor_drain_and_atomic_ledger",
+    "queue_aware_non_nested_reservation_entry",
+    "per_node_host_device_metadata_binding",
+    "source_owner_and_split_generalization_exact_frozen_plan",
+    "deterministic_config_budget_and_command_generation",
+    "automatic_existing_technical_validator_and_publication",
+    "detached_service_join_waiter_and_recovery"
+  ],
+  "scientific_baseline": {
+    "protocol": {
+      "path": "contracts/COMMON_POOL_PROTOCOL_DECISIONS_V2.md",
+      "sha256": "70a264d35a3b58e104a5b671ba5aac4d4d23c0f73844f8ffd2d154f34a7235c0"
+    },
+    "latest_proposal": {
+      "path": "results/A/A11_BATCH3_PREP_CPU_V1/proposal/PROPOSAL.json",
+      "sha256": "6e568f44bd084852ef52bdba6e4535e5ce84d8baaf5d75b5a1cd095d4dcc346d"
+    },
+    "task_table": {
+      "path": "results/A/A11_MT50_CONTINUATION_CPU_V1/config/MT50_TASK_TABLE.json",
+      "sha256": "2455eb6026587b134dfc6b7d480b66c2afd58ad31903759239f8da6018073ed2"
+    }
+  },
+  "daemon_running_claimed": false
+}

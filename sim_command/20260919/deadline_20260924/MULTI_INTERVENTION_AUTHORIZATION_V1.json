@@ -1,0 +1,53 @@
+{
+  "schema": "corrector_deadline_addendum_v1",
+  "campaign_id": "corrector-sim-20260919",
+  "authorization_id": "A_D24_MULTI_INTERVENTION_PILOT_V1",
+  "task_id": "A_D24_MULTI_INTERVENTION_PILOT_V1",
+  "revision": 1,
+  "status": "released",
+  "issued_at_utc": "2026-09-21T15:57:35.390876+00:00",
+  "owner": "A",
+  "owner_host": "trial-303224955-trialrun-303224955-worker-0",
+  "plan": {
+    "path": "deadline_20260924/MULTI_INTERVENTION_PILOT_V1.md",
+    "sha256": "86c044e8f836c1b8dfb54444a3adbdbea199ce463a2e4f242ebff98b56561054"
+  },
+  "cohort": {
+    "path": "deadline_20260924/MULTI_INTERVENTION_COHORT_V1.json",
+    "sha256": "90888e4bb7333de26d045ee5270cc1628ecf254e771a1ebb2e4a9cf79802e457"
+  },
+  "base_sprint_authorization": {
+    "path": "deadline_20260924/AUTHORIZATION_V1.json",
+    "sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80"
+  },
+  "scientific_compute_authorized_now": true,
+  "priority": "interrupt_next_job_admission_before_large_corrector_eval; retain running jobs and N baselines",
+  "primary_arms": [
+    "R_once",
+    "R_multi",
+    "Post_once",
+    "Post_multi"
+  ],
+  "secondary_arms_if_ready": [
+    "Velocity_once",
+    "Velocity_multi"
+  ],
+  "episodes_per_arm": 50,
+  "control_steps_per_episode": 300,
+  "max_new_physical_rollout_attempts_including_corrected_retry": 400,
+  "counts_within_existing_A_sprint18000_cap": true,
+  "model_training_authorized": false,
+  "max_interventions": {
+    "once": 1,
+    "multi": null
+  },
+  "only_algorithm_change": "remove total intervention count cap; preserve all remaining trigger and execution conditions",
+  "strict_consistency_audit_required": false,
+  "requires_additional_release_or_preflight": false,
+  "automatic_next_arm_execution": true,
+  "old_completed_standalone_rerun_authorized": false,
+  "historical_once_result_reuse": "metadata-compatible selected repeat0 only; otherwise execute necessary once controls under new pilot run IDs",
+  "new_experiment_admission_cutoff_utc": "2026-09-23T12:00:00Z",
+  "result_path": "results/A/A_D24_MULTI_INTERVENTION_PILOT_V1",
+  "first_feedback": "submit R/Post50 table immediately without waiting Velocity"
+}

@@ -1,0 +1,98 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A10_GUARD_HANDOFF_INSTALL_V1",
+  "accepted_at_utc": "2026-09-19T22:45:24.157387+00:00",
+  "status": "CPU_file_installation_accepted_runtime_handoff_unverified",
+  "receipt": {
+    "path": "receipts/A/A10_GUARD_HANDOFF_INSTALL_V1_RESULT.json",
+    "sha256": "de6aba43e295137e338cc5927926af57bd360d129f4f589461269702b967ae3a"
+  },
+  "report": {
+    "path": "receipts/A/A10_GUARD_HANDOFF_INSTALL_V1_REPORT.md",
+    "sha256": "deb97b318189f23be6e54097e526697ddf6f1e1cc8aef84d3dafd1da9b82b78e"
+  },
+  "transition_result": {
+    "path": "work/A/guard_file_transitions/P00_A_GUARD_HANDOFF_INSTALL_V1/RESULT.json",
+    "sha256": "66f7d93b80c65bd4ada8fddd98baf3f25c03cd0a4987de3f65f9592ba89dd7bb"
+  },
+  "root_verification": {
+    "RESULT_artifact_refs_SHA_size": 14,
+    "evidence_files_SHA_size": 28,
+    "live_shared_target_SHA": "7910c567a47ddf68294d92fc9698cc780aeb130ddefde0337414bfcd88cb85a4",
+    "live_shared_target_byte_equals_frozen_patch": true,
+    "backup_byte_equals_frozen_original": true,
+    "mode": "0644",
+    "uid": 1000,
+    "gid": 1000,
+    "hardware_or_live_process_checks": 0
+  },
+  "target_before": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_guard.py",
+    "sha256": "d499982dff72c3b74ddab0e13e359edccb5f282900c534030b3816b58495fcaf",
+    "size_bytes": 8683,
+    "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_guard.py",
+    "is_symlink": false,
+    "regular_file": true,
+    "mode": "0o644",
+    "uid": 1000,
+    "gid": 1000,
+    "inode": 5910974545001805,
+    "device": 1048775,
+    "mtime_ns": 1789654372355956000,
+    "ctime_ns": 1789654372355956000
+  },
+  "target_after": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_guard.py",
+    "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_guard.py",
+    "sha256": "7910c567a47ddf68294d92fc9698cc780aeb130ddefde0337414bfcd88cb85a4",
+    "size_bytes": 10704,
+    "is_symlink": false,
+    "regular_file": true,
+    "mode": "0o644",
+    "uid": 1000,
+    "gid": 1000,
+    "inode": 5910974546204712,
+    "device": 1048775,
+    "mtime_ns": 1789857614192823000,
+    "ctime_ns": 1789857614196605278
+  },
+  "original_backup": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/guard_file_transitions/P00_A_GUARD_HANDOFF_INSTALL_V1/before_bytes.py",
+    "sha256": "d499982dff72c3b74ddab0e13e359edccb5f282900c534030b3816b58495fcaf",
+    "size_bytes": 8683
+  },
+  "resource_counts": {
+    "installer_command_invocations": 1,
+    "shared_file_replacements": 1,
+    "retries": 0,
+    "automatic_rollbacks": 0,
+    "compute_release_claims": 0,
+    "guard_import_compile_or_execute": 0,
+    "guard_start_or_status": 0,
+    "GPU_model_or_hardware_calls": 0,
+    "NVML_queries": 0,
+    "holder_queries": 0,
+    "holder_stops": 0,
+    "holder_restores": 0,
+    "formal_lock_operations": 0,
+    "daemon_restarts": 0,
+    "real_process_signals": 0,
+    "V3_launcher_invocations": 0,
+    "handoff_probe_invocations": 0,
+    "model_calls": 0,
+    "environment_calls": 0,
+    "training_calls": 0,
+    "large_model_hash_passes": 0,
+    "deletions": 0
+  },
+  "command_exit_code": 0,
+  "command_elapsed_seconds": 0.0681296,
+  "compute_counters_all_zero": true,
+  "daemon_restarted": false,
+  "holder_restoration_required": false,
+  "holder_live_health_asserted": false,
+  "handoff_runtime_verified": false,
+  "V3_numeric_verified": false,
+  "closure": "releases/P00_A_GUARD_HANDOFF_INSTALL_V1_CLOSED.json",
+  "next_step": "Separate V3 metadata review and compute release after installation closure; never reuse installation release"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "delivered",
+  "finished_at_utc": "2026-09-19T17:10:32.397837+00:00",
+  "target_session": "01a0b91f-355f-7cd1-ae36-412500534ffb",
+  "result_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PREFLIGHT_NATIVE_V1_RESULT.json",
+  "result_sha256": "465f97bcb72b70ff3265ffc227cc4bf5583910b79cf80c987377f5e0fdd1178b",
+  "returncode": 0,
+  "stdout": "Queued message 01a0baa5-f08d-7683-a274-f4e42c9bfea9 for thread 01a0b91f-355f-7cd1-ae36-412500534ffb.\n",
+  "stderr": "",
+  "message": "A10_PREFLIGHT_NATIVE_V1一次v4预检已结束：技术失败exit1，无重试，8张H100 holder已全部恢复。请关闭此已消耗的一次release。\nRESULT：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PREFLIGHT_NATIVE_V1_RESULT.json （SHA465f97bcb72b70ff3265ffc227cc4bf5583910b79cf80c987377f5e0fdd1178b）\n短报告：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PREFLIGHT_NATIVE_V1_REPORT.md\n审计：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V1_r1/FINAL_AUDIT.json；同目录ARTIFACT_MANIFEST.json。\n1. SFT完整SHA通过两层守门，真实加载完成；日志All keys loaded successfully，无missing/unexpected keys。两条vision embedding warning是固定加载器对patch key的提示，不是漏载。\n2. 实际1模型初始化、2物理环境+1包装器、50task-set+1包装初始化+1诊断native reset=52，全返回；104reset_model/5200do_simulation/26000初始化物理子步与v4预算一致。\n3. 第一次RGB渲染失败：MuJoCo EGL GLContext报Cannot initialize a EGL device display。发生在native reset返回后，完整backend观测返回前。\n4. 实际诊断attempt1；VLA采样/flow/策略步/完整rollout/反向/monitor/训练均0。计划诊断1、完成0、技术失败1、success=null，不贴任务失败标签。4条公共phase+10724条初始化phase已核对，无缺末事件。\n5. 重要计数命名：原resource_receipt.diagnostic_initial_states_returned=1只是native reset返回，完整RGB观测返回=0、可用初态产物=0。FINAL_AUDIT明确纠正解释，未覆盖原回执；建议后续版本改名并分计obs返回。\n6. 只读环境元数据：NVIDIA_DRIVER_CAPABILITIES=compute,utility；/usr/share/glvnd/egl_vendor.d无vendor JSON；ldconfig缓存无libEGL/libnvidia-egl。优先安排容器graphics/EGL暴露与查找链CPU核查；这不是证明宿主GPU不支持EGL。未补库、未换renderer、未加跑graphics probe。\n7. 实测准备42.65s、预约/holder释放37.63s、诊断215.43s、恢复观察14.01s，launcher端到端309.75s；未触发超时。子进程族RSS峰值39.31GiB；GPU0采样显存峰值9675MiB，GPU1–7受控时段显存均0。CUDA allocator峰值及实际GPU计算秒数未知，不以墙钟伪装。\n8. guard27508自动恢复8holder，17:06:35 UTC再次核验每卡1013MiB/49–50%。无无关进程终止、无闲置子集holder、无删除。\n9. 无raw5计划/图像/transition/queue_checks，原因是更早渲染失败。等待分析具体CPU修复任务及后续独立release；不沿用剩余采样/策略步额度重跑。存储专项回执已queue，27候选payload合计18,013,109,184bytes，B专项仍待，删除0。",
+  "analysis_acceptance": "not_implied"
+}

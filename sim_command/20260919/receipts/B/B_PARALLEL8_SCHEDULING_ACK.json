@@ -1,0 +1,31 @@
+{
+  "node": "B",
+  "at_utc": "2026-09-21T14:37:13.453394+00:00",
+  "user_request": "尽量同步使用八张卡提高真实训练/运行速度",
+  "target_real_GPU_count": 8,
+  "target_node_parallel_jobs": 8,
+  "backfill": true,
+  "default_two_GPU_limit": false,
+  "keep_frozen_scientific_recipe": true,
+  "do_not_add_seeds_for_occupancy": true,
+  "formal_GPU_tasks_currently_authorized": false,
+  "existing_E1_device": "cpu",
+  "GAF_existing_member_jobs": 3,
+  "GAF_note": "3 ensemble members are3 jobs; fill remaining cards from other approved independent stages, never invent5 extra seeds",
+  "X_SFT_candidate_GPU_world_size": 8,
+  "resource_snapshot": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_LONG_TASK_WAKEUP_V1_r1/RESOURCE8_SNAPSHOT.json",
+    "sha256": "416345780c78d389d18f841966fe8c7972e32b2c130a77197e31d17f4da90505"
+  },
+  "resource_unknowns": [
+    "visible effective cgroup memory/CPU headroom",
+    "shared project quota",
+    "workload measured RSS/VRAM/IO peaks"
+  ],
+  "next_A_first8_rule_is_A_only": true,
+  "occupancy_override": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/OCCUPANCY_OVERRIDE_V1.json",
+    "sha256": "0e896062a9c69dc51e6d1332eca5413c683d2c9bbed113b9346f8dba27310916"
+  },
+  "scientific_stage_freeze_still_required": true
+}

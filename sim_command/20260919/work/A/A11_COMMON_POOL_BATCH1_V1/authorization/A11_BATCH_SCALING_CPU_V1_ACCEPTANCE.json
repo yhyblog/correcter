@@ -1,0 +1,77 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A11_BATCH_SCALING_CPU_V1",
+  "revision": 1,
+  "accepted_at_utc": "2026-09-20T15:10:47.252184+00:00",
+  "status": "CPU_batch_preparation_accepted_for_conditional_concurrency2_wave",
+  "receipt": {
+    "path": "receipts/A/A11_BATCH_SCALING_CPU_V1_RESULT.json",
+    "sha256": "2627cee18b3b46d68f9e871ea25b51a053fa863e318207cc36b4709db8dcb995"
+  },
+  "report": {
+    "path": "results/A/A11_BATCH_SCALING_CPU_V1/REPORT.md",
+    "sha256": "2dd8f9d60c2349e520b9b95fcc7fb82a0906bf75021d0c3ccad7cd0a9f549f4e"
+  },
+  "evidence_manifest": {
+    "path": "results/A/A11_BATCH_SCALING_CPU_V1/EVIDENCE_MANIFEST.json",
+    "sha256": "ab2b977f2db303162f9ebb846b71a5408d84039032cb374a5de731e828031683"
+  },
+  "proposal": {
+    "path": "results/A/A11_BATCH_SCALING_CPU_V1/proposal/PROPOSAL.json",
+    "sha256": "3f48b0915c26176b282712a1b11f25d2edd9064a3e4a1048911fe10ff5932007"
+  },
+  "root_verification": {
+    "status": "PASS",
+    "products": 26,
+    "manifest_paths": 12129,
+    "unique_paths_checked": 12130,
+    "distinct_inodes_hashed": 6204,
+    "errors": [],
+    "actual_operations_zero": true,
+    "concurrency_proposed": 2,
+    "parent_count": 8,
+    "runtime_caps": 116,
+    "future_batch_paths_absent": true
+  },
+  "reported_unique_behavior_checks": 185,
+  "reported_static_entry_checks": 85,
+  "runtime_concurrency_measured_before_batch": 1,
+  "proposed_concurrency": 2,
+  "independent_reviews": {
+    "scientific": "8 exact predetermined slots; cut55 retains age5 then C10/C5 and H10; same protocol streams and source-level repeats; per-task reset/init-forward static derivation accepted; real new task/cut qualifications remain runtime gates.",
+    "scheduler": "One outer lifecycle, actual ProcessBackend fake PID/Popen/timer fixtures, sequential cold branches per parent, fixed UUID assignment, local ordinary-parent failures versus wave systemic failures, drain/publication/holder barriers accepted.",
+    "resource": "8 parent/branch116cap sums match proposal/release; batch storage arithmetic and metadata gates accepted; explicitly new batch memory/IO/storage risk acceptance required."
+  },
+  "task_initialization_forward_caps_per_attempt": {
+    "disassemble-v3": 210,
+    "pick-place-wall-v3": 106,
+    "shelf-place-v3": 210,
+    "stick-pull-v3": 210,
+    "stick-push-v3": 210
+  },
+  "wave_initialization_forward_cap": 22080,
+  "nonblocking_annotation": {
+    "field": "IO_quote.input_hash_logical_bytes_upper",
+    "accepted_meaning": "known-size logical-read subtotal/quote;116 unknown-size files prevent a strict upper bound",
+    "strict_total_IO_upper_bytes": null,
+    "actual_disk_IO_bytes": null,
+    "published_CPU_package_unchanged": true
+  },
+  "new_batch_risk_acceptance": {
+    "path": "contracts/BATCH1_RISK_AND_SCOPE_V1.md",
+    "sha256": "94fca0eb4c256d521fc19608b23f6498b5cbf31ad44a1b631b16b7781d1c6210",
+    "mode": "bounded_batch1",
+    "parent_count": 8,
+    "concurrency": 2,
+    "accepts_monitoring_gaps": true,
+    "project_quota_known": false,
+    "exclusive_reservation": false,
+    "accepts_unknown_container_memory_RSS_VRAM_IO": true,
+    "required_available_bytes": 93952475136,
+    "minimum_available_inodes": 564096
+  },
+  "next_task": "A11_COMMON_POOL_BATCH1_V1",
+  "new_accepted_parents_from_CPU_work": 0,
+  "accepted_pool_count_remains": 1,
+  "no_performance_or_concurrency_success_claim": true
+}

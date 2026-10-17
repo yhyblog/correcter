@@ -1,0 +1,250 @@
+{
+  "utc": "2026-09-22T10:19:23.575243+00:00",
+  "task_id": "A_D24_PAPER_RESULTS_ASSEMBLY_V1",
+  "revision": 1,
+  "status": "CPU_COMPLETE_20_CELL_PUBLICATION",
+  "executor_thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+  "authorization_sha256": "6f0d7eea491696782df115e9cf1f326e542fcfc66f8cb0317cffa2eb2c5e36a1",
+  "report": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1_REPORT_r1.md",
+  "publication_revision": 3,
+  "publication_snapshot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/revisions/r03/PUBLICATION.json",
+  "current_results": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1",
+  "initial16_snapshot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/revisions/r01/PUBLICATION.json",
+  "main_cells": 20,
+  "main_valid_episodes": 10000,
+  "shared_test_source_identities": 500,
+  "GAF_paired": [
+    {
+      "comparison": "GAF - N",
+      "n": 500,
+      "candidate_successes": 315,
+      "comparator_successes": 308,
+      "difference_pp": 1.4,
+      "CI95_low_pp": -0.2,
+      "CI95_high_pp": 3.2,
+      "rescued": 14,
+      "harmed": 7,
+      "both_success": 301,
+      "both_failure": 178,
+      "exact_McNemar_two_sided_p": 0.18924713134765625,
+      "uncertainty_method": "2000 within-task source bootstrap draws, numpy.default_rng(20260921); 50 fixed tasks x 10 sources, shared draws; pointwise percentile 2.5/97.5%; conditional on these tasks and frozen models, not task-population or training-seed uncertainty",
+      "CI_null_reason": null,
+      "Holm_p_four_GAF_comparisons": 0.18924713134765625
+    },
+    {
+      "comparison": "GAF - R",
+      "n": 500,
+      "candidate_successes": 315,
+      "comparator_successes": 336,
+      "difference_pp": -4.2,
+      "CI95_low_pp": -7.3999999999999995,
+      "CI95_high_pp": -1.0,
+      "rescued": 33,
+      "harmed": 54,
+      "both_success": 282,
+      "both_failure": 131,
+      "exact_McNemar_two_sided_p": 0.0314181102338461,
+      "uncertainty_method": "2000 within-task source bootstrap draws, numpy.default_rng(20260921); 50 fixed tasks x 10 sources, shared draws; pointwise percentile 2.5/97.5%; conditional on these tasks and frozen models, not task-population or training-seed uncertainty",
+      "CI_null_reason": null,
+      "Holm_p_four_GAF_comparisons": 0.0628362204676922
+    },
+    {
+      "comparison": "GAF - Post",
+      "n": 500,
+      "candidate_successes": 315,
+      "comparator_successes": 345,
+      "difference_pp": -6.0,
+      "CI95_low_pp": -9.0,
+      "CI95_high_pp": -2.8000000000000003,
+      "rescued": 33,
+      "harmed": 63,
+      "both_success": 282,
+      "both_failure": 122,
+      "exact_McNemar_two_sided_p": 0.002878610081200932,
+      "uncertainty_method": "2000 within-task source bootstrap draws, numpy.default_rng(20260921); 50 fixed tasks x 10 sources, shared draws; pointwise percentile 2.5/97.5%; conditional on these tasks and frozen models, not task-population or training-seed uncertainty",
+      "CI_null_reason": null,
+      "Holm_p_four_GAF_comparisons": 0.011514440324803728
+    },
+    {
+      "comparison": "GAF - Velocity",
+      "n": 500,
+      "candidate_successes": 315,
+      "comparator_successes": 340,
+      "difference_pp": -5.0,
+      "CI95_low_pp": -8.4,
+      "CI95_high_pp": -1.7999999999999998,
+      "rescued": 36,
+      "harmed": 61,
+      "both_success": 279,
+      "both_failure": 124,
+      "exact_McNemar_two_sided_p": 0.014389633007095661,
+      "uncertainty_method": "2000 within-task source bootstrap draws, numpy.default_rng(20260921); 50 fixed tasks x 10 sources, shared draws; pointwise percentile 2.5/97.5%; conditional on these tasks and frozen models, not task-population or training-seed uncertainty",
+      "CI_null_reason": null,
+      "Holm_p_four_GAF_comparisons": 0.04316889902128698
+    }
+  ],
+  "E1_fit_seeds": 3,
+  "E1_errorbar": "sample SD ddof1, not pooled-source SE",
+  "E6": {
+    "task": "ALL five tasks",
+    "n_each": 50,
+    "D5_successes": 30,
+    "G0_successes": 26,
+    "D5_rate_pct": 60.0,
+    "G0_rate_pct": 52.0,
+    "D5_minus_G0_pp": 8.0,
+    "D5_rescues": 5,
+    "D5_harms": 1,
+    "both_success": 25,
+    "both_failure": 19,
+    "exact_McNemar_two_sided_p": 0.21875
+  },
+  "E8_N": {
+    "Smol": [
+      234,
+      496
+    ],
+    "X": [
+      403,
+      500
+    ],
+    "LIBERO": [
+      387,
+      399
+    ]
+  },
+  "LIBERO_Full": {
+    "status": "SCIENTIFIC_GAP",
+    "success_rate": null,
+    "test_attempts": 0,
+    "updates": 0,
+    "development_attempts": 40,
+    "valid_development": 30,
+    "preserved_technical_failures": 10,
+    "cumulative_development": 200
+  },
+  "observer_status": "both_nodes_consumed_once_and_exited",
+  "observer_identity": {
+    "pid": 2061806,
+    "start_ticks": 411198809,
+    "host": "trial-303224955-trialrun-303224955-worker-0",
+    "boot_id": "9011c00c-6953-4cb3-a724-1a6f90d196d4",
+    "state": "R"
+  },
+  "terminal_consumptions": {
+    "B": {
+      "state": "consumed",
+      "node": "B",
+      "task_id": "B_D24_R_H20_H30_V1",
+      "horizons": [
+        20,
+        30
+      ],
+      "consumed_at_utc": "2026-09-22T10:15:04.569141+00:00",
+      "run_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_R_H20_H30_V1",
+      "terminal_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_R_H20_H30_V1/RESULT.json",
+      "summary_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_R_H20_H30_V1/FINAL_SUMMARY.json",
+      "episodes_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_R_H20_H30_V1/FINAL_EPISODES.csv",
+      "terminal_status": "complete",
+      "terminal_utc": "2026-09-22T09:48:55.554201+00:00",
+      "terminal_sha256": "de445be2dd7c1582c33d3b1ebaf14d5f7d5c951e07e1e44475650d8b2e7c6eec",
+      "episodes_sha256": "c6dda99a011fe85bc958df9f3d0ca189e737146c0259b2835fa0b7ef0e677bb7",
+      "valid_by_H": {
+        "20": 500,
+        "30": 500
+      },
+      "success_by_H": {
+        "20": 312,
+        "30": 307
+      },
+      "technical_failures_by_H": {
+        "20": 0,
+        "30": 0
+      },
+      "attempts_by_H": {
+        "20": 500,
+        "30": 500
+      },
+      "scientific_compute": 0,
+      "reason": null
+    },
+    "C": {
+      "state": "consumed",
+      "node": "C",
+      "task_id": "C_D24_R_H40_H50_V1",
+      "horizons": [
+        40,
+        50
+      ],
+      "consumed_at_utc": "2026-09-22T10:15:06.479113+00:00",
+      "run_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_R_H40_H50_V1/r2",
+      "terminal_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_R_H40_H50_V1/r2/RESULT.json",
+      "summary_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_R_H40_H50_V1/r2/SUMMARY.json",
+      "episodes_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_R_H40_H50_V1/r2/EPISODES.csv",
+      "terminal_status": "complete",
+      "terminal_utc": "2026-09-22T10:14:32.155852+00:00",
+      "terminal_sha256": "32ca06f93d5141457aa654d6aefabf1a3f701c786c181073b1948fdebc2878e0",
+      "episodes_sha256": "f5e2a5a7f81e770a8310f961e18f32469a327a4c336a86d657218b99154a41ed",
+      "valid_by_H": {
+        "40": 500,
+        "50": 500
+      },
+      "success_by_H": {
+        "40": 290,
+        "50": 297
+      },
+      "technical_failures_by_H": {
+        "40": 0,
+        "50": 0
+      },
+      "attempts_by_H": {
+        "40": 500,
+        "50": 500
+      },
+      "scientific_compute": 0,
+      "reason": null
+    }
+  },
+  "callback_transport": "Two original-thread queue deliveries; not handler ACKs; no new callback self-test",
+  "scientific_compute": 0,
+  "model_forward_backward": 0,
+  "new_episodes": 0,
+  "training_updates": 0,
+  "hardware_queries": 0,
+  "holder_changes": 0,
+  "weight_hashes": 0,
+  "deletions": 0,
+  "analysis_controls_modified": false,
+  "original_results_modified": false,
+  "shared_master_document_modified": false,
+  "artifacts": {
+    "PUBLICATION.json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/PUBLICATION.json",
+    "RESULTS_FOR_PAPER.md": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/RESULTS_FOR_PAPER.md",
+    "MASTER_DOCUMENT_UPDATE.md": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/MASTER_DOCUMENT_UPDATE.md",
+    "CAPTIONS.md": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/CAPTIONS.md",
+    "MAIN_20CELL_TABLE.csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/MAIN_20CELL_TABLE.csv",
+    "MAIN_FULL_MINUS_R_PAIRED.csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/MAIN_FULL_MINUS_R_PAIRED.csv",
+    "MAIN_H_CURVES.pdf": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/MAIN_H_CURVES.pdf",
+    "E3_GAF_PAIRED.csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/E3_GAF_PAIRED.csv",
+    "E3_GAF_PAIRED.json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/E3_GAF_PAIRED.json",
+    "E3_COMPARISON_TABLE.tex": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/E3_COMPARISON_TABLE.tex",
+    "E1_LOSS_ABLATION_TABLE.tex": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/E1_LOSS_ABLATION_TABLE.tex",
+    "E1_SEED_APPENDIX.csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/E1_SEED_APPENDIX.csv",
+    "E6_TRIGGER_TABLE.tex": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/E6_TRIGGER_TABLE.tex",
+    "E5_AMORTIZED_COST_TABLE.csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/E5_AMORTIZED_COST_TABLE.csv",
+    "E5_TIMING_RANGES.csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/E5_TIMING_RANGES.csv",
+    "E5_PARAMETER_TABLE.csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/E5_PARAMETER_TABLE.csv",
+    "E8_TABLE.csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/E8_TABLE.csv",
+    "E8_PAIRED.csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/E8_PAIRED.csv",
+    "LIBERO_SCOPE_AND_GAP.md": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/LIBERO_SCOPE_AND_GAP.md",
+    "SOURCE_INDEX.json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/SOURCE_INDEX.json",
+    "ARTIFACT_PROVENANCE.json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/ARTIFACT_PROVENANCE.json",
+    "FINAL_OUTPUT_CHECKS.json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/FINAL_OUTPUT_CHECKS.json",
+    "EXECUTOR_CODE_INDEX.json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/EXECUTOR_CODE_INDEX.json",
+    "observer/REGISTRATION.json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/observer/REGISTRATION.json",
+    "observer/READY.json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/observer/READY.json",
+    "observer/HEARTBEAT.json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/observer/HEARTBEAT.json",
+    "observer/TERMINAL.json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_PAPER_RESULTS_ASSEMBLY_V1/observer/TERMINAL.json"
+  },
+  "next_action": "Analysis can merge provided master-document fragment; no further observer waiting or scientific launch."
+}

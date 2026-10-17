@@ -1,0 +1,37 @@
+{
+  "issued_at_utc": "2026-09-22T17:24:44.988414+00:00",
+  "authorization": {
+    "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+    "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+  },
+  "nodes": {
+    "A": {
+      "task": "A_D24_QUOTA_INDEPENDENT_QUEUE_V1",
+      "status": "published_waiting_executor_ready",
+      "transport": "accepted_queue",
+      "queue_id": "01a0ca27-02f1-7860-80b2-b5499a08952b",
+      "handler_ACK_observed": false
+    },
+    "B": {
+      "task": "B_D24_QUOTA_INDEPENDENT_QUEUE_V1",
+      "status": "published_waiting_executor_ready",
+      "metadata_discovery_eligible": true,
+      "handler_ACK_observed": false,
+      "known_gap": "non_publication_recovery_still_callback_dependent",
+      "dependency_file_contains_task": true
+    },
+    "C": {
+      "task": "C_D24_QUOTA_INDEPENDENT_QUEUE_V1",
+      "status": "published_waiting_executor_ready",
+      "discovery_event": "C_929f672d9dc8af23599afa7711a80af3",
+      "handler_ACK_observed": false,
+      "known_gap": "old_native_joint_score_validator_must_accept_Post_only_lock"
+    }
+  },
+  "priority_authorizations_unchanged": true,
+  "rule": {
+    "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_V1.md",
+    "sha256": "28ee96191563eb354a90d1e4b377be82dda75494dbba8e055b844e80cb97be74"
+  },
+  "last_delivery_check_utc": "2026-09-22T17:26:53.754579+00:00"
+}

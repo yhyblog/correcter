@@ -1,0 +1,27 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "accepted_at_utc": "2026-09-19T16:07:51.623784+00:00",
+  "accepted": [
+    {
+      "task_id": "A10",
+      "receipt": "receipts/A/A10_RESULT.json",
+      "receipt_sha256": "c2fe9e32551eedc24ba4b52f25513e977470856dabe4e84c850db7226e612b35",
+      "status": "accepted_cpu_preparation",
+      "formal_compute_counts_zero": true
+    },
+    {
+      "task_id": "B10",
+      "receipt": "receipts/B/B10_RESULT.json",
+      "receipt_sha256": "342c670814970f7e30b7d1b41458c2b5f8b0410af8995dd7da6e4c05d006aa4b",
+      "status": "accepted_cpu_preparation",
+      "formal_compute_counts_zero": true
+    }
+  ],
+  "formal_compute_authorized": false,
+  "preflight_release_status": "awaiting_bounded_revision",
+  "required_fixes": {
+    "A": "Account hidden MT1 initialization resets and environment instances, pin source identities",
+    "B": "Pin/verify GPU UUID and driver and current release identity before GPU model execution"
+  },
+  "note": "CPU deliverables accepted; this does not accept quoted GPU budgets unchanged."
+}

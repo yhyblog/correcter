@@ -1,0 +1,65 @@
+{
+  "published_at_utc": "2026-09-22T16:58:04.988494+00:00",
+  "rule": {
+    "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_V1.md",
+    "sha256": "f3ef2d8727e952d3ef58c7a9ebed40c07a79736e8198fd9978df169a46a2dbb7"
+  },
+  "authorization": {
+    "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V1.json",
+    "sha256": "87878b0e2019048935904d639d1d15a1af9f0778047171a508054fecaadd4ab0"
+  },
+  "nodes": {
+    "A": {
+      "task_id": "A_D24_AUTORECOVERY_QUEUE_RULE_V1",
+      "status": "original_thread_transport_accepted_handler_pending",
+      "message": "nodes/A/AUTONOMOUS_RECOVERY_RULE_MESSAGE.txt",
+      "queue_id": "01a0ca0d-fd50-7d90-85cb-7129cb38576f"
+    },
+    "B": {
+      "task_id": "B_D24_AUTORECOVERY_QUEUE_RULE_V1",
+      "status": "dependency_event_discovered_transport_and_handler_pending",
+      "message": "nodes/B/AUTONOMOUS_RECOVERY_RULE_MESSAGE.txt",
+      "event_id": "B_4e48833bfb3a019fbd0f68fec2a0b5b0"
+    },
+    "C": {
+      "task_id": "C_D24_AUTORECOVERY_QUEUE_RULE_V1",
+      "status": "original_thread_transport_accepted_handler_pending",
+      "message": "nodes/C/AUTONOMOUS_RECOVERY_RULE_MESSAGE.txt",
+      "event_id": "C_6346d45db738c2eae7e57e6286cf20d2",
+      "accepted_at_utc": "2026-09-22T17:00:48Z",
+      "CPU_only": true
+    }
+  },
+  "prior_autorun_ACKs_observed": {
+    "A": {
+      "path": "receipts/A/A_D24_FULL_Q_AUTORUN_HANDOFF_V2_ACK.json",
+      "sha256": "4d1aee7dbb57514e7707e987e9c19566996dd75da67b815020200b039409ab8d"
+    },
+    "C": {
+      "path": "receipts/C/C_D24_PI05_SELECTED_H40_H50_V1_ACK.json",
+      "sha256": "50dd9217b3e24a1aa889fa85e710587315f4473d52f40382ba3fe99f76173573"
+    }
+  },
+  "control_revision": 77,
+  "queue_revision": 48,
+  "board_revision": 113,
+  "live_priority_identity_preserved": true,
+  "actual_executor_rule_deployment_not_yet_observed": true,
+  "C_discovery_metadata_correction": {
+    "at_utc": "2026-09-22T17:00:20.346160+00:00",
+    "reason": "C parser expects nodes.C and new_GPU_claims; V1 has tasks.C and new_GPU_claims_for_control_task",
+    "authorization": {
+      "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V2.json",
+      "sha256": "0e0c6a309bf90c1d79d75d34a7d96470704c60e084c9b05b76621115341f82f7"
+    },
+    "A_B_original_binding_unchanged": true,
+    "science_priority_unchanged": true
+  },
+  "A_direct_delivery": {
+    "queue_id": "01a0ca0d-fd50-7d90-85cb-7129cb38576f",
+    "target_thread": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+    "transport_accepted": true,
+    "handler_consumption_not_inferred": true
+  },
+  "delivery_observed_at_utc": "2026-09-22T17:02:03.073259+00:00"
+}

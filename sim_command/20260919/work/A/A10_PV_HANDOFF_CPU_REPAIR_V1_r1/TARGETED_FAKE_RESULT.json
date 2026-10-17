@@ -1,0 +1,201 @@
+{
+  "status": "passed",
+  "scope": "Only handoff run-client changes, actual metadata/environment/manifest guards and inherited group exit barrier; no old numeric suite",
+  "guard_cases": 26,
+  "guard_results": [
+    {
+      "case": "old90_rejects_holder_clear_at120",
+      "status": "passed"
+    },
+    {
+      "case": "new300_accepts_holder_clear_at120",
+      "status": "passed"
+    },
+    {
+      "case": "new_default90_rejects_holder_clear_at120",
+      "status": "passed"
+    },
+    {
+      "case": "new_default90_accepts_clear_at20",
+      "status": "passed"
+    },
+    {
+      "case": "persistent_external_apps_timeout_no_kill",
+      "status": "passed"
+    },
+    {
+      "case": "query_error_first_poll_not_empty",
+      "status": "passed"
+    },
+    {
+      "case": "query_error_preserves_prior_observation",
+      "status": "passed"
+    },
+    {
+      "case": "malformed_query_is_rejected",
+      "status": "passed"
+    },
+    {
+      "case": "late_empty_query_after_deadline_rejected",
+      "status": "passed"
+    },
+    {
+      "case": "failure_record_truncates_100_rows",
+      "status": "passed"
+    },
+    {
+      "case": "child_failure_keeps_reservation_until_group_exit",
+      "status": "passed"
+    },
+    {
+      "case": "signal_forwarding_and_KILL_drain_barrier",
+      "status": "passed"
+    },
+    {
+      "case": "invalid_value_00",
+      "status": "passed"
+    },
+    {
+      "case": "invalid_value_01",
+      "status": "passed"
+    },
+    {
+      "case": "invalid_value_02",
+      "status": "passed"
+    },
+    {
+      "case": "invalid_value_03",
+      "status": "passed"
+    },
+    {
+      "case": "invalid_value_04",
+      "status": "passed"
+    },
+    {
+      "case": "invalid_value_05",
+      "status": "passed"
+    },
+    {
+      "case": "invalid_value_06",
+      "status": "passed"
+    },
+    {
+      "case": "invalid_value_07",
+      "status": "passed"
+    },
+    {
+      "case": "invalid_value_08",
+      "status": "passed"
+    },
+    {
+      "case": "invalid_value_09",
+      "status": "passed"
+    },
+    {
+      "case": "invalid_value_10",
+      "status": "passed"
+    },
+    {
+      "case": "invalid_value_11",
+      "status": "passed"
+    },
+    {
+      "case": "invalid_value_12",
+      "status": "passed"
+    },
+    {
+      "case": "invalid_value_13",
+      "status": "passed"
+    }
+  ],
+  "metadata_cases": [
+    {
+      "case": "V3_ready_passes",
+      "accepted": true,
+      "expected": true,
+      "error": null
+    },
+    {
+      "case": "V3_running_passes",
+      "accepted": true,
+      "expected": true,
+      "error": null
+    },
+    {
+      "case": "board_released_rejects",
+      "accepted": false,
+      "expected": false,
+      "error": "Task board mismatch"
+    },
+    {
+      "case": "old_V2_identity_rejects",
+      "accepted": false,
+      "expected": false,
+      "error": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "case": "closed_V3_rejects",
+      "accepted": false,
+      "expected": false,
+      "error": "Release is closed"
+    },
+    {
+      "case": "release_handoff_90_rejects",
+      "accepted": false,
+      "expected": false,
+      "error": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "case": "control_handoff_missing_rejects",
+      "accepted": false,
+      "expected": false,
+      "error": "Frozen V3 handoff metadata mismatch"
+    },
+    {
+      "case": "proposal_handoff_wrong_rejects",
+      "accepted": false,
+      "expected": false,
+      "error": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "case": "external_manifest_SHA_wrong_rejects",
+      "accepted": false,
+      "expected": false,
+      "error": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "case": "unreleased_template_rejects",
+      "accepted": false,
+      "expected": false,
+      "error": "Release identity/caps differ from frozen proposal"
+    }
+  ],
+  "actual_environment_checks": 4,
+  "actual_guard_manifest_fixture_checks": 3,
+  "pure_publication_result": {
+    "status": "PASS_METADATA_ONLY_NOT_AUTHORIZATION",
+    "task_id": "A10_PV_OFFLINE_PREFLIGHT_V3",
+    "release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V3",
+    "board_status": "ready",
+    "release_status": "released",
+    "proposal_sha256": "c07750be489911e2d7363729d8ed186605f8792337c9f4118677e20a3af1ca2a",
+    "manifest_entries_followed": false,
+    "hardware_identity_verified": false,
+    "real_launcher_invocations": 0,
+    "compute_release_claims": 0,
+    "holder_operations": 0,
+    "large_weight_hashes": 0,
+    "publication_is_authorization": false
+  },
+  "blocked_real_operations": [],
+  "live_guard_imports": 0,
+  "real_locks_processes_queries_signals": 0,
+  "real_launcher_invocations": 0,
+  "compute_release_claims": 0,
+  "holder_queries_stops": 0,
+  "shared_installations": 0,
+  "daemon_restarts": 0,
+  "large_model_hashes": 0,
+  "whole_algorithm_suite_runs": 0,
+  "deletions": 0
+}

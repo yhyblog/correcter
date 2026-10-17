@@ -1,0 +1,46 @@
+{
+  "task": "A_D24_SPRINT_V1",
+  "authorization_sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80",
+  "host": "trial-303224955-trialrun-303224955-worker-0",
+  "model_id": "pi05_MT50_SFT030000",
+  "model_checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model",
+  "model_sha256_from_accepted_evidence": "dff338a91dbe534ca3c4525ba82df9324662e3c87131f42ed6e3d1b7bf0e94d4",
+  "new_weight_hash": false,
+  "concurrency": 8,
+  "control_hz": 30,
+  "physics_hz": 400,
+  "action_scale": 0.015,
+  "episode_steps": 300,
+  "RGB": [
+    480,
+    480
+  ],
+  "camera": "corner2",
+  "flow_steps": 10,
+  "raw_horizon": 50,
+  "action_dim": 4,
+  "first_test_count_per_task": 10,
+  "deadline_utc": "2026-09-23T12:00:00Z",
+  "methods_implemented": [
+    "N"
+  ],
+  "H_order": [
+    10,
+    30,
+    50,
+    20,
+    40
+  ],
+  "planned_N_episodes": 2500,
+  "overall_A_attempt_cap": 18000,
+  "timeout": {
+    "load_seconds": 900,
+    "episode_seconds": 1800,
+    "job_seconds": 19000,
+    "handoff_seconds": 300
+  },
+  "holder_policy": "all8off_across_runnable_chain",
+  "automatic_retries": 0,
+  "model_residency": "one full model per worker across task/H jobs",
+  "metrics": "success is null on technical exception, terminal success alone determines success; no per-frame saving"
+}

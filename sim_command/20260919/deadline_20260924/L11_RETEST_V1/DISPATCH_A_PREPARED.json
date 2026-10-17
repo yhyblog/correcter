@@ -1,0 +1,94 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "node": "A",
+  "target_role": "A",
+  "task_id": "A_D24_L11_RETEST_V1",
+  "priority_task": "A_D24_L11_RETEST_V1",
+  "task_revision": 1,
+  "revision": 1,
+  "task": "tasks/A_D24_L11_RETEST_V1.md",
+  "brief": {
+    "path": "tasks/A_D24_L11_RETEST_V1.md",
+    "sha256": "e7306ba30441f9c90827558419c7da544f1f459779e1903a66f78ae9e4fb629f"
+  },
+  "authorization": {
+    "path": "deadline_20260924/L11_RETEST_V1/AUTHORIZATION.json",
+    "sha256": "a978519ba24dfb3aba22cf5ce8472d9b855e788e44266a28e0d006be876d5e87"
+  },
+  "release": {
+    "path": "deadline_20260924/L11_RETEST_V1/AUTHORIZATION.json",
+    "sha256": "a978519ba24dfb3aba22cf5ce8472d9b855e788e44266a28e0d006be876d5e87"
+  },
+  "target_hostname": "trial-303224955-trialrun-303224955-worker-0",
+  "target_session": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+  "status": "ready",
+  "issued_at_utc": "2026-09-23T02:12:16.334459+00:00",
+  "updated_at_utc": "2026-09-23T02:12:16.334459+00:00",
+  "ACK_received": false,
+  "scientific_launch_observed": false,
+  "new_task_started": false,
+  "previous_task_complete": true,
+  "acknowledgement_path": "receipts/A/A_D24_L11_RETEST_V1_ACK.json",
+  "expected_result": "receipts/A/A_D24_L11_RETEST_V1_RESULT_r1.json",
+  "desired_action": "deploy_new_L11_finite_queue_then_formally_execute_owned_units",
+  "instruction": "Latest explicit user: L11/fit9101 fixed;24 active logical branches/GPU x8 GPUs=192/node. Prepare private runner and execute under this new finite authorization without a second approval. Only own unit manifest; all holders off entire wave; preserve old results.",
+  "selection_rule_override": {
+    "path": "deadline_20260924/L11_RETEST_V1/L11_SELECTION_OVERRIDE.json",
+    "sha256": "2006bc5818911d80a7b325bc91699c789675bb62b75647a4abcc8012119dffe2"
+  },
+  "evaluation_concurrency_policy": {
+    "path": "deadline_20260924/L11_RETEST_V1/CONCURRENCY_192.md",
+    "sha256": "b87c88e9feb678b657b6d404a5c715f27eb7c52077f49f63e122d45cfb6f18eb"
+  },
+  "new_units": {
+    "path": "deadline_20260924/L11_RETEST_V1/prepared_by_analysis/NEW_UNITS_A.jsonl",
+    "sha256": "0309898d184d664770ae62fc61ae11f9104374c3859447a5c4f1ac1a9debdc86"
+  },
+  "autonomous_recovery_policy": {
+    "path": "deadline_20260924/L11_RETEST_V1/AUTHORIZATION.json",
+    "sha256": "a978519ba24dfb3aba22cf5ce8472d9b855e788e44266a28e0d006be876d5e87"
+  },
+  "analysis_wait_timeout_seconds": 1800,
+  "previous_dispatch_archive": "deadline_20260924/L11_RETEST_V1/prior_control_snapshot/DISPATCH_A.json",
+  "authorized_followups": [
+    {
+      "task_id": "A_D24_L11_RETEST_V1",
+      "revision": 1,
+      "task_revision": 1,
+      "task": "tasks/A_D24_L11_RETEST_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/L11_RETEST_V1/AUTHORIZATION.json",
+        "sha256": "a978519ba24dfb3aba22cf5ce8472d9b855e788e44266a28e0d006be876d5e87"
+      },
+      "start_condition": "own_prior_family_exited;L11_selection_already_fixed",
+      "planned_episodes": 2900,
+      "stage_attempt_cap": 3200
+    }
+  ],
+  "control_plane_followups": [
+    {
+      "task_id": "A_D24_AUTORECOVERY_QUEUE_RULE_V1",
+      "task_revision": 1,
+      "revision": 1,
+      "task": "tasks/A_D24_AUTORECOVERY_QUEUE_RULE_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V1.json",
+        "sha256": "87878b0e2019048935904d639d1d15a1af9f0778047171a508054fecaadd4ab0"
+      },
+      "scope": "CPU_only_operational_recovery_and_queue_progress",
+      "does_not_replace_primary_task": true
+    },
+    {
+      "task_id": "A_D24_QUOTA_INDEPENDENT_QUEUE_V1",
+      "task_revision": 1,
+      "revision": 1,
+      "task": "tasks/A_D24_QUOTA_INDEPENDENT_QUEUE_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+        "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+      },
+      "scope": "CPU_only_quota_independent_queue_deployment",
+      "does_not_replace_primary_task": true
+    }
+  ]
+}

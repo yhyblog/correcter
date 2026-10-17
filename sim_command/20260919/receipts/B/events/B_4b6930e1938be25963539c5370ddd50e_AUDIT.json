@@ -1,0 +1,123 @@
+{
+  "schema": "B_terminal_event_audit_v1",
+  "event_id": "B_4b6930e1938be25963539c5370ddd50e",
+  "task_id": "B_D24_R_H20_H30_V1",
+  "run_id": "D24_B_R_H20_H30_r1",
+  "at_utc": "2026-09-22T09:56:50.406286+00:00",
+  "node": "B",
+  "hostname": "trial-303225685-trialrun-303225685-worker-0",
+  "executor_thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+  "outcome": "audited_complete",
+  "event_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/outbox/B_4b6930e1938be25963539c5370ddd50e.json",
+  "result_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_R_H20_H30_V1/RESULT.json",
+  "final_summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_R_H20_H30_V1/FINAL_SUMMARY.json",
+  "runtime_evidence": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/events/B_4b6930e1938be25963539c5370ddd50e_RUNTIME.json",
+  "claim_matches_registered_event": true,
+  "current_authority": {
+    "control_revision": 67,
+    "control_updated_at_utc": "2026-09-22T09:53:03.454197+00:00",
+    "stop_requested": false,
+    "active_B_compute_task_ids": [
+      "B_D24_R_H20_H30_V1"
+    ],
+    "queue_revision": 34,
+    "queue_global_stop": false,
+    "B_enabled": true,
+    "B_priority_task": "B_D24_R_H20_H30_V1",
+    "task_board_revision": 99,
+    "B_task_snapshot": [
+      {
+        "id": "B_D24_SPRINT_V1",
+        "status": "complete",
+        "execution_stage": "all_assigned_sprint_and_extension_results_complete",
+        "expected_result": null
+      },
+      {
+        "id": "B_D24_EXTENSION_REMAINDER_V1",
+        "status": "complete",
+        "execution_stage": "E1_and_all_assigned_extensions_complete",
+        "expected_result": "receipts/B/B_D24_EXTENSION_REMAINDER_V1_RESULT.json"
+      },
+      {
+        "id": "B_D24_R_H20_H30_V1",
+        "status": "running",
+        "execution_stage": "formal_evaluation_running_NVIDIA_EGL_confirmed",
+        "expected_result": "receipts/B/B_D24_R_H20_H30_V1_RESULT.json"
+      }
+    ],
+    "legacy_dependency_ready_tasks": [],
+    "snapshot_note": "Global board/queue running fields are lagging snapshots. Local RESULT plus saved rows and host-scoped process identities establish B terminal completion. No additional B science task is released."
+  },
+  "terminal_validation": {
+    "scope": "Saved episode/task rows, original frozen source seeds, small terminal references, and current process identities; no scientific rerun or full-state replay.",
+    "original_sources_per_H": 500,
+    "source_ordinals": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "reserve_sources_used": 0,
+    "unique_H_source_rows": 1000,
+    "duplicate_rows": 0,
+    "source_task_env_policy_seed_match": true,
+    "saved_task_rows": 100,
+    "cells": [
+      {
+        "H": 20,
+        "valid": 500,
+        "successes": 312,
+        "technical_failures": 0,
+        "execution_unknown": 0,
+        "unstarted": 0,
+        "success_rate": 0.624
+      },
+      {
+        "H": 30,
+        "valid": 500,
+        "successes": 307,
+        "technical_failures": 0,
+        "execution_unknown": 0,
+        "unstarted": 0,
+        "success_rate": 0.614
+      }
+    ],
+    "missing_sources": 0,
+    "attempts": 1000,
+    "cumulative_B_attempts": 6687,
+    "training_updates": 0,
+    "paired_statistics_reference": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_R_H20_H30_V1/FINAL_PAIRED.json",
+    "statistical_limits": "Conditional on fixed50 tasks and these source identities; no retraining uncertainty or multiplicity correction; degenerate within-task empirical variance possible.",
+    "cross_host_timing_not_strictly_comparable": true
+  },
+  "execution": {
+    "root_exit_code": 0,
+    "all_owned_descendants_exited": true,
+    "known_B_scientific_processes_checked": 25,
+    "known_B_scientific_processes_alive": 0,
+    "publication_completed": true,
+    "new_scientific_launches_in_handler": 0,
+    "repeat_or_retry_required": false
+  },
+  "background": {
+    "state": "stable_idle_occupied_awaiting_new_authorized_B_assignment",
+    "guard_pid": 776269,
+    "holder_gpu_count": 8,
+    "holder_target_utilization": 0.9,
+    "utilization_note": "Target from live holder command lines; no claim of continuous measured utilization.",
+    "observer_pid": 452085,
+    "observer_state": "supervising",
+    "registered_trigger": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_B_R_H20_H30_r1__D24_B_R_H20_H30_r1__1.json",
+    "future_dependency_observer_registered": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/SERVICE_REGISTRATION.json",
+    "terminal_event_observed": "B_4b6930e1938be25963539c5370ddd50e",
+    "wakeup_readiness": "original_thread_ACK_verified_offline_pending"
+  },
+  "decision": "Accept complete B R H20/H30 results, preserve all claims and final products, maintain existing guard and dependency observer. No duplicate launch; wait for an actual new B assignment. A does not wait for B.",
+  "A_waits_for_B": false
+}

@@ -1,0 +1,77 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "reviewed_at_utc": "2026-09-19T22:47:47.697976+00:00",
+  "status": "ready_for_single_V3_offline_numeric_attempt",
+  "task_id": "A10_PV_OFFLINE_PREFLIGHT_V3",
+  "CPU_preparation_acceptance": "manifests/PV_HANDOFF_CPU_REPAIR_V1_ACCEPTANCE.json",
+  "installation_acceptance": "manifests/GUARD_HANDOFF_INSTALL_V1_ACCEPTANCE.json",
+  "installation_release_closed": "releases/P00_A_GUARD_HANDOFF_INSTALL_V1_CLOSED.json",
+  "independent_review": {
+    "agent": "/root/pv_v3_prepublication_review",
+    "blocking_findings": [],
+    "scope": "pure metadata checker, handoff propagation/guard identity, V3 namespace and ready board"
+  },
+  "publication_check": {
+    "path": "manifests/PV_V3_PUBLICATION_STAGE/PUBLICATION_CHECK.json",
+    "sha256": "df2c99958e183f15caeb5c90f6142a66305c3a7ee7dbac7094c35bf669b40742",
+    "status": "PASS_METADATA_ONLY_NOT_AUTHORIZATION"
+  },
+  "published_sources": {
+    "CONTROL.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/PV_V3_PUBLICATION_STAGE/CONTROL.json",
+      "sha256": "4cb1a92e96df545e077ab1731b5a62a0647f0c465b3ca01ef6274af3b3d803b5"
+    },
+    "TASK_BOARD.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/PV_V3_PUBLICATION_STAGE/TASK_BOARD.json",
+      "sha256": "c501354197d0ae058d3ffba847382211601a6ac10115a5a5da3aec938bc2fbfb"
+    },
+    "RELEASE.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/PV_V3_PUBLICATION_STAGE/RELEASE.json",
+      "sha256": "8761531b842bde05f2c7677cf568e32e88c13bde1aee11bd82286cf74897aa36"
+    },
+    "TASK_BRIEF.md": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/PV_V3_PUBLICATION_STAGE/TASK_BRIEF.md",
+      "sha256": "ccb3feaedd22ac91ec19fa67422ca471034d7b667585d98b1f8d94e50488ac24"
+    }
+  },
+  "root_runtime_calls": 0,
+  "root_metadata_checker_invocations": 1,
+  "large_weight_hashes": 0,
+  "installed_guard_sha256_verified": "7910c567a47ddf68294d92fc9698cc780aeb130ddefde0337414bfcd88cb85a4",
+  "new_claim_output_cache_absent": true,
+  "occupancy_handoff": {
+    "environment_variable": "CORRECTOR_OCCUPANCY_HANDOFF_TIMEOUT_SECONDS",
+    "required_value": "300",
+    "timeout_seconds": 300,
+    "default_seconds": 90,
+    "minimum_seconds": 1,
+    "maximum_seconds": 300,
+    "guard_path": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_guard.py",
+    "guard_expected_sha256": "7910c567a47ddf68294d92fc9698cc780aeb130ddefde0337414bfcd88cb85a4",
+    "guard_expected_size_bytes": 10704,
+    "active_guard_required": true,
+    "formal_lock_path": "/tmp/gpu_occupancy_guard/formal.lock",
+    "poll_sleep_seconds_max": 1,
+    "existing_query_timeout_seconds": 15,
+    "failure_last_observation_rows_max": 64
+  },
+  "handoff_runtime_verified": false,
+  "numerical_scope": "unchanged cached step0/a0;1guided10flow/4actiongrad/10ensemble40Q member;66numeric caps unchanged",
+  "cost_semantics": {
+    "kind": "cached single-snapshot numerical diagnostic",
+    "deployment_samples": {
+      "Post": 1,
+      "Velocity": 2
+    },
+    "diagnostic_samples": {
+      "Post": 0,
+      "Velocity": 1
+    },
+    "deployment_cost_comparison": false
+  },
+  "hardware_identity_still_checked_by_real_entry": true,
+  "B_compute_authorized": false,
+  "deletion_authorized": false,
+  "release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V3.json",
+  "release_sha256": "8761531b842bde05f2c7677cf568e32e88c13bde1aee11bd82286cf74897aa36"
+}

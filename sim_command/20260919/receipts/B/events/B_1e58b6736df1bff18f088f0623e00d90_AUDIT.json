@@ -1,0 +1,466 @@
+{
+  "event_id": "B_1e58b6736df1bff18f088f0623e00d90",
+  "task_id": "B_D24_SPRINT_V1",
+  "run_id": "D24_XVLA_N_r1",
+  "outcome": "audited_complete",
+  "at_utc": "2026-09-21T22:18:42.269579+00:00",
+  "event": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/outbox/B_1e58b6736df1bff18f088f0623e00d90.json",
+    "sha256": "87e6698fa25cc70effd2829182bbd5b8e388ef7af1d5c80037b16660a8716fe3"
+  },
+  "claim_verified": true,
+  "claim": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_XVLA_N_r1/CLAIM.json",
+    "sha256": "8d10175eebef9cea927f2cc01f75a338b5335aefd3eb48fdc61f544b3b35e1dc"
+  },
+  "original_process_exited": true,
+  "result": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_XVLA_N_r1/RESULT.json",
+    "sha256": "b138f1ee48db28aa4ccc5f862cbe698b97e13faab07da6e42e699ab7001ec01d"
+  },
+  "summary": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_XVLA_N_r1/N_COMPLETE_SUMMARY.json",
+    "sha256": "5b1df7397bb82807e7e89af78e78e870ef08c44338144eb0225aefd33fb115fd"
+  },
+  "X_VLA_N": {
+    "episodes": 500,
+    "successes": 403,
+    "success_rate": 0.806,
+    "technical_failures": 0,
+    "unknown": 0
+  },
+  "root_control": {
+    "revision": 56,
+    "stop_requested": false
+  },
+  "queue_control": {
+    "revision": 21,
+    "global_stop": false,
+    "B": {
+      "desired_state": "execute_D24_independent_sprint",
+      "enabled": true,
+      "actual_state": "D24_last_published_snapshot16:58_E1fits_complete_E8_and_X_in_progress",
+      "control_plane_task": "B_QUEUE_JOIN_V1",
+      "control_plane_task_revision": 2,
+      "collection_source_limit": 0,
+      "completion_event_task": "B_LONG_TASK_WAKEUP_V1",
+      "priority_task": "B_D24_SPRINT_V1",
+      "deadline_authorization": {
+        "path": "deadline_20260924/AUTHORIZATION_V1.json",
+        "sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80"
+      },
+      "actual_runtime_receipt": "receipts/B/B_D24_SPRINT_V1_RESULT.json",
+      "running_snapshot_utc": "2026-09-21T16:58:15Z",
+      "snapshot_is_not_current_runtime": true
+    }
+  },
+  "authorization_sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80",
+  "task_board": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/TASK_BOARD.json",
+    "sha256": "970482828fd28e5ce2ed571940b775a5e875ddd6d29f9e6823f9fe7d3a36939c"
+  },
+  "decision": "Preserve all completed X episodes. Start one new E1 evaluation batch under existing D24 authorization.",
+  "continuation_config": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_EVAL_V1_r1/E1_EVAL_BATCH.json",
+    "sha256": "35d2f2b9edd6d6422b246ef2541499e4dc1ab42faae8cfb2a9acc0f7b07fa7fa"
+  },
+  "stable_handoff": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_EVAL_V1_r1/STABLE_HANDOFF.json",
+    "sha256": "ffc359f99f53eace5656e70beac26cee897c40295f3a8dc8f447fd33a5a749e7"
+  },
+  "background": {
+    "at_utc": "2026-09-21T22:18:42.262535+00:00",
+    "supervisor": {
+      "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+      "hostname": "trial-303225685-trialrun-303225685-worker-0",
+      "pid": 573222,
+      "session_id": 573222,
+      "start_ticks": 94439967
+    },
+    "registration": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_E1_EVAL_r1__D24_E1_EVAL_r1__1.json",
+      "sha256": "a28435cdea7edab50d6e62fa5d6898317b9bf9ae41ce06e74d277a21a8e15667"
+    },
+    "runner_progress": {
+      "at_utc": "2026-09-21T22:18:41.187241+00:00",
+      "status": "running",
+      "active": [
+        "e1eval_PV_worker0_r1",
+        "e1eval_PV_worker1_r1",
+        "e1eval_PV_worker2_r1",
+        "e1eval_PV_worker3_r1",
+        "e1eval_PV_worker4_r1",
+        "e1eval_PV_worker5_r1",
+        "e1eval_PV_worker6_r1",
+        "e1eval_PV_worker7_r1"
+      ],
+      "queued": 0,
+      "completed": 0,
+      "resolved": 0,
+      "auxiliary_gpus": []
+    },
+    "workers": [
+      {
+        "job_id": "e1eval_PV_worker0_r1",
+        "gpu_assignment": [
+          0
+        ],
+        "process": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 573733,
+          "start_ticks": 94447724,
+          "session_id": 573733
+        },
+        "status": {
+          "status": "running",
+          "job_id": "e1eval_PV_worker0_r1",
+          "planned_episodes": 150,
+          "completed_episodes": 5,
+          "technical_failures": 0,
+          "completed_cells": 0,
+          "load_seconds": 218.95877001900226,
+          "model_resident": true,
+          "cell_id": "E1_L00_s9101_Post_H10",
+          "latest_source": "D24_NEW_TEST_disassemble-v3_04",
+          "at_utc": "2026-09-21T22:18:36.514813+00:00"
+        },
+        "episode_progress": [
+          {
+            "H": 10,
+            "method": "Post",
+            "source_id": "D24_NEW_TEST_disassemble-v3_05",
+            "step": 0,
+            "utc": "2026-09-21T22:18:36.889820+00:00"
+          }
+        ]
+      },
+      {
+        "job_id": "e1eval_PV_worker1_r1",
+        "gpu_assignment": [
+          1
+        ],
+        "process": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 573737,
+          "start_ticks": 94447725,
+          "session_id": 573737
+        },
+        "status": {
+          "status": "running",
+          "job_id": "e1eval_PV_worker1_r1",
+          "planned_episodes": 150,
+          "completed_episodes": 5,
+          "technical_failures": 0,
+          "completed_cells": 0,
+          "load_seconds": 218.92551578010898,
+          "model_resident": true,
+          "cell_id": "E1_L00_s9101_Velocity_H10",
+          "latest_source": "D24_NEW_TEST_disassemble-v3_04",
+          "at_utc": "2026-09-21T22:18:36.664934+00:00"
+        },
+        "episode_progress": [
+          {
+            "H": 10,
+            "method": "Velocity",
+            "source_id": "D24_NEW_TEST_disassemble-v3_05",
+            "step": 0,
+            "utc": "2026-09-21T22:18:37.019643+00:00"
+          }
+        ]
+      },
+      {
+        "job_id": "e1eval_PV_worker2_r1",
+        "gpu_assignment": [
+          2
+        ],
+        "process": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 573743,
+          "start_ticks": 94447726,
+          "session_id": 573743
+        },
+        "status": {
+          "status": "running",
+          "job_id": "e1eval_PV_worker2_r1",
+          "planned_episodes": 150,
+          "completed_episodes": 5,
+          "technical_failures": 0,
+          "completed_cells": 0,
+          "load_seconds": 218.93108217103872,
+          "model_resident": true,
+          "cell_id": "E1_L01_s9101_Post_H10",
+          "latest_source": "D24_NEW_TEST_disassemble-v3_04",
+          "at_utc": "2026-09-21T22:18:35.868092+00:00"
+        },
+        "episode_progress": [
+          {
+            "H": 10,
+            "method": "Post",
+            "source_id": "D24_NEW_TEST_disassemble-v3_05",
+            "step": 0,
+            "utc": "2026-09-21T22:18:36.243430+00:00"
+          }
+        ]
+      },
+      {
+        "job_id": "e1eval_PV_worker3_r1",
+        "gpu_assignment": [
+          3
+        ],
+        "process": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 573748,
+          "start_ticks": 94447728,
+          "session_id": 573748
+        },
+        "status": {
+          "status": "running",
+          "job_id": "e1eval_PV_worker3_r1",
+          "planned_episodes": 150,
+          "completed_episodes": 4,
+          "technical_failures": 0,
+          "completed_cells": 0,
+          "load_seconds": 218.94853406003676,
+          "model_resident": true,
+          "cell_id": "E1_L01_s9101_Velocity_H10",
+          "latest_source": "D24_NEW_TEST_disassemble-v3_03",
+          "at_utc": "2026-09-21T22:18:32.299713+00:00"
+        },
+        "episode_progress": [
+          {
+            "H": 10,
+            "method": "Velocity",
+            "source_id": "D24_NEW_TEST_disassemble-v3_04",
+            "step": 0,
+            "utc": "2026-09-21T22:18:32.671057+00:00"
+          }
+        ]
+      },
+      {
+        "job_id": "e1eval_PV_worker4_r1",
+        "gpu_assignment": [
+          4
+        ],
+        "process": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 573753,
+          "start_ticks": 94447729,
+          "session_id": 573753
+        },
+        "status": {
+          "status": "running",
+          "job_id": "e1eval_PV_worker4_r1",
+          "planned_episodes": 150,
+          "completed_episodes": 5,
+          "technical_failures": 0,
+          "completed_cells": 0,
+          "load_seconds": 218.9668902590638,
+          "model_resident": true,
+          "cell_id": "E1_L10_s9101_Post_H10",
+          "latest_source": "D24_NEW_TEST_disassemble-v3_04",
+          "at_utc": "2026-09-21T22:18:37.124698+00:00"
+        },
+        "episode_progress": [
+          {
+            "H": 10,
+            "method": "Post",
+            "source_id": "D24_NEW_TEST_disassemble-v3_05",
+            "step": 0,
+            "utc": "2026-09-21T22:18:37.485614+00:00"
+          }
+        ]
+      },
+      {
+        "job_id": "e1eval_PV_worker5_r1",
+        "gpu_assignment": [
+          5
+        ],
+        "process": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 573758,
+          "start_ticks": 94447730,
+          "session_id": 573758
+        },
+        "status": {
+          "status": "running",
+          "job_id": "e1eval_PV_worker5_r1",
+          "planned_episodes": 150,
+          "completed_episodes": 5,
+          "technical_failures": 0,
+          "completed_cells": 0,
+          "load_seconds": 218.94829573400784,
+          "model_resident": true,
+          "cell_id": "E1_L10_s9101_Velocity_H10",
+          "latest_source": "D24_NEW_TEST_disassemble-v3_04",
+          "at_utc": "2026-09-21T22:18:39.070326+00:00"
+        },
+        "episode_progress": [
+          {
+            "H": 10,
+            "method": "Velocity",
+            "source_id": "D24_NEW_TEST_disassemble-v3_05",
+            "step": 0,
+            "utc": "2026-09-21T22:18:39.422312+00:00"
+          }
+        ]
+      },
+      {
+        "job_id": "e1eval_PV_worker6_r1",
+        "gpu_assignment": [
+          6
+        ],
+        "process": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 573763,
+          "start_ticks": 94447731,
+          "session_id": 573763
+        },
+        "status": {
+          "status": "running",
+          "job_id": "e1eval_PV_worker6_r1",
+          "planned_episodes": 150,
+          "completed_episodes": 5,
+          "technical_failures": 0,
+          "completed_cells": 0,
+          "load_seconds": 218.22149919206277,
+          "model_resident": true,
+          "cell_id": "E1_L11_s9101_Post_H10",
+          "latest_source": "D24_NEW_TEST_disassemble-v3_04",
+          "at_utc": "2026-09-21T22:18:34.681525+00:00"
+        },
+        "episode_progress": [
+          {
+            "H": 10,
+            "method": "Post",
+            "source_id": "D24_NEW_TEST_disassemble-v3_05",
+            "step": 0,
+            "utc": "2026-09-21T22:18:35.046361+00:00"
+          }
+        ]
+      },
+      {
+        "job_id": "e1eval_PV_worker7_r1",
+        "gpu_assignment": [
+          7
+        ],
+        "process": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "pid": 573768,
+          "start_ticks": 94447733,
+          "session_id": 573768
+        },
+        "status": {
+          "status": "running",
+          "job_id": "e1eval_PV_worker7_r1",
+          "planned_episodes": 150,
+          "completed_episodes": 2,
+          "technical_failures": 0,
+          "completed_cells": 0,
+          "load_seconds": 218.87180575996172,
+          "model_resident": true,
+          "cell_id": "E1_L11_s9101_Velocity_H10",
+          "latest_source": "D24_NEW_TEST_disassemble-v3_01",
+          "at_utc": "2026-09-21T22:18:35.597353+00:00"
+        },
+        "episode_progress": [
+          {
+            "H": 10,
+            "method": "Velocity",
+            "source_id": "D24_NEW_TEST_disassemble-v3_02",
+            "step": 0,
+            "utc": "2026-09-21T22:18:35.964701+00:00"
+          }
+        ]
+      }
+    ],
+    "observer": {
+      "hostname": "trial-303225685-trialrun-303225685-worker-0",
+      "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+      "pid": 452085,
+      "start_ticks": 91710679,
+      "session_id": 452085
+    },
+    "guard": {
+      "pid": 35861,
+      "updated": 1790029120.2086782,
+      "gpus": {
+        "0": {
+          "state": "reserved",
+          "pids": [
+            315584
+          ]
+        },
+        "1": {
+          "state": "reserved",
+          "pids": [
+            315588
+          ]
+        },
+        "2": {
+          "state": "reserved",
+          "pids": [
+            315594
+          ]
+        },
+        "3": {
+          "state": "reserved",
+          "pids": [
+            315599
+          ]
+        },
+        "4": {
+          "state": "reserved",
+          "pids": [
+            315604
+          ]
+        },
+        "5": {
+          "state": "reserved",
+          "pids": [
+            315609
+          ]
+        },
+        "6": {
+          "state": "reserved",
+          "pids": [
+            315614
+          ]
+        },
+        "7": {
+          "state": "reserved",
+          "pids": [
+            315619
+          ]
+        }
+      }
+    },
+    "holder_policy": "all eight holders off for whole E1 wave; restored after all jobs including failures drain",
+    "no_duplicate_launch": true,
+    "planned_episodes": 1200,
+    "planned_cells": 24,
+    "A_waits_for_B": false,
+    "autonomous_scope": "finite eight-worker queue; registered terminal callback to original B session",
+    "headless_after_terminal_closure": "not newly certified by this run; existing same-thread callback is observed"
+  },
+  "prior_N_gaps": {
+    "technical_failure_unresolved": 5,
+    "unknown": 5
+  },
+  "remaining_stages": [
+    "E6 causal D5 development trace and threshold",
+    "Smol/X Post",
+    "LIBERO Post",
+    "external comparisons"
+  ],
+  "whole_sprint_complete": false,
+  "A_waits_for_B": false,
+  "occupancy_history_note": "Completed X batch retains its original auxiliary-holder history; E1 uses latest explicit user whole-wave all-holder-off instruction"
+}

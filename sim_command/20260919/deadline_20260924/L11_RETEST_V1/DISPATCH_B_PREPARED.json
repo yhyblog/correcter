@@ -1,0 +1,106 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "node": "B",
+  "target_role": "B",
+  "task_id": "B_D24_L11_RETEST_V1",
+  "priority_task": "B_D24_L11_RETEST_V1",
+  "task_revision": 1,
+  "revision": 1,
+  "task": "tasks/B_D24_L11_RETEST_V1.md",
+  "brief": {
+    "path": "tasks/B_D24_L11_RETEST_V1.md",
+    "sha256": "b027c76bcd2987771a1f46048ce97b77d3ff0e9d33b0b3477053a62470e351d9"
+  },
+  "authorization": {
+    "path": "deadline_20260924/L11_RETEST_V1/AUTHORIZATION.json",
+    "sha256": "a978519ba24dfb3aba22cf5ce8472d9b855e788e44266a28e0d006be876d5e87"
+  },
+  "release": {
+    "path": "deadline_20260924/L11_RETEST_V1/AUTHORIZATION.json",
+    "sha256": "a978519ba24dfb3aba22cf5ce8472d9b855e788e44266a28e0d006be876d5e87"
+  },
+  "target_hostname": "trial-303225685-trialrun-303225685-worker-0",
+  "target_session": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+  "status": "ready",
+  "issued_at_utc": "2026-09-23T02:12:16.334459+00:00",
+  "updated_at_utc": "2026-09-23T02:12:16.334459+00:00",
+  "ACK_received": false,
+  "scientific_launch_observed": false,
+  "new_task_started": false,
+  "previous_task_complete": true,
+  "acknowledgement_path": "receipts/B/B_D24_L11_RETEST_V1_ACK.json",
+  "expected_result": "receipts/B/B_D24_L11_RETEST_V1_RESULT_r1.json",
+  "desired_action": "deploy_new_L11_finite_queue_then_formally_execute_owned_units",
+  "instruction": "Latest explicit user: L11/fit9101 fixed;24 active logical branches/GPU x8 GPUs=192/node. Prepare private runner and execute under this new finite authorization without a second approval. Only own unit manifest; all holders off entire wave; preserve old results.",
+  "selection_rule_override": {
+    "path": "deadline_20260924/L11_RETEST_V1/L11_SELECTION_OVERRIDE.json",
+    "sha256": "2006bc5818911d80a7b325bc91699c789675bb62b75647a4abcc8012119dffe2"
+  },
+  "evaluation_concurrency_policy": {
+    "path": "deadline_20260924/L11_RETEST_V1/CONCURRENCY_192.md",
+    "sha256": "b87c88e9feb678b657b6d404a5c715f27eb7c52077f49f63e122d45cfb6f18eb"
+  },
+  "new_units": {
+    "path": "deadline_20260924/L11_RETEST_V1/prepared_by_analysis/NEW_UNITS_B.jsonl",
+    "sha256": "d361005183f1b070f57649c1988c9d368a8568280e1a3101047c5923e88df46e"
+  },
+  "autonomous_recovery_policy": {
+    "path": "deadline_20260924/L11_RETEST_V1/AUTHORIZATION.json",
+    "sha256": "a978519ba24dfb3aba22cf5ce8472d9b855e788e44266a28e0d006be876d5e87"
+  },
+  "analysis_wait_timeout_seconds": 1800,
+  "previous_dispatch_archive": "deadline_20260924/L11_RETEST_V1/prior_control_snapshot/DISPATCH_B.json",
+  "authorized_followups": [
+    {
+      "task_id": "B_D24_L11_RETEST_V1",
+      "revision": 1,
+      "task_revision": 1,
+      "task": "tasks/B_D24_L11_RETEST_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/L11_RETEST_V1/AUTHORIZATION.json",
+        "sha256": "a978519ba24dfb3aba22cf5ce8472d9b855e788e44266a28e0d006be876d5e87"
+      },
+      "start_condition": "own_prior_family_exited;L11_selection_already_fixed",
+      "planned_episodes": 2500,
+      "stage_attempt_cap": 2750
+    }
+  ],
+  "control_plane_followups": [
+    {
+      "task_id": "B_D24_AUTORECOVERY_QUEUE_RULE_V1",
+      "task_revision": 1,
+      "revision": 1,
+      "task": "tasks/B_D24_AUTORECOVERY_QUEUE_RULE_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V1.json",
+        "sha256": "87878b0e2019048935904d639d1d15a1af9f0778047171a508054fecaadd4ab0"
+      },
+      "scope": "CPU_only_operational_recovery_and_queue_progress",
+      "does_not_replace_primary_task": true
+    },
+    {
+      "task_id": "B_D24_QUOTA_INDEPENDENT_QUEUE_V1",
+      "task_revision": 1,
+      "revision": 1,
+      "task": "tasks/B_D24_QUOTA_INDEPENDENT_QUEUE_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+        "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+      },
+      "scope": "CPU_only_quota_independent_queue_deployment",
+      "does_not_replace_primary_task": true
+    },
+    {
+      "task_id": "B_D24_PUBLICATION_MODULE_REPAIR_V1",
+      "task_revision": 1,
+      "revision": 1,
+      "task": "tasks/B_D24_PUBLICATION_MODULE_REPAIR_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/B_H20_PUBLICATION_MODULE_REPAIR_DECISION_V1.json",
+        "sha256": "b09d76aa5932ee0bcab6aa3f57d86d1270dcdfd1416824de92f85dfb222217f1"
+      },
+      "scope": "CPU_only_package_repair_then_original_authorized_continuation",
+      "does_not_replace_primary_task": true
+    }
+  ]
+}

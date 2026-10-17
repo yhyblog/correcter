@@ -1,0 +1,54 @@
+{
+  "schema": "corrector_post_led_selection_override_v1",
+  "status": "released",
+  "issued_at_utc": "2026-09-22T16:46:49.300051+00:00",
+  "authority": "User latest: retain Post and Velocity experiments, select by Post best development performance only; Velocity inherits Post configuration and is excluded from this paper final presentation",
+  "supersedes": "joint_Post_Velocity_development_score_in_FULL_Q_LOSS_SELECTION_PLAN_V1_and_AUTORUN_V2",
+  "selection": {
+    "eligible_losses": [
+      "L00",
+      "L10",
+      "L01",
+      "L11"
+    ],
+    "metric": "Post_success_macro_mean_across_five_tasks_and_three_fit_seeds_on_complete_development100",
+    "Post_only": true,
+    "Velocity_selection_weight": 0,
+    "fixed_fit_seeds": [
+      9101,
+      9102,
+      9103
+    ],
+    "deployment_fit_seed": 9101,
+    "tie_break": [
+      "fewest_auxiliary_loss_terms",
+      "L00,L10,L01,L11"
+    ],
+    "select_training_seed_by_test_or_dev": false,
+    "select_loss_by_test": false,
+    "full_Post_development_required_before_selection": true,
+    "partial_development_winner_is_not_valid": true
+  },
+  "Velocity": {
+    "run_authorized_experiments": true,
+    "inherit_selected_Post_loss_and_fixed_fit": true,
+    "does_not_influence_selection": true,
+    "current_paper_final_tables_figures": false,
+    "separate_other_work_results": true
+  },
+  "Post": {
+    "current_paper_primary": true
+  },
+  "existing_training_and_valid_dev": "reuse; no retraining or successful source replay",
+  "formal_gate": "selection must explicitly use current Post-only rule before new selected-Q tests; old joint selection if any is historical invalid for new admissions",
+  "A_observed_at_issue": {
+    "SELECTION_exists": false,
+    "old_formal_family_exited": true,
+    "old_RESULT_status": "partial_or_failed",
+    "old_saved_attempts": 1546,
+    "not_an_authorization_to_rerun_all_dev": true
+  },
+  "active_prior_scope_and_new_unique_evaluations": "unchanged; this modifies selection/reporting only",
+  "second_approval_required": false,
+  "all_formal_holders_off": true
+}

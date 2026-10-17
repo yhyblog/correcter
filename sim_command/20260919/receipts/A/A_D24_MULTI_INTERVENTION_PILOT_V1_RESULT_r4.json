@@ -1,0 +1,118 @@
+{
+  "task_id": "A_D24_MULTI_INTERVENTION_PILOT_V1",
+  "revision": 2,
+  "status": "PRIMARY_R_POST_COMPLETE_VELOCITY_CONTINUES",
+  "utc": "2026-09-21T16:40:22.924916+00:00",
+  "n": 20,
+  "repeat": 0,
+  "primary_completed_rollouts": 80,
+  "technical_failures": 0,
+  "cells": {
+    "R_once": {
+      "completed": 20,
+      "entered": 20,
+      "episode_wall_seconds_sum": 211.79632293293253,
+      "flow_calls": 3790,
+      "intervention_distribution": {
+        "0": 0,
+        "1": 20,
+        "2": 0,
+        "3+": 0
+      },
+      "planned": 20,
+      "sampling_calls": 379,
+      "success_rate": 0.65,
+      "successes": 13,
+      "technical_failures": 0
+    },
+    "R_multi": {
+      "completed": 20,
+      "entered": 20,
+      "episode_wall_seconds_sum": 196.74697136459872,
+      "flow_calls": 3810,
+      "intervention_distribution": {
+        "0": 0,
+        "1": 14,
+        "2": 4,
+        "3+": 2
+      },
+      "planned": 20,
+      "sampling_calls": 381,
+      "success_rate": 0.65,
+      "successes": 13,
+      "technical_failures": 0
+    },
+    "Post_once": {
+      "completed": 20,
+      "entered": 20,
+      "episode_wall_seconds_sum": 157.54717988008633,
+      "flow_calls": 2970,
+      "intervention_distribution": {
+        "0": 0,
+        "1": 20,
+        "2": 0,
+        "3+": 0
+      },
+      "planned": 20,
+      "sampling_calls": 297,
+      "success_rate": 0.8,
+      "successes": 16,
+      "technical_failures": 0
+    },
+    "Post_multi": {
+      "completed": 20,
+      "entered": 20,
+      "episode_wall_seconds_sum": 158.17479149159044,
+      "flow_calls": 3010,
+      "intervention_distribution": {
+        "0": 0,
+        "1": 16,
+        "2": 3,
+        "3+": 1
+      },
+      "planned": 20,
+      "sampling_calls": 301,
+      "success_rate": 0.8,
+      "successes": 16,
+      "technical_failures": 0
+    }
+  },
+  "comparisons": {
+    "Post_multi-Post_once": {
+      "harmed": [],
+      "paired_complete": 20,
+      "percentage_point_delta": 0,
+      "rescued": [],
+      "success_count_delta": 0
+    },
+    "Post_multi-R_multi": {
+      "harmed": [
+        "disassemble-v3__2026111765",
+        "disassemble-v3__2026111885"
+      ],
+      "paired_complete": 20,
+      "percentage_point_delta": 15,
+      "rescued": [
+        "disassemble-v3__2026111750",
+        "disassemble-v3__2026111755",
+        "disassemble-v3__2026111855",
+        "disassemble-v3__2026111865",
+        "disassemble-v3__2026111880"
+      ],
+      "success_count_delta": 3
+    },
+    "R_multi-R_once": {
+      "harmed": [],
+      "paired_complete": 20,
+      "percentage_point_delta": 0,
+      "rescued": [],
+      "success_count_delta": 0
+    }
+  },
+  "primary_ref": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_MULTI_INTERVENTION_PILOT_V1/PRIMARY_RESULT.json",
+    "sha256": "1a9de10874753727ff7fd4d97f26a57e38bace810b3afbcec773570631ad58e7"
+  },
+  "report": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_MULTI_INTERVENTION_PILOT_V1_REPORT_r4.md",
+  "new_initial_states": 0
+}

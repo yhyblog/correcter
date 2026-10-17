@@ -1,0 +1,409 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A00",
+  "task_revision": 1,
+  "executor_thread": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+  "analysis_thread": "01a0b91f-355f-7cd1-ae36-412500534ffb",
+  "queue_message_id": "01a0ba24-d4c5-75e3-9dc3-caf53b21a21d",
+  "delivery_status": "queued",
+  "acknowledgement_status": "acknowledged",
+  "recorded_at_utc": "2026-09-19T14:50:56.072732+00:00",
+  "scope": "A00 read-only assets/environment inventory; model GPU inference, training and simulator counts remain zero",
+  "receipt": "receipts/A/A00_RESULT.json",
+  "acknowledgement_path": "receipts/A/A00_ACK.json",
+  "executor_status": "running",
+  "status_checked_at_utc": "2026-09-19T14:52:46.390338+00:00",
+  "followup_messages": [
+    {
+      "queue_message_id": "01a0ba37-0ad6-7262-be80-02bb1ec41ed8",
+      "queued_at_utc": "2026-09-19T15:09:40.860656+00:00",
+      "scope": "A10 CPU preparation after A00; storage inventory only, analysis selects exact deletions",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0ba3a-077a-7543-bb7b-38447ea404d2",
+      "queued_at_utc": "2026-09-19T15:13:01.259584+00:00",
+      "scope": "Inventory acceptance, fixed baseline/trigger preparation, analysis-only deletion decisions",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0ba43-6d17-7221-a34c-277369035e79",
+      "queued_at_utc": "2026-09-19T15:23:08.260915+00:00",
+      "scope": "Interface v1 registered and shared B handoff; CPU integration semantics review",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0ba6d-c13b-7262-a0c0-472754ed61c4",
+      "queued_at_utc": "2026-09-19T16:10:25.240444+00:00",
+      "scope": "A10 CPU accepted; bounded CPU preflight reset accounting revision and storage dependency feedback",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0ba74-4721-7261-b8db-4d94a85c466e",
+      "queued_at_utc": "2026-09-19T16:16:44.206736+00:00",
+      "scope": "Storage v2 decisions and explicit priority to already released A10_PREFLIGHT_REVISION_R2 CPU task",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0ba92-fa74-7e73-82dc-f879854a6213",
+      "queued_at_utc": "2026-09-19T16:51:15.220540+00:00",
+      "scope": "Execute released v4 A-only native finite preflight once",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0baaa-6bb1-76e0-b0fb-ee0fbf9ccd00",
+      "queued_at_utc": "2026-09-19T17:16:36.510204+00:00",
+      "scope": "Consumed preflight closed; run CPU-only EGL diagnosis/isolated repair preparation",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0bacd-2617-7fa1-b55c-34a9269b607a",
+      "queued_at_utc": "2026-09-19T17:54:32.017958+00:00",
+      "scope": "Run one released A-only EGL graphics probe; old native release closed",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0bae0-f061-7943-af66-790ee6d92774",
+      "recorded_at_utc": "2026-09-19T18:19:01.665489+00:00",
+      "scope": "Graphics V1 failure accepted and release closed; CPU-only explicit EGL CUDA handle to PCI/UUID mapping revision",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0baf7-fd0a-7420-ae76-1e973274ebab",
+      "recorded_at_utc": "2026-09-19T18:40:45.052560+00:00",
+      "scope": "CPU CUDA mapping accepted; execute one new released A-only graphics probe with no retries",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0bb06-0e05-7ef1-b2a3-838aea771590",
+      "recorded_at_utc": "2026-09-19T18:56:16.550622+00:00",
+      "scope": "Static graphics/RGB accepted, consumed release closed; CPU-only native EGL integration and new proposal",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0bb29-8ee4-7841-850a-57c1decbc982",
+      "recorded_at_utc": "2026-09-19T19:34:57.684349+00:00",
+      "scope": "Native EGL CPU integration accepted; execute one new A-only native V2 preflight",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0bb39-a229-7830-b5bb-26c125a06905",
+      "recorded_at_utc": "2026-09-19T19:52:39.723784+00:00",
+      "scope": "Native V2 technical failure accepted and release closed; CPU-only Torch UUID representation/provenance repair",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0bb4c-b4a5-7991-94b2-ebedfc371bea",
+      "recorded_at_utc": "2026-09-19T20:13:20.432209+00:00",
+      "scope": "UUID CPU repair accepted; execute one newly released A-only native V3 with unchanged budget",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0bb62-44af-72e3-9e6d-7328eef32f6a",
+      "recorded_at_utc": "2026-09-19T20:36:56.452597+00:00",
+      "scope": "Native V3 engineering success accepted and closed; CPU-only saved-step0 P/V diagnostic preparation",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0bb8a-8154-7ee0-b888-2b3d21445d0a",
+      "recorded_at_utc": "2026-09-19T21:21:06.257601+00:00",
+      "scope": "CPU P/V preparation accepted; one A-only saved-step0 offline numerical diagnostic released, no environment/render/training/retry/deletion",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0bb96-2e59-7db0-8b14-85dcceb5d01c",
+      "recorded_at_utc": "2026-09-19T21:33:19.218986+00:00",
+      "scope": "Offline PV V1 preclaim metadata failure accepted/closed; CPU-only V2 identity and task-state preparation",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0bba8-5206-70f3-b8bc-ac066e83b32a",
+      "recorded_at_utc": "2026-09-19T21:53:03.763157+00:00",
+      "scope": "V2 CPU metadata accepted and exact staged publication check passed; one A-only offline P/V numeric attempt released",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0bbb6-7d72-7f80-9d8f-56c57c8b878d",
+      "recorded_at_utc": "2026-09-19T22:08:35.160840+00:00",
+      "scope": "PV V2 handoff failure accepted/closed; CPU-only bounded active-guard wait patch and V3 proposal, no installation or compute",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0bbcf-1a35-7830-805d-eee548b778e8",
+      "recorded_at_utc": "2026-09-19T22:35:28.012029+00:00",
+      "scope": "Handoff CPU patch accepted; exact single shared guard file CPU installation released, no GPU/daemon restart/V3 compute",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0bbdb-dda3-7e50-9161-56aa632bab41",
+      "recorded_at_utc": "2026-09-19T22:49:26.048425+00:00",
+      "scope": "Guard install accepted and closed; exact staged metadata check passed, one V3 offline PV attempt with300s handoff released",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0bbf3-409f-7c53-8ae4-577906aa09ab",
+      "recorded_at_utc": "2026-09-19T23:14:56.820338+00:00",
+      "scope": "PV V3 single-snapshot numeric success accepted/closed; CPU-only causal legal-cut D/G0 and P/V C10/nativeH integration preparation",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0bc22-375d-70e0-be09-c657fa78ae04",
+      "recorded_at_utc": "2026-09-20T00:06:17.812400+00:00",
+      "scope": "Causal C10 CPU accepted; independent fixed-seed replay approved for engineering only; unique A-only wave09 released with up to two sequential children and exact111 caps",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0bc34-2575-7a50-882d-5d373fbc1d7c",
+      "recorded_at_utc": "2026-09-20T00:25:41.556856+00:00",
+      "scope": "Causal C10 V1 technical failure accepted/closed; CPU-only real-recorder/controller regression and exception evidence repair released",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0bc4d-9969-77e2-9529-f6a1573f25a1",
+      "recorded_at_utc": "2026-09-20T00:53:41.219092+00:00",
+      "scope": "Real event recorder CPU repair accepted; exact staged metadata PASS; independent single A-only causal C10 V2 preflight released",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0bc65-6dc1-7671-bb2e-d03fb1c32242",
+      "recorded_at_utc": "2026-09-20T01:19:31.155618+00:00",
+      "scope": "Causal C10 V2 finite forced engineering accepted/closed; saved-data CPU analysis of Velocity direction/scale/projection risk released",
+      "delivery_status": "queued"
+    },
+    {
+      "queue_message_id": "01a0bc85-17a5-71b0-bb58-d53a63293fd4",
+      "recorded_at_utc": "2026-09-20T01:54:06.854899+00:00",
+      "scope": "Saved PV direction analysis accepted; no standalone replay; MT50 H10 common pool CPU protocol/design/quote task published",
+      "delivery_status": "queued"
+    },
+    {
+      "task_id": "A11_COMMON_POOL_REVISION_CPU_V2",
+      "task_revision": 1,
+      "message_id": "01a0bdf2-80fe-7100-862c-ad29b90b24ee",
+      "queue_message_id": "01a0bdf2-80fe-7100-862c-ad29b90b24ee",
+      "queued_at_utc": "2026-09-20T08:33:16.626722+00:00",
+      "status": "completed_accepted",
+      "release": "releases/P00_COMMON_POOL_REVISION_CPU_V2.json",
+      "note": "CPU共同池协议修订与重报价；不授权collector实现或计算。",
+      "accepted_at_utc": "2026-09-20T09:05:29.938522+00:00"
+    },
+    {
+      "task_id": "A11_COMMON_POOL_COLLECTOR_CPU_V1",
+      "task_revision": 1,
+      "queue_message_id": "01a0be11-2164-7130-bad3-68a40dec3fe1",
+      "queued_at_utc": "2026-09-20T09:06:40.258575+00:00",
+      "status": "delivery_reviewed_repairs_required",
+      "scope": "isolated CPU shelf collector/sidecar implementation; all real runtime0",
+      "accepted_at_utc": "2026-09-20T10:17:03.089823+00:00"
+    },
+    {
+      "task_id": "A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1",
+      "task_revision": 1,
+      "queue_message_id": "01a0be53-15ca-76b3-a541-e07ff4cc06c6",
+      "queued_at_utc": "2026-09-20T10:18:48.459604+00:00",
+      "status": "delivery_reviewed_narrow_followup_required",
+      "scope": "targeted CPU serializer/public record/resource admission repairs;no real runtime",
+      "accepted_at_utc": "2026-09-20T11:01:04.486306+00:00"
+    },
+    {
+      "task_id": "A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1",
+      "task_revision": 1,
+      "message_id": "01a0be7a-f93a-7653-9de8-18e79626290c",
+      "queued_at_utc": "2026-09-20T11:02:21.946652+00:00",
+      "status": "complete_accepted",
+      "release": "releases/P00_A_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1.json",
+      "release_sha256": "03d90c3c07274a8738714eb0b18c5398e51a183f1118fd72ef4d77ef28139b37",
+      "note": "queue delivery only; no ACK, acceptance or compute permission implied",
+      "acceptance": "manifests/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1_ACCEPTANCE.json"
+    },
+    {
+      "task_id": "A11_COMMON_POOL_FIRST_PARENT_V3",
+      "task_revision": 1,
+      "message_id": "01a0be9e-7f58-7243-8fdc-0c0a60a8256e",
+      "queued_at_utc": "2026-09-20T11:41:08.153164+00:00",
+      "status": "failed_consumed_closed",
+      "release": "releases/P11_A_COMMON_POOL_FIRST_PARENT_V3.json",
+      "release_sha256": "55812df54865d7773e600f4ffedef26413f3e372fd7deb42bd3060a2ed0e5734",
+      "note": "Queue delivered; actual execution/claim/collection completion not yet established",
+      "acceptance": "manifests/A11_COMMON_POOL_FIRST_PARENT_V3_FAILURE_ACCEPTANCE.json",
+      "closure": "releases/P11_A_COMMON_POOL_FIRST_PARENT_V3_CLOSED.json"
+    },
+    {
+      "task_id": "A11_OBSERVATION_PHASE_CPU_REPAIR_V1",
+      "task_revision": 1,
+      "message_id": "01a0beb3-fcd1-7331-8d77-649dbb974146",
+      "queued_at_utc": "2026-09-20T12:04:33.634227+00:00",
+      "status": "queued_awaiting_ack",
+      "release": "releases/P00_A_OBSERVATION_PHASE_CPU_REPAIR_V1.json",
+      "release_sha256": "3ab42de2135ab3d998d1c339ad31f6cf096a4048bb3d8d8d2aa78f680517591a",
+      "note": "CPU-only dispatch; queue does not establish ACK or completion"
+    }
+  ],
+  "current_dispatch": {
+    "task_id": "A11_OBSERVATION_PHASE_CPU_REPAIR_V1",
+    "task_revision": 1,
+    "task": "tasks/A11_OBSERVATION_PHASE_CPU_REPAIR_V1.md",
+    "release": "releases/P00_A_OBSERVATION_PHASE_CPU_REPAIR_V1.json",
+    "release_sha256": "3ab42de2135ab3d998d1c339ad31f6cf096a4048bb3d8d8d2aa78f680517591a",
+    "status": "queued_awaiting_ack",
+    "published_at_utc": "2026-09-20T12:03:23.635624+00:00",
+    "expected_result": "receipts/A/A11_OBSERVATION_PHASE_CPU_REPAIR_V1_RESULT.json",
+    "note": "Only canonical step_0..step_300 CPU repair; no compute",
+    "queue_message_id": "01a0beb3-fcd1-7331-8d77-649dbb974146",
+    "queued_at_utc": "2026-09-20T12:04:33.634227+00:00"
+  },
+  "updated_at_utc": "2026-09-20T12:03:23.635624+00:00",
+  "dispatch_history": [
+    {
+      "task_id": "A10_CAUSAL_C10_PREFLIGHT_V1",
+      "task_revision": 1,
+      "task": "tasks/A10_CAUSAL_C10_PREFLIGHT_V1.md",
+      "release": "releases/P10_A_CAUSAL_C10_PREFLIGHT_V1.json",
+      "status": "technical_failure_accepted_closed",
+      "published_at_utc": "2026-09-20T00:01:19.499534+00:00",
+      "expected_result": "receipts/A/A10_CAUSAL_C10_PREFLIGHT_V1_RESULT.json",
+      "note": "CPU integration accepted; independent fixed-seed replay alternative approved. One command/claim, up to two sequential children in one reserved wave; exact staged metadata passed.",
+      "queue_message_id": "01a0bc22-375d-70e0-be09-c657fa78ae04",
+      "queued_at_utc": "2026-09-20T00:06:17.812400+00:00",
+      "result": "receipts/A/A10_CAUSAL_C10_PREFLIGHT_V1_RESULT.json",
+      "acceptance": "manifests/A_CAUSAL_C10_PREFLIGHT_V1_FAILURE_ACCEPTANCE.json",
+      "closed_release": "releases/P10_A_CAUSAL_C10_PREFLIGHT_V1_CLOSED.json",
+      "accepted_at_utc": "2026-09-20T00:24:37.298423+00:00"
+    },
+    {
+      "task_id": "A10_CAUSAL_EVENT_CPU_REPAIR_V1",
+      "task_revision": 1,
+      "task": "tasks/A10_CAUSAL_EVENT_CPU_REPAIR_V1.md",
+      "release": "releases/P00_CAUSAL_EVENT_CPU_REPAIR_V1.json",
+      "status": "CPU_complete_accepted",
+      "published_at_utc": "2026-09-20T00:24:37.298423+00:00",
+      "expected_result": "receipts/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1_RESULT.json",
+      "note": "CPU only: real recorder/controller integration and exception evidence; all compute releases closed. Future V2 only unauthorized proposal.",
+      "queue_message_id": "01a0bc34-2575-7a50-882d-5d373fbc1d7c",
+      "queued_at_utc": "2026-09-20T00:25:41.556856+00:00",
+      "result": "receipts/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1_RESULT.json",
+      "acceptance": "manifests/CAUSAL_EVENT_CPU_REPAIR_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-20T00:52:46.036137+00:00"
+    },
+    {
+      "task_id": "A10_CAUSAL_C10_PREFLIGHT_V2",
+      "task_revision": 1,
+      "task": "tasks/A10_CAUSAL_C10_PREFLIGHT_V2.md",
+      "release": "releases/P10_A_CAUSAL_C10_PREFLIGHT_V2.json",
+      "status": "finite_engineering_complete_accepted_closed",
+      "published_at_utc": "2026-09-20T00:52:46.036137+00:00",
+      "expected_result": "receipts/A/A10_CAUSAL_C10_PREFLIGHT_V2_RESULT.json",
+      "note": "Real recorder/controller CPU revision accepted; exact staged publication passed. New one-command/claim A-only V2 same111 caps; no old release reuse.",
+      "queue_message_id": "01a0bc4d-9969-77e2-9529-f6a1573f25a1",
+      "queued_at_utc": "2026-09-20T00:53:41.219092+00:00",
+      "result": "receipts/A/A10_CAUSAL_C10_PREFLIGHT_V2_RESULT.json",
+      "acceptance": "manifests/A_CAUSAL_C10_PREFLIGHT_V2_FINAL_ACCEPTANCE.json",
+      "closed_release": "releases/P10_A_CAUSAL_C10_PREFLIGHT_V2_CLOSED.json",
+      "accepted_at_utc": "2026-09-20T01:17:10.279014+00:00"
+    },
+    {
+      "task_id": "A10_PV_DIRECTION_CPU_ANALYSIS_V1",
+      "task_revision": 1,
+      "task": "tasks/A10_PV_DIRECTION_CPU_ANALYSIS_V1.md",
+      "release": "releases/P00_PV_DIRECTION_CPU_ANALYSIS_V1.json",
+      "status": "CPU_analysis_accepted",
+      "published_at_utc": "2026-09-20T01:17:10.279014+00:00",
+      "expected_result": "receipts/A/A10_PV_DIRECTION_CPU_ANALYSIS_V1_RESULT.json",
+      "note": "Saved step0/cut5 direction risk analysis CPU only; no new model, simulation, tuning, Q gate or compute authorization.",
+      "queue_message_id": "01a0bc65-6dc1-7671-bb2e-d03fb1c32242",
+      "queued_at_utc": "2026-09-20T01:19:31.155618+00:00",
+      "result": "receipts/A/A10_PV_DIRECTION_CPU_ANALYSIS_V1_RESULT.json",
+      "acceptance": "manifests/PV_DIRECTION_CPU_ANALYSIS_V1_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-20T01:52:44.582113+00:00"
+    },
+    {
+      "task_id": "A11_COMMON_POOL_DESIGN_CPU_V1",
+      "task_revision": 1,
+      "task": "tasks/A11_COMMON_POOL_DESIGN_CPU_V1.md",
+      "release": "releases/P00_COMMON_POOL_DESIGN_CPU_V1.json",
+      "status": "CPU_design_draft_accepted_revisions_required",
+      "published_at_utc": "2026-09-20T01:52:44.582113+00:00",
+      "expected_result": "receipts/A/A11_COMMON_POOL_DESIGN_CPU_V1_RESULT.json",
+      "note": "Design and quote only:MT50 H10 common raw pool, parent split and recovery evidence. No collector implementation, model, simulation, new standalone replay or training.",
+      "queue_message_id": "01a0bc85-17a5-71b0-bb58-d53a63293fd4",
+      "queued_at_utc": "2026-09-20T01:54:06.854899+00:00",
+      "result": "receipts/A/A11_COMMON_POOL_DESIGN_CPU_V1_RESULT.json",
+      "acceptance": "manifests/COMMON_POOL_DESIGN_CPU_V1_REVIEW.json",
+      "accepted_at_utc": "2026-09-20T08:27:50.624206+00:00"
+    },
+    {
+      "task_id": "A11_COMMON_POOL_REVISION_CPU_V2",
+      "task_revision": 1,
+      "task": "tasks/A11_COMMON_POOL_REVISION_CPU_V2.md",
+      "release": "releases/P00_COMMON_POOL_REVISION_CPU_V2.json",
+      "status": "CPU_protocol_accepted",
+      "published_at_utc": "2026-09-20T08:27:50.624206+00:00",
+      "expected_result": "receipts/A/A11_COMMON_POOL_REVISION_CPU_V2_RESULT.json",
+      "note": "CPU protocol corrections and new full resource quote only; no new implementation or compute.",
+      "queue_message_id": "01a0bdf2-80fe-7100-862c-ad29b90b24ee",
+      "queued_at_utc": "2026-09-20T08:33:16.626722+00:00",
+      "result": "receipts/A/A11_COMMON_POOL_REVISION_CPU_V2_RESULT.json",
+      "acceptance": "manifests/COMMON_POOL_REVISION_CPU_V2_ACCEPTANCE.json",
+      "accepted_at_utc": "2026-09-20T09:05:29.938522+00:00"
+    },
+    {
+      "task_id": "A11_COMMON_POOL_COLLECTOR_CPU_V1",
+      "task_revision": 1,
+      "task": "tasks/A11_COMMON_POOL_COLLECTOR_CPU_V1.md",
+      "release": "releases/P00_A_COMMON_POOL_COLLECTOR_CPU_V1.json",
+      "status": "CPU_delivery_reviewed_repairs_required",
+      "published_at_utc": "2026-09-20T09:05:29.938522+00:00",
+      "expected_result": "receipts/A/A11_COMMON_POOL_COLLECTOR_CPU_V1_RESULT.json",
+      "note": "Isolated CPU shelf collector and sidecar implementation; no real compute.",
+      "queue_message_id": "01a0be11-2164-7130-bad3-68a40dec3fe1",
+      "queued_at_utc": "2026-09-20T09:06:40.258575+00:00",
+      "result": "receipts/A/A11_COMMON_POOL_COLLECTOR_CPU_V1_RESULT.json",
+      "acceptance": "manifests/COMMON_POOL_COLLECTOR_CPU_V1_REVIEW.json",
+      "accepted_at_utc": "2026-09-20T10:17:03.089823+00:00"
+    },
+    {
+      "task_id": "A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1",
+      "task_revision": 1,
+      "task": "tasks/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1.md",
+      "release": "releases/P00_A_COLLECTOR_CONTRACT_CPU_REPAIR_V1.json",
+      "status": "CPU_repairs_reviewed_narrow_followup_required",
+      "published_at_utc": "2026-09-20T10:17:03.089823+00:00",
+      "expected_result": "receipts/A/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1_RESULT.json",
+      "note": "Targeted CPU serializer/public-record/resource repair; no new experiment or runtime.",
+      "queue_message_id": "01a0be53-15ca-76b3-a541-e07ff4cc06c6",
+      "queued_at_utc": "2026-09-20T10:18:48.459604+00:00",
+      "result": "receipts/A/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1_RESULT.json",
+      "acceptance": "manifests/A11_COLLECTOR_CONTRACT_CPU_REPAIR_V1_REVIEW.json",
+      "accepted_at_utc": "2026-09-20T11:01:04.486306+00:00"
+    },
+    {
+      "task_id": "A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1",
+      "task_revision": 1,
+      "task": "tasks/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1.md",
+      "release": "releases/P00_A_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1.json",
+      "status": "complete_accepted",
+      "published_at_utc": "2026-09-20T11:01:04.486306+00:00",
+      "expected_result": "receipts/A/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1_RESULT.json",
+      "note": "CPU-only same-parent BANK reference and actual intervention flag fixes; no new experiment.",
+      "queue_message_id": "01a0be7a-f93a-7653-9de8-18e79626290c",
+      "queued_at_utc": "2026-09-20T11:02:21.946652+00:00",
+      "acceptance": "manifests/A11_SHARED_PLAN_REFERENCE_CPU_REPAIR_V1_ACCEPTANCE.json"
+    },
+    {
+      "task_id": "A11_COMMON_POOL_FIRST_PARENT_V3",
+      "task_revision": 1,
+      "task": "tasks/A11_COMMON_POOL_FIRST_PARENT_V3.md",
+      "release": "releases/P11_A_COMMON_POOL_FIRST_PARENT_V3.json",
+      "release_sha256": "55812df54865d7773e600f4ffedef26413f3e372fd7deb42bd3060a2ed0e5734",
+      "status": "failed_consumed_closed",
+      "published_at_utc": "2026-09-20T11:39:29.607200+00:00",
+      "expected_result": "receipts/A/A11_COMMON_POOL_FIRST_PARENT_V3_RESULT.json",
+      "note": "Only first fixed shelf parent; one command/claim; no retry or next stage",
+      "queue_message_id": "01a0be9e-7f58-7243-8fdc-0c0a60a8256e",
+      "queued_at_utc": "2026-09-20T11:41:08.153164+00:00",
+      "acceptance": "manifests/A11_COMMON_POOL_FIRST_PARENT_V3_FAILURE_ACCEPTANCE.json",
+      "closure": "releases/P11_A_COMMON_POOL_FIRST_PARENT_V3_CLOSED.json"
+    }
+  ],
+  "latest_instruction_at_utc": "2026-09-20T12:04:33.634227+00:00"
+}

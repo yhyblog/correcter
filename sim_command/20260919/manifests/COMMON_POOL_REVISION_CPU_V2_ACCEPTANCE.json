@@ -1,0 +1,84 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A11_COMMON_POOL_REVISION_CPU_V2",
+  "revision": 1,
+  "accepted_at_utc": "2026-09-20T09:05:29.938522+00:00",
+  "status": "CPU_protocol_and_quote_accepted_ready_for_scoped_CPU_implementation",
+  "receipt": {
+    "path": "receipts/A/A11_COMMON_POOL_REVISION_CPU_V2_RESULT.json",
+    "sha256": "5d6a936b296a420133615e630f66c55785357d4f0187b100fb5f2c6f5fc58ae8"
+  },
+  "report": {
+    "path": "results/A/A11_COMMON_POOL_REVISION_CPU_V2/REPORT.md",
+    "sha256": "f612cf240e48f5168796be8bc74fc28ba248c40d44b78aa1aa745057676d24a3"
+  },
+  "manifest": {
+    "path": "results/A/A11_COMMON_POOL_REVISION_CPU_V2/EVIDENCE_MANIFEST.json",
+    "sha256": "37e15c3a6e7b6f2ea638db5f78515416d75d9b4ee87d0b75d05602653f80abf7"
+  },
+  "authority_at_review": {
+    "CONTROL": {
+      "path": "manifests/COMMON_POOL_V2_ACCEPTANCE_INPUTS/CONTROL.json",
+      "sha256": "42aa91fb366bae454355cefc5fb0ec076eb480cbdcd8178fc26061eb30c14ba3"
+    },
+    "TASK_BOARD": {
+      "path": "manifests/COMMON_POOL_V2_ACCEPTANCE_INPUTS/TASK_BOARD.json",
+      "sha256": "94e6a6d6c266717cb04ca4fe961fa7c4485c656b914db17c3dff49ba1067e90a"
+    }
+  },
+  "independent_verification": {
+    "RESULT_artifacts": 19,
+    "manifest_files": 64,
+    "unique_SHA_size_realpath_checks": 65,
+    "reported_zero_restricted_operations": 130,
+    "root_model_environment_hardware_calls": 0
+  },
+  "reviewers": [
+    "/root/interface_v1_semantics_review",
+    "/root/pv_v3_numeric_acceptance_review"
+  ],
+  "accepted": [
+    "Q a0/local_plus/local_minus each2 and G0 old+3fresh each2; C5/C10 physical labels separate",
+    "parent absolute s300 including final state; full_state_verified and complete planned2-repeat masks",
+    "LVM-specific nonterminal eligibility; parent indivisible and host/cut stratification; compute/data barriers separate",
+    "typed state categories and unknowns honestly unverified; exact equality proposal, not roundtrip proof",
+    "new cold-replay sampling and storage arithmetic, not hard caps or capacity reservation"
+  ],
+  "verified_scenario": {
+    "parents_design_only": 500,
+    "valid_sources": null,
+    "attempts": 7500,
+    "controls": 2250000,
+    "samples": 226500,
+    "flow": 2265000,
+    "observations": 2257500,
+    "policy_visual": 679500,
+    "policy_language": 226500,
+    "explicit_visual": 2462306,
+    "output_bytes": 2062168559616,
+    "planning_peak_bytes": 2287509687170,
+    "planning_peak_TiB": 2.0804779407353635
+  },
+  "conditional_normal_reuse": {
+    "attempts": 7000,
+    "controls": 2100000,
+    "samples": 211500,
+    "planning_peak_bytes": 2168035255170,
+    "selected_for_first_implementation": false
+  },
+  "still_unproven": [
+    "full-state field closure and real equality for any new parent",
+    "other49 initialization caps and state closure",
+    "hard serialized output limits and project quota",
+    "real source identities/seeds/shards and runtime budgets",
+    "B sidecar consumption and eventual training initialization/weights"
+  ],
+  "decision": "Proceed to one shelf-place cold-replay collector CPU implementation plus B CPU view adapter; no further pure-design cycle required.",
+  "real_collection_authorized": false,
+  "training_authorized": false,
+  "new_GPU_release": null,
+  "next_tasks": [
+    "A11_COMMON_POOL_COLLECTOR_CPU_V1",
+    "B11_COMMON_POOL_VIEWS_CPU_V1"
+  ]
+}

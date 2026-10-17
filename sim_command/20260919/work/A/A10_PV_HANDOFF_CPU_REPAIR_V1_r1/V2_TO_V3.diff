@@ -1,0 +1,560 @@
+--- V2/code/core/contracts.py
++++ V3/code/core/contracts.py
+@@ -5,9 +5,10 @@
+ import platform
+ from pathlib import Path
+ import time
++from .handoff import HANDOFF_SPEC
+ 
+-TASK='A10_PV_OFFLINE_PREFLIGHT_V2'
+-RELEASE='P10_A_PV_OFFLINE_PREFLIGHT_V2'
++TASK='A10_PV_OFFLINE_PREFLIGHT_V3'
++RELEASE='P10_A_PV_OFFLINE_PREFLIGHT_V3'
+ CAMPAIGN=Path('/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919')
+ PACKAGE=Path(__file__).resolve().parents[2]
+ 
+@@ -48,10 +49,13 @@
+         task_revision=1,node_role='A',release_id=RELEASE,owner_host=proposal['owner_host'],wave_participants=['A'],
+         max_retries=0,timeout_seconds=1800,kill_grace_seconds=30,resource_caps=proposal['resource_caps'],
+         device=proposal['device'],cuda_environment=proposal['cuda_environment'],
++        occupancy_handoff=proposal['occupancy_handoff'],
+         proposal_sha256=proposal['_sha256'],code_manifest_sha256=proposal['code_manifest']['sha256'],
+         input_manifest_sha256=proposal['input_manifest']['sha256'],config_sha256=proposal['config']['sha256'],
+         external_source_manifest_sha256=proposal['external_sources']['sha256'])
+     if any(release.get(k)!=v for k,v in fixed.items()):raise ContractError('Release identity/caps differ from frozen proposal')
++    if proposal.get('occupancy_handoff')!=HANDOFF_SPEC or control.get('active_occupancy_handoff')!=HANDOFF_SPEC:
++        raise ContractError('Frozen V3 handoff metadata mismatch')
+     if hostname!=proposal['owner_host']:raise ContractError('Wrong physical host')
+     for k in ('run_id','wave_id','shard_id'):
+         x=release.get(k)
+@@ -83,7 +87,7 @@
+     if r['_sha256']!=expected_sha:raise ContractError('Release changed after claim')
+ 
+ def claim(release):
+-    root=CAMPAIGN/'results/A/P10_PV_V2_release_claims';root.mkdir(parents=True,exist_ok=True)
++    root=CAMPAIGN/'results/A/P10_PV_V3_release_claims';root.mkdir(parents=True,exist_ok=True)
+     p=root/(RELEASE+'.json')
+     write_new(p,dict(release_id=RELEASE,release_sha256=release['_sha256'],run_id=release['run_id'],
+         launcher_pid=os.getpid(),unix_seconds=time.time(),consumed_on_any_outcome=True,unused_caps_reusable=False))
+--- V2/code/diagnostic.py
++++ V3/code/diagnostic.py
+@@ -247,9 +247,9 @@
+     a=parser.parse_args();out=Path(a.launch_directory).resolve()/'diagnostic'
+     r,p=load_authorization(a.release,full=True)
+     if not held_reservation_fds():raise ContractError('Missing inherited whole-host occupancy reservation')
+-    claim=read(CAMPAIGN/'results/A/P10_PV_V2_release_claims'/ (RELEASE+'.json'))
++    claim=read(CAMPAIGN/'results/A/P10_PV_V3_release_claims'/ (RELEASE+'.json'))
+     if claim['release_sha256']!=r['_sha256'] or claim['run_id']!=r['run_id']:raise ContractError('Missing matching exclusive claim')
+-    if out.parent!=CAMPAIGN/'results/A/P10_PV_V2_launcher_runs'/r['run_id']:raise ContractError('Output destination mismatch')
++    if out.parent!=CAMPAIGN/'results/A/P10_PV_V3_launcher_runs'/r['run_id']:raise ContractError('Output destination mismatch')
+     out.mkdir(exist_ok=False)
+     meter=Meter(out/'events.jsonl',p['diagnostic_caps'],lambda:gate(a.release,r['_sha256']))
+     cfg=read(p['config']['path']);failure=None;start=time.monotonic()
+--- V2/code/launch.py
++++ V3/code/launch.py
+@@ -5,6 +5,7 @@
+ import subprocess
+ import sys
+ from core.contracts import CAMPAIGN, PACKAGE, ContractError, Meter, claim, load_authorization, read, reconcile, write_new
++from core.handoff import require_handoff_environment
+ from core.identity import verify_device
+ from core.wave_timing import stamp,mark,run_forwarded,observe_restoration,timing_summary
+ 
+@@ -12,6 +13,7 @@
+     env=dict(os.environ if parent is None else parent)
+     if env.get('NVIDIA_VISIBLE_DEVICES')!=cfg['cuda_environment']['NVIDIA_VISIBLE_DEVICES']:
+         raise ContractError('Container physical visibility differs; do not rewrite it')
++    require_handoff_environment(cfg,env)
+     env.update(cfg['cuda_environment'])
+     env.update(PYTHONDONTWRITEBYTECODE='1',HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1',HF_HOME=cfg['hf_home'],
+         OMP_NUM_THREADS='1',TOKENIZERS_PARALLELISM='false',PYTORCH_NVML_BASED_CUDA_CHECK='0',
+@@ -25,7 +27,7 @@
+     parser=argparse.ArgumentParser();parser.add_argument('--release',required=True);a=parser.parse_args()
+     start=stamp();r,p=load_authorization(a.release,full=False)
+     claim_path=claim(r)  # any claim consumes the release, even pre-load failure
+-    out=CAMPAIGN/'results/A/P10_PV_V2_launcher_runs'/r['run_id'];out.mkdir(parents=True,exist_ok=False)
++    out=CAMPAIGN/'results/A/P10_PV_V3_launcher_runs'/r['run_id'];out.mkdir(parents=True,exist_ok=False)
+     mark(out,'launcher_started',claim=str(claim_path))
+     write_new(out/'launch_identity.json',dict(release=r,proposal_sha256=p['_sha256'],claim=str(claim_path),started_at=start))
+     meter=Meter(out/'launcher_events.jsonl',p['launcher_caps'])
+@@ -34,11 +36,13 @@
+         checked,p=load_authorization(a.release,full=True)
+         if checked['_sha256']!=r['_sha256']:raise ContractError('Release changed after claim')
+         cfg=read(p['config']['path'])
++        handoff=require_handoff_environment(cfg,os.environ)
++        write_new(out/'handoff_environment.json',handoff)
+         rows=meter.call('pre_reservation_NVML_identity',lambda:verify_device({**r,**cfg['device']},cfg),{'native_nvml_identity_queries':1})
+         write_new(out/'pre_reservation_device.json',dict(rows=rows,target=cfg['device']))
+         guard=Path(cfg['occupancy_lifecycle']).with_name('gpu_occupancy_guard.py')
+         subprocess.run(['/usr/bin/python',str(guard),'active'],check=True)
+-        cache=CAMPAIGN/'work/A/P10_PV_V2_runtime_cache'/r['run_id'];cache.mkdir(parents=True,exist_ok=False)
++        cache=CAMPAIGN/'work/A/P10_PV_V3_runtime_cache'/r['run_id'];cache.mkdir(parents=True,exist_ok=False)
+         env=child_environment(cfg,cache)
+         cmd=[cfg['occupancy_lifecycle'],'run','--',cfg['python'],'-B',str(PACKAGE/'code/reserved.py'),
+              '--release',str(Path(a.release).resolve()),'--launch-directory',str(out)]
+--- V2/config/CONFIG.json
++++ V3/config/CONFIG.json
+@@ -142,5 +142,21 @@
+   "timeout_seconds": 1800,
+   "kill_grace_seconds": 30,
+   "restoration_observation_timeout_seconds": 120,
+-  "LD_LIBRARY_PATH": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/lib:/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu"
++  "LD_LIBRARY_PATH": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/lib:/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu",
++  "occupancy_handoff": {
++    "environment_variable": "CORRECTOR_OCCUPANCY_HANDOFF_TIMEOUT_SECONDS",
++    "required_value": "300",
++    "timeout_seconds": 300,
++    "default_seconds": 90,
++    "minimum_seconds": 1,
++    "maximum_seconds": 300,
++    "guard_path": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_guard.py",
++    "guard_expected_sha256": "7910c567a47ddf68294d92fc9698cc780aeb130ddefde0337414bfcd88cb85a4",
++    "guard_expected_size_bytes": 10704,
++    "active_guard_required": true,
++    "formal_lock_path": "/tmp/gpu_occupancy_guard/formal.lock",
++    "poll_sleep_seconds_max": 1,
++    "existing_query_timeout_seconds": 15,
++    "failure_last_observation_rows_max": 64
++  }
+ }
+--- V2/INPUT_MANIFEST.json
++++ V3/INPUT_MANIFEST.json
+@@ -94,9 +94,9 @@
+     },
+     {
+       "path": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_guard.py",
+-      "sha256": "d499982dff72c3b74ddab0e13e359edccb5f282900c534030b3816b58495fcaf",
+-      "verification_now": "targeted small input SHA verified in CPU preparation",
+-      "size_bytes": 8683,
++      "sha256": "7910c567a47ddf68294d92fc9698cc780aeb130ddefde0337414bfcd88cb85a4",
++      "verification_now": "Expected future installed guard patch; prepared privately only; original SHA belongs solely to installation precondition",
++      "size_bytes": 10704,
+       "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_guard.py"
+     },
+     {
+--- V2/EXTERNAL_SOURCE_MANIFEST.json
++++ V3/EXTERNAL_SOURCE_MANIFEST.json
+@@ -102,9 +102,9 @@
+     {
+       "path": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_guard.py",
+       "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_guard.py",
+-      "size_bytes": 8683,
+-      "sha256": "d499982dff72c3b74ddab0e13e359edccb5f282900c534030b3816b58495fcaf",
+-      "verification_now": "inherited accepted V3 SHA; no fresh driver/library read or scan"
++      "size_bytes": 10704,
++      "sha256": "7910c567a47ddf68294d92fc9698cc780aeb130ddefde0337414bfcd88cb85a4",
++      "verification_now": "Expected future installed guard patch; prepared privately only; original SHA belongs solely to installation precondition"
+     },
+     {
+       "path": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_lifecycle.sh",
+--- V2/commands/run_proposed_pv_offline.sh
++++ V3/commands/run_proposed_pv_offline.sh
+@@ -1,4 +1,5 @@
+ #!/bin/sh
+ set -eu
++export CORRECTOR_OCCUPANCY_HANDOFF_TIMEOUT_SECONDS=300
+ [ "$#" -eq 1 ] || { echo "usage: run_proposed_pv_offline.sh NEW_RELEASE_JSON" >&2; exit 2; }
+-exec /mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/bin/python -B /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/code/launch.py --release "$1"
++exec /mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/bin/python -B /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/code/launch.py --release "$1"
+--- V2/commands/check_publication_metadata_cpu.py
++++ V3/commands/check_publication_metadata_cpu.py
+@@ -13,6 +13,7 @@
+ PACKAGE = Path(__file__).resolve().parents[1]
+ sys.path.insert(0, str(PACKAGE/'code'))
+ from core.contracts import CAMPAIGN, TASK, RELEASE, ContractError, validate_metadata
++from core.handoff import HANDOFF_SPEC
+ 
+ MAX_JSON_BYTES = 1024 * 1024
+ 
+@@ -29,7 +30,7 @@
+ def check(control_path, board_path, release_json, release_path, hostname):
+     expected_release = CAMPAIGN/'releases'/(RELEASE+'.json')
+     if Path(release_path).resolve() != expected_release:
+-        raise ContractError('Only designated V2 release path accepted')
++        raise ContractError('Only designated V3 release path accepted')
+     closure_path = expected_release.with_name(RELEASE+'_CLOSED.json')
+     if closure_path.exists():
+         raise ContractError('Release closure exists')
+@@ -50,13 +51,20 @@
+         manifests[key] = value
+     identity = manifests['authorization_identity']
+     if proposal['task_id'] != TASK or proposal['task_revision'] != 1 or identity['task_id'] != TASK or identity['release_id'] != RELEASE:
+-        raise ContractError('V2 proposal identity mismatch')
++        raise ContractError('V3 proposal identity mismatch')
+     if proposal['required_release_path'] != str(expected_release):
+         raise ContractError('Proposal release path mismatch')
+     cfg = manifests['config']
+     for key in ('device','cuda_environment','timeout_seconds','kill_grace_seconds'):
+         if proposal[key] != cfg[key]:
+             raise ContractError('Proposal/config mismatch: '+key)
++    if proposal.get('occupancy_handoff') != HANDOFF_SPEC or cfg.get('occupancy_handoff') != HANDOFF_SPEC:
++        raise ContractError('V3 handoff config/proposal mismatch')
++    for name in ('input_manifest','external_sources'):
++        rows = [x for x in manifests[name]['files'] if x['path'] == HANDOFF_SPEC['guard_path']]
++        if (len(rows) != 1 or rows[0]['sha256'] != HANDOFF_SPEC['guard_expected_sha256']
++                or rows[0]['size_bytes'] != HANDOFF_SPEC['guard_expected_size_bytes']):
++            raise ContractError('Future installed guard manifest mismatch: '+name)
+     control, _, _ = small_json(control_path)
+     board, _, _ = small_json(board_path)
+     release, _, _ = small_json(release_json)
+@@ -65,7 +73,7 @@
+     row = next(t for t in board['tasks'] if t.get('id') == TASK)
+     for key in ('run_id','wave_id','shard_id'):
+         if row.get(key) != release[key] or release[key] != identity[key]:
+-            raise ContractError('Prepared V2 publication identity mismatch: '+key)
++            raise ContractError('Prepared V3 publication identity mismatch: '+key)
+     if release.get('real_command') != [identity['command_path'], identity['release_path']]:
+         raise ContractError('Published command metadata mismatch')
+     return dict(status='PASS_METADATA_ONLY_NOT_AUTHORIZATION', task_id=TASK, release_id=RELEASE,
+--- V2/code/CODE_MANIFEST.json
++++ V3/code/CODE_MANIFEST.json
+@@ -1,6 +1,6 @@
+ {
+   "schema": "PV_private_code_v1",
+-  "root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/code",
++  "root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/code",
+   "files": [
+     {
+       "path": "core/__init__.py",
+@@ -9,8 +9,13 @@
+     },
+     {
+       "path": "core/contracts.py",
+-      "sha256": "18b909fa27d93d08d556eabccb02fab4dbcd119e2ea971b6a20c5c0125aed64e",
+-      "size_bytes": 8545
++      "sha256": "0a2d93b1f03c8bedabab2b1070c4ff12b1f398b833aa590103311e3837e8eeeb",
++      "size_bytes": 8816
++    },
++    {
++      "path": "core/handoff.py",
++      "sha256": "68e2bbf76962e8353770a7f5d41cc11bcdd0266573a5ed4928728b5720c0c818",
++      "size_bytes": 1572
+     },
+     {
+       "path": "core/identity.py",
+@@ -64,7 +69,7 @@
+     },
+     {
+       "path": "diagnostic.py",
+-      "sha256": "b5e0793d71f0110faa9ed44a0a26cf66290274696bf0a9ae39bbfd0ff3ec6fd9",
++      "sha256": "1dea692cc4170942e9a0dd17a2d105f4df239e6a050a7955e5489c9c93d483ee",
+       "size_bytes": 22237
+     },
+     {
+@@ -74,8 +79,8 @@
+     },
+     {
+       "path": "launch.py",
+-      "sha256": "41fb0b2887b65f414c718ca5fedeade1c824700970ec78cae11072f582e64b53",
+-      "size_bytes": 5533
++      "sha256": "fcf66f40852820f6d7be9658bf4c72556c52f0cfd8f7b2ab9e34679d1949160f",
++      "size_bytes": 5745
+     },
+     {
+       "path": "reserved.py",
+--- V2/proposal/IDENTITY.json
++++ V3/proposal/IDENTITY.json
+@@ -1,26 +1,26 @@
+ {
+   "campaign_id": "corrector-sim-20260919",
+-  "preparation_task_id": "A10_PV_AUTH_METADATA_CPU_V1",
+-  "task_id": "A10_PV_OFFLINE_PREFLIGHT_V2",
++  "preparation_task_id": "A10_PV_HANDOFF_CPU_REPAIR_V1",
++  "task_id": "A10_PV_OFFLINE_PREFLIGHT_V3",
+   "task_revision": 1,
+   "node_role": "A",
+-  "release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V2",
++  "release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V3",
+   "owner_host": "trial-303224955-trialrun-303224955-worker-0",
+-  "wave_id": "corrector-sim-20260919-A-PV-offline-V2-wave07",
+-  "run_id": "A10_PV_OFFLINE_PREFLIGHT_V2_r1_A_wave07",
+-  "shard_id": "A-PV-offline-V2-shelf-place-step0-cached-once",
++  "wave_id": "corrector-sim-20260919-A-PV-offline-V3-wave08",
++  "run_id": "A10_PV_OFFLINE_PREFLIGHT_V3_r1_A_wave08",
++  "shard_id": "A-PV-offline-V3-shelf-place-step0-cached-once",
+   "board_status": "ready",
+   "released_status": "released",
+   "template_status": "UNAUTHORIZED_TEMPLATE",
+-  "release_relative_path": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V2.json",
+-  "release_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V2.json",
+-  "package_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1",
+-  "command_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/commands/run_proposed_pv_offline.sh",
+-  "claim_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_PV_V2_release_claims/P10_A_PV_OFFLINE_PREFLIGHT_V2.json",
+-  "output_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_PV_V2_launcher_runs",
+-  "cache_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/P10_PV_V2_runtime_cache",
+-  "task_brief": "tasks/A10_PV_OFFLINE_PREFLIGHT_V2.md",
+-  "acknowledgement": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V2_ACK.json",
+-  "result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V2_RESULT.json",
++  "release_relative_path": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V3.json",
++  "release_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V3.json",
++  "package_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1",
++  "command_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/commands/run_proposed_pv_offline.sh",
++  "claim_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_PV_V3_release_claims/P10_A_PV_OFFLINE_PREFLIGHT_V3.json",
++  "output_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_PV_V3_launcher_runs",
++  "cache_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/P10_PV_V3_runtime_cache",
++  "task_brief": "tasks/A10_PV_OFFLINE_PREFLIGHT_V3.md",
++  "acknowledgement": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V3_ACK.json",
++  "result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V3_RESULT.json",
+   "publication_is_authorization": false
+ }
+--- V2/proposal/PROPOSAL.json
++++ V3/proposal/PROPOSAL.json
+@@ -1,9 +1,9 @@
+ {
+-  "proposal_id": "A10_PV_OFFLINE_PREFLIGHT_V2_proposal_r1",
++  "proposal_id": "A10_PV_OFFLINE_PREFLIGHT_V3_proposal_r1",
+   "status": "proposed_not_released",
+   "publication_is_authorization": false,
+   "campaign_id": "corrector-sim-20260919",
+-  "task_id": "A10_PV_OFFLINE_PREFLIGHT_V2",
++  "task_id": "A10_PV_OFFLINE_PREFLIGHT_V3",
+   "task_revision": 1,
+   "node_role": "A",
+   "owner_host": "trial-303224955-trialrun-303224955-worker-0",
+@@ -11,35 +11,35 @@
+     "A"
+   ],
+   "config": {
+-    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/config/CONFIG.json",
+-    "sha256": "109bfe6482e7491cb8ad6ef4821bf55b536f4d8f9a734fd0100e71ee516cd48b",
+-    "size_bytes": 6616
++    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/config/CONFIG.json",
++    "sha256": "1ad23a8ebbd8424b207a646d2f7cfcb33b5b7a68fc48186a8a0f53cc0cc38a0d",
++    "size_bytes": 7294
+   },
+   "input_manifest": {
+-    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/INPUT_MANIFEST.json",
+-    "sha256": "706b2e94b543e404c7a3ce6baee88d1736c61cf2ea4e9e491643af95e1fc1fb0",
+-    "size_bytes": 15890
++    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/INPUT_MANIFEST.json",
++    "sha256": "6b7ebeeb319cc6740d2d4a7410211e41635545ce5d43b2aa108ac3692f9faa3f",
++    "size_bytes": 15959
+   },
+   "code_manifest": {
+-    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/code/CODE_MANIFEST.json",
+-    "sha256": "6aebda83f18a1698e815d522866106a0e84eb1adf669b7d097131f3f858ac161",
+-    "size_bytes": 73442
++    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/code/CODE_MANIFEST.json",
++    "sha256": "b2b343a645d7622ed5ab9e54af5f6bae43ea692cd3ce468ee1360a9d133bdb3e",
++    "size_bytes": 73598
+   },
+   "external_sources": {
+-    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/EXTERNAL_SOURCE_MANIFEST.json",
+-    "sha256": "088c97a731211ccb51f989fe024fe608c1d005838c505d8335768788a75b768c",
+-    "size_bytes": 15482
++    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/EXTERNAL_SOURCE_MANIFEST.json",
++    "sha256": "3f41586b9ebc87c68a5194bd728b3e72bedb993eb5ed14c4a60b4e10805a9679",
++    "size_bytes": 15540
+   },
+   "command": {
+-    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/commands/run_proposed_pv_offline.sh",
+-    "sha256": "965dfc3fa5e11aebd4976d5d0b84a546f26341fd52ac7757df9109f35728a9b7",
+-    "size_bytes": 344
++    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/commands/run_proposed_pv_offline.sh",
++    "sha256": "a7bafb4ef1288e9fb1598faeb495c01e72f44c0db3f632e6371a8a3e55b95bc4",
++    "size_bytes": 400
+   },
+   "real_command": [
+-    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/commands/run_proposed_pv_offline.sh",
++    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/commands/run_proposed_pv_offline.sh",
+     "NEW_RELEASE_JSON"
+   ],
+-  "required_release_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V2.json",
++  "required_release_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V3.json",
+   "device": {
+     "gpu_uuid": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe",
+     "gpu_index": 0,
+@@ -331,8 +331,24 @@
+   ],
+   "successful_output_is_task_success_sample": false,
+   "authorization_identity": {
+-    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/proposal/IDENTITY.json",
+-    "sha256": "c0d73ea44eba6c02cfa730c68da774dba832de5bc9d99479ef50848e717534c7",
+-    "size_bytes": 1714
++    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/proposal/IDENTITY.json",
++    "sha256": "c3521dcb6b3bde1cc02fe8aa5437e54656f6ea849b13ed705c10464aaf28a033",
++    "size_bytes": 1717
++  },
++  "occupancy_handoff": {
++    "environment_variable": "CORRECTOR_OCCUPANCY_HANDOFF_TIMEOUT_SECONDS",
++    "required_value": "300",
++    "timeout_seconds": 300,
++    "default_seconds": 90,
++    "minimum_seconds": 1,
++    "maximum_seconds": 300,
++    "guard_path": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_guard.py",
++    "guard_expected_sha256": "7910c567a47ddf68294d92fc9698cc780aeb130ddefde0337414bfcd88cb85a4",
++    "guard_expected_size_bytes": 10704,
++    "active_guard_required": true,
++    "formal_lock_path": "/tmp/gpu_occupancy_guard/formal.lock",
++    "poll_sleep_seconds_max": 1,
++    "existing_query_timeout_seconds": 15,
++    "failure_last_observation_rows_max": 64
+   }
+ }
+--- V2/proposal/RELEASE_TEMPLATE.json
++++ V3/proposal/RELEASE_TEMPLATE.json
+@@ -2,19 +2,19 @@
+   "status": "UNAUTHORIZED_TEMPLATE",
+   "issuer": "analysis",
+   "campaign_id": "corrector-sim-20260919",
+-  "task_id": "A10_PV_OFFLINE_PREFLIGHT_V2",
++  "task_id": "A10_PV_OFFLINE_PREFLIGHT_V3",
+   "task_revision": 1,
+   "node_role": "A",
+   "owner_host": "trial-303224955-trialrun-303224955-worker-0",
+-  "release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V2",
+-  "wave_id": "corrector-sim-20260919-A-PV-offline-V2-wave07",
+-  "run_id": "A10_PV_OFFLINE_PREFLIGHT_V2_r1_A_wave07",
+-  "shard_id": "A-PV-offline-V2-shelf-place-step0-cached-once",
+-  "proposal_sha256": "9e7a80a211eba6a4e3c65bd2fb3764fe0fbd974c4190c9f2e77091c04a62e02c",
+-  "code_manifest_sha256": "6aebda83f18a1698e815d522866106a0e84eb1adf669b7d097131f3f858ac161",
+-  "input_manifest_sha256": "706b2e94b543e404c7a3ce6baee88d1736c61cf2ea4e9e491643af95e1fc1fb0",
+-  "config_sha256": "109bfe6482e7491cb8ad6ef4821bf55b536f4d8f9a734fd0100e71ee516cd48b",
+-  "external_source_manifest_sha256": "088c97a731211ccb51f989fe024fe608c1d005838c505d8335768788a75b768c",
++  "release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V3",
++  "wave_id": "corrector-sim-20260919-A-PV-offline-V3-wave08",
++  "run_id": "A10_PV_OFFLINE_PREFLIGHT_V3_r1_A_wave08",
++  "shard_id": "A-PV-offline-V3-shelf-place-step0-cached-once",
++  "proposal_sha256": "c07750be489911e2d7363729d8ed186605f8792337c9f4118677e20a3af1ca2a",
++  "code_manifest_sha256": "b2b343a645d7622ed5ab9e54af5f6bae43ea692cd3ce468ee1360a9d133bdb3e",
++  "input_manifest_sha256": "6b7ebeeb319cc6740d2d4a7410211e41635545ce5d43b2aa108ac3692f9faa3f",
++  "config_sha256": "1ad23a8ebbd8424b207a646d2f7cfcb33b5b7a68fc48186a8a0f53cc0cc38a0d",
++  "external_source_manifest_sha256": "3f41586b9ebc87c68a5194bd728b3e72bedb993eb5ed14c4a60b4e10805a9679",
+   "resource_caps": {
+     "simulator_attempts": 0,
+     "environment_instances": 0,
+@@ -103,7 +103,23 @@
+   "kill_grace_seconds": 30,
+   "template_is_authorization": false,
+   "real_command": [
+-    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/commands/run_proposed_pv_offline.sh",
+-    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V2.json"
+-  ]
++    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/commands/run_proposed_pv_offline.sh",
++    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V3.json"
++  ],
++  "occupancy_handoff": {
++    "environment_variable": "CORRECTOR_OCCUPANCY_HANDOFF_TIMEOUT_SECONDS",
++    "required_value": "300",
++    "timeout_seconds": 300,
++    "default_seconds": 90,
++    "minimum_seconds": 1,
++    "maximum_seconds": 300,
++    "guard_path": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_guard.py",
++    "guard_expected_sha256": "7910c567a47ddf68294d92fc9698cc780aeb130ddefde0337414bfcd88cb85a4",
++    "guard_expected_size_bytes": 10704,
++    "active_guard_required": true,
++    "formal_lock_path": "/tmp/gpu_occupancy_guard/formal.lock",
++    "poll_sleep_seconds_max": 1,
++    "existing_query_timeout_seconds": 15,
++    "failure_last_observation_rows_max": 64
++  }
+ }
+--- V2/proposal/CONTROL_REQUIRED.json
++++ V3/proposal/CONTROL_REQUIRED.json
+@@ -3,12 +3,12 @@
+   "mode": "preflight",
+   "formal_gpu_runs_enabled": true,
+   "stop_requested": false,
+-  "active_compute_release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V2",
+-  "active_compute_release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V2.json",
++  "active_compute_release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V3",
++  "active_compute_release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V3.json",
+   "active_compute_task_ids": [
+-    "A10_PV_OFFLINE_PREFLIGHT_V2"
++    "A10_PV_OFFLINE_PREFLIGHT_V3"
+   ],
+-  "allowed_task_id_to_add": "A10_PV_OFFLINE_PREFLIGHT_V2",
++  "allowed_task_id_to_add": "A10_PV_OFFLINE_PREFLIGHT_V3",
+   "current_compute_limits": {
+     "simulator_attempts": 0,
+     "environment_instances": 0,
+@@ -78,7 +78,7 @@
+     "postprocessor_calls": 1
+   },
+   "per_task_compute_limits": {
+-    "A10_PV_OFFLINE_PREFLIGHT_V2": {
++    "A10_PV_OFFLINE_PREFLIGHT_V3": {
+       "simulator_attempts": 0,
+       "environment_instances": 0,
+       "wrapper_instances": 0,
+@@ -148,21 +148,37 @@
+     }
+   },
+   "board_task": {
+-    "id": "A10_PV_OFFLINE_PREFLIGHT_V2",
++    "id": "A10_PV_OFFLINE_PREFLIGHT_V3",
+     "owner": "A",
+     "revision": 1,
+     "status": "ready",
+-    "release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V2.json",
++    "release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V3.json",
+     "dependencies": [
+-      "A10_PV_AUTH_METADATA_CPU_V1"
++      "A10_PV_HANDOFF_CPU_REPAIR_V1"
+     ],
+-    "dependency_outcome_required": "CPU_metadata_package_accepted_and_independent_compute_release_published",
+-    "brief": "tasks/A10_PV_OFFLINE_PREFLIGHT_V2.md",
+-    "wave_id": "corrector-sim-20260919-A-PV-offline-V2-wave07",
+-    "run_id": "A10_PV_OFFLINE_PREFLIGHT_V2_r1_A_wave07",
+-    "shard_id": "A-PV-offline-V2-shelf-place-step0-cached-once",
+-    "acknowledgement": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V2_ACK.json",
+-    "expected_result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V2_RESULT.json"
++    "dependency_outcome_required": "CPU_handoff_package_accepted_shared_patch_separately_installed_and_independent_compute_release_published",
++    "brief": "tasks/A10_PV_OFFLINE_PREFLIGHT_V3.md",
++    "wave_id": "corrector-sim-20260919-A-PV-offline-V3-wave08",
++    "run_id": "A10_PV_OFFLINE_PREFLIGHT_V3_r1_A_wave08",
++    "shard_id": "A-PV-offline-V3-shelf-place-step0-cached-once",
++    "acknowledgement": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V3_ACK.json",
++    "expected_result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V3_RESULT.json"
+   },
+-  "analysis_must": "Publish this complete board_task with status ready (running accepted after ACK); release status released. Preserve all old closures. This requirements file and UNAUTHORIZED_TEMPLATE do not grant compute. Replace global and task caps exactly; do not inherit CPU zero Torch/model limits. Run the pure JSON publication checker before dispatch. Use the prepared V2 run/wave/shard identity consistently."
++  "analysis_must": "Use this complete ready board row, independent released V3 identity and exact66 caps. Preserve seven old closures. Shared guard patch installation needs separate explicit authorization and exact original/new SHA checks. Runtime expects only installed patched SHA in both input/external manifests. This CPU package and unauthorized templates grant neither installation nor compute.",
++  "active_occupancy_handoff": {
++    "environment_variable": "CORRECTOR_OCCUPANCY_HANDOFF_TIMEOUT_SECONDS",
++    "required_value": "300",
++    "timeout_seconds": 300,
++    "default_seconds": 90,
++    "minimum_seconds": 1,
++    "maximum_seconds": 300,
++    "guard_path": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_guard.py",
++    "guard_expected_sha256": "7910c567a47ddf68294d92fc9698cc780aeb130ddefde0337414bfcd88cb85a4",
++    "guard_expected_size_bytes": 10704,
++    "active_guard_required": true,
++    "formal_lock_path": "/tmp/gpu_occupancy_guard/formal.lock",
++    "poll_sleep_seconds_max": 1,
++    "existing_query_timeout_seconds": 15,
++    "failure_last_observation_rows_max": 64
++  }
+ }
+--- V2/proposal/BOARD_TASK_TEMPLATE.json
++++ V3/proposal/BOARD_TASK_TEMPLATE.json
+@@ -1,17 +1,17 @@
+ {
+-  "id": "A10_PV_OFFLINE_PREFLIGHT_V2",
++  "id": "A10_PV_OFFLINE_PREFLIGHT_V3",
+   "owner": "A",
+   "revision": 1,
+   "status": "ready",
+-  "release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V2.json",
++  "release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V3.json",
+   "dependencies": [
+-    "A10_PV_AUTH_METADATA_CPU_V1"
++    "A10_PV_HANDOFF_CPU_REPAIR_V1"
+   ],
+-  "dependency_outcome_required": "CPU_metadata_package_accepted_and_independent_compute_release_published",
+-  "brief": "tasks/A10_PV_OFFLINE_PREFLIGHT_V2.md",
+-  "wave_id": "corrector-sim-20260919-A-PV-offline-V2-wave07",
+-  "run_id": "A10_PV_OFFLINE_PREFLIGHT_V2_r1_A_wave07",
+-  "shard_id": "A-PV-offline-V2-shelf-place-step0-cached-once",
+-  "acknowledgement": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V2_ACK.json",
+-  "expected_result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V2_RESULT.json"
++  "dependency_outcome_required": "CPU_handoff_package_accepted_shared_patch_separately_installed_and_independent_compute_release_published",
++  "brief": "tasks/A10_PV_OFFLINE_PREFLIGHT_V3.md",
++  "wave_id": "corrector-sim-20260919-A-PV-offline-V3-wave08",
++  "run_id": "A10_PV_OFFLINE_PREFLIGHT_V3_r1_A_wave08",
++  "shard_id": "A-PV-offline-V3-shelf-place-step0-cached-once",
++  "acknowledgement": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V3_ACK.json",
++  "expected_result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V3_RESULT.json"
+ }

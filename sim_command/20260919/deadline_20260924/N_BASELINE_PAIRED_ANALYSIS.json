@@ -1,0 +1,264 @@
+{
+  "analysis": "N2500_fixed50tasks_paired_by_saved_source_id",
+  "created_at_utc": "2026-09-21T16:38:12.068419+00:00",
+  "status": "COMPLETE_PAIRED_ANALYSIS",
+  "scope": "Only completed N results for the predeclared H10/20/30/40/50 grid. No H selection, correction-test inspection, parameter changes, model/code inspection, raw ledgers or whole-tree hashes.",
+  "source_receipt": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_SPRINT_V1_RESULT_r4.json",
+  "source_summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/A/SUMMARY.json",
+  "episode_result_pattern": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/A/runs/N_H*/RESULT.json",
+  "episode_result_files_read": 250,
+  "episode_rows_read": 2500,
+  "saved_counts": {
+    "10": {
+      "attempts": 500,
+      "successes": 308,
+      "technical_failures": 0,
+      "nonterminal": 0
+    },
+    "20": {
+      "attempts": 500,
+      "successes": 240,
+      "technical_failures": 0,
+      "nonterminal": 0
+    },
+    "30": {
+      "attempts": 500,
+      "successes": 205,
+      "technical_failures": 0,
+      "nonterminal": 0
+    },
+    "40": {
+      "attempts": 500,
+      "successes": 205,
+      "technical_failures": 0,
+      "nonterminal": 0
+    },
+    "50": {
+      "attempts": 500,
+      "successes": 196,
+      "technical_failures": 0,
+      "nonterminal": 0
+    }
+  },
+  "missing_fields": [],
+  "pair_mismatches": [],
+  "pairing": {
+    "key": [
+      "task",
+      "source_id"
+    ],
+    "same_environment_seed_checked_from_saved_fields": true,
+    "source_count_per_H": 500,
+    "tasks": 50,
+    "sources_per_task": 10,
+    "same_policy_seed_across_H": true
+  },
+  "bootstrap": {
+    "method": "Stratified paired nonparametric percentile bootstrap. Hold all50 tasks fixed and equally weighted; resample10 source IDs with replacement within each task, using identical source draws for every H.",
+    "replicates": 2000,
+    "rng": "numpy.default_rng(20260921)",
+    "confidence_level": 0.95,
+    "intervals": "pointwise percentile2.5/97.5%, not multiplicity-adjusted",
+    "scope_limit": "Conditional on these fixed50 tasks and observed10sources/task; does not estimate task-population or model-training-seed uncertainty. Per-task0/10 or10/10 outcomes have degenerate within-task empirical bootstrap variance."
+  },
+  "overall": [
+    {
+      "H": 10,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 308,
+      "success_rate_pct": 61.6,
+      "success_rate_ci95_pct": [
+        58.8,
+        64.6
+      ],
+      "delta_vs_H10_pp": 0.0,
+      "delta_ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "paired_rescues": 0,
+      "paired_harms": 0,
+      "rescue_rate_all_pairs_pct": 0.0,
+      "rescue_rate_ci95_pct": [
+        0.0,
+        0.0
+      ],
+      "harm_rate_all_pairs_pct": 0.0,
+      "harm_rate_ci95_pct": [
+        0.0,
+        0.0
+      ],
+      "H10_failure_denominator": 192,
+      "H10_success_denominator": 308,
+      "rescue_given_H10_failure_pct": 0.0,
+      "harm_given_H10_success_pct": 0.0,
+      "both_succeed": 308,
+      "both_fail": 192,
+      "tasks_positive_delta": 0,
+      "tasks_negative_delta": 0,
+      "tasks_zero_delta": 50
+    },
+    {
+      "H": 20,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 240,
+      "success_rate_pct": 48.0,
+      "success_rate_ci95_pct": [
+        45.4,
+        50.6
+      ],
+      "delta_vs_H10_pp": -13.6,
+      "delta_ci95_pp": [
+        -17.0,
+        -10.4
+      ],
+      "paired_rescues": 23,
+      "paired_harms": 91,
+      "rescue_rate_all_pairs_pct": 4.6,
+      "rescue_rate_ci95_pct": [
+        3.0,
+        6.2
+      ],
+      "harm_rate_all_pairs_pct": 18.2,
+      "harm_rate_ci95_pct": [
+        15.4,
+        21.2
+      ],
+      "H10_failure_denominator": 192,
+      "H10_success_denominator": 308,
+      "rescue_given_H10_failure_pct": 11.979167,
+      "harm_given_H10_success_pct": 29.545455,
+      "both_succeed": 217,
+      "both_fail": 169,
+      "tasks_positive_delta": 7,
+      "tasks_negative_delta": 27,
+      "tasks_zero_delta": 16
+    },
+    {
+      "H": 30,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 205,
+      "success_rate_pct": 41.0,
+      "success_rate_ci95_pct": [
+        38.2,
+        43.6
+      ],
+      "delta_vs_H10_pp": -20.6,
+      "delta_ci95_pp": [
+        -24.2,
+        -17.4
+      ],
+      "paired_rescues": 23,
+      "paired_harms": 126,
+      "rescue_rate_all_pairs_pct": 4.6,
+      "rescue_rate_ci95_pct": [
+        3.0,
+        6.205
+      ],
+      "harm_rate_all_pairs_pct": 25.2,
+      "harm_rate_ci95_pct": [
+        22.595,
+        28.2
+      ],
+      "H10_failure_denominator": 192,
+      "H10_success_denominator": 308,
+      "rescue_given_H10_failure_pct": 11.979167,
+      "harm_given_H10_success_pct": 40.909091,
+      "both_succeed": 182,
+      "both_fail": 169,
+      "tasks_positive_delta": 3,
+      "tasks_negative_delta": 32,
+      "tasks_zero_delta": 15
+    },
+    {
+      "H": 40,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 205,
+      "success_rate_pct": 41.0,
+      "success_rate_ci95_pct": [
+        38.4,
+        43.6
+      ],
+      "delta_vs_H10_pp": -20.6,
+      "delta_ci95_pp": [
+        -24.4,
+        -17.2
+      ],
+      "paired_rescues": 24,
+      "paired_harms": 127,
+      "rescue_rate_all_pairs_pct": 4.8,
+      "rescue_rate_ci95_pct": [
+        3.2,
+        6.6
+      ],
+      "harm_rate_all_pairs_pct": 25.4,
+      "harm_rate_ci95_pct": [
+        22.6,
+        28.4
+      ],
+      "H10_failure_denominator": 192,
+      "H10_success_denominator": 308,
+      "rescue_given_H10_failure_pct": 12.5,
+      "harm_given_H10_success_pct": 41.233766,
+      "both_succeed": 181,
+      "both_fail": 168,
+      "tasks_positive_delta": 4,
+      "tasks_negative_delta": 29,
+      "tasks_zero_delta": 17
+    },
+    {
+      "H": 50,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 196,
+      "success_rate_pct": 39.2,
+      "success_rate_ci95_pct": [
+        36.2,
+        42.0
+      ],
+      "delta_vs_H10_pp": -22.4,
+      "delta_ci95_pp": [
+        -26.0,
+        -18.795
+      ],
+      "paired_rescues": 18,
+      "paired_harms": 130,
+      "rescue_rate_all_pairs_pct": 3.6,
+      "rescue_rate_ci95_pct": [
+        2.2,
+        5.0
+      ],
+      "harm_rate_all_pairs_pct": 26.0,
+      "harm_rate_ci95_pct": [
+        23.0,
+        29.2
+      ],
+      "H10_failure_denominator": 192,
+      "H10_success_denominator": 308,
+      "rescue_given_H10_failure_pct": 9.375,
+      "harm_given_H10_success_pct": 42.207792,
+      "both_succeed": 178,
+      "both_fail": 174,
+      "tasks_positive_delta": 2,
+      "tasks_negative_delta": 34,
+      "tasks_zero_delta": 14
+    }
+  ],
+  "interpretation": {
+    "rescue": "H10 failure becomes H success for the same task/source",
+    "harm": "H10 success becomes H failure for the same task/source",
+    "delta": "task-equally-weighted success(H)-success(H10), percentage points",
+    "unconditional_pair_denominator": 500,
+    "no_additional_validation_or_compute_requested": true
+  },
+  "receipt_summary_success_counts_agree": true,
+  "per_task_detail_csv": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/N_BASELINE_PAIRED_ANALYSIS.csv",
+  "csv_rows": {
+    "overall": 5,
+    "task_by_H": 250
+  }
+}

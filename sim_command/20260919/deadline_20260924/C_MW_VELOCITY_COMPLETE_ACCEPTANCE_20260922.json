@@ -1,0 +1,90 @@
+{
+  "recorded_at_utc": "2026-09-22T07:54:39.430047+00:00",
+  "status": "complete_accepted",
+  "task_id": "C_D24_MW_VELOCITY_V1",
+  "receipt": {
+    "path": "receipts/C/C_D24_MW_VELOCITY_V1_RESULT_r3.json",
+    "sha256": "25fc341c1b0eea5ed956653b1b43afb220e8b5d675d348f1c85955df68049e70"
+  },
+  "groups": [
+    {
+      "base": "smolvla",
+      "valid": 500,
+      "successes": 247,
+      "final_technical_failures": 0,
+      "versus_N": {
+        "paired_valid": 496,
+        "rescued": 35,
+        "harmed": 23,
+        "new_successes": 246,
+        "old_successes": 234,
+        "difference_pp": 2.4193548387096775,
+        "task_cluster_bootstrap_95_ci_pp": [
+          -0.40404040404040403,
+          5.05050505050505
+        ],
+        "uncertainty": "descriptive paired task-cluster percentile bootstrap, 2000 draws, seed20260922; fixed-source missingness retained"
+      },
+      "versus_Post": {
+        "paired_valid": 500,
+        "rescued": 11,
+        "harmed": 4,
+        "new_successes": 247,
+        "old_successes": 240,
+        "difference_pp": 1.4,
+        "task_cluster_bootstrap_95_ci_pp": [
+          0.0,
+          3.0
+        ],
+        "uncertainty": "descriptive paired task-cluster percentile bootstrap, 2000 draws, seed20260922; fixed-source missingness retained"
+      }
+    },
+    {
+      "base": "xvla",
+      "valid": 500,
+      "successes": 403,
+      "final_technical_failures": 0,
+      "versus_N": {
+        "paired_valid": 500,
+        "rescued": 25,
+        "harmed": 25,
+        "new_successes": 403,
+        "old_successes": 403,
+        "difference_pp": 0.0,
+        "task_cluster_bootstrap_95_ci_pp": [
+          -4.6,
+          4.0
+        ],
+        "uncertainty": "descriptive paired task-cluster percentile bootstrap, 2000 draws, seed20260922; fixed-source missingness retained"
+      },
+      "versus_Post": {
+        "paired_valid": 500,
+        "rescued": 7,
+        "harmed": 11,
+        "new_successes": 403,
+        "old_successes": 407,
+        "difference_pp": -0.8,
+        "task_cluster_bootstrap_95_ci_pp": [
+          -2.2,
+          0.4
+        ],
+        "uncertainty": "descriptive paired task-cluster percentile bootstrap, 2000 draws, seed20260922; fixed-source missingness retained"
+      }
+    }
+  ],
+  "physical_attempts": 1008,
+  "preserved_initial_technical_attempts": 8,
+  "corrected_retries": 8,
+  "successful_source_replays": 0,
+  "all_formal_processes_exited": true,
+  "all8_holders_restored": true,
+  "restoration_observed_at_utc": "2026-09-22T07:14:56.757346+00:00",
+  "scope": "frozen historical five-task D/G0/Q transfer; Smol native Euler, X clean-remixer velocity reparameterization",
+  "protocol_note": "C inherits actual B Mesa/80Hz/.01 protocol; original30Hz/.015 prose superseded by native N/Post protocol",
+  "limits": [
+    "Smol N missing4 remain unknown",
+    "Cross-host timings cannot establish speedup",
+    "Reported intervals do not establish stable cross-base improvement"
+  ],
+  "review": "small terminal receipt/summary/report and saved exit/restoration evidence; no new runs"
+}

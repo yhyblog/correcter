@@ -1,0 +1,21 @@
+{
+  "synthetic": true,
+  "production_handler": [
+    {
+      "error_type": "RuntimeError",
+      "error": "synthetic cleanup",
+      "type": "RuntimeError",
+      "message": "synthetic cleanup",
+      "branch": "Velocity",
+      "stage": "graphics_cleanup",
+      "category": "cleanup",
+      "operation": "mujoco_render_context_frees",
+      "synthetic": true,
+      "traceback": "Traceback (most recent call last):\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1/code/native/native_egl.py\", line 288, in close\n    self.journal.call(key, fn, cleanup=True)\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1/cpu_checks/check_events.py\", line 223, in call\n    def call(self,key,fn,**kwargs):return fn()\n                                          ^^^^\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1/cpu_checks/check_events.py\", line 206, in cleanup_raise\n    def cleanup_raise():raise RuntimeError('synthetic cleanup')\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: synthetic cleanup\n",
+      "traceback_present": true,
+      "traceback_origin": "exception object at current handler; never reconstructed from saved error text"
+    }
+  ],
+  "real_graphics_calls": 0,
+  "primary_file_unchanged": true
+}

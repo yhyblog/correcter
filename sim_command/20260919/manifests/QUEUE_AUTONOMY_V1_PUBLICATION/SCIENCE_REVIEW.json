@@ -1,0 +1,103 @@
+{
+  "schema": "queue_science_publication_review_v1",
+  "created_utc": "2026-09-21T12:09:00.653050+00:00",
+  "verdict": "PASS_FROZEN_QUEUE_SCIENTIFIC_PLAN",
+  "blocking": false,
+  "blockers": [],
+  "checks_passed": 2750,
+  "coverage": {
+    "total": 500,
+    "terminal_existing": 17,
+    "reserved_existing_Batch3": 8,
+    "pending": 475,
+    "pending_A": 225,
+    "pending_B": 250,
+    "global_A": 250,
+    "global_B": 250,
+    "p04_refill": false
+  },
+  "identities": {
+    "source_keys_unique": 500,
+    "source_ids_unique": 500,
+    "parent_source_ids_unique": 500,
+    "env_seeds_unique": 500,
+    "master_seeds_unique": 500,
+    "legacy_seed_preserved_exception": [
+      "shelf-place-v3|train|0|cut5"
+    ],
+    "all_other_seeds_match_deterministic_rule": true
+  },
+  "dev_owner": {
+    "definition": "ASCII_sorted_task_name ordinal0..49, explicitly frozen now",
+    "real_existing_dev": 0,
+    "no_existing_dev_reassignment": true,
+    "development_per_node": 50
+  },
+  "budget": {
+    "per_task_vectors": 50,
+    "dimensions": 116,
+    "all8_Batch3_vectors_match": true,
+    "pending_full_cold_attempt_cap": 7125,
+    "per_node_and_stage_sums_recomputed": true,
+    "model_initializations_exception_preserved15": true,
+    "zero_training_gradient_critic_D_G0_retry_deletion": true
+  },
+  "science": {
+    "frozen_C10_C5_nativeH10_15cold_and_double_repeat_protocol_preserved": true,
+    "per_parent_actual_full_state_MJB_gate_still_required": true,
+    "physical_equality_proven": null,
+    "no_method_score_claim": true,
+    "automatic_normal_batch_technical_acceptance": true,
+    "training_and_evaluation_not_authorized": true
+  },
+  "scope": {
+    "read_only_plan_and_small_bound_JSON": true,
+    "no_code_or_old_fixture_suite_review": true,
+    "no_hardware_model_runtime_calls": true,
+    "no_weights_hashed": true,
+    "no_authority_modified": true,
+    "implementation_or_daemon_readiness_proven": false
+  },
+  "evidence_refs": {
+    "persistent_queue/AUTHORIZATION_V1.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/AUTHORIZATION_V1.json",
+      "sha256": "f0790bbfdbe263be1044ef9ce3773d4ab0b3a63616edf04feda2e86103edf7b5",
+      "size_bytes": 4824
+    },
+    "persistent_queue/QUEUE_CONTRACT_V1.md": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/QUEUE_CONTRACT_V1.md",
+      "sha256": "f9a8a8914c33b0480437e701c103697effcf7315e2a0109f556494d793254255",
+      "size_bytes": 7956
+    },
+    "persistent_queue/CONTROL.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/CONTROL.json",
+      "sha256": "707f3a00dd4a820005a8e82b23897129056fc173b0291e3d75dce77ceafde155",
+      "size_bytes": 917
+    },
+    "persistent_queue/plan/AGGREGATE_LIMITS_V1.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/plan/AGGREGATE_LIMITS_V1.json",
+      "sha256": "78f8c015f497ad3828a631dc1fc03a4a52b850b2655e98a9c26879216b1f1495",
+      "size_bytes": 34388
+    },
+    "persistent_queue/plan/PER_TASK_PARENT_BUDGETS_V1.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/plan/PER_TASK_PARENT_BUDGETS_V1.json",
+      "sha256": "257c8439b5536b2552d61eb3945f035c17ee801166d96ad8fad2bfb9b5c0cc0c",
+      "size_bytes": 237724
+    },
+    "persistent_queue/plan/SOURCES_V1.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/plan/SOURCES_V1.json",
+      "sha256": "799add7a1d105425343690f501dae0c8a6dae84359548fe735b400af35dafc7c",
+      "size_bytes": 343175
+    },
+    "persistent_queue/plan/STAGE_DAG_V1.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/plan/STAGE_DAG_V1.json",
+      "sha256": "3cc5ab8e3985e216679bcd6f46aede53f41f24a742ed5371befdf54c5f1382fb",
+      "size_bytes": 1267
+    },
+    "persistent_queue/plan/TASK_ORDINAL_OWNER_V1.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/plan/TASK_ORDINAL_OWNER_V1.json",
+      "sha256": "8a2287de563e6590f792b79724c30557f493b77c9f87019db0b35a00da9c1639",
+      "size_bytes": 15070
+    }
+  }
+}

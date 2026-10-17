@@ -1,0 +1,98 @@
+{
+  "schema": "corrector_deadline_new_node_authorization_v1",
+  "campaign_id": "corrector-sim-20260919",
+  "authorization_id": "D24_C_MW_VELOCITY_V1",
+  "revision": 1,
+  "status": "released",
+  "issued_at_utc": "2026-09-22T05:39:27.417548+00:00",
+  "issuer": "analysis",
+  "user_basis": "2026-09-22 user explicitly adds an eight-GPU server C, requests independent tasks and executor onboarding; existing D24 E8 scope already includes Smol/X Velocity and necessary adaptation",
+  "node": "C",
+  "task_id": "C_D24_MW_VELOCITY_V1",
+  "scientific_execution_authorized": true,
+  "host_binding": {
+    "mode": "executor_first_use_local_registration",
+    "identity_path": "nodes/C/identity.json",
+    "first_host_and_thread_currently_unknown": true,
+    "must_not_equal_hosts": {
+      "A": "trial-303224955-trialrun-303224955-worker-0",
+      "B": "trial-303225685-trialrun-303225685-worker-0"
+    },
+    "must_not_reuse_other_nodes_GPU_PIDs_UUID_identity": true,
+    "no_second_analysis_or_user_approval_after_registration": true
+  },
+  "task": {
+    "path": "tasks/C_D24_MW_VELOCITY_V1.md",
+    "sha256": "dd39a6a5a4cb70f25c000cadd8b411692b8635aa90c41bdcc79a2e6ac3126a83"
+  },
+  "onboarding": {
+    "path": "deadline_20260924/C_SERVER_ONBOARDING.md",
+    "sha256": "7e0e9b010041d8a00cba0207dbfb0a10439cc8f884818c4709bb00ed4bffef51"
+  },
+  "assets": {
+    "path": "deadline_20260924/C_ASSET_INDEX_V1.json",
+    "sha256": "d6d390652026e538b761a52cdcc0edd1f0b97d2be3f92e7387c94ed269efec89"
+  },
+  "ABC_assignment": {
+    "path": "deadline_20260924/ABC_ASSIGNMENT_V1.md",
+    "sha256": "d7fd3ffe7e840bfd2a94cd8f2fc9e885210ec68ecc6be8bc3ef93d1b23066b83"
+  },
+  "units": [
+    {
+      "base": "SmolVLA050000",
+      "method": "Velocity",
+      "test_sources": 500,
+      "H": 50,
+      "C": 10,
+      "NFE": 10
+    },
+    {
+      "base": "X_VLA030000",
+      "method": "Velocity",
+      "test_sources": 500,
+      "H": 30,
+      "C": 10,
+      "NFE": 10
+    }
+  ],
+  "source_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E8_POST_V1_r1/POST_SOURCES.json",
+  "max_physical_attempts_C_total": 2400,
+  "max_test_first_entries": 1000,
+  "max_development_parents_per_base": 40,
+  "max_development_attempts_per_base": 200,
+  "base_model_optimizer_updates": 0,
+  "small_model_optimizer_updates": 0,
+  "native_action_autograd_allowed": true,
+  "ordinary_environment_setup_and_necessary_native_flow_adaptation_allowed": true,
+  "formal_GPU_concurrency_target": 8,
+  "no_new_test_source_selection": true,
+  "no_completed_N_Post_SFT_replay": true,
+  "remaining475_collection": false,
+  "new_external_baselines": false,
+  "per_batch_approval_required": false,
+  "strict_consistency_audit_required": false,
+  "GPU_preflight_required": false,
+  "shared_queue_READY_required": false,
+  "input_identity_check_scope": "required small configs/model selection/source identity once, no full checkpoint or perframe hashes",
+  "retry_policy": "one corrected retry of a concretely diagnosed failed job/episode; durable prior terminal sources never replayed; unique run identity; allphysical attempts counted",
+  "independent_node_counters": true,
+  "A_B_budgets_unchanged": true,
+  "inflight_exception": "if B already admitted an exact unit before this published handoff, preserve its job and C skips that exact unit, no kill or full-node wait",
+  "occupancy_policy": "all holders off throughout full formal wave including loading/gaps/finished cards; restore only after entire formal family exits including failures; no idle-subset/tail holders",
+  "background_policy": "detached finite queue; normal stages automatic; terminal event to C fixed original thread; after stable handoff end LLM turn; no long polling or duplicate launch on callback retries",
+  "write_roots": [
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/nodes/C",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/C"
+  ],
+  "shared_inputs_read_only": true,
+  "global_controls_owner": "analysis",
+  "deletion_of_shared_assets_allowed": false,
+  "new_experiment_admission_cutoff_utc": "2026-09-23T12:00:00Z",
+  "tables_due_utc": "2026-09-23T15:00:00Z",
+  "submission_at_utc": "2026-09-24T12:00:00Z",
+  "timing_claims": "separate host/runtime conditions; no cross-host raw latency ranking",
+  "current_deployment_claim": "role_registered_only_actual_C_identity_and_daemon_not_yet_observed"
+}

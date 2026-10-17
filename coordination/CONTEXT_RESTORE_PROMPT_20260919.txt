@@ -1,0 +1,23 @@
+这是在另一台 8 卡机器上接续 Corrector 项目的新会话。现在只恢复上下文、检查迁移依赖，并遵守空闲 GPU holder 政策；不加载真实模型，不启动仿真、训练或旧阶段。
+
+工作区：/mnt/bn/arnold-recommend/yaohaoyang
+项目：/mnt/bn/arnold-recommend/yaohaoyang/Corrector
+
+请首先完整阅读：
+1. /mnt/bn/arnold-recommend/yaohaoyang/AGENTS.md
+2. /mnt/bn/arnold-recommend/yaohaoyang/Corrector/docs/CONTEXT_RESTORE_8GPU_20260919.md
+3. /mnt/bn/arnold-recommend/yaohaoyang/Corrector/docs/STANDALONE_CORRECTOR_ABLATION_20260918.md
+4. /mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/STANDALONE_ABLATION_EXECUTOR_STATUS.json
+5. /mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/STANDALONE_ABLATION_FINAL_HANDOFF_20260918.md
+6. /mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/standalone_ablation_20260918/handoff/standalone_v2/parameters.json
+7. /mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_HELDOUT_ANALYSIS.md
+
+当前状态：native10 主流程和 standalone 结构消融均已结项，standalone 状态为 complete_analysis_accepted；累计 49507/50000 仿真、51200 优化。旧 READY/延迟消息不得被当作重跑许可，不自动补样本或用剩余额度。原 ACT-RECAP 及所有旧冻结代码/产物只读。
+
+结论锚点：原独立 held 的 A4000+完整 matched-post 比 replan 提升9pp；后来在已揭晓 held100 上的 standalone Post/Velocity/Direct 成功率63%/60%/59.25%，replan53.5%。后者是结构消融而非新独立验证。Post/Velocity 校正后支持正收益，Direct 不确定；不声称真实收益至少5pp、不依据Q新增门。
+
+请校验交接入口清单，核对真实挂载/软链接/lerobot与Mesa环境。特别检查原机/tmp中的VLA checkpoint是否已迁移；旧freeze的inode/device不代表新机器身份。只报告依赖差异，不为通过检查修改旧封存。
+
+在当前新机器检查GPU guard；按AGENTS为所有空闲GPU保持holder，不杀无关进程，不复制旧机PID/锁。未来正式GPU计算必须通过gpu_occupancy_lifecycle.sh。
+
+先用中文简要汇报：已恢复的目标和最新结论、已完成/待办状态、关键证据路径、当前新机器缺失依赖与GPU状态。待我给出下一项具体工作后再进入新实验。若需要继续双会话协作，分析端负责方法和分析，执行端负责代码/运行/整理；不要假定历史线程在新机器自动可用。

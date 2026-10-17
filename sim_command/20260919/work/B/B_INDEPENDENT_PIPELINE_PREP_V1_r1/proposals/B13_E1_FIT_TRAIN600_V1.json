@@ -1,0 +1,2839 @@
+{
+  "actual_scientific_operations_this_preparation": 0,
+  "aggregate_operation_limits": {
+    "array_loads": 48,
+    "backward_calls": 192000,
+    "checkpoint_loads": 48,
+    "completed_rollouts": 0,
+    "feature_transform_calls": 28800,
+    "model_gpu_inference_calls": 0,
+    "model_initializations": 48,
+    "optimizer_attempts": 192000,
+    "optimizer_updates": 192000,
+    "simulator_attempts": 0,
+    "training_forward_calls": 192000,
+    "vla_sampling_calls": 0
+  },
+  "authorized": false,
+  "automatic_retry": false,
+  "basis_authorization_sha256": "d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928",
+  "code_manifest_sha256": "0a6a900c0c21a563717f51af05b76daeb24d09aecd682b03b73462cad124451d",
+  "dependencies": [],
+  "ensemble_members": [
+    1041,
+    1042,
+    1043,
+    1044
+  ],
+  "ensemble_note": "4 losses x 3 full fitting seeds x 4 ensemble members = 48 CPU jobs; unchanged frozen numerical recipe",
+  "holder_reservation": "one inherited node reservation across runnable formal tasks/publication; original guard holders released; optional supervised idle-card fill only under current SHA-bound override, never on active formal GPU; confirm own holder descendants exit before model loading; no nested lifecycle",
+  "hostname": "trial-303225685-trialrun-303225685-worker-0",
+  "independent_seeds": [
+    9101,
+    9102,
+    9103
+  ],
+  "jobs": {
+    "e1_L00_s9101_m1041": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9101_m1041.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9101_m1041",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9101_m1041.json",
+        "sha256": "53ae32ed39542a60c1894f7ad15ddff94ec2aa666091a54e3248cf88ff1e2ccf"
+      },
+      "config_sha256": "53ae32ed39542a60c1894f7ad15ddff94ec2aa666091a54e3248cf88ff1e2ccf",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9101_m1041",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L00_s9101_m1042": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9101_m1042.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9101_m1042",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9101_m1042.json",
+        "sha256": "0a994d8a209358099b496d3457c87ab85cf00f07d192f09a4a8a24a230b14b05"
+      },
+      "config_sha256": "0a994d8a209358099b496d3457c87ab85cf00f07d192f09a4a8a24a230b14b05",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9101_m1042",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L00_s9101_m1043": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9101_m1043.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9101_m1043",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9101_m1043.json",
+        "sha256": "d9765061eefd154ea239d0c4ad7db1e510ddd33ddae30a0a2a2159d39e134677"
+      },
+      "config_sha256": "d9765061eefd154ea239d0c4ad7db1e510ddd33ddae30a0a2a2159d39e134677",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9101_m1043",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L00_s9101_m1044": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9101_m1044.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9101_m1044",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9101_m1044.json",
+        "sha256": "918cdb9a4ce7e0bcf3b9df9bdd473d339e593b57786ab487e565acb93c416adb"
+      },
+      "config_sha256": "918cdb9a4ce7e0bcf3b9df9bdd473d339e593b57786ab487e565acb93c416adb",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9101_m1044",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L00_s9102_m1041": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9102_m1041.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9102_m1041",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9102_m1041.json",
+        "sha256": "623eb38b5d575e2ee132da1365f748ef2d1aba7e5211c78a64b85b6af3b49844"
+      },
+      "config_sha256": "623eb38b5d575e2ee132da1365f748ef2d1aba7e5211c78a64b85b6af3b49844",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9102_m1041",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L00_s9102_m1042": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9102_m1042.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9102_m1042",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9102_m1042.json",
+        "sha256": "b54d4250beb1212eca725e26ebd1df44353cfbf2d23a1b6ffcbdb5158d3286a6"
+      },
+      "config_sha256": "b54d4250beb1212eca725e26ebd1df44353cfbf2d23a1b6ffcbdb5158d3286a6",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9102_m1042",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L00_s9102_m1043": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9102_m1043.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9102_m1043",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9102_m1043.json",
+        "sha256": "86fdb5647d0fb3a217e71237b031cd9b2612f43eb030ef3bed45eb17b5a73234"
+      },
+      "config_sha256": "86fdb5647d0fb3a217e71237b031cd9b2612f43eb030ef3bed45eb17b5a73234",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9102_m1043",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L00_s9102_m1044": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9102_m1044.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9102_m1044",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9102_m1044.json",
+        "sha256": "77d195cc712de4af50d88a464e283f8f22480634979f08374e7fefd3ba908eba"
+      },
+      "config_sha256": "77d195cc712de4af50d88a464e283f8f22480634979f08374e7fefd3ba908eba",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9102_m1044",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L00_s9103_m1041": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9103_m1041.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9103_m1041",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9103_m1041.json",
+        "sha256": "0bdba234e8c370652a3b3a6936663889ea5710cf9b0b372b7753bb93b7227969"
+      },
+      "config_sha256": "0bdba234e8c370652a3b3a6936663889ea5710cf9b0b372b7753bb93b7227969",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9103_m1041",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L00_s9103_m1042": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9103_m1042.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9103_m1042",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9103_m1042.json",
+        "sha256": "cf497607fe497ba582a7a8454aafc9049a858997101f43d73d9c832689fb4d29"
+      },
+      "config_sha256": "cf497607fe497ba582a7a8454aafc9049a858997101f43d73d9c832689fb4d29",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9103_m1042",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L00_s9103_m1043": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9103_m1043.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9103_m1043",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9103_m1043.json",
+        "sha256": "77787ec8c0b09d410b3616144d5e6ceed20388f3b992c265b8a565546dd7f373"
+      },
+      "config_sha256": "77787ec8c0b09d410b3616144d5e6ceed20388f3b992c265b8a565546dd7f373",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9103_m1043",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L00_s9103_m1044": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9103_m1044.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9103_m1044",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L00_s9103_m1044.json",
+        "sha256": "979108a2c9edfd72b694b67a6cabc3ac512652d56a80d80a317965e358600acd"
+      },
+      "config_sha256": "979108a2c9edfd72b694b67a6cabc3ac512652d56a80d80a317965e358600acd",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L00_s9103_m1044",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L01_s9101_m1041": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9101_m1041.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9101_m1041",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9101_m1041.json",
+        "sha256": "d134c71e92ca69f5d9631fe0facbcab4a93fa6b85c5329e3f5d8bcb4c36fee3c"
+      },
+      "config_sha256": "d134c71e92ca69f5d9631fe0facbcab4a93fa6b85c5329e3f5d8bcb4c36fee3c",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9101_m1041",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L01_s9101_m1042": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9101_m1042.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9101_m1042",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9101_m1042.json",
+        "sha256": "cf787c4f22c52999755d7402d70fe2d95845dcd2e5e5ab1c2ecec9939103d117"
+      },
+      "config_sha256": "cf787c4f22c52999755d7402d70fe2d95845dcd2e5e5ab1c2ecec9939103d117",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9101_m1042",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L01_s9101_m1043": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9101_m1043.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9101_m1043",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9101_m1043.json",
+        "sha256": "0651180263beb5508bae11465577a3542c1da333b7c1d93829afa4b506091f57"
+      },
+      "config_sha256": "0651180263beb5508bae11465577a3542c1da333b7c1d93829afa4b506091f57",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9101_m1043",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L01_s9101_m1044": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9101_m1044.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9101_m1044",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9101_m1044.json",
+        "sha256": "069be0fdecf6752c6d5852985eec2396ee5fa91e861b72ff0a6ad893b9e2a7ba"
+      },
+      "config_sha256": "069be0fdecf6752c6d5852985eec2396ee5fa91e861b72ff0a6ad893b9e2a7ba",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9101_m1044",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L01_s9102_m1041": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9102_m1041.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9102_m1041",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9102_m1041.json",
+        "sha256": "5b8f756a435a08f19c156dcf05e77680e683290d2a444072cc4634875e2bd14b"
+      },
+      "config_sha256": "5b8f756a435a08f19c156dcf05e77680e683290d2a444072cc4634875e2bd14b",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9102_m1041",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L01_s9102_m1042": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9102_m1042.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9102_m1042",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9102_m1042.json",
+        "sha256": "b3e3e8f41c628eec572a7cb8d1bbd127d39c5ada74764966a6f731a2b4ff6851"
+      },
+      "config_sha256": "b3e3e8f41c628eec572a7cb8d1bbd127d39c5ada74764966a6f731a2b4ff6851",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9102_m1042",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L01_s9102_m1043": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9102_m1043.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9102_m1043",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9102_m1043.json",
+        "sha256": "a1712114205070b8d3fbae27b55e1a1c04e717b13afff9ac25cffd85f75c7fe0"
+      },
+      "config_sha256": "a1712114205070b8d3fbae27b55e1a1c04e717b13afff9ac25cffd85f75c7fe0",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9102_m1043",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L01_s9102_m1044": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9102_m1044.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9102_m1044",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9102_m1044.json",
+        "sha256": "36474b1e584dfd405e747ed921ff23b46f4404278257d985248ad6fbce6a4392"
+      },
+      "config_sha256": "36474b1e584dfd405e747ed921ff23b46f4404278257d985248ad6fbce6a4392",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9102_m1044",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L01_s9103_m1041": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9103_m1041.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9103_m1041",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9103_m1041.json",
+        "sha256": "9911583fb6c59e7fc6e2b6e95c20a4cbac9db308f4b542840fd45571c09e73eb"
+      },
+      "config_sha256": "9911583fb6c59e7fc6e2b6e95c20a4cbac9db308f4b542840fd45571c09e73eb",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9103_m1041",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L01_s9103_m1042": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9103_m1042.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9103_m1042",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9103_m1042.json",
+        "sha256": "975cd221a341abaa4b77bb3f8a5ce71eb39d3ee856d7c0ebe4b617a14e6c9d95"
+      },
+      "config_sha256": "975cd221a341abaa4b77bb3f8a5ce71eb39d3ee856d7c0ebe4b617a14e6c9d95",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9103_m1042",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L01_s9103_m1043": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9103_m1043.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9103_m1043",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9103_m1043.json",
+        "sha256": "5adeb89bdc8a7fc9d8e9439d4400a0518e5bddf02232c7754fb44f7cda761b8f"
+      },
+      "config_sha256": "5adeb89bdc8a7fc9d8e9439d4400a0518e5bddf02232c7754fb44f7cda761b8f",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9103_m1043",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L01_s9103_m1044": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9103_m1044.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9103_m1044",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L01_s9103_m1044.json",
+        "sha256": "15ed65e631b8e0667275ca9a4220fe8552227486c0330ae3264cc01bdb8688c3"
+      },
+      "config_sha256": "15ed65e631b8e0667275ca9a4220fe8552227486c0330ae3264cc01bdb8688c3",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L01_s9103_m1044",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L10_s9101_m1041": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9101_m1041.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9101_m1041",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9101_m1041.json",
+        "sha256": "a3161f3edf43fab7f16001590f24a360783af9d5c21bc580fd0147bf86c664e2"
+      },
+      "config_sha256": "a3161f3edf43fab7f16001590f24a360783af9d5c21bc580fd0147bf86c664e2",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9101_m1041",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L10_s9101_m1042": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9101_m1042.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9101_m1042",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9101_m1042.json",
+        "sha256": "45fd6f1b570df41dccad5fe25b3a3f2eff5a9f7da82ea7e53d79548e690810a7"
+      },
+      "config_sha256": "45fd6f1b570df41dccad5fe25b3a3f2eff5a9f7da82ea7e53d79548e690810a7",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9101_m1042",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L10_s9101_m1043": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9101_m1043.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9101_m1043",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9101_m1043.json",
+        "sha256": "68db6676873962fafb519df47b8c550dd6ee2b75b5c983dc2b74db909d57d622"
+      },
+      "config_sha256": "68db6676873962fafb519df47b8c550dd6ee2b75b5c983dc2b74db909d57d622",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9101_m1043",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L10_s9101_m1044": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9101_m1044.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9101_m1044",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9101_m1044.json",
+        "sha256": "6f01cae46f83bc93455981e465eababf3d0c9dea607f6212b1295fa26aaac317"
+      },
+      "config_sha256": "6f01cae46f83bc93455981e465eababf3d0c9dea607f6212b1295fa26aaac317",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9101_m1044",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L10_s9102_m1041": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9102_m1041.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9102_m1041",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9102_m1041.json",
+        "sha256": "89b92f53b4de03ea622d7b83708945f85d6e6adedd8edfec5b5c37c588a3ad45"
+      },
+      "config_sha256": "89b92f53b4de03ea622d7b83708945f85d6e6adedd8edfec5b5c37c588a3ad45",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9102_m1041",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L10_s9102_m1042": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9102_m1042.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9102_m1042",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9102_m1042.json",
+        "sha256": "fee6db521a6fa11db9b1ef12ca6cf1382a688bb9eee068f5c002cab1c8d077ca"
+      },
+      "config_sha256": "fee6db521a6fa11db9b1ef12ca6cf1382a688bb9eee068f5c002cab1c8d077ca",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9102_m1042",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L10_s9102_m1043": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9102_m1043.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9102_m1043",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9102_m1043.json",
+        "sha256": "4f4acb93da5f6dcbcc609bb147d556cb5a2bc093964c8880a3fb2a9d025f3d97"
+      },
+      "config_sha256": "4f4acb93da5f6dcbcc609bb147d556cb5a2bc093964c8880a3fb2a9d025f3d97",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9102_m1043",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L10_s9102_m1044": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9102_m1044.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9102_m1044",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9102_m1044.json",
+        "sha256": "21a5e220d7ceaab550aa0afe732c00c8b64e21965b99a676f60d851c1258bc0e"
+      },
+      "config_sha256": "21a5e220d7ceaab550aa0afe732c00c8b64e21965b99a676f60d851c1258bc0e",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9102_m1044",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L10_s9103_m1041": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9103_m1041.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9103_m1041",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9103_m1041.json",
+        "sha256": "6aa073c48eba48b4f4757569b402f45cff40017c9e7c7f103e856c3cd59e4c8b"
+      },
+      "config_sha256": "6aa073c48eba48b4f4757569b402f45cff40017c9e7c7f103e856c3cd59e4c8b",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9103_m1041",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L10_s9103_m1042": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9103_m1042.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9103_m1042",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9103_m1042.json",
+        "sha256": "123b0f9bbe64d1778b4a1fbca39952e59fd71c7a8ea4f5ebf68ce7dccfd81e78"
+      },
+      "config_sha256": "123b0f9bbe64d1778b4a1fbca39952e59fd71c7a8ea4f5ebf68ce7dccfd81e78",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9103_m1042",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L10_s9103_m1043": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9103_m1043.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9103_m1043",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9103_m1043.json",
+        "sha256": "1674e07f91da5ecc57ea57969503c66389239e86518683492c309bd5393715cc"
+      },
+      "config_sha256": "1674e07f91da5ecc57ea57969503c66389239e86518683492c309bd5393715cc",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9103_m1043",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L10_s9103_m1044": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9103_m1044.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9103_m1044",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L10_s9103_m1044.json",
+        "sha256": "bae0b8ab5e8581dc2fbbf8392a9049866958be897d644479b69c2571f10b0d52"
+      },
+      "config_sha256": "bae0b8ab5e8581dc2fbbf8392a9049866958be897d644479b69c2571f10b0d52",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L10_s9103_m1044",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L11_s9101_m1041": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9101_m1041.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9101_m1041",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9101_m1041.json",
+        "sha256": "772afeb47cea7f3ada890bdfcf5be75c8030119bf16e78e38fc4a5e6fbb386d9"
+      },
+      "config_sha256": "772afeb47cea7f3ada890bdfcf5be75c8030119bf16e78e38fc4a5e6fbb386d9",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9101_m1041",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L11_s9101_m1042": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9101_m1042.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9101_m1042",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9101_m1042.json",
+        "sha256": "da52a92d2e57f62ab00d99850117e41812f8e3a1ed64bacc7321a7adc729e3cf"
+      },
+      "config_sha256": "da52a92d2e57f62ab00d99850117e41812f8e3a1ed64bacc7321a7adc729e3cf",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9101_m1042",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L11_s9101_m1043": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9101_m1043.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9101_m1043",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9101_m1043.json",
+        "sha256": "23498d53bf434cd363ccfc91ef378f8e6aba8cb068fcb4cb4e05357af921f46a"
+      },
+      "config_sha256": "23498d53bf434cd363ccfc91ef378f8e6aba8cb068fcb4cb4e05357af921f46a",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9101_m1043",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L11_s9101_m1044": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9101_m1044.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9101_m1044",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9101_m1044.json",
+        "sha256": "f3c6d813f966c05a9b6dd078b3480594f302c49ceaca9dae0b684c679d6c72ab"
+      },
+      "config_sha256": "f3c6d813f966c05a9b6dd078b3480594f302c49ceaca9dae0b684c679d6c72ab",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9101_m1044",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L11_s9102_m1041": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9102_m1041.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9102_m1041",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9102_m1041.json",
+        "sha256": "05603f636c4321c791e576568cd12df905768fc2bb8e965af9ea20b711afd812"
+      },
+      "config_sha256": "05603f636c4321c791e576568cd12df905768fc2bb8e965af9ea20b711afd812",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9102_m1041",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L11_s9102_m1042": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9102_m1042.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9102_m1042",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9102_m1042.json",
+        "sha256": "64a92cebdbc1afc8a930cb67891e13d5823ff76ace42b5f2140d8be510708571"
+      },
+      "config_sha256": "64a92cebdbc1afc8a930cb67891e13d5823ff76ace42b5f2140d8be510708571",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9102_m1042",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L11_s9102_m1043": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9102_m1043.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9102_m1043",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9102_m1043.json",
+        "sha256": "34935c9380c2ecc34305c8b7e414d0bd389fca53a0d8779a755f903880ca6d90"
+      },
+      "config_sha256": "34935c9380c2ecc34305c8b7e414d0bd389fca53a0d8779a755f903880ca6d90",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9102_m1043",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L11_s9102_m1044": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9102_m1044.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9102_m1044",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9102_m1044.json",
+        "sha256": "3857fb0c25552f529bb03b894ab303dc74b6078acc8c83d1f6db9636c35078f8"
+      },
+      "config_sha256": "3857fb0c25552f529bb03b894ab303dc74b6078acc8c83d1f6db9636c35078f8",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9102_m1044",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L11_s9103_m1041": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9103_m1041.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9103_m1041",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9103_m1041.json",
+        "sha256": "49ff569a2fac4e6f4c293f05f410ca6a03f8676087f84009c9ad0d24e4e29c97"
+      },
+      "config_sha256": "49ff569a2fac4e6f4c293f05f410ca6a03f8676087f84009c9ad0d24e4e29c97",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9103_m1041",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L11_s9103_m1042": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9103_m1042.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9103_m1042",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9103_m1042.json",
+        "sha256": "29c9926169f7397868ab426804445abc9a480290dc9f2f9af8bda161add31aae"
+      },
+      "config_sha256": "29c9926169f7397868ab426804445abc9a480290dc9f2f9af8bda161add31aae",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9103_m1042",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L11_s9103_m1043": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9103_m1043.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9103_m1043",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9103_m1043.json",
+        "sha256": "680e45f89c56678f8eef69ab1a5453b7b4124ab78419ae1f21da6a3ce674fc7b"
+      },
+      "config_sha256": "680e45f89c56678f8eef69ab1a5453b7b4124ab78419ae1f21da6a3ce674fc7b",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9103_m1043",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    },
+    "e1_L11_s9103_m1044": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9103_m1044.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B13_E1_FIT_TRAIN600_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9103_m1044",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 2195,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/e1_L11_s9103_m1044.json",
+        "sha256": "eaf9da5f1def285490ef3da5948f222de23c4e28abc0eba03d71a9312cc84958"
+      },
+      "config_sha256": "eaf9da5f1def285490ef3da5948f222de23c4e28abc0eba03d71a9312cc84958",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 1,
+        "backward_calls": 4000,
+        "checkpoint_loads": 1,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 600,
+        "model_gpu_inference_calls": 0,
+        "model_initializations": 1,
+        "optimizer_attempts": 4000,
+        "optimizer_updates": 4000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 4000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B13_E1_FIT_TRAIN600_V1/e1_L11_s9103_m1044",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 2,
+        "gpus": 0,
+        "ram_bytes": 3221225472,
+        "shared_bytes": 26843545,
+        "tmp_bytes": 268435456,
+        "vram_bytes_per_gpu": 0
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 1800
+    }
+  },
+  "kind": "frozen_training_stage",
+  "local_GPU_admission_verified": false,
+  "max_concurrent_jobs": 8,
+  "missing_engineering": [],
+  "missing_inputs": [],
+  "operational_overrides_sha256": {
+    "persistent_queue/OCCUPANCY_OVERRIDE_V1.json": "0e896062a9c69dc51e6d1332eca5413c683d2c9bbed113b9346f8dba27310916"
+  },
+  "owner": "B",
+  "readiness": "ready_for_once_stage_freeze",
+  "registration": "Analysis freezes authorized=true stage under persistent_queue/stages and registers its path/SHA in CONTROL.stage_authorizations once; daemon runs jobs without per-job chat. This proposed schema is not installed in public queue yet.",
+  "same_final_common_pool_sha_as_A": null,
+  "schema": "B_once_frozen_stage_proposal_v1",
+  "selection": "fixed final update; no test selection",
+  "stage_id": "B13_E1_FIT_TRAIN600_V1",
+  "stage_timeout_sum_seconds": 87360,
+  "task_id": "B13"
+}

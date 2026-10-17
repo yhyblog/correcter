@@ -1,0 +1,236 @@
+{
+  "schema": "batch2_closure_and_batch3_CPU_publication_review_v1",
+  "verdict": "PASS",
+  "blocking_findings": [],
+  "checks": {
+    "CONTROL49_BOARD58": true,
+    "global154_real_limits_zero": true,
+    "all26_per_task_real_limits_zero": true,
+    "new_CPU130_limits_zero_and_match": true,
+    "active_compute_none": true,
+    "14_distinct_closed": true,
+    "closed_P10_A_NATIVE_PREFLIGHT_V1": true,
+    "closed_P10_A_EGL_GRAPHICS_PROBE_V1": true,
+    "closed_P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1": true,
+    "closed_P10_A_NATIVE_PREFLIGHT_V2": true,
+    "closed_P10_A_NATIVE_PREFLIGHT_V3": true,
+    "closed_P10_A_PV_OFFLINE_PREFLIGHT_V1": true,
+    "closed_P10_A_PV_OFFLINE_PREFLIGHT_V2": true,
+    "closed_P10_A_PV_OFFLINE_PREFLIGHT_V3": true,
+    "closed_P10_A_CAUSAL_C10_PREFLIGHT_V1": true,
+    "closed_P10_A_CAUSAL_C10_PREFLIGHT_V2": true,
+    "closed_P11_A_COMMON_POOL_FIRST_PARENT_V3": true,
+    "closed_P11_A_COMMON_POOL_FIRST_PARENT_V4": true,
+    "closed_P11_A_COMMON_POOL_BATCH1_V1": true,
+    "closed_P11_A_COMMON_POOL_BATCH2_V1": true,
+    "Batch2_closed_consumed": true,
+    "task_release_dispatch_identity": true,
+    "host_executor_identity": true,
+    "release_hash_matches_dispatch": true,
+    "task_hash_matches_release": true,
+    "index_hash_matches_release": true,
+    "disposition_hash_matches_release": true,
+    "V3_links_oldV2": true,
+    "V3_links_disposition": true,
+    "control_new_index_paths": true,
+    "no_compute_collection_training_authority": true,
+    "proposal8_concurrency2": true,
+    "old_V2_exact_SHA_unchanged": true,
+    "old8_rows_preserved": true,
+    "V3_sixteen_train_zero_dev": true,
+    "dispositions17_equal16paired_plus1normal": true,
+    "paired_identities_match_unique": true,
+    "remaining483_of500": true,
+    "thirteen_tasks": true,
+    "p04_normal_only_preserved_unmeasured_labels": true
+  },
+  "summary": {
+    "CONTROL_revision": 49,
+    "TASK_BOARD_revision": 58,
+    "global_real_limit_count": 154,
+    "per_task_vectors": 26,
+    "closed_compute_releases": 14,
+    "active_compute_release": null,
+    "new_CPU_task": "A11_BATCH3_PREP_CPU_V1",
+    "new_CPU_release": "P00_A_BATCH3_PREP_CPU_V1",
+    "paired_train_parents": 16,
+    "paired_dev_parents": 0,
+    "normal_only_sources": 1,
+    "processed_sources": 17,
+    "remaining_slots": 483,
+    "tasks_with_paired_sources": 13,
+    "collection_authorized": false,
+    "training_authorized": false
+  },
+  "closed_release_metadata": [
+    {
+      "release_id": "P10_A_NATIVE_PREFLIGHT_V1",
+      "status": "consumed_technical_failure_closed"
+    },
+    {
+      "release_id": "P10_A_EGL_GRAPHICS_PROBE_V1",
+      "status": "consumed_technical_failure_closed"
+    },
+    {
+      "release_id": "P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1",
+      "status": "consumed_success_closed"
+    },
+    {
+      "release_id": "P10_A_NATIVE_PREFLIGHT_V2",
+      "status": "consumed_technical_failure_closed"
+    },
+    {
+      "release_id": "P10_A_NATIVE_PREFLIGHT_V3",
+      "status": "consumed_success_closed"
+    },
+    {
+      "release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V1",
+      "status": "closed_preclaim_metadata_failure"
+    },
+    {
+      "release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V2",
+      "status": "consumed_failure_closed"
+    },
+    {
+      "release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V3",
+      "status": "consumed_success_closed"
+    },
+    {
+      "release_id": "P10_A_CAUSAL_C10_PREFLIGHT_V1",
+      "status": "consumed_failure_closed"
+    },
+    {
+      "release_id": "P10_A_CAUSAL_C10_PREFLIGHT_V2",
+      "status": "consumed_success_closed"
+    },
+    {
+      "release_id": "P11_A_COMMON_POOL_FIRST_PARENT_V3",
+      "status": "consumed_technical_failure_closed"
+    },
+    {
+      "release_id": "P11_A_COMMON_POOL_FIRST_PARENT_V4",
+      "status": "consumed_success_closed"
+    },
+    {
+      "release_id": "P11_A_COMMON_POOL_BATCH1_V1",
+      "status": "consumed_closed_with_legal_pre_cut_exclusion"
+    },
+    {
+      "release_id": "P11_A_COMMON_POOL_BATCH2_V1",
+      "status": "consumed_success_closed"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/CONTROL.json",
+      "size_bytes": 107896,
+      "sha256": "3a2fac981d0bc974bb07967c4ddd323ba2b382fac29d0a3d6929d35859a0ae21"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/TASK_BOARD.json",
+      "size_bytes": 37720,
+      "sha256": "af70be7ae3fb85e00db47e52ffc8f5f79628795fe2d72a08798fafbe332cd4d6"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/DISPATCH_A.json",
+      "size_bytes": 30567,
+      "sha256": "e61084df2b7da382ca2ba1e4b2447b73baab4832c44a4e647002cf882e673a12"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P00_A_BATCH3_PREP_CPU_V1.json",
+      "size_bytes": 6759,
+      "sha256": "a11ab53cd02b72967abe920c667519d15ec98f4699e37d5761378f02931da68e"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/COMMON_POOL_ACCEPTED_PARENTS_V3.json",
+      "size_bytes": 116643,
+      "sha256": "62fdb2d17a7b43be4ab5861671b80557ce7213a65326102689ac821d97fc37ad"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/COMMON_POOL_ACCEPTED_PARENTS_V2.json",
+      "size_bytes": 57260,
+      "sha256": "460d8144bbd82057673613541aa7a53beb6fb4be5831e43b0016beb9d3b146a0"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/COMMON_POOL_SOURCE_DISPOSITIONS_V2.json",
+      "size_bytes": 28346,
+      "sha256": "a9507f9d917a071d1865e70bed537c97c46f61c08ee87433f6f99d6bcfd43007"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P11_A_COMMON_POOL_BATCH2_V1_CLOSED.json",
+      "size_bytes": 1134,
+      "sha256": "8049a2fff78474279755660502468b19fe8ffa898efcae4d86d9c92fd0f74c9c"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/tasks/A11_BATCH3_PREP_CPU_V1.md",
+      "size_bytes": 4110,
+      "sha256": "06a6e6f5888752db1d498bc0cb8e16a8b1ab97fa14bd72aba92852f703431f50"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_NATIVE_PREFLIGHT_V1_CLOSED.json",
+      "size_bytes": 832,
+      "sha256": "7574117b24d27f7fc99b3212238d5027f545db8f8077dd77bae0732f4ef2ff02"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_EGL_GRAPHICS_PROBE_V1_CLOSED.json",
+      "size_bytes": 829,
+      "sha256": "148a6f72e707574d88d245c3dff3e7142742125a7d7badaedc435a706bbfdc84"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_CLOSED.json",
+      "size_bytes": 858,
+      "sha256": "b5d8ee18305cae68d6a1bb628216e4dd84e9dec92831c23e03ee6a405c140d1c"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_NATIVE_PREFLIGHT_V2_CLOSED.json",
+      "size_bytes": 846,
+      "sha256": "285ba69de7f46bd4f111be461238788d781bee8e8fd9e805ffb36f9e6b70a894"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_NATIVE_PREFLIGHT_V3_CLOSED.json",
+      "size_bytes": 833,
+      "sha256": "2e7be96d7a51afae64de98434e25e29682cdadc504525eaea8bacffec0d7434c"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V1_CLOSED.json",
+      "size_bytes": 976,
+      "sha256": "076a32373fc44932d5d65a7671e68e777335663685e80e8ab8ba049fee83bf65"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V2_CLOSED.json",
+      "size_bytes": 950,
+      "sha256": "3d5ea42f5ee514d2b5ec3e58ace51e3eb4f4e509bce5e962d9639d682f273b68"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V3_CLOSED.json",
+      "size_bytes": 965,
+      "sha256": "836a13af5ccfac259e9a4c56ab836e09d4bc0664e366c52315d4681f0463a0d0"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_CAUSAL_C10_PREFLIGHT_V1_CLOSED.json",
+      "size_bytes": 1003,
+      "sha256": "d7abd0b4f955a7481ac54d689742df0da16430ebcaa3e5a9d641e34b7db8e152"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_CAUSAL_C10_PREFLIGHT_V2_CLOSED.json",
+      "size_bytes": 1031,
+      "sha256": "43e0693033516fdef5c342211aa55656926e45a5f3d92c3c8d0a9e733c300d6f"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P11_A_COMMON_POOL_FIRST_PARENT_V3_CLOSED.json",
+      "size_bytes": 955,
+      "sha256": "4886d382094a1d50086fc1b85ad4055e7c3c51137b1f26efe51ec82dc33cd6e0"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P11_A_COMMON_POOL_FIRST_PARENT_V4_CLOSED.json",
+      "size_bytes": 967,
+      "sha256": "8d58351bc4f20ec366e67a41c15df9c7a7956816bd5c4803ae35d3358fcd676c"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P11_A_COMMON_POOL_BATCH1_V1_CLOSED.json",
+      "size_bytes": 1259,
+      "sha256": "3c35abb44c362d66969e04b577e981f730e78706744995d48a003170a20b4e1b"
+    }
+  ],
+  "scope": "Only small published authority/index/release/task metadata and SHA reviewed. No runtime logs or runtime manifest, collector/checker, model/driver import, hardware/process probes, or authoritative edits. Zero limit values describe authorization ceilings, not a new runtime measurement."
+}

@@ -1,0 +1,446 @@
+{
+  "utc": "2026-09-23T01:27:03.348026+00:00",
+  "document": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/docs/EXPERIMENT_RESULTS_MASTER.md",
+  "index": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/EXPERIMENT_RESULTS_MASTER_INDEX.json",
+  "source_snapshot": "2026-09-23T00:50:00Z",
+  "new_scientific_operations": 0,
+  "main_Post_comparisons": 10,
+  "same_Q_H10_Post_pairing": {
+    "comparison": "Post selected Q multi minus once H10",
+    "paired_valid": "500",
+    "left_successes": "350",
+    "right_successes": "341",
+    "rescued": "13",
+    "harmed": "4",
+    "difference_pp": "1.8",
+    "CI95_low_pp": "0.4",
+    "CI95_high_pp": "3.4000000000000004",
+    "McNemar_exact_p": "0.049041748046875",
+    "CI_scope": "pointwise within-fixed-task source bootstrap 2000 seed20260921; no training-seed uncertainty"
+  },
+  "current_E3_pairs": [
+    {
+      "comparison": "Post selected-Q G0-multi minus VLA-Corrector",
+      "paired_valid": "500",
+      "left_successes": "350",
+      "right_successes": "319",
+      "rescued": "61",
+      "harmed": "30",
+      "difference_pp": "6.2",
+      "CI95_low_pp": "3.0",
+      "CI95_high_pp": "9.4",
+      "McNemar_exact_p": "0.0015165131944572215",
+      "CI_scope": "pointwise within-fixed-task source bootstrap 2000 seed20260921; no training-seed uncertainty"
+    },
+    {
+      "comparison": "Post selected-Q G0-multi minus GAF-v1 adapted",
+      "paired_valid": "500",
+      "left_successes": "350",
+      "right_successes": "315",
+      "rescued": "61",
+      "harmed": "26",
+      "difference_pp": "7.0",
+      "CI95_low_pp": "4.0",
+      "CI95_high_pp": "10.0",
+      "McNemar_exact_p": "0.00022368935609481816",
+      "CI_scope": "pointwise within-fixed-task source bootstrap 2000 seed20260921; no training-seed uncertainty"
+    }
+  ],
+  "DEV_rows": [
+    [
+      "L00",
+      "Post",
+      "65/100",
+      "68/100",
+      "69/100",
+      "202/300",
+      "67.33%",
+      "1；仅Post选型"
+    ],
+    [
+      "L00",
+      "Velocity",
+      "66/100",
+      "68/100",
+      "64/100",
+      "198/300",
+      "66.00%",
+      "0；仅另文保留"
+    ],
+    [
+      "L10",
+      "Post",
+      "68/100",
+      "67/100",
+      "68/100",
+      "203/300",
+      "67.67%",
+      "1；仅Post选型"
+    ],
+    [
+      "L10",
+      "Velocity",
+      "68/100",
+      "66/100",
+      "67/100",
+      "201/300",
+      "67.00%",
+      "0；仅另文保留"
+    ],
+    [
+      "L01",
+      "Post",
+      "70/100",
+      "68/100",
+      "69/100",
+      "207/300",
+      "69.00%",
+      "1；仅Post选型"
+    ],
+    [
+      "L01",
+      "Velocity",
+      "71/100",
+      "69/100",
+      "69/100",
+      "209/300",
+      "69.67%",
+      "0；仅另文保留"
+    ],
+    [
+      "L11",
+      "Post",
+      "69/100",
+      "67/100",
+      "67/100",
+      "203/300",
+      "67.67%",
+      "1；仅Post选型"
+    ],
+    [
+      "L11",
+      "Velocity",
+      "68/100",
+      "68/100",
+      "70/100",
+      "206/300",
+      "68.67%",
+      "0；仅另文保留"
+    ]
+  ],
+  "loss_sample_statistics": [
+    {
+      "loss": "L00",
+      "method": "Post",
+      "successes": [
+        38,
+        35,
+        35
+      ],
+      "mean_percent": 72,
+      "sample_sd_percent": 3.4641016151377544
+    },
+    {
+      "loss": "L00",
+      "method": "Velocity",
+      "successes": [
+        32,
+        32,
+        34
+      ],
+      "mean_percent": 65.33333333333333,
+      "sample_sd_percent": 2.309401076758503
+    },
+    {
+      "loss": "L10",
+      "method": "Post",
+      "successes": [
+        35,
+        35,
+        34
+      ],
+      "mean_percent": 69.33333333333333,
+      "sample_sd_percent": 1.1547005383792515
+    },
+    {
+      "loss": "L10",
+      "method": "Velocity",
+      "successes": [
+        32,
+        34,
+        34
+      ],
+      "mean_percent": 66.66666666666667,
+      "sample_sd_percent": 2.309401076758503
+    },
+    {
+      "loss": "L01",
+      "method": "Post",
+      "successes": [
+        35,
+        35,
+        33
+      ],
+      "mean_percent": 68.66666666666667,
+      "sample_sd_percent": 2.309401076758503
+    },
+    {
+      "loss": "L01",
+      "method": "Velocity",
+      "successes": [
+        35,
+        35,
+        39
+      ],
+      "mean_percent": 72.66666666666667,
+      "sample_sd_percent": 4.618802153517006
+    },
+    {
+      "loss": "L11",
+      "method": "Post",
+      "successes": [
+        37,
+        36,
+        35
+      ],
+      "mean_percent": 72,
+      "sample_sd_percent": 2.0
+    },
+    {
+      "loss": "L11",
+      "method": "Velocity",
+      "successes": [
+        37,
+        36,
+        34
+      ],
+      "mean_percent": 71.33333333333333,
+      "sample_sd_percent": 3.0550504633038935
+    }
+  ],
+  "cost_rows": [
+    [
+      10,
+      "Post",
+      "G0-multi",
+      "350/500",
+      7037,
+      "14.074",
+      70370,
+      "1011 / 2.022",
+      "109/164/227",
+      "20.106"
+    ],
+    [
+      10,
+      "Velocity（另文）",
+      "G0-multi",
+      "340/500",
+      8326,
+      "16.652",
+      83260,
+      "1052 / 2.104",
+      "109/157/234",
+      "24.488"
+    ],
+    [
+      20,
+      "Post",
+      "G0-multi",
+      "334/500",
+      4953,
+      "9.906",
+      49530,
+      "1166 / 2.332",
+      "93/145/262",
+      "14.829"
+    ],
+    [
+      20,
+      "Velocity（另文）",
+      "G0-multi",
+      "324/500",
+      6254,
+      "12.508",
+      62540,
+      "1177 / 2.354",
+      "93/142/265",
+      "19.302"
+    ],
+    [
+      30,
+      "Post",
+      "G0-multi",
+      "334/500",
+      4231,
+      "8.462",
+      42310,
+      "1251 / 2.502",
+      "85/142/273",
+      "12.668"
+    ],
+    [
+      30,
+      "Velocity（另文）",
+      "G0-multi",
+      "324/500",
+      5637,
+      "11.274",
+      56370,
+      "1281 / 2.562",
+      "85/142/273",
+      "17.398"
+    ],
+    [
+      40,
+      "Post",
+      "G0-multi",
+      "324/500",
+      3983,
+      "7.966",
+      39830,
+      "1293 / 2.586",
+      "85/136/279",
+      "12.293"
+    ],
+    [
+      40,
+      "Velocity（另文）",
+      "G0-multi",
+      "314/500",
+      5355,
+      "10.710",
+      53550,
+      "1305 / 2.610",
+      "85/142/273",
+      "17.054"
+    ],
+    [
+      50,
+      "Post",
+      "G0-multi",
+      "323/500",
+      3639,
+      "7.278",
+      36390,
+      "1275 / 2.550",
+      "92/130/278",
+      "11.266"
+    ],
+    [
+      50,
+      "Velocity（另文）",
+      "G0-multi",
+      "317/500",
+      5077,
+      "10.154",
+      50770,
+      "1314 / 2.628",
+      "92/129/279",
+      "16.016"
+    ],
+    [
+      10,
+      "Post",
+      "G0-once",
+      "341/500",
+      6931,
+      "13.862",
+      69310,
+      "391 / 0.782",
+      "109/391/0",
+      "20.326"
+    ],
+    [
+      10,
+      "Velocity（另文）",
+      "G0-once",
+      "336/500",
+      7415,
+      "14.830",
+      74150,
+      "391 / 0.782",
+      "109/391/0",
+      "22.068"
+    ]
+  ],
+  "native_pair_rows": [
+    [
+      "SmolVLA",
+      "Post−N",
+      496,
+      "244 / 234",
+      "26 / 16",
+      "+2.02",
+      "[−0.40,4.44]"
+    ],
+    [
+      "SmolVLA",
+      "Velocity−N（另文）",
+      496,
+      "239 / 234",
+      "24 / 19",
+      "+1.01",
+      "[−1.41,3.43]"
+    ],
+    [
+      "X-VLA",
+      "Post−N",
+      500,
+      "409 / 403",
+      "24 / 18",
+      "+1.2",
+      "[−1.6,4.0]"
+    ],
+    [
+      "X-VLA",
+      "Post−R",
+      500,
+      "409 / 412",
+      "8 / 11",
+      "−0.6",
+      "[−2.0,0.8]"
+    ],
+    [
+      "X-VLA",
+      "Velocity−N（另文）",
+      500,
+      "412 / 403",
+      "21 / 12",
+      "+1.8",
+      "[−1.2,4.8]"
+    ],
+    [
+      "X-VLA",
+      "Velocity−R（另文）",
+      500,
+      "412 / 412",
+      "7 / 7",
+      "0.0",
+      "[−1.0,1.0]"
+    ]
+  ],
+  "E6_rows": [
+    [
+      "G0→R-multi",
+      "26/50",
+      "52.0",
+      "4/11/35",
+      "240 / 4.80",
+      "1072 / 21.44",
+      "−10 pp；[−22,0]；2/7"
+    ],
+    [
+      "D5→R-multi",
+      "31/50",
+      "62.0",
+      "5/2/43",
+      "380 / 7.60",
+      "1001 / 20.02",
+      "+10 pp；[0,22]；7/2"
+    ]
+  ],
+  "original_results_modified": false,
+  "historical_tables_retained": true,
+  "LIBERO_processed": false
+}

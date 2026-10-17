@@ -1,0 +1,343 @@
+{
+  "task_id": "A_D24_GAF_INTERNAL_HOLDOUT_V1",
+  "parent_task_id": "A_D24_CORE_REMAINDER_V1",
+  "revision": 2,
+  "status": "FIT_COMPLETE_EIGHT_RESIDENT_EVAL_RUNNING",
+  "utc": "2026-09-22T05:22:08.757680+00:00",
+  "host": "trial-303224955-trialrun-303224955-worker-0",
+  "report": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_GAF_INTERNAL_HOLDOUT_V1_REPORT_r2.md",
+  "materialization": {
+    "elapsed_seconds": 49.97859509009868,
+    "excluded": [],
+    "future_parents_included": false,
+    "genuine_inputs": true,
+    "hardware_queries": 0,
+    "limitation": "15 train and 2 internal parent-holdout; overlapping windows/branches are not independent parents; limited existing pool",
+    "model_calls": 0,
+    "normalizer_ref": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model/policy_postprocessor_step_0_unnormalizer_processor.safetensors",
+      "sha256": "4fff91faea9afc9208e5519088f2bc8fb9cb21102bfeec8a9b3f259863c5cf00"
+    },
+    "original_global_split_unchanged": true,
+    "parent_source_identities": {
+      "PROPOSED_MT50_assembly_train_0000_parent": {
+        "env_seed": 2018080184,
+        "source": "PROPOSED_MT50_assembly_train_0000",
+        "task": "assembly-v3"
+      },
+      "PROPOSED_MT50_basketball_train_0000_parent": {
+        "env_seed": 1876197831,
+        "source": "PROPOSED_MT50_basketball_train_0000",
+        "task": "basketball-v3"
+      },
+      "PROPOSED_MT50_bin_picking_train_0000_parent": {
+        "env_seed": 1175436077,
+        "source": "PROPOSED_MT50_bin_picking_train_0000",
+        "task": "bin-picking-v3"
+      },
+      "PROPOSED_MT50_box_close_train_0000_parent": {
+        "env_seed": 213173705,
+        "source": "PROPOSED_MT50_box_close_train_0000",
+        "task": "box-close-v3"
+      },
+      "PROPOSED_MT50_button_press_topdown_train_0000_parent": {
+        "env_seed": 637558240,
+        "source": "PROPOSED_MT50_button_press_topdown_train_0000",
+        "task": "button-press-topdown-v3"
+      },
+      "PROPOSED_MT50_button_press_topdown_wall_train_0000_parent": {
+        "env_seed": 1188802122,
+        "source": "PROPOSED_MT50_button_press_topdown_wall_train_0000",
+        "task": "button-press-topdown-wall-v3"
+      },
+      "PROPOSED_MT50_button_press_train_0000_parent": {
+        "env_seed": 157406182,
+        "source": "PROPOSED_MT50_button_press_train_0000",
+        "task": "button-press-v3"
+      },
+      "PROPOSED_MT50_button_press_wall_train_0000_parent": {
+        "env_seed": 367468006,
+        "source": "PROPOSED_MT50_button_press_wall_train_0000",
+        "task": "button-press-wall-v3"
+      },
+      "PROPOSED_MT50_disassemble_train_0000_parent": {
+        "env_seed": 2101296749,
+        "source": "PROPOSED_MT50_disassemble_train_0000",
+        "task": "disassemble-v3"
+      },
+      "PROPOSED_MT50_disassemble_train_0001_parent": {
+        "env_seed": 1919108575,
+        "source": "PROPOSED_MT50_disassemble_train_0001",
+        "task": "disassemble-v3"
+      },
+      "PROPOSED_MT50_pick_place_wall_train_0000_parent": {
+        "env_seed": 1317397464,
+        "source": "PROPOSED_MT50_pick_place_wall_train_0000",
+        "task": "pick-place-wall-v3"
+      },
+      "PROPOSED_MT50_pick_place_wall_train_0001_parent": {
+        "env_seed": 1572292984,
+        "source": "PROPOSED_MT50_pick_place_wall_train_0001",
+        "task": "pick-place-wall-v3"
+      },
+      "PROPOSED_MT50_shelf_train_0000_parent": {
+        "env_seed": 2026092000,
+        "source": "PROPOSED_MT50_shelf_train_0000",
+        "task": "shelf-place-v3"
+      },
+      "PROPOSED_MT50_shelf_train_0001_parent": {
+        "env_seed": 1389985904,
+        "source": "PROPOSED_MT50_shelf_train_0001",
+        "task": "shelf-place-v3"
+      },
+      "PROPOSED_MT50_stick_pull_train_0000_parent": {
+        "env_seed": 1189644218,
+        "source": "PROPOSED_MT50_stick_pull_train_0000",
+        "task": "stick-pull-v3"
+      },
+      "PROPOSED_MT50_stick_pull_train_0001_parent": {
+        "env_seed": 1195000414,
+        "source": "PROPOSED_MT50_stick_pull_train_0001",
+        "task": "stick-pull-v3"
+      },
+      "PROPOSED_MT50_stick_push_train_0000_parent": {
+        "env_seed": 686922949,
+        "source": "PROPOSED_MT50_stick_push_train_0000",
+        "task": "stick-push-v3"
+      }
+    },
+    "status": "READY",
+    "summaries": {
+      "development": {
+        "actual_windows": 8494,
+        "bytes": 71250901,
+        "candidate_windows": 8494,
+        "parent_count": 2,
+        "parent_ids": [
+          "PROPOSED_MT50_assembly_train_0000_parent",
+          "PROPOSED_MT50_basketball_train_0000_parent"
+        ],
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/data/development.pt",
+        "physical_branches": 30,
+        "shapes": {
+          "action_chunks": [
+            8494,
+            10,
+            4
+          ],
+          "obs_features": [
+            8494,
+            4
+          ],
+          "targets": [
+            8494
+          ],
+          "task_features": [
+            8494,
+            2048
+          ]
+        },
+        "tasks": [
+          "assembly-v3",
+          "basketball-v3"
+        ]
+      },
+      "train": {
+        "actual_windows": 27830,
+        "bytes": 233441941,
+        "candidate_windows": 27830,
+        "parent_count": 15,
+        "parent_ids": [
+          "PROPOSED_MT50_bin_picking_train_0000_parent",
+          "PROPOSED_MT50_box_close_train_0000_parent",
+          "PROPOSED_MT50_button_press_topdown_train_0000_parent",
+          "PROPOSED_MT50_button_press_topdown_wall_train_0000_parent",
+          "PROPOSED_MT50_button_press_train_0000_parent",
+          "PROPOSED_MT50_button_press_wall_train_0000_parent",
+          "PROPOSED_MT50_disassemble_train_0000_parent",
+          "PROPOSED_MT50_disassemble_train_0001_parent",
+          "PROPOSED_MT50_pick_place_wall_train_0000_parent",
+          "PROPOSED_MT50_pick_place_wall_train_0001_parent",
+          "PROPOSED_MT50_shelf_train_0000_parent",
+          "PROPOSED_MT50_shelf_train_0001_parent",
+          "PROPOSED_MT50_stick_pull_train_0000_parent",
+          "PROPOSED_MT50_stick_pull_train_0001_parent",
+          "PROPOSED_MT50_stick_push_train_0000_parent"
+        ],
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/data/train.pt",
+        "physical_branches": 211,
+        "shapes": {
+          "action_chunks": [
+            27830,
+            10,
+            4
+          ],
+          "obs_features": [
+            27830,
+            4
+          ],
+          "targets": [
+            27830
+          ],
+          "task_features": [
+            27830,
+            2048
+          ]
+        },
+        "tasks": [
+          "bin-picking-v3",
+          "box-close-v3",
+          "button-press-topdown-v3",
+          "button-press-topdown-wall-v3",
+          "button-press-v3",
+          "button-press-wall-v3",
+          "disassemble-v3",
+          "pick-place-wall-v3",
+          "shelf-place-v3",
+          "stick-pull-v3",
+          "stick-push-v3"
+        ]
+      }
+    },
+    "synthetic": false,
+    "test_environment_identity_overlap": [],
+    "train_holdout_parent_overlap": [],
+    "utc": "2026-09-22T05:05:44.153741+00:00"
+  },
+  "actual_fit_updates_at_snapshot": {
+    "9201": 10000,
+    "9202": 10000,
+    "9203": 10000
+  },
+  "actual_daemon": {
+    "boot_id": "9011c00c-6953-4cb3-a724-1a6f90d196d4",
+    "host": "trial-303224955-trialrun-303224955-worker-0",
+    "pgid": 1849638,
+    "pid": 1849638,
+    "ppid": 1,
+    "start_ticks": 409404119,
+    "state": "R"
+  },
+  "fit_model_ready_count": 3,
+  "eval_started_at_snapshot": true,
+  "eval_completed_claimed": false,
+  "automatic_fit_to_eval": true,
+  "automatic_experiment_retries": 0,
+  "scientific_scope": "finite existing data GAF-v1 adapted with internal parent holdout",
+  "artifacts": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/STABLE_HANDOFF.json",
+      "sha256": "6f7850d1d5b3cb0d3d6769354270edcf91328fda119fc01e3e09395200c6add5"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/DAEMON_READY.json",
+      "sha256": "39adbe18c98bb3cc623f49d3a8a76b303079a64a89b7fa0e90d29b8d9bc2792c"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/CHAIN_COMMAND.json",
+      "sha256": "1ff0c5d2daed3360795cae980a228428812855672da5264fa3a4a3ffe6d65f8b"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/chain/HOLDER_EXIT_ACK.json",
+      "sha256": "800d445c714ec417a4ced961aea4e9a5473246d0a12515d8b8d3823fe61180f8"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/CODE_MANIFEST.json",
+      "sha256": "49e17b1878c6957d14948f005d083ffcec6ef71246c3de509a725c9ec8682a9e"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/CPU_CHANGED_PATH_CHECK.json",
+      "sha256": "8d5905a25b0f256965b26ba7f765e5b77437e433327b4854b0441ac1aebd751b"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/CPU_SOURCE_SELECTION_CORRECTION.json",
+      "sha256": "78f4a843cad116389031697da51cfdd0f5af904bf546961a1eed13ce1f58ab16"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/RESOURCE_SCOPE.json",
+      "sha256": "9ccc2abf7d895464c5d243add4f4c0f532e9e1213fd063170fd0ee500ced3ac0"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/config/BUDGET_BASIS.json",
+      "sha256": "1bd912063c07e9e49bbc5399d0728884f9844f978805e3ced1eeb2fa834e68e0"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/data/MATERIALIZATION_RESULT.json",
+      "sha256": "562f67ba73c96d56857308f67295705ff1b92295e17512800292be7b6e66ebcb"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/data/ACTION_BINDING.json",
+      "sha256": "a95b08e41aac4780f814570e4fd535c907c75bfbacea94a03205280ca1b7a32e"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/NUMERICAL_LINEAGE.md",
+      "sha256": "d9972f27349b081c24c1d31866846de03d124301baad86cebb7aa6b7f3cc7b27"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/FIT_SUMMARY.json",
+      "sha256": "1a6b1031d8dc4ecf5a08f86dec95a4327e01d476ae6d7abb0dbe11c5f32f6148"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/FIT_TO_EVAL_HANDOFF.json",
+      "sha256": "5e07d58c407783d64755b06db4326b8d0fed13bb94f5d46d7ff2bcc8865954c0"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/chain/workers/0/MODEL_READY.json",
+      "sha256": "8c51d71f8f7e460f4bb71d0214a1afb65cdda9c5301be7ae8b243ea0fd43982a"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/chain/workers/1/MODEL_READY.json",
+      "sha256": "8d1287607da2cb37a3c110cfc4d2fa880b8ceb63d3236542a31be61bd882e9e9"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/chain/workers/2/MODEL_READY.json",
+      "sha256": "e8ab6c2c304d8176669cab15631e4aed2d75a652f7c322d8794e6de3cc5e0f65"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/chain/workers/3/MODEL_READY.json",
+      "sha256": "913df5477049557d5f0d66afdc9cba95f187321f331c8e66ae66af1276b1a8ba"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/chain/workers/4/MODEL_READY.json",
+      "sha256": "8e84f701c46b4f693a4094c6dbee9585d83f946918b950be0f5ec7551455924a"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/chain/workers/5/MODEL_READY.json",
+      "sha256": "a0fa611006dcfb564a6d184068834bd269fdf4717ae971bf10eb6b23da97fafd"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/chain/workers/6/MODEL_READY.json",
+      "sha256": "92ea16d1157fbf12fb13deff70487280c804364fb20e1a23fb2a703e1c527b4f"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/chain/workers/7/MODEL_READY.json",
+      "sha256": "137ffc924c53388fcf4c22dc95c8dae9dfcb8a6136432b2a466b60b1824a610b"
+    }
+  ],
+  "E3_completion_receipt": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_E3_UNSTARTED_CONTINUATION_V1_RESULT_r2.json",
+  "fit_complete": true,
+  "actual_fit_updates": 30000,
+  "eval_model_ready_count": 8,
+  "eval_progress_snapshot": {
+    "H": 10,
+    "action_backward_calls": 28160,
+    "attempts": 209,
+    "complete": false,
+    "control_steps": 27580,
+    "critic_forward_calls": 84480,
+    "entered_without_RESULT": 8,
+    "episode_seconds_sum": 862.1148597188294,
+    "flow_calls": 28160,
+    "method": "GAF-v1 adapted",
+    "no_G0_or_once_gate": true,
+    "planned_episodes": 500,
+    "policy_calls": 2816,
+    "same_A_main500_sources": true,
+    "successes": 133,
+    "technical_failures": 0,
+    "terminal_episodes": 201,
+    "training_scope": "15 existing training parents / 2 fixed internal holdout; adapted, not official reproduction or full MT50 training",
+    "utc": "2026-09-22T05:22:06.179982+00:00"
+  },
+  "observed_worker_exits": []
+}

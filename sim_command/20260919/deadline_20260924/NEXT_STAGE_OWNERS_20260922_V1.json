@@ -1,0 +1,20 @@
+{
+  "schema": "corrector_deadline_ownership_update_v1",
+  "issued_at_utc": "2026-09-22T03:48:24.887911+00:00",
+  "basis": "User requests continuation of unfinished planned experiments; A main complete, redistribute unfinished independent work without new science scope",
+  "ownership": {
+    "E1_training_and_evaluation": "B",
+    "E6_trigger_comparison": "A",
+    "E3_VLA_Corrector_and_GAF_adapted": "A",
+    "E8_Smol_X_LIBERO_baseline_and_Post_then_ready_Velocity": "B"
+  },
+  "previously_completed_main_and_pilot": "closed_no_rerun",
+  "remaining475_collection_enabled": false,
+  "inflight_exception": "Do not interrupt or duplicate an already admitted running job. If same E6/E3 already admitted onB before this handoff, B publishes its run identity promptly, A skips that exact unit and proceeds another owned unit. No waiting for whole other-node stages.",
+  "admission": "New unstarted E6/E3 admissions belong toA from this record; B completes its existingE1 and proceedsE8 automatically. Existing node-wide D24 compute caps/deadlines persist across stage IDs.",
+  "status": "effective_full_briefs_and_authorization_published",
+  "authorization": {
+    "path": "deadline_20260924/CONTINUATION_AUTHORIZATION_20260922_V1.json",
+    "sha256": "3e6a0aab7abe79365192c953d45b4e13b44139ab26ffadb6f7c3f82547107d8b"
+  }
+}

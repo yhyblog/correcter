@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "task_id": "A11_COMMON_POOL_BATCH2_V1",
+  "status": "SAVED_EVIDENCE_REVIEW_COMPLETE",
+  "scope": "CPU-only saved time/storage/result arithmetic; no hardware, process, launcher, experiment, model or weight access; no authoritative writes",
+  "sources": {
+    "timing": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH2_V1/SAVED_TIMING_AUDIT.json",
+      "sha256": "562117819c973c2413a7951439c8914db3f3bf51fe10a9503f11878ff7825898",
+      "size_bytes": 410788
+    },
+    "storage": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH2_V1/SAVED_STORAGE_AUDIT.json",
+      "sha256": "97fb4cd9df55110b755ee80cf07578625a074be463ae8d59d302173eb2b2e622",
+      "size_bytes": 62175
+    },
+    "result": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A11_COMMON_POOL_BATCH2_V1_RESULT.json",
+      "sha256": "5b9e3293de45ffdf55b6decbc870a969a3f408a1d9ba4ac660efd6d080e18116",
+      "size_bytes": 44234
+    },
+    "prior_Batch1_review": {
+      "path": "/tmp/batch1_throughput_review.json",
+      "sha256": "cb81f1d622bebcb6d5d398308a99c40eb495af369171199b9b7bd23b06765e45",
+      "size_bytes": 13621
+    }
+  },
+  "Batch1_original_evidence_refs_from_prior_verified_review": {
+    "timing": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH1_V1/SAVED_TIMING_AUDIT.json",
+      "sha256": "4fb8265ecb1609dbea48e644030d5d4ffbc3e09c5e582af0776f200abce5d571",
+      "size_bytes": 361259
+    },
+    "storage": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH1_V1/SAVED_STORAGE_AUDIT.json",
+      "sha256": "bfa9638bf6f64009964b0c0a892afd492de9289309d32b3a9b7a4b5304150b6c",
+      "size_bytes": 56455
+    },
+    "result": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A11_COMMON_POOL_BATCH1_V1_RESULT.json",
+      "sha256": "8510bfe67f6885f1a3cbbbf4210e5a5862b537707c6776f0cc5492a341d1de4d",
+      "size_bytes": 35930
+    }
+  },
+  "evidence_checks": {
+    "timing_storage_SHA_and_size_match_RESULT_refs": true,
+    "prior_Batch1_review_SHA_matches_previously_written_artifact": true,
+    "outer_elapsed_matches_RESULT": true,
+    "all120_child_elapsed_present": true,
+    "parent_and_branch_counts_consistent": true,
+    "numeric_host_overlap_independently_recomputed_from_saved_windows": true,
+    "no_model_or_project_code_imports": true
+  },
+  "observed_batch": {
+    "outer_elapsed_seconds": 15691.137440627906,
+    "outer_elapsed_hours": 4.358649289063307,
+    "cold_loads": 120,
+    "parents_started": 8,
+    "branches_started": 120,
+    "complete_outcomes": 120,
+    "full15_branch_parents": 8,
+    "absolute_s300_outcomes": 37,
+    "legal_early_success_outcomes": 83,
+    "parent_duration_scope": "scheduler admission through final branch exit, excluding final whole-wave publication",
+    "parents": [
+      {
+        "branches_started": 15,
+        "clock_scope": "scheduler admission to final branch exit; excludes final whole-wave publication",
+        "elapsed_seconds": 4326.331492945086,
+        "parent_key": "p00_assembly_train0000_cut5",
+        "status": "complete",
+        "elapsed_minutes": 72.10552488241811,
+        "elapsed_hours": 1.2017587480403018,
+        "cold_loads": 15,
+        "sum_child_host_seconds": 4323.200824268162,
+        "sum_model_load_host_seconds": 1875.9921378707513,
+        "model_load_fraction_of_sum_child_host_seconds": 0.4339359225090641
+      },
+      {
+        "branches_started": 15,
+        "clock_scope": "scheduler admission to final branch exit; excludes final whole-wave publication",
+        "elapsed_seconds": 4323.61116148904,
+        "parent_key": "p01_basketball_train0000_cut5",
+        "status": "complete",
+        "elapsed_minutes": 72.06018602481733,
+        "elapsed_hours": 1.2010031004136221,
+        "cold_loads": 15,
+        "sum_child_host_seconds": 4320.449628592469,
+        "sum_model_load_host_seconds": 1866.595967989415,
+        "model_load_fraction_of_sum_child_host_seconds": 0.4320374332422251
+      },
+      {
+        "branches_started": 15,
+        "clock_scope": "scheduler admission to final branch exit; excludes final whole-wave publication",
+        "elapsed_seconds": 4051.773125248961,
+        "parent_key": "p02_bin_picking_train0000_cut5",
+        "status": "complete",
+        "elapsed_minutes": 67.52955208748268,
+        "elapsed_hours": 1.125492534791378,
+        "cold_loads": 15,
+        "sum_child_host_seconds": 4048.6304736472666,
+        "sum_model_load_host_seconds": 1873.0119669828564,
+        "model_load_fraction_of_sum_child_host_seconds": 0.46262853060420867
+      },
+      {
+        "branches_started": 15,
+        "clock_scope": "scheduler admission to final branch exit; excludes final whole-wave publication",
+        "elapsed_seconds": 3790.925981462933,
+        "parent_key": "p03_box_close_train0000_cut5",
+        "status": "complete",
+        "elapsed_minutes": 63.18209969104888,
+        "elapsed_hours": 1.0530349948508149,
+        "cold_loads": 15,
+        "sum_child_host_seconds": 3787.7919033570215,
+        "sum_model_load_host_seconds": 1865.9933397737332,
+        "model_load_fraction_of_sum_child_host_seconds": 0.4926335414888954
+      },
+      {
+        "branches_started": 15,
+        "clock_scope": "scheduler admission to final branch exit; excludes final whole-wave publication",
+        "elapsed_seconds": 3610.2305637258105,
+        "parent_key": "p04_button_press_topdown_train0000_cut5",
+        "status": "complete",
+        "elapsed_minutes": 60.17050939543017,
+        "elapsed_hours": 1.0028418232571696,
+        "cold_loads": 15,
+        "sum_child_host_seconds": 3607.0866681532934,
+        "sum_model_load_host_seconds": 1863.5759566253982,
+        "model_load_fraction_of_sum_child_host_seconds": 0.5166429664911507
+      },
+      {
+        "branches_started": 15,
+        "clock_scope": "scheduler admission to final branch exit; excludes final whole-wave publication",
+        "elapsed_seconds": 3592.1208553798497,
+        "parent_key": "p05_button_press_topdown_wall_train0000_cut5",
+        "status": "complete",
+        "elapsed_minutes": 59.86868092299749,
+        "elapsed_hours": 0.9978113487166249,
+        "cold_loads": 15,
+        "sum_child_host_seconds": 3588.9609531955793,
+        "sum_model_load_host_seconds": 1863.0738555425778,
+        "model_load_fraction_of_sum_child_host_seconds": 0.519112322435192
+      },
+      {
+        "branches_started": 15,
+        "clock_scope": "scheduler admission to final branch exit; excludes final whole-wave publication",
+        "elapsed_seconds": 3599.539481851738,
+        "parent_key": "p06_button_press_train0000_cut5",
+        "status": "complete",
+        "elapsed_minutes": 59.992324697528964,
+        "elapsed_hours": 0.9998720782921494,
+        "cold_loads": 15,
+        "sum_child_host_seconds": 3596.4029351267964,
+        "sum_model_load_host_seconds": 1868.1564450804144,
+        "model_load_fraction_of_sum_child_host_seconds": 0.5194513737139272
+      },
+      {
+        "branches_started": 15,
+        "clock_scope": "scheduler admission to final branch exit; excludes final whole-wave publication",
+        "elapsed_seconds": 3602.23116556881,
+        "parent_key": "p07_button_press_wall_train0000_cut5",
+        "status": "complete",
+        "elapsed_minutes": 60.0371860928135,
+        "elapsed_hours": 1.0006197682135582,
+        "cold_loads": 15,
+        "sum_child_host_seconds": 3599.081993149128,
+        "sum_model_load_host_seconds": 1867.3029154432006,
+        "model_load_fraction_of_sum_child_host_seconds": 0.5188275563039747
+      }
+    ],
+    "exit_code": 0,
+    "technical_failures_in_saved_evidence": false,
+    "within_all116_caps": true,
+    "resource_entered_equals_returned": true,
+    "failed_resource_units": 0,
+    "incomplete_entered_resource_units": 0,
+    "audit_error_counts": {
+      "artifact_errors": 0,
+      "ledger_and_metadata_errors": 0,
+      "reference_errors": 0,
+      "schema_errors": 0,
+      "sequence_errors": 0
+    },
+    "analysis_acceptance_pending": true,
+    "new_accepted_parent_count_in_RESULT": 0,
+    "scientific_acceptance_granted_by_this_review": false
+  },
+  "host_parallelism": {
+    "scheduler_maximum_active_parents": 2,
+    "numeric_window_maximum_simultaneous": 2,
+    "two_numeric_windows_seconds": 13935.158827349544,
+    "one_numeric_window_seconds": 1016.2350294403732,
+    "numeric_window_union_seconds": 14951.393856789917,
+    "outer_seconds_outside_numeric_window_union": 739.7435838379897,
+    "two_numeric_windows_fraction_of_outer_wall": 0.8880910565009942,
+    "one_numeric_window_fraction_of_outer_wall": 0.06476490523938122,
+    "outside_numeric_windows_fraction_of_outer_wall": 0.04714403825962458,
+    "two_numeric_windows_fraction_of_union": 0.9320307498301326,
+    "summed_child_host_elapsed_seconds": 30871.605379489716,
+    "summed_child_host_elapsed_over_outer_wall": 1.967454908626072,
+    "interpretation": "Two saved numeric host windows overlap for13935.16s and one window alone for1016.24s; outside-window outer time739.74s includes unmetered/excluded phases. Aggregate child wall-time / outer wall-time1.96745 is a concurrent-child-equivalent ratio, not speedup or GPU utilization.",
+    "limitations": "first-to-last numeric event host windows; excludes pre-ledger hash/startup and unmetered cleanup tails; not GPU activity",
+    "precise_Popen_timestamps_available": false,
+    "GPU_compute_time_seconds": null,
+    "GPU_utilization": null
+  },
+  "cold_loading": {
+    "interval_name": "load_PI05_SFT030000",
+    "entered": 120,
+    "returned": 120,
+    "failed": 0,
+    "summed_host_interval_seconds": 14943.702585308347,
+    "mean_seconds": 124.53085487756955,
+    "median_seconds": 124.31031041848473,
+    "minimum_seconds": 123.2587143369019,
+    "maximum_seconds": 129.74789259117097,
+    "summed_child_elapsed_seconds": 30871.605379489716,
+    "fraction_of_summed_child_elapsed": 0.48405978249633075,
+    "summed_ledger_elapsed_seconds": 28915.845194604248,
+    "fraction_of_summed_ledger_elapsed": 0.5167997851951729,
+    "interpretation": "Model-load wrappers consume48.406% of summed child host time and51.680% of summed ledger time. Load intervals may overlap between children and contain nested phases, so their sum is not a removable outer-wall component, GPU seconds or disk loading time.",
+    "cold_load_overlap_wall_seconds": null,
+    "physical_checkpoint_IO_bytes": null,
+    "potential_wall_savings_from_model_reuse": null
+  },
+  "storage": {
+    "final_output_unique_inode_bytes": 14524777251,
+    "final_output_unique_inode_GiB": 13.527252945117652,
+    "final_output_unique_inode_reported_blocks_bytes": 14665641984,
+    "final_output_unique_inode_reported_blocks_GiB": 13.658443450927734,
+    "final_output_logical_path_bytes": 28571995909,
+    "final_output_logical_path_GiB": 26.6097447918728,
+    "final_output_unique_inodes": 69330,
+    "final_output_paths": 137815,
+    "final_cache_unique_inode_bytes": 354416,
+    "saved_admission": {
+      "exclusive_reservation": false,
+      "future_space_guaranteed": false,
+      "mode": "bounded_batch2",
+      "monitoring_gaps_accepted": {
+        "acceptance_scope": "this_Batch2_eight_parent_wave_only_not_Batch1_or_500_parent_quota",
+        "accepts_monitoring_gaps": true,
+        "exclusive_reservation": false,
+        "mode": "bounded_batch2",
+        "parent_keys": [
+          "p00_assembly_train0000_cut5",
+          "p01_basketball_train0000_cut5",
+          "p02_bin_picking_train0000_cut5",
+          "p03_box_close_train0000_cut5",
+          "p04_button_press_topdown_train0000_cut5",
+          "p05_button_press_topdown_wall_train0000_cut5",
+          "p06_button_press_train0000_cut5",
+          "p07_button_press_wall_train0000_cut5"
+        ],
+        "project_quota_known": false,
+        "run_id": "PROPOSED_A11_batch2_A_V1"
+      },
+      "project_quota_known": false,
+      "required_bytes": 93952475136,
+      "status": "admitted_observation_only"
+    },
+    "saved_monitor_polls": 3113,
+    "saved_monitor_errors": [],
+    "sampled_minimum_filesystem_available_bytes": 11255157374668800,
+    "sampled_minimum_filesystem_available_inodes": 9984769156,
+    "interpretation": "Final unique-inode content is14524777251B=13.52725GiB; reported allocated blocks13.65844GiB; path sum26.60974GiB includes aliases. None is exact global peak, actual physicalIO, project quota, reservation or future available capacity.",
+    "remaining_storage_guaranteed": false,
+    "new_capacity_queries_in_this_review": 0
+  },
+  "Batch1_descriptive_comparison": {
+    "scope": "Description only: different task/source/cut/outcome mix; no matched workload/control or serial baseline, no speedup claim.",
+    "Batch1": {
+      "outer_hours": 4.484330708636359,
+      "branches_and_cold_loads": 106,
+      "full15_branch_parents": 7,
+      "normal_only_parents": 1,
+      "mean_model_load_host_seconds": 124.79827695348266,
+      "model_load_fraction_summed_child_host": 0.46445550123975654,
+      "two_host_windows_fraction_of_outer": 0.6740632778472101,
+      "final_unique_inode_bytes": 17141869982,
+      "final_unique_inode_GiB": 15.964610485360026
+    },
+    "Batch2": {
+      "outer_hours": 4.358649289063307,
+      "branches_and_cold_loads": 120,
+      "full15_branch_parents": 8,
+      "normal_only_parents": 0,
+      "mean_model_load_host_seconds": 124.53085487756955,
+      "model_load_fraction_summed_child_host": 0.48405978249633075,
+      "two_host_windows_fraction_of_outer": 0.8880910565009942,
+      "final_unique_inode_bytes": 14524777251,
+      "final_unique_inode_GiB": 13.527252945117652
+    },
+    "interpretation": "Batch2 finished in4.35865h with120 branches versus Batch1 4.48433h with106 branches, and shows more two-window host overlap. Per-load mean is similar(124.53s versus124.80s). Different tasks, cut/terminal mix and output lengths prevent causal performance or efficiency claims."
+  },
+  "next_batch_assessment": {
+    "observed_storage_or_performance_blocker_at_concurrency2": false,
+    "evidence": [
+      "Outer command exited0, all8 parents completed15 branches, all120 saved outcomes complete.",
+      "No recorded monitor error in3113 polls; admission passed in this wave.",
+      "All116 caps held and entered=returned with0 failed/incomplete resource units.",
+      "Saved peak concurrency2 and strong two-host-window overlap show the existing scheduler continued to operate within its measured setting."
+    ],
+    "recommendation": "Retain concurrency2 and the existing accepted50-task table/collector. This saved throughput/storage evidence does not justify another engineering wave or additional GPU experiment before the next bounded batch.",
+    "necessary_next_batch_preparation": [
+      "Update fixed next-source/seed identities and their per-task full15/120 branch budgets using the existing table and exclusion rules.",
+      "Prepare a new bounded release, independent batch risk acceptance and small publication/identity checks; do not reuse consumed release or old risk grant.",
+      "Keep the existing real-entry current-capacity/admission gate and within-parent actual state/MJB qualification; saved Batch2 capacity cannot pre-approve the next batch."
+    ],
+    "when_to_reopen_engineering": "Only a concrete new unsupported task/budget/contract issue or observed failure warrants a targeted CPU repair. Do not re-run the full50-task engineering audit merely because the batch changes.",
+    "model_reuse_or_concurrency_increase_proposed": false,
+    "next_compute_authorized_by_review": false,
+    "new_static_task_table_audit_performed": false
+  },
+  "unknowns": {
+    "GPU_time_seconds": null,
+    "GPU_utilization": null,
+    "VRAM_peak_bytes": null,
+    "process_RSS_peak_bytes": null,
+    "physical_IO_actual_bytes": null,
+    "logical_IO_actual_bytes": null,
+    "strict_total_IO_upper_bytes": null,
+    "exact_global_peak_bytes": null,
+    "between_monitor_overshoot_bytes": null,
+    "outside_root_temporary_bytes": null,
+    "unlinked_bytes": null,
+    "project_quota_bytes": null,
+    "next_batch_current_capacity_bytes": null,
+    "new_source_actual_state_qualification": null,
+    "full500_runtime_or_storage_guarantee": null,
+    "matched_speedup": null
+  },
+  "write_scope": "Only /tmp/batch2_throughput_review.json written; no authoritative files changed."
+}

@@ -1,0 +1,295 @@
+{
+  "schema": "corrector_crossbase_H_sweep_authorization_v1",
+  "revision": 1,
+  "status": "released",
+  "issued_at_utc": "2026-09-23T11:53:55.563534+00:00",
+  "authority": "最新用户直接要求 SmolVLA H10/20/30/40/50、X-VLA H10/20/30，MT50多次触发扫描并分发三机；H10复用，Velocity沿用之前明确保留的另一论文范围。",
+  "assignment": {
+    "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/ASSIGNMENT.md",
+    "sha256": "58bd0b93a9d3ea84e18d4e6c29f41a7abea72134809f095171f85dabd011eb21"
+  },
+  "asset_guide": {
+    "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/ASSET_AND_ADAPTATION_GUIDE.md",
+    "sha256": "e965f846bc94ebca04e56722db23bebcf4985b6a6d8e8717ab05ca51eb5617ba"
+  },
+  "Q_assets": {
+    "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/Q_ASSETS.json",
+    "sha256": "b55482f4381800ae35ded3d8e78f302039e57b738729ad1d2396cd6dc0baa63a"
+  },
+  "nodes": {
+    "A": {
+      "task_id": "A_D24_CROSSBASE_H_SWEEP_V1",
+      "revision": 1,
+      "task_revision": 1,
+      "owner": "A",
+      "host": "trial-303224955-trialrun-303224955-worker-0",
+      "hostname": "trial-303224955-trialrun-303224955-worker-0",
+      "thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+      "original_thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+      "brief": {
+        "path": "tasks/A_D24_CROSSBASE_H_SWEEP_V1.md",
+        "sha256": "b9ebe67a04d009b2f57898f447e2dd612d3ef818a4bb00078812b358b7257a0b"
+      },
+      "model": "SmolVLA",
+      "horizons": [
+        20,
+        30
+      ],
+      "methods": [
+        "N",
+        "Post",
+        "R",
+        "Velocity"
+      ],
+      "units": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/UNITS_A.jsonl",
+        "sha256": "71de2a369c52e8632eafa729b63b1e7f0967dfae65c231ca2dfc118f4dc7b7db"
+      },
+      "cells": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/CELLS_A.json",
+        "sha256": "4628a5e870f7fdf3f292aa0ef92655db138148eb184379a3d34747ba057ca938"
+      },
+      "planned_new_episodes": 4000,
+      "stage_attempt_cap": 4400,
+      "additional_attempt_cap": 4400,
+      "cumulative_attempt_cap": 36700,
+      "GPU_count": 8,
+      "branches_per_GPU_target": 24,
+      "logical_concurrency_target": 192,
+      "expected_result": "receipts/A/A_D24_CROSSBASE_H_SWEEP_V1_RESULT_r1.json"
+    },
+    "B": {
+      "task_id": "B_D24_CROSSBASE_H_SWEEP_V1",
+      "revision": 1,
+      "task_revision": 1,
+      "owner": "B",
+      "host": "trial-303225685-trialrun-303225685-worker-0",
+      "hostname": "trial-303225685-trialrun-303225685-worker-0",
+      "thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+      "original_thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+      "brief": {
+        "path": "tasks/B_D24_CROSSBASE_H_SWEEP_V1.md",
+        "sha256": "75437aa8b1844e078213d33a80cde726ae0846a77c77578e31fcc17ebaa9a1bf"
+      },
+      "model": "SmolVLA",
+      "horizons": [
+        40,
+        50
+      ],
+      "methods": [
+        "N",
+        "Post",
+        "R",
+        "Velocity"
+      ],
+      "units": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/UNITS_B.jsonl",
+        "sha256": "619df813545d1344db020b877fa601cf57f3b5631873e0a3cb874b900d249c95"
+      },
+      "cells": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/CELLS_B.json",
+        "sha256": "9d5e5d2cc5913c5c94ac1031a0889673bac6c450867a052fadea865ed387a5f7"
+      },
+      "planned_new_episodes": 4000,
+      "stage_attempt_cap": 4400,
+      "additional_attempt_cap": 4400,
+      "cumulative_attempt_cap": 30250,
+      "GPU_count": 8,
+      "branches_per_GPU_target": 24,
+      "logical_concurrency_target": 192,
+      "expected_result": "receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_RESULT_r1.json"
+    },
+    "C": {
+      "task_id": "C_D24_CROSSBASE_H_SWEEP_V1",
+      "revision": 1,
+      "task_revision": 1,
+      "owner": "C",
+      "host": "trial-303269581-trialrun-303269581-worker-0",
+      "hostname": "trial-303269581-trialrun-303269581-worker-0",
+      "thread_id": "01a0c793-10d2-7791-a250-fd65d88e1ccb",
+      "original_thread_id": "01a0c793-10d2-7791-a250-fd65d88e1ccb",
+      "brief": {
+        "path": "tasks/C_D24_CROSSBASE_H_SWEEP_V1.md",
+        "sha256": "aea54e022993aef117e86860d1d9ad4e0c9ecef74c2eac52178ae9eef126986b"
+      },
+      "model": "X-VLA",
+      "horizons": [
+        20,
+        30
+      ],
+      "methods": [
+        "N",
+        "Post",
+        "R",
+        "Velocity"
+      ],
+      "units": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/UNITS_C.jsonl",
+        "sha256": "1d58488fc4314c14713f96bc647163503b074dd8de32b93909ad350cc3f73eb6"
+      },
+      "cells": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/CELLS_C.json",
+        "sha256": "6edaf002a70b3e8bb14ec3907700471ff6e69f82fe012a4a51f7f9d98fde9d7c"
+      },
+      "planned_new_episodes": 4000,
+      "stage_attempt_cap": 4400,
+      "additional_attempt_cap": 4400,
+      "cumulative_attempt_cap": 25150,
+      "GPU_count": 8,
+      "branches_per_GPU_target": 24,
+      "logical_concurrency_target": 192,
+      "expected_result": "receipts/C/C_D24_CROSSBASE_H_SWEEP_V1_RESULT_r1.json"
+    }
+  },
+  "tasks": {
+    "A": {
+      "task_id": "A_D24_CROSSBASE_H_SWEEP_V1",
+      "revision": 1,
+      "task_revision": 1,
+      "owner": "A",
+      "host": "trial-303224955-trialrun-303224955-worker-0",
+      "hostname": "trial-303224955-trialrun-303224955-worker-0",
+      "thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+      "original_thread_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+      "brief": {
+        "path": "tasks/A_D24_CROSSBASE_H_SWEEP_V1.md",
+        "sha256": "b9ebe67a04d009b2f57898f447e2dd612d3ef818a4bb00078812b358b7257a0b"
+      },
+      "model": "SmolVLA",
+      "horizons": [
+        20,
+        30
+      ],
+      "methods": [
+        "N",
+        "Post",
+        "R",
+        "Velocity"
+      ],
+      "units": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/UNITS_A.jsonl",
+        "sha256": "71de2a369c52e8632eafa729b63b1e7f0967dfae65c231ca2dfc118f4dc7b7db"
+      },
+      "cells": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/CELLS_A.json",
+        "sha256": "4628a5e870f7fdf3f292aa0ef92655db138148eb184379a3d34747ba057ca938"
+      },
+      "planned_new_episodes": 4000,
+      "stage_attempt_cap": 4400,
+      "additional_attempt_cap": 4400,
+      "cumulative_attempt_cap": 36700,
+      "GPU_count": 8,
+      "branches_per_GPU_target": 24,
+      "logical_concurrency_target": 192,
+      "expected_result": "receipts/A/A_D24_CROSSBASE_H_SWEEP_V1_RESULT_r1.json"
+    },
+    "B": {
+      "task_id": "B_D24_CROSSBASE_H_SWEEP_V1",
+      "revision": 1,
+      "task_revision": 1,
+      "owner": "B",
+      "host": "trial-303225685-trialrun-303225685-worker-0",
+      "hostname": "trial-303225685-trialrun-303225685-worker-0",
+      "thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+      "original_thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+      "brief": {
+        "path": "tasks/B_D24_CROSSBASE_H_SWEEP_V1.md",
+        "sha256": "75437aa8b1844e078213d33a80cde726ae0846a77c77578e31fcc17ebaa9a1bf"
+      },
+      "model": "SmolVLA",
+      "horizons": [
+        40,
+        50
+      ],
+      "methods": [
+        "N",
+        "Post",
+        "R",
+        "Velocity"
+      ],
+      "units": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/UNITS_B.jsonl",
+        "sha256": "619df813545d1344db020b877fa601cf57f3b5631873e0a3cb874b900d249c95"
+      },
+      "cells": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/CELLS_B.json",
+        "sha256": "9d5e5d2cc5913c5c94ac1031a0889673bac6c450867a052fadea865ed387a5f7"
+      },
+      "planned_new_episodes": 4000,
+      "stage_attempt_cap": 4400,
+      "additional_attempt_cap": 4400,
+      "cumulative_attempt_cap": 30250,
+      "GPU_count": 8,
+      "branches_per_GPU_target": 24,
+      "logical_concurrency_target": 192,
+      "expected_result": "receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_RESULT_r1.json"
+    },
+    "C": {
+      "task_id": "C_D24_CROSSBASE_H_SWEEP_V1",
+      "revision": 1,
+      "task_revision": 1,
+      "owner": "C",
+      "host": "trial-303269581-trialrun-303269581-worker-0",
+      "hostname": "trial-303269581-trialrun-303269581-worker-0",
+      "thread_id": "01a0c793-10d2-7791-a250-fd65d88e1ccb",
+      "original_thread_id": "01a0c793-10d2-7791-a250-fd65d88e1ccb",
+      "brief": {
+        "path": "tasks/C_D24_CROSSBASE_H_SWEEP_V1.md",
+        "sha256": "aea54e022993aef117e86860d1d9ad4e0c9ecef74c2eac52178ae9eef126986b"
+      },
+      "model": "X-VLA",
+      "horizons": [
+        20,
+        30
+      ],
+      "methods": [
+        "N",
+        "Post",
+        "R",
+        "Velocity"
+      ],
+      "units": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/UNITS_C.jsonl",
+        "sha256": "1d58488fc4314c14713f96bc647163503b074dd8de32b93909ad350cc3f73eb6"
+      },
+      "cells": {
+        "path": "deadline_20260924/CROSSBASE_H_SWEEP_V1/CELLS_C.json",
+        "sha256": "6edaf002a70b3e8bb14ec3907700471ff6e69f82fe012a4a51f7f9d98fde9d7c"
+      },
+      "planned_new_episodes": 4000,
+      "stage_attempt_cap": 4400,
+      "additional_attempt_cap": 4400,
+      "cumulative_attempt_cap": 25150,
+      "GPU_count": 8,
+      "branches_per_GPU_target": 24,
+      "logical_concurrency_target": 192,
+      "expected_result": "receipts/C/C_D24_CROSSBASE_H_SWEEP_V1_RESULT_r1.json"
+    }
+  },
+  "new_unique_scientific_units": 12000,
+  "additional_episode_attempt_cap": 13200,
+  "new_GPU_claims": 3,
+  "training_updates": 0,
+  "new_collection": 0,
+  "new_initial_states": 0,
+  "Q_loss": "L11",
+  "Q_fit_seed": 9101,
+  "max_interventions": null,
+  "once_authorized": false,
+  "random_authorized": false,
+  "native_baseline_authorized": true,
+  "private_engineering_adaptation_authorized": true,
+  "per_batch_approval_required": false,
+  "separate_GPU_preflight_authorized": false,
+  "exhaustive_consistency_checks_required": false,
+  "cross_node_barrier": false,
+  "holders_during_formal_wave": false,
+  "same_fault_max_repair_restarts": 2,
+  "analysis_response_wait_seconds": 1800,
+  "episode_budget_semantics": "Additional finite scope; previous consumed attempts are preserved, no counter reset. Retry only technical incomplete units, never repeat valid task outcomes.",
+  "admission_semantics": "All listed units admitted as one fixed queue now by latest user request; automatic internal continuation after original20:00 cutoff is limited to this already admitted scope.",
+  "stop_starting_new_units_utc": "2026-09-23T14:45:00Z",
+  "formal_exit_and_publication_target_utc": "2026-09-23T15:00:00Z",
+  "admitted_at_utc": "2026-09-23T11:53:55.563534+00:00",
+  "test_selection_prohibited": true
+}

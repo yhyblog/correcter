@@ -1,0 +1,784 @@
+{
+  "task_id": "A10_EGL_CUDA_MAP_CPU_V1",
+  "created_at_utc": "2026-09-19T18:35:16.891133+00:00",
+  "files": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_EGL_CUDA_MAP_CPU_V1_ACK.json",
+      "sha256": "2ce91dab56b6988dcf0f5a04c7847c0c4597e34d78dc82b894ef30ed4804605a",
+      "bytes": 5002
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_EGL_CUDA_MAP_CPU_V1_HEARTBEAT.json",
+      "sha256": "d8842edcbc23d3ab48ae91fac581d28e751b5832ddd98ec15fda21485d58cdb1",
+      "bytes": 2127
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_EGL_CUDA_MAP_CPU_V1_REPORT.md",
+      "sha256": "45a83ccabff518c97d893f2ae4581a98ba32056572456acdacc46594655407cd",
+      "bytes": 4063
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/ABI_CONTRACT.json",
+      "sha256": "17d6b5f2046d0515b1536d48ba8f51e1906b927105190caaf6ca2fc4336111a5",
+      "bytes": 1440
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/BUNDLE_MANIFEST.json",
+      "sha256": "c60bdc602ea96962f794f1b21fce4d57a9d0f6c03b681bc8a78904af259f47fe",
+      "bytes": 5820
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/CAPS_AND_CONTROL.md",
+      "sha256": "9944c5473d962b3d7f069268109a7a2d83583df4708e03c21408837478c93eb6",
+      "bytes": 1340
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/CUDA_DRIVER_IDENTITY.json",
+      "sha256": "1f1061cd5a3219154862b01048618c774c9024ff381a191e4db854a095310a26",
+      "bytes": 2421
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/EXTERNAL_SOURCE_MANIFEST.json",
+      "sha256": "cfc6929ab17ec41a5e5a07cfcea188df13ea385cb929467e24b1d53272e292b1",
+      "bytes": 1297353
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/MAPPING_DESIGN.md",
+      "sha256": "1e5723cbf9018b89840c4f76dc8612c8ccb42b07062632dec4fb0944fa58fbe2",
+      "bytes": 2794
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/REUSED_GRAPHICS_STACK.json",
+      "sha256": "05732ac04a4c6079e6e38daa25c4204c5c532c5a8320391e1ac92142664dd86f",
+      "bytes": 2980
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/VISIBILITY_AND_IDENTITY.json",
+      "sha256": "17a9625c413705dd1241b87c92377c57e5d853fb236d1bae41e2317e7a0575ca",
+      "bytes": 3256
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/code/authorize_cpu.py",
+      "sha256": "88c345e413fcb8498fa4e5bc75e15a229f8042d46d44f6c921cb7c5063879baa",
+      "bytes": 1057
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/code/cuda_mapping.py",
+      "sha256": "b7eb749d46ccaab8a1a84513c7434b8255b2400d0c38c3d8753e0340f40364b3",
+      "bytes": 9046
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/code/graphics_probe.py",
+      "sha256": "dd23ded4b9717df7d672abaa6d9b069f09190acc8efc2d2f60352ff5736fabf2",
+      "bytes": 14031
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/code/launch_graphics.py",
+      "sha256": "1de4b3c3f1623f80cc110695e3c4614cd005e9e0d1624f4162cacd2a77a9a7bb",
+      "bytes": 5113
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/code/probe_contract.py",
+      "sha256": "1eb980704dc5f472aa85864bf7b5105915d2858cfe7ac14d812bc3d1a8f7c3fa",
+      "bytes": 8542
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/code/run_reserved_graphics.py",
+      "sha256": "39432343f00153b2dbc043bcf84e57f506802d1e05a9d0023dd4dc2da3b96dea",
+      "bytes": 1304
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/code/wave_timing.py",
+      "sha256": "6a830d24b658e924a9a6715209699b13d67af912c02ce65aeb7aa45ca73ffbae",
+      "bytes": 4798
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/commands/check_authorization_cpu.sh",
+      "sha256": "b1ca5f2a9b4958e89fd463610b30d61b8848c0daee908fbb0af9d3c9de379bf5",
+      "bytes": 514
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/commands/run_proposed_graphics_probe.sh",
+      "sha256": "3594ec5a98e697dca7f6aa338ae3db92dff2f63e8afadf514223de721eeb7398",
+      "bytes": 516
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/evidence/CPU_SYNTHETIC_r1.json",
+      "sha256": "41753b7e00c644145c562f016df87430907a9e894f36d9cdaad1add80e24e6cf",
+      "bytes": 447
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/evidence/CPU_SYNTHETIC_r1.log",
+      "sha256": "b18a317b71d653f59e4bf99bc72290ea8f5645a806d4313003e2f2e1de09d09d",
+      "bytes": 3307
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/evidence/CUDA_DRIVER_ELF.json",
+      "sha256": "119ef79932e4808865b5a462f3fd14c3de556372a4c70fa587193462def87507",
+      "bytes": 3113
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/evidence/CUDA_STATIC_DISCOVERY.json",
+      "sha256": "2b35047acab4526551a850aad6c345c49ebcad49e31b17549cf08f0022a30ba7",
+      "bytes": 3185
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/isolation/lib/libEGL.so.1",
+      "sha256": "1eddeaa92166dc09ed083de8eee9641c2fa3a8fbd44fb66dfaf6e6a23024e7f3",
+      "bytes": 93424
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/isolation/lib/libEGL_nvidia.so.535.161.08",
+      "sha256": "671e5273785288bc412abbc8ae1fa90f336933a85c5ea339b980c3371744d1cb",
+      "bytes": 1337472
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/isolation/lib/libGL.so.1",
+      "sha256": "6b7b1f6e5c5f949a7e5e2f49ffde1322d93469c9994d0c5ebfeaff93808bb415",
+      "bytes": 727544
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/isolation/lib/libGLX.so.0",
+      "sha256": "b751c6d86c6effb9f2a973e6eb720ab13e9f1f8b540817a63f5796fd4c8fd129",
+      "bytes": 348376
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/isolation/lib/libGLdispatch.so.0",
+      "sha256": "83c7e928323191c72a5e545c860c5374d0e5f7d6c526718ac03a1cc9d2a43d1f",
+      "bytes": 1030840
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/isolation/lib/libcuda.so.1",
+      "sha256": "81b63dae639c3b1bc47692a63cab356419deaabda0fe0ce7f538c52351cc6084",
+      "bytes": 29380752
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/isolation/lib/libcuda.so.535.161.08",
+      "sha256": "81b63dae639c3b1bc47692a63cab356419deaabda0fe0ce7f538c52351cc6084",
+      "bytes": 29380752
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/isolation/lib/libnvidia-eglcore.so.535.161.08",
+      "sha256": "699ff9083ba37c5cd6c163d4cd1a9a14bf6f7d8d3cac7339603e53bf39cee724",
+      "bytes": 43907464
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/isolation/lib/libnvidia-glsi.so.535.161.08",
+      "sha256": "65a38a514d2ab8f960a817ecc0ecb655c28397339087de5e35fe435c2514e8df",
+      "bytes": 656472
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/isolation/lib/libnvidia-glvkspirv.so.535.161.08",
+      "sha256": "dcad2e2952856817e636611ba821e807e2634328061775ef5078d98e991bc8f1",
+      "bytes": 40774960
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/isolation/vendor/10_nvidia.json",
+      "sha256": "5675955c71c0abe926b90b8e2c0570b9e915237080bd0d68cfca1960dbaf3fed",
+      "bytes": 218
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/proposal/COMMANDS.md",
+      "sha256": "42a638d15a6b563e3d3b4d5ccb281536fbbfd23ae21d5b8aa8e7c6b904008b90",
+      "bytes": 1283
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/proposal/CONTROL_REQUIRED.json",
+      "sha256": "f50e60bc5e22fdf0b1fb5fe0b87c56b92151d6d735fe07b1cc9a330efe26246e",
+      "bytes": 4509
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/proposal/PROPOSAL.json",
+      "sha256": "afb08b914bc746e8b570b670c90a40e681a98dc6528f6ec1cedba53468da3a7b",
+      "bytes": 8340
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/proposal/RELEASE_TEMPLATE.json",
+      "sha256": "954299f97e427f0f94ec01ab40bcc76c8ccb69e0d8a703ede711ae3d0d6e23fb",
+      "bytes": 4670
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/scene.xml",
+      "sha256": "f82da007b1c54685280718d8f2787c59ea3c82a1f97e8e124f910ee18de2c3ae",
+      "bytes": 401
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/tests/test_cuda_mapping.py",
+      "sha256": "ce7dd06a0c68073a30692ce944e1d62d9924be410458f2da4bd65a4e945dc80b",
+      "bytes": 10488
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/CPU_FINAL_CHECKS.json",
+      "sha256": "0ae23a18dfa2552e1787847fb8da4af92f4774ec0f6105e306685d72e5135744",
+      "bytes": 3783
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/CPU_SYNTHETIC_r1.json",
+      "sha256": "41753b7e00c644145c562f016df87430907a9e894f36d9cdaad1add80e24e6cf",
+      "bytes": 447
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/CPU_SYNTHETIC_r1.log",
+      "sha256": "b18a317b71d653f59e4bf99bc72290ea8f5645a806d4313003e2f2e1de09d09d",
+      "bytes": 3307
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/CUDA_DRIVER_ELF.json",
+      "sha256": "119ef79932e4808865b5a462f3fd14c3de556372a4c70fa587193462def87507",
+      "bytes": 3113
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/CUDA_STATIC_DISCOVERY.json",
+      "sha256": "2b35047acab4526551a850aad6c345c49ebcad49e31b17549cf08f0022a30ba7",
+      "bytes": 3185
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/NEW_ARTIFACTS_INVENTORY.json",
+      "sha256": "2dc2fd16592bfe1a4129ac03a31a8d7e02f951b7dc5e80e3892f3203d6f19bdc",
+      "bytes": 952
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/PUBLICATION.json",
+      "sha256": "1ea6583caf8eece3fa3cc99f7dcab97fc362fca7b32c2847721c70b527f6cacc",
+      "bytes": 703
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/VISIBILITY_AND_IDENTITY.json",
+      "sha256": "17a9625c413705dd1241b87c92377c57e5d853fb236d1bae41e2317e7a0575ca",
+      "bytes": 3256
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/code/authorize_cpu.py",
+      "sha256": "88c345e413fcb8498fa4e5bc75e15a229f8042d46d44f6c921cb7c5063879baa",
+      "bytes": 1057
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/code/cuda_mapping.py",
+      "sha256": "b7eb749d46ccaab8a1a84513c7434b8255b2400d0c38c3d8753e0340f40364b3",
+      "bytes": 9046
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/code/graphics_probe.py",
+      "sha256": "dd23ded4b9717df7d672abaa6d9b069f09190acc8efc2d2f60352ff5736fabf2",
+      "bytes": 14031
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/code/launch_graphics.py",
+      "sha256": "1de4b3c3f1623f80cc110695e3c4614cd005e9e0d1624f4162cacd2a77a9a7bb",
+      "bytes": 5113
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/code/probe_contract.py",
+      "sha256": "1eb980704dc5f472aa85864bf7b5105915d2858cfe7ac14d812bc3d1a8f7c3fa",
+      "bytes": 8542
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/code/run_reserved_graphics.py",
+      "sha256": "39432343f00153b2dbc043bcf84e57f506802d1e05a9d0023dd4dc2da3b96dea",
+      "bytes": 1304
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/code/test_cpu_repair.py",
+      "sha256": "26db1b78c6e73ff3c09987baea3a86e753515cdf0be93b0b61fe8e6f852e7597",
+      "bytes": 8235
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/code/wave_timing.py",
+      "sha256": "6a830d24b658e924a9a6715209699b13d67af912c02ce65aeb7aa45ca73ffbae",
+      "bytes": 4798
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/finalize_cpu_receipt.py",
+      "sha256": "0126674edb15ffecedea47491066f2391605c600733c160236355d2bc9ded59d",
+      "bytes": 11918
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/inputs/CONTROL.json",
+      "sha256": "4ed322d46d48c592c94dbc4b053f7934d5ccad4c7e5cbf904f5c3b8688b1443d",
+      "bytes": 5562
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/inputs/TASK_BOARD.json",
+      "sha256": "3cc1a2daaab65c38becb6ab6bb121f73e34236e9473a220eb7da94a23683bd96",
+      "bytes": 8813
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/inputs/contracts/REPORT_CONTRACT.md",
+      "sha256": "d14bdfecf3b669946ddad77e37650ce5786253e071e45c6c6900c38cf11aac16",
+      "bytes": 2162
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/inputs/receipts/A/A10_EGL_GRAPHICS_PROBE_V1_RESULT.json",
+      "sha256": "52e8e824ce208ce879c5aa5b8869f27387eee60703123860d2cd656e3547d4a5",
+      "bytes": 20302
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/inputs/releases/P00_EGL_CUDA_MAP_CPU_V1.json",
+      "sha256": "053fe100136f8d93f775cfe8b74bc20400ac18d2c5c05b288ee88006511bfc91",
+      "bytes": 1423
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/inputs/releases/P10_A_EGL_GRAPHICS_PROBE_V1_CLOSED.json",
+      "sha256": "148a6f72e707574d88d245c3dff3e7142742125a7d7badaedc435a706bbfdc84",
+      "bytes": 829
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/inputs/results/A/A10_EGL_CPU_REPAIR_V1/BUNDLE_MANIFEST.json",
+      "sha256": "40040cd0e6134d715ffc025156b0e7118a9f35e7d01bf6e7a36700b1a1ee6639",
+      "bytes": 93742
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/inputs/results/A/A10_EGL_CPU_REPAIR_V1/proposal/PROPOSAL.json",
+      "sha256": "f5ea6f220c760465ab4ee93e459bb3e63f508d2d51a22e5e477ea375446f319b",
+      "bytes": 4298
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/inputs/tasks/A10_EGL_CUDA_MAP_CPU_V1.md",
+      "sha256": "dc38aec6bdafecb063ee50c3f7df481bbd728768a05e3bec76e774445edb828d",
+      "bytes": 4292
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/publish_cpu_bundle.py",
+      "sha256": "adbcaa9efcf90ddf3e0eb6c376b87b1edd339346d1a6955784ffdfecb89533a7",
+      "bytes": 15908
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/revise_graphics.py",
+      "sha256": "6450b36353842c06a1d18f8a22c55e3dbae6bc8cef670b7c662bcd466d822f04",
+      "bytes": 8408
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_abi_rejects_32bit_egl_attrib_a8d7c0b6f51e46dca37f7a67e0bed70c/events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_abi_rejects_32bit_egl_attrib_a8d7c0b6f51e46dca37f7a67e0bed70c/raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_abi_rejects_64bit_cudevice_441351467c584b14b651d6db937f7d6c/events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_abi_rejects_64bit_cudevice_441351467c584b14b651d6db937f7d6c/raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_attribute_budget_stops_before_ninth_or_excess_call_2e96a184804e40168265edfef3ed8b56/events.jsonl",
+      "sha256": "263827741d9b6771100fe50c829235b134c237d871d64ab1b7e0227f4de8e6e0",
+      "bytes": 15636
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_attribute_budget_stops_before_ninth_or_excess_call_2e96a184804e40168265edfef3ed8b56/mapping.json",
+      "sha256": "514861ed94a96ab2df6b9afe558d416f3089b9c72e3cc1c01fcd3c7ed55c881e",
+      "bytes": 9137
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_attribute_budget_stops_before_ninth_or_excess_call_2e96a184804e40168265edfef3ed8b56/raw.jsonl",
+      "sha256": "9961db273a74979cc7903a5c4d974526c9c6adeda451e0fe6649cce6aed60092",
+      "bytes": 10827
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_cpu_native_abi_widths_09bcd3b115d747aa82e1a7c0db7ad390/events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_cpu_native_abi_widths_09bcd3b115d747aa82e1a7c0db7ad390/raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_cuda_init_failure_stops_before_enumeration_7089e8db65a94850a731f00a2ed86870/events.jsonl",
+      "sha256": "2be255aee0c9b542f6351aa438a3f742f1989a3e927c10b7c94385484d9aedb4",
+      "bytes": 411
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_cuda_init_failure_stops_before_enumeration_7089e8db65a94850a731f00a2ed86870/mapping.json",
+      "sha256": "a4ab14cfcdbbd64fc20b891846a611576993bf1ee75321c2b6f9b157cb7cce98",
+      "bytes": 365
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_cuda_init_failure_stops_before_enumeration_7089e8db65a94850a731f00a2ed86870/raw.jsonl",
+      "sha256": "7736c16982822bea6d86f6528a7c2bb4c7d0884da1ea2e0cd2e54a6424f4981e",
+      "bytes": 123
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_cuda_pci_failure_raw_buffer_kept_fe270cf8417b421ba9cefc541059367f/events.jsonl",
+      "sha256": "062896bcf7d42efa2ee1d7eefc79032743313345180ad3987899eb307bfa5c1b",
+      "bytes": 3132
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_cuda_pci_failure_raw_buffer_kept_fe270cf8417b421ba9cefc541059367f/mapping.json",
+      "sha256": "fd54c50f720c687d0f5a996da8b3b056be26d3e611e982145fcbe29f0421e74a",
+      "bytes": 1460
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_cuda_pci_failure_raw_buffer_kept_fe270cf8417b421ba9cefc541059367f/raw.jsonl",
+      "sha256": "ea183b845dcb4fb26d07937dbd49c1006d71cadafd5862ea6d787fe3c4836f17",
+      "bytes": 1910
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_duplicate_egl_handle_7ae747e821f74dd0b87cf7e78b2fba24/events.jsonl",
+      "sha256": "086ce115de4f5e5fadce444347cd29426babff69dad1ec2f1e6e69050465e459",
+      "bytes": 1177
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_duplicate_egl_handle_7ae747e821f74dd0b87cf7e78b2fba24/mapping.json",
+      "sha256": "35fc116e15855d64ef2c9f5d86409fff183ffd966bf5ba1d566fae725a31f11e",
+      "bytes": 545
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_duplicate_egl_handle_7ae747e821f74dd0b87cf7e78b2fba24/raw.jsonl",
+      "sha256": "e174b6d5275e5d388e104fab11a9a5ee2a542c188c617a10b6dae40dd72341a0",
+      "bytes": 519
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_duplicate_physical_match_94053b6aa232401e81427686805d57aa/events.jsonl",
+      "sha256": "61562f2bdcb9e9ef343b9095281dacc538812ebe8c9f8fe6131ab4067910d108",
+      "bytes": 8997
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_duplicate_physical_match_94053b6aa232401e81427686805d57aa/mapping.json",
+      "sha256": "fe78591881d30ec47fda8ae8ca30488fe166b9ba3cd8830491b3191b39e7a3a7",
+      "bytes": 5085
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_duplicate_physical_match_94053b6aa232401e81427686805d57aa/raw.jsonl",
+      "sha256": "375c733970528bac865432a15ea6ce76c2ad3afb71d3cc064c4ddf4aa86234cf",
+      "bytes": 6089
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_egl_attribute_failure_code_kept_fde4b01aef5f478992aec29fe70c8fa1/events.jsonl",
+      "sha256": "02c7f14a48d3102f18cb725bc1ec8e1b33a58396094f05b668dbcbd24d40774a",
+      "bytes": 2737
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_egl_attribute_failure_code_kept_fde4b01aef5f478992aec29fe70c8fa1/mapping.json",
+      "sha256": "9308c1fcd87946649d008604a21b4d10d8bbca1fbd49ca9d079092380d1864a4",
+      "bytes": 1119
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_egl_attribute_failure_code_kept_fde4b01aef5f478992aec29fe70c8fa1/raw.jsonl",
+      "sha256": "bbbee95173e3039c2484cc2a209ac9876fa8344d876553438daa2ec1808103de",
+      "bytes": 1468
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_egl_attribute_false_return_kept_108228b0a7bf4b029fef597d341e0bd2/events.jsonl",
+      "sha256": "2cff51c644aee4b534d2895b8d09a270d0a3e7542e36a6e4b0ecd83caf1531fe",
+      "bytes": 2737
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_egl_attribute_false_return_kept_108228b0a7bf4b029fef597d341e0bd2/mapping.json",
+      "sha256": "9c3114ba96b55f693438ddcb25117aab209ee66f81689615feed3b130d0083e6",
+      "bytes": 1138
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_egl_attribute_false_return_kept_108228b0a7bf4b029fef597d341e0bd2/raw.jsonl",
+      "sha256": "e3eca252249535c11230e424ed7ce7a797280f6000611bddfc3ef6f0ac41ec7b",
+      "bytes": 1487
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_egl_error_recorded_immediately_and_stops_3745a7ff346c46c89f1e27295eaa596c/events.jsonl",
+      "sha256": "e18554eceb22042713b735904f6e1bbc1fc9e86ccae9c3bf49c3d882c4c2bdf9",
+      "bytes": 1177
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_egl_error_recorded_immediately_and_stops_3745a7ff346c46c89f1e27295eaa596c/mapping.json",
+      "sha256": "f80f1048f83b101501eaebc58b819b0158a0f4edfe4cb5deec21f9eec671b102",
+      "bytes": 399
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_egl_error_recorded_immediately_and_stops_3745a7ff346c46c89f1e27295eaa596c/raw.jsonl",
+      "sha256": "39b90c802e682859b3d1c8f7a6730f6a8e795d3532a4fac2ddfdc2e8f0c5fda2",
+      "bytes": 519
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_empty_extensions_recorded_40c3e62ba67f4bd7b1e2d82648f53f6d/events.jsonl",
+      "sha256": "96189e19bd0f8fae3b7216cc9501ba99716435e37b832a0e588af91bf45e12a0",
+      "bytes": 1951
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_empty_extensions_recorded_40c3e62ba67f4bd7b1e2d82648f53f6d/mapping.json",
+      "sha256": "065713b7e0653c09b68bc7e3657d1df76dd490f20d79369ee2624a20e426aec2",
+      "bytes": 862
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_empty_extensions_recorded_40c3e62ba67f4bd7b1e2d82648f53f6d/raw.jsonl",
+      "sha256": "e5fc1d6fda9867814dc56288c941ccbce55a62ce6426cf0d227555b5ca416684",
+      "bytes": 941
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_extension_missing_52ce8dfb99a1452887273d5e42f1b64b/events.jsonl",
+      "sha256": "55f302f167d6bc7afd8ca301f0396ca6de77f0a580ded2656c09dc339ebf4efe",
+      "bytes": 1951
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_extension_missing_52ce8dfb99a1452887273d5e42f1b64b/mapping.json",
+      "sha256": "7e535db10e033f96f6558a2515663cba12b58660a8ce1303dad1b6ba89c5e3c6",
+      "bytes": 1000
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_extension_missing_52ce8dfb99a1452887273d5e42f1b64b/raw.jsonl",
+      "sha256": "cbd79e6ff3a21859c31d92268d4300466ca87f5731e2844b9ca9c6267b017baa",
+      "bytes": 1025
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_frozen_target_conflict_before_driver_call_30fd3ae7ccce42619badc57232651081/events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_frozen_target_conflict_before_driver_call_30fd3ae7ccce42619badc57232651081/mapping.json",
+      "sha256": "ea786a8b34985f0f670c588d26ce7c523d1bf30da0c0102c6d5500c469c2364f",
+      "bytes": 207
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_frozen_target_conflict_before_driver_call_30fd3ae7ccce42619badc57232651081/raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_full_path_egl_error_cap_and_cleanup_56dd3121dff34a86978f65943b503dbc/events.jsonl",
+      "sha256": "5db614321447c1105b7f33d7906b436c081b6231f8ca94ccdc16a18909bc7277",
+      "bytes": 26971
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_full_path_egl_error_cap_and_cleanup_56dd3121dff34a86978f65943b503dbc/raw.jsonl",
+      "sha256": "ba65ef4d101d3bbb48e93c52b70724b4a44f8177834a9ccb3bb5cff3b15951db",
+      "bytes": 11566
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_handle_overflow_not_truncated_49a384f6a59343e1b3229f24f901df5b/events.jsonl",
+      "sha256": "e3e68de1c53574fd897f177e10d9784eb90b67076c19c3ce1f4dd151310bdf4f",
+      "bytes": 2737
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_handle_overflow_not_truncated_49a384f6a59343e1b3229f24f901df5b/mapping.json",
+      "sha256": "7eded870a434684f52ce12da9e6595a927dbca5b1edcdace3bd84243a2a94e23",
+      "bytes": 1151
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_handle_overflow_not_truncated_49a384f6a59343e1b3229f24f901df5b/raw.jsonl",
+      "sha256": "e5d890c07f99da8d0ef46c902453925939b018933a1b8e71be9701e410613e50",
+      "bytes": 1477
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_kernel_pci_conflict_16437dee1297438aa7b139e95019144d/events.jsonl",
+      "sha256": "1cf16623a7b4620fbdd0b78f67dcc44beb59e811cfa18edacbdf7c7a5f4856d2",
+      "bytes": 3132
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_kernel_pci_conflict_16437dee1297438aa7b139e95019144d/mapping.json",
+      "sha256": "cdc729eba3c3619dd2fbc54f25c4fb151581348c2be6452aae8c34b95ff04016",
+      "bytes": 1641
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_kernel_pci_conflict_16437dee1297438aa7b139e95019144d/raw.jsonl",
+      "sha256": "63d0490746a948c0fa28ef76bac2727356fc18139a3fed37926e349074f6619a",
+      "bytes": 1908
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_kernel_uuid_conflict_2b81ae35dd0d4bfe811c8bda6de49598/events.jsonl",
+      "sha256": "3c8020f96c2b107bf6eb936a17748985e9fbafb6c51d23b20064e9a019178586",
+      "bytes": 3132
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_kernel_uuid_conflict_2b81ae35dd0d4bfe811c8bda6de49598/mapping.json",
+      "sha256": "4785dbd74e82d96f44c82e4e597f31edc63008faae56366c97d376439b9da425",
+      "bytes": 1637
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_kernel_uuid_conflict_2b81ae35dd0d4bfe811c8bda6de49598/raw.jsonl",
+      "sha256": "bd6242b96a2819a6a397d7bd92147cdbcfcbfdd42798cb4b29c950b931a30f51",
+      "bytes": 1908
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_more_than_eight_devices_stops_before_strings_f69c172ec79b47ccb577d7857be2ca82/events.jsonl",
+      "sha256": "0eb215a5cd9cbada3312ec030c9665fb3c6bb5758629af66b05fdf20034d8e0e",
+      "bytes": 1177
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_more_than_eight_devices_stops_before_strings_f69c172ec79b47ccb577d7857be2ca82/mapping.json",
+      "sha256": "1bded0d4311290a007434eed80a8211213b8643de0be5348a4af5dc864a93371",
+      "bytes": 582
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_more_than_eight_devices_stops_before_strings_f69c172ec79b47ccb577d7857be2ca82/raw.jsonl",
+      "sha256": "ea240e51cfa922c728ee81c739363e4d48bb4d39fc0669faa554decd6c68d558",
+      "bytes": 524
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_negative_handle_rejected_b9e5b2d13ad84a7f8d03bec94fa432b5/events.jsonl",
+      "sha256": "bac9ddd68760b02519ff1c3a95a250fcce445e0e533a912916a8e4cd378f9b64",
+      "bytes": 2737
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_negative_handle_rejected_b9e5b2d13ad84a7f8d03bec94fa432b5/mapping.json",
+      "sha256": "e55cec18f0e040aa86461ed90167d925ff608cb045e1d91f76be5caedc57ef10",
+      "bytes": 1143
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_negative_handle_rejected_b9e5b2d13ad84a7f8d03bec94fa432b5/raw.jsonl",
+      "sha256": "64c2c7fe067af63b7f1528f46d823c682f69d6bf66a022685df5f90fb055d000",
+      "bytes": 1469
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_null_extensions_recorded_f6eba97d3d4a4cafa5b4705c0a6ff2da/events.jsonl",
+      "sha256": "64e633ce9ff719e28fea7affe484a5c505e2ee3ef9c327f909336ae065b74241",
+      "bytes": 1951
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_null_extensions_recorded_f6eba97d3d4a4cafa5b4705c0a6ff2da/mapping.json",
+      "sha256": "7d81f3a1af1c312387f5e820254326b15eed5890c35b1f7ca16c70cfddbe674b",
+      "bytes": 826
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_null_extensions_recorded_f6eba97d3d4a4cafa5b4705c0a6ff2da/raw.jsonl",
+      "sha256": "f414b69b7fdaf2dae93f5f44ca0f80999b9ea52d65916de8e5610f610bcdb4dd",
+      "bytes": 913
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_pci_eight_digit_zero_domain_normalization_09e7a5664dbc41d5a264927f9067039c/events.jsonl",
+      "sha256": "e965e97a09f8fcbf53b7a50604aebe4506537f1e61eca72e503c2c76758e27e4",
+      "bytes": 16817
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_pci_eight_digit_zero_domain_normalization_09e7a5664dbc41d5a264927f9067039c/mapping.json",
+      "sha256": "3e4f6b3ad50335fb3eb1ca46f50e4798dff1232536ea962466a91562af526d85",
+      "bytes": 9590
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_pci_eight_digit_zero_domain_normalization_09e7a5664dbc41d5a264927f9067039c/raw.jsonl",
+      "sha256": "f3ea1e1903885658813b258f9a8ae993c110588e21386edd2b0542b5b0cec21c",
+      "bytes": 11645
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_pci_empty_fee23467dd924ec9ad64ccfcfd7f02ab/events.jsonl",
+      "sha256": "881743eb1f78c9fac21687cce958375c97a2fde1483beb7c75f23f583b5d202b",
+      "bytes": 3132
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_pci_empty_fee23467dd924ec9ad64ccfcfd7f02ab/mapping.json",
+      "sha256": "c1dc8302205fd9469cca1e7ac26af2a0d5f96c00a46cf69223d99c4c5cb17e8e",
+      "bytes": 1499
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_pci_empty_fee23467dd924ec9ad64ccfcfd7f02ab/raw.jsonl",
+      "sha256": "c05403e0ff9c6521251b19c42d5ae0ad3ef016363a49cb6c199a1cc5724f232a",
+      "bytes": 1968
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_pci_not_terminated_cf8388366a044b07bd50611bcf26ded1/events.jsonl",
+      "sha256": "e962f5adf7c5258a4a7bfc06bc2724c5c985419bb312ecb959968f0e9e7f462a",
+      "bytes": 3132
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_pci_not_terminated_cf8388366a044b07bd50611bcf26ded1/mapping.json",
+      "sha256": "c2db193cb90ae20bfbcab746a4e82edb9b6a4406b298811728e33b56ea33c28f",
+      "bytes": 1364
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_pci_not_terminated_cf8388366a044b07bd50611bcf26ded1/raw.jsonl",
+      "sha256": "5857069fd4fbe689b0bc9ef86755cd40ffc308818ecc18a5bdf3aa605c6ca117",
+      "bytes": 1808
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_pci_rejects_truncation_of_high_domain_a73e53e4c257443ebb9392850f06a633/events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_pci_rejects_truncation_of_high_domain_a73e53e4c257443ebb9392850f06a633/raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_raw_null_empty_and_integer_zero_differ_8da3ae0c13244991b2fcb17dd5366cf3/events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_raw_null_empty_and_integer_zero_differ_8da3ae0c13244991b2fcb17dd5366cf3/raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_unique_permuted_egl_cuda_handles_zero_valid_42a9a0fe21374a8a90ae5a25614d1e84/events.jsonl",
+      "sha256": "b132022b9cc0d30ffcb816de81d78c0246d1d365534de46ebc294304946da1cf",
+      "bytes": 16817
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_unique_permuted_egl_cuda_handles_zero_valid_42a9a0fe21374a8a90ae5a25614d1e84/mapping.json",
+      "sha256": "fef63bd1a10df9a698c7c321b3b4cc046f56105ae0e36494de9a6112b7ccaec7",
+      "bytes": 9610
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_unique_permuted_egl_cuda_handles_zero_valid_42a9a0fe21374a8a90ae5a25614d1e84/raw.jsonl",
+      "sha256": "77f7eddbef3f6105058cdbcdeb1611a928a93264b9f02c88d6cbf0087f89ff11",
+      "bytes": 11665
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_unknown_pci_fails_before_context_3b804df9a22b4330b5a490047c027b85/events.jsonl",
+      "sha256": "42bc9c706d41d66f4b3aa20e4e555e24c9ed192da4a036f2e60fc5029299d780",
+      "bytes": 3132
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_unknown_pci_fails_before_context_3b804df9a22b4330b5a490047c027b85/mapping.json",
+      "sha256": "80f66291c9d36a824499c07da52c1a84e073885240b11a0591d4271a78caeede",
+      "bytes": 1639
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_unknown_pci_fails_before_context_3b804df9a22b4330b5a490047c027b85/raw.jsonl",
+      "sha256": "5c0ae5c8c6211e8a481badf63458885c244eb1ebb4a21d46ff7db286873986a9",
+      "bytes": 1908
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_visibility_rejects_reordering_65cfd9394b394fe38fb6b6f284a8edf9/events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_visibility_rejects_reordering_65cfd9394b394fe38fb6b6f284a8edf9/raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_visibility_rejects_target_only_mask_64f7766e049e4ce09dddd6e0b41b8e90/events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_visibility_rejects_target_only_mask_64f7766e049e4ce09dddd6e0b41b8e90/raw.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_zero_target_match_28f37290083448d58fd2106002ef4e94/events.jsonl",
+      "sha256": "226f82d443fb00849cd1cf1eeb14cd04b74d7ef2b95adce8befa78a4e9ea394a",
+      "bytes": 14862
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_zero_target_match_28f37290083448d58fd2106002ef4e94/mapping.json",
+      "sha256": "ddcc7e2331a2be2ed8abda1507f29ce541ed14a000a4b420a4210f509962f621",
+      "bytes": 8641
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/synthetic_evidence_r1/test_zero_target_match_28f37290083448d58fd2106002ef4e94/raw.jsonl",
+      "sha256": "57ec33aaf4b5c4ea0ea1579fbf893068a1378458eed86488b12a8771fc340c95",
+      "bytes": 10267
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_CPU_V1_r1/tests/test_cuda_mapping.py",
+      "sha256": "ce7dd06a0c68073a30692ce944e1d62d9924be410458f2da4bd65a4e945dc80b",
+      "bytes": 10488
+    }
+  ],
+  "scope": "New work evidence, code/scripts, synthetic fixtures, published bundle/proposal/templates, ACK/report/final heartbeat; manifest itself, final RESULT and later queue files excluded to avoid cycles",
+  "file_count": 155,
+  "symlink_note": "SHA follows contained library alias; logical file sizes are not deduplicated disk usage"
+}

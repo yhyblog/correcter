@@ -1,0 +1,76 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "type": "shell_syntax",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CPU_REPAIR_V1/commands/check_authorization_cpu.sh",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "type": "shell_syntax",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CPU_REPAIR_V1/commands/run_proposed_graphics_probe.sh",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "type": "pure_CPU_authorization_denial",
+      "command": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CPU_REPAIR_V1/commands/check_authorization_cpu.sh",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P00_EGL_CPU_REPAIR_V1.json"
+      ],
+      "returncode": 2,
+      "stdout": "{\"status\": \"denied\", \"error\": \"A new released graphics-only task is required\", \"CPU_only\": true, \"graphics_started\": false}\n",
+      "stderr": ""
+    },
+    {
+      "type": "pure_CPU_authorization_denial",
+      "command": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CPU_REPAIR_V1/commands/check_authorization_cpu.sh",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P00_PREFLIGHT_CORRECTIONS_V1.json"
+      ],
+      "returncode": 2,
+      "stdout": "{\"status\": \"denied\", \"error\": \"A new released graphics-only task is required\", \"CPU_only\": true, \"graphics_started\": false}\n",
+      "stderr": ""
+    },
+    {
+      "type": "pure_CPU_authorization_denial",
+      "command": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CPU_REPAIR_V1/commands/check_authorization_cpu.sh",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_NATIVE_PREFLIGHT_V1.json"
+      ],
+      "returncode": 2,
+      "stdout": "{\"status\": \"denied\", \"error\": \"A new released graphics-only task is required\", \"CPU_only\": true, \"graphics_started\": false}\n",
+      "stderr": ""
+    },
+    {
+      "type": "old_artifact_identity",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PREFLIGHT_REVISION_R2_RESULT.json",
+      "sha256": "e65578bea059d498976ca22221d8272de1f2bfed4688784a82b678d41c8f8b65"
+    },
+    {
+      "type": "old_artifact_identity",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PREFLIGHT_REVISION_R2/preflight_v4/PROPOSAL.json",
+      "sha256": "63caf8ce1cfc43f6dadd05a8a140a996645092f532b0ce770528cc45dad51bed"
+    },
+    {
+      "type": "old_artifact_identity",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PREFLIGHT_REVISION_R2/code_snapshot_v4/CODE_MANIFEST.json",
+      "sha256": "9e07c74a850e457993c70e4138491c18ed31b0ef83d96088a0ef9f4c17a60b76"
+    },
+    {
+      "type": "old_artifact_identity",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PREFLIGHT_NATIVE_V1_RESULT.json",
+      "sha256": "465f97bcb72b70ff3265ffc227cc4bf5583910b79cf80c987377f5e0fdd1178b"
+    },
+    {
+      "type": "published_bundle_SHA",
+      "files": 438,
+      "status": "passed"
+    }
+  ],
+  "GPU_graphics_reset_simulation_calls": 0
+}

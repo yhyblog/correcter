@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-09-19T16:42:34.678573+00:00",
+  "pure_CPU_denials": [
+    {
+      "command": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PREFLIGHT_REVISION_R2/commands_v4/check_authorization_cpu.sh",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P00_PREP_V1.json"
+      ],
+      "returncode": 2,
+      "result": {
+        "status": "denied",
+        "error_type": "ContractError",
+        "error": "Formal compute is not released by current CONTROL",
+        "CPU_only": true,
+        "NVML_queried": false,
+        "wave_started": false
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PREFLIGHT_REVISION_R2/commands_v4/check_authorization_cpu.sh",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P00_PREFLIGHT_CORRECTIONS_V1.json"
+      ],
+      "returncode": 2,
+      "result": {
+        "status": "denied",
+        "error_type": "ContractError",
+        "error": "Formal compute is not released by current CONTROL",
+        "CPU_only": true,
+        "NVML_queried": false,
+        "wave_started": false
+      },
+      "stderr": ""
+    }
+  ],
+  "published_code_files_verified": 413,
+  "changed_Python_AST_files": [
+    "preflight_pi05.py",
+    "launch_preflight.py",
+    "run_reserved_diagnostic.py",
+    "authorize_cpu.py",
+    "core/initialization.py",
+    "core/release.py",
+    "core/wave_timing.py",
+    "test_preflight_revision.py",
+    "test_cpu_contract.py"
+  ],
+  "shell_syntax_checked": 2,
+  "public_v1_SHA_unchanged": true,
+  "real_preflight_shell_executed": false,
+  "actual_environment_reset_calls": 0,
+  "actual_GPU_inference_calls": 0,
+  "actual_simulator_attempts": 0
+}

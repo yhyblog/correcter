@@ -1,0 +1,430 @@
+{
+  "checked_at_utc": "2026-09-19T14:56:05.036702+00:00",
+  "data": {
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50/meta/info.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50/meta/info.json",
+        "expected_sha256": null,
+        "verified_sha256": "064a571c9a44598ea401e9083e929c36577a8e37cfc3d2b842b3ccd0e4b465b5",
+        "kind": "file",
+        "bytes": 2942,
+        "mtime_ns": 1787125419353573000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "codebase_version": "v3.0",
+        "robot_type": "metaworld",
+        "total_episodes": 2500,
+        "total_frames": 204806,
+        "total_tasks": 49,
+        "chunks_size": 1000,
+        "fps": 80,
+        "splits": {
+          "train": "0:2500"
+        },
+        "data_path": "data/chunk-{chunk_index:03d}/file-{file_index:03d}.parquet",
+        "video_path": "videos/{video_key}/chunk-{chunk_index:03d}/file-{file_index:03d}.mp4",
+        "features": {
+          "observation.state": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names",
+              "fps"
+            ],
+            "_length": 4
+          },
+          "action": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names",
+              "fps"
+            ],
+            "_length": 4
+          },
+          "next.reward": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names",
+              "fps"
+            ],
+            "_length": 4
+          },
+          "next.success": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names",
+              "fps"
+            ],
+            "_length": 4
+          },
+          "observation.environment_state": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names",
+              "fps"
+            ],
+            "_length": 4
+          },
+          "observation.image": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names",
+              "fps"
+            ],
+            "_length": 4
+          },
+          "task_id": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names",
+              "fps"
+            ],
+            "_length": 4
+          },
+          "timestamp": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names",
+              "fps"
+            ],
+            "_length": 4
+          },
+          "frame_index": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names",
+              "fps"
+            ],
+            "_length": 4
+          },
+          "episode_index": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names",
+              "fps"
+            ],
+            "_length": 4
+          },
+          "index": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names",
+              "fps"
+            ],
+            "_length": 4
+          },
+          "task_index": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names",
+              "fps"
+            ],
+            "_length": 4
+          }
+        },
+        "data_files_size_in_mb": 100,
+        "video_files_size_in_mb": 500
+      }
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/libero/physical-intelligence-v2/a4336d589d589045d1c56423ffdf3b88a0e19b1f/meta/info.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/libero/physical-intelligence-v2/a4336d589d589045d1c56423ffdf3b88a0e19b1f/meta/info.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/libero/physical-intelligence-v2/a4336d589d589045d1c56423ffdf3b88a0e19b1f/meta/info.json",
+        "expected_sha256": null,
+        "verified_sha256": "77c0da93c67960bac803a8ea25dabf380d752c26c1d91c54151121dd10e7d82f",
+        "kind": "file",
+        "bytes": 2131,
+        "mtime_ns": 1789140921927086000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "codebase_version": "v2.0",
+        "robot_type": "panda",
+        "total_episodes": 1693,
+        "total_frames": 273465,
+        "total_tasks": 40,
+        "total_videos": 0,
+        "total_chunks": 2,
+        "chunks_size": 1000,
+        "fps": 10,
+        "splits": {
+          "train": "0:1693"
+        },
+        "data_path": "data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet",
+        "video_path": "videos/chunk-{episode_chunk:03d}/{video_key}/episode_{episode_index:06d}.mp4",
+        "features": {
+          "image": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names"
+            ],
+            "_length": 3
+          },
+          "wrist_image": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names"
+            ],
+            "_length": 3
+          },
+          "state": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names"
+            ],
+            "_length": 3
+          },
+          "actions": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names"
+            ],
+            "_length": 3
+          },
+          "timestamp": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names"
+            ],
+            "_length": 3
+          },
+          "frame_index": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names"
+            ],
+            "_length": 3
+          },
+          "episode_index": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names"
+            ],
+            "_length": 3
+          },
+          "index": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names"
+            ],
+            "_length": 3
+          },
+          "task_index": {
+            "_keys": [
+              "dtype",
+              "shape",
+              "names"
+            ],
+            "_length": 3
+          }
+        }
+      }
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/metaworld-raw-and-local-stats.files.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/metaworld-raw-and-local-stats.files.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/metaworld-raw-and-local-stats.files.json",
+        "expected_sha256": null,
+        "verified_sha256": "7a1736a084cdeba4cabf22022649e75e15638538042f9e2fb22c997794087c8a",
+        "kind": "file",
+        "bytes": 84959,
+        "mtime_ns": 1789143311483078000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/datasets/metaworld-mt50",
+        "resolved_root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/dataset/lerobot/metaworld_mt50",
+        "status": "local_hash_frozen",
+        "file_count": 497,
+        "bytes": 45864144489,
+        "files": {
+          "_length": 497,
+          "_sample": [
+            {
+              "_keys": [
+                "path",
+                "bytes",
+                "sha256"
+              ],
+              "_length": 3
+            },
+            {
+              "_keys": [
+                "path",
+                "bytes",
+                "sha256"
+              ],
+              "_length": 3
+            },
+            {
+              "_keys": [
+                "path",
+                "bytes",
+                "sha256"
+              ],
+              "_length": 3
+            }
+          ]
+        }
+      }
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/legacy-pi05-mt50.files.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/legacy-pi05-mt50.files.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/legacy-pi05-mt50.files.json",
+        "expected_sha256": null,
+        "verified_sha256": "8a6b66be01901284f8a3280b4ce847b248329866c25b761ff253680770eb5383",
+        "kind": "file",
+        "bytes": 1505,
+        "mtime_ns": 1789143319636952000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/vla-sft-030000",
+        "resolved_root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model",
+        "status": "local_hash_frozen",
+        "file_count": 7,
+        "bytes": 9354084596,
+        "files": {
+          "_length": 7,
+          "_sample": [
+            {
+              "_keys": [
+                "path",
+                "bytes",
+                "sha256"
+              ],
+              "_length": 3
+            },
+            {
+              "_keys": [
+                "path",
+                "bytes",
+                "sha256"
+              ],
+              "_length": 3
+            },
+            {
+              "_keys": [
+                "path",
+                "bytes",
+                "sha256"
+              ],
+              "_length": 3
+            }
+          ]
+        }
+      }
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/libero-evaluation-assets.files.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/libero-evaluation-assets.files.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/libero-evaluation-assets.files.json",
+        "expected_sha256": null,
+        "verified_sha256": "4ca6aae51018fc5a3a671ef802d65d4e625d77a9a42ab7287e6ac78ecc1c407f",
+        "kind": "file",
+        "bytes": 202393,
+        "mtime_ns": 1789143325046247000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "root": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/openpi-215abfb/third_party/libero/libero/libero",
+        "resolved_root": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/openpi-215abfb/third_party/libero/libero/libero",
+        "status": "local_hash_frozen",
+        "file_count": 970,
+        "bytes": 435239420,
+        "files": {
+          "_length": 970,
+          "_sample": [
+            {
+              "_keys": [
+                "path",
+                "bytes",
+                "sha256"
+              ],
+              "_length": 3
+            },
+            {
+              "_keys": [
+                "path",
+                "bytes",
+                "sha256"
+              ],
+              "_length": 3
+            },
+            {
+              "_keys": [
+                "path",
+                "bytes",
+                "sha256"
+              ],
+              "_length": 3
+            }
+          ]
+        }
+      }
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/source-repositories.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/source-repositories.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/manifests/vla-baselines-20260911/source-repositories.json",
+        "expected_sha256": null,
+        "verified_sha256": "d3fd35f214ce62d4c1d3082de5df23ffff3686cdf794c9540d3df6681e85bb71",
+        "kind": "file",
+        "bytes": 530,
+        "mtime_ns": 1789143327491066000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "lerobot-smolvla-8fff0fd": {
+          "commit": "8fff0fde7c79f23a93d845d1a50e985de01f8b8a",
+          "status": "",
+          "submodules": ""
+        },
+        "lerobot-xvla-8fff0fd": {
+          "commit": "8fff0fde7c79f23a93d845d1a50e985de01f8b8a",
+          "status": "",
+          "submodules": ""
+        },
+        "openpi-215abfb": {
+          "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+          "status": "",
+          "submodules": "d1dc83afd89ded4379851257fe5d85632d31d5ec third_party/aloha (d1dc83a)\n f78abd68ee283de9f9be3c8f7e2a9ad60246e95c third_party/libero (f78abd6)"
+        }
+      }
+    }
+  }
+}

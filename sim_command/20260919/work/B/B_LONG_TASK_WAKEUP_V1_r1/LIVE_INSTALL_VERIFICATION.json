@@ -1,0 +1,136 @@
+{
+  "actual_handler_ACKs": 0,
+  "first_start": {
+    "identity": {
+      "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+      "hostname": "trial-303225685-trialrun-303225685-worker-0",
+      "pid": 452085,
+      "session_id": 452085,
+      "start_ticks": 91710679
+    },
+    "status": "started"
+  },
+  "heartbeat": {
+    "at_utc": "2026-09-21T14:37:59.530954+00:00",
+    "cycles": 1,
+    "event_states": {},
+    "identity": {
+      "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+      "hostname": "trial-303225685-trialrun-303225685-worker-0",
+      "pid": 452085,
+      "session_id": 452085,
+      "start_ticks": 91710679
+    },
+    "original_turn": {
+      "completed_at": null,
+      "started_at": 1790000265,
+      "status": "inProgress",
+      "turn_id": "01a0c454-77ef-73e0-9cd5-53519afaad9d"
+    },
+    "scientific_model_calls": 0,
+    "state": "supervising",
+    "wakeup_readiness": "installed_waiting_real_handler_ACK",
+    "writer_locked": true
+  },
+  "registration": {
+    "at_utc": "2026-09-21T14:37:59.568765+00:00",
+    "authorization_sha256": "6cd1233b0e345bbea2a8320f6126897364c89c6964e92975be4d80c1291766f6",
+    "code": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_LONG_TASK_WAKEUP_V1_r1/wakeup.py",
+    "code_sha256": "e638727b0faa3c08de6adff9c02443c568165ab308680d7a3f9c16a8ee18db0e",
+    "current_turn_dispatches": 0,
+    "executor_thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+    "handler_ACK_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/handler_acks",
+    "host": "trial-303225685-trialrun-303225685-worker-0",
+    "node": "B",
+    "original_join_waiter_still_active": true,
+    "outbox": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/outbox",
+    "process_identity": {
+      "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+      "hostname": "trial-303225685-trialrun-303225685-worker-0",
+      "pid": 452085,
+      "session_id": 452085,
+      "start_ticks": 91710679
+    },
+    "schema": "B_original_executor_event_service_v1",
+    "stage_execution_permissions_added": 0,
+    "state": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup",
+    "test_events": [
+      "B_226aaaad83007274bf5ab893d5e6b0ac",
+      "B_e23469d0140e993de8cdc5b045fd0c3e"
+    ]
+  },
+  "second_start": {
+    "identity": {
+      "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+      "hostname": "trial-303225685-trialrun-303225685-worker-0",
+      "pid": 452085,
+      "session_id": 452085,
+      "start_ticks": 91710679
+    },
+    "status": "already_running"
+  },
+  "synthetic_events_armed": [
+    {
+      "armed_from_turn_id": "01a0c454-77ef-73e0-9cd5-53519afaad9d",
+      "attempt": 1,
+      "authorization_sha256": "6cd1233b0e345bbea2a8320f6126897364c89c6964e92975be4d80c1291766f6",
+      "claim_identity": null,
+      "code_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_LONG_TASK_WAKEUP_V1_r1/wakeup.py",
+        "sha256": "e638727b0faa3c08de6adff9c02443c568165ab308680d7a3f9c16a8ee18db0e"
+      },
+      "created_at_unix": 1790001479.5553648,
+      "created_at_utc": "2026-09-21T14:37:59.555343+00:00",
+      "error_summary_path": null,
+      "event_id": "B_226aaaad83007274bf5ab893d5e6b0ac",
+      "executor_thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+      "exit_code": null,
+      "hostname": "trial-303225685-trialrun-303225685-worker-0",
+      "job_id": "B_wakeup_selftest_1",
+      "node": "B",
+      "occupancy_handoff_complete": null,
+      "outcome": "synthetic_callback",
+      "process_family_exited": null,
+      "publication_complete": null,
+      "required_transport": "auto",
+      "result_path": null,
+      "revision": 1,
+      "run_id": "B_original_thread_callback_1",
+      "schema": "corrector_terminal_event_v1",
+      "science_authorization_sha256": "d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928",
+      "synthetic": true,
+      "task_id": "B_LONG_TASK_WAKEUP_V1"
+    },
+    {
+      "armed_from_turn_id": "01a0c454-77ef-73e0-9cd5-53519afaad9d",
+      "attempt": 1,
+      "authorization_sha256": "6cd1233b0e345bbea2a8320f6126897364c89c6964e92975be4d80c1291766f6",
+      "claim_identity": null,
+      "code_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_LONG_TASK_WAKEUP_V1_r1/wakeup.py",
+        "sha256": "e638727b0faa3c08de6adff9c02443c568165ab308680d7a3f9c16a8ee18db0e"
+      },
+      "created_at_unix": 1790001479.5613081,
+      "created_at_utc": "2026-09-21T14:37:59.561302+00:00",
+      "error_summary_path": null,
+      "event_id": "B_e23469d0140e993de8cdc5b045fd0c3e",
+      "executor_thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+      "exit_code": null,
+      "hostname": "trial-303225685-trialrun-303225685-worker-0",
+      "job_id": "B_wakeup_selftest_2",
+      "node": "B",
+      "occupancy_handoff_complete": null,
+      "outcome": "synthetic_callback",
+      "process_family_exited": null,
+      "publication_complete": null,
+      "required_transport": "exec_resume",
+      "result_path": null,
+      "revision": 1,
+      "run_id": "B_original_thread_callback_2",
+      "schema": "corrector_terminal_event_v1",
+      "science_authorization_sha256": "d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928",
+      "synthetic": true,
+      "task_id": "B_LONG_TASK_WAKEUP_V1"
+    }
+  ]
+}

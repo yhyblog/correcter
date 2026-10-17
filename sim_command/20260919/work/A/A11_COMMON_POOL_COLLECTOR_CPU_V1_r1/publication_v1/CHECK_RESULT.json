@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "case": "board_ready",
+      "passed": true
+    },
+    {
+      "case": "board_running",
+      "passed": true
+    },
+    {
+      "case": "board_released",
+      "passed": true
+    },
+    {
+      "case": "missing_allowed_task_ids",
+      "passed": true
+    },
+    {
+      "case": "missing_per_task_compute_limits",
+      "passed": true
+    },
+    {
+      "case": "unknown_project_quota_rejected",
+      "passed": true
+    },
+    {
+      "case": "actual_pure_JSON_entry",
+      "passed": true
+    },
+    {
+      "case": "shell_syntax_only",
+      "passed": true
+    }
+  ],
+  "command": [
+    "/usr/bin/python",
+    "-B",
+    "-S",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_COLLECTOR_CPU_V1/code/publication_check.py",
+    "--control",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_COLLECTOR_CPU_V1_r1/publication_v1/CONTROL.json",
+    "--board",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_COLLECTOR_CPU_V1_r1/publication_v1/BOARD.json",
+    "--release",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_COLLECTOR_CPU_V1_r1/publication_v1/RELEASE.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"board_status\": \"ready\", \"grants_authorization\": false, \"release_status\": \"released\", \"runtime_storage_admission_present\": false, \"status\": \"PASS\"}\n",
+  "stderr": "",
+  "shell_exit": 0,
+  "real_launcher_invocations": 0,
+  "claims": 0,
+  "hardware": 0,
+  "new_active_authority_files": 0
+}

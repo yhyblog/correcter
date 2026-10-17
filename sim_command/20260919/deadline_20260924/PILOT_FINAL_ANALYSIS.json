@@ -1,0 +1,193 @@
+{
+  "at_utc": "2026-09-21T16:49:16.134125+00:00",
+  "status": "COMPLETE_ACCEPTED",
+  "task_id": "A_D24_MULTI_INTERVENTION_PILOT_V1",
+  "revision": 2,
+  "receipt": "receipts/A/A_D24_MULTI_INTERVENTION_PILOT_V1_RESULT_r5.json",
+  "actual_rollouts": 120,
+  "technical_failures": 0,
+  "retries": 0,
+  "new_initial_states": 0,
+  "repeat": 0,
+  "cells": {
+    "Post_multi": {
+      "completed": 20,
+      "entered": 20,
+      "episode_wall_seconds_sum": 158.17479149159044,
+      "flow_calls": 3010,
+      "intervention_distribution": {
+        "0": 0,
+        "1": 16,
+        "2": 3,
+        "3+": 1
+      },
+      "planned": 20,
+      "sampling_calls": 301,
+      "success_rate": 0.8,
+      "successes": 16,
+      "technical_failures": 0
+    },
+    "Post_once": {
+      "completed": 20,
+      "entered": 20,
+      "episode_wall_seconds_sum": 157.54717988008633,
+      "flow_calls": 2970,
+      "intervention_distribution": {
+        "0": 0,
+        "1": 20,
+        "2": 0,
+        "3+": 0
+      },
+      "planned": 20,
+      "sampling_calls": 297,
+      "success_rate": 0.8,
+      "successes": 16,
+      "technical_failures": 0
+    },
+    "R_multi": {
+      "completed": 20,
+      "entered": 20,
+      "episode_wall_seconds_sum": 196.74697136459872,
+      "flow_calls": 3810,
+      "intervention_distribution": {
+        "0": 0,
+        "1": 14,
+        "2": 4,
+        "3+": 2
+      },
+      "planned": 20,
+      "sampling_calls": 381,
+      "success_rate": 0.65,
+      "successes": 13,
+      "technical_failures": 0
+    },
+    "R_once": {
+      "completed": 20,
+      "entered": 20,
+      "episode_wall_seconds_sum": 211.79632293293253,
+      "flow_calls": 3790,
+      "intervention_distribution": {
+        "0": 0,
+        "1": 20,
+        "2": 0,
+        "3+": 0
+      },
+      "planned": 20,
+      "sampling_calls": 379,
+      "success_rate": 0.65,
+      "successes": 13,
+      "technical_failures": 0
+    },
+    "Velocity_multi": {
+      "completed": 20,
+      "entered": 20,
+      "episode_wall_seconds_sum": 174.7837712392211,
+      "flow_calls": 3460,
+      "intervention_distribution": {
+        "0": 0,
+        "1": 14,
+        "2": 6,
+        "3+": 0
+      },
+      "planned": 20,
+      "sampling_calls": 346,
+      "success_rate": 0.75,
+      "successes": 15,
+      "technical_failures": 0
+    },
+    "Velocity_once": {
+      "completed": 20,
+      "entered": 20,
+      "episode_wall_seconds_sum": 173.18309582024813,
+      "flow_calls": 3380,
+      "intervention_distribution": {
+        "0": 0,
+        "1": 20,
+        "2": 0,
+        "3+": 0
+      },
+      "planned": 20,
+      "sampling_calls": 338,
+      "success_rate": 0.75,
+      "successes": 15,
+      "technical_failures": 0
+    }
+  },
+  "comparisons": {
+    "Post_multi-Post_once": {
+      "harmed": [],
+      "paired_complete": 20,
+      "percentage_point_delta": 0,
+      "rescued": [],
+      "success_count_delta": 0
+    },
+    "Post_multi-R_multi": {
+      "harmed": [
+        "disassemble-v3__2026111765",
+        "disassemble-v3__2026111885"
+      ],
+      "paired_complete": 20,
+      "percentage_point_delta": 15,
+      "rescued": [
+        "disassemble-v3__2026111750",
+        "disassemble-v3__2026111755",
+        "disassemble-v3__2026111855",
+        "disassemble-v3__2026111865",
+        "disassemble-v3__2026111880"
+      ],
+      "success_count_delta": 3
+    },
+    "R_multi-R_once": {
+      "harmed": [],
+      "paired_complete": 20,
+      "percentage_point_delta": 0,
+      "rescued": [],
+      "success_count_delta": 0
+    },
+    "Velocity_multi-Velocity_once": {
+      "harmed": [],
+      "paired_complete": 20,
+      "percentage_point_delta": 0,
+      "rescued": [],
+      "success_count_delta": 0
+    }
+  },
+  "actual_counters": {
+    "D_forward": 7250,
+    "G0_forward": 7250,
+    "Q_ensemble_forward": 512,
+    "action_gradients": 186,
+    "contexts": 3625,
+    "flow": 20420,
+    "interventions": 150,
+    "sampling": 2042
+  },
+  "all8_worker_exit0": true,
+  "all8_holders_restored": true,
+  "review_scope": "small saved final result and report only; no strict audit or experimental compute",
+  "interpretation": "Revealed20-source disassemble development pilot only. All three once/multi outcome pairs identical despite actual repeated intervention; no observed benefit, not equivalence proof or MT50 ranking.",
+  "main_decision": {
+    "all_methods_cap": 1,
+    "new_MT50_multi_matrix": false,
+    "scope": "existing D24 main matrix, no added compute authorization",
+    "continuation": "deadline_20260924/MAIN_ONCE_CONTINUATION.md"
+  },
+  "pilot_closed_for_new_execution": true,
+  "overall_D24_complete": false,
+  "supersedes_primary_snapshot_for_final_status": true,
+  "additional_paired_development_observations": {
+    "source": "results/A/A_D24_MULTI_INTERVENTION_PILOT_V1/PER_SOURCE_RESULTS.json",
+    "same_for_once_and_multi": true,
+    "Velocity_vs_R": {
+      "rescued": 3,
+      "harmed": 1,
+      "delta_pp": 10
+    },
+    "Velocity_vs_Post": {
+      "rescued": 1,
+      "harmed": 2,
+      "delta_pp": -5
+    },
+    "scope": "descriptive only; no significance or MT50 generalization claim"
+  }
+}

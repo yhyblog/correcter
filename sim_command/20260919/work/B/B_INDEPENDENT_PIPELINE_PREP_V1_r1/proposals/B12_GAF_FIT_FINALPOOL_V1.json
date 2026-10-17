@@ -1,0 +1,233 @@
+{
+  "actual_scientific_operations_this_preparation": 0,
+  "aggregate_operation_limits": {
+    "array_loads": 6,
+    "backward_calls": 30000,
+    "checkpoint_loads": 0,
+    "completed_rollouts": 0,
+    "feature_transform_calls": 0,
+    "model_gpu_inference_calls": 1200,
+    "model_initializations": 3,
+    "optimizer_attempts": 30000,
+    "optimizer_updates": 30000,
+    "simulator_attempts": 0,
+    "training_forward_calls": 30000,
+    "vla_sampling_calls": 0
+  },
+  "authorized": false,
+  "automatic_retry": false,
+  "basis_authorization_sha256": "d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928",
+  "code_manifest_sha256": "0a6a900c0c21a563717f51af05b76daeb24d09aecd682b03b73462cad124451d",
+  "dependencies": [
+    "A11 immutable final pool",
+    "B11 view schema"
+  ],
+  "ensemble_members": [
+    9201,
+    9202,
+    9203
+  ],
+  "ensemble_note": "3 critics make 1 ensemble, not 3 complete method seeds",
+  "holder_reservation": "one inherited node reservation across runnable formal tasks/publication; original guard holders released; optional supervised idle-card fill only under current SHA-bound override, never on active formal GPU; confirm own holder descendants exit before model loading; no nested lifecycle",
+  "hostname": "trial-303225685-trialrun-303225685-worker-0",
+  "independent_seeds": [],
+  "jobs": {
+    "gaf_v1_member_9201": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/gaf_v1_member_9201.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B12_GAF_FIT_FINALPOOL_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B12_GAF_FIT_FINALPOOL_V1/gaf_v1_member_9201",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 1390,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/gaf_v1_member_9201.json",
+        "sha256": "91c71f01dd9ec1b5072e6183f16d2a1ecbd9bb6335f456e8b9c1554ff8b4f301"
+      },
+      "config_sha256": "91c71f01dd9ec1b5072e6183f16d2a1ecbd9bb6335f456e8b9c1554ff8b4f301",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "QUEUE_ASSIGNED_B_LOCAL_GPU"
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 2,
+        "backward_calls": 10000,
+        "checkpoint_loads": 0,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 0,
+        "model_gpu_inference_calls": 400,
+        "model_initializations": 1,
+        "optimizer_attempts": 10000,
+        "optimizer_updates": 10000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 10000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B12_GAF_FIT_FINALPOOL_V1/gaf_v1_member_9201",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 4,
+        "gpus": 1,
+        "ram_bytes": 17179869184,
+        "shared_bytes": 2147483648,
+        "tmp_bytes": 4294967296,
+        "vram_bytes_per_gpu": 4294967296
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 3600
+    },
+    "gaf_v1_member_9202": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/gaf_v1_member_9202.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B12_GAF_FIT_FINALPOOL_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B12_GAF_FIT_FINALPOOL_V1/gaf_v1_member_9202",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 1390,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/gaf_v1_member_9202.json",
+        "sha256": "85dabd201c411d907c81edc432e00935112eaf0e4c1049226a78f0dcf45cd7cb"
+      },
+      "config_sha256": "85dabd201c411d907c81edc432e00935112eaf0e4c1049226a78f0dcf45cd7cb",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "QUEUE_ASSIGNED_B_LOCAL_GPU"
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 2,
+        "backward_calls": 10000,
+        "checkpoint_loads": 0,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 0,
+        "model_gpu_inference_calls": 400,
+        "model_initializations": 1,
+        "optimizer_attempts": 10000,
+        "optimizer_updates": 10000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 10000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B12_GAF_FIT_FINALPOOL_V1/gaf_v1_member_9202",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 4,
+        "gpus": 1,
+        "ram_bytes": 17179869184,
+        "shared_bytes": 2147483648,
+        "tmp_bytes": 4294967296,
+        "vram_bytes_per_gpu": 4294967296
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 3600
+    },
+    "gaf_v1_member_9203": {
+      "argv": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code/stage_gate.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/gaf_v1_member_9203.json",
+        "--stage",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/stages/B12_GAF_FIT_FINALPOOL_V1.json",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B12_GAF_FIT_FINALPOOL_V1/gaf_v1_member_9203",
+        "--execute"
+      ],
+      "config": {
+        "bytes": 1390,
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/configs/gaf_v1_member_9203.json",
+        "sha256": "9fdfde5abd9e463a5c7590488a6fd4c7ef8aab34b54469480186adc95533c3bb"
+      },
+      "config_sha256": "9fdfde5abd9e463a5c7590488a6fd4c7ef8aab34b54469480186adc95533c3bb",
+      "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_INDEPENDENT_PIPELINE_PREP_V1_r1/code",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "QUEUE_ASSIGNED_B_LOCAL_GPU"
+      },
+      "failure": "consume claim; preserve partial artifacts; no automatic retry; pause affected B stage after 3 same-signature failures",
+      "input_bindings": {},
+      "limits": {
+        "array_loads": 2,
+        "backward_calls": 10000,
+        "checkpoint_loads": 0,
+        "completed_rollouts": 0,
+        "feature_transform_calls": 0,
+        "model_gpu_inference_calls": 400,
+        "model_initializations": 1,
+        "optimizer_attempts": 10000,
+        "optimizer_updates": 10000,
+        "simulator_attempts": 0,
+        "training_forward_calls": 10000,
+        "vla_sampling_calls": 0
+      },
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/stage_runs/B12_GAF_FIT_FINALPOOL_V1/gaf_v1_member_9203",
+      "resources": {
+        "basis": "engineering admission reservation, not measured peak",
+        "cpu_threads": 4,
+        "gpus": 1,
+        "ram_bytes": 17179869184,
+        "shared_bytes": 2147483648,
+        "tmp_bytes": 4294967296,
+        "vram_bytes_per_gpu": 4294967296
+      },
+      "success": [
+        "exit0",
+        "status.complete",
+        "all operation counts within job caps",
+        "final checkpoint exists",
+        "immutable publication manifest"
+      ],
+      "termination_grace_seconds": 20,
+      "timeout_seconds": 3600
+    }
+  },
+  "kind": "frozen_training_stage",
+  "local_GPU_admission_verified": false,
+  "max_concurrent_jobs": 3,
+  "missing_engineering": [
+    "final-pool tensor-view materializer binding/implementation; fit worker itself exists"
+  ],
+  "missing_inputs": [
+    "A final same common train pool identity",
+    "nonempty disjoint development view",
+    "immutable tensor views"
+  ],
+  "operational_overrides_sha256": {
+    "persistent_queue/OCCUPANCY_OVERRIDE_V1.json": "0e896062a9c69dc51e6d1332eca5413c683d2c9bbed113b9346f8dba27310916"
+  },
+  "owner": "B",
+  "readiness": "blocked_input",
+  "registration": "Analysis freezes authorized=true stage under persistent_queue/stages and registers its path/SHA in CONTROL.stage_authorizations once; daemon runs jobs without per-job chat. This proposed schema is not installed in public queue yet.",
+  "same_final_common_pool_sha_as_A": null,
+  "schema": "B_once_frozen_stage_proposal_v1",
+  "selection": "development MSE only",
+  "stage_id": "B12_GAF_FIT_FINALPOOL_V1",
+  "stage_timeout_sum_seconds": 10860,
+  "task_id": "B12"
+}

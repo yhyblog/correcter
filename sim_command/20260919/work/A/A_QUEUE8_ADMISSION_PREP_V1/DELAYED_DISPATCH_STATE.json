@@ -1,0 +1,174 @@
+{
+  "utc": "2026-09-21T17:28:18.073481+00:00",
+  "queue_control": {
+    "schema": "corrector_queue_control_v1",
+    "revision": 15,
+    "updated_at_utc": "2026-09-21T17:27:12.662995+00:00",
+    "authorization": {
+      "path": "persistent_queue/AUTHORIZATION_V2.json",
+      "sha256": "d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928"
+    },
+    "global_stop": false,
+    "desired_state": "deadline_sprint_use_existing_runners_now",
+    "nodes": {
+      "A": {
+        "desired_state": "execute_D24_independent_sprint",
+        "enabled": true,
+        "actual_state": "BACKGROUND_MAIN_ONCE_RUNNING_8_MODEL_READY",
+        "control_plane_task": "A_QUEUE_BOOTSTRAP_V1",
+        "control_plane_task_revision": 2,
+        "next_formal_concurrency": 8,
+        "first_formal_wave_release_required": null,
+        "resource_preparation_task": "A_QUEUE8_ADMISSION_PREP_V1",
+        "completion_event_task": "A_LONG_TASK_WAKEUP_V1",
+        "legacy_exit_gate": {
+          "satisfied": true,
+          "closure": {
+            "path": "releases/P11_A_COMMON_POOL_BATCH3_V1_CLOSED.json",
+            "sha256": "15c912600bb8269eaffdcbfa124ac70511f41a4bb4dafb85a11a6686614157b5"
+          },
+          "acceptance": {
+            "path": "manifests/A11_COMMON_POOL_BATCH3_V1_ACCEPTANCE.json",
+            "sha256": "a1ba9ecf9a6c6fa4a5fd35fd38d71cc338e2c2b7e71063521bcfa1aeca172592"
+          },
+          "automatic_first8_compute_unlocked": false
+        },
+        "priority_task": "A_D24_SPRINT_V1",
+        "deadline_authorization": {
+          "path": "deadline_20260924/AUTHORIZATION_V1.json",
+          "sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80"
+        },
+        "old_queue8_collection_gate_disposition": "superseded_for_new_sprint_tasks; no475collection; closed legacy releases unchanged",
+        "priority_authorization": {
+          "path": "deadline_20260924/AUTHORIZATION_V1.json",
+          "sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80"
+        },
+        "large_new_corrector_eval_waits_for_pilot_design_decision": false,
+        "baseline_N_and_existing_jobs_continue": true,
+        "actual_runtime_receipt": "receipts/A/A_D24_MAIN_ONCE_V1_RESULT_r1.json",
+        "pilot_scope_approval_sufficient": true,
+        "main_intervention_cap": 1,
+        "main_eval_admission": "already_started_do_not_duplicate",
+        "analysis_decision": "deadline_20260924/MAIN_ONCE_CONTINUATION.md",
+        "pilot_complete": true,
+        "occupancy_adapter_delivery": {
+          "status": "CPU_only_accepted",
+          "receipt": "receipts/A/A_QUEUE_BOOTSTRAP_V1_r2_OCCUPANCY_OVERRIDE_V1_RESULT.json",
+          "analysis": "deadline_20260924/OCCUPANCY_ADAPTER_REVIEW.json",
+          "GPU_deployment_proven": true,
+          "scientific_launch_prerequisite": false,
+          "first_real_handoff_receipt": "receipts/A/A_D24_MAIN_ONCE_V1_RESULT_r1.json",
+          "deployment_evidence_scope": "start handoff only; ongoing main-chain terminal lifecycle not yet observed"
+        },
+        "start_acceptance": "deadline_20260924/MAIN_ONCE_START_ACCEPTANCE.json",
+        "running_snapshot_utc": "2026-09-21T17:24:59.038944+00:00"
+      },
+      "B": {
+        "desired_state": "execute_D24_independent_sprint",
+        "enabled": true,
+        "actual_state": "V1_join_waiter_observed_waiting_for_package",
+        "control_plane_task": "B_QUEUE_JOIN_V1",
+        "control_plane_task_revision": 2,
+        "collection_source_limit": 0,
+        "completion_event_task": "B_LONG_TASK_WAKEUP_V1",
+        "priority_task": "B_D24_SPRINT_V1",
+        "deadline_authorization": {
+          "path": "deadline_20260924/AUTHORIZATION_V1.json",
+          "sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80"
+        }
+      }
+    },
+    "shared_package_state": "not_yet_implemented",
+    "automatic_batch_advance": true,
+    "human_review_per_normal_batch": false,
+    "previous_authorization": {
+      "path": "persistent_queue/AUTHORIZATION_V1.json",
+      "sha256": "f0790bbfdbe263be1044ef9ce3773d4ab0b3a63616edf04feda2e86103edf7b5"
+    },
+    "only_current_authorization_valid_for_new_admission": true,
+    "operational_overrides": [
+      {
+        "path": "persistent_queue/OCCUPANCY_OVERRIDE_V1.json",
+        "sha256": "0e896062a9c69dc51e6d1332eca5413c683d2c9bbed113b9346f8dba27310916"
+      }
+    ],
+    "effective_holder_policy": "real_jobs_priority; supervised_idle_card_fill_allowed_during_wave; no_holder_on_active_formal_GPU",
+    "scheduling_directives": [
+      {
+        "path": "persistent_queue/QUEUE8_NEXT_WAVE_V1.json",
+        "sha256": "3f1c12d9acc944ad976ca860f91743c31bc3989d3832bd872cbd97f2fd1da3e4"
+      }
+    ],
+    "completion_event_policy": {
+      "path": "persistent_queue/LONG_TASK_EVENT_WAKEUP_V1.json",
+      "sha256": "6cd1233b0e345bbea2a8320f6126897364c89c6964e92975be4d80c1291766f6"
+    },
+    "conversation_wait_policy": "after_stable_handoff_end_turn; original_executor_woken_by_persisted_terminal_event; no_LLM_polling",
+    "latest_source_dispositions": {
+      "path": "manifests/COMMON_POOL_SOURCE_DISPOSITIONS_V3.json",
+      "sha256": "02f8db40f614e85dd21834fd7bfece2d1fac9f1886f165def3bb20767424ef37"
+    },
+    "latest_full_target_index": {
+      "path": "manifests/COMMON_POOL_ACCEPTED_PARENTS_V4.json",
+      "sha256": "0940306f01c4bd268d3811acda874a948e39edf3219336dbe8e4ca19f6f5c785"
+    },
+    "latest_partial_target_index": {
+      "path": "manifests/COMMON_POOL_PARTIAL_TARGET_PARENTS_V1.json",
+      "sha256": "540d420eaf4be5bb3ba556de8c77c472b593305cdfb295075074b9a0f7129a0b"
+    },
+    "legacy_terminal_overlay": {
+      "path": "persistent_queue/plan/LEGACY_BATCH3_TERMINAL_OVERLAY_V1.json",
+      "sha256": "7b2b7d0a4ae2170845621ca735dc796e5c8933ceb5ec0368d8b3d7012e62f869"
+    },
+    "stage_authorizations": [
+      {
+        "path": "deadline_20260924/AUTHORIZATION_V1.json",
+        "sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80"
+      }
+    ],
+    "deadline_override": {
+      "path": "deadline_20260924/AUTHORIZATION_V1.json",
+      "sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80"
+    },
+    "remaining_common_pool_collection_enabled": false,
+    "strict_consistency_audits_enabled": false,
+    "shared_package_is_scientific_launch_prerequisite": false
+  },
+  "task_board_revision": 75,
+  "task_entry": {
+    "id": "A_QUEUE8_ADMISSION_PREP_V1",
+    "owner": "A",
+    "revision": 1,
+    "status": "ready",
+    "dependencies": [],
+    "brief": "tasks/A_QUEUE8_ADMISSION_PREP_V1.md",
+    "release": "releases/P00_A_QUEUE8_ADMISSION_PREP_V1.json",
+    "scope": "explicit8_real_parent_resource_review_and_ready_entry; no_new_formal_compute",
+    "related_implementation_task": "A_QUEUE_BOOTSTRAP_V1",
+    "expected_result": "receipts/A/A_QUEUE8_ADMISSION_PREP_V1_RESULT.json",
+    "deadline_override": "Reusable implementation only; cannot block first scientific job. Full collector migration deferred."
+  },
+  "release": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P00_A_QUEUE8_ADMISSION_PREP_V1.json",
+    "sha256": "94e1b52a7d26e4be252b74cecce144bdca14db70bd1acb7e841e4fcf5e674b73",
+    "size_bytes": 2295
+  },
+  "frozen_next8_plan": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/plan/NEXT8_FORMAL_CONCURRENCY_V1.json",
+    "sha256": "ec9c9cd227b30162baa3c1678e77c24409c68fddbd49f021120107ed31a2e3e2",
+    "size_bytes": 60088
+  },
+  "prior_ack": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_QUEUE8_ADMISSION_PREP_V1_ACK.json",
+    "sha256": "42f637f79bf48a67c37cb1efb7485f8ea3eb01d477f9d9be34107c2adb3b4207",
+    "size_bytes": 1631
+  },
+  "prior_result": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_QUEUE8_ADMISSION_PREP_V1_RESULT.json",
+    "sha256": "c83bf066bedce28bec7e0487fe51b2fa0a477b9e760c7db131eddaae55b7b8eb",
+    "size_bytes": 1132
+  },
+  "proposal_exists": false,
+  "runtime_manifest_exists": false,
+  "first8_compute_release_exists": false
+}

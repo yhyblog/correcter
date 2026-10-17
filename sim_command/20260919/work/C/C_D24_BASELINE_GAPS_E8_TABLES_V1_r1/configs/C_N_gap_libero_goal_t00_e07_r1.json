@@ -1,0 +1,38 @@
+{
+  "job_id": "C_N_gap_libero_goal_t00_e07_r1",
+  "run_id": "D24_C_N_GAPS_r1",
+  "kind": "pi05_libero",
+  "method": "N",
+  "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/reference/pi05-libero-official",
+  "H": 10,
+  "K": 5,
+  "NFE": 10,
+  "action_dim": 7,
+  "state_dim": 8,
+  "max_steps": 300,
+  "settle_steps": 10,
+  "suite": "libero_goal",
+  "port": 28613,
+  "episodes": [
+    {
+      "source_id": "D24_LIBERO_libero_goal_t00_e07",
+      "split": "test",
+      "task_id": 0,
+      "episode": 7,
+      "reset_seed": 25300007,
+      "policy_seed": 35300007
+    }
+  ],
+  "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_BASELINE_GAPS_E8_TABLES_V1/jobs/C_N_gap_libero_goal_t00_e07_r1",
+  "initial_source_policy": "new deterministic task randomization from frozen seeds; save pre-settle simulator state for paired comparisons; distinct from official 50-init-state benchmark protocol",
+  "attempt": 2,
+  "retry_of": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_BASELINE_GAPS_E8_TABLES_V1/prior_failures/D24_LIBERO_libero_goal_t00_e07.json",
+  "new_task_id": "C_D24_BASELINE_GAPS_E8_TABLES_V1",
+  "original_config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/pi05official_N_libero_goal.json",
+  "original_task_constructor_seed": 25300000,
+  "original_claim": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/pi05official_N_libero_goal_r2/episode_claims/D24_LIBERO_libero_goal_t00_e07.json",
+  "original_exit_evidence": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_LIBERO_REPAIR_r2/RESULT.json",
+  "fixed_correction": "bounded live CONTROL metadata reread, no cached authorization fallback",
+  "no_corrector": true,
+  "automatic_retry": false
+}

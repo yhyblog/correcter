@@ -1,0 +1,85 @@
+{
+  "at_utc": "2026-09-22T06:07:11.934395+00:00",
+  "task_id": "C_D24_MW_VELOCITY_V1",
+  "failure_phase": "first planned episode env.reset/render; zero executed actions",
+  "root_cause": "C job XDG_RUNTIME_DIR paths were configured but not created; frozen B prepare.py line81 explicitly mkdir700 before launch; Mesa anonymous backing file allocation failed",
+  "fix": "create all8 C private per-job XDG directories mode0700 and verify regular file allocation; preserve same native Mesa renderer and source protocol",
+  "models_loaded_successfully": 8,
+  "failed_physical_attempts": 8,
+  "failures": [
+    {
+      "base": "smolvla",
+      "source_id": "D24_MW_t00_e00",
+      "prior_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/smol50k_Velocity_shard0_r1/episodes/D24_MW_t00_e00/RESULT.json",
+      "steps": 0,
+      "status": "technical_failure",
+      "success": null
+    },
+    {
+      "base": "smolvla",
+      "source_id": "D24_MW_t01_e00",
+      "prior_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/smol50k_Velocity_shard1_r1/episodes/D24_MW_t01_e00/RESULT.json",
+      "steps": 0,
+      "status": "technical_failure",
+      "success": null
+    },
+    {
+      "base": "smolvla",
+      "source_id": "D24_MW_t02_e00",
+      "prior_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/smol50k_Velocity_shard2_r1/episodes/D24_MW_t02_e00/RESULT.json",
+      "steps": 0,
+      "status": "technical_failure",
+      "success": null
+    },
+    {
+      "base": "smolvla",
+      "source_id": "D24_MW_t03_e00",
+      "prior_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/smol50k_Velocity_shard3_r1/episodes/D24_MW_t03_e00/RESULT.json",
+      "steps": 0,
+      "status": "technical_failure",
+      "success": null
+    },
+    {
+      "base": "xvla",
+      "source_id": "D24_MW_t00_e00",
+      "prior_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/xvla30k_Velocity_shard0_r1/episodes/D24_MW_t00_e00/RESULT.json",
+      "steps": 0,
+      "status": "technical_failure",
+      "success": null
+    },
+    {
+      "base": "xvla",
+      "source_id": "D24_MW_t01_e00",
+      "prior_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/xvla30k_Velocity_shard1_r1/episodes/D24_MW_t01_e00/RESULT.json",
+      "steps": 0,
+      "status": "technical_failure",
+      "success": null
+    },
+    {
+      "base": "xvla",
+      "source_id": "D24_MW_t02_e00",
+      "prior_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/xvla30k_Velocity_shard2_r1/episodes/D24_MW_t02_e00/RESULT.json",
+      "steps": 0,
+      "status": "technical_failure",
+      "success": null
+    },
+    {
+      "base": "xvla",
+      "source_id": "D24_MW_t03_e00",
+      "prior_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_MW_VELOCITY_V1/jobs/xvla30k_Velocity_shard3_r1/episodes/D24_MW_t03_e00/RESULT.json",
+      "steps": 0,
+      "status": "technical_failure",
+      "success": null
+    }
+  ],
+  "successful_sources_replayed": 0,
+  "corrected_retry_per_failed_source": 1,
+  "additional_first_entries": 992,
+  "new_development_attempts": 0,
+  "total_physical_upper_after_retry_wave": 1008,
+  "max_C_total": 2400,
+  "prior_full_family_exited": true,
+  "all8_holders_restored_observed": true,
+  "additional_dtype_fidelity": "Smol guided velocity restored to original native output dtype like frozen FlowHook; no previously executed actions or selected test results",
+  "new_batch": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/C/C_D24_MW_VELOCITY_V1_r2/MW_VELOCITY_BATCH.json"
+}

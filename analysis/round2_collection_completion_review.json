@@ -1,0 +1,74 @@
+{
+  "status": "passed",
+  "reviewed_at_utc": "2026-09-16T23:32:23.372479+00:00",
+  "scope": "Bounded collection resource,primary whitelist,completion metadata and frozen-protocol closure only. No scientific outcomes or branch results read;no static audit started/restarted,model calls,simulation,code changes or frozen-file changes. Full static dataset audit remains separate.",
+  "blockers": [],
+  "anomalies": [],
+  "resources": {
+    "journal_rows": 62074,
+    "round2_simulator_attempts": 17400,
+    "round2_stage_limit": 17400,
+    "source_capture": 300,
+    "candidate_restore": 300,
+    "branch_including_restore": 16800,
+    "per_primary_attempts": 58,
+    "global_simulator_attempts": 42874,
+    "global_optimizer_updates": 19200,
+    "round2_optimizer_updates": 0,
+    "technical_reserve_used": 0,
+    "unique_journal_numbers": true,
+    "unique_event_key": [
+      "resource",
+      "stage",
+      "kind",
+      "identity"
+    ],
+    "old_journal_prefix_unchanged": true,
+    "ledger_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/budget/attempts.jsonl",
+    "ledger_sha256": "189cdf5c04a3782b5e540c3761fa682481dedad6ea91e703e705713e2d076973",
+    "ledger_stable_during_review": true
+  },
+  "primary_slots": {
+    "registered": 300,
+    "completed": 300,
+    "ordered_ids_canonical_sha256": "9c1891d17b8c438162c4c2ab4ba245864e743b42cd4aa8b813baf298c922f78a",
+    "exact_whitelist_match": true,
+    "collection_complete_markers": 300,
+    "worker_assignment_unique_coverage": 300,
+    "source_outcome_contents_read": false
+  },
+  "protocol": {
+    "config_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/config.json",
+    "config_sha256": "13ff72cbec4aa8fe92354d55e3a5e0ce0babc934d8cfeb72124af8eb4abc1944",
+    "freeze_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/freeze.json",
+    "freeze_sha256": "b1755f37303b914c2da362d59f390a91f8c1c46651023a7150810dff31a5ebcb",
+    "ready_snapshot_sha256": "decbf30a364e1cc8e56bdc225bc99cce9fe1a5d810aaa1a869604bb3aeb89ec5",
+    "stage": "round2_labels",
+    "scope": "round2_native10_local_labels",
+    "bank_version": "round2_labels_v1",
+    "model_and_selected_seal_unchanged": true,
+    "all_code_files_rehashed": false,
+    "all_trajectory_files_rehashed": false
+  },
+  "execution": {
+    "completed_workers": 32,
+    "launch_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_execution/round2_labels/round2_labels_v1/round2_v1_01/launch_result.json",
+    "launch_result_sha256": "36ee55319720710290316f2633edd0970925c276f05c959b53e3433576d1dd09",
+    "lifecycle_returncode": 0,
+    "wall_seconds_including_lifecycle": 5715.038629705086,
+    "holders_running": 8,
+    "holder_evidence": "/tmp/gpu_occupancy_guard/status.json",
+    "holder_evidence_observed_updated": 1789601541.0600934,
+    "next_collection_stage_started": false,
+    "static_dataset_audit_started_by_reviewer": false,
+    "static_dataset_audit_completion_required_for_later_training": true
+  },
+  "runtime_evidence": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/progress_audits/round2_runtime/round2_v1_01/latest.json",
+    "updated_at": "2026-09-16T23:29:09.905842+00:00",
+    "scientific_outcomes_read_by_runtime": false,
+    "branch_results_read_by_runtime": false
+  },
+  "review_check_count_including_per_attempt_identity_checks": 18190,
+  "next_stage_released_by_this_review": false
+}

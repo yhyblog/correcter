@@ -1,0 +1,83 @@
+{
+  "schema": "round1_train300_ci_reconciliation_v1",
+  "utc": "2026-09-16T20:08:39.230660+00:00",
+  "conclusion": "No data or estimand discrepancy. Small endpoint differences are finite-bootstrap Monte Carlo variation from different seeds AND equivalent but different random sampling implementations. Existing sealed reports remain unchanged.",
+  "data_checks": {
+    "source_order_identical": true,
+    "task_assignment_identical": true,
+    "all_300x14x4_paired_labels_identical": true,
+    "A_point_estimates_rescue_harm_source_signs_identical": true
+  },
+  "analysis_bootstrap": {
+    "seed": 2026091613,
+    "resamples": 10000,
+    "task_order": "lexicographically sorted tasks",
+    "source_order": "manifest order, identical to executor",
+    "sampling": "uniform source-index sampling with replacement via numpy default_rng.choice, then sum selected source means",
+    "quantile": "numpy.quantile [.025,.975], default linear interpolation; multiply paired gain samples by100 before quantile"
+  },
+  "executor_bootstrap": {
+    "seed": 2026091621,
+    "resamples": 10000,
+    "task_order": "lexicographically sorted tasks",
+    "source_order": "dataset order, identical to analysis",
+    "sampling": "multinomial source multiplicity weights via numpy default_rng.multinomial, then weighted sum of source means",
+    "quantile": "numpy.quantile [.025,.975], default linear interpolation; multiply quantiles by100 afterwards"
+  },
+  "shared_estimand": {
+    "unit": "whole episode source, all four suffixes/all methods remain paired",
+    "strata": "five tasks,60sources each in total cohort",
+    "source_weights": "equal per-source, preserve observed task counts",
+    "confidence": "nominal percentile95 without multiple-comparison adjustment",
+    "scope": "training-distribution diagnostic, not independent validation"
+  },
+  "interpretation": [
+    "Multinomial counts and direct sampling with replacement induce the same empirical bootstrap distribution. They consume RNG streams differently; matching seed alone would not make finite draws identical.",
+    "Multiplication by100 before versus after a linear percentile is mathematically equivalent; floating-point roundoff is negligible compared with observed0.0833pp endpoint differences.",
+    "One total-cohort paired-success count is100/1200=0.083333pp, matching the observed one-grid-step endpoint shifts.",
+    "All three A intervals cross0 in both reports; methodological conclusion and formal training release are unchanged."
+  ],
+  "comparisons": {
+    "velocity": {
+      "analysis_ci95_pp": [
+        -1.3333333333333255,
+        3.166666666666673
+      ],
+      "executor_ci95_pp": [
+        -1.3333333333333364,
+        3.2499999999999973
+      ]
+    },
+    "direct": {
+      "analysis_ci95_pp": [
+        -1.9166666666666776,
+        3.166666666666662
+      ],
+      "executor_ci95_pp": [
+        -2.0000000000000018,
+        3.166666666666673
+      ]
+    },
+    "post": {
+      "analysis_ci95_pp": [
+        -1.0000000000000009,
+        3.833333333333344
+      ],
+      "executor_ci95_pp": [
+        -1.0000000000000009,
+        3.9166666666666625
+      ]
+    }
+  },
+  "source_hashes": {
+    "Corrector/analysis/round1_train300_20260916_review.json": "7eb4ff1516ed53e7ebaf6dc7155def25b23856ecb3a276a0f9eeb740ce99eadc",
+    "Corrector/outputs/native10_training_20260916/progress_audits/round1_train300_v1/result.json": "773416f54ec8101b5063ddafc2bb3eb1db248b1d987958d129ae1340933524de",
+    "Corrector/experiments/native10_training_20260916/summarize_train300_v1.py": "3dd81d92c18f617a1f1db8812b222bf5e775f99ee5fce10ad63a24a130023a10"
+  },
+  "actions": {
+    "bootstrap_reruns": 0,
+    "simulator_calls": 0,
+    "optimizer_updates": 0,
+    "sealed_reports_modified": false
+  }
+}

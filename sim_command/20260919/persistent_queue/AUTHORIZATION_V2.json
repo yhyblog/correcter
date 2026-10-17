@@ -1,0 +1,165 @@
+{
+  "schema": "corrector_persistent_queue_authorization_v1",
+  "release_id": "QUEUE_AUTONOMY_V2",
+  "status": "authorized_with_machine_gated_activation",
+  "issued_at_utc": "2026-09-21T12:26:30.929574+00:00",
+  "issuer": "analysis_under_explicit_user_queue_utilization_and_independent_roles_20260921",
+  "task_ids": [
+    "A_QUEUE_BOOTSTRAP_V1",
+    "B_QUEUE_JOIN_V1",
+    "A_MAIN_PIPELINE_PREP_V1",
+    "B_INDEPENDENT_PIPELINE_PREP_V1"
+  ],
+  "task_revision": 2,
+  "hosts": {
+    "A": "trial-303224955-trialrun-303224955-worker-0",
+    "B": "trial-303225685-trialrun-303225685-worker-0"
+  },
+  "contract": {
+    "path": "persistent_queue/QUEUE_CONTRACT_V1.md",
+    "sha256": "f9a8a8914c33b0480437e701c103697effcf7315e2a0109f556494d793254255"
+  },
+  "plan": {
+    "AGGREGATE_LIMITS_V2.json": {
+      "path": "persistent_queue/plan/AGGREGATE_LIMITS_V2.json",
+      "sha256": "f59b2c6a1bf939cac16edf25fad69003d99608878ffa6a70200031b76eb11654"
+    },
+    "PER_TASK_PARENT_BUDGETS_V1.json": {
+      "path": "persistent_queue/plan/PER_TASK_PARENT_BUDGETS_V1.json",
+      "sha256": "257c8439b5536b2552d61eb3945f035c17ee801166d96ad8fad2bfb9b5c0cc0c"
+    },
+    "SOURCES_V2.json": {
+      "path": "persistent_queue/plan/SOURCES_V2.json",
+      "sha256": "04f3ffec28f944f6d9ff23aa96a86dc015d5e1d46441836cc0c434a2ca0bf0bd"
+    },
+    "STAGE_DAG_V2.json": {
+      "path": "persistent_queue/plan/STAGE_DAG_V2.json",
+      "sha256": "f96fec2fb4ff00c6a1755971d97dbea4a0556c53be0433c1887b45211a408d83"
+    },
+    "TASK_ORDINAL_OWNER_V2.json": {
+      "path": "persistent_queue/plan/TASK_ORDINAL_OWNER_V2.json",
+      "sha256": "0567c7593796756d162f809a747a44de631d6df5dc1dc68842e52d185181e7c7"
+    }
+  },
+  "task_briefs": {
+    "A": {
+      "path": "tasks/A_QUEUE_BOOTSTRAP_V1_r2.md",
+      "sha256": "18b3c5935b706502b725467e78d6216e6a5c97129cd2e207bca3c0882c0834c2"
+    },
+    "B": {
+      "path": "tasks/B_QUEUE_JOIN_V1_r2.md",
+      "sha256": "867e0b69d2fc51f2e6d686574ed104aad24f155fa60adcd34f166d36519298dd"
+    },
+    "A_preparation": {
+      "path": "tasks/A_MAIN_PIPELINE_PREP_V1.md",
+      "sha256": "2c0941f360d811962354184a5a4af4fb497282d1812ba76864c77173716f2a05"
+    },
+    "B_preparation": {
+      "path": "tasks/B_INDEPENDENT_PIPELINE_PREP_V1.md",
+      "sha256": "e1e6668bb222af561a4102393253e93cccd0b0161834eec2084f52a054a9094d"
+    }
+  },
+  "implementation_install_start_and_continuation_authorized": true,
+  "manual_per_batch_release_required": false,
+  "automatic_stage_collection_source_limit": 475,
+  "automatic_activation_gates": [
+    "frozen_science_unchanged_and_targeted_queue_checks_pass",
+    "immutable_package_SHA_manifest_READY",
+    "detached_singleton_control_plane_tests_pass",
+    "node_environment_and_fixed_GPU_identity_verified_in_existing_entry",
+    "A_legacy_wave_all_descendants_exit_and_publication_cleanup_complete",
+    "per_batch_shared_storage_reservation_and_current_capacity_gate",
+    "current_V2_authority_and_node_role_match_before_each_admission"
+  ],
+  "allow_new_standalone_GPU_probes": false,
+  "training_or_formal_evaluation_authorized": false,
+  "legacy_CONTROL_scope": "Keep bytes unchanged for currentBatch3. Queue_bootstrap/control-plane and migrated future jobs use this separate explicit authorization; no bypass of frozen legacy entry.",
+  "legacy_releases_reusable": false,
+  "holder_policy": "one_node_reservation_across_runnable_queue; all8off until no runnable work and all descendants/publication drained",
+  "storage_risk_acceptance": {
+    "mode": "bounded_queue_stage_v2",
+    "accepts_monitoring_gaps": true,
+    "project_quota_known": false,
+    "exclusive_filesystem_reservation": false,
+    "shared_reservation_ledger_required": true,
+    "per_parent_admission_bytes": 11609841664,
+    "batch_auxiliary_bytes": 536870912,
+    "free_floor_bytes": 536870912,
+    "per_parent_inodes": 70000,
+    "batch_auxiliary_inodes": 4096,
+    "unknown": [
+      "quota",
+      "outside_or_unlinked_temp",
+      "monitor_overshoot",
+      "RSS_VRAM_peaks",
+      "actual_IO"
+    ],
+    "B_preserve_A_next_batch_floor_bytes": 93952475136,
+    "shared_lock": "short atomic reservation transaction only; never held during model work or whole publication"
+  },
+  "automatic_retry": false,
+  "same_technical_signature_consecutive_failure_breaker": 3,
+  "deletion_authorized": false,
+  "methods_or_hyperparameters_change_authorized": false,
+  "allowed_code_changes": [
+    "queue_supervisor_drain_and_atomic_ledger",
+    "queue_aware_non_nested_reservation_entry",
+    "per_node_host_device_metadata_binding",
+    "source_owner_and_split_generalization_exact_frozen_plan",
+    "deterministic_config_budget_and_command_generation",
+    "automatic_existing_technical_validator_and_publication",
+    "detached_service_join_waiter_and_recovery",
+    "resource_admitted_parallel8_and_real_utilization_control_plane_metrics",
+    "independent_node_stage_DAG_and_CPU_pipeline_preparation",
+    "migrate_verified_own_B_V1_join_waiter_to_current_V2_no_guard_restart"
+  ],
+  "scientific_baseline": {
+    "protocol": {
+      "path": "contracts/COMMON_POOL_PROTOCOL_DECISIONS_V2.md",
+      "sha256": "70a264d35a3b58e104a5b671ba5aac4d4d23c0f73844f8ffd2d154f34a7235c0"
+    },
+    "latest_proposal": {
+      "path": "results/A/A11_BATCH3_PREP_CPU_V1/proposal/PROPOSAL.json",
+      "sha256": "6e568f44bd084852ef52bdba6e4535e5ce84d8baaf5d75b5a1cd095d4dcc346d"
+    },
+    "task_table": {
+      "path": "results/A/A11_MT50_CONTINUATION_CPU_V1/config/MT50_TASK_TABLE.json",
+      "sha256": "2455eb6026587b134dfc6b7d480b66c2afd58ad31903759239f8da6018073ed2"
+    }
+  },
+  "daemon_running_claimed": false,
+  "supersedes": {
+    "path": "persistent_queue/AUTHORIZATION_V1.json",
+    "sha256": "f0790bbfdbe263be1044ef9ce3773d4ab0b3a63616edf04feda2e86103edf7b5"
+  },
+  "task_revisions": {
+    "A_QUEUE_BOOTSTRAP_V1": 2,
+    "B_QUEUE_JOIN_V1": 2,
+    "A_MAIN_PIPELINE_PREP_V1": 1,
+    "B_INDEPENDENT_PIPELINE_PREP_V1": 1
+  },
+  "amendments": [
+    {
+      "path": "persistent_queue/GPU_UTILIZATION_POLICY_V2.md",
+      "sha256": "850fb902f9cefa1b66d5d11a9883707052611f6e39c5443bee659d9a9ee0612a"
+    },
+    {
+      "path": "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md",
+      "sha256": "b16990af45bb61c3bb7f30f65bd4d8883a0330c9cebaaad2c3b6f5101ff6a427"
+    }
+  ],
+  "precedence": "V2 authorization and amendments supersede conflicting V1 owner/concurrency/B-canary/shared-stage-stop terms; unchanged science remains V1",
+  "collection_source_limits_by_node": {
+    "A": 475,
+    "B": 0
+  },
+  "max_collection_parallel_parents_by_node": {
+    "A": 8,
+    "B": 0
+  },
+  "target_useful_GPU_count_per_node": 8,
+  "node_failure_isolation": true,
+  "A_waits_for_B": false,
+  "current_authority_gate": "every new admission must match persistent_queue/CONTROL.json current authorization path/SHA; V1 forbidden for new work after V2 switch",
+  "B_runtime_observed": "V1 detached join-waiter only, awaiting absent package; no collection daemon or collection claim observed"
+}

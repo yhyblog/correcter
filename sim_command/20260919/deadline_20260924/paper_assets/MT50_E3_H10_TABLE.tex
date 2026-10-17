@@ -1,0 +1,14 @@
+% Same 500 fixed MT50 test sources, pi0.5 SFT030000, H=10.
+% Frozen existing training data differ across methods; preserve native protocols.
+% GAF-v1 adapted is pending final completion and is intentionally absent here.
+\begin{tabular}{lrr}
+\hline
+Method & Successes / Episodes & Success (\%) \\
+\hline
+Base policy & 308 / 500 & 61.6 \\
+Replanning & 336 / 500 & 67.2 \\
+VLA-Corrector (existing checkpoint) & 319 / 500 & 63.8 \\
+Ours--Post & 345 / 500 & 69.0 \\
+Ours--Velocity & 340 / 500 & 68.0 \\
+\hline
+\end{tabular}

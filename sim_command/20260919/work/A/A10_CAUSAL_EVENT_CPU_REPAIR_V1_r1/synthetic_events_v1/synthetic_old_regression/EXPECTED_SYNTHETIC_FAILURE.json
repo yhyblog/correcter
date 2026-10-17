@@ -1,0 +1,12 @@
+{
+  "type": "TypeError",
+  "message": "dict() got multiple values for keyword argument 'branch'",
+  "branch": "Post",
+  "stage": "branch_start",
+  "category": "expected_old_regression",
+  "operation": null,
+  "synthetic": true,
+  "traceback": "Traceback (most recent call last):\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1/cpu_checks/check_events.py\", line 49, in old_regression\n    try:module.run_branch(e,'Post')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_CPU_V1/code/causal_contract.py\", line 63, in run_branch\n    engine.emit('branch_start',branch=branch,state_restored=False,shared_prefix=False)\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_CPU_V1/code/runtime_engine.py\", line 50, in emit\n    row=dict(schema='private_causal_event_v1',event_id=self.events,event=name,branch=self.branch,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: dict() got multiple values for keyword argument 'branch'\n",
+  "traceback_present": true,
+  "traceback_origin": "exception object at current handler; never reconstructed from saved error text"
+}

@@ -1,0 +1,11 @@
+# A_D24_FULL_Q_LOSS_SELECTION_V1
+
+owner A，revision1。用户已授权完整Q损失消融→开发选损失→正式验证；不得再询问每批许可。
+
+先立即读取并落实 deadline_20260924/Q_LOSS_PRIORITY_OVERRIDE_V1.json。取消Random-multi及该节点未进入的旧配置P/V范围，保留已进入结果，安全排空自有族；若运行器没有逐episode准入机制可取消自身runner并将缺项标user_cancelled/unknown，不能标任务失败或自动重跑旧配置。原授权/旧证据不覆盖。
+
+完整科学任务：deadline_20260924/FULL_Q_LOSS_SELECTION_PLAN_V1.md；授权：deadline_20260924/FULL_Q_LOSS_SELECTION_AUTHORIZATION_V1.json（SHA 8fc0bf2c7c0c761d9fba424fb7fb127af8a9c505668fccd7231126535c6422c1）。必须同时消费 deadline_20260924/EVALUATION_CONCURRENCY_24_V1.md：评测目标每GPU3worker、8GPU共24，容量不足报真实限制和最大可行并发，不能无证据沿用8。正式wave所有holder停算。
+
+A负责48个完整7058参数Q从头训练192000更新、dev2400锁定共同loss与fit9101、test四loss1200、所选Q的multi五H双分支5000和H10once双分支1000。共9600first，cap10100，累计27000。旧E6/N/R/外部保留，旧微调E1未进入不再执行。SELECTION.json先落盘且不可因test更改，供B/C自动读取。输出小型train/dev/selection/test/main/cost表，分析端更新总表。
+
+有限detached队列和唯一claim；普通容量/必要接口检查、首计划episode验证，不增加预检/完整一致性核查。原线程事件通知、稳定后STABLE_HANDOFF结束LLM等待。输出本节点results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/与receipts/A/A_D24_FULL_Q_LOSS_SELECTION_V1_ACK.json、_RESULT_r*.json。记录撤销实际生效边界/已保存/在途/未启动量、取消原因与资源余量，队列投递不等于已停止或运行。

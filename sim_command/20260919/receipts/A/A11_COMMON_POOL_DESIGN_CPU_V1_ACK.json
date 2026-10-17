@@ -1,0 +1,62 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A11_COMMON_POOL_DESIGN_CPU_V1",
+  "revision": 1,
+  "owner": "A",
+  "hostname": "trial-303224955-trialrun-303224955-worker-0",
+  "status": "ACK",
+  "at_utc": "2026-09-20T01:55:13.784082+00:00",
+  "release": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P00_COMMON_POOL_DESIGN_CPU_V1.json",
+    "size_bytes": 6100,
+    "sha256": "31460414a14dd03d1e255b060ddda903bffad4ea5363cf5a42b11aaec224cece"
+  },
+  "CONTROL": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/CONTROL.json",
+    "size_bytes": 46526,
+    "sha256": "01e6691cbd057b46e78129eca20a00b712cafccf44847c030bb61c3ef5dba1a0"
+  },
+  "TASK_BOARD": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/TASK_BOARD.json",
+    "size_bytes": 24536,
+    "sha256": "f4c309ece701554294ab7157b24a91d8ae431cfff500be59d581f39cfa9effa0"
+  },
+  "board_entry": {
+    "id": "A11_COMMON_POOL_DESIGN_CPU_V1",
+    "owner": "A",
+    "status": "ready",
+    "revision": 1,
+    "dependencies": [
+      "A10_PV_DIRECTION_CPU_ANALYSIS_V1"
+    ],
+    "dependency_outcome_required": "saved_direction_analysis_accepted_no_new_diagnostic_required_now",
+    "brief": "tasks/A11_COMMON_POOL_DESIGN_CPU_V1.md",
+    "release": "releases/P00_COMMON_POOL_DESIGN_CPU_V1.json",
+    "expected_result": "receipts/A/A11_COMMON_POOL_DESIGN_CPU_V1_RESULT.json"
+  },
+  "task_brief": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/tasks/A11_COMMON_POOL_DESIGN_CPU_V1.md",
+    "size_bytes": 4706,
+    "sha256": "6cffa162ee74a0382d5428874dae7da2acc0a50af22a580cdeb9444e1922499f"
+  },
+  "design_contract": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/COMMON_POOL_CPU_DESIGN_SCOPE_V1.md",
+    "size_bytes": 4192,
+    "sha256": "f919ac8d543ae0d499535c3fc2cf897b26360b996d320f306dfbd5a3ee4bf823"
+  },
+  "dependency": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/PV_DIRECTION_CPU_ANALYSIS_V1_ACCEPTANCE.json",
+    "size_bytes": 5633,
+    "sha256": "b11d9fb4f47150be0ffbefee049f1ea700213b07c0a55ba46c401035540a8726"
+  },
+  "package": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_DESIGN_CPU_V1",
+  "work": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_DESIGN_CPU_V1_r1",
+  "scope": "CPU design and parameterized resource/storage quote only; no collector/logger implementation or runtime calls",
+  "all_compute_limits_zero": true,
+  "actual_collection_authorized": false,
+  "training_authorized": false,
+  "holder_queries_or_changes": 0,
+  "old_evidence_read_only": true,
+  "B_unchanged": true,
+  "session_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13"
+}

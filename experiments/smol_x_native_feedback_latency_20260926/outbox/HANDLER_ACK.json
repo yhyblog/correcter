@@ -1,0 +1,40 @@
+{
+  "event": "terminal_or_failure",
+  "status": "handled",
+  "handled_utc": "2026-09-26T03:35:10.605846+00:00",
+  "thread": "01a0d6d5-d777-7ca1-afaf-6dd2f1aa27a1",
+  "result_status": "complete",
+  "summary_status": "complete",
+  "formal_failures": [],
+  "measured_queries": 600,
+  "warmups_excluded": 120,
+  "frequency_windows": 40,
+  "validation_issues": [],
+  "verified": [
+    "RESULT.json",
+    "REPORT.md",
+    "SUMMARY.json",
+    "workers/worker_*/latency.jsonl",
+    "workers/worker_*/frequency.jsonl",
+    "FAMILY_EXIT.json"
+  ],
+  "raw_results_preserved": true,
+  "completed_units_rerun": false,
+  "recursive_callback_registered": false,
+  "report_correction": {
+    "issue": "initial REPORT retained obsolete PI05/Q prose and omitted backbone labels",
+    "original_report": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/smol_x_native_feedback_latency_20260926/archive/REPORT_initial_template_20260926.md",
+    "action": "fixed report/CSV labels and experimental description; CPU-only reaggregation; original RESULT and raw measurements unchanged"
+  },
+  "conclusions": {
+    "native_features": true,
+    "trained_auxiliary_networks": false,
+    "Q_included": false,
+    "Smol_saturated_feedback_with_3Hz_policy_Hz": 23.25,
+    "X_saturated_feedback_with_3Hz_policy_Hz": 10.05,
+    "feedback_6Hz_achieved_both": true,
+    "feedback_30Hz_with_policy_achieved_both": false
+  },
+  "report": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/smol_x_native_feedback_latency_20260926/REPORT.md",
+  "archive": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/docs/EXPERIMENT_RESULTS_MASTER.md"
+}

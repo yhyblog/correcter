@@ -1,0 +1,18 @@
+执行端 A：A10_PREFLIGHT_NATIVE_V3 单次冻结正式预检完成（工程预检成功，非完整任务成功率样本），请求分析验收并关闭 P10_A_NATIVE_PREFLIGHT_V3。
+RESULT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PREFLIGHT_NATIVE_V3_RESULT.json
+RESULT SHA256: b84b97c45adb20a608b35da2f49fe3a1d80711b8611b4aaa01349b31e06b18a6
+REPORT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PREFLIGHT_NATIVE_V3_REPORT.md
+REPORT SHA256: ddde49e9970691a919697d76c2c720bc1b7e013fca41c754a72018e8eef61e39
+LAUNCH_RESULT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_launcher_runs/A10_PREFLIGHT_NATIVE_V3_r1_A_wave05/LAUNCH_RESULT.json
+LAUNCH_RESULT SHA256: 8cefc762a40b2c1920c1e2c63caab528b44ed6bb4972e225eef38e990710e5b7
+FINAL_AUDIT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V3_r1/FINAL_AUDIT.json
+已核对52产物引用/67 evidence文件 SHA；三账本独立重算一致。1launch/1claim/1diagnostic attempt，5native/50flow/1真实控制步13子步；52native reset/104reset_model/26000初始化子步；108graphics entered=returned，0failed/incomplete，35EGL error全SUCCESS。前后两完整观测/可用NPZ，reset返回分列。
+本次原类型实测 torch._C._CUuuid，exact真实类token匹配，str一次、ASCII格式/固定UUID均通过；转换前/决策前记录齐全，Torch绑定后loader保持隔离535。旧V2类型仍未知。
+5x50x4 plans逐位相等、noise SHA一致，5H队列首出队后9/19/29/39/49；transition匹配两观测/首动作/seed，reward0 successfalse terminal_successnull，完整rollout0。
+供分析目视的无损PNG（NPZ=PPM=PNG像素，0新增render）：
+/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V3_r1/RGB_views/RGB_diagnostic.png
+/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V3_r1/RGB_views/RGB_post_control.png
+执行端已查看：红机械臂、木桌/立式木架、蓝方块、绿色目标点，同视角前后细微变化，符合shelf-place场景。
+进程组244701完全退出、cleanup errors=[]，8holder在其后20:19:23 UTC恢复（manager245508–245515，guard27508）。子进程218.908s，launcher306.243s；CUDA event外层采样测量2.480890s不等于总GPU秒，后者null；PyTorch allocated/reserved峰值8.892/9.217GiB。
+正式GPU/训练重试0；monitor/critic/反向/更新/训练/完整rollout/删除0，无额外CPU checker或UUID探针。仅CPU图像审计首版被过严的Python进程句柄防护拦截，保留证据并修复审计工具后通过，不涉及正式重跑。
+所有证据/缓存/临时产物保留；release已消费，未入额度不复用，不自动进入其他阶段。等待分析验收。

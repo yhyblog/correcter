@@ -1,0 +1,78 @@
+{
+  "task_id": "corrector-small-20260916",
+  "updated_at": "2026-09-16T14:51:55.268629+00:00",
+  "state": "completed_no_blockers",
+  "issues": [
+    {
+      "id": "output_root",
+      "finding": "common ROOT currently experiments/metaworld_small_20260916; executor authorized outputs/metaworld_small_20260916 only",
+      "required": "Align output root before prepare.",
+      "status": "resolved",
+      "resolution": "已改为 outputs/metaworld_small_20260916，所有本轮产物位于该目录。"
+    },
+    {
+      "id": "scope",
+      "finding": "Draft common retains four rollout METHODS and hard550; updated user/task specifies five arms,600 research,653 planned,hard700.",
+      "required": "Update all method/budget/report paths consistently.",
+      "status": "resolved",
+      "resolution": "冻结五执行臂；600正式+25预检+20capture+8并发复现=653，hard700。"
+    },
+    {
+      "id": "prediction_set",
+      "finding": "prepare_bank predicts GENERATED_METHODS(8) while evaluation checks predictions set equals METHODS(rollout arms); exact audit fails.",
+      "required": "Validate generated predictions against GENERATED_METHODS; do not require fixed10 critic predictions for continue_old.",
+      "status": "resolved",
+      "resolution": "按GENERATED_METHODS审计8个候选；continue_old不使用fixed10 critic预测。"
+    },
+    {
+      "id": "old_queue",
+      "finding": "restore replays physics but does not restore queue. old must use saved full_plan[plan_age:] before any new VLA call, then natural fixed50.",
+      "required": "Separate old prefix/suffix stride audit. No clear at cut+10.",
+      "status": "resolved",
+      "resolution": "120条old分支已审计：原raw队列自然耗尽后native50，不响应G0，不在cut+10清队列。"
+    },
+    {
+      "id": "baseline_index",
+      "finding": "Adding old as first METHODS element requires explicit replan index everywhere; y[0] must not silently change correction reference.",
+      "required": "old-vs-replan contrast separate; compare corrections to specified replan.",
+      "status": "resolved",
+      "resolution": "固定METHODS[0]=replan，continue_old放最后；独立重算600条分支对照一致。"
+    },
+    {
+      "id": "same_prefix",
+      "finding": "old and replan have different continuation schedules; identical first10 alone cannot imply identical full outcomes.",
+      "required": "Limit identical-prefix paired-outcome assertion to fixed10 arms.",
+      "status": "resolved",
+      "resolution": "相同前十步结局一致检查仅适用于fixed10干预臂，排除continue_old。"
+    }
+  ],
+  "source_status": "最终就绪版本已完成预检、正式采样、全部审计及独立复核；历史草稿问题均已解决。",
+  "gpu_work_started": true,
+  "open_blockers": [],
+  "simulator_attempts": 653,
+  "hard_maximum": 700,
+  "formal_branches_complete": 600,
+  "ready_matches_completed_freeze": true,
+  "additional_execution_needed": false,
+  "new_simulator_attempts_this_acknowledgement": 0,
+  "timing_review": {
+    "status": "resolved",
+    "restore_seconds": "单列",
+    "candidate_bank_seconds": "回放结束后计时，含上下文/全部候选/评分/写盘",
+    "wall_seconds": "整体含restore",
+    "no_post_gradient_deployment_latency_claim": true
+  },
+  "evidence": {
+    "preflight_audit": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/audits/preflight.json",
+    "development_audit": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/audits/development.json",
+    "independent_review": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/EXECUTOR_INDEPENDENT_REVIEW.json",
+    "evaluation": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/evaluation.json",
+    "execution_report": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/docs/SMALL_BATCH_EXECUTION_20260916.md"
+  },
+  "independent_summary_review": {
+    "status": "resolved",
+    "finding": "Prepared summary used total wall including restore for candidate generation label.",
+    "resolution": "Separate restore/candidate bank/total wall; reran independent summary and verified cost means, timing sum, ledger SHA, categories and 290 frozen runtime code hashes.",
+    "audit": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/EXECUTOR_ANALYSIS_RUN_20260916.json"
+  }
+}

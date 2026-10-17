@@ -1,0 +1,166 @@
+{
+  "task_id": "A_D24_E3_UNSTARTED_CONTINUATION_V1",
+  "revision": 2,
+  "status": "COMPLETED_453_FIRST_ENTRIES_MERGED_500",
+  "utc": "2026-09-22T05:16:42.513842+00:00",
+  "host": "trial-303224955-trialrun-303224955-worker-0",
+  "continuation": {
+    "H": 10,
+    "attempts": 453,
+    "command_type": "continuation_of_unstarted_sources",
+    "complete": true,
+    "episode_seconds_sum": 2985.246967117302,
+    "flow_calls": 84000,
+    "interventions": 1280,
+    "method": "VLA-Corrector",
+    "native_repeated_intervention": true,
+    "old_entered47_replayed": 0,
+    "our_G0_once_applied": false,
+    "planned_episodes": 453,
+    "policy_calls": 8400,
+    "publication_failures": 0,
+    "same_A_main500_sources": true,
+    "source_claims": 453,
+    "successes": 299,
+    "technical_failures": 0,
+    "terminal_episodes": 453,
+    "training_data": "existing corrector_pi05_mt50/latents_pi05_mt50 lineage; not a common-final-pool comparison",
+    "utc": "2026-09-22T05:01:38.114384+00:00"
+  },
+  "combined": {
+    "H": 10,
+    "complete": true,
+    "continuation_command_is_not_retry": true,
+    "current_worker_failures": 0,
+    "failure_count_scope": "Process/publication failures separate from scientific terminal outcomes; never whole-wave technical zero.",
+    "method": "VLA-Corrector",
+    "missing_or_technical_source_ids": [],
+    "native_repeated_intervention": true,
+    "new_continuation_results": 453,
+    "new_physical_attempts": 453,
+    "old_V1_pre_model_nonzero_worker_exits": 8,
+    "old_r2_runtime_worker_failures": 8,
+    "old_retry_remaining": 0,
+    "our_G0_once_applied": false,
+    "planned_scientific_sources": 500,
+    "prior_A_D24_physical_attempts": 8367,
+    "r2_original_structured_results": 39,
+    "recovered_original_terminal_results": 8,
+    "resource_completeness": false,
+    "resource_missing_reason": "Eight recovered r2 terminal records lack exact sampling/flow/time; retained as null, not zero.",
+    "success_rate_on_valid": 0.638,
+    "successes": 319,
+    "training_data": "Existing epoch30 corrector training; not the common-final-pool training comparison.",
+    "utc": "2026-09-22T05:01:38.502162+00:00",
+    "valid_scientific_episodes": 500
+  },
+  "launch_cleanup_restoration": {
+    "cleanup": {
+      "actions": [],
+      "elapsed_seconds": 0.002216142136603594,
+      "process_group": 1837096,
+      "scope": "guard-created isolated session; native diagnostic forbids detached descendants",
+      "status": "all_formal_group_members_exited"
+    },
+    "fatal": null,
+    "raw_lifecycle_exit": 0,
+    "restoration": {
+      "external_jobs_preserved": true,
+      "guard_status": {
+        "gpus": {
+          "0": {
+            "driver_pids": [
+              175447
+            ],
+            "manager_pid": 1843104,
+            "state": "holder"
+          },
+          "1": {
+            "driver_pids": [
+              175448
+            ],
+            "manager_pid": 1843105,
+            "state": "holder"
+          },
+          "2": {
+            "driver_pids": [
+              175450
+            ],
+            "manager_pid": 1843106,
+            "state": "holder"
+          },
+          "3": {
+            "driver_pids": [
+              175452
+            ],
+            "manager_pid": 1843107,
+            "state": "holder"
+          },
+          "4": {
+            "driver_pids": [
+              175455
+            ],
+            "manager_pid": 1843108,
+            "state": "holder"
+          },
+          "5": {
+            "driver_pids": [
+              175458
+            ],
+            "manager_pid": 1843109,
+            "state": "holder"
+          },
+          "6": {
+            "driver_pids": [
+              175459
+            ],
+            "manager_pid": 1843110,
+            "state": "holder"
+          },
+          "7": {
+            "driver_pids": [
+              175461
+            ],
+            "manager_pid": 1843111,
+            "state": "holder"
+          }
+        },
+        "pid": 27508,
+        "updated": 1790053309.1648858
+      },
+      "observed_at": {
+        "monotonic_seconds": 4093194.205090508,
+        "unix_seconds": 1790053309.6555169,
+        "utc": "2026-09-22T05:01:49.655518+00:00"
+      },
+      "status": "occupancy_resolved"
+    },
+    "utc": "2026-09-22T05:01:49.658992+00:00"
+  },
+  "retry_remaining_old_r2": 0,
+  "rerun_old47": 0,
+  "report": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_E3_UNSTARTED_CONTINUATION_V1_REPORT_r2.md",
+  "artifacts": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_E3_UNSTARTED_CONTINUATION_V1/COMBINED_FINAL_SUMMARY.json",
+      "sha256": "f993b15bda1b202bb48aa0582c22737a89ddc0c77a24127ec03a02b6cab3809d"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_E3_UNSTARTED_CONTINUATION_V1/COMBINED_EPISODES.json",
+      "sha256": "6a7b15877973d8444c8cfdef83f624373142cd25822db79b79d742cb946b9ed6"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_E3_UNSTARTED_CONTINUATION_V1/FINAL_SUMMARY.json",
+      "sha256": "32ca117f88bc7c9bf31609fd78a82a2e7b1097fb6f7731fdc3f0aa1a1d05811d"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_E3_UNSTARTED_CONTINUATION_V1/chain/CHAIN_RESULT.json",
+      "sha256": "8844ad0734966d06cac609aaf4e4b0bcd13a139f3cbec84687349396068582e5"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_E3_UNSTARTED_CONTINUATION_V1/chain/MANAGER_EXIT.json",
+      "sha256": "d2185d0e6ff22bf6eb2c7b4ba721a3a55e9839310b63d6d117db4f392ca85876"
+    }
+  ],
+  "next_stage": "GAF internal holdout authorized separately; no new collection"
+}

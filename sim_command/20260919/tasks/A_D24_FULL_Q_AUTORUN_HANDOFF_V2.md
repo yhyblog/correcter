@@ -1,0 +1,11 @@
+# A_D24_FULL_Q_AUTORUN_HANDOFF_V2
+
+owner A，revision1。用户已授权把剩余任务自动串联，并再次强调先完成消融选配置，再跑正式实验。当前任务是既有11600范围的重分配，不新增训练/采集/科学矩阵。
+
+完整安排：deadline_20260924/FULL_Q_AUTORUN_ASSIGNMENT_V2.md；授权：deadline_20260924/FULL_Q_AUTORUN_AUTHORIZATION_V2.json（SHA fb15e23ad4ed75eaa1b9490784d58dc9dc925e440194e99cab066ae11af6414f）。必须读取原FULL_Q_LOSS_SELECTION_PLAN_V1、并发24规则及OWNERSHIP_PLAN_V2。
+
+保持原DEV2400继续。立即CPU准备有界阶段观察器：必须先等完整DEV产生有效SELECTION及锁，随后按本任务manager实际支持的正常停止新派单/worker边界排空路径做交接；不能直接改活配置或让整个原MAIN5000再跑。必要时仅对核实的本任务manager单PID用其正常SIGTERM处理（不得硬发整个worker族）；保留窗口内已发ABLATION。发布TRANSFER_READY.json，列B H20/30和C H40/50的精确未claim job/source，A已进入者排除。原A族退出后新私有continuation自动跑尚未完成ABLATION1200、MAIN H10 P/V1000、ONCE H10 P/V1000，不含已转移H。cap3500减去旧已完成单元，累计27000。不能重训48fits、重做dev或改选型。CPU表图按B/C结果到达增量并表，不阻对方科学链。通知原线程但不等聊天放行。
+
+目标每GPU3worker/共24；资源不足报告实际限制和可行最大并发。每阶段有限后台、唯一claim、结果先落盘、整族退出和恢复、完成/失败事件原会话自动处理。常规已授权下一项不用再问权限，不在LLM中长轮询。所有阶段受原截止和12小时有限范围约束，依赖未满足保持轻量等待和占卡恢复，不能提前正式评测。
+
+交receipts/A/A_D24_FULL_Q_AUTORUN_HANDOFF_V2_ACK.json、_RESULT_r*.json及results/A/A_D24_FULL_Q_AUTORUN_HANDOFF_V2/QUEUE_READY.json、具体ORDERED_STAGES.json、STABLE_HANDOFF。只有真实部署后才能写已自动续跑；投递不代表ACK/launch。共享CONTROL/BOARD/总表仅分析写。

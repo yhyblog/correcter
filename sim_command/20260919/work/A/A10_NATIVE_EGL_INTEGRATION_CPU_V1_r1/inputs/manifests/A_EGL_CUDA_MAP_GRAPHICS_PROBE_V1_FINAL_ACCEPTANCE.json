@@ -1,0 +1,122 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "reviewed_at_utc": "2026-09-19T18:53:36.642494+00:00",
+  "status": "single_static_graphics_path_accepted",
+  "receipt": {
+    "path": "receipts/A/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_RESULT.json",
+    "sha256": "62fb6e9bca18b53f9e55edc7346bbd2f21da24117b4101d9fa148a2cd85079ea"
+  },
+  "audit": {
+    "path": "work/A/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1/FINAL_AUDIT.json",
+    "sha256": "0b33eeea8729c40b1ddf63e7d03264d690d15310ece8ded513e086eec30683a6"
+  },
+  "LAUNCH_RESULT": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/EGL_graphics_runs/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1_A_wave03/LAUNCH_RESULT.json",
+    "sha256": "af193c22f56eb7d24186d17a0ba7f37cc11685d9f2ddeb2b9e9ac9b00d101197",
+    "bytes": 4554
+  },
+  "image": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1/RGB_VIEW.png",
+    "sha256": "a7f903ce48654667a643fe6a5c0afee8214736ed3e6fa98ab28b507320ed2633",
+    "bytes": 3520
+  },
+  "source_RGB": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/EGL_graphics_runs/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1_A_wave03/graphics/rgb.npy",
+    "sha256": "c54779ce229370a193da93de18b041c20fd234973543dca84f4ff8e27b0780db",
+    "bytes": 12416
+  },
+  "scene": {
+    "path": "results/A/A10_EGL_CUDA_MAP_CPU_V1/scene.xml",
+    "sha256": "f82da007b1c54685280718d8f2787c59ea3c82a1f97e8e124f910ee18de2c3ae"
+  },
+  "root_verification": {
+    "RESULT_artifact_references_SHA_and_size": 25,
+    "complete_manifest_files_SHA_and_size": 45,
+    "raw_events_reconciled": 105,
+    "NPY_PPM_payload_identical": true,
+    "PNG_provenance_SHA_verified": true,
+    "saved_RGB_visually_inspected": true
+  },
+  "visual_observation": "One shaded red-orange sphere on a blue-grey perspective plane against black background; visually consistent with frozen scene.xml, rather than acceptance by nonempty-buffer statistics alone.",
+  "resource_counts": {
+    "graphics_probe_attempts": 1,
+    "egl_device_enumerations": 1,
+    "egl_device_string_queries": 8,
+    "probe_explicit_egl_get_proc_address_calls": 5,
+    "egl_device_attribute_queries": 8,
+    "cuda_driver_initializations": 1,
+    "cuda_device_pci_queries": 8,
+    "egl_error_queries": 35,
+    "probe_explicit_driver_library_loads": 2,
+    "probe_explicit_cuda_symbol_lookups": 2,
+    "probe_explicit_egl_core_symbol_lookups": 11,
+    "cuda_context_creations": 0,
+    "cuda_kernel_launches": 0,
+    "cuda_device_count_queries": 0,
+    "cuda_uuid_queries": 0,
+    "cuda_error_string_queries": 0,
+    "egl_device_binary_queries": 0,
+    "egl_drm_string_queries": 0,
+    "egl_platform_display_calls": 1,
+    "egl_initialize_calls": 1,
+    "egl_choose_config_calls": 1,
+    "egl_bind_api_calls": 1,
+    "graphics_context_creations": 1,
+    "egl_make_current_calls": 2,
+    "egl_query_string_calls": 2,
+    "probe_explicit_gl_string_queries": 3,
+    "static_scene_constructions": 1,
+    "static_scene_data_constructions": 1,
+    "explicit_mj_forward_calls": 1,
+    "mujoco_render_context_creations": 1,
+    "mujoco_render_context_frees": 1,
+    "mujoco_scene_updates": 1,
+    "render_calls": 1,
+    "rgb_readback_calls": 1,
+    "egl_destroy_context_calls": 1,
+    "egl_terminate_calls": 1,
+    "egl_release_thread_calls": 1,
+    "model_initializations": 0,
+    "model_gpu_inference_calls": 0,
+    "vla_sampling_calls": 0,
+    "flow_forward_calls": 0,
+    "simulator_attempts": 0,
+    "metaworld_environment_instances": 0,
+    "environment_reset_calls": 0,
+    "physics_steps": 0,
+    "env_steps": 0,
+    "completed_rollouts": 0,
+    "optimizer_updates": 0,
+    "gpu_seconds": null,
+    "deletions": 0
+  },
+  "events": {
+    "entered": 105,
+    "returned": 105,
+    "failed": 0,
+    "incomplete": 0
+  },
+  "accepted_findings": [
+    "All8 candidate CUDA handles mapped to PCI and kernel UUID; fixed target confirmed before display",
+    "One NVIDIA EGL context, one static frame and pixel readback completed",
+    "All105 entered calls returned within caps, all35 EGL error queries report success",
+    "Static data.time0 to0; no VLA/MetaWorld/reset/physical advancement/training",
+    "Cleanup completed; all8 A holders resumed only after process-family exit"
+  ],
+  "independent_review": {
+    "agent": "/root/cuda_graphics_result_audit",
+    "blocking_findings": []
+  },
+  "prelaunch_observer_revision": "CPU path assertion corrected before claim/launcher; frozen code unchanged; not a runtime retry",
+  "scope_limits": [
+    "Only this A-node isolated graphics stack and static scene",
+    "Native v5 and full MetaWorld RGB chain remain unvalidated",
+    "VLA sampling, Post/Velocity, rollouts and task performance remain unvalidated",
+    "GPU-seconds and allocator peak remain unknown; NVML and RSS observations retain stated scope"
+  ],
+  "holder_restored_count": 8,
+  "closure": "releases/P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_CLOSED.json",
+  "retry_authorized": false,
+  "unspent_budget_reusable": false,
+  "next_step": "CPU-only native EGL integration and a separately frozen native V2 proposal"
+}

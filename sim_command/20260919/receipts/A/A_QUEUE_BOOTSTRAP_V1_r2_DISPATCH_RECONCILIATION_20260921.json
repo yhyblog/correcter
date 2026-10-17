@@ -1,0 +1,111 @@
+{
+  "task_id": "A_QUEUE_BOOTSTRAP_V1",
+  "task_revision": 2,
+  "receipt_kind": "DELAYED_DISPATCH_RECONCILIATION",
+  "utc": "2026-09-21T16:14:44.263290+00:00",
+  "received_dispatch_board_revision": 63,
+  "current_board_revision": 70,
+  "current_queue_control_revision": 10,
+  "requested_authorization_SHA_verified": "d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928",
+  "current_control": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/CONTROL.json",
+    "sha256": "02ec33178d1cd265b5477fa5749ae604a806376b533dac45bc22284b9da0bccb"
+  },
+  "original_ACK": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_QUEUE_BOOTSTRAP_V1_r2_ACK.json",
+    "sha256": "972332ed1b7148ba9ed591bd6ab1388d9f426a77e2a050de86d306e9289028c7"
+  },
+  "prior_result_preserved": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_QUEUE_BOOTSTRAP_V1_r2_RESULT.json",
+    "sha256": "4c02df3556cdd3202fdb1b37c8c1a4a9b5401f96c8db0cd4421b8764dadfe341"
+  },
+  "actual_running_result": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_SPRINT_V1_RESULT_r3.json",
+    "sha256": "6dcd979cb1832b106996bedecf3bc59075ae6c72f20906da066ee295770aeba9"
+  },
+  "user_explicit_N2500_approval": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/A/USER_SCOPE_APPROVAL.json",
+    "sha256": "fb3b2a1c71a2f9fa6c9eae5ae7e2a30916ecb1a39b0a42d1c69929c1e6d9a187"
+  },
+  "current_heartbeat_snapshot": {
+    "authorization_sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80",
+    "holders": "all8off_until_whole_chain_exit_and_publication",
+    "process": {
+      "boot_id": "9011c00c-6953-4cb3-a724-1a6f90d196d4",
+      "host": "trial-303224955-trialrun-303224955-worker-0",
+      "pgid": 1270859,
+      "pid": 1270859,
+      "ppid": 1,
+      "start_ticks": 404649394,
+      "state": "R"
+    },
+    "progress": {
+      "active_jobs": {
+        "0": "N_H30_push-back-v3",
+        "1": "N_H30_push-wall-v3",
+        "2": "N_H30_reach-v3",
+        "3": "N_H30_reach-wall-v3",
+        "4": "N_H30_push-v3",
+        "5": "N_H30_shelf-place-v3",
+        "6": "N_H30_soccer-v3",
+        "7": "N_H30_plate-slide-back-v3"
+      },
+      "holder_policy": "all8off_until_all_descendants_exit_and_publication",
+      "living_workers": 8,
+      "loaded_workers": 8,
+      "manager": {
+        "boot_id": "9011c00c-6953-4cb3-a724-1a6f90d196d4",
+        "host": "trial-303224955-trialrun-303224955-worker-0",
+        "pgid": 1271167,
+        "pid": 1271167,
+        "ppid": 1270865,
+        "start_ticks": 404655623,
+        "state": "R"
+      },
+      "pending_jobs": 156,
+      "status": "running",
+      "utc": "2026-09-21T16:14:35.638269+00:00"
+    },
+    "status": "formal_chain",
+    "utc": "2026-09-21T16:14:40.783753+00:00"
+  },
+  "current_summary": {
+    "actual_completed_job_count": 83,
+    "cells": {
+      "N_H10": {
+        "attempts": 500,
+        "jobs": 50,
+        "successes": 308,
+        "technical_failures": 0,
+        "technical_failures_are_excluded_not_scored_zero": true,
+        "terminal_success_rate": 0.616,
+        "terminals": 500
+      },
+      "N_H30": {
+        "attempts": 330,
+        "jobs": 33,
+        "successes": 160,
+        "technical_failures": 0,
+        "technical_failures_are_excluded_not_scored_zero": true,
+        "terminal_success_rate": 0.48484848484848486,
+        "terminals": 330
+      }
+    },
+    "source_count_is_per_cell": true,
+    "utc": "2026-09-21T16:14:26.729449+00:00"
+  },
+  "new_formal_launches_this_turn": 0,
+  "new_claims_by_executor_this_turn": 0,
+  "automatic_daemon_claims_continue": true,
+  "legacy_Batch3": "accepted and closed; no hot change or rerun",
+  "remaining475_collection": "disabled by current deadline override; no new collection launch",
+  "B_dependency": false,
+  "B_deployed_by_A": false,
+  "holder_policy": "all8off through continuous formal chain; restore after full exit/publication",
+  "scientific_package_global_READY_published": false,
+  "scientific_package_reason": "full collector migration superseded/deferred; not a current deadline runtime prerequisite",
+  "main_pipeline_CPU_preparation": "task read; executable A12/P20_A/A20 proposals not yet delivered; no claim of completion or new training permission; current scientific priority remains deadline/pilot control",
+  "training_started": false,
+  "deletions": 0,
+  "decision": "preserve authorized running N2500; do not reverse later controls due to delayed board63 dispatch"
+}

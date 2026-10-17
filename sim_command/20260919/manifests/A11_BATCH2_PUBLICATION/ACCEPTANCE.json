@@ -1,0 +1,70 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A11_MT50_CONTINUATION_CPU_V1",
+  "revision": 1,
+  "accepted_at_utc": "2026-09-20T20:56:00.593331+00:00",
+  "status": "CPU_MT50_static_budget_and_fixed_Batch2_preparation_accepted",
+  "receipt": {
+    "path": "receipts/A/A11_MT50_CONTINUATION_CPU_V1_RESULT.json",
+    "sha256": "5dafe4ff5a85fcd8a839eb675e145ed358f2d61e21a22bebfc8633a5ecaffc00"
+  },
+  "report": {
+    "path": "results/A/A11_MT50_CONTINUATION_CPU_V1/REPORT.md",
+    "sha256": "b98e4a0ddf5f289afbe2a4d0e88f3b6f9d409427ef1670d7cc12bd9a9a6bd533"
+  },
+  "evidence_manifest": {
+    "path": "results/A/A11_MT50_CONTINUATION_CPU_V1/EVIDENCE_MANIFEST.json",
+    "sha256": "e52bbe9fe34d64a0b73ed988f721f2ac59da7f8cd78e11bb37a079bdf523dcdf"
+  },
+  "proposal": {
+    "path": "results/A/A11_MT50_CONTINUATION_CPU_V1/proposal/PROPOSAL.json",
+    "sha256": "41a153424343940f6f224a79c5e8558dea4d11d6ee2438fcaaef2005eb223416"
+  },
+  "root_verification": {
+    "path": "manifests/A11_BATCH2_PUBLICATION/ROOT_VERIFICATION.json",
+    "sha256": "28f906f58d14ef4e00cfc56b50cc563256a10f6c16851b3ed95b743a3d96a751"
+  },
+  "initialization_review": {
+    "path": "manifests/A11_BATCH2_PUBLICATION/INITIALIZATION_REVIEW.json",
+    "sha256": "109a24ca8abbfd17c86874eff51928161469e3f356051d8d66c07f6262847dea"
+  },
+  "science_review": {
+    "path": "manifests/A11_BATCH2_PUBLICATION/SCIENCE_REVIEW.json",
+    "sha256": "ba94a659cff31f0129bdaed577140ab6a33522822c484e10a23c1b78684fbfc6"
+  },
+  "resource_review": {
+    "path": "manifests/A11_BATCH2_PUBLICATION/RESOURCE_REVIEW.json",
+    "sha256": "5db55d8e08088b946b8ce5511b492908a90b7bf27e4b59cfc974661ac0ce5a88"
+  },
+  "static_task_budget_count": 50,
+  "unknown_static_task_budgets": 0,
+  "actual_new_task_initializations_validated": 0,
+  "actual_new_paired_samples": 0,
+  "changes": "Table-driven task support plus necessary direct-init mj_step accounting; no physics invocation or numerical algorithm change. All old scientific/lifecycle paths retained.",
+  "extra_init_substeps_per_box_close_or_door_lock_attempt": 520,
+  "selected_batch_extra_init_substeps": 7800,
+  "batch_init_physics_cap": 3127800,
+  "batch_init_forward_cap": 12720,
+  "targeted_CPU_checks_reported": 89,
+  "task_index_note": "ENV_CLS_MAP insertion index, wrapper_environment_id, language_index distinct; current8 A/train0 ASCII selection verified. Future dev ownership ordinal must be explicit before any dev release.",
+  "new_batch_risk_acceptance": {
+    "path": "contracts/BATCH2_RISK_AND_SCOPE_V1.md",
+    "sha256": "34335f83aabb0d785fa3def18059fc9bd5347abcada528ae8525338693ed922a",
+    "mode": "bounded_batch2",
+    "parent_count": 8,
+    "concurrency": 2,
+    "accepts_monitoring_gaps": true,
+    "project_quota_known": false,
+    "exclusive_reservation": false,
+    "required_available_bytes": 93952475136,
+    "minimum_available_inodes": 564096
+  },
+  "physical_equality_proven": null,
+  "next_task": "A11_COMMON_POOL_BATCH2_V1",
+  "no_claim_of_MT50_training_or_method_performance": true,
+  "accepted_pool_unchanged": {
+    "paired_parents": 8,
+    "processed_slots": 9,
+    "remaining_unattempted_slots": 491
+  }
+}

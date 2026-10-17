@@ -1,0 +1,77 @@
+{
+  "schema": "B_prior_partial_event_audit_v1",
+  "event_id": "B_ced84ae94b292f1b4dfa4a302677cc2e",
+  "task_id": "B_D24_POST_TRIGGER_MODES_V1",
+  "run_id": "D24_B_POST_TRIGGER_MODES_r1",
+  "node": "B",
+  "executor_thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+  "hostname": "trial-303225685-trialrun-303225685-worker-0",
+  "at_utc": "2026-09-22T11:10:41.353017+00:00",
+  "outcome": "audited_complete",
+  "scope": "Audit original r1 partial terminal event; existing r2 recovery continues and the overall5000-cell task is not yet terminal.",
+  "event_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/outbox/B_ced84ae94b292f1b4dfa4a302677cc2e.json",
+  "event_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_POST_TRIGGER_MODES_V1/RESULT.json",
+  "event_claim": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_POST_TRIGGER_MODES_V1/CLAIM.json",
+  "event_claim_verified": true,
+  "prior_run": {
+    "status": "partial",
+    "attempts": 46,
+    "valid_retained": 39,
+    "technical_interrupted": 7,
+    "unknown": 0,
+    "terminal_summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_POST_TRIGGER_MODES_V1/FINAL_SUMMARY.json",
+    "cause": {
+      "message": "[Errno 2] No such file or directory: '/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/CONTROL.json'",
+      "traceback": "Traceback (most recent call last):\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_POST_TRIGGER_MODES_V1/code/manager.py\", line 133, in main\n    authority()\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_POST_TRIGGER_MODES_V1/code/admission.py\", line 10, in authority\n    doc=read(p);ctl=read(CAMPAIGN/'persistent_queue/CONTROL.json');rootctl=read(CAMPAIGN/'CONTROL.json');node=ctl['nodes']['B'];spec=doc['nodes']['B']\n                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_POST_TRIGGER_MODES_V1/code/qio.py\", line 37, in read\n    return json.loads(p.read_text())\n                      ^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/pathlib.py\", line 1059, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/pathlib.py\", line 1045, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/CONTROL.json'\n",
+      "type": "FileNotFoundError"
+    },
+    "all_owned_processes_exited": true,
+    "original_outputs_preserved": true,
+    "historical_occupancy_restoration_complete": true
+  },
+  "current_control": {
+    "revision": 69,
+    "queue_revision": 37,
+    "task_board_revision": 102,
+    "active_B_tasks": [
+      "B_D24_POST_TRIGGER_MODES_V1"
+    ],
+    "stop_requested": false,
+    "B_enabled": true,
+    "priority_task": "B_D24_POST_TRIGGER_MODES_V1",
+    "snapshots_not_current_runtime": true
+  },
+  "recovery": {
+    "status": "stable_formal_compute",
+    "run_id": "D24_B_POST_TRIGGER_MODES_r2",
+    "claim": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_POST_TRIGGER_MODES_V1/recovery_r2/CLAIM.json",
+    "claim_matches_trigger": true,
+    "recovery_plan": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_POST_TRIGGER_MODES_V1/recovery_r2/config/RECOVERY_PLAN.json",
+    "correction": "retry only transient authority file I/O/JSON read errors for bounded30s; do not reuse cached authorization or ignore stop/change",
+    "corrected_retry_units": 7,
+    "corrected_retry_returned_valid": 7,
+    "unstarted_units_scheduled": 4954,
+    "valid_retained_without_replay": 39,
+    "completed_job_count_snapshot": 35,
+    "completed_job_technical_failures_snapshot": 0,
+    "original_stage_deadline_preserved": 1790102926.704207,
+    "prior_node_attempt_count": 6687,
+    "prior_stage_attempts": 46,
+    "new_queue_launches_this_handler": 0,
+    "new_source_retry_launches_this_handler": 0,
+    "stable_handoff": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_POST_TRIGGER_MODES_V1/recovery_r2/STABLE_HANDOFF.json"
+  },
+  "background": {
+    "state": "stable_8GPU_formal_compute",
+    "loaded_living_workers": 8,
+    "holders": "all8offthroughentireformalwave",
+    "restoration": "existingguardafterentireformalgroup_exit_includingfailure",
+    "observer_alive": true,
+    "observer_pid": 452085,
+    "registered_terminal_trigger": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_B_POST_TRIGGER_MODES_r2__D24_B_POST_TRIGGER_MODES_r2__1.json",
+    "runtime_evidence": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/events/B_ced84ae94b292f1b4dfa4a302677cc2e_RUNTIME.json",
+    "wakeup_readiness": "original_thread_ACK_verified_offline_pending"
+  },
+  "decision": "Original partial event is fully reconciled with already-running corrected recovery. Preserve both claims and r1 technical history; continue r2 automatically without duplicate launch. No unresolved blocker for this event. A does not wait for B.",
+  "A_waits_for_B": false
+}

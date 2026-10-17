@@ -1,0 +1,53 @@
+{
+  "schema": "corrector_gaf_internal_holdout_decision_v1",
+  "task_id": "A_D24_CORE_REMAINDER_V1",
+  "owner": "A",
+  "status": "effective",
+  "issued_at_utc": "2026-09-22T04:33:09.043831+00:00",
+  "parent_authorization": {
+    "path": "deadline_20260924/CONTINUATION_AUTHORIZATION_20260922_V1.json",
+    "sha256": "3e6a0aab7abe79365192c953d45b4e13b44139ab26ffadb6f7c3f82547107d8b"
+  },
+  "brief": {
+    "path": "tasks/A_D24_GAF_INTERNAL_HOLDOUT_V1.md",
+    "sha256": "e703ed277bdfd6c5419d849174c965e32e0dd75b55d76a18e1e22df71981f9ed"
+  },
+  "source_summary": {
+    "path": "results/B/B11_COMMON_POOL_VIEWS_CPU_V1/REAL_VIEW_SUMMARY.json",
+    "sha256": "1d4b271b51cd54a7dc9530211cce66a1556f03e2552094808e5a1026b6871a42"
+  },
+  "rule": "ASCII parent_id first2 among this already published eligible parent set; selected before any GAFfit, no outcome selection",
+  "original_global_split_unchanged": true,
+  "holdout_parents": [
+    "PROPOSED_MT50_assembly_train_0000_parent",
+    "PROPOSED_MT50_basketball_train_0000_parent"
+  ],
+  "training_parents": [
+    "PROPOSED_MT50_bin_picking_train_0000_parent",
+    "PROPOSED_MT50_box_close_train_0000_parent",
+    "PROPOSED_MT50_button_press_topdown_train_0000_parent",
+    "PROPOSED_MT50_button_press_topdown_wall_train_0000_parent",
+    "PROPOSED_MT50_button_press_train_0000_parent",
+    "PROPOSED_MT50_button_press_wall_train_0000_parent",
+    "PROPOSED_MT50_disassemble_train_0000_parent",
+    "PROPOSED_MT50_disassemble_train_0001_parent",
+    "PROPOSED_MT50_pick_place_wall_train_0000_parent",
+    "PROPOSED_MT50_pick_place_wall_train_0001_parent",
+    "PROPOSED_MT50_shelf_train_0000_parent",
+    "PROPOSED_MT50_shelf_train_0001_parent",
+    "PROPOSED_MT50_stick_pull_train_0000_parent",
+    "PROPOSED_MT50_stick_pull_train_0001_parent",
+    "PROPOSED_MT50_stick_push_train_0000_parent"
+  ],
+  "holdout_window_index_count": 8494,
+  "training_window_index_count": 27830,
+  "tensors_ready": false,
+  "all_descendant_branches_and_repeats_grouped": true,
+  "new_collection": false,
+  "test_training": false,
+  "budgets_reset": false,
+  "allowed": "existing real input tensor materialization; then same3x10000fit and500H10 evaluation under parent grant",
+  "actual_qualification_required": "genuine observed state/action/observation references, nonempty train/dev, no source overlap with frozen test",
+  "no_strict_consistency_audit_or_GPU_preflight": true,
+  "if_still_missing": "pause onlyGAF; keep other work running"
+}

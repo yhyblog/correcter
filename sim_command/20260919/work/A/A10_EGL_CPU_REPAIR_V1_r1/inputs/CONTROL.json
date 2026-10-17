@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "campaign_id": "corrector-sim-20260919",
+  "revision": 9,
+  "updated_at_utc": "2026-09-19T17:15:21.781181+00:00",
+  "mode": "prepare",
+  "stop_requested": false,
+  "allowed_task_ids": [
+    "A00",
+    "B00",
+    "A10",
+    "B10",
+    "A10_PREFLIGHT_REVISION_R2",
+    "B10_PREFLIGHT_REVISION_R2",
+    "A10_EGL_CPU_REPAIR_V1"
+  ],
+  "formal_gpu_runs_enabled": false,
+  "preparation_scope": [
+    "read_only_inventory",
+    "cpu_static_checks",
+    "node_receipts",
+    "existing_gpu_guard_policy",
+    "isolated_code_and_config_edits",
+    "cpu_static_synthetic_checks"
+  ],
+  "current_compute_limits": {
+    "simulator_attempts": 0,
+    "env_steps": 0,
+    "vla_sampling_calls": 0,
+    "flow_forward_calls": 0,
+    "vla_backward_calls": 0,
+    "critic_forward_calls": 0,
+    "critic_backward_calls": 0,
+    "monitor_calls": 0,
+    "optimizer_updates": 0,
+    "model_initializations": 0,
+    "environment_instances": 0,
+    "wrapper_instances": 0,
+    "taskset_constructions": 0,
+    "taskset_reset_calls": 0,
+    "wrapper_initialization_reset_calls": 0,
+    "initialization_reset_calls": 0,
+    "diagnostic_reset_calls": 0,
+    "environment_reset_calls": 0,
+    "reset_model_calls": 0,
+    "initialization_do_simulation_calls": 0,
+    "initialization_physics_substeps": 0,
+    "policy_do_simulation_calls": 0,
+    "policy_physics_substeps": 0,
+    "model_gpu_inference_calls": 0,
+    "training_updates": 0,
+    "graphics_probe_attempts": 0,
+    "egl_device_enumerations": 0,
+    "egl_initialize_calls": 0,
+    "graphics_context_creations": 0,
+    "render_calls": 0
+  },
+  "scope": {
+    "external_method_comparison": "pi05_metaworld_simulation_only",
+    "metaworld_main_tasks": 50,
+    "mechanism_tasks": 5,
+    "keep_smolvla_xvla_metaworld": true,
+    "keep_pi05_libero": true,
+    "real_world_owner": "user",
+    "real_world_external_baselines": false
+  },
+  "roles": {
+    "A": {
+      "hostname": "trial-303224955-trialrun-303224955-worker-0",
+      "executor_session_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13"
+    },
+    "B": {
+      "hostname": "trial-303225685-trialrun-303225685-worker-0",
+      "executor_session_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2"
+    },
+    "analysis": {
+      "session_id": "01a0b91f-355f-7cd1-ae36-412500534ffb"
+    }
+  },
+  "historical_runs": "completed_read_only_no_restart",
+  "note": "前次A原生预检已以首次RGB/EGL技术失败结案并关闭；A10_EGL_CPU_REPAIR_V1已放行定向CPU诊断与隔离修复准备，任何EGL枚举/context/渲染仍须新graphics release。B仅CPU，训练/重试/删除均未授权。",
+  "active_preparation_release": "releases/P00_PREP_V1.json",
+  "storage_policy": "contracts/STORAGE_RETENTION_V1.md",
+  "storage_cleanup": {
+    "inventory_by": [
+      "A",
+      "B"
+    ],
+    "decisions_by": "analysis",
+    "shared_historical_deletion_by": "A",
+    "deletion_requires_exact_path_analysis_manifest": true,
+    "active_deletion_release": null,
+    "non_vla_projects_excluded": true
+  },
+  "active_analysis_decisions": "contracts/INVENTORY_DECISIONS_V1.md",
+  "active_followup_preparation_release": "releases/P00_PREFLIGHT_CORRECTIONS_V1.json",
+  "active_compute_release_id": null,
+  "active_compute_release": null,
+  "active_compute_task_ids": [],
+  "per_task_compute_limits": {
+    "A10_PREFLIGHT_NATIVE_V1": {
+      "model_gpu_inference_calls": 0,
+      "simulator_attempts": 0,
+      "training_updates": 0,
+      "model_initializations": 0,
+      "environment_instances": 0,
+      "initialization_reset_calls": 0,
+      "diagnostic_reset_calls": 0,
+      "environment_reset_calls": 0,
+      "initialization_physics_substeps": 0,
+      "policy_physics_substeps": 0
+    },
+    "B10_PREFLIGHT_REVISION_R2": {
+      "model_gpu_inference_calls": 0,
+      "simulator_attempts": 0,
+      "training_updates": 0
+    }
+  },
+  "closed_compute_releases": [
+    {
+      "release_id": "P10_A_NATIVE_PREFLIGHT_V1",
+      "closure": "releases/P10_A_NATIVE_PREFLIGHT_V1_CLOSED.json"
+    }
+  ],
+  "active_egl_preparation_release": "releases/P00_EGL_CPU_REPAIR_V1.json"
+}

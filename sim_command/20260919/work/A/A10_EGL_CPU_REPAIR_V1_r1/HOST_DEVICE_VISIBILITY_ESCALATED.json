@@ -1,0 +1,74 @@
+{
+  "checked_at_utc": "2026-09-19T17:42:48.508042+00:00",
+  "execution_scope": "escalated read-only filesystem inspection; no NVML/EGL/graphics calls",
+  "device_nodes": [
+    {
+      "path": "/dev/nvidia0",
+      "exists": true,
+      "mode": "0o666",
+      "character_device": true,
+      "device_major": 195,
+      "device_minor": 0
+    },
+    {
+      "path": "/dev/nvidiactl",
+      "exists": true,
+      "mode": "0o666",
+      "character_device": true,
+      "device_major": 195,
+      "device_minor": 255
+    },
+    {
+      "path": "/dev/nvidia-uvm",
+      "exists": true,
+      "mode": "0o666",
+      "character_device": true,
+      "device_major": 506,
+      "device_minor": 0
+    },
+    {
+      "path": "/dev/nvidia-modeset",
+      "exists": false
+    },
+    {
+      "path": "/dev/nvidia-caps",
+      "exists": false
+    },
+    {
+      "path": "/dev/dri",
+      "exists": false
+    },
+    {
+      "path": "/dev/dri/renderD128",
+      "exists": false
+    },
+    {
+      "path": "/dev/dri/card1",
+      "exists": false
+    }
+  ],
+  "library_paths": [
+    {
+      "path": "/usr/share/glvnd/egl_vendor.d",
+      "exists": false
+    },
+    {
+      "path": "/etc/glvnd/egl_vendor.d",
+      "exists": false
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libEGL_nvidia.so.535.161.08",
+      "exists": false
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-eglcore.so.535.161.08",
+      "exists": false
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-glsi.so.535.161.08",
+      "exists": false
+    }
+  ],
+  "NVIDIA_DRIVER_CAPABILITIES": "compute,utility",
+  "sandbox_device_absence_is_not_host_evidence": true
+}

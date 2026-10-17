@@ -1,0 +1,514 @@
+{
+  "schema_version": 2,
+  "task_id": "native10-training-20260916",
+  "record_type": "implementation_design_record_not_a_launcher",
+  "status": "main_preparation_pending_new_READY",
+  "training_implementation_complete": false,
+  "training_started": false,
+  "training_updates_executed": 0,
+  "formal_data_collection_started_by_this_record": false,
+  "approved_design_is_not_execution_release": true,
+  "sources": {
+    "coordination/NATIVE10_TRAINING_TASK.md": "682c3aa13611afd21ee01ed1d934543aed45a8cad8714f660b5f171b9281d45a",
+    "coordination/NATIVE10_TRAINING_ADDENDUM.md": "a0f499e388a3c09619cd5042901b8fcd919a670503e58835069f2a5fdab467df",
+    "coordination/NATIVE10_RAW_COMMAND_REVIEW.md": "8789cb1b3b5f55ca4777e320eb7d60a84a5cc636f7b97c0ababb4c00a95e068d",
+    "coordination/NATIVE10_ANALYSIS_READY.json": "e3276863427ecc88eb57fe006edac1a5ff9d9edfa2870aa195da0ade69eabfed",
+    "coordination/NATIVE10_RAW_BUDGET_AMENDMENT.md": "26dc21b69348e3ba90e5554b838efe9b6d610c2cef55ed0e0962fb99df89900d",
+    "coordination/NATIVE10_ANALYSIS_LEAD.md": "e39d35a046ab9058c9539cae876a3168d98fe2900b580ea0cc042eed1479e833",
+    "coordination/NATIVE10_TRAINING_READINESS_REVIEW.md": "cd59280a23803bee7fbe25d969b20c5f0a4960ec0e3708e4a45cbf1b0b6ea587",
+    "coordination/NATIVE10_EVAL20_AMENDMENT.md": "a4e43217a062c1918e44984ef557bc17001df02e9e712dc9929fe11e31ce5076"
+  },
+  "precedence": "TASK + ADDENDUM + RAW_BUDGET_AMENDMENT + ANALYSIS_LEAD. P0 version remains frozen; v2 governs main preparation subject to a later READY.",
+  "approved_parameters": {
+    "tasks": [
+      "disassemble-v3",
+      "pick-place-wall-v3",
+      "shelf-place-v3",
+      "stick-pull-v3",
+      "stick-push-v3"
+    ],
+    "episode_splits": {
+      "train": {
+        "planned": 600,
+        "per_task": 120,
+        "rounds": [
+          {
+            "round": 1,
+            "planned": 300,
+            "per_task": 60
+          },
+          {
+            "round": 2,
+            "planned": 300,
+            "per_task": 60
+          }
+        ]
+      },
+      "development": {
+        "planned": 100,
+        "per_task": 20
+      },
+      "calibration": {
+        "planned": 100,
+        "per_task": 20
+      },
+      "heldout": {
+        "planned": 100,
+        "per_task": 20
+      },
+      "p0": {
+        "planned": 20,
+        "per_task": 4,
+        "default_training_use": false,
+        "separate_from_main_900": true
+      }
+    },
+    "source_grouping": {
+      "key": [
+        "task",
+        "env_seed"
+      ],
+      "group_all_initial_policy_noise_variations": true,
+      "group_all_cuts_candidates_repeats_and_later_additions": true,
+      "bootstrap_and_split_unit": "whole episode",
+      "retain_all_planned": true,
+      "replace_sources_by_outcome": false,
+      "candidate_labels_only_for_reached_legal_cuts": true,
+      "heldout_capture_and_outcome_access_after_final_policy_freeze": true,
+      "physical_scene_uniqueness": "Per-task across main splits; quantified actual qpos/qvel/target/model positions and quaternion orientation before first action. Registry excludes seed/RNG/time.",
+      "replacement_policy": "Only pre-action duplicate initial scene or reset initialization technical failure, two ordered pre-registered reserve seeds per primary slot; failed attempt retained; actual episode bootstrap identity and planned_slot_id both saved"
+    },
+    "control": {
+      "generated_horizon": 50,
+      "source_horizon": 10,
+      "candidate_prefix": 10,
+      "suffix_horizon": 10,
+      "control_budget": 300,
+      "minimum_remaining_for_intervention": 10,
+      "interventions_per_episode": 1
+    },
+    "training_cuts": {
+      "primary_cuts_per_episode": 1,
+      "first_legal_alarm_fraction": 0.5,
+      "scheduled_fraction": 0.5,
+      "per_round_per_task": {
+        "first_legal_alarm": 30,
+        "scheduled": 30
+      },
+      "scheduled_steps": [
+        15,
+        45,
+        95
+      ],
+      "scheduled_per_step_per_round_per_task": 10,
+      "scheduled_is_for_training_coverage_not_policy_success_denominator": true,
+      "fallback_priority": {
+        "scheduled_15": [
+          15,
+          5
+        ],
+        "scheduled_45": [
+          45,
+          15,
+          5
+        ],
+        "scheduled_95": [
+          95,
+          45,
+          15,
+          5
+        ],
+        "first_alarm_if_entire_episode_has_no_eligible_alarm": [
+          15,
+          5
+        ]
+      },
+      "fallback_eligibility": "Only already observed nonterminal legal anchor with >=10 steps remaining; retain missing if none; no outcome/Q-based choice; training split only",
+      "required_selection_metadata": [
+        "requested_cut",
+        "actual_cut",
+        "selection_reason",
+        "registered_cut_rule",
+        "observed_alarm",
+        "fallback_priority",
+        "available_legal_anchors"
+      ],
+      "collect_early_anchors": [
+        5,
+        15,
+        45,
+        95
+      ]
+    },
+    "evaluation_cut": "first legal G0 alarm; no-alarm/early-success episodes retain their shared native10 outcome",
+    "candidate_count": 13,
+    "normal_control_is_separate": true,
+    "repeats": {
+      "train_candidate": 4,
+      "train_normal_control": 4,
+      "development_bank": 4,
+      "development_policy": 4,
+      "calibration_policy": 2,
+      "heldout_policy": 4
+    },
+    "expected_logical_labels": {
+      "per_reached_training_source": {
+        "critic": 52,
+        "normal_control": 4,
+        "total": 56
+      },
+      "train_600_upper_bound": {
+        "critic": 31200,
+        "normal_control": 2400,
+        "total": 33600
+      },
+      "development_bank_100_upper_bound": {
+        "critic": 5200,
+        "normal_control": 400,
+        "total": 5600
+      },
+      "note": "Planned upper bounds; unreachable cuts and exact audited physical reuse reduce new attempts. Logical slots are not independent episodes."
+    },
+    "frozen_large_models": [
+      "VLA",
+      "D",
+      "visual_feature_extractor",
+      "language_feature_extractor"
+    ],
+    "g0": "initially frozen; separate analysis target/input review required before adapting G0",
+    "loss": {
+      "formula": "BCE_success + 1.0*MSE_gain_to_a0 + 0.5*MSE_positive_negative_probability_difference",
+      "weights": {
+        "bce": 1,
+        "gain": 1,
+        "pair_difference": 0.5
+      },
+      "average_order": "within valid distinct candidates/pairs, then across source groups",
+      "source_sampling": "uniform, no empirical-outcome informative-source upweighting",
+      "strict_a0_equal_action_zero_advantage": true,
+      "divide_binary_differences_by_radius": false,
+      "search_loss_weights": false
+    },
+    "optimizer_common": {
+      "name": "AdamW",
+      "weight_decay": 0.01,
+      "gradient_clip_norm": 1,
+      "batch_complete_sources": 32
+    },
+    "ensemble": {
+      "members": 4,
+      "bagging": "task-stratified episode bootstrap with replacement; save complete draws and multiplicities",
+      "source_components_travel_together": true,
+      "ensemble_std_is_not_a_confidence_interval": true
+    },
+    "paths": {
+      "A": {
+        "required": true,
+        "role": "residual adaptation reference",
+        "initialization": "read-only old four-member weights; fresh warm start for round1 and final fits",
+        "learning_rate": 0.0001,
+        "trainable": [
+          "residual",
+          "advantage"
+        ],
+        "frozen": [
+          "state",
+          "action",
+          "head",
+          "normalization_buffers",
+          "visual_PCA",
+          "language_PCA"
+        ],
+        "projection": "old frozen checkpoint projections"
+      },
+      "B": {
+        "required": true,
+        "role": "primary full small-critic retraining",
+        "initialization": "fresh initialization for all four members in round1 and final fits",
+        "learning_rate": 0.0003,
+        "trainable": [
+          "state",
+          "action",
+          "head",
+          "residual",
+          "advantage"
+        ],
+        "projection": "fit current-stage training split only; refit on combined rounds for final stage",
+        "visual_PCA_dimensions": 16,
+        "language_PCA_dimensions": 8,
+        "reuse_weights_after_incompatible_PCA_refit": false
+      }
+    },
+    "training_stages": {
+      "round1": {
+        "planned_train_episodes": 300,
+        "max_updates_per_member": 2400,
+        "checkpoints": [
+          200,
+          400,
+          800,
+          1600,
+          2400
+        ]
+      },
+      "final": {
+        "planned_train_episodes": 600,
+        "max_updates_per_member": 4000,
+        "checkpoints": [
+          200,
+          400,
+          800,
+          1600,
+          2400,
+          3200,
+          4000
+        ]
+      },
+      "maximum_updates_all_paths_members_stages": 51200,
+      "early_stopping_permitted": true,
+      "reuse_old_800_step_selection": false,
+      "round2_generation": "one round1 critic chosen on development, frozen before every round2 source; never updated within round2 collection"
+    },
+    "auxiliary_old_data": {
+      "default_enabled": false,
+      "historical_primitive_sources": 99,
+      "historical_flow_sources": 45,
+      "status": "exposed historical data, not native10 or independent heldout",
+      "use_requires_recorded_development_decision": true
+    },
+    "model_selection": {
+      "dataset": "same 100-episode development candidate bank for all A/B ensemble checkpoints",
+      "candidate_selector": "argmax mean member success probability; a0 wins ties",
+      "checkpoint_criteria_in_order": [
+        "maximize full-planned-episode real paired net gain of selected candidates versus a0",
+        "minimize paired harms",
+        "minimize relative probability-gain MSE",
+        "earlier update step",
+        "prefer path B"
+      ],
+      "only_one_selected_critic_per_round_gets_real_policy_rollouts": true,
+      "real_policy_comparisons_per_round": 1,
+      "maximum_rounds": 2,
+      "real_policy_arms": [
+        "continue_native10",
+        "alarm_replan10",
+        "velocity",
+        "direct",
+        "post"
+      ],
+      "max_real_development_branches_per_round": 2000,
+      "max_real_development_branches_total": 4000,
+      "offline_selection_is_proxy_for_continuous_guidance": true,
+      "final_primary_injection_selected_on_development": true,
+      "calibration": "100 episodes/20 distinct physical initial scenes per task, 2 repeats; selected model, low freedom pre-registered rule, no weight/PCA updates",
+      "heldout": "100 episodes/20 distinct physical initial scenes per task, 4 repeats, only after final model/method/acceptance freeze"
+    }
+  },
+  "candidate_schema": {
+    "schema_status": "slot names and mask details proposed for post-P0 review; semantic families approved",
+    "slots": [
+      {
+        "slot": 0,
+        "name": "a0",
+        "family": "a0",
+        "critic_anchor": true
+      },
+      {
+        "slot": 1,
+        "name": "xyz_positive",
+        "family": "post XYZ component",
+        "sign": 1
+      },
+      {
+        "slot": 2,
+        "name": "xyz_negative",
+        "family": "post XYZ component",
+        "sign": -1
+      },
+      {
+        "slot": 3,
+        "name": "gripper_positive",
+        "family": "post gripper component",
+        "sign": 1
+      },
+      {
+        "slot": 4,
+        "name": "gripper_negative",
+        "family": "post gripper component",
+        "sign": -1
+      },
+      {
+        "slot": 5,
+        "name": "random_half_positive",
+        "family": "independent smooth joint direction",
+        "radius_multiplier": 0.5,
+        "sign": 1
+      },
+      {
+        "slot": 6,
+        "name": "random_half_negative",
+        "family": "independent smooth joint direction",
+        "radius_multiplier": 0.5,
+        "sign": -1
+      },
+      {
+        "slot": 7,
+        "name": "random_full_positive",
+        "family": "independent smooth joint direction",
+        "radius_multiplier": 1,
+        "sign": 1
+      },
+      {
+        "slot": 8,
+        "name": "random_full_negative",
+        "family": "independent smooth joint direction",
+        "radius_multiplier": 1,
+        "sign": -1
+      },
+      {
+        "slot": 9,
+        "name": "velocity",
+        "family": "actual frozen generator guidance"
+      },
+      {
+        "slot": 10,
+        "name": "direct",
+        "family": "actual frozen generator guidance"
+      },
+      {
+        "slot": 11,
+        "name": "post",
+        "family": "actual final post delta"
+      },
+      {
+        "slot": 12,
+        "name": "reverse_post",
+        "family": "exact negative final post delta"
+      }
+    ],
+    "positive_negative_pairs": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        11,
+        12
+      ]
+    ],
+    "normal_control": {
+      "name": "continue_native10",
+      "critic_candidate_slot": null,
+      "repeats": 4,
+      "target_use": "replan-normal interruption benefit and separate policy evaluation; never pad old queue into critic slot0"
+    },
+    "channel_radius_multiplier": "0.5 or 1, balanced by task/round from preregistered source identity",
+    "channel_full_direction": "isolate corresponding XYZ/gripper component of final post delta; half is exactly 0.5 of same feasible delta",
+    "random_direction": "critic-independent Gaussian three temporal knots per dimension with linear interpolation",
+    "gradient_degeneracy": "preregistered smooth random fallback for affected channel, retain diagnostic flag; never choose fallback by outcomes",
+    "limits": {
+      "xyz_RMS": 0.05,
+      "xyz_Linf": 0.15,
+      "gripper_RMS": 0.1,
+      "gripper_Linf": 0.4,
+      "boundary_clearance": 0.05
+    },
+    "matching": "actual velocity/direct/post retain registered deployment construction; channel and random +/- pairs use their specified symmetric feasible deltas; never feed all 13 into one common minimum-radius matcher",
+    "raw_action_representation": "execute raw_a0+delta; critic sees C=clip(raw_a0+delta,-1,1); P0 must verify the approved representation/physics invariants",
+    "record_fields": [
+      "episode_id",
+      "split",
+      "round",
+      "cut_step",
+      "cut_rule",
+      "a0_seed",
+      "generation_critic_sha256",
+      "raw_commands",
+      "critic_commands",
+      "actual_delta",
+      "mask",
+      "RMS",
+      "Linf",
+      "radius_multiplier",
+      "fallback_reason",
+      "alias_group",
+      "paired_suffix_ids",
+      "physical_attempt_ids"
+    ]
+  },
+  "implementation_proposals_requiring_review": {
+    "training_runtime": {
+      "device": "cpu",
+      "dtype": "float32",
+      "torch_threads": 2,
+      "purpose": "canonical singleton preprocessing; real fitted PCA/reload/FrozenObjective probabilities and gradients require real-data audit before fit/export claims"
+    },
+    "deterministic_randomness": "derive and persist separate initialization, task-bootstrap and minibatch seeds from the frozen workflow namespace plus phase/path/member; do not select seeds from outcomes",
+    "B_PCA_fit_sample": "approved: unique valid current-stage train rows, before bootstrap; all four B members share train-only projection",
+    "complete_label_requirement": "four valid paired repeats per logical candidate after audited alias expansion; missing attempts are unknown, never failure=0",
+    "deduplication_identity": "same source state/cut, exact raw executed ten-step commands, same suffix stream/protocol and frozen VLA; never deduplicate from clipped commands alone",
+    "candidate_loss_weight": "one per valid distinct command group; slot aliases each carry inverse multiplicity if expanded",
+    "gain_mask": "one per valid distinct group different from a0; candidates aliasing a0 excluded from gain denominator",
+    "pair_mask": "both candidate groups valid and distinct; collapse duplicate unordered group pairs once; identical +/- or zero delta pair contributes no pair weight",
+    "invalid_symmetry": "nonzero pair symmetry violation is an audit error, not a silently masked training sample",
+    "empty_gain_or_pair_term": "zero for that source; retain source in outer average and retain its valid a0 BCE",
+    "source_average": "uniform over sampled complete source groups; bootstrap multiplicity is intentional, no outcome-dependent weighting",
+    "cross_radius_use": "save half/full curve and paired differences as diagnostics; no unapproved fourth loss or radius-normalized gradient target",
+    "non_a0_candidate_tie": "lowest registered slot after a0 priority",
+    "tie_tolerance": "exact deterministic comparison unless a numerical tolerance is explicitly preregistered before outcomes",
+    "failure_coverage": "retain failed/unreachable/no-alarm planned episode records; technical missing outcomes block complete-selection claims rather than being imputed as failure",
+    "fallback_cut_order_status": "approved by ANALYSIS_LEAD section3; main implementation pending tests"
+  },
+  "execution_gate": {
+    "current_ready_scope": "P0 conditionally released only",
+    "this_record_releases_training": false,
+    "requirements": [
+      "P0 technical results and raw-command/physics invariants passed",
+      "13-candidate construction, aliases, masks and loss implementation audited",
+      "900-primary-episode split/seed registration and fallback order frozen",
+      "deterministic training configurations and dataset versions frozen",
+      "measured runtime/storage forecast and remaining attempt budget reviewed",
+      "new analysis READY explicitly releases main collection/training"
+    ]
+  },
+  "old_weight_import": {
+    "read_only": true,
+    "ranking": "assets/critic/ranking.json",
+    "ranking_sha256": "fa8e2b4b0ee166372a036e1656036812be8d34335a1f287240a80f34a3d3436c",
+    "files": {
+      "assets/critic/models/refit/member_1041/selected.pt": "9f5b8c8be268b507c612701069f3b835274fe8460d82b790f7d6a710c04c976c",
+      "assets/critic/models/refit/member_1042/selected.pt": "3cb9551ff3e3f05c8bb5adaffa6fd00543d84aac8b8de57b6905aa39d30a272b",
+      "assets/critic/models/refit/member_1043/selected.pt": "18ccbc5ca557fe40468d61d530a2e99f1498dda6dcd6af84ac910ec422c96777",
+      "assets/critic/models/refit/member_1044/selected.pt": "a7d053daffc6f909e5acaad977c87292bd394bc5e9b7670ace3bbdba54e61def"
+    },
+    "new_outputs_only": "outputs/native10_training_20260916/models/<stage>/<path>/<version>/member_<id>/"
+  },
+  "implementation_status": {
+    "cpu_training_core": "11 synthetic tests passed",
+    "dataset_loader": "31 synthetic tests passed; upstream artifact loader integration ongoing",
+    "main_collector": "EVAL20/scene/reserve hooks implemented; CPU checks in progress",
+    "real_data_fit": "not_started",
+    "real_preprocessing_reload_audit": "pending_real_train_data",
+    "four_member_pipeline": "8 synthetic tests passed; no real fit/input audit"
+  },
+  "budget": {
+    "planned_simulator_attempts": 48800,
+    "hard_maximum": 50000,
+    "technical_reserve": 1200,
+    "independent_main_bank_restores_included": 1100,
+    "training_update_total": 51200
+  },
+  "version_note": "P0-frozen training_design.json preserved. This version records updated main protocol, without releasing collection or training."
+}

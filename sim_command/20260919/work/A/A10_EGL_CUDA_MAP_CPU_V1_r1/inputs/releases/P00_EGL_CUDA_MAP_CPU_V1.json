@@ -1,0 +1,47 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "release_id": "P00_EGL_CUDA_MAP_CPU_V1",
+  "issued_at_utc": "2026-09-19T18:14:53.700344+00:00",
+  "issuer": "analysis",
+  "kind": "cpu_EGL_device_mapping_revision",
+  "task_ids": [
+    "A10_EGL_CUDA_MAP_CPU_V1"
+  ],
+  "task_revision": 1,
+  "owner_host": "trial-303224955-trialrun-303224955-worker-0",
+  "task_brief": {
+    "path": "tasks/A10_EGL_CUDA_MAP_CPU_V1.md",
+    "sha256": "dc38aec6bdafecb063ee50c3f7df481bbd728768a05e3bec76e774445edb828d"
+  },
+  "dependency": "receipts/A/A10_EGL_GRAPHICS_PROBE_V1_RESULT.json",
+  "dependency_outcome": "mapping_failure_consumed_and_closed",
+  "allowed": [
+    "targeted_static_spec_and_source_review",
+    "isolated_code_config_revision",
+    "targeted_CPU_synthetic_checks",
+    "bounded_new_graphics_proposal"
+  ],
+  "limits": {
+    "model_gpu_inference_calls": 0,
+    "graphics_probe_attempts": 0,
+    "egl_device_enumerations": 0,
+    "egl_device_attribute_queries": 0,
+    "cuda_driver_initializations": 0,
+    "cuda_device_pci_queries": 0,
+    "graphics_context_creations": 0,
+    "render_calls": 0,
+    "simulator_attempts": 0,
+    "environment_reset_calls": 0,
+    "optimizer_updates": 0,
+    "deletions": 0
+  },
+  "forbidden": [
+    "EGL_or_CUDA_runtime_calls",
+    "GPU_execution",
+    "library_dlopen_probe",
+    "shared_driver_environment_mutation",
+    "container_restart",
+    "renderer_fallback",
+    "deletion"
+  ]
+}

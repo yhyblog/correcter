@@ -1,0 +1,62 @@
+{
+  "at_utc": "2026-09-21T12:57:37.960838+00:00",
+  "user_instruction": "同时把8张卡都用上啊，不然整台服务器GPU利用率低于50%之后不久就会被停掉了",
+  "supersedes_prior_idle_subset_holder_prohibition_for_this_user_requested_occupancy_action": true,
+  "formal_task": "A11_COMMON_POOL_BATCH3_V1",
+  "formal_concurrency": 2,
+  "formal_command_repeated": false,
+  "formal_sources_seeds_caps_unchanged": true,
+  "temporary_auxiliary_holder_accounting_separate": true,
+  "shared_guard_and_formal_lock_unmodified": true,
+  "script_sha256": "6d03dc176228b81005979bc8bd911164edea3323d1a960d5b19794aa74681e89",
+  "CPU_eligibility_snapshot": [
+    {
+      "parent": "p00_coffee_button_train0000_cut5",
+      "gpu": 0,
+      "eligible": true,
+      "reason": "all15_cold_branches_exited_and_cleanup_recorded"
+    },
+    {
+      "parent": "p01_coffee_pull_train0000_cut5",
+      "gpu": 1,
+      "eligible": true,
+      "reason": "all15_cold_branches_exited_and_cleanup_recorded"
+    },
+    {
+      "parent": "p02_coffee_push_train0000_cut5",
+      "gpu": 2,
+      "eligible": true,
+      "reason": "all15_cold_branches_exited_and_cleanup_recorded"
+    },
+    {
+      "parent": "p03_dial_turn_train0000_cut5",
+      "gpu": 3,
+      "eligible": true,
+      "reason": "all15_cold_branches_exited_and_cleanup_recorded"
+    },
+    {
+      "parent": "p04_door_close_train0000_cut5",
+      "gpu": 4,
+      "eligible": true,
+      "reason": "all15_cold_branches_exited_and_cleanup_recorded"
+    },
+    {
+      "parent": "p05_door_lock_train0000_cut5",
+      "gpu": 5,
+      "eligible": false,
+      "reason": "formal_parent_active_or_pending_branches"
+    },
+    {
+      "parent": "p06_door_open_train0000_cut5",
+      "gpu": 6,
+      "eligible": false,
+      "reason": "formal_parent_active_or_pending_branches"
+    },
+    {
+      "parent": "p07_door_unlock_train0000_cut5",
+      "gpu": 7,
+      "eligible": true,
+      "reason": "not_yet_admitted_yield_on_first_START"
+    }
+  ]
+}

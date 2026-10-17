@@ -1,0 +1,17 @@
+{
+  "at_utc": "2026-09-22T08:25:15.676439+00:00",
+  "purpose": "B local low-utilization alert recovery using the existing holder and guard lifecycle",
+  "source": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_guard.py",
+  "source_sha256": "7910c567a47ddf68294d92fc9698cc780aeb130ddefde0337414bfcd88cb85a4",
+  "adapted_guard": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_OCCUPANCY_ALERT_RECOVERY_V1_r1/gpu_occupancy_guard_B.py",
+  "adapted_sha256": "6f67c9ada074b58feef2f463995c4b3b681a69245544a9c44dd821562c20daa5",
+  "changes": [
+    "Keep ROOT fixed at original workspace so existing gpu_hold.py and logs remain in use",
+    "Increase holder target duty cycle from0.50 to0.90 on B only"
+  ],
+  "target_util": 0.9,
+  "shared_guard_source_unchanged": true,
+  "same_host_local_singleton_and_formal_lock": true,
+  "formal_wave_holder_policy": "all holders off whole formal wave; restore after all formal descendants exit",
+  "syntax_check": "passed"
+}

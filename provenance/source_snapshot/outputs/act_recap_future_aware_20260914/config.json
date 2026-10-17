@@ -1,0 +1,1634 @@
+{
+  "experiment": "future_aware_v1",
+  "status": "preregistered",
+  "vla_root": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector",
+  "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model",
+  "expected_weights": {
+    "config.json": {
+      "bytes": 2383,
+      "sha256": "573be3e8d78fe6328d0a8ca3978aaf993dbebb3571d77aa241478aacbd782d5d"
+    },
+    "model.safetensors": {
+      "bytes": 9354050752,
+      "sha256": "dff338a91dbe534ca3c4525ba82df9324662e3c87131f42ed6e3d1b7bf0e94d4"
+    },
+    "policy_postprocessor.json": {
+      "bytes": 662,
+      "sha256": "550237addb77c5b9e4e0c78655dbd5ecc792adbf6895a0eff08f6d6daa2f9401"
+    },
+    "policy_postprocessor_step_0_unnormalizer_processor.safetensors": {
+      "bytes": 10992,
+      "sha256": "4fff91faea9afc9208e5519088f2bc8fb9cb21102bfeec8a9b3f259863c5cf00"
+    },
+    "policy_preprocessor.json": {
+      "bytes": 1996,
+      "sha256": "3398544bef8193b0aed36c7980982f68e902f739eb937fbde5a34066bf22583e"
+    },
+    "policy_preprocessor_step_2_normalizer_processor.safetensors": {
+      "bytes": 10992,
+      "sha256": "4fff91faea9afc9208e5519088f2bc8fb9cb21102bfeec8a9b3f259863c5cf00"
+    },
+    "train_config.json": {
+      "bytes": 6819,
+      "sha256": "36642b5ebc9cf24cf32f4afb6825cc7d778a0e7e20f5a43232049e058dd57f08"
+    }
+  },
+  "source_weights_protocol": "c7accee22dc3fbfb6ed6e2616848e15d9eb25d47cc8722d6d26a0ee6abb1d7a5",
+  "history": 5,
+  "horizon": 5,
+  "check_interval": 5,
+  "generation": 50,
+  "candidates": 4,
+  "continuation": "clear_queue_then_fixed10_v1",
+  "control_budget": 300,
+  "projection": {
+    "kind": "fixed_seeded_orthonormal",
+    "seed": 19431,
+    "input": 2048,
+    "output": 256,
+    "grid": [
+      4,
+      4
+    ],
+    "independent_of_any_outcomes": true
+  },
+  "natural_source": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_vla_expert_full_retrain_diagnostic_20260909",
+  "legacy_source": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_idea1_20260913",
+  "natural_splits": [
+    "train",
+    "validation"
+  ],
+  "natural_proprio_available": false,
+  "variants": [
+    "spatial_pair",
+    "spatial_transition",
+    "spatial_no_action",
+    "pooled_pair"
+  ],
+  "seeds": [
+    241,
+    242
+  ],
+  "training": {
+    "pretrain_steps": 1600,
+    "finetune_steps": 1600,
+    "batch_size": 64,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "pair_weight": 1.0,
+    "local_fraction": 0.5,
+    "validation_every": 400
+  },
+  "predictor_gate": {
+    "better_than_persistence": true,
+    "intervention_cosine_lower_bound_positive": true
+  },
+  "critic_training": {
+    "steps": 1600,
+    "validation_every": 200,
+    "seeds": [
+      341,
+      342
+    ]
+  },
+  "online": {
+    "development_seed_start": 1583000,
+    "development_cases": 25,
+    "confirmation_seed_start": 1584000,
+    "confirmation_cases": 100
+  },
+  "cases": [
+    {
+      "case_id": "disassemble-v3__1580000",
+      "task": "disassemble-v3",
+      "env_seed": 1580000,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__1580001",
+      "task": "pick-place-wall-v3",
+      "env_seed": 1580001,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__1580002",
+      "task": "shelf-place-v3",
+      "env_seed": 1580002,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__1580003",
+      "task": "stick-pull-v3",
+      "env_seed": 1580003,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__1580004",
+      "task": "stick-push-v3",
+      "env_seed": 1580004,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__1580005",
+      "task": "disassemble-v3",
+      "env_seed": 1580005,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__1580006",
+      "task": "pick-place-wall-v3",
+      "env_seed": 1580006,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__1580007",
+      "task": "shelf-place-v3",
+      "env_seed": 1580007,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__1580008",
+      "task": "stick-pull-v3",
+      "env_seed": 1580008,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__1580009",
+      "task": "stick-push-v3",
+      "env_seed": 1580009,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__1580010",
+      "task": "disassemble-v3",
+      "env_seed": 1580010,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        30,
+        35
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__1580011",
+      "task": "pick-place-wall-v3",
+      "env_seed": 1580011,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        30,
+        35
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__1580012",
+      "task": "shelf-place-v3",
+      "env_seed": 1580012,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        30,
+        35
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__1580013",
+      "task": "stick-pull-v3",
+      "env_seed": 1580013,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        30,
+        35
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__1580014",
+      "task": "stick-push-v3",
+      "env_seed": 1580014,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        30,
+        35
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__1580015",
+      "task": "disassemble-v3",
+      "env_seed": 1580015,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        65,
+        70
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__1580016",
+      "task": "pick-place-wall-v3",
+      "env_seed": 1580016,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        65,
+        70
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__1580017",
+      "task": "shelf-place-v3",
+      "env_seed": 1580017,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        65,
+        70
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__1580018",
+      "task": "stick-pull-v3",
+      "env_seed": 1580018,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        65,
+        70
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__1580019",
+      "task": "stick-push-v3",
+      "env_seed": 1580019,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        65,
+        70
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__1580020",
+      "task": "disassemble-v3",
+      "env_seed": 1580020,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        45,
+        50
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__1580021",
+      "task": "pick-place-wall-v3",
+      "env_seed": 1580021,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        45,
+        50
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__1580022",
+      "task": "shelf-place-v3",
+      "env_seed": 1580022,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        45,
+        50
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__1580023",
+      "task": "stick-pull-v3",
+      "env_seed": 1580023,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        45,
+        50
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__1580024",
+      "task": "stick-push-v3",
+      "env_seed": 1580024,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        45,
+        50
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__1580025",
+      "task": "disassemble-v3",
+      "env_seed": 1580025,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        125,
+        130
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__1580026",
+      "task": "pick-place-wall-v3",
+      "env_seed": 1580026,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        125,
+        130
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__1580027",
+      "task": "shelf-place-v3",
+      "env_seed": 1580027,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        125,
+        130
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__1580028",
+      "task": "stick-pull-v3",
+      "env_seed": 1580028,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        125,
+        130
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__1580029",
+      "task": "stick-push-v3",
+      "env_seed": 1580029,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        125,
+        130
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__1580030",
+      "task": "disassemble-v3",
+      "env_seed": 1580030,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        70,
+        75
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__1580031",
+      "task": "pick-place-wall-v3",
+      "env_seed": 1580031,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        70,
+        75
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__1580032",
+      "task": "shelf-place-v3",
+      "env_seed": 1580032,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        70,
+        75
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__1580033",
+      "task": "stick-pull-v3",
+      "env_seed": 1580033,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        70,
+        75
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__1580034",
+      "task": "stick-push-v3",
+      "env_seed": 1580034,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        70,
+        75
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__1580035",
+      "task": "disassemble-v3",
+      "env_seed": 1580035,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        185,
+        190
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__1580036",
+      "task": "pick-place-wall-v3",
+      "env_seed": 1580036,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        185,
+        190
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__1580037",
+      "task": "shelf-place-v3",
+      "env_seed": 1580037,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        185,
+        190
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__1580038",
+      "task": "stick-pull-v3",
+      "env_seed": 1580038,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        185,
+        190
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__1580039",
+      "task": "stick-push-v3",
+      "env_seed": 1580039,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        185,
+        190
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__1580040",
+      "task": "disassemble-v3",
+      "env_seed": 1580040,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        85,
+        90
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__1580041",
+      "task": "pick-place-wall-v3",
+      "env_seed": 1580041,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        85,
+        90
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__1580042",
+      "task": "shelf-place-v3",
+      "env_seed": 1580042,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        85,
+        90
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__1580043",
+      "task": "stick-pull-v3",
+      "env_seed": 1580043,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        85,
+        90
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__1580044",
+      "task": "stick-push-v3",
+      "env_seed": 1580044,
+      "split": "train",
+      "source_horizon": 20,
+      "cut_steps": [
+        85,
+        90
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__1580045",
+      "task": "disassemble-v3",
+      "env_seed": 1580045,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        205,
+        210
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__1580046",
+      "task": "pick-place-wall-v3",
+      "env_seed": 1580046,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        205,
+        210
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__1580047",
+      "task": "shelf-place-v3",
+      "env_seed": 1580047,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        205,
+        210
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__1580048",
+      "task": "stick-pull-v3",
+      "env_seed": 1580048,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        205,
+        210
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__1580049",
+      "task": "stick-push-v3",
+      "env_seed": 1580049,
+      "split": "train",
+      "source_horizon": 50,
+      "cut_steps": [
+        205,
+        210
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__1581000",
+      "task": "disassemble-v3",
+      "env_seed": 1581000,
+      "split": "validation",
+      "source_horizon": 20,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__1581001",
+      "task": "pick-place-wall-v3",
+      "env_seed": 1581001,
+      "split": "validation",
+      "source_horizon": 20,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__1581002",
+      "task": "shelf-place-v3",
+      "env_seed": 1581002,
+      "split": "validation",
+      "source_horizon": 20,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__1581003",
+      "task": "stick-pull-v3",
+      "env_seed": 1581003,
+      "split": "validation",
+      "source_horizon": 20,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__1581004",
+      "task": "stick-push-v3",
+      "env_seed": 1581004,
+      "split": "validation",
+      "source_horizon": 20,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__1581005",
+      "task": "disassemble-v3",
+      "env_seed": 1581005,
+      "split": "validation",
+      "source_horizon": 50,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__1581006",
+      "task": "pick-place-wall-v3",
+      "env_seed": 1581006,
+      "split": "validation",
+      "source_horizon": 50,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__1581007",
+      "task": "shelf-place-v3",
+      "env_seed": 1581007,
+      "split": "validation",
+      "source_horizon": 50,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__1581008",
+      "task": "stick-pull-v3",
+      "env_seed": 1581008,
+      "split": "validation",
+      "source_horizon": 50,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__1581009",
+      "task": "stick-push-v3",
+      "env_seed": 1581009,
+      "split": "validation",
+      "source_horizon": 50,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__1581010",
+      "task": "disassemble-v3",
+      "env_seed": 1581010,
+      "split": "validation",
+      "source_horizon": 20,
+      "cut_steps": [
+        30,
+        35
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__1581011",
+      "task": "pick-place-wall-v3",
+      "env_seed": 1581011,
+      "split": "validation",
+      "source_horizon": 20,
+      "cut_steps": [
+        30,
+        35
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__1581012",
+      "task": "shelf-place-v3",
+      "env_seed": 1581012,
+      "split": "validation",
+      "source_horizon": 20,
+      "cut_steps": [
+        30,
+        35
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__1581013",
+      "task": "stick-pull-v3",
+      "env_seed": 1581013,
+      "split": "validation",
+      "source_horizon": 20,
+      "cut_steps": [
+        30,
+        35
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__1581014",
+      "task": "stick-push-v3",
+      "env_seed": 1581014,
+      "split": "validation",
+      "source_horizon": 20,
+      "cut_steps": [
+        30,
+        35
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__1581015",
+      "task": "disassemble-v3",
+      "env_seed": 1581015,
+      "split": "validation",
+      "source_horizon": 50,
+      "cut_steps": [
+        65,
+        70
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__1581016",
+      "task": "pick-place-wall-v3",
+      "env_seed": 1581016,
+      "split": "validation",
+      "source_horizon": 50,
+      "cut_steps": [
+        65,
+        70
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__1581017",
+      "task": "shelf-place-v3",
+      "env_seed": 1581017,
+      "split": "validation",
+      "source_horizon": 50,
+      "cut_steps": [
+        65,
+        70
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__1581018",
+      "task": "stick-pull-v3",
+      "env_seed": 1581018,
+      "split": "validation",
+      "source_horizon": 50,
+      "cut_steps": [
+        65,
+        70
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__1581019",
+      "task": "stick-push-v3",
+      "env_seed": 1581019,
+      "split": "validation",
+      "source_horizon": 50,
+      "cut_steps": [
+        65,
+        70
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__1582000",
+      "task": "disassemble-v3",
+      "env_seed": 1582000,
+      "split": "test",
+      "source_horizon": 20,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__1582001",
+      "task": "pick-place-wall-v3",
+      "env_seed": 1582001,
+      "split": "test",
+      "source_horizon": 20,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__1582002",
+      "task": "shelf-place-v3",
+      "env_seed": 1582002,
+      "split": "test",
+      "source_horizon": 20,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__1582003",
+      "task": "stick-pull-v3",
+      "env_seed": 1582003,
+      "split": "test",
+      "source_horizon": 20,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__1582004",
+      "task": "stick-push-v3",
+      "env_seed": 1582004,
+      "split": "test",
+      "source_horizon": 20,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__1582005",
+      "task": "disassemble-v3",
+      "env_seed": 1582005,
+      "split": "test",
+      "source_horizon": 50,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__1582006",
+      "task": "pick-place-wall-v3",
+      "env_seed": 1582006,
+      "split": "test",
+      "source_horizon": 50,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__1582007",
+      "task": "shelf-place-v3",
+      "env_seed": 1582007,
+      "split": "test",
+      "source_horizon": 50,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__1582008",
+      "task": "stick-pull-v3",
+      "env_seed": 1582008,
+      "split": "test",
+      "source_horizon": 50,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__1582009",
+      "task": "stick-push-v3",
+      "env_seed": 1582009,
+      "split": "test",
+      "source_horizon": 50,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__1582010",
+      "task": "disassemble-v3",
+      "env_seed": 1582010,
+      "split": "test",
+      "source_horizon": 20,
+      "cut_steps": [
+        30,
+        35
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__1582011",
+      "task": "pick-place-wall-v3",
+      "env_seed": 1582011,
+      "split": "test",
+      "source_horizon": 20,
+      "cut_steps": [
+        30,
+        35
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__1582012",
+      "task": "shelf-place-v3",
+      "env_seed": 1582012,
+      "split": "test",
+      "source_horizon": 20,
+      "cut_steps": [
+        30,
+        35
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__1582013",
+      "task": "stick-pull-v3",
+      "env_seed": 1582013,
+      "split": "test",
+      "source_horizon": 20,
+      "cut_steps": [
+        30,
+        35
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__1582014",
+      "task": "stick-push-v3",
+      "env_seed": 1582014,
+      "split": "test",
+      "source_horizon": 20,
+      "cut_steps": [
+        30,
+        35
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__1582015",
+      "task": "disassemble-v3",
+      "env_seed": 1582015,
+      "split": "test",
+      "source_horizon": 50,
+      "cut_steps": [
+        65,
+        70
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__1582016",
+      "task": "pick-place-wall-v3",
+      "env_seed": 1582016,
+      "split": "test",
+      "source_horizon": 50,
+      "cut_steps": [
+        65,
+        70
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__1582017",
+      "task": "shelf-place-v3",
+      "env_seed": 1582017,
+      "split": "test",
+      "source_horizon": 50,
+      "cut_steps": [
+        65,
+        70
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__1582018",
+      "task": "stick-pull-v3",
+      "env_seed": 1582018,
+      "split": "test",
+      "source_horizon": 50,
+      "cut_steps": [
+        65,
+        70
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__1582019",
+      "task": "stick-push-v3",
+      "env_seed": 1582019,
+      "split": "test",
+      "source_horizon": 50,
+      "cut_steps": [
+        65,
+        70
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__1582020",
+      "task": "disassemble-v3",
+      "env_seed": 1582020,
+      "split": "test",
+      "source_horizon": 20,
+      "cut_steps": [
+        45,
+        50
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__1582021",
+      "task": "pick-place-wall-v3",
+      "env_seed": 1582021,
+      "split": "test",
+      "source_horizon": 20,
+      "cut_steps": [
+        45,
+        50
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__1582022",
+      "task": "shelf-place-v3",
+      "env_seed": 1582022,
+      "split": "test",
+      "source_horizon": 20,
+      "cut_steps": [
+        45,
+        50
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__1582023",
+      "task": "stick-pull-v3",
+      "env_seed": 1582023,
+      "split": "test",
+      "source_horizon": 20,
+      "cut_steps": [
+        45,
+        50
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__1582024",
+      "task": "stick-push-v3",
+      "env_seed": 1582024,
+      "split": "test",
+      "source_horizon": 20,
+      "cut_steps": [
+        45,
+        50
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__1589000",
+      "task": "disassemble-v3",
+      "env_seed": 1589000,
+      "split": "smoke",
+      "source_horizon": 20,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__1589001",
+      "task": "pick-place-wall-v3",
+      "env_seed": 1589001,
+      "split": "smoke",
+      "source_horizon": 20,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__1589002",
+      "task": "shelf-place-v3",
+      "env_seed": 1589002,
+      "split": "smoke",
+      "source_horizon": 20,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__1589003",
+      "task": "stick-pull-v3",
+      "env_seed": 1589003,
+      "split": "smoke",
+      "source_horizon": 20,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__1589004",
+      "task": "stick-push-v3",
+      "env_seed": 1589004,
+      "split": "smoke",
+      "source_horizon": 20,
+      "cut_steps": [
+        5,
+        10
+      ],
+      "replicate_ids": [
+        0,
+        1
+      ]
+    }
+  ],
+  "test_usage": "evaluate_only_after_world_and_critic_selection",
+  "proposal_reference": "ACT_RECAP_FUTURE_AWARE_CORRECTION_DESIGN_20260914.md"
+}

@@ -1,0 +1,2349 @@
+{
+  "task_id": "native10-training-20260916",
+  "version": 11,
+  "date_utc": "2026-09-17",
+  "status": "protocol_approved_round2_development_policy_conditionally_released",
+  "user_authorization": "Execute the native10/data/correction training plan with a moderately larger training dataset.",
+  "task_document": "coordination/NATIVE10_TRAINING_TASK.md",
+  "task_document_sha256": "682c3aa13611afd21ee01ed1d934543aed45a8cad8714f660b5f171b9281d45a",
+  "protocol_review": "coordination/NATIVE10_MAIN_COLLECTION_REVIEW.md",
+  "protocol_review_sha256": "083a1ab397512936c3d13ae033310e6a23467faf72f387c040300b16b5d11857",
+  "p0_analysis_review": "coordination/NATIVE10_P0_ANALYSIS_REVIEW.md",
+  "p0_analysis_review_sha256": "ea73031e503b3661a8492477037d15b23555aaae04b6f2b38da1e1ce03b0b822",
+  "concurrency_review": "coordination/NATIVE10_CONCURRENCY32_REVIEW.md",
+  "concurrency_review_sha256": "50a2187aaf70085e321c700d6b367c4d549a7721c0e5c4073e63191ea52e2311",
+  "round1_decision": "coordination/NATIVE10_ROUND1_ANALYSIS_DECISION.md",
+  "round1_decision_sha256": "5ce1d67fc8d8dcec8045f1d94cbf98e255530c65a6fd13e7b1bbaf4f0570bf75",
+  "training_addendum": "coordination/NATIVE10_TRAINING_ADDENDUM.md",
+  "training_addendum_sha256": "a0f499e388a3c09619cd5042901b8fcd919a670503e58835069f2a5fdab467df",
+  "command_budget_amendment": "coordination/NATIVE10_RAW_BUDGET_AMENDMENT.md",
+  "command_budget_amendment_sha256": "26dc21b69348e3ba90e5554b838efe9b6d610c2cef55ed0e0962fb99df89900d",
+  "raw_command_review": "coordination/NATIVE10_RAW_COMMAND_REVIEW.md",
+  "raw_command_review_sha256": "8789cb1b3b5f55ca4777e320eb7d60a84a5cc636f7b97c0ababb4c00a95e068d",
+  "analysis_lead_decisions": "coordination/NATIVE10_ANALYSIS_LEAD.md",
+  "analysis_lead_decisions_sha256": "e39d35a046ab9058c9539cae876a3168d98fe2900b580ea0cc042eed1479e833",
+  "evaluation_state_count_amendment": "coordination/NATIVE10_EVAL20_AMENDMENT.md",
+  "evaluation_state_count_amendment_sha256": "a4e43217a062c1918e44984ef557bc17001df02e9e712dc9929fe11e31ce5076",
+  "split_episode_counts": {
+    "train": 600,
+    "development": 100,
+    "calibration": 100,
+    "heldout": 100
+  },
+  "evaluation_unique_initial_states_per_task": 20,
+  "paired_suffixes_per_state": {
+    "train": 4,
+    "development": 4,
+    "calibration": 2,
+    "heldout": 4
+  },
+  "initial_state_uniqueness": "physical scene fingerprint excluding RNG/seed/time; pre-registered duplicate replacement only before first action; heldout initialization after final policy freeze",
+  "training_rounds": [
+    300,
+    300
+  ],
+  "new_simulator_attempts_hard_limit": 50000,
+  "planned_attempts_upper_bound": 48800,
+  "main_independent_candidate_bank_restores_reserved": 1100,
+  "remaining_technical_reserve": 1200,
+  "p0_attempts_hard_limit": 600,
+  "released_scope": [
+    "isolated_implementation",
+    "cpu_protocol_checks",
+    "round1_native10_local_labels",
+    "preregistered_initialization_replacements",
+    "round1_fit_preflight",
+    "round1_critic_training",
+    "round1_development_policy",
+    "round2_native10_local_labels",
+    "final_fit_preflight",
+    "final_critic_training",
+    "round2_development_policy"
+  ],
+  "round1_collection": {
+    "stage": "round1_labels",
+    "bank_version": "round1_labels_v1",
+    "train_primary_slots": 300,
+    "development_primary_slots": 100,
+    "episode_ids_canonical_sha256": "0186cb243f51b83ef32fce30cb7f04ae9aedb97914f337007ea8ae692a802dec",
+    "simulator_attempts_limit": 23200,
+    "training_updates": 0,
+    "initialization_replacement_stage": "technical_reserve",
+    "initialization_replacement_stage_limit": 1200,
+    "validated_workers": 32,
+    "gpu_count": 8,
+    "pending_config_reference": "outputs/native10_training_20260916/preparation/main_round1_pending.json",
+    "manifest_directory": "outputs/native10_training_20260916/preparation/main_registration_v2",
+    "freeze_rule": "rebuild config using the existing freeze entrypoint and bind this READY v4; do not run the old READY-v3-bound pending config"
+  },
+  "round1_start_conditions": [
+    "current_main_cpu_integration_results_archived_and_passed",
+    "main_config_code_models_manifest_and_ready_v4_snapshot_frozen_before_collection",
+    "exact_400_primary_slots_and_preregistered_initialization_replacements_enforced",
+    "ledger_stage_23200_global_50000_and_reserve_1200_enforced",
+    "gpu_lifecycle_used_and_p0_frozen_artifacts_preserved"
+  ],
+  "p0_start_conditions": [
+    "executor_cpu_and_semantics_review_passed",
+    "raw_anchor_mask_symmetry_and_critic_mapping_invariants_passed_in_cpu_integration",
+    "p0_config_seed_manifest_and_code_dependencies_frozen",
+    "new_attempt_ledger_created",
+    "gpu_guard_active_and_formal_work_uses_lifecycle"
+  ],
+  "claims": {
+    "p0_started": true,
+    "p0_technical_audit_independently_reviewed": true,
+    "full_p0_audit_reviewed": true,
+    "p0_concurrency32_independently_reviewed": true,
+    "p0_attempts_verified": 564,
+    "main_collection_released": true,
+    "training_released": true,
+    "training_started": true,
+    "fit_preflight_conditionally_released": true,
+    "fit_preflight_passed": true,
+    "main_collection_completed": true,
+    "pca_preprocessing_performed": true,
+    "training_released_phase": "final",
+    "round1_training_completed": true,
+    "round1_training_optimizer_updates_verified": 19200,
+    "round1_training_new_simulator_attempts": 0,
+    "round1_selected_model_reload_passed": true,
+    "round1_development_policy_conditionally_released": true,
+    "round1_development_policy_started": true,
+    "round1_development_policy_completed": true,
+    "round1_development_policy_audit_passed": true,
+    "round1_development_policy_simulator_attempts_verified": 1995,
+    "round1_development_policy_new_optimizer_updates": 0,
+    "round2_collection_conditionally_released": true,
+    "round2_collection_started": true,
+    "round2_training_released": false,
+    "final_training_released": true,
+    "round2_collection_completed": true,
+    "round2_collection_simulator_attempts_verified": 17400,
+    "round2_collection_optimizer_updates": 0,
+    "round2_dataset_audit_passed": true,
+    "final_real_input_review_passed": true,
+    "final_fit_preflight_conditionally_released": true,
+    "final_fit_preflight_started": true,
+    "final_fit_preflight_completed": true,
+    "final_training_started": true,
+    "final_fit_preflight_resource_review_passed": true,
+    "final_fit_preflight_new_simulator_attempts": 0,
+    "final_fit_preflight_new_optimizer_updates": 0,
+    "final_preflight_independent_numeric_initial_asset_review_passed": true,
+    "final_training_conditionally_released": true,
+    "final_training_completed": true,
+    "final_training_optimizer_updates_verified": 32000,
+    "final_training_new_simulator_attempts": 0,
+    "final_training_selection_review_passed": true,
+    "final_selected_model_review_passed": true,
+    "final_training_resource_review_passed": true,
+    "round2_development_policy_scientific_plan_fixed": true,
+    "round2_development_policy_engineering_review_passed": false,
+    "round2_development_policy_started": false,
+    "round2_development_policy_engineering_handoff_available": true,
+    "round2_development_policy_cpu_checks_passed": 41
+  },
+  "p0_required_measurements": [
+    "loaded_actuator_control_limits_and_disable_flags",
+    "raw_vs_clipped_physical_effect_probe",
+    "real_bank_raw_anchor_and_critic_mapping_audit",
+    "measured_runtime_storage_and_attempt_cost"
+  ],
+  "command_semantics": "native10 raw baseline; replan=raw_a0; correction=raw_a0+feasible_mask_delta; critic uses existing clipped representation subject to P0 effective-action equivalence audit; historical anchors retain their original bounded protocol",
+  "main_collection_transition": "Round1 collection completed under its immutable READY v4 / round1_v1 snapshot: 400 primary slots, 22915 stage attempts, 23479 global attempts including P0. It is not restarted by this release.",
+  "prior_experiment": "completed_sealed_read_only_653_of_700",
+  "running_p0": "completed and independently reviewed at 564 attempts including concurrency32; retains its own frozen READY v2 snapshot and 20-episode results; this live version does not authorize rerunning or expanding it",
+  "executor_status": "coordination/NATIVE10_EXECUTOR_STATUS.json",
+  "updated_at_utc": "2026-09-17T01:22:08.048451+00:00",
+  "fit_preflight_decision": "coordination/NATIVE10_ROUND1_FIT_PREFLIGHT_DECISION.md",
+  "fit_preflight_decision_sha256": "7c3fc8a8f8bc0c13709205b9c9053a69a99e7c1a08e5f042972af5023c759960",
+  "round1_fit_preflight": {
+    "stage": "round1_fit_preflight",
+    "scope": "round1_fit_preflight",
+    "simulator_attempts_limit": 0,
+    "optimizer_updates_limit": 0,
+    "training_updates": 0,
+    "train_primary_slots": 300,
+    "development_primary_slots": 100,
+    "input_collection_version": "round1_v1",
+    "input_config_sha256": "f68b59f279ae4d03094ebe70f0185e29d7a65a8ce20903aed92ac4392f1e4fd2",
+    "input_freeze_sha256": "f46dda706607bf8ed52281d33a203471c2854b6c09f83e6d26d3b216a509d893",
+    "independent_protocol_required": true,
+    "scope_only_zero_resource_gate_required": true,
+    "required_data_checks": [
+      "scene_identity",
+      "replacement_chain"
+    ],
+    "pca_policy": "A retains original projection; B fits vision16/language8 using unique valid round1 train sources only; record PCA fitting separately from optimizer updates",
+    "initialization_policy": "audit all 8 initial A/B members before any optimization; seal projections, initial weights, train-only source bootstrap and trainable parameter masks for later training",
+    "formal_training_release": "Released only for round1 by READY v6 scope round1_critic_training, bound to this passed preflight.",
+    "status": "completed_passed",
+    "completed_artifact": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/round1/round1_preflight_v1",
+    "completed_seal_sha256": "3a97fff5235b804ec05afd6cc4dc6f25e89319c393d2fa21f70eda2296ed3930"
+  },
+  "round1_fit_preflight_start_conditions": [
+    "all_400_registered_primary_slots_resolved_under_frozen_rules_with_explicit_legitimate_missing_statuses",
+    "static_full_train_development_input_seals_exist_and_are_separate_from_live_smoke",
+    "independent_preflight_entry_and_mandatory_input_checks_have_archived_passing_cpu_evidence",
+    "preflight_config_code_design_and_ready_v5_snapshot_frozen_without_mutating_collection_round1_v1",
+    "preflight_scope_gate_enforces_zero_simulator_attempts_and_zero_optimizer_updates",
+    "full_input_audit_must_pass_before_train_only_pca_or_model_initialization",
+    "any_gpu_work_uses_lifecycle_without_interfering_with_collection"
+  ],
+  "fit_preflight_transition": "The independently frozen READY v5 preflight passed with 0 simulator calls and 0 optimizer updates. Training must reuse its exact sealed input, design, projections, initial weights and sampling artifacts.",
+  "round1_training_decision": "coordination/NATIVE10_ROUND1_TRAINING_DECISION.md",
+  "round1_training_decision_sha256": "b125fb409d3698e7ed358a17cab42b039a83249fcd629091664a4616c9592ee4",
+  "round1_collection_completion_review": "analysis/round1_collection_completion_review.json",
+  "round1_collection_completion_review_sha256": "8bfff658fb5484d9ad0a1f6ba34274495e8eedd15d8dc2a0d47953040b31b129",
+  "round1_train_method_review": "analysis/round1_train300_20260916_review.md",
+  "round1_train_method_review_sha256": "1d2cb6c079a574401c8b6af1670b488e7bfc8ad63813fa435e59c5f52d857fcc",
+  "round1_prefit_independent_review": "analysis/round1_prefit_independent_review.json",
+  "round1_prefit_independent_review_sha256": "6d50af7dceedae26e3e377136f54100c3e8fed510a8445af3dca94ce2b6b7a28",
+  "round1_training": {
+    "scope": "round1_critic_training",
+    "stage": "training_round1",
+    "phase": "round1",
+    "simulator_attempts_limit": 0,
+    "optimizer_updates_limit": 19200,
+    "workflow_optimizer_updates_hard_limit": 51200,
+    "paths": [
+      "A",
+      "B"
+    ],
+    "members_per_path": 4,
+    "max_updates_per_member": 2400,
+    "checkpoints": [
+      200,
+      400,
+      800,
+      1600,
+      2400
+    ],
+    "train_primary_slots": 300,
+    "development_primary_slots": 100,
+    "preflight": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/round1/round1_preflight_v1",
+      "seal_sha256": "3a97fff5235b804ec05afd6cc4dc6f25e89319c393d2fa21f70eda2296ed3930",
+      "result_sha256": "add02eae9a61d3576981197910132bffa35afdc3983cc99c8ec7995c72c0d0fe"
+    },
+    "dataset_bindings": {
+      "train": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_train_full_v1",
+        "seal_sha256": "08d8bf56408f65dc4302a588be987626ea2d4f420ab3a156c8c360ef8a7fd14a",
+        "input_audit_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round1_train_full_v1/input_audit.json",
+        "input_audit_sha256": "7de6ee45b9ee8bd68e9ba082d55a973b02a55741bc3a12c11e2d4ca472d9c1db",
+        "input_protocol_sha256": "2456b73fd0728be1fe42f50c3421dddcf30e298d918c746290d3edadb13152d4"
+      },
+      "development": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_development_full_v1",
+        "seal_sha256": "ff4084fa637fc5c50cbad1ee2010084d7b2658f42902700069b09ec71fdf8865",
+        "input_audit_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round1_development_full_v1/input_audit.json",
+        "input_audit_sha256": "b540489d63ad00b23fa183f4b4d47f268df8d444eafa0c6a527e2254cbc2876b",
+        "input_protocol_sha256": "2456b73fd0728be1fe42f50c3421dddcf30e298d918c746290d3edadb13152d4"
+      }
+    },
+    "design": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_preflight_v1/training_design.json",
+      "sha256": "3b9bbf7a67fc15123ac761c13358c0bfd8492ea9aea3c25649cefb02c66ef0cf"
+    },
+    "code_files": {
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/training_pipeline.py": "8488dc82370a2dfb516d6da4f8da1e76200596194a64861a21b81a4d95788655",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/training.py": "c111518c3ce2973fae00ce1b4653211792390fbcfff6ce965e4759ad6a00be25",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/dataset.py": "46e9d820e96de446007613cd84411b92dc47616f9508fe6ae7f992193cd602a7",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/artifact_loader.py": "923d5147e550beeb269e1ea168832f3b601797856de854fa6c35a4675608ecb4",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/protocol.py": "2e2a34e5f66dbfb92bb41fdffa372442d9e7b3e2ab55d0de96380ee76350b5c9",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/storage.py": "af2582337032796638fb1b56681bd43ef4a6141254671bdd43c45bf981735a3a",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/semantics.py": "faca9157236d1178b61d3dc9845f7ad9369d76eb81efb546b43be1c6037c0639",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/candidates13.py": "8f461e4f18b22ea8941620fb70f247cc970e2e055fc9d5fd5b934009f990882e",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/scene_identity.py": "44fd6d7328e715adad7d6aba755b2f1c778309962eb12ada54b262bbeae3d9dc",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/src/corrector/critic.py": "e2517850279c800a0ea073c6ccc7732d42fb64e456dd99cab5d9034cc2f03269",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/src/corrector/guidance.py": "788bd844c14df521f931bd1e3f962fdc61e36f2d9f9519505e242660f8d41c9b",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/src/corrector/actions.py": "ca89b253b1a7e34e1253ee0a5e944957be5775ec03f70123140ad4501081bfa5"
+    },
+    "initialization_policy": "Load the exact sealed preflight projections and all 8 initial states, bootstrap/minibatch seeds and trainable masks; no PCA refit or regeneration.",
+    "selection_policy": "Use the preregistered complete 100-source development bank rule to select one A/B ensemble checkpoint; development never enters optimizer or PCA.",
+    "training_output_check": "Existing selected_reload_audit.json must verify exported trained members and ensemble on 95 reached development sources; probabilities on 13 slots, gradients on preregistered slots 0 and 11; preserve 100-source evaluation denominator.",
+    "future_stages": "READY v7 conditionally releases one round1_development_policy run. Round2 labels/training, calibration and heldout remain locked.",
+    "status": "completed_passed",
+    "completed_model_seal": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/complete.json",
+      "sha256": "ff460f12c598a34a15a28ed7619ed071a60be195a3dd2f0c1c963a202ee22287"
+    },
+    "completed_independent_audit_seal": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/training_audits/round1_fit_v1_new/complete.json",
+      "sha256": "80184aeef52e467ae6f386ea594bae2588f8d47879fb8c9224c49586ab423a4c"
+    }
+  },
+  "round1_training_start_conditions": [
+    "passed_preflight_seal_and_independent_review_match_the_exact_authorized_shas",
+    "independent_training_config_code_and_ready_v6_snapshot_frozen_without_mutating_collection_or_preflight",
+    "same_input_design_code_initial_assets_sampling_and_trainable_masks_as_preflight_enforced",
+    "stage_training_round1_maps_to_scope_round1_critic_training_and_ledger_enforces_19200_optimizer_updates_zero_simulator_attempts",
+    "registered_A_B_scientific_parameters_and_checkpoint_selection_unchanged",
+    "cpu_training_keeps_gpu_holders_or_formal_gpu_work_uses_lifecycle"
+  ],
+  "round1_training_transition": "Round1 completed under immutable READY v6 / round1_fit_v1: 19200 optimizer updates and zero simulator attempts. Selected B200 passed independent selection, identity, resource and reload audits. Do not repeat training.",
+  "round1_policy_decision": "coordination/NATIVE10_ROUND1_POLICY5_DECISION.md",
+  "round1_policy_decision_sha256": "bcc9e799f12a69c5f6b12e8499c561eb51cb1729e228c944c69edad0517f831f",
+  "round1_training_completion_review": "analysis/round1_training_completion_review.json",
+  "round1_training_completion_review_sha256": "dcfd73afbe9b6e76a9e916517dee8aca11eda78ae812dcbe0c50ba993fa90bcb",
+  "round1_trained_selection_review": "analysis/round1_trained_selection_review.json",
+  "round1_trained_selection_review_sha256": "d88da204fedb5486aca3adae90d5407d2636b70dbe4fe5abb8565bb9c57353bc",
+  "round1_selected_model_review": "analysis/round1_selected_model_review.json",
+  "round1_selected_model_review_sha256": "9b939bb0d99fbb8e6d632f7cfdc4c0c38fb40200de76ac8306aecf8bfe5ddd90",
+  "round1_policy_deployment_review": "analysis/round1_policy_deployment_review.json",
+  "round1_policy_deployment_review_sha256": "3884101a619e79ec13bb990a9c50f6eee0e2dadd630f5ff601ffc928fe59cacc",
+  "round1_development_policy": {
+    "scope": "round1_development_policy",
+    "stage": "round1_development_policy",
+    "status": "completed_passed",
+    "simulator_attempts_limit": 2100,
+    "expected_simulator_attempts": 1995,
+    "optimizer_updates_limit": 0,
+    "capture_attempts_limit": 0,
+    "initialization_replacements_allowed": false,
+    "development_primary_slots": 100,
+    "evaluation_unique_initial_states_per_task": 20,
+    "reached_cut_sources": 95,
+    "common_no_alarm_sources": 5,
+    "common_success_sources": 4,
+    "common_failure_sources": 1,
+    "paired_suffixes_per_state": 4,
+    "per_arm_outcome_denominator": 400,
+    "arms": [
+      "continue_native10",
+      "alarm_replan10",
+      "velocity",
+      "direct",
+      "post"
+    ],
+    "episode_ids": [
+      "disassemble-v3__2026111600",
+      "pick-place-wall-v3__2026111601",
+      "shelf-place-v3__2026111602",
+      "stick-pull-v3__2026111603",
+      "stick-push-v3__2026111604",
+      "disassemble-v3__2026111605",
+      "pick-place-wall-v3__2026111606",
+      "shelf-place-v3__2026111607",
+      "stick-pull-v3__2026111608",
+      "stick-push-v3__2026111609",
+      "disassemble-v3__2026111610",
+      "pick-place-wall-v3__2026111611",
+      "shelf-place-v3__2026111612",
+      "stick-pull-v3__2026111613",
+      "stick-push-v3__2026111614",
+      "disassemble-v3__2026111615",
+      "pick-place-wall-v3__2026111616",
+      "shelf-place-v3__2026111617",
+      "stick-pull-v3__2026111618",
+      "stick-push-v3__2026111619",
+      "disassemble-v3__2026111620",
+      "pick-place-wall-v3__2026111621",
+      "shelf-place-v3__2026111622",
+      "stick-pull-v3__2026111623",
+      "stick-push-v3__2026111624",
+      "disassemble-v3__2026111625",
+      "pick-place-wall-v3__2026111626",
+      "shelf-place-v3__2026111627",
+      "stick-pull-v3__2026111628",
+      "stick-push-v3__2026111629",
+      "disassemble-v3__2026111630",
+      "pick-place-wall-v3__2026111631",
+      "shelf-place-v3__2026111632",
+      "stick-pull-v3__2026111633",
+      "stick-push-v3__2026111634",
+      "disassemble-v3__2026111635",
+      "pick-place-wall-v3__2026111636",
+      "shelf-place-v3__2026111637",
+      "stick-pull-v3__2026111638",
+      "stick-push-v3__2026111639",
+      "disassemble-v3__2026111640",
+      "pick-place-wall-v3__2026111641",
+      "shelf-place-v3__2026111642",
+      "stick-pull-v3__2026111643",
+      "stick-push-v3__2026111644",
+      "disassemble-v3__2026111645",
+      "pick-place-wall-v3__2026111646",
+      "shelf-place-v3__2026111647",
+      "stick-pull-v3__2026111648",
+      "stick-push-v3__2026111649",
+      "disassemble-v3__2026111650",
+      "pick-place-wall-v3__2026111651",
+      "shelf-place-v3__2026111652",
+      "stick-pull-v3__2026111653",
+      "stick-push-v3__2026111654",
+      "disassemble-v3__2026111655",
+      "pick-place-wall-v3__2026111656",
+      "shelf-place-v3__2026111657",
+      "stick-pull-v3__2026111658",
+      "stick-push-v3__2026111659",
+      "disassemble-v3__2026111660",
+      "pick-place-wall-v3__2026111661",
+      "shelf-place-v3__2026111662",
+      "stick-pull-v3__2026111663",
+      "stick-push-v3__2026111664",
+      "disassemble-v3__2026111665",
+      "pick-place-wall-v3__2026111666",
+      "shelf-place-v3__2026111667",
+      "stick-pull-v3__2026111668",
+      "stick-push-v3__2026111669",
+      "disassemble-v3__2026111670",
+      "pick-place-wall-v3__2026111671",
+      "shelf-place-v3__2026111672",
+      "stick-pull-v3__2026111673",
+      "stick-push-v3__2026111674",
+      "disassemble-v3__2026111675",
+      "pick-place-wall-v3__2026111676",
+      "shelf-place-v3__2026111677",
+      "stick-pull-v3__2026111678",
+      "stick-push-v3__2026111679",
+      "disassemble-v3__2026111680",
+      "pick-place-wall-v3__2026111681",
+      "shelf-place-v3__2026111682",
+      "stick-pull-v3__2026111683",
+      "stick-push-v3__2026111684",
+      "disassemble-v3__2026111685",
+      "pick-place-wall-v3__2026111686",
+      "shelf-place-v3__2026111687",
+      "stick-pull-v3__2026111688",
+      "stick-push-v3__2026111689",
+      "disassemble-v3__2026111690",
+      "pick-place-wall-v3__2026111691",
+      "shelf-place-v3__2026111692",
+      "stick-pull-v3__2026111693",
+      "stick-push-v3__2026111694",
+      "disassemble-v3__2026111695",
+      "pick-place-wall-v3__2026111696",
+      "shelf-place-v3__2026111697",
+      "stick-pull-v3__2026111698",
+      "stick-push-v3__2026111699"
+    ],
+    "episode_ids_canonical_sha256": "7febdc814dee2c203378865a8371de6698bc727e783ee537312dce734a37db89",
+    "episode_ids_hash_serialization": "json.dumps(list_in_dataset_record_order, sort_keys=True, separators=(comma,colon)).encode UTF-8",
+    "env_seed_range_inclusive": [
+      2026111600,
+      2026111699
+    ],
+    "per_task_source_counts": {
+      "disassemble-v3": 20,
+      "pick-place-wall-v3": 20,
+      "shelf-place-v3": 20,
+      "stick-pull-v3": 20,
+      "stick-push-v3": 20
+    },
+    "input_collection_version": "round1_v1",
+    "input_config_sha256": "f68b59f279ae4d03094ebe70f0185e29d7a65a8ce20903aed92ac4392f1e4fd2",
+    "input_freeze_sha256": "f46dda706607bf8ed52281d33a203471c2854b6c09f83e6d26d3b216a509d893",
+    "development_dataset": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_development_full_v1",
+      "seal_sha256": "ff4084fa637fc5c50cbad1ee2010084d7b2658f42902700069b09ec71fdf8865",
+      "input_audit_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round1_development_full_v1/input_audit.json",
+      "input_audit_sha256": "b540489d63ad00b23fa183f4b4d47f268df8d444eafa0c6a527e2254cbc2876b",
+      "input_protocol_sha256": "2456b73fd0728be1fe42f50c3421dddcf30e298d918c746290d3edadb13152d4"
+    },
+    "selected_critic": {
+      "path": "B",
+      "step": 200,
+      "members": 4,
+      "directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected",
+      "training_model_seal": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/complete.json",
+        "sha256": "ff460f12c598a34a15a28ed7619ed071a60be195a3dd2f0c1c963a202ee22287"
+      },
+      "selected_seal": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/complete.json",
+        "sha256": "931c6f6043db92b5d9003eb2833dfc8edd0ab6c860a1979db3983cd7d893725f"
+      },
+      "selected_reload_audit": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected_reload_audit.json",
+        "sha256": "ce43fc0888f807ef048612ad733795bc1ad5aef24103f0ed89e3c1d51c4beb7b"
+      },
+      "member_checkpoint_sha256": [
+        "bc93c9035409cd2b7e413dffd0e0f9f3053ac34add4b47fc5cd57be9a5cdceb3",
+        "639e78888f9ef9657cef73da4f21f0676593a58ec4bfa0f8f098d0885432fb2f",
+        "e1f06c0214243ec9fd8952cab93139feafafbc8e84a74e432e9498d68d422df3",
+        "ae18f18e36b878b37b1085778136f6faf62f7146ad0d4ca015076671b2a074eb"
+      ]
+    },
+    "guard_cpu_evidence": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/policy_deployment_cpu_20260916_v2/complete.json",
+      "sha256": "791db4b5a52fc904260c7d86ef29b9791bf1eec123574992f3f23a537810cfa5"
+    },
+    "existing_seed_review": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/progress_audits/policy5_seed_review_v1/complete.json",
+      "sha256": "55990abc225e71272b6bc208c23f05851683170b7df67d683e05948f99ac0146"
+    },
+    "final_runner_integration_required": true,
+    "final_runner_already_frozen_at_release": false,
+    "method_policy": "Keep G0, original first eligible cut, native10 raw actions, matching formula and fixed flow parameters, single 10-step intervention, total horizon300. No new Q acceptance gate, radius adaptation, or model selection. Actual new and old critic radii need not match.",
+    "runtime_identity_policy": "Actually loaded selected weights must match selected hashes. Generate new guided bank; before new branches enforce original raw50 a0, mask, designated base seed and initial noise identity. Old guided actions may not substitute for new critic generation.",
+    "paired_seed_policy": "Same source/repeat/decision_index across five arms; unchanged namespace. Natural and interrupted policies may have different absolute suffix times. New five-arm internal comparisons are primary; cross-stage pairing requires its own full equivalence audit.",
+    "statistics": {
+      "comparisons_primary_correction": [
+        "velocity-alarm_replan10",
+        "direct-alarm_replan10",
+        "post-alarm_replan10"
+      ],
+      "comparison_interruption": "alarm_replan10-continue_native10",
+      "comparisons_system": [
+        "velocity-continue_native10",
+        "direct-continue_native10",
+        "post-continue_native10"
+      ],
+      "bootstrap_draws": 10000,
+      "bootstrap_seed": 2026091622,
+      "bootstrap_unit": "whole source within each task, preserve all arms and four suffixes",
+      "sampling": "NumPy default_rng.choice; freeze actual task and within-task source ordering in deployment config/report",
+      "ci": "percentile95",
+      "quantile_method": "linear",
+      "multiplicity_adjustment": "none; descriptive development intervals, not independent held validation"
+    },
+    "future_stages_locked": [
+      "round2_training",
+      "round2_development_policy",
+      "calibration",
+      "heldout"
+    ],
+    "completed_artifact": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_audits/round1_policy_v1",
+    "completed_seal_sha256": "4bfadd48f1ee23b8a9e616d8517364ec69e3d96efe22c59d8ff3d2a0322cf701",
+    "completed_result_sha256": "0e991c13d624a34b397a4cbba60b7c8d84882d7140566b235a4388c5eb73e4e4",
+    "actual_simulator_attempts": 1995,
+    "actual_optimizer_updates": 0,
+    "actual_source_capture_attempts": 0,
+    "actual_initialization_replacements": 0,
+    "completed_sources": 100,
+    "actual_candidate_restores": 95,
+    "actual_branches": 1900,
+    "completed_workers": 32,
+    "holders_restored": 8,
+    "deployment_config": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_protocols/round1_policy_v1/config.json",
+      "sha256": "56d0d31f1722f0cc1a974303219953e7340e7887f94c6d760c90739f3b64b06e"
+    },
+    "deployment_freeze": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_protocols/round1_policy_v1/freeze.json",
+      "sha256": "54600fd9210fbb6cea17b4d67c6687d4da5c35476870331121ce6ab9819b6eb0"
+    },
+    "execution_receipt": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/policy5_execution_v1/complete.json",
+      "sha256": "94c45b392fcdb572e0e17ae07c4a53b8109546faec8550a39c3b886c4911847f"
+    },
+    "final_runner_integration_completed": true,
+    "historical_future_stages_locked_at_ready_v7": [
+      "round2_labels",
+      "round2_training",
+      "round2_development_policy",
+      "calibration",
+      "heldout"
+    ]
+  },
+  "round1_development_policy_start_conditions": [
+    "new_independent_prepare_and_runner_actually_use_create_policy_collector_and_collect_existing_slot_with_guard_in_execution_path",
+    "necessary_final_integration_cpu_checks_pass_and_are_archived_with_exact_code_shas",
+    "new_config_code_snapshot_ready_v7_100_ids_original_sources_and_selected_model_bindings_frozen_before_any_simulator_attempt",
+    "runtime_loading_raw_a0_noise_mask_restore_and_suffix_provenance_checks_enforced_without_changing_scientific_policy",
+    "stage_2100_global_50000_zero_optimizer_no_capture_no_initialization_replacement_enforced",
+    "formal_gpu_work_uses_lifecycle_and_validated_32_workers_with_holders_restored_after_wave_or_failure"
+  ],
+  "round1_development_policy_transition": "Completed once under immutable READY v7 / round1_policy_v1: all 100 original development slots, 95 cut plus 5 common outcomes,1995 simulator attempts,zero optimizer/capture/replacement; sealed artifact,outcome/statistics,method and resource reviews passed. Do not repeat this stage.",
+  "round2_collection_decision": "coordination/NATIVE10_ROUND2_COLLECTION_DECISION.md",
+  "round2_collection_decision_sha256": "77bebf165cf6f4850dff7e411eef86300e10b4a8eb3f8ccd2eb2fc0c48bed11d",
+  "round1_policy_analysis": "coordination/NATIVE10_ROUND1_POLICY5_ANALYSIS.md",
+  "round1_policy_analysis_sha256": "bc99fc5f1532cfc4ef6535fb892429c7222db881f49752497edee69095616faf",
+  "round1_policy_launch_review": "analysis/round1_policy_launch_review.json",
+  "round1_policy_launch_review_sha256": "a23c3063fd50dad23dc9052259db0925cf167542e0dee1e5ea4b5d2abc85ebdf",
+  "round1_policy_result_independent_review": "analysis/round1_policy_result_independent_review.json",
+  "round1_policy_result_independent_review_sha256": "abcdeea1e982139b9d641cf2699ff768ab1be7e4d1b60d04a5f9138dc541c281",
+  "round1_policy_completion_review": "analysis/round1_policy_completion_review.json",
+  "round1_policy_completion_review_sha256": "c9be71cc67e9c143aa74a1a7073650408d29cec7bb72a392e4a27bbbd33a53ae",
+  "round1_policy_method_diagnostics": "analysis/round1_policy_method_diagnostics.json",
+  "round1_policy_method_diagnostics_sha256": "373b344d2bbe016002fb3f6b4ccdfe879ca9ee1ce44be933befe627328619c71",
+  "previous_ready": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_fit_protocols/final_fit_v1/coordination/NATIVE10_ANALYSIS_READY.json",
+  "previous_ready_sha256": "e44b37c380d50ce1bf88acc9f6c832fae1367b12fae0b0074076b269cce4938f",
+  "current_resources": {
+    "ledger": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/budget/attempts.jsonl",
+    "ledger_sha256": "ef493c95d51a77eae82cdec142f63d0f63cb6805a9b676588274684e40213bee",
+    "simulator_attempts": 42874,
+    "optimizer_updates": 51200,
+    "optimizer_updates_remaining": 0,
+    "technical_reserve_attempts_used": 0,
+    "simulator_attempts_hard_limit": 50000,
+    "optimizer_updates_hard_limit": 51200,
+    "accounting": "Use separate resource totals;no further optimizer update is authorized. Stage2100 cannot be exceeded by silently charging future stages or technical reserve."
+  },
+  "round2_collection": {
+    "scope": "round2_native10_local_labels",
+    "stage": "round2_labels",
+    "status": "completed_passed",
+    "bank_version": "round2_labels_v1",
+    "suggested_protocol_version": "round2_v1",
+    "kind": "labels13",
+    "generation_round": 2,
+    "stage_release_scopes_required": {
+      "round2_labels": "round2_native10_local_labels",
+      "technical_reserve": "preregistered_initialization_replacements"
+    },
+    "simulator_attempts_limit": 17400,
+    "optimizer_updates_limit": 0,
+    "training_updates": 0,
+    "capture_allowed": true,
+    "planned_primary_capture_limit": 300,
+    "train_primary_slots": 300,
+    "development_primary_slots": 0,
+    "episode_ids": [
+      "disassemble-v3__2026111300",
+      "pick-place-wall-v3__2026111301",
+      "shelf-place-v3__2026111302",
+      "stick-pull-v3__2026111303",
+      "stick-push-v3__2026111304",
+      "disassemble-v3__2026111305",
+      "pick-place-wall-v3__2026111306",
+      "shelf-place-v3__2026111307",
+      "stick-pull-v3__2026111308",
+      "stick-push-v3__2026111309",
+      "disassemble-v3__2026111310",
+      "pick-place-wall-v3__2026111311",
+      "shelf-place-v3__2026111312",
+      "stick-pull-v3__2026111313",
+      "stick-push-v3__2026111314",
+      "disassemble-v3__2026111315",
+      "pick-place-wall-v3__2026111316",
+      "shelf-place-v3__2026111317",
+      "stick-pull-v3__2026111318",
+      "stick-push-v3__2026111319",
+      "disassemble-v3__2026111320",
+      "pick-place-wall-v3__2026111321",
+      "shelf-place-v3__2026111322",
+      "stick-pull-v3__2026111323",
+      "stick-push-v3__2026111324",
+      "disassemble-v3__2026111325",
+      "pick-place-wall-v3__2026111326",
+      "shelf-place-v3__2026111327",
+      "stick-pull-v3__2026111328",
+      "stick-push-v3__2026111329",
+      "disassemble-v3__2026111330",
+      "pick-place-wall-v3__2026111331",
+      "shelf-place-v3__2026111332",
+      "stick-pull-v3__2026111333",
+      "stick-push-v3__2026111334",
+      "disassemble-v3__2026111335",
+      "pick-place-wall-v3__2026111336",
+      "shelf-place-v3__2026111337",
+      "stick-pull-v3__2026111338",
+      "stick-push-v3__2026111339",
+      "disassemble-v3__2026111340",
+      "pick-place-wall-v3__2026111341",
+      "shelf-place-v3__2026111342",
+      "stick-pull-v3__2026111343",
+      "stick-push-v3__2026111344",
+      "disassemble-v3__2026111345",
+      "pick-place-wall-v3__2026111346",
+      "shelf-place-v3__2026111347",
+      "stick-pull-v3__2026111348",
+      "stick-push-v3__2026111349",
+      "disassemble-v3__2026111350",
+      "pick-place-wall-v3__2026111351",
+      "shelf-place-v3__2026111352",
+      "stick-pull-v3__2026111353",
+      "stick-push-v3__2026111354",
+      "disassemble-v3__2026111355",
+      "pick-place-wall-v3__2026111356",
+      "shelf-place-v3__2026111357",
+      "stick-pull-v3__2026111358",
+      "stick-push-v3__2026111359",
+      "disassemble-v3__2026111360",
+      "pick-place-wall-v3__2026111361",
+      "shelf-place-v3__2026111362",
+      "stick-pull-v3__2026111363",
+      "stick-push-v3__2026111364",
+      "disassemble-v3__2026111365",
+      "pick-place-wall-v3__2026111366",
+      "shelf-place-v3__2026111367",
+      "stick-pull-v3__2026111368",
+      "stick-push-v3__2026111369",
+      "disassemble-v3__2026111370",
+      "pick-place-wall-v3__2026111371",
+      "shelf-place-v3__2026111372",
+      "stick-pull-v3__2026111373",
+      "stick-push-v3__2026111374",
+      "disassemble-v3__2026111375",
+      "pick-place-wall-v3__2026111376",
+      "shelf-place-v3__2026111377",
+      "stick-pull-v3__2026111378",
+      "stick-push-v3__2026111379",
+      "disassemble-v3__2026111380",
+      "pick-place-wall-v3__2026111381",
+      "shelf-place-v3__2026111382",
+      "stick-pull-v3__2026111383",
+      "stick-push-v3__2026111384",
+      "disassemble-v3__2026111385",
+      "pick-place-wall-v3__2026111386",
+      "shelf-place-v3__2026111387",
+      "stick-pull-v3__2026111388",
+      "stick-push-v3__2026111389",
+      "disassemble-v3__2026111390",
+      "pick-place-wall-v3__2026111391",
+      "shelf-place-v3__2026111392",
+      "stick-pull-v3__2026111393",
+      "stick-push-v3__2026111394",
+      "disassemble-v3__2026111395",
+      "pick-place-wall-v3__2026111396",
+      "shelf-place-v3__2026111397",
+      "stick-pull-v3__2026111398",
+      "stick-push-v3__2026111399",
+      "disassemble-v3__2026111400",
+      "pick-place-wall-v3__2026111401",
+      "shelf-place-v3__2026111402",
+      "stick-pull-v3__2026111403",
+      "stick-push-v3__2026111404",
+      "disassemble-v3__2026111405",
+      "pick-place-wall-v3__2026111406",
+      "shelf-place-v3__2026111407",
+      "stick-pull-v3__2026111408",
+      "stick-push-v3__2026111409",
+      "disassemble-v3__2026111410",
+      "pick-place-wall-v3__2026111411",
+      "shelf-place-v3__2026111412",
+      "stick-pull-v3__2026111413",
+      "stick-push-v3__2026111414",
+      "disassemble-v3__2026111415",
+      "pick-place-wall-v3__2026111416",
+      "shelf-place-v3__2026111417",
+      "stick-pull-v3__2026111418",
+      "stick-push-v3__2026111419",
+      "disassemble-v3__2026111420",
+      "pick-place-wall-v3__2026111421",
+      "shelf-place-v3__2026111422",
+      "stick-pull-v3__2026111423",
+      "stick-push-v3__2026111424",
+      "disassemble-v3__2026111425",
+      "pick-place-wall-v3__2026111426",
+      "shelf-place-v3__2026111427",
+      "stick-pull-v3__2026111428",
+      "stick-push-v3__2026111429",
+      "disassemble-v3__2026111430",
+      "pick-place-wall-v3__2026111431",
+      "shelf-place-v3__2026111432",
+      "stick-pull-v3__2026111433",
+      "stick-push-v3__2026111434",
+      "disassemble-v3__2026111435",
+      "pick-place-wall-v3__2026111436",
+      "shelf-place-v3__2026111437",
+      "stick-pull-v3__2026111438",
+      "stick-push-v3__2026111439",
+      "disassemble-v3__2026111440",
+      "pick-place-wall-v3__2026111441",
+      "shelf-place-v3__2026111442",
+      "stick-pull-v3__2026111443",
+      "stick-push-v3__2026111444",
+      "disassemble-v3__2026111445",
+      "pick-place-wall-v3__2026111446",
+      "shelf-place-v3__2026111447",
+      "stick-pull-v3__2026111448",
+      "stick-push-v3__2026111449",
+      "disassemble-v3__2026111450",
+      "pick-place-wall-v3__2026111451",
+      "shelf-place-v3__2026111452",
+      "stick-pull-v3__2026111453",
+      "stick-push-v3__2026111454",
+      "disassemble-v3__2026111455",
+      "pick-place-wall-v3__2026111456",
+      "shelf-place-v3__2026111457",
+      "stick-pull-v3__2026111458",
+      "stick-push-v3__2026111459",
+      "disassemble-v3__2026111460",
+      "pick-place-wall-v3__2026111461",
+      "shelf-place-v3__2026111462",
+      "stick-pull-v3__2026111463",
+      "stick-push-v3__2026111464",
+      "disassemble-v3__2026111465",
+      "pick-place-wall-v3__2026111466",
+      "shelf-place-v3__2026111467",
+      "stick-pull-v3__2026111468",
+      "stick-push-v3__2026111469",
+      "disassemble-v3__2026111470",
+      "pick-place-wall-v3__2026111471",
+      "shelf-place-v3__2026111472",
+      "stick-pull-v3__2026111473",
+      "stick-push-v3__2026111474",
+      "disassemble-v3__2026111475",
+      "pick-place-wall-v3__2026111476",
+      "shelf-place-v3__2026111477",
+      "stick-pull-v3__2026111478",
+      "stick-push-v3__2026111479",
+      "disassemble-v3__2026111480",
+      "pick-place-wall-v3__2026111481",
+      "shelf-place-v3__2026111482",
+      "stick-pull-v3__2026111483",
+      "stick-push-v3__2026111484",
+      "disassemble-v3__2026111485",
+      "pick-place-wall-v3__2026111486",
+      "shelf-place-v3__2026111487",
+      "stick-pull-v3__2026111488",
+      "stick-push-v3__2026111489",
+      "disassemble-v3__2026111490",
+      "pick-place-wall-v3__2026111491",
+      "shelf-place-v3__2026111492",
+      "stick-pull-v3__2026111493",
+      "stick-push-v3__2026111494",
+      "disassemble-v3__2026111495",
+      "pick-place-wall-v3__2026111496",
+      "shelf-place-v3__2026111497",
+      "stick-pull-v3__2026111498",
+      "stick-push-v3__2026111499",
+      "disassemble-v3__2026111500",
+      "pick-place-wall-v3__2026111501",
+      "shelf-place-v3__2026111502",
+      "stick-pull-v3__2026111503",
+      "stick-push-v3__2026111504",
+      "disassemble-v3__2026111505",
+      "pick-place-wall-v3__2026111506",
+      "shelf-place-v3__2026111507",
+      "stick-pull-v3__2026111508",
+      "stick-push-v3__2026111509",
+      "disassemble-v3__2026111510",
+      "pick-place-wall-v3__2026111511",
+      "shelf-place-v3__2026111512",
+      "stick-pull-v3__2026111513",
+      "stick-push-v3__2026111514",
+      "disassemble-v3__2026111515",
+      "pick-place-wall-v3__2026111516",
+      "shelf-place-v3__2026111517",
+      "stick-pull-v3__2026111518",
+      "stick-push-v3__2026111519",
+      "disassemble-v3__2026111520",
+      "pick-place-wall-v3__2026111521",
+      "shelf-place-v3__2026111522",
+      "stick-pull-v3__2026111523",
+      "stick-push-v3__2026111524",
+      "disassemble-v3__2026111525",
+      "pick-place-wall-v3__2026111526",
+      "shelf-place-v3__2026111527",
+      "stick-pull-v3__2026111528",
+      "stick-push-v3__2026111529",
+      "disassemble-v3__2026111530",
+      "pick-place-wall-v3__2026111531",
+      "shelf-place-v3__2026111532",
+      "stick-pull-v3__2026111533",
+      "stick-push-v3__2026111534",
+      "disassemble-v3__2026111535",
+      "pick-place-wall-v3__2026111536",
+      "shelf-place-v3__2026111537",
+      "stick-pull-v3__2026111538",
+      "stick-push-v3__2026111539",
+      "disassemble-v3__2026111540",
+      "pick-place-wall-v3__2026111541",
+      "shelf-place-v3__2026111542",
+      "stick-pull-v3__2026111543",
+      "stick-push-v3__2026111544",
+      "disassemble-v3__2026111545",
+      "pick-place-wall-v3__2026111546",
+      "shelf-place-v3__2026111547",
+      "stick-pull-v3__2026111548",
+      "stick-push-v3__2026111549",
+      "disassemble-v3__2026111550",
+      "pick-place-wall-v3__2026111551",
+      "shelf-place-v3__2026111552",
+      "stick-pull-v3__2026111553",
+      "stick-push-v3__2026111554",
+      "disassemble-v3__2026111555",
+      "pick-place-wall-v3__2026111556",
+      "shelf-place-v3__2026111557",
+      "stick-pull-v3__2026111558",
+      "stick-push-v3__2026111559",
+      "disassemble-v3__2026111560",
+      "pick-place-wall-v3__2026111561",
+      "shelf-place-v3__2026111562",
+      "stick-pull-v3__2026111563",
+      "stick-push-v3__2026111564",
+      "disassemble-v3__2026111565",
+      "pick-place-wall-v3__2026111566",
+      "shelf-place-v3__2026111567",
+      "stick-pull-v3__2026111568",
+      "stick-push-v3__2026111569",
+      "disassemble-v3__2026111570",
+      "pick-place-wall-v3__2026111571",
+      "shelf-place-v3__2026111572",
+      "stick-pull-v3__2026111573",
+      "stick-push-v3__2026111574",
+      "disassemble-v3__2026111575",
+      "pick-place-wall-v3__2026111576",
+      "shelf-place-v3__2026111577",
+      "stick-pull-v3__2026111578",
+      "stick-push-v3__2026111579",
+      "disassemble-v3__2026111580",
+      "pick-place-wall-v3__2026111581",
+      "shelf-place-v3__2026111582",
+      "stick-pull-v3__2026111583",
+      "stick-push-v3__2026111584",
+      "disassemble-v3__2026111585",
+      "pick-place-wall-v3__2026111586",
+      "shelf-place-v3__2026111587",
+      "stick-pull-v3__2026111588",
+      "stick-push-v3__2026111589",
+      "disassemble-v3__2026111590",
+      "pick-place-wall-v3__2026111591",
+      "shelf-place-v3__2026111592",
+      "stick-pull-v3__2026111593",
+      "stick-push-v3__2026111594",
+      "disassemble-v3__2026111595",
+      "pick-place-wall-v3__2026111596",
+      "shelf-place-v3__2026111597",
+      "stick-pull-v3__2026111598",
+      "stick-push-v3__2026111599"
+    ],
+    "episode_ids_canonical_sha256": "9c1891d17b8c438162c4c2ab4ba245864e743b42cd4aa8b813baf298c922f78a",
+    "episode_ids_hash_serialization": "json.dumps(list_in_original_primary_manifest_order, sort_keys=True, separators=(comma,colon)).encode UTF-8",
+    "env_seed_range_inclusive": [
+      2026111300,
+      2026111599
+    ],
+    "per_task_source_counts": {
+      "disassemble-v3": 60,
+      "pick-place-wall-v3": 60,
+      "shelf-place-v3": 60,
+      "stick-pull-v3": 60,
+      "stick-push-v3": 60
+    },
+    "primary_registration": {
+      "primary_manifest": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/main_registration_v2/primary_manifest.json",
+        "sha256": "991e13f37117d3bc41b904554602be413e281a4ae1f80f6c05c00d70d6433886"
+      },
+      "registration": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/main_registration_v2/registration.json",
+        "sha256": "8f3777af260bd1c386f7144147a2ed316c790d593b2d0beb70e2a81476dfc809"
+      },
+      "identity": "Original train round=2 primary300 only; do not select all900 combined rows including600 reserve candidates. Original registrations remain read-only."
+    },
+    "paired_suffixes_per_candidate": 4,
+    "candidate_order": [
+      "a0",
+      "xyz_positive",
+      "xyz_negative",
+      "gripper_positive",
+      "gripper_negative",
+      "random_half_positive",
+      "random_half_negative",
+      "random_full_positive",
+      "random_full_negative",
+      "velocity",
+      "direct",
+      "post",
+      "reverse_post"
+    ],
+    "candidate_count": 13,
+    "separate_control_arm": "continue_native10",
+    "total_arms_per_source": 14,
+    "planned_attempts_per_source": 58,
+    "attempt_budget_arithmetic": "300 x (1 primary source capture +1 independent bank restore +14 arms x4 suffixes) =17400. Follow round1 full physical execution of all13 candidate arms and the separate normal control,even for identical candidate actions;no new physical-label reuse is authorized. Sources without a legal cut may reduce actual cost;retain all planned slots and reasons.",
+    "full_stage_global_simulator_total_without_reserve": 42874,
+    "selected_critic": {
+      "path": "B",
+      "step": 200,
+      "members": 4,
+      "directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected",
+      "training_model_seal": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/complete.json",
+        "sha256": "ff460f12c598a34a15a28ed7619ed071a60be195a3dd2f0c1c963a202ee22287"
+      },
+      "selected_seal": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/complete.json",
+        "sha256": "931c6f6043db92b5d9003eb2833dfc8edd0ab6c860a1979db3983cd7d893725f"
+      },
+      "selected_reload_audit": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected_reload_audit.json",
+        "sha256": "ce43fc0888f807ef048612ad733795bc1ad5aef24103f0ed89e3c1d51c4beb7b"
+      },
+      "member_checkpoint_sha256": [
+        "bc93c9035409cd2b7e413dffd0e0f9f3053ac34add4b47fc5cd57be9a5cdceb3",
+        "639e78888f9ef9657cef73da4f21f0676593a58ec4bfa0f8f098d0885432fb2f",
+        "e1f06c0214243ec9fd8952cab93139feafafbc8e84a74e432e9498d68d422df3",
+        "ae18f18e36b878b37b1085778136f6faf62f7146ad0d4ca015076671b2a074eb"
+      ]
+    },
+    "selected_preprocessing": {
+      "config": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/config.json",
+        "sha256": "0fe942a745d8ad31b055ce670647da71799a78f622ca5f98175109efa24b47a6"
+      },
+      "ranking": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected/ranking.json",
+        "sha256": "6b0a7e4530bfbbadafabb9546a891fbe4bf64a6d3774df62515f9ccd9aae242d"
+      },
+      "policy": "Reuse the exact frozen B200 four-member export,including its member-bound train-only projections/PCA and ActionTransform. No PCA refit,new initialization,model fallback or optimizer update during collection."
+    },
+    "model_loading_policy": "Verify the four weights actually loaded against member_0..3 selected hashes. Freeze B200 for all300 sources; generate new actions for each new source,never substitute old guided actions or update the critic using new labels mid-collection. New sources produce new a0; do not impose the completed policy5 cross-bank dev-a0 identity requirement.",
+    "scientific_method_policy": "Keep existing G0,VLA/D,native10,raw commands,10-step intervention,normal suffix,total control budget300,flow formulas/times/strengths and matching. Preserve all13 candidate families and separate normal control,including random,reverse,half/full radius and channel candidates; do not select only high-Q directions.",
+    "candidate_and_seed_policy": "Reuse the frozen native10 labels13 schema,main_local_labels_v1 random-seed domain and established source/repeat/decision-index pairing semantics. Freeze the resolved per-source half/full channel allocation and stochastic seeds before execution. Preserve raw a0+feasible delta,mask,symmetric pairs,tail identity,action/alias evidence and actual perturbation norms. Alias metadata remains available for the established training-loss deduplication weights;this release does not authorize reusing physical labels or skipping candidate branches.",
+    "cut_selection_policy": "analysis_lead_v1",
+    "cut_selection_policy_reference": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_ANALYSIS_LEAD.md",
+      "sha256": "e39d35a046ab9058c9539cae876a3168d98fe2900b580ea0cc042eed1479e833"
+    },
+    "cut_registration": {
+      "first_alarm_sources": 150,
+      "scheduled_sources": 150,
+      "per_task_first_alarm": 30,
+      "per_task_scheduled": 30,
+      "scheduled_targets": [
+        15,
+        45,
+        95
+      ],
+      "scheduled_target_sources": {
+        "15": 50,
+        "45": 50,
+        "95": 50
+      },
+      "per_task_each_scheduled_target": 10,
+      "interpretation": "These are registered requested target groups,not quotas for actually observed alarms/cuts. Each task has30 first-alarm targets and30 scheduled targets;fallback and no-cut cases remain in their registered groups. Never recapture or replace a source to obtain30 observed alarm cuts."
+    },
+    "effective_training_cut_fallback": {
+      "scheduled": {
+        "15": [
+          15,
+          5
+        ],
+        "45": [
+          45,
+          15,
+          5
+        ],
+        "95": [
+          95,
+          45,
+          15,
+          5
+        ]
+      },
+      "first_alarm_without_legal_alarm": [
+        15,
+        5
+      ],
+      "eligibility": "Only reached,nonterminal cuts with at least10 controls remaining,under the previously frozen native10 cut legality rule.",
+      "no_legal_cut": "Retain planned episode and missing reason; never outcome/Q-based recapture or seed replacement.",
+      "historical_placeholder": "Original registration fallback=none_pending_analysis_review is historical metadata,explicitly superseded by analysis_lead_v1 and the same effective policy used in round1. Do not edit original registration; retain requested metadata and resolved effective policy separately.",
+      "other_splits": "Training fallback is not authorized for development,calibration or heldout."
+    },
+    "scene_identity": {
+      "registry_before": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/scene_registry/entries.jsonl",
+        "sha256": "ffb5abdf935645485604d0af9c43990ac7ebce87e9c921de70ef9d0cba39d497"
+      },
+      "scope": "Check initial physical scene against existing registry across all already registered/collected splits before first action;exclude seed,RNG,time from physical fingerprint. Preserve immutable starting evidence and append legitimate new scene records.",
+      "replacement_policy": {
+        "stage": "technical_reserve",
+        "scope": "preregistered_initialization_replacements",
+        "workflow_simulator_attempts_limit": 1200,
+        "workflow_simulator_attempts_already_used": 0,
+        "optimizer_updates_limit": 0,
+        "primary_manifest": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/main_registration_v2/primary_manifest.json",
+          "sha256": "991e13f37117d3bc41b904554602be413e281a4ae1f80f6c05c00d70d6433886"
+        },
+        "registration": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/main_registration_v2/registration.json",
+          "sha256": "8f3777af260bd1c386f7144147a2ed316c790d593b2d0beb70e2a81476dfc809"
+        },
+        "replacement_candidates": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/main_registration_v2/replacement_candidates.json",
+          "sha256": "f6e2f4d86abfb8d2b93bfebd8efec807c3b98f3d51c981344e1dcc765da5ab07"
+        },
+        "reserve_manifest": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/main_registration_v2/reserve_manifest.json",
+          "sha256": "f5ded06a0750f7c60e6ceaa3d3af7cc3cd3c49d129e127a746b4608912a68819"
+        },
+        "allowed_reasons": "Only registered pre-action duplicate physical scene or initialization technical failure; follow the original ordered reserve chain.",
+        "forbidden_reasons": [
+          "success/failure outcome",
+          "Q score",
+          "candidate benefit",
+          "absence of legal cut"
+        ],
+        "counting": "All attempted initialization/capture costs count,including failure/retry; replacement capture uses technical_reserve,labels remain in round2_labels. Never create unregistered seeds or automatic extra candidates."
+      },
+      "heldout_initialization_allowed": false,
+      "registry_before_validation": "The referenced SHA is the pre-stage starting evidence. Freeze an immutable copy in the new protocol and bind that copy. The live scene registry remains append-only during collection and must not be rechecked against its pre-stage whole-file SHA after legitimate appends."
+    },
+    "initialization_replacement_stage": "technical_reserve",
+    "initialization_replacement_scope": "preregistered_initialization_replacements",
+    "initialization_replacement_workflow_limit": 1200,
+    "execution_policy": {
+      "validated_workers": 32,
+      "gpu_count": 8,
+      "workers_per_gpu": 4,
+      "formal_gpu_lifecycle_required": true,
+      "restore_all_holders_after_wave_or_failure": true,
+      "runtime_monitoring": "Technical progress,budget and errors only;no tuning,source/model changes or stopping based on intermediate success.",
+      "completion": "Finish all300 planned slots,retain missing/alias reasons,seal static audit and resource-specific ledger,and notify both conversations.",
+      "idle_gpu_policy": "Follow workspace GPU occupancy guard/lifecycle policy; never disable the guard or terminate unrelated compute."
+    },
+    "future_stages_locked": [
+      "training_final",
+      "round2_development_policy",
+      "calibration",
+      "heldout"
+    ],
+    "future_operations_locked": [
+      "optimizer updates",
+      "final_critic_training",
+      "second development policy simulation",
+      "calibration simulation",
+      "heldout simulation"
+    ],
+    "post_collection_input_policy": "After completion/audit,retain collection-critic provenance for both rounds and assemble all600 planned train slots. Keep no-cut records and the same alias-aware training-loss weighting as round1,without adding physical-label reuse. Final train-only PCA,initialization,bootstrap/masks and complete development input binding require a later explicit stage release.",
+    "actual_simulator_attempts": 17400,
+    "actual_optimizer_updates": 0,
+    "actual_primary_captures": 300,
+    "actual_candidate_restores": 300,
+    "actual_branches": 16800,
+    "completed_primary_slots": 300,
+    "effective_train_sources": 300,
+    "completion_audit": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_dataset_reviews/round2_train_full_v1",
+      "seal_sha256": "deb06a0c869650781e733c4a6e1af97f50a6d9ccd36185fc63d8d38d75e1e69a",
+      "result_sha256": "2cf843e64bf11cc055db25eaab2195f7799f34154987884e46f20dd88f2d507f"
+    },
+    "dataset_binding": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round2_train_full_v1",
+      "seal_sha256": "9dcce602261a6cc2c680f8bb85b770c2a08d576c024ea38efe64f3d9e090dcba",
+      "input_audit_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round2_train_full_v1/input_audit.json",
+      "input_audit_sha256": "b5a2c63e0832510e98d49106944d05bf9a8c6e1a812d07d28aa870bac0c489e9",
+      "input_protocol_sha256": "a25c2e599a9fe656c02f253ee32add30c197eed8458a0afd491234ca68cfaaa2"
+    },
+    "historical_future_operations_locked_at_ready_v8": [
+      "new PCA/preprocessing fitting",
+      "new model initialization or optimizer updates",
+      "additional training/model comparison",
+      "simulation of development/calibration/heldout splits"
+    ]
+  },
+  "round2_collection_start_conditions": [
+    "new_independent_round2_collection_configuration_maps_round2_labels_to_round2_native10_local_labels_and_technical_reserve_to_preregistered_initialization_replacements",
+    "actual_labels13_collection_entrypoint_allows_new_primary_capture_and_13_candidates_plus_normal_control_not_policy5_existing_source_only_entrypoint",
+    "necessary_cpu_checks_pass_for_stage_resource_isolation_original300_registration_effective_analysis_lead_v1_fallback_B200_loading_raw_mask_symmetric_alias_and_paired_seed_interfaces",
+    "freeze_new_READY_v8_round2_config_code_dependencies_300_ID_order_scene_registry_starting_evidence_selected_model_and_preprocessing_before_any_new_simulator_attempt",
+    "enforce_round2_17400_simulator_0_optimizer_primary300_capture_and_workflow_technical_reserve1200_already_used0_with_all_attempts_failures_and_retries_counted",
+    "keep_all_prior_P0_collection_training_and_policy5_registration_config_READY_and_freezes_read_only_and_lock_unreleased_future_stages",
+    "formal_gpu_work_uses_lifecycle_validated32_workers_and_restores_holders_after_whole_wave_or_failure"
+  ],
+  "round2_collection_transition": "All300 registered round2 sources completed under immutable READY v8/round2_v1,17400 simulator attempts and zero optimizer updates. Static dataset and joint-input audits are sealed. Do not restart round2 or old training. Only the separately bound final_fit_preflight zero-resource model stage may be conditionally released next.",
+  "draft_provenance": {
+    "based_on_live_ready_version": 10,
+    "based_on_live_ready_sha256": "e44b37c380d50ce1bf88acc9f6c832fae1367b12fae0b0074076b269cce4938f",
+    "artifact_only": "Unpublished metadata-only analysis draft adapted to the actual new round2 prepare contract and bound to its real41-pass CPU/handoff/pending evidence. Only the independent entry review binding remains missing;root owns final publication. This file grants no real loading/environment/simulation permission.",
+    "live_ready_modified": false,
+    "execution_started_by_drafter": false
+  },
+  "final_preflight_decision": "coordination/NATIVE10_FINAL_PREFLIGHT_DECISION.md",
+  "final_preflight_decision_sha256": "ad1198cfb034149a560d744e7d89673ef3c6338b859011d1df39f116c0579543",
+  "final_numerical_decision": "coordination/NATIVE10_FINAL_NUMERICAL_DECISION.md",
+  "final_numerical_decision_sha256": "3e556bad66cff0105c243b841cd24b619efdcc1c681bbf38b41bb0b71888cb1a",
+  "final_preflight_implementation_brief": "coordination/NATIVE10_FINAL_PREFLIGHT_IMPLEMENTATION_BRIEF.md",
+  "final_preflight_implementation_brief_sha256": "c27e7cf502114e079e04df103ba3239726a41b2f15505ebdf2450c60a88de261",
+  "final_input_contract": "coordination/NATIVE10_FINAL_INPUT_CONTRACT.md",
+  "final_input_contract_sha256": "bceeccecbe2f5a41a27f05e8245ee8b9e68c525e8cb3d653a3460f275fab54a0",
+  "final_preflight_engineering_review": "analysis/final_model_preflight_implementation_review.json",
+  "final_preflight_engineering_review_sha256": "b9da5d7c974027a5689259b663653969dfcc1ace8cf7dca1b2e8ba0b71256262",
+  "final_real_input_review": "analysis/final_real_input_review.json",
+  "final_real_input_review_sha256": "758186a4ba455d1859a6a737a3af986699094eb94239a41dddf5d8d0e53317c8",
+  "round2_collection_completion_review": "analysis/round2_collection_completion_review.json",
+  "round2_collection_completion_review_sha256": "0045f393c1b192fe01dbbf32c09f82ef7f11421a04fa467f88c91f47994bbdc2",
+  "final_fit_preflight": {
+    "stage": "final_fit_preflight",
+    "scope": "final_fit_preflight",
+    "status": "completed_passed",
+    "simulator_attempts_limit": 0,
+    "optimizer_updates_limit": 0,
+    "training_updates": 0,
+    "workflow_optimizer_updates_hard_limit": 51200,
+    "input_bundle": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/input_bundles/final_train600_input_v1",
+      "seal_sha256": "9e7798d534459e1f57dc32572f8634980faf963b246222ceb10e7fb1a2db805f",
+      "input_bundle_sha256": "d0395587afc390d5f9a4da9df075ae4b3797cbc7933bfeae42ebad4359053b87"
+    },
+    "input_manifest": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/input_bundles/final_train600_input_v1/manifest.json",
+      "sha256": "f32ddac963181f01db740817cf8bdc990d3a04ab131a8c90689c42c40941e496"
+    },
+    "source_bindings": {
+      "round1_train": {
+        "dataset_binding": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_train_full_v1",
+          "seal_sha256": "08d8bf56408f65dc4302a588be987626ea2d4f420ab3a156c8c360ef8a7fd14a",
+          "input_audit_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round1_train_full_v1/input_audit.json",
+          "input_audit_sha256": "7de6ee45b9ee8bd68e9ba082d55a973b02a55741bc3a12c11e2d4ca472d9c1db",
+          "input_protocol_sha256": "2456b73fd0728be1fe42f50c3421dddcf30e298d918c746290d3edadb13152d4"
+        },
+        "collection": {
+          "config_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/config.json",
+          "config_sha256": "f68b59f279ae4d03094ebe70f0185e29d7a65a8ce20903aed92ac4392f1e4fd2",
+          "freeze_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/freeze.json",
+          "freeze_sha256": "f46dda706607bf8ed52281d33a203471c2854b6c09f83e6d26d3b216a509d893"
+        },
+        "bank_version": "round1_labels_v1",
+        "input_audit_seal": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round1_train_full_v1/complete.json",
+          "sha256": "dca3eb3947a4e8f92bea5d8706b3b000cdb064d91485e4dd924e500126c17c17"
+        }
+      },
+      "round2_train": {
+        "dataset_binding": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round2_train_full_v1",
+          "seal_sha256": "9dcce602261a6cc2c680f8bb85b770c2a08d576c024ea38efe64f3d9e090dcba",
+          "input_audit_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round2_train_full_v1/input_audit.json",
+          "input_audit_sha256": "b5a2c63e0832510e98d49106944d05bf9a8c6e1a812d07d28aa870bac0c489e9",
+          "input_protocol_sha256": "a25c2e599a9fe656c02f253ee32add30c197eed8458a0afd491234ca68cfaaa2"
+        },
+        "collection": {
+          "config_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/config.json",
+          "config_sha256": "13ff72cbec4aa8fe92354d55e3a5e0ce0babc934d8cfeb72124af8eb4abc1944",
+          "freeze_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/freeze.json",
+          "freeze_sha256": "b1755f37303b914c2da362d59f390a91f8c1c46651023a7150810dff31a5ebcb"
+        },
+        "bank_version": "round2_labels_v1",
+        "completion_audit": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_dataset_reviews/round2_train_full_v1",
+          "seal_sha256": "deb06a0c869650781e733c4a6e1af97f50a6d9ccd36185fc63d8d38d75e1e69a",
+          "result_sha256": "2cf843e64bf11cc055db25eaab2195f7799f34154987884e46f20dd88f2d507f"
+        },
+        "input_audit_seal": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round2_train_full_v1/complete.json",
+          "sha256": "ed46a15f65959d4a7dd4d70f9e1ddec01fe729de3e1437dfcd3e50a27c78ee4b"
+        }
+      },
+      "development": {
+        "dataset_binding": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_development_full_v1",
+          "seal_sha256": "ff4084fa637fc5c50cbad1ee2010084d7b2658f42902700069b09ec71fdf8865",
+          "input_audit_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round1_development_full_v1/input_audit.json",
+          "input_audit_sha256": "b540489d63ad00b23fa183f4b4d47f268df8d444eafa0c6a527e2254cbc2876b",
+          "input_protocol_sha256": "2456b73fd0728be1fe42f50c3421dddcf30e298d918c746290d3edadb13152d4"
+        },
+        "collection": {
+          "config_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/config.json",
+          "config_sha256": "f68b59f279ae4d03094ebe70f0185e29d7a65a8ce20903aed92ac4392f1e4fd2",
+          "freeze_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/freeze.json",
+          "freeze_sha256": "f46dda706607bf8ed52281d33a203471c2854b6c09f83e6d26d3b216a509d893"
+        },
+        "bank_version": "round1_labels_v1",
+        "input_audit_seal": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round1_development_full_v1/complete.json",
+          "sha256": "d70e39fcc5812c38170d92f0513258b4d8e9f9c6a7d659590811112f701954d2"
+        }
+      }
+    },
+    "child_protocols_preserved": true,
+    "allowed_child_input_protocol_sha256": [
+      "2456b73fd0728be1fe42f50c3421dddcf30e298d918c746290d3edadb13152d4",
+      "a25c2e599a9fe656c02f253ee32add30c197eed8458a0afd491234ca68cfaaa2"
+    ],
+    "design": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_protocols/round1_preflight_v1/training_design.json",
+      "sha256": "3b9bbf7a67fc15123ac761c13358c0bfd8492ea9aea3c25649cefb02c66ef0cf"
+    },
+    "design_sha256": "3b9bbf7a67fc15123ac761c13358c0bfd8492ea9aea3c25649cefb02c66ef0cf",
+    "coverage": {
+      "train_planned": 600,
+      "train_effective": 600,
+      "train_effective_per_task": {
+        "disassemble-v3": 120,
+        "pick-place-wall-v3": 120,
+        "shelf-place-v3": 120,
+        "stick-pull-v3": 120,
+        "stick-push-v3": 120
+      },
+      "train_round1": 300,
+      "train_round2": 300,
+      "development_planned": 100,
+      "development_effective_cut": 95,
+      "development_common_no_cut": 5,
+      "development_selection_denominator": 100,
+      "calibration_or_heldout_used": false
+    },
+    "runtime": {
+      "python": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+      "environment": "lerobot",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.2.6",
+      "device": "cpu",
+      "dtype": "float32",
+      "threads": 2,
+      "canonical_path": "same original singleton/canonical shapes for selection and deployment;no runtime or numeric-method substitution"
+    },
+    "runtime_preparation_evidence": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/final_model_freeze_inputs_v1.json",
+      "sha256": "53cba2bcd5f5336b6ddc6972fca8025efed104e6e517d8c4e2934dd30a677d69"
+    },
+    "target_runtime_numerical_cpu_evidence": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/final_numerical_contract_cpu_20260916_v2/result.json",
+      "sha256": "b808875e02f7c2e9cc0b467c5a821f45236aa0186d8d6e8ef621f57517ccc233"
+    },
+    "numerical_contract": "canonical_strict_passed_dense_reported",
+    "numerical_decision": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_FINAL_NUMERICAL_DECISION.md",
+      "sha256": "3e556bad66cff0105c243b841cd24b619efdcc1c681bbf38b41bb0b71888cb1a"
+    },
+    "implementation_brief": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_FINAL_PREFLIGHT_IMPLEMENTATION_BRIEF.md",
+      "sha256": "c27e7cf502114e079e04df103ba3239726a41b2f15505ebdf2450c60a88de261"
+    },
+    "engineering_review": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/final_model_preflight_implementation_review.json",
+      "sha256": "b9da5d7c974027a5689259b663653969dfcc1ace8cf7dca1b2e8ba0b71256262"
+    },
+    "real_input_review": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/final_real_input_review.json",
+      "sha256": "758186a4ba455d1859a6a737a3af986699094eb94239a41dddf5d8d0e53317c8"
+    },
+    "analysis_decision": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_FINAL_PREFLIGHT_DECISION.md",
+      "sha256": "ad1198cfb034149a560d744e7d89673ef3c6338b859011d1df39f116c0579543"
+    },
+    "real_input_gate": "Before any PCA,initialization or model call,verify both immutable collection config/freeze/protocol identities,the3child datasets/audits,the independent joint bundle identity,source/split/scene/replacement provenance,common canonical features and the actual specification. Preserve original child protocol and generation-critic identities;do not relabel into one protocol.",
+    "authorized_model_operations": [
+      "existing train-only PCA fitting for pathB after input gate",
+      "pathA warm start from original old four-member weights/PCA with approved frozen/trainable mask",
+      "pathB fresh four-member initialization after final train-only PCA",
+      "zero-update member/ensemble inference and action-gradient checks",
+      "initial-state/export/cache reload checks",
+      "freeze preprocessing,8initial members,source bootstrap,minibatch plans/seeds and trainable masks"
+    ],
+    "path_A": {
+      "initialization": "Original old four-member critic weights,not round1 B200 or latest adapted weights",
+      "projection": "Original frozen old PCA/ActionTransform",
+      "trainable_mask": "Only original residual/advantage parameters are marked trainable;state/base/baseline and approved frozen buffers remain fixed. No actual optimizer updates.",
+      "old_assets": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/assets/critic"
+    },
+    "path_B": {
+      "initialization": "Four fresh small-MLP members matched to newly fitted shared projection",
+      "pca_fit_sources": "Each of600 unique effective train sources exactly once before source bootstrap;both rounds pooled in canonical feature space. No dev,candidate/suffix repetition,teacher/Q/outcome weighting.",
+      "vision_components": 16,
+      "language_components": 8,
+      "near_zero_floor": "unchanged approved floor",
+      "trainable_mask": "Approved complete small-critic MLP mask,recorded before any future fit;large VLA/D/feature extractors remain frozen."
+    },
+    "sampling_and_initial_assets": {
+      "paths": [
+        "A",
+        "B"
+      ],
+      "members_per_path": 4,
+      "initial_members_total": 8,
+      "bootstrap_unit": "Whole source within task;effective N draws with replacement for each task/member,currently120 per task and600 total. Use approved seeds and preserve candidate/repeat/alias grouping.",
+      "minibatches": "Seal exact approved minibatch seeds/plan and masks alongside all8initial weights and transforms. Do not change source-uniform or per-term loss deduplication rules.",
+      "before_any_future_optimization": "Both paths and all8initial members must pass input/identity/canonical and reporting checks and be sealed;later fit must consume these exact assets,no silent PCA refit or new initialization."
+    },
+    "canonical_acceptance": {
+      "strict_bit_exact": true,
+      "same_input_shape_and_runtime": true,
+      "checks": [
+        "canonical features and feature cache export/reload",
+        "all13 candidate probabilities",
+        "member and ensemble action gradients at slots0and11",
+        "state and detached a0 immutability",
+        "a0 relative advantage exactly zero"
+      ],
+      "a0_action_gradient_required_zero": false,
+      "coverage": "The already reviewed frozen final preflight implementation checks all 600 effective train sources and all 95 effective development cuts for both A/B paths, canonical and dense. Record exact IDs, shapes and member coverage. Development is excluded from PCA/bootstrap/optimization; preserve all 100 planned development sources for selection.",
+      "hard_failures": [
+        "NaN/Inf",
+        "source or member axis/order/shape error",
+        "unexpected1/N gradient scaling",
+        "cross-source coupling",
+        "canonical same-path reload mismatch including1ULP corruption",
+        "transform/floor/dtype/model/mask/bootstrap drift"
+      ]
+    },
+    "dense_report": {
+      "required": true,
+      "separate_from_canonical_acceptance": true,
+      "non_bitexact_alone_is_not_failure": true,
+      "fields": [
+        "actual source IDs/count and batch shapes",
+        "device/dtype/software/threads",
+        "observed and projected feature differences",
+        "all13 probability differences",
+        "slots0and11 member/ensemble gradient differences",
+        "absolute differences and reference scales",
+        "nonfinite and semantic/coupling/scaling checks"
+      ],
+      "new_atol_rtol_allowed": false,
+      "synthetic_error_as_real_threshold_allowed": false,
+      "actual_dense_evidence_requires_analysis_review_before_fit": true
+    },
+    "preflight_output_policy": "After actual execution passes, create a new immutable preflight seal binding inputs/specification/runtime, preprocessing, PCA, all 8 initial weights, bootstrap/minibatch/masks, canonical and dense reports, cost and before/after resource ledger. This authorization does not claim any future preflight result or release optimization.",
+    "future_stages_locked": [
+      "round2_development_policy",
+      "calibration",
+      "heldout"
+    ],
+    "future_scopes_locked": [],
+    "old_training_reexecution_allowed": false,
+    "next_stage_automatically_started": false,
+    "specification_sha256": "08891c3ee6feb71aa41a8cfa7cb0fbed61930e16eb8938cf5bfeff1dd24ad946",
+    "metadata_preview": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_previews/final_input_preview_v1",
+      "seal_sha256": "14c1d5b5e8efdcbeac910ddbc9137e3a861c996d6a84d6c3ff61364924037a3f",
+      "metadata_preview_sha256": "87329ae02a5b7c74afce1c474f02e978aff7bab34bd197af7cd662734f17b33a",
+      "specification_sha256": "08891c3ee6feb71aa41a8cfa7cb0fbed61930e16eb8938cf5bfeff1dd24ad946"
+    },
+    "pending_specification": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_preparations/final_pending_v1",
+      "seal_sha256": "59e7e7f0ffc9f384ea4405ddd4a694ec5604c62f99ffca26a3ce5e7acae1810d",
+      "specification_file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_preparations/final_pending_v1/specification.json",
+        "sha256": "81db905863b08880991b868097816fcd52a05214995707fa14150d572ca88a8c"
+      },
+      "specification_sha256": "08891c3ee6feb71aa41a8cfa7cb0fbed61930e16eb8938cf5bfeff1dd24ad946",
+      "specification_identity_serialization": "SHA256 of json.dumps(metadata_preview.identity,sort_keys=True,separators=(comma,colon)).encode UTF-8;distinct from specification.json file SHA.",
+      "status": "prepared_pending_final_preflight_release"
+    },
+    "metadata_preview_runtime": {
+      "torch": "2.7.1+cu126",
+      "numpy": "2.2.6",
+      "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+      "executable": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python3.12",
+      "device": "cpu",
+      "dtype": "float32",
+      "threads": 2,
+      "torch_distribution": "2.7.1",
+      "numpy_distribution": "2.2.6",
+      "torch_version_file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/lib/python3.12/site-packages/torch/version.py",
+        "sha256": "6ed9ff03113f2ceba7ad0f77cf4b160ea03f918ef010b5f662ce74786d182974"
+      }
+    },
+    "static_input_execution": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/execution_control/final_static_inputs_v1/result.json",
+      "sha256": "215224c3b5a15b0d5a5254ecfd9ba58f933123230212e815732384b815e8e311",
+      "status": "static_inputs_complete_real_preflight_unreleased",
+      "zero_model_pca_optimizer_simulator_calls": true
+    },
+    "preview_spec_review": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/final_preview_spec_review.json",
+      "sha256": "3ee240d95ae5215756e74fbb7015555bb1ee48da0cb9058e76cb4326afd8170f"
+    },
+    "completed_pipeline": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1",
+      "seal_sha256": "eb1e39d4ee145ebecce9b16593a9c1fd901fd7dcc2a5c9e8746f657e4c202d3e",
+      "result_sha256": "d693a7d1fa4f1d5a0be4f2141966f35d97390e6e427c4c5cb6803bfc8791c79d"
+    },
+    "execution_receipt": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_fit_execution/preflight/final_preflight_v1/complete.json",
+      "sha256": "d2ba158591ea7fee9c9caca75e7ad2fc2f9b236c3709a35344512d6ab14ec23d"
+    },
+    "execution_control_result": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/execution_control/final_preflight_v1/result.json",
+      "sha256": "fc845033fbf7116caa6f8bc6823fdb8431acea97f849402706e33bdf01822c3e"
+    },
+    "actual_simulator_attempts": 0,
+    "actual_optimizer_updates": 0,
+    "pca_fitting_performed": true,
+    "model_fit_complete": false,
+    "historical_future_stages_locked_at_ready_v9": [
+      "training_final",
+      "round2_development_policy",
+      "calibration",
+      "heldout"
+    ],
+    "historical_future_scopes_locked_at_ready_v9": [
+      "final_critic_training"
+    ],
+    "independent_review": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/final_prefit_independent_review.json",
+      "sha256": "aa70cecf2c41f51fdff686449b9353a337cb10ff9890826822c44f253ea12b00"
+    }
+  },
+  "final_fit_preflight_start_conditions": [
+    "actual_metadata_preview_and_pending_specification_are_complete_and_exact_specification_sha256_is_bound_in_READY",
+    "three_child_dataset_audits_two_collection_protocols_joint_input_bundle_and_real_input_review_are_complete_hash_bound_and_validate_without_modifying_old_protocols",
+    "independent_actual_final_fit_preflight_prepare_config_code_snapshot_CPU_evidence_numeric_runtime_and_READY_are_frozen_before_real_model_operations",
+    "stage_and_scope_are_both_final_fit_preflight_with_real_zero_simulator_zero_optimizer_gate_no_fake_update_reservation",
+    "runtime_is_frozen_lerobot_Torch2_7_1cu126_NumPy2_2_6_CPU_float32_threads2_and_canonical_strict_dense_separate_contract_is_enforced",
+    "all8initial_states_are_checked_and_actual_train_dev_numerical_scopes_are_explicitly_reported_and_sealed_with_no_future_training_or_simulation_auto_start"
+  ],
+  "final_fit_preflight_transition": "The registered real final preflight completed once with zero simulator attempts and zero optimizer updates;before/after/live ledgers are byte-identical. Reuse its exact sealed inputs,preprocessing,initial models and sampling assets for a separately frozen final fit. Do not repeat this preflight or any old stage.",
+  "completed_stage_reexecution_disallowed": [
+    "p0",
+    "round1_labels",
+    "round1_fit_preflight",
+    "training_round1",
+    "round1_development_policy",
+    "round2_labels",
+    "final_fit_preflight",
+    "training_final"
+  ],
+  "final_static_input_execution_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/execution_control/final_static_inputs_v1/result.json",
+  "final_static_input_execution_result_sha256": "215224c3b5a15b0d5a5254ecfd9ba58f933123230212e815732384b815e8e311",
+  "final_preview_spec_review": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/final_preview_spec_review.json",
+  "final_preview_spec_review_sha256": "3ee240d95ae5215756e74fbb7015555bb1ee48da0cb9058e76cb4326afd8170f",
+  "final_training_decision": "coordination/NATIVE10_FINAL_TRAINING_DECISION.md",
+  "final_training_decision_sha256": "68237196b09c59e50d12be07c3e22f5ba2cf4e783d36912cb8894b363bdf3033",
+  "final_preflight_completion_review": "analysis/final_preflight_completion_review.json",
+  "final_preflight_completion_review_sha256": "532c37b6a8da3cd7fec3275fb2980ba79b1f320308c664d513140d43365299f7",
+  "final_training": {
+    "stage": "training_final",
+    "scope": "final_critic_training",
+    "phase": "final",
+    "mode": "fit",
+    "status": "completed_passed",
+    "simulator_attempts_limit": 0,
+    "optimizer_updates_limit": 32000,
+    "training_updates": 32000,
+    "workflow_optimizer_updates_hard_limit": 51200,
+    "input_bundle": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/input_bundles/final_train600_input_v1",
+      "seal_sha256": "9e7798d534459e1f57dc32572f8634980faf963b246222ceb10e7fb1a2db805f",
+      "input_bundle_sha256": "d0395587afc390d5f9a4da9df075ae4b3797cbc7933bfeae42ebad4359053b87"
+    },
+    "design_sha256": "3b9bbf7a67fc15123ac761c13358c0bfd8492ea9aea3c25649cefb02c66ef0cf",
+    "specification_sha256": "08891c3ee6feb71aa41a8cfa7cb0fbed61930e16eb8938cf5bfeff1dd24ad946",
+    "preflight": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1",
+      "seal_sha256": "eb1e39d4ee145ebecce9b16593a9c1fd901fd7dcc2a5c9e8746f657e4c202d3e",
+      "result_sha256": "d693a7d1fa4f1d5a0be4f2141966f35d97390e6e427c4c5cb6803bfc8791c79d"
+    },
+    "stage_release_scopes_required": {
+      "training_final": "final_critic_training"
+    },
+    "paths": [
+      "A",
+      "B"
+    ],
+    "members_per_path": 4,
+    "max_updates_per_member": 4000,
+    "stop_after": {
+      "A": 4000,
+      "B": 4000
+    },
+    "optimizer_budget_arithmetic": "2 paths x4 members x4000 updates =32000 maximum new updates;19200 prior+32000=51200 workflow maximum.",
+    "checkpoints": [
+      200,
+      400,
+      800,
+      1600,
+      2400,
+      3200,
+      4000
+    ],
+    "coverage": {
+      "train_planned": 600,
+      "train_effective": 600,
+      "train_effective_per_task": {
+        "disassemble-v3": 120,
+        "pick-place-wall-v3": 120,
+        "shelf-place-v3": 120,
+        "stick-pull-v3": 120,
+        "stick-push-v3": 120
+      },
+      "train_round1": 300,
+      "train_round2": 300,
+      "development_planned": 100,
+      "development_effective_cut": 95,
+      "development_common_no_cut": 5,
+      "development_selection_denominator": 100,
+      "calibration_or_heldout_used": false
+    },
+    "source_bindings": {
+      "round1_train": {
+        "dataset_binding": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_train_full_v1",
+          "seal_sha256": "08d8bf56408f65dc4302a588be987626ea2d4f420ab3a156c8c360ef8a7fd14a",
+          "input_audit_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round1_train_full_v1/input_audit.json",
+          "input_audit_sha256": "7de6ee45b9ee8bd68e9ba082d55a973b02a55741bc3a12c11e2d4ca472d9c1db",
+          "input_protocol_sha256": "2456b73fd0728be1fe42f50c3421dddcf30e298d918c746290d3edadb13152d4"
+        },
+        "collection": {
+          "config_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/config.json",
+          "config_sha256": "f68b59f279ae4d03094ebe70f0185e29d7a65a8ce20903aed92ac4392f1e4fd2",
+          "freeze_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/freeze.json",
+          "freeze_sha256": "f46dda706607bf8ed52281d33a203471c2854b6c09f83e6d26d3b216a509d893"
+        },
+        "bank_version": "round1_labels_v1",
+        "input_audit_seal": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round1_train_full_v1/complete.json",
+          "sha256": "dca3eb3947a4e8f92bea5d8706b3b000cdb064d91485e4dd924e500126c17c17"
+        }
+      },
+      "round2_train": {
+        "dataset_binding": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round2_train_full_v1",
+          "seal_sha256": "9dcce602261a6cc2c680f8bb85b770c2a08d576c024ea38efe64f3d9e090dcba",
+          "input_audit_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round2_train_full_v1/input_audit.json",
+          "input_audit_sha256": "b5a2c63e0832510e98d49106944d05bf9a8c6e1a812d07d28aa870bac0c489e9",
+          "input_protocol_sha256": "a25c2e599a9fe656c02f253ee32add30c197eed8458a0afd491234ca68cfaaa2"
+        },
+        "collection": {
+          "config_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/config.json",
+          "config_sha256": "13ff72cbec4aa8fe92354d55e3a5e0ce0babc934d8cfeb72124af8eb4abc1944",
+          "freeze_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/freeze.json",
+          "freeze_sha256": "b1755f37303b914c2da362d59f390a91f8c1c46651023a7150810dff31a5ebcb"
+        },
+        "bank_version": "round2_labels_v1",
+        "completion_audit": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_dataset_reviews/round2_train_full_v1",
+          "seal_sha256": "deb06a0c869650781e733c4a6e1af97f50a6d9ccd36185fc63d8d38d75e1e69a",
+          "result_sha256": "2cf843e64bf11cc055db25eaab2195f7799f34154987884e46f20dd88f2d507f"
+        },
+        "input_audit_seal": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round2_train_full_v1/complete.json",
+          "sha256": "ed46a15f65959d4a7dd4d70f9e1ddec01fe729de3e1437dfcd3e50a27c78ee4b"
+        }
+      },
+      "development": {
+        "dataset_binding": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_development_full_v1",
+          "seal_sha256": "ff4084fa637fc5c50cbad1ee2010084d7b2658f42902700069b09ec71fdf8865",
+          "input_audit_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round1_development_full_v1/input_audit.json",
+          "input_audit_sha256": "b540489d63ad00b23fa183f4b4d47f268df8d444eafa0c6a527e2254cbc2876b",
+          "input_protocol_sha256": "2456b73fd0728be1fe42f50c3421dddcf30e298d918c746290d3edadb13152d4"
+        },
+        "collection": {
+          "config_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/config.json",
+          "config_sha256": "f68b59f279ae4d03094ebe70f0185e29d7a65a8ce20903aed92ac4392f1e4fd2",
+          "freeze_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/freeze.json",
+          "freeze_sha256": "f46dda706607bf8ed52281d33a203471c2854b6c09f83e6d26d3b216a509d893"
+        },
+        "bank_version": "round1_labels_v1",
+        "input_audit_seal": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round1_development_full_v1/complete.json",
+          "sha256": "d70e39fcc5812c38170d92f0513258b4d8e9f9c6a7d659590811112f701954d2"
+        }
+      }
+    },
+    "child_protocols_preserved": true,
+    "source_weighting": "Whole source equal weighting and approved within-source candidate/pair deduplication;preserve original round1/round2 generation identities,no teacher/round/Q/outcome weighting.",
+    "sealed_initial_assets": {
+      "A": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/A/initial",
+        "seal_sha256": "1172a88851c52eb99fff353afaaf82466c6839c704c3c63a81e88bc31b00f2dc",
+        "model_hashes": {
+          "0": "8a08e1fbab88e17635a6cc4bec6f811a9fd435888a5298fd1782a6cb51fc0f09",
+          "1": "699045cdf0c7b2965aeaf4fb4e8459cfb66ad8b72c8cc02a01d2cc8bc0fa87b3",
+          "2": "f12692a54285f95e3b905abc985a645e674569113bc254d31bfc069728e5f15c",
+          "3": "88a560baa2d39a6b849173d040117ef72ee2ccec3949767b3b93652a34f3195a"
+        }
+      },
+      "B": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/B/initial",
+        "seal_sha256": "cd36e7e59bed7a9a649801b4a39ca1c2aab6ea44ec2566e475f66d7fb5d0f7a6",
+        "model_hashes": {
+          "0": "b7642417b613f25d12884d262b37e3fbd38d15f23f2a59b9e410aa9852e0fd4d",
+          "1": "8a246d74a0c805051ba05978500041cadcd281ccb7cf18530036671420056020",
+          "2": "fd2a4d53348e3ccd52e5235a2d0a90df3b330b23a76185da635a0e635863dc42",
+          "3": "e1e6d1dd4d4ee151ff8691f37f2b69768a3b1bbf821c7d79a80cc6b842894e8a"
+        }
+      }
+    },
+    "sealed_preprocessing_and_sampling": {
+      "pca_fit_audit": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/pca_fit_audit.json",
+        "sha256": "47707fc7b9b1ea2c56243e455c92e20254c7a8d6306c3f377324ea43d676d5e0"
+      },
+      "preprocessing": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/preprocessing.npz",
+        "sha256": "a513af33903a4711605c07eaf90417465327bd7ff1cc90cbffd52eded06dcba9"
+      },
+      "sampling": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/sampling.json",
+        "sha256": "b962bc1441d5f9ed8e31c1fecaef6609f1c58ff092bdc461f706ed8077aae381"
+      },
+      "minibatch_plans": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/minibatch_plans.npz",
+        "sha256": "3762bfa512b54c1a20528dd0ece850baa3de3b86b28fe317f651b131d3c3e36f"
+      },
+      "trainable_masks": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/trainable_masks.json",
+        "sha256": "b8313ca07052735713f23c19954abca109101120a45743c83beee3af2200c6ac"
+      },
+      "source_sets": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/source_sets.json",
+        "sha256": "23562c71313d3c04d6426348f0fccd813f4354c2f438bf8dd13c8e11f14323da"
+      }
+    },
+    "asset_reuse_policy": "Consume the exact completed final_preflight_v1 PCA,transforms,8initial model states,bootstrap,minibatch seeds/plans and trainable masks. Never refit PCA,regenerate initial weights or select a different sample plan. Deterministic minibatch reconstruction from the approved seeds is permitted only with equality verification against sealed plans.",
+    "path_A": {
+      "learning_rate": 0.0001,
+      "initialization": "Sealed final-preflight A members,which reimport original old critic and frozen old PCA",
+      "trainable": "Approved residual/advantage only;all declared frozen tensors/buffers stay fixed"
+    },
+    "path_B": {
+      "learning_rate": 0.0003,
+      "initialization": "Sealed final-preflight B fresh members and its600-train-only shared vision16/language8 PCA",
+      "trainable": "Approved complete small critic MLP,with large VLA/D/feature extractors frozen"
+    },
+    "optimizer": {
+      "name": "AdamW",
+      "weight_decay": 0.01,
+      "gradient_clip_norm": 1.0,
+      "batch_full_sources": 32
+    },
+    "loss": {
+      "success_BCE": 1.0,
+      "gain_to_a0_MSE": 1.0,
+      "positive_negative_probability_difference_MSE": 0.5,
+      "aggregation": "Original mask/alias and per-term normalization followed by source mean;no loss-weight or sampling change from parallel diagnostics"
+    },
+    "numeric_runtime": {
+      "torch": "2.7.1+cu126",
+      "numpy": "2.2.6",
+      "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+      "executable": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python3.12",
+      "device": "cpu",
+      "dtype": "float32",
+      "threads": 2,
+      "torch_distribution": "2.7.1",
+      "numpy_distribution": "2.2.6",
+      "torch_version_file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/lib/python3.12/site-packages/torch/version.py",
+        "sha256": "6ed9ff03113f2ceba7ad0f77cf4b160ea03f918ef010b5f662ce74786d182974"
+      }
+    },
+    "numeric_contract": "canonical_strict_passed_dense_reported",
+    "runtime_policy": "Use the same lerobot CPU float32,2threads runtime and original batch-loss implementation. Preserve GPU holders because this fit is CPU-only. No device/thread/floor/dtype/numeric-method changes without explicit technical review.",
+    "numerical_policy": "Canonical selection/deployment remains strict at the same input shapes and frozen runtime;retain observed dense/singleton differences as diagnostics. No new atol/rtol and no claim dense is bitexact. Keep finite/identity/state/axis/scaling/coupling checks and original a0 anchoring;do not force a0 gradient to zero.",
+    "selection_policy": {
+      "dataset": "Original100development planned sources,95effective cut+5common outcomes,unchanged frozen candidate bank",
+      "candidate_choice": "Per-source mean ensemble success probability maximum,a0 wins ties",
+      "checkpoint_choice": "One A/B ensemble checkpoint maximizing the full100-source true paired gain of its predicted choices;ties:minimize harm,then gain MSE,then earlier step,then preferB",
+      "fixed_checkpoints_only": true,
+      "no_extra_models_members_or_repeats": true,
+      "no_extra_simulator_selection": true,
+      "development_denominator": 100,
+      "selected_model_count": 1,
+      "interpretation": "Old-bank selection is a development proxy for continuous flow guidance;it is not independent policy validation."
+    },
+    "required_execution_freeze": "Prepare mode=fit with this READY,input bundle/design/specification,exact pipeline preflight triple,analysis decision and real preflight reviews,actual code dependencies/runtime and existing CPU evidence. Verify sealed-asset loading before updates;do not use execution receipt seal as the pipeline-preflight binding.",
+    "required_outputs": [
+      "all registered checkpoint exports",
+      "one selected ensemble and fixed-rule ranking reasons",
+      "frozen/trainable parameter verification",
+      "selected canonical13probability and0/11gradient reload audit",
+      "unique optimizer ledger identities per path/member/update",
+      "before/after resource totals and cost",
+      "immutable fit and export seals"
+    ],
+    "future_stages_locked": [
+      "calibration",
+      "heldout"
+    ],
+    "future_operations_locked": [
+      "any additional optimizer updates",
+      "extra models/checkpoints or training reruns",
+      "calibration/heldout simulation before separate release"
+    ],
+    "next_stage_automatically_started": false,
+    "independent_preflight_review": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/final_prefit_independent_review.json",
+      "sha256": "aa70cecf2c41f51fdff686449b9353a337cb10ff9890826822c44f253ea12b00"
+    },
+    "resource_completion_review": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/final_preflight_completion_review.json",
+      "sha256": "532c37b6a8da3cd7fec3275fb2980ba79b1f320308c664d513140d43365299f7"
+    },
+    "analysis_decision": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_FINAL_TRAINING_DECISION.md",
+      "sha256": "68237196b09c59e50d12be07c3e22f5ba2cf4e783d36912cb8894b363bdf3033"
+    },
+    "actual_optimizer_updates": 32000,
+    "actual_simulator_attempts": 0,
+    "completed_model": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/complete.json",
+      "sha256": "864c00cfa1cfcbcc8736a898ab22e5afa821f15afbe2b8dc687f7731f2eea83e"
+    },
+    "completed_model_result": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/result.json",
+      "sha256": "ff4d7c11d81fb0c01617458f41c8e2d58645b3694ca0bc77ec56e56f3c35a1fd"
+    },
+    "execution_receipt": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_fit_execution/fit/final_fit_v1/complete.json",
+      "sha256": "9b57ad570eaa078384c247097f4d89511359f4f7bb62763ec5ab7a2bad2efa94"
+    },
+    "selected_model": {
+      "path": "A",
+      "step": 4000,
+      "members": 4,
+      "directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected",
+      "training_model_seal": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/complete.json",
+        "sha256": "864c00cfa1cfcbcc8736a898ab22e5afa821f15afbe2b8dc687f7731f2eea83e"
+      },
+      "selected_seal": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/complete.json",
+        "sha256": "f40ff4f3356ee8f14d687348f9f9cc7addf1b1e93233b81645312973f7e02d6a"
+      },
+      "selected_config": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/config.json",
+        "sha256": "cf85b5d033e3fb1dde64e5de4e0bdc5b00838a752f7e56bb3389137a4666ac0e"
+      },
+      "selected_ranking": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/ranking.json",
+        "sha256": "03bda2f021377e01e2608f541d0cde59ee3edc7b6dfe3bb50451a9003f0d62d7"
+      },
+      "selected_reload_audit": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected_reload_audit.json",
+        "sha256": "b16b8183e6d6a69345375a266840afaffebf514873d62868f0327496bf795a92"
+      },
+      "member_checkpoint_sha256": [
+        "39bbbb9e2fa2cb14695c4ce31a9d91c806dfd690a888d2a9c44d9eb3bf0be129",
+        "dab0dd69ad2bd4a132aede8c37ae4734cac2c12d7533d1c96cc058e1b52bad1d",
+        "ce2a29d123d1c3eea25b90ba0999cacc793ad25346709a94d6b52cf92a8ffca2",
+        "178c052783502646085fdb78be115e54d6d7ffc1225dac9af24d1cc64cafebf9"
+      ],
+      "model_hashes": {
+        "0": "39bbbb9e2fa2cb14695c4ce31a9d91c806dfd690a888d2a9c44d9eb3bf0be129",
+        "1": "dab0dd69ad2bd4a132aede8c37ae4734cac2c12d7533d1c96cc058e1b52bad1d",
+        "2": "ce2a29d123d1c3eea25b90ba0999cacc793ad25346709a94d6b52cf92a8ffca2",
+        "3": "178c052783502646085fdb78be115e54d6d7ffc1225dac9af24d1cc64cafebf9"
+      },
+      "executor_model_binding": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_model_handoffs/final_fit_v1/selected_model_binding.json",
+        "sha256": "83b01eea2bd565a43647470a3b66bc9e53e8741055f92df4252d39b61e035def"
+      }
+    },
+    "executor_handoff": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_model_handoffs/final_fit_v1/complete.json",
+      "sha256": "e8749db24890e8db30e3261997f195b2d99541c44a73aff2f9dfa424513974f8"
+    },
+    "historical_future_stages_locked_at_ready_v10": [
+      "round2_development_policy",
+      "calibration",
+      "heldout"
+    ]
+  },
+  "final_training_start_conditions": [
+    "real_canonical_dense_PCA_old_asset_all8initial_state_and_sampling_review_passes_and_is_bound_with_actual_SHA",
+    "independent_prepare_mode_fit_config_code_READY_and_runtime_freeze_matches_input_bundle_design_specification_and_exact_three_key_pipeline_preflight_binding",
+    "sealed_preprocessing_PCA_initial_weights_bootstrap_minibatch_plans_and_trainable_masks_validate_before_any_update_without_refitting_or_reinitializing",
+    "stage_training_final_scope_final_critic_training_enforces_zero_simulator_and32000optimizer_with51200workflow_limit_and_unique_update_identities",
+    "fixed_A_B_4members_4000max_checkpoints_loss_runtime_and_original100development_selection_remain_unchanged",
+    "fit_completion_seals_exports_reports_resources_and_waits_for_a_later_policy_stage_decision_without_automatic_simulation"
+  ],
+  "final_training_transition": "Final A/B fit completed under immutable READY v10/final_fit_v1 with32000 unique updates and no simulator attempts. Fixed selection,model assets and resources passed independent reviews;selected A4000 is fixed. Workflow optimizer budget51200 is exhausted. Do not restart final fit,preflight,old training or collection.",
+  "final_preflight_independent_review": "analysis/final_prefit_independent_review.json",
+  "final_preflight_independent_review_sha256": "aa70cecf2c41f51fdff686449b9353a337cb10ff9890826822c44f253ea12b00",
+  "round2_policy_decision": "coordination/NATIVE10_ROUND2_POLICY5_DECISION.md",
+  "round2_policy_decision_sha256": "c9b0ccf1d9265626efbdc7c8dc556268766cfbd8a8f97548d3ae4844617c96e0",
+  "final_training_analysis": "coordination/NATIVE10_FINAL_TRAINING_ANALYSIS.md",
+  "final_training_analysis_sha256": "0054525cca2a4fd5082ddf49ca6304f2c2ec627afe1a8b9d33bc9a0f6eb966eb",
+  "final_training_selection_review": "analysis/final_training_selection_review.json",
+  "final_training_selection_review_sha256": "39d9ba994282f62d2632ff700b39ebbbcfef6d8b6b8738d4cb872f8d22d92b1b",
+  "final_trained_model_review": "analysis/final_trained_model_review.json",
+  "final_trained_model_review_sha256": "51dc687f285e92c0b81032bad5694ebca7f649fba597e121943362871305a928",
+  "final_training_completion_review": "analysis/final_training_completion_review.json",
+  "final_training_completion_review_sha256": "92ef8520de7ad27f9878703a170862a7a29e2732702cb41447867a140a86b595",
+  "draft_status": "incomplete_pending_independent_round2_policy_entry_review",
+  "ready_for_publication": false,
+  "draft_missing_bindings": [
+    {
+      "field": "round2_policy_entry_review and round2_policy_entry_review_sha256",
+      "expected_path": "analysis/round2_policy_entry_review.json",
+      "reason": "Independent narrow review of the actual new entrypoints is still being finalized. Bind its real passing review before publication;no placeholder hash."
+    }
+  ],
+  "round2_development_policy": {
+    "scope": "round2_development_policy",
+    "stage": "round2_development_policy",
+    "status": "conditionally_released_pending_independent_entry_review_and_execution_freeze",
+    "interface_status": "actual_prepare_contract_metadata_adapted_pending_independent_entry_review",
+    "suggested_bank_version": "round2_policy_v1",
+    "simulator_attempts_limit": 2100,
+    "expected_simulator_attempts": 1995,
+    "optimizer_updates_limit": 0,
+    "training_updates": 0,
+    "capture_attempts_limit": 0,
+    "initialization_replacements_allowed": false,
+    "technical_reserve_override_allowed": false,
+    "development_primary_slots": 100,
+    "evaluation_unique_initial_states_per_task": 20,
+    "reached_cut_sources": 95,
+    "common_no_alarm_sources": 5,
+    "common_success_sources": 4,
+    "common_failure_sources": 1,
+    "paired_suffixes_per_state": 4,
+    "per_arm_outcome_denominator": 400,
+    "arms": [
+      "continue_native10",
+      "alarm_replan10",
+      "velocity",
+      "direct",
+      "post"
+    ],
+    "episode_ids": [
+      "disassemble-v3__2026111600",
+      "pick-place-wall-v3__2026111601",
+      "shelf-place-v3__2026111602",
+      "stick-pull-v3__2026111603",
+      "stick-push-v3__2026111604",
+      "disassemble-v3__2026111605",
+      "pick-place-wall-v3__2026111606",
+      "shelf-place-v3__2026111607",
+      "stick-pull-v3__2026111608",
+      "stick-push-v3__2026111609",
+      "disassemble-v3__2026111610",
+      "pick-place-wall-v3__2026111611",
+      "shelf-place-v3__2026111612",
+      "stick-pull-v3__2026111613",
+      "stick-push-v3__2026111614",
+      "disassemble-v3__2026111615",
+      "pick-place-wall-v3__2026111616",
+      "shelf-place-v3__2026111617",
+      "stick-pull-v3__2026111618",
+      "stick-push-v3__2026111619",
+      "disassemble-v3__2026111620",
+      "pick-place-wall-v3__2026111621",
+      "shelf-place-v3__2026111622",
+      "stick-pull-v3__2026111623",
+      "stick-push-v3__2026111624",
+      "disassemble-v3__2026111625",
+      "pick-place-wall-v3__2026111626",
+      "shelf-place-v3__2026111627",
+      "stick-pull-v3__2026111628",
+      "stick-push-v3__2026111629",
+      "disassemble-v3__2026111630",
+      "pick-place-wall-v3__2026111631",
+      "shelf-place-v3__2026111632",
+      "stick-pull-v3__2026111633",
+      "stick-push-v3__2026111634",
+      "disassemble-v3__2026111635",
+      "pick-place-wall-v3__2026111636",
+      "shelf-place-v3__2026111637",
+      "stick-pull-v3__2026111638",
+      "stick-push-v3__2026111639",
+      "disassemble-v3__2026111640",
+      "pick-place-wall-v3__2026111641",
+      "shelf-place-v3__2026111642",
+      "stick-pull-v3__2026111643",
+      "stick-push-v3__2026111644",
+      "disassemble-v3__2026111645",
+      "pick-place-wall-v3__2026111646",
+      "shelf-place-v3__2026111647",
+      "stick-pull-v3__2026111648",
+      "stick-push-v3__2026111649",
+      "disassemble-v3__2026111650",
+      "pick-place-wall-v3__2026111651",
+      "shelf-place-v3__2026111652",
+      "stick-pull-v3__2026111653",
+      "stick-push-v3__2026111654",
+      "disassemble-v3__2026111655",
+      "pick-place-wall-v3__2026111656",
+      "shelf-place-v3__2026111657",
+      "stick-pull-v3__2026111658",
+      "stick-push-v3__2026111659",
+      "disassemble-v3__2026111660",
+      "pick-place-wall-v3__2026111661",
+      "shelf-place-v3__2026111662",
+      "stick-pull-v3__2026111663",
+      "stick-push-v3__2026111664",
+      "disassemble-v3__2026111665",
+      "pick-place-wall-v3__2026111666",
+      "shelf-place-v3__2026111667",
+      "stick-pull-v3__2026111668",
+      "stick-push-v3__2026111669",
+      "disassemble-v3__2026111670",
+      "pick-place-wall-v3__2026111671",
+      "shelf-place-v3__2026111672",
+      "stick-pull-v3__2026111673",
+      "stick-push-v3__2026111674",
+      "disassemble-v3__2026111675",
+      "pick-place-wall-v3__2026111676",
+      "shelf-place-v3__2026111677",
+      "stick-pull-v3__2026111678",
+      "stick-push-v3__2026111679",
+      "disassemble-v3__2026111680",
+      "pick-place-wall-v3__2026111681",
+      "shelf-place-v3__2026111682",
+      "stick-pull-v3__2026111683",
+      "stick-push-v3__2026111684",
+      "disassemble-v3__2026111685",
+      "pick-place-wall-v3__2026111686",
+      "shelf-place-v3__2026111687",
+      "stick-pull-v3__2026111688",
+      "stick-push-v3__2026111689",
+      "disassemble-v3__2026111690",
+      "pick-place-wall-v3__2026111691",
+      "shelf-place-v3__2026111692",
+      "stick-pull-v3__2026111693",
+      "stick-push-v3__2026111694",
+      "disassemble-v3__2026111695",
+      "pick-place-wall-v3__2026111696",
+      "shelf-place-v3__2026111697",
+      "stick-pull-v3__2026111698",
+      "stick-push-v3__2026111699"
+    ],
+    "episode_ids_canonical_sha256": "7febdc814dee2c203378865a8371de6698bc727e783ee537312dce734a37db89",
+    "episode_ids_hash_serialization": "json.dumps(list_in_dataset_record_order, sort_keys=True, separators=(comma,colon)).encode UTF-8",
+    "env_seed_range_inclusive": [
+      2026111600,
+      2026111699
+    ],
+    "per_task_source_counts": {
+      "disassemble-v3": 20,
+      "pick-place-wall-v3": 20,
+      "shelf-place-v3": 20,
+      "stick-pull-v3": 20,
+      "stick-push-v3": 20
+    },
+    "input_collection_version": "round1_v1",
+    "input_config_sha256": "f68b59f279ae4d03094ebe70f0185e29d7a65a8ce20903aed92ac4392f1e4fd2",
+    "input_freeze_sha256": "f46dda706607bf8ed52281d33a203471c2854b6c09f83e6d26d3b216a509d893",
+    "old_collection": {
+      "config_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/config.json",
+      "config_sha256": "f68b59f279ae4d03094ebe70f0185e29d7a65a8ce20903aed92ac4392f1e4fd2",
+      "freeze_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/freeze.json",
+      "freeze_sha256": "f46dda706607bf8ed52281d33a203471c2854b6c09f83e6d26d3b216a509d893",
+      "bank_version": "round1_labels_v1"
+    },
+    "development_dataset": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_development_full_v1",
+      "seal_sha256": "ff4084fa637fc5c50cbad1ee2010084d7b2658f42902700069b09ec71fdf8865",
+      "input_audit_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round1_development_full_v1/input_audit.json",
+      "input_audit_sha256": "b540489d63ad00b23fa183f4b4d47f268df8d444eafa0c6a527e2254cbc2876b",
+      "input_protocol_sha256": "2456b73fd0728be1fe42f50c3421dddcf30e298d918c746290d3edadb13152d4"
+    },
+    "selected_critic": {
+      "path": "A",
+      "step": 4000,
+      "members": 4,
+      "directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected",
+      "training_model_seal": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/complete.json",
+        "sha256": "864c00cfa1cfcbcc8736a898ab22e5afa821f15afbe2b8dc687f7731f2eea83e"
+      },
+      "selected_seal": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/complete.json",
+        "sha256": "f40ff4f3356ee8f14d687348f9f9cc7addf1b1e93233b81645312973f7e02d6a"
+      },
+      "selected_reload_audit": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected_reload_audit.json",
+        "sha256": "b16b8183e6d6a69345375a266840afaffebf514873d62868f0327496bf795a92"
+      },
+      "member_checkpoint_sha256": [
+        "39bbbb9e2fa2cb14695c4ce31a9d91c806dfd690a888d2a9c44d9eb3bf0be129",
+        "dab0dd69ad2bd4a132aede8c37ae4734cac2c12d7533d1c96cc058e1b52bad1d",
+        "ce2a29d123d1c3eea25b90ba0999cacc793ad25346709a94d6b52cf92a8ffca2",
+        "178c052783502646085fdb78be115e54d6d7ffc1225dac9af24d1cc64cafebf9"
+      ],
+      "model_review": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/final_trained_model_review.json",
+        "sha256": "51dc687f285e92c0b81032bad5694ebca7f649fba597e121943362871305a928"
+      },
+      "selected_config": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/config.json",
+        "sha256": "cf85b5d033e3fb1dde64e5de4e0bdc5b00838a752f7e56bb3389137a4666ac0e"
+      },
+      "selected_ranking": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/ranking.json",
+        "sha256": "03bda2f021377e01e2608f541d0cde59ee3edc7b6dfe3bb50451a9003f0d62d7"
+      },
+      "model_hashes": {
+        "0": "39bbbb9e2fa2cb14695c4ce31a9d91c806dfd690a888d2a9c44d9eb3bf0be129",
+        "1": "dab0dd69ad2bd4a132aede8c37ae4734cac2c12d7533d1c96cc058e1b52bad1d",
+        "2": "ce2a29d123d1c3eea25b90ba0999cacc793ad25346709a94d6b52cf92a8ffca2",
+        "3": "178c052783502646085fdb78be115e54d6d7ffc1225dac9af24d1cc64cafebf9"
+      },
+      "executor_model_binding": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_model_handoffs/final_fit_v1/selected_model_binding.json",
+        "sha256": "83b01eea2bd565a43647470a3b66bc9e53e8741055f92df4252d39b61e035def"
+      }
+    },
+    "final_training_handoff": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_model_handoffs/final_fit_v1/complete.json",
+      "sha256": "e8749db24890e8db30e3261997f195b2d99541c44a73aff2f9dfa424513974f8"
+    },
+    "prior_seed_contract_evidence": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/progress_audits/policy5_seed_review_v1/complete.json",
+      "sha256": "55990abc225e71272b6bc208c23f05851683170b7df67d683e05948f99ac0146"
+    },
+    "prior_seed_evidence_scope": "Historical original source/repeat/noise semantics only;this is not CPU approval or evidence that the new round2 entrypoint is complete.",
+    "seed_namespace": "corrector_native10_training_20260916_v1",
+    "paired_seed_policy": "Same source/repeat/decision_index across five arms; unchanged namespace. Natural and interrupted policies may have different absolute suffix times. New five-arm internal comparisons are primary; cross-stage pairing requires its own full equivalence audit.",
+    "source_provenance_policy": "Retain original round1 collection/scene/cut/source provenance. Current generation critic is final A4000;never alter original source protocol fields to evade an old guard.",
+    "runtime_identity_policy": "Actually loaded selected weights must match selected hashes. Generate new guided bank; before new branches enforce original raw50 a0, mask, designated base seed and initial noise identity. Old guided actions may not substitute for new critic generation.",
+    "scientific_method_policy": "Keep original native10/G0=.05,raw a0 and criticC(raw),feasible mask,10-step intervention/fixed10 suffix,total control budget300,velocity/direct alpha10 at times0.3/0.2/0.1,post rule,XYZ/gripper bounds and within-round matching/acceptance semantics. Normal completes the original remaining queue. No new Q/rejection gate,task condition,cut selection,intensity search or replanning rule.",
+    "flow_parameters_reference": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_protocols/round1_policy_v1/config.json",
+      "sha256": "56d0d31f1722f0cc1a974303219953e7340e7887f94c6d760c90739f3b64b06e",
+      "reuse_scope": "Scientific guidance/matching/raw/seed semantics only;the frozen old stage/model authorization is not reused."
+    },
+    "cross_critic_matching_policy": "Apply the same registered within-round matched construction. Do not enforce equal radius/direction across critics or claim cross-round paired causal gain merely because source IDs coincide.",
+    "attempt_budget_arithmetic": "95 independent candidate restores +95x5x4 actual branches =1995 expected;hard2100,all failures and allowed technical retries count. No automatically authorized retries,extra sources,candidates or arms.",
+    "global_simulator_before": 42874,
+    "global_simulator_if_expected": 44869,
+    "workflow_simulator_hard_limit": 50000,
+    "global_optimizer_before": 51200,
+    "workflow_optimizer_hard_limit": 51200,
+    "new_optimizer_updates": 0,
+    "statistics": {
+      "comparisons_primary_correction": [
+        "velocity-alarm_replan10",
+        "direct-alarm_replan10",
+        "post-alarm_replan10"
+      ],
+      "comparison_interruption": "alarm_replan10-continue_native10",
+      "comparisons_system": [
+        "velocity-continue_native10",
+        "direct-continue_native10",
+        "post-continue_native10"
+      ],
+      "bootstrap_draws": 10000,
+      "bootstrap_seed": 2026091622,
+      "bootstrap_unit": "whole source within each task, preserve all arms and four suffixes",
+      "sampling": "NumPy default_rng.choice; freeze actual task and within-task source ordering in deployment config/report",
+      "ci": "percentile95",
+      "quantile_method": "linear",
+      "multiplicity_adjustment": "none; descriptive development intervals, not independent held validation",
+      "task_order": [
+        "disassemble-v3",
+        "pick-place-wall-v3",
+        "shelf-place-v3",
+        "stick-pull-v3",
+        "stick-push-v3"
+      ],
+      "source_order": [
+        "disassemble-v3__2026111600",
+        "pick-place-wall-v3__2026111601",
+        "shelf-place-v3__2026111602",
+        "stick-pull-v3__2026111603",
+        "stick-push-v3__2026111604",
+        "disassemble-v3__2026111605",
+        "pick-place-wall-v3__2026111606",
+        "shelf-place-v3__2026111607",
+        "stick-pull-v3__2026111608",
+        "stick-push-v3__2026111609",
+        "disassemble-v3__2026111610",
+        "pick-place-wall-v3__2026111611",
+        "shelf-place-v3__2026111612",
+        "stick-pull-v3__2026111613",
+        "stick-push-v3__2026111614",
+        "disassemble-v3__2026111615",
+        "pick-place-wall-v3__2026111616",
+        "shelf-place-v3__2026111617",
+        "stick-pull-v3__2026111618",
+        "stick-push-v3__2026111619",
+        "disassemble-v3__2026111620",
+        "pick-place-wall-v3__2026111621",
+        "shelf-place-v3__2026111622",
+        "stick-pull-v3__2026111623",
+        "stick-push-v3__2026111624",
+        "disassemble-v3__2026111625",
+        "pick-place-wall-v3__2026111626",
+        "shelf-place-v3__2026111627",
+        "stick-pull-v3__2026111628",
+        "stick-push-v3__2026111629",
+        "disassemble-v3__2026111630",
+        "pick-place-wall-v3__2026111631",
+        "shelf-place-v3__2026111632",
+        "stick-pull-v3__2026111633",
+        "stick-push-v3__2026111634",
+        "disassemble-v3__2026111635",
+        "pick-place-wall-v3__2026111636",
+        "shelf-place-v3__2026111637",
+        "stick-pull-v3__2026111638",
+        "stick-push-v3__2026111639",
+        "disassemble-v3__2026111640",
+        "pick-place-wall-v3__2026111641",
+        "shelf-place-v3__2026111642",
+        "stick-pull-v3__2026111643",
+        "stick-push-v3__2026111644",
+        "disassemble-v3__2026111645",
+        "pick-place-wall-v3__2026111646",
+        "shelf-place-v3__2026111647",
+        "stick-pull-v3__2026111648",
+        "stick-push-v3__2026111649",
+        "disassemble-v3__2026111650",
+        "pick-place-wall-v3__2026111651",
+        "shelf-place-v3__2026111652",
+        "stick-pull-v3__2026111653",
+        "stick-push-v3__2026111654",
+        "disassemble-v3__2026111655",
+        "pick-place-wall-v3__2026111656",
+        "shelf-place-v3__2026111657",
+        "stick-pull-v3__2026111658",
+        "stick-push-v3__2026111659",
+        "disassemble-v3__2026111660",
+        "pick-place-wall-v3__2026111661",
+        "shelf-place-v3__2026111662",
+        "stick-pull-v3__2026111663",
+        "stick-push-v3__2026111664",
+        "disassemble-v3__2026111665",
+        "pick-place-wall-v3__2026111666",
+        "shelf-place-v3__2026111667",
+        "stick-pull-v3__2026111668",
+        "stick-push-v3__2026111669",
+        "disassemble-v3__2026111670",
+        "pick-place-wall-v3__2026111671",
+        "shelf-place-v3__2026111672",
+        "stick-pull-v3__2026111673",
+        "stick-push-v3__2026111674",
+        "disassemble-v3__2026111675",
+        "pick-place-wall-v3__2026111676",
+        "shelf-place-v3__2026111677",
+        "stick-pull-v3__2026111678",
+        "stick-push-v3__2026111679",
+        "disassemble-v3__2026111680",
+        "pick-place-wall-v3__2026111681",
+        "shelf-place-v3__2026111682",
+        "stick-pull-v3__2026111683",
+        "stick-push-v3__2026111684",
+        "disassemble-v3__2026111685",
+        "pick-place-wall-v3__2026111686",
+        "shelf-place-v3__2026111687",
+        "stick-pull-v3__2026111688",
+        "stick-push-v3__2026111689",
+        "disassemble-v3__2026111690",
+        "pick-place-wall-v3__2026111691",
+        "shelf-place-v3__2026111692",
+        "stick-pull-v3__2026111693",
+        "stick-push-v3__2026111694",
+        "disassemble-v3__2026111695",
+        "pick-place-wall-v3__2026111696",
+        "shelf-place-v3__2026111697",
+        "stick-pull-v3__2026111698",
+        "stick-push-v3__2026111699"
+      ],
+      "primary_inference": "Only this newly executed five-arm development set;I=R-N,threeA=corrected-R,threeT=corrected-N. Cross-round comparisons are descriptive unless full actual trajectory/random-stream equivalence is independently demonstrated."
+    },
+    "reporting_requirements": [
+      "all100-source and per-task20-source overall rates",
+      "95cut conditional results plus5common outcomes",
+      "per-source/per-repeat outcomes",
+      "7I/A/T paired estimates and intervals",
+      "rescue/harm and positive/negative/zero sources",
+      "Q predictions versus realized gain",
+      "raw/mask/alias/fallback and actual perturbation evidence",
+      "source/model/code/input provenance",
+      "stage/global resource ledger and failures"
+    ],
+    "cost_reporting": "Separate source restore,candidate-bank generation excluding restore,individual sampling/gradient steps and full wall time. Post gradient-step timing alone is not complete deployment latency.",
+    "engineering_requirements": {
+      "new_isolated_modules_required": true,
+      "legacy_round1_code_and_seals_read_only": true,
+      "old_round1_cpu_evidence_counts_as_new_stage_pass": false,
+      "required_actual_connections": [
+        "independent round2 prepare",
+        "actual collector",
+        "stage/model guard",
+        "32-worker runner"
+      ],
+      "required_cpu_checks": [
+        "A4000 actual model binding",
+        "original100source/95cut/a0/noise/mask identities",
+        "no capture/replacement/old guided reuse",
+        "round2stage/scope/resource caps",
+        "failure closed on identity or protocol mismatch"
+      ],
+      "actual_ready_schema_review_required": true,
+      "actual_new_modules_handoff_available": true,
+      "new_cpu_tests_passed": 41,
+      "new_cpu_returncode": 0
+    },
+    "execution_freeze_policy": "After reviewed new-engineering material is bound to a live READY,create an independent config/code/READY/CPU-evidence freeze and verify it before the first real model/environment call. Preserve original source collection and all oldfit/policy freezes.",
+    "gpu_policy": {
+      "lifecycle_required": true,
+      "validated_workers": 32,
+      "gpus": 8,
+      "workers_per_gpu": 4,
+      "hold_idle_during_wave": false,
+      "restore_holders_after_entire_wave_or_failure": true
+    },
+    "runtime_monitoring_policy": "Technical progress,budget and errors only;no interim-success model/method selection,parameter adjustment,automatic expansion or next-stage launch.",
+    "completion_policy": "Require full raw branch audit,independent statistical reconstruction,frozen model/code/input verification and resource closure before reporting policy benefit.",
+    "future_stages_locked": [
+      "calibration",
+      "heldout",
+      "additional_training",
+      "additional_policy_waves"
+    ],
+    "future_operations_locked": [
+      "any optimizer update",
+      "new training/model/checkpoint search",
+      "additional policy evaluation after this registered set"
+    ],
+    "next_stage_automatically_started": false,
+    "guard_cpu_evidence": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/round2_policy_cpu_20260917_v1/complete.json",
+      "sha256": "8dff6d4fba6b04c0a3673f6a42e5873aca659729c547388749801c4074ad0db1"
+    },
+    "existing_seed_review": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/progress_audits/policy5_seed_review_v1/complete.json",
+      "sha256": "55990abc225e71272b6bc208c23f05851683170b7df67d683e05948f99ac0146"
+    },
+    "final_runner_integration_required": true,
+    "final_runner_already_frozen_at_release": false,
+    "method_policy": "Keep G0, original first eligible cut, native10 raw actions, matching formula and fixed flow parameters, single 10-step intervention, total horizon300. No new Q acceptance gate, radius adaptation, or model selection. Actual new and old critic radii need not match.",
+    "cpu_evidence": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/round2_policy_cpu_20260917_v1",
+      "seal_sha256": "8dff6d4fba6b04c0a3673f6a42e5873aca659729c547388749801c4074ad0db1",
+      "result_sha256": "16e35a0c436aad534034663bcc55177776d2d50fa7e8016f22ce43686a5972d0",
+      "tests_passed": 41,
+      "wall_seconds": 18.144475193694234,
+      "code_sha256": {
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/policy5_round2_prepare_v1.py": "07ea004a10b33c7c9478b6e6b4d27d76e1187295f59d2c43d335f863805c4868",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/policy5_round2_runner_v1.py": "042b9e93d6c746e9e77227b324b09306befe5db753950d35941a7c5829381af4",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/run_policy5_round2_gpu_v1.sh": "3398830e8060be5f8dffa94bd0e8d36a83ac754ecabd8c862efb4d8c2f7e09b4",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/policy_deployment_round2_v1.py": "e30f3756a6e5ed9afd50ccad396c3f29b7353ca9859daf77716719cd36df8d6f",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/policy5_round2_audit_v1.py": "05724e8dff197dc807f2990c715a3bcd0c2c9dff08abb689abe6f97f7138a382",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/policy5_audit_v1.py": "aba60838635f04570148d7e061ff0c746b415f0e69a7303aebaf0e2821161571",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/policy5_round2_pending_v1.py": "0dbfad39f32b10ece9706e9d0beb443771039b2c97dd92d70a16d8fd6908c7d2",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/test_policy5_round2_entrypoints_v1.py": "6f6d2b597e5d5a3d89b31a0bac4f3a2f73472816c5ad52ed9e5da34f170d8ad9",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/test_policy_deployment_round2_v1.py": "449e8f824d949e7b9026fc8245a8922f080eadad03f3b3324168814cbc4ad698",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/test_policy5_round2_pending_v1.py": "687577c8490a21521ed11a570c2bc87767dc9dfe258c6ffcd1ae8667649d2590",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/execution_control/round2_policy_preparation_v1/runner.py": "d466f559ced993a3cd32e943a4cd07b72f7e3efa35bc7e4ee53570a0d3eb73c1"
+      }
+    },
+    "engineering_handoff": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_preparation_handoffs/round2_policy_v1",
+      "seal_sha256": "478a292ae194d2fef9c9a554ebcf79fdafdfc28c249c2ad4fc518984b4a4628f",
+      "summary_sha256": "f385ee5405f3f4ea9b83cefdea903da77b2300a83588c7882cd62afcad9fb906",
+      "document": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_ROUND2_POLICY5_PREPARATION_HANDOFF.md",
+        "sha256": "3945fbee2008be635f78efd468d17d2bbed9a64c6dcc545ccd72f6d86fb2c4fa"
+      },
+      "binding_supplement": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_preparation_handoffs/round2_policy_v1/ready_binding_supplement.json",
+        "sha256": "0baf6c1605ebdcd1d31b856037e469c99a0b905fa5f7b67bf078188068235e16"
+      }
+    },
+    "pending_inputs": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_preparations/round2_policy_pending_v1",
+      "seal_sha256": "f81ea00b85d3ccd936b68605db880eb9daef24f30afa6ede65d343db5ecaa7f7",
+      "ready_contract_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_preparations/round2_policy_pending_v1/ready_contract.json",
+      "ready_contract_sha256": "ee4480883eb7acd25da146286c5550f945ff50efe647717609546d3fa685232f",
+      "binding_sha256": "ea37e5ad2a6958b52a7cdf76c85254cfae79002f5e571c033f0b7a19dead403c",
+      "sources_sha256": "8e86147a7dc31c4809d57f3639dc4bf7565b581817f965ed77b256223228b98c"
+    },
+    "ready_contract_binding": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_preparations/round2_policy_pending_v1/ready_contract.json",
+      "sha256": "ee4480883eb7acd25da146286c5550f945ff50efe647717609546d3fa685232f"
+    },
+    "final_runner_integration_completed": true,
+    "source_collection_generation_round": 1,
+    "candidate_generation_round": 2,
+    "cpu_evidence_enforcement": "New prepare freeze must receive the actual new CPU evidence directory and execute its existing cpu_checks seal/result/current-code gate. guard_cpu_evidence is READY provenance,not a substitute for that actual freeze check."
+  },
+  "round2_development_policy_start_conditions": [
+    "actual_new_round2_prepare_collector_guard_runner_handoff_code_SHAs_and_ready_interface_review_are_complete_and_bound",
+    "necessary_CPU_evidence_for_the_actual_new_entrypoint_passes_and_is_bound_without_substituting_old_round1_CPU_pass",
+    "selected_A4000_four_member_real_loading_and_original100source_95cut_rawa0_noise_mask_suffix_binding_are_enforced",
+    "new_round2_policy_config_code_READY_CPU_evidence_and_input_freeze_is_complete_before_real_model_or_simulator_execution",
+    "enforce_round2_2100sim_expected1995_0optimizer_0capture_0replacement_with_global_sim50000_and_exhausted_optimizer51200",
+    "formal_GPU_wave_uses_lifecycle_and_validated32workers_with_all_holders_restored_after_wave_or_failure",
+    "all_future_calibration_heldout_training_and_unregistered_evaluation_remain_locked"
+  ],
+  "round2_development_policy_transition": "Actual new round2 prepare/guard/runner and41-pass CPU evidence are bound;the independent entrypoint review must pass and be bound before live READY publication. After publication,the existing new prepare inputs/freeze/runtime guard requirements remain mandatory;complete that independent config/code/READY/CPU-evidence freeze before one registered lifecycle wave. No repeated permission is needed after those conditions pass;no later stage is automatic.",
+  "round2_policy_preparation_handoff": "coordination/NATIVE10_ROUND2_POLICY5_PREPARATION_HANDOFF.md",
+  "round2_policy_preparation_handoff_sha256": "3945fbee2008be635f78efd468d17d2bbed9a64c6dcc545ccd72f6d86fb2c4fa",
+  "round2_policy_ready_contract": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_preparations/round2_policy_pending_v1/ready_contract.json",
+  "round2_policy_ready_contract_sha256": "ee4480883eb7acd25da146286c5550f945ff50efe647717609546d3fa685232f",
+  "round2_policy_ready_binding_supplement": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_preparation_handoffs/round2_policy_v1/ready_binding_supplement.json",
+  "round2_policy_ready_binding_supplement_sha256": "0baf6c1605ebdcd1d31b856037e469c99a0b905fa5f7b67bf078188068235e16",
+  "round2_policy_preparation_seal": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_preparation_handoffs/round2_policy_v1/complete.json",
+  "round2_policy_preparation_seal_sha256": "478a292ae194d2fef9c9a554ebcf79fdafdfc28c249c2ad4fc518984b4a4628f",
+  "round2_policy_cpu_seal": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/round2_policy_cpu_20260917_v1/complete.json",
+  "round2_policy_cpu_seal_sha256": "8dff6d4fba6b04c0a3673f6a42e5873aca659729c547388749801c4074ad0db1"
+}

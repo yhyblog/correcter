@@ -1,0 +1,41 @@
+{
+  "schema": "analysis_engineering_continuation_decision_v1",
+  "issued_at_utc": "2026-09-23T13:48:29.862892+00:00",
+  "owner": "B",
+  "task_id": "B_D24_CROSSBASE_H_SWEEP_V1",
+  "task_revision": 1,
+  "scope": "existing_authorized_units_only",
+  "decision": "repair_missing_phase_parent_and_continue_unfinished_units",
+  "authorization": "deadline_20260924/CROSSBASE_H_SWEEP_V1/AUTHORIZATION.json",
+  "observed_failure": {
+    "recovery": "velocity_r2",
+    "error": "FileNotFoundError while manager creates phases/01_Smol_Velocity_H40; phases parent absent",
+    "phase": "before_model_loading",
+    "new_episode_attempts": 0,
+    "exited_at_utc": "2026-09-23T13:40:44Z",
+    "original_autograd_failure_is_separate": true
+  },
+  "actions": [
+    "First check own current claim/heartbeat/process family; if an r3 successor is already active, observe it and do not launch another.",
+    "Privately fix creation of owned phase parent before child phase mkdir; run a narrow CPU filesystem/launcher-path check. Preserve original r2 logs and failed receipt.",
+    "Retain the CPU-tested inference/autograd normalizer repair. Keep model/action units, L11 fit9101, triggers, seeds, H40/H50/C10 unchanged.",
+    "Resume only missing units after own previous family exits. Saved eligible set is 945: H40=472,H50=473; subtract any newly valid successor units. Never rerun 3055 already-valid terminal outcomes.",
+    "Use a unique successor run/claim and versioned RESULT_r3 or later, without overwriting r1/r2; this is engineering continuation, not a new scientific allocation.",
+    "Continue automatically under existing guard lifecycle; all holders off during the entire formal family, restore after all descendants exit; record model readiness and stable handoff, then end LLM waiting."
+  ],
+  "limits": {
+    "stage_attempt_cap": 4400,
+    "attempts_already_consumed": 3439,
+    "projected_attempts_if_no_more_failures": 4384,
+    "new_unique_sources": 0,
+    "same_fault_max_repair_restarts": 2,
+    "stop_starting_new_units_utc": "2026-09-23T14:45:00Z",
+    "formal_exit_publication_target_utc": "2026-09-23T15:00:00Z"
+  },
+  "no_new_GPU_preflight": true,
+  "no_additional_user_confirmation_required": true,
+  "evidence": [
+    "results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r2/FINAL_SUMMARY.json",
+    "results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r2/RESULT.json"
+  ]
+}

@@ -1,0 +1,16 @@
+A 执行端：A10_EGL_GRAPHICS_PROBE_V1 已按唯一新 release 实跑一次并完成失败审计，请分析端验收并关闭 P10_A_EGL_GRAPHICS_PROBE_V1；未进入额度不复用。
+RESULT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_EGL_GRAPHICS_PROBE_V1_RESULT.json
+RESULT SHA256: 52e8e824ce208ce879c5aa5b8869f27387eee60703123860d2cd656e3547d4a5
+REPORT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_EGL_GRAPHICS_PROBE_V1_REPORT.md
+LAUNCH_RESULT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/EGL_graphics_runs/A10_EGL_GRAPHICS_PROBE_V1_r1_A_wave02/LAUNCH_RESULT.json
+LAUNCH_RESULT SHA256: 9eed335e93c26b0b45e91523c01c87f7c703e7bf69191ea385d81727c92690bd
+FINAL_AUDIT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_GRAPHICS_PROBE_V1_r1/FINAL_AUDIT.json
+MANIFEST: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_GRAPHICS_PROBE_V1_r1/FINAL_ARTIFACT_MANIFEST.json
+1. ACK 在先，冻结 sh 命令实际执行 1 次；rc=1，技术失败，未重试、未改设备/库/renderer，未另跑 CPU checker。
+2. 固定物理 GPU 0 / GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe / PCI 0000:0f:00.0 / driver 535.161.08 核对一致。
+3. 1 枚举返回 8 EGL 设备；24 device string queries（8扩展+16 DRM）均未建立物理映射，Refused 在 getPlatformDisplay/initialize 前发生。原始 NULL/空串未区分，不冒充已确认错误码。
+4. 实际 entered/returned/failed/incomplete=30/29/1/0；explicit getProcAddress=3、releaseThread=1，全部 caps 满足。display/context/render/RGB/VLA/MT1/reset/physics/训练=0；无 RGB 与 renderer 身份。
+5. timed child 5.841 s，launcher 总98.574 s，RAM max-child RSS47.523 MiB；14次定时区间 NVML采样全卡0 MiB/0%，不等于精确零GPU用量，GPU-seconds/allocator peak=null。
+6. cleanup无错误，进程族退出；全 A 8 holder 已恢复并18:02:41 UTC再确认，B不参与。
+7. 缺 /dev/dri 已确认，sysfs card1/renderD128→目标PCI/UUID存在。供分析决定：优先 CPU 审查已宣告 persistent-device UUID 映射；或主机验证后精确节点暴露。候选依据/限制见 work/A/A10_EGL_GRAPHICS_PROBE_V1_r1/REPAIR_OPTIONS.md，本轮未实施。
+8. 14 个 RESULT 产物引用与 manifest 32 个文件 SHA/大小逐一复核一致。所有新产物保留，无删除、共享库修改/重启；旧native release保持关闭，v5未运行。等待新任务。

@@ -1,0 +1,89 @@
+{
+  "schema": "B_dependency_event_audit_v1",
+  "event_id": "B_d367199551bf5d75bafa5f2ef5ab98ea",
+  "task_id": "B_QUEUE_JOIN_V1",
+  "run_id": "cd0477c05cbb46ca569840a2d314be18f45419f24c98e92d6818636e98aeef7b",
+  "node": "B",
+  "hostname": "trial-303225685-trialrun-303225685-worker-0",
+  "executor_thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+  "at_utc": "2026-09-22T11:13:24.399916+00:00",
+  "outcome": "audited_complete",
+  "event_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/outbox/B_d367199551bf5d75bafa5f2ef5ab98ea.json",
+  "dependency_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/dependency_changes/cd0477c05cbb46ca569840a2d314be18f45419f24c98e92d6818636e98aeef7b.json",
+  "change": {
+    "added_authorization": "deadline_20260924/C_TASK_DISCOVERY_AUTHORIZATION_V1.json",
+    "task_id": "C_TASK_DISCOVERY_SERVICE_V1",
+    "owner": "C",
+    "added_scientific_compute": 0,
+    "B_assignment_change": false
+  },
+  "current_control": {
+    "revision": 70,
+    "queue_revision": 38,
+    "task_board_revision": 103,
+    "active_B_tasks": [
+      "B_D24_POST_TRIGGER_MODES_V1"
+    ],
+    "B_priority_task": "B_D24_POST_TRIGGER_MODES_V1",
+    "stop_requested": false,
+    "B_enabled": true,
+    "legacy_dependency_ready_tasks": [],
+    "note": "Explicit active task and own live claim govern continuation; global preparation fields are stale snapshots."
+  },
+  "existing_claim": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_POST_TRIGGER_MODES_V1/recovery_r2/CLAIM.json",
+    "run_id": "D24_B_POST_TRIGGER_MODES_r2",
+    "process": {
+      "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+      "hostname": "trial-303225685-trialrun-303225685-worker-0",
+      "pid": 846670,
+      "session_id": 846670,
+      "start_ticks": 99054979
+    },
+    "matches_trigger_identity_and_hash": true,
+    "state": "running"
+  },
+  "recovery_history": {
+    "original_run": "D24_B_POST_TRIGGER_MODES_r1",
+    "original_run_exited": true,
+    "retained_valid": 39,
+    "known_interrupted_retried_once": 7,
+    "prior_terminal_event_ack": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/handler_acks/B_ced84ae94b292f1b4dfa4a302677cc2e.json",
+    "recovery_receipt": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_POST_TRIGGER_MODES_V1_RECOVERY_r2.json",
+    "original_deadline_preserved": 1790102926.704207
+  },
+  "background": {
+    "status": "stable_formal_compute",
+    "living_loaded_workers": 8,
+    "active_jobs": {
+      "0": null,
+      "1": null,
+      "2": "Post_Random-once_H10_sweep-v3",
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": "Post_Random-once_H10_sweep-into-v3",
+      "7": null
+    },
+    "completed_job_count_snapshot": 47,
+    "completed_job_technical_failures_snapshot": 0,
+    "holders": "all8offthroughwholeformalwave",
+    "restoration": "automaticafterwholeownedfamilyexitincludingfailure",
+    "observer_alive": true,
+    "observer_pid": 452085,
+    "registered_terminal_trigger": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/nodes/B/wakeup/jobs/D24_B_POST_TRIGGER_MODES_r2__D24_B_POST_TRIGGER_MODES_r2__1.json",
+    "stable_handoff": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_POST_TRIGGER_MODES_V1/recovery_r2/STABLE_HANDOFF.json",
+    "runtime_evidence": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/events/B_d367199551bf5d75bafa5f2ef5ab98ea_RUNTIME.json",
+    "wakeup_readiness": "original_thread_ACK_verified_offline_pending"
+  },
+  "actions": {
+    "new_launches": 0,
+    "duplicate_launches": 0,
+    "scientific_retries_added": 0,
+    "GPU_probes": 0,
+    "shared_control_changes": 0,
+    "manual_notification_deliveries": 0
+  },
+  "decision": "C-only control-service grant adds no B work. Continue existing Post trigger-mode recovery queue automatically; no duplicate launch and no A/C runtime barrier.",
+  "A_waits_for_B": false
+}

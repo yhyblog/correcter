@@ -1,0 +1,9 @@
+A_D24_SPRINT_V1：用户已在本会话明确授权最多2500个N评测episode，8常驻worker，50任务×10个固定新test初态×H10/30/50/20/40，后台自动衔接。
+
+配置与1000个预留test身份在计算前冻结，本次仅各任务ordinal0..9。H与方法共享身份；当前仅实现并授权N，不启动训练、其他方法或475源采集。每worker只加载一次固定SFT030000及其processor，严格load证明保留；不写逐帧RGB或旧大账本。每episode保存终局、真实步数、策略/flow计数、加载/推理/环境时间；技术异常success=null。
+
+原自动审批拒绝记录保留。明确用户批准后，第一次实际shell调用在authority检查前端失败：CONTROL把priority_task更新到pilot，同时明确baseline_N_and_existing_jobs_continue=true。修正为识别该显式基线继续字段，绑定本会话准确N2500范围；没有产生daemon/claim/计算。第二次shell已成功脱离会话启动PID1270859。
+
+当前stage为原guard占卡交接；DAEMON_READY和heartbeat已实际写入。八worker实际模型加载与episode完成数以实时证据为准，不以READY冒充样本完成。旧正式release不复用；原formal.lock只有一次预约，由supervisor持有同一个FD副本直到整组退出和发布。失败也先清理再恢复全部holder，正式链中不启闲置子集holder。
+
+查看 deadline_20260924/A/HEARTBEAT.json、SUMMARY.json 和 runs/*/RESULT.json；终局outbox固定发回A原会话，运输回执不冒充handler ACK。

@@ -1,0 +1,95 @@
+{
+  "task_id": "A_D24_MULTI_INTERVENTION_PILOT_V1",
+  "revision": 2,
+  "status": "COMPLETE",
+  "utc": "2026-09-21T16:42:21.130294+00:00",
+  "owner": "A",
+  "n": 20,
+  "repeat": 0,
+  "actual_rollouts": 120,
+  "technical_failures": 0,
+  "retries": 0,
+  "new_initial_states": 0,
+  "training": 0,
+  "deletion": 0,
+  "raw_lifecycle_exit": 0,
+  "all8_worker_exit0": true,
+  "all8_holders_restored": true,
+  "results": {
+    "R": {
+      "once": 13,
+      "multi": 13,
+      "denominator": 20
+    },
+    "Post": {
+      "once": 16,
+      "multi": 16,
+      "denominator": 20
+    },
+    "Velocity": {
+      "once": 15,
+      "multi": 15,
+      "denominator": 20
+    }
+  },
+  "comparisons": {
+    "Post_multi-Post_once": {
+      "harmed": [],
+      "paired_complete": 20,
+      "percentage_point_delta": 0,
+      "rescued": [],
+      "success_count_delta": 0
+    },
+    "Post_multi-R_multi": {
+      "harmed": [
+        "disassemble-v3__2026111765",
+        "disassemble-v3__2026111885"
+      ],
+      "paired_complete": 20,
+      "percentage_point_delta": 15,
+      "rescued": [
+        "disassemble-v3__2026111750",
+        "disassemble-v3__2026111755",
+        "disassemble-v3__2026111855",
+        "disassemble-v3__2026111865",
+        "disassemble-v3__2026111880"
+      ],
+      "success_count_delta": 3
+    },
+    "R_multi-R_once": {
+      "harmed": [],
+      "paired_complete": 20,
+      "percentage_point_delta": 0,
+      "rescued": [],
+      "success_count_delta": 0
+    },
+    "Velocity_multi-Velocity_once": {
+      "harmed": [],
+      "paired_complete": 20,
+      "percentage_point_delta": 0,
+      "rescued": [],
+      "success_count_delta": 0
+    }
+  },
+  "actual_counters": {
+    "D_forward": 7250,
+    "G0_forward": 7250,
+    "Q_ensemble_forward": 512,
+    "action_gradients": 186,
+    "contexts": 3625,
+    "flow": 20420,
+    "interventions": 150,
+    "sampling": 2042
+  },
+  "manifest": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_MULTI_INTERVENTION_PILOT_V1/FINAL_MANIFEST.json",
+    "sha256": "f96ec9375a5eda58bb723f38c5c9801392ea06cd933ef462253f6668bf37bae9",
+    "bytes": 40107
+  },
+  "report": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_MULTI_INTERVENTION_PILOT_V1_REPORT_r5.md",
+    "sha256": "c99910adab070464e2bcd535c3dbc007a865a0b7c2af037b44d2042b02d1e936",
+    "bytes": 1984
+  },
+  "analysis_acceptance": null
+}

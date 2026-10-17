@@ -1,0 +1,83 @@
+{
+  "schema": "corrector_full_q_loss_selection_authorization_v1",
+  "status": "released",
+  "issued_at_utc": "2026-09-22T15:52:04.083023+00:00",
+  "authority": "User explicitly cancels Random-multi and prioritizes complete Q loss ablation then best configuration; user adds 3 workers/GPU evaluation target",
+  "protocol": {
+    "path": "deadline_20260924/FULL_Q_LOSS_SELECTION_PLAN_V1.md",
+    "sha256": "65a17c43ab1cda58b77b2e224a5532cbc035d8214786be379de8e2fb9d3a9a80"
+  },
+  "concurrency_rule": {
+    "path": "deadline_20260924/EVALUATION_CONCURRENCY_24_V1.md",
+    "sha256": "8b13ba1b96d286b1be68f6d96c300017af95ae637120bb7c34c69ac943e33b29"
+  },
+  "admission_override": {
+    "path": "deadline_20260924/Q_LOSS_PRIORITY_OVERRIDE_V1.json",
+    "sha256": "7e7c84f47284a71dee130bae1239ee3d18f04b176bbea7ad5a66e06da792b5a7"
+  },
+  "no_second_approval": true,
+  "new_first_evaluations": 11600,
+  "new_optimizer_updates": 320000,
+  "new_collection_attempts": 0,
+  "new_SFT_updates": 0,
+  "new_D_G0_updates": 0,
+  "selection": {
+    "data": "existing development100; no training/test overlap",
+    "criterion": "five_tasks_three_fit_seeds_Post_Velocity_equal_weight_success_mean",
+    "ties": [
+      "fewer_auxiliary_terms",
+      "L00,L10,L01,L11"
+    ],
+    "loss_shared_across_branches_and_bases": true,
+    "final_fit_seed": 9101,
+    "no_test_selection": true,
+    "selection_path": "results/A/A_D24_FULL_Q_LOSS_SELECTION_V1/SELECTION.json"
+  },
+  "nodes": {
+    "A": {
+      "task_id": "A_D24_FULL_Q_LOSS_SELECTION_V1",
+      "revision": 1,
+      "CPU_prepare_now": true,
+      "new_optimizer_updates": 192000,
+      "new_first_evaluations": 9600,
+      "stage_attempt_cap": 10100,
+      "cumulative_attempt_cap": 27000,
+      "formal_start_after_own_current_family_exit": true,
+      "cross_node_exit_barrier": false,
+      "no_completed_N_R_external_replays": true
+    },
+    "B": {
+      "task_id": "B_D24_FULL_Q_LOSS_REFRESH_V1",
+      "revision": 1,
+      "CPU_prepare_now": true,
+      "new_optimizer_updates": 64000,
+      "new_first_evaluations": 1000,
+      "stage_attempt_cap": 1100,
+      "cumulative_attempt_cap": 20000,
+      "formal_start_after_own_current_family_exit": true,
+      "cross_node_exit_barrier": false,
+      "no_completed_N_R_external_replays": true
+    },
+    "C": {
+      "task_id": "C_D24_FULL_Q_LOSS_REFRESH_V1",
+      "revision": 1,
+      "CPU_prepare_now": true,
+      "new_optimizer_updates": 64000,
+      "new_first_evaluations": 1000,
+      "stage_attempt_cap": 1100,
+      "cumulative_attempt_cap": 14000,
+      "formal_start_after_own_current_family_exit": true,
+      "cross_node_exit_barrier": false,
+      "no_completed_N_R_external_replays": true
+    }
+  },
+  "evaluation_target": {
+    "GPUs": 8,
+    "workers_per_GPU": 3,
+    "workers": 24,
+    "fallback": "ordinary host capacity evidence and maximum feasible concurrency; no separate GPU preflight"
+  },
+  "science_admission_cutoff_utc": "2026-09-23T12:00:00Z",
+  "tables_due_utc": "2026-09-23T15:00:00Z",
+  "whole_wave_holder_policy": "all_off_until_entire_formal_family_exit"
+}

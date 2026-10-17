@@ -1,0 +1,228 @@
+{
+  "at_utc": "2026-09-21T18:05:50.195468+00:00",
+  "status": "H30_COMPLETE_ACCEPTED",
+  "receipt": "receipts/A/A_D24_MAIN_ONCE_V1_RESULT_r3.json",
+  "snapshot_utc": "2026-09-21T18:03:06.366381+00:00",
+  "rows": [
+    {
+      "method": "N",
+      "H": 30,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 205,
+      "success_rate_percent": 41.0,
+      "technical_failures": 0
+    },
+    {
+      "method": "Post",
+      "H": 30,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 316,
+      "success_rate_percent": 63.2,
+      "technical_failures": 0
+    },
+    {
+      "method": "Velocity",
+      "H": 30,
+      "tasks": 50,
+      "episodes": 500,
+      "successes": 309,
+      "success_rate_percent": 61.8,
+      "technical_failures": 0
+    }
+  ],
+  "Post_minus_N_pp": 22.2,
+  "Velocity_minus_N_pp": 20.8,
+  "Post_minus_Velocity_pp": 1.4,
+  "cross_H_point_estimates": {
+    "Post_H30_minus_N_H10_pp": 1.6,
+    "Velocity_H30_minus_N_H10_pp": 0.2,
+    "N_H30_minus_N_H10_pp": -20.6,
+    "Post_H30_minus_Post_H10_pp": -5.8,
+    "Velocity_H30_minus_Velocity_H10_pp": -6.2
+  },
+  "interpretation": "Full-method improvements relative to same-H N; no R_H30 comparison, so do not attribute all gains to correction. CrossH point-estimate proximity is not equivalence or total inference speedup.",
+  "paired_statistics": {
+    "status": "complete",
+    "path": "deadline_20260924/H30_PAIRED_ANALYSIS.json",
+    "csv": "deadline_20260924/H30_PAIRED_RESULTS.csv",
+    "method": "fixed50task, within-task paired bootstrap2000 seed20260921; pointwise percentile95%; excludes task-population and training-seed uncertainty"
+  },
+  "corrector_training_coverage": "frozen historical five tasks; pi05 backbone MT50 SFT030000",
+  "main_matrix_cells_complete": 10,
+  "main_matrix_cells_total": 16,
+  "episodes_in_completed_cells": 5000,
+  "pending_cells": [
+    "Post_H20",
+    "Post_H40",
+    "Post_H50",
+    "Velocity_H20",
+    "Velocity_H40",
+    "Velocity_H50"
+  ],
+  "pending_cell_episodes": 3000,
+  "partial_results_excluded": true,
+  "execution": "same8residentworker chain H50 thenH20/H40; no new launch, tuning or data collection",
+  "review_scope": "small completed-cell receipt only; no strict audit or hardware queries",
+  "paired_comparisons": {
+    "Post_H30-N_H30": {
+      "paired": 500,
+      "delta_pp": 22.2,
+      "delta_ci95_pp": [
+        18.8,
+        25.4
+      ],
+      "rescued": 122,
+      "harmed": 11,
+      "net_successes": 111,
+      "rescued_rate_pct": 24.4,
+      "rescued_rate_ci95_pct": [
+        21.6,
+        27.2
+      ],
+      "harmed_rate_pct": 2.2,
+      "harmed_rate_ci95_pct": [
+        1.2,
+        3.4
+      ],
+      "both_success": 194,
+      "both_fail": 173,
+      "tasks_positive_delta": 31,
+      "tasks_negative_delta": 2,
+      "tasks_zero_delta": 17,
+      "cross_H_description": false
+    },
+    "Velocity_H30-N_H30": {
+      "paired": 500,
+      "delta_pp": 20.8,
+      "delta_ci95_pp": [
+        17.595,
+        24.0
+      ],
+      "rescued": 118,
+      "harmed": 14,
+      "net_successes": 104,
+      "rescued_rate_pct": 23.6,
+      "rescued_rate_ci95_pct": [
+        20.8,
+        26.4
+      ],
+      "harmed_rate_pct": 2.8,
+      "harmed_rate_ci95_pct": [
+        1.6,
+        4.4
+      ],
+      "both_success": 191,
+      "both_fail": 177,
+      "tasks_positive_delta": 30,
+      "tasks_negative_delta": 2,
+      "tasks_zero_delta": 18,
+      "cross_H_description": false
+    },
+    "Post_H30-Velocity_H30": {
+      "paired": 500,
+      "delta_pp": 1.4,
+      "delta_ci95_pp": [
+        -0.2,
+        3.0
+      ],
+      "rescued": 13,
+      "harmed": 6,
+      "net_successes": 7,
+      "rescued_rate_pct": 2.6,
+      "rescued_rate_ci95_pct": [
+        1.4,
+        4.0
+      ],
+      "harmed_rate_pct": 1.2,
+      "harmed_rate_ci95_pct": [
+        0.4,
+        2.2
+      ],
+      "both_success": 303,
+      "both_fail": 178,
+      "tasks_positive_delta": 9,
+      "tasks_negative_delta": 4,
+      "tasks_zero_delta": 37,
+      "cross_H_description": false
+    },
+    "Post_H30-N_H10": {
+      "paired": 500,
+      "delta_pp": 1.6,
+      "delta_ci95_pp": [
+        -2.2,
+        5.005
+      ],
+      "rescued": 60,
+      "harmed": 52,
+      "net_successes": 8,
+      "rescued_rate_pct": 12.0,
+      "rescued_rate_ci95_pct": [
+        9.6,
+        14.4
+      ],
+      "harmed_rate_pct": 10.4,
+      "harmed_rate_ci95_pct": [
+        8.2,
+        13.0
+      ],
+      "both_success": 256,
+      "both_fail": 132,
+      "tasks_positive_delta": 13,
+      "tasks_negative_delta": 17,
+      "tasks_zero_delta": 20,
+      "cross_H_description": true
+    },
+    "Velocity_H30-N_H10": {
+      "paired": 500,
+      "delta_pp": 0.2,
+      "delta_ci95_pp": [
+        -3.6,
+        3.6
+      ],
+      "rescued": 53,
+      "harmed": 52,
+      "net_successes": 1,
+      "rescued_rate_pct": 10.6,
+      "rescued_rate_ci95_pct": [
+        8.2,
+        13.0
+      ],
+      "harmed_rate_pct": 10.4,
+      "harmed_rate_ci95_pct": [
+        8.195,
+        12.805
+      ],
+      "both_success": 256,
+      "both_fail": 139,
+      "tasks_positive_delta": 12,
+      "tasks_negative_delta": 16,
+      "tasks_zero_delta": 22,
+      "cross_H_description": true
+    }
+  },
+  "saved_policy_calls": {
+    "N_H30": {
+      "recorded_episodes": 500,
+      "total": 3482,
+      "mean_per_episode": 6.964
+    },
+    "Post_H30": {
+      "recorded_episodes": 500,
+      "total": 3284,
+      "mean_per_episode": 6.568
+    },
+    "Velocity_H30": {
+      "recorded_episodes": 500,
+      "total": 3741,
+      "mean_per_episode": 7.482
+    },
+    "N_H10": {
+      "recorded_episodes": 500,
+      "total": 7565,
+      "mean_per_episode": 15.13
+    }
+  },
+  "human_readable_results": "deadline_20260924/H_SWEEP_RESULTS.md"
+}

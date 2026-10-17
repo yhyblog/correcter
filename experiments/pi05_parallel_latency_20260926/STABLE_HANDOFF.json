@@ -1,0 +1,73 @@
+{
+  "status": "STABLE_HANDOFF",
+  "time": 1790391098.4203978,
+  "scope": "Authorized PI05 same-GPU parallel inference with full width512 Q action gradient",
+  "launch": {
+    "pid": 3904565,
+    "pgid": 3904565,
+    "host": "trial-303269581-trialrun-303269581-worker-0",
+    "thread": "01a0d6d5-d777-7ca1-afaf-6dd2f1aa27a1",
+    "time": 1790390862.5975482
+  },
+  "workers": [
+    {
+      "worker": "worker_0",
+      "ready": true,
+      "result": "complete",
+      "latency.jsonl": 120,
+      "frequency.jsonl": 0
+    },
+    {
+      "worker": "worker_1",
+      "ready": true,
+      "result": "complete",
+      "latency.jsonl": 120,
+      "frequency.jsonl": 0
+    },
+    {
+      "worker": "worker_2",
+      "ready": true,
+      "result": "complete",
+      "latency.jsonl": 120,
+      "frequency.jsonl": 0
+    },
+    {
+      "worker": "worker_3",
+      "ready": true,
+      "result": "complete",
+      "latency.jsonl": 120,
+      "frequency.jsonl": 0
+    },
+    {
+      "worker": "worker_4",
+      "ready": true,
+      "result": null,
+      "latency.jsonl": 0,
+      "frequency.jsonl": 4
+    },
+    {
+      "worker": "worker_5",
+      "ready": true,
+      "result": null,
+      "latency.jsonl": 0,
+      "frequency.jsonl": 4
+    },
+    {
+      "worker": "worker_6",
+      "ready": true,
+      "result": null,
+      "latency.jsonl": 0,
+      "frequency.jsonl": 3
+    },
+    {
+      "worker": "worker_7",
+      "ready": true,
+      "result": null,
+      "latency.jsonl": 0,
+      "frequency.jsonl": 4
+    }
+  ],
+  "terminal_event": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/pi05_parallel_latency_20260926/EVENT_REGISTRATION.json",
+  "automatic_aggregation": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/pi05_parallel_latency_20260926/analyze.py",
+  "next_action": "Read terminal RESULT.json and REPORT.md; preserve completed units; write outbox/HANDLER_ACK.json; no recursive callback"
+}

@@ -1,0 +1,18 @@
+{
+  "status": "static_source_and_runtime_trace_agree",
+  "exception": "core.contracts.ContractError: Task board mismatch",
+  "failure_stage": "launcher_metadata_authorization_before_claim",
+  "board_status": "released",
+  "accepted_board_statuses": [
+    "ready",
+    "running"
+  ],
+  "source_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1/code/core/contracts.py",
+  "source_sha256": "811a8e7c3242b0b51b71134da67ee23236b19cc6dcdb8c420e2cf949466095f3",
+  "line": 44,
+  "relevant_source": "43:     tasks=[t for t in board.get('tasks',[]) if t.get('id')==TASK]\n44:     if len(tasks)!=1 or tasks[0].get('owner')!='A' or tasks[0].get('revision')!=1 or tasks[0].get('status') not in ['ready','running']:\n45:         raise ContractError('Task board mismatch')\n46:     if (CAMPAIGN/tasks[0].get('release','')).resolve()!=Path(release_path).resolve():raise ContractError('Task release mismatch')",
+  "entrypoint": "code/launch.py:26 invokes load_authorization(full=False), claim follows only at line27",
+  "no_full_checker_or_GPU_code_reached": true,
+  "repair_performed": false,
+  "required_analysis_action": "Resolve task-board state versus frozen guard, then explicitly decide closure/new authorization; executor does not mutate CONTROL/TASK_BOARD or retry"
+}

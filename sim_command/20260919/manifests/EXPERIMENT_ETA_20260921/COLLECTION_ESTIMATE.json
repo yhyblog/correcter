@@ -1,0 +1,243 @@
+{
+  "schema": "corrector_remaining_collection_eta_v1",
+  "created_at_utc": "2026-09-21T15:04:16.173937+00:00",
+  "status": "CONDITIONAL_PLANNING_ESTIMATE_NOT_MEASURED8WAY",
+  "scope": "Remaining475 common-pool source slots on nodeA only; collection and routine batch exit/publication, excluding views/training/formal evaluation/paper work. Count supplied by parent; no board rescan. No new GPU/model/OS probes, benchmarks, implementation execution, weights hash or raw-ledger scans.",
+  "inputs": {
+    "remaining_sources": 475,
+    "max_cold_attempts": 7125,
+    "target_true_parent_concurrency": 8,
+    "GPUs": 8,
+    "full_batches": 59,
+    "last_batch_sources": 3,
+    "batches_if_max8_sources": 60,
+    "mean_attempts_implicitly_assumed": 15,
+    "no_automatic_retry_or_resampling_assumed": true
+  },
+  "saved_batches": [
+    {
+      "batch": 1,
+      "parents": 8,
+      "cold_attempts": 106,
+      "actual_peak_parent_concurrency": 2,
+      "outer_seconds": 16143.590551090892,
+      "outer_hours": 4.484330708636359,
+      "summed_child_wall_seconds": 28481.990894194227,
+      "summed_child_wall_hours": 7.9116641372761745,
+      "summed_parent_worker_wall_seconds": 28503.99927028455,
+      "summed_parent_worker_wall_hours": 7.917777575079041,
+      "worker_clock_scope": "saved scheduler admission to final child exit, excluding final whole-wave publication; summed workers overlap",
+      "child_elapsed_missing": 0,
+      "mean_child_seconds": 268.69802730371913,
+      "parent_min_seconds": 241.5021498389542,
+      "parent_max_seconds": 4408.144607956056,
+      "parent_max_hours": 1.2244846133211265,
+      "cold_load_host_seconds_total": 13228.61735706916,
+      "cold_load_host_hours_total": 3.6746159325192114,
+      "cold_load_host_seconds_mean": 124.79827695348266,
+      "cold_load_host_seconds_min": 123.7236707941629,
+      "cold_load_host_seconds_max": 128.07927001127973,
+      "cold_load_fraction_of_summed_child_wall": 0.46445550123975654,
+      "ideal_2_to8_outer_div4_hours": 1.1210826771590898,
+      "ideal_all8_start_same_time_batch_hours": 1.2244846133211265,
+      "all7125_attempts_ideal_rolling8_days": 2.7697821824927646,
+      "60_batches_using_saved_slowest_parent_days": 3.0612115333028163,
+      "limitations": [
+        "106 attempts, one normal-only source; do not extrapolate reduced source coverage as typical full15 source"
+      ]
+    },
+    {
+      "batch": 2,
+      "parents": 8,
+      "cold_attempts": 120,
+      "actual_peak_parent_concurrency": 2,
+      "outer_seconds": 15691.137440627906,
+      "outer_hours": 4.358649289063307,
+      "summed_child_wall_seconds": 30871.605379489716,
+      "summed_child_wall_hours": 8.575445938747144,
+      "summed_parent_worker_wall_seconds": 30896.76382767223,
+      "summed_parent_worker_wall_hours": 8.58243439657562,
+      "worker_clock_scope": "saved scheduler admission to final child exit, excluding final whole-wave publication; summed workers overlap",
+      "child_elapsed_missing": 0,
+      "mean_child_seconds": 257.2633781624143,
+      "parent_min_seconds": 3592.1208553798497,
+      "parent_max_seconds": 4326.331492945086,
+      "parent_max_hours": 1.2017587480403018,
+      "cold_load_host_seconds_total": 14943.702585308347,
+      "cold_load_host_hours_total": 4.151028495918985,
+      "cold_load_host_seconds_mean": 124.53085487756955,
+      "cold_load_host_seconds_min": 123.2587143369019,
+      "cold_load_host_seconds_max": 129.74789259117097,
+      "cold_load_fraction_of_summed_child_wall": 0.48405978249633075,
+      "ideal_2_to8_outer_div4_hours": 1.0896623222658268,
+      "ideal_all8_start_same_time_batch_hours": 1.2017587480403018,
+      "all7125_attempts_ideal_rolling8_days": 2.6519119927766233,
+      "60_batches_using_saved_slowest_parent_days": 3.0043968701007544,
+      "limitations": []
+    },
+    {
+      "batch": 3,
+      "parents": 8,
+      "cold_attempts": 120,
+      "actual_peak_parent_concurrency": 2,
+      "outer_seconds": 16576.311129332054,
+      "outer_hours": 4.604530869258904,
+      "summed_child_wall_seconds": 31787.39328510454,
+      "summed_child_wall_hours": 8.829831468084594,
+      "summed_parent_worker_wall_seconds": 31812.644562341273,
+      "summed_parent_worker_wall_hours": 8.836845711761464,
+      "worker_clock_scope": "saved scheduler admission to final child exit, excluding final whole-wave publication; summed workers overlap",
+      "child_elapsed_missing": 0,
+      "mean_child_seconds": 264.8949440425378,
+      "parent_min_seconds": 3621.6811569049023,
+      "parent_max_seconds": 4518.90656945901,
+      "parent_max_hours": 1.255251824849725,
+      "cold_load_host_seconds_total": 14960.975530740805,
+      "cold_load_host_hours_total": 4.155826536316891,
+      "cold_load_host_seconds_mean": 124.67479608950671,
+      "cold_load_host_seconds_min": 123.08766211895272,
+      "cold_load_host_seconds_max": 140.9703502622433,
+      "cold_load_fraction_of_summed_child_wall": 0.4706575149636905,
+      "ideal_2_to8_outer_div4_hours": 1.151132717314726,
+      "ideal_all8_start_same_time_batch_hours": 1.255251824849725,
+      "all7125_attempts_ideal_rolling8_days": 2.730579392799598,
+      "60_batches_using_saved_slowest_parent_days": 3.1381295621243126,
+      "limitations": [
+        "holder override during run changes timing conditions; not a controlled throughput comparison"
+      ]
+    }
+  ],
+  "estimates": {
+    "ideal_rolling8_worker_arithmetic_days": [
+      2.6519119927766233,
+      2.7697821824927646
+    ],
+    "ideal_batch_barrier_reference_days": [
+      3.0043968701007544,
+      3.1381295621243126
+    ],
+    "ideal_explanation": "Batch barrier keeps every8source batch until its slowest parent exits before publishing. Reuse historical per-parent maximum1.20–1.26h across60 batches; final3-source batch charged a full batch conservatively. Assumes unchanged per-parent durations at8concurrency; not an actual speedup measurement.",
+    "recommended_conservative_planning_days": [
+      4,
+      7
+    ],
+    "engineering_range_before_rounding_days": [
+      3.784584553059711,
+      6.730215936873854
+    ],
+    "engineering_assumptions": {
+      "effective_throughput_relative_to_no_contention8way": [
+        0.6,
+        0.85
+      ],
+      "total_routine_admission_publication_pause_allowance_days": [
+        0.25,
+        1.5
+      ],
+      "reason": "Engineering allowance for shared loading/hash/import/CPU/IO contention, new MT50 task and cut mix, batch-tail imbalance, and routine queue/resource-gate/publication delays; upper allowance includes an extra1day conservative buffer for unseen task/queue variation. Not a confidence interval or observed distribution.",
+      "requires": "Eight real parents admitted on eight GPUs when jobs available; fresh RAM/cgroup/disk gates pass; service continuously advances authorized batches; no long machine interruptions or repeated manual approval waits."
+    },
+    "if_2way_historical_pace_persists_days": [
+      10.896623222658269,
+      11.51132717314726
+    ],
+    "sustained8way_speedup_measured": null,
+    "hard_end_to_end_upper_bound_days": null,
+    "not_promised": "Serialization of shared IO, admission blocking, machine termination or long stage/operator delays can exceed7days; no finite bound is established.",
+    "475_sources_prorated_at_historical2way_pace_days": [
+      10.783116730755578,
+      11.391417515093643
+    ],
+    "simple2way_to8way_div4_days": [
+      2.6957791826888946,
+      2.8478543787734107
+    ],
+    "simple_div4_is_not_measured_or_guaranteed": true,
+    "recalibrate_after_first_completed_true8parent_batch": true
+  },
+  "cold_load": {
+    "observed_mean_seconds_range": [
+      124.53085487756955,
+      124.79827695348266
+    ],
+    "summed_child_fraction_range": [
+      0.46445550123975654,
+      0.48405978249633075
+    ],
+    "all7125_load_host_intervals_divided8_days": [
+      1.2836839424228632,
+      1.2864405718946237
+    ],
+    "not_physical_IO_or_GPU_time": true,
+    "not_eliminable_loading_time": true,
+    "nested_safetensors_and_state_dict_intervals_not_added_again": true,
+    "identical_frozen_cold_load_semantics_preserved": true
+  },
+  "capacity_assumptions": {
+    "8way_RAM_planning_bytes": 549755813888,
+    "RAM_is_engineering_reserve_not_measured_peak": true,
+    "per_GPU_saved_hardware_label": "H10080GB",
+    "per_GPU_measured_peak_bytes": null,
+    "container_current_limit_bytes": null,
+    "fresh_resource_gates_separately_required": true
+  },
+  "logical_IO": {
+    "checkpoint_size_bytes": 9354050752,
+    "known_sized_full_authorization_hash_read_bytes": 9493105161,
+    "8_simultaneous_first_attempt_hash_plus_checkpoint_logical_bytes": 150777247304,
+    "8_simultaneous_first_attempt_logical_GiB": 140.422254152596,
+    "per120_attempt_batch_checkpoint_logical_bytes": 1122486090240,
+    "per120_attempt_batch_121checks_known_sized_hash_subtotal_bytes": 1148665724481,
+    "remaining_checkpoint_logical_bytes_if_all7125_start": 66647611608000,
+    "remaining_known_hash_subtotal_bytes_if_one_per_attempt_plus60_batch_checks": 68207960581785,
+    "remaining_known_logical_checkpoint_plus_hash_TB": 134.855572189785,
+    "physical_disk_network_bytes": null,
+    "measured_shared_read_rate_Bps": null,
+    "cache_hit_rate": null,
+    "strict_total_logical_read_upper_bytes": null,
+    "interpretation": "These are logical file visits, not measured physical disk/network traffic, RAM footprint, or seconds. Reads may be cached; unknown manifest sizes and tokenizer/library/cache traffic are omitted. Full authorization frequency is inherited quote arithmetic, not an optimized queue guarantee."
+  },
+  "data_qualification": "475 source slots are a work-coverage estimate, not475 guaranteed fully paired accepted parents. Legal early outcomes/target masks are retained and do not imply retry.",
+  "sources": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH1_V1/REPORT.md",
+      "bytes": 3610,
+      "sha256": "245fb0bd13a5ad9ae8c4c1b6b51f3bc16266e5739b718234424873f86e272036"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH1_V1/SAVED_TIMING_AUDIT.json",
+      "bytes": 361259,
+      "sha256": "4fb8265ecb1609dbea48e644030d5d4ffbc3e09c5e582af0776f200abce5d571"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH2_V1/REPORT.md",
+      "bytes": 3481,
+      "sha256": "f7beb1afee06d1a7e14212ea25dbe7d0f1ac14220f3ba884174fb527527c6a8b"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH2_V1/SAVED_TIMING_AUDIT.json",
+      "bytes": 410788,
+      "sha256": "562117819c973c2413a7951439c8914db3f3bf51fe10a9503f11878ff7825898"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/REPORT.md",
+      "bytes": 4538,
+      "sha256": "89527335964c0905d62fca44c18a2b211ca4292456d5a89dc30dcc773cac7fb1"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/SAVED_TIMING_AUDIT.json",
+      "bytes": 408175,
+      "sha256": "cd8210874510338ee48c2257dd54a8a31aa523376c3029f3b5a1515b2312defc"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH_SCALING_CPU_V1/CAPACITY_AND_THROUGHPUT.json",
+      "bytes": 105667,
+      "sha256": "0afef7c3a8cac0f8c5b67ccb0c6276dc6ec66b6c23c70618c5915c80dbd89946"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_MT50_CONTINUATION_CPU_V1/RESOURCE_AND_STORAGE_QUOTE.json",
+      "bytes": 52765,
+      "sha256": "013a72e52df28c3cd1627298b66f7a7e1a9e006247361c4412df58b560648244"
+    }
+  ]
+}

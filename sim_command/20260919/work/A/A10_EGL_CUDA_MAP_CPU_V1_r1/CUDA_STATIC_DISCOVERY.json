@@ -1,0 +1,41 @@
+{
+  "checked_at_utc": "2026-09-19T18:16:16.787010+00:00",
+  "search_command": [
+    "rg",
+    "--files",
+    "--hidden",
+    "-g",
+    "*libcuda*",
+    "-g",
+    "cuda.h",
+    "/usr/lib/x86_64-linux-gnu",
+    "/usr/local/cuda",
+    "/usr/local/nvidia",
+    "/opt"
+  ],
+  "search_returncode": 2,
+  "search_stdout": "/usr/local/cuda/compat/libcudadebugger.so.550.90.12\n/usr/local/cuda/compat/libcuda.so.550.90.12\n/usr/local/cuda/extras/Debugger/lib64/libcudacore.a\n/usr/local/cuda/extras/Debugger/include/libcudacore.h\n/usr/local/cuda/targets/x86_64-linux/lib/stubs/libcuda.so\n/usr/local/cuda/targets/x86_64-linux/lib/libcudart_static.a\n/usr/local/cuda/targets/x86_64-linux/lib/libcudart.so.12.4.127\n/usr/local/cuda/targets/x86_64-linux/lib/libcudadevrt.a\n/usr/local/cuda/targets/x86_64-linux/lib/cmake/libcudacxx/libcudacxx-header-search.cmake\n/usr/local/cuda/targets/x86_64-linux/lib/cmake/libcudacxx/libcudacxx-config.cmake\n/usr/local/cuda/targets/x86_64-linux/lib/cmake/libcudacxx/libcudacxx-config-version.cmake\n/usr/local/cuda/targets/x86_64-linux/include/cuda.h\n/usr/lib/x86_64-linux-gnu/libcuda.so.535.161.08\n/usr/lib/x86_64-linux-gnu/libcudadebugger.so.535.161.08\n",
+  "search_stderr": "rg: /usr/local/nvidia: No such file or directory (os error 2)\n",
+  "ldconfig_cuda_entries": [
+    "\tlibcuda.so.1 (libc6,x86-64) => /usr/local/cuda-12.4/compat/libcuda.so.1",
+    "\tlibcuda.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libcuda.so.1",
+    "\tlibcuda.so (libc6,x86-64) => /usr/local/cuda-12.4/compat/libcuda.so",
+    "\tlibcuda.so (libc6,x86-64) => /lib/x86_64-linux-gnu/libcuda.so"
+  ],
+  "selected_environment": {
+    "LD_LIBRARY_PATH": "/usr/local/cuda/compat:/opt/tiger/native_libhdfs/lib/native:/opt/tiger/yarn_deploy/jdk/jre/lib/amd64/server:/opt/tiger/yarn_deploy/hadoop_current/lib/native:/opt/tiger/yarn_deploy/hadoop_current/lib/native/ufs:/opt/tiger/yarn_deploy/hadoop/lib/native:/opt/tiger/yarn_deploy/hadoop_current/lib/native:/usr/lib/x86_64-linux-gnu/openmpi:/usr/lib:/lib64:/usr/local/lib:/usr/lib/x86_64-linux-gnu:/usr/local/cuda/lib64",
+    "LD_PRELOAD": null,
+    "CUDA_VISIBLE_DEVICES": null,
+    "CUDA_DEVICE_ORDER": null,
+    "NVIDIA_VISIBLE_DEVICES": "GPU-b63ae919-c2a3-ff8c-3527-2f924152251f,GPU-ec35bc25-f521-4261-e3a3-cf536a41aa64,GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe,GPU-2254f286-1a7d-edf8-e4a4-f24c051cab83,GPU-64240b2e-5845-da58-e703-61322f21cbf6,GPU-7a3ce392-0958-db98-bd25-b95810298e5f,GPU-893accc7-1601-840b-ea72-5d8302ef6d44,GPU-8a8b08b1-2a03-ae94-bac7-4f690cf5c5d8",
+    "NVIDIA_DRIVER_CAPABILITIES": "compute,utility"
+  },
+  "kernel_driver_version": "NVRM version: NVIDIA UNIX x86_64 Kernel Module  535.161.08  Tue Mar  5 22:42:15 UTC 2024\nGCC version:  gcc version 8.3.0 (Debian 8.3.0-6) \n",
+  "target_kernel_info": "Model: \t\t NVIDIA H100 80GB HBM3\nIRQ:   \t\t 16\nGPU UUID: \t GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe\nVideo BIOS: \t 96.00.da.00.1d\nBus Type: \t PCIe\nDMA Size: \t 52 bits\nDMA Mask: \t 0xfffffffffffff\nBus Location: \t 0000:0f:00.0\nDevice Minor: \t 0\nGPU Firmware: \t 535.161.08\nGPU Excluded:\t No\n",
+  "guard_files": [
+    "formal.lock",
+    "status.json",
+    "pid",
+    "daemon.lock"
+  ]
+}

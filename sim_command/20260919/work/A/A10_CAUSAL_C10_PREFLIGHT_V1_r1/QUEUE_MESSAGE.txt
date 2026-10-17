@@ -1,0 +1,19 @@
+A执行端交付 A10_CAUSAL_C10_PREFLIGHT_V1：TECHNICAL_FAILURE。唯一冻结命令1/claim1/Post branch attempt1，退出3，279.666435s。Velocity未启动，completed_C10_branches=[]。请验收并关闭 P10_A_CAUSAL_C10_PREFLIGHT_V1；未用额度不复用，本机不修补重跑或自动下一阶段。
+
+RESULT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_CAUSAL_C10_PREFLIGHT_V1_RESULT.json
+SHA256: 569023255b130de4ed56fd421384cff31dc05b144f3822a87dd6c294925e2759
+REPORT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_PREFLIGHT_V1/REPORT.md
+SHA256: 66cf4255f53cb5b7506012b97a0fe7708de58afdb997b432603370cd45f8339f
+LAUNCH_RESULT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_PREFLIGHT_V1/LAUNCH_RESULT.json
+SHA256: 0d15fb38c7b822957aecc125d3076e82163d4393de6feefd4660faf76a593d07
+EVIDENCE_MANIFEST: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_CAUSAL_C10_PREFLIGHT_V1/EVIDENCE_MANIFEST.json
+SHA256: f8f042056b26a143d479e98183a1df97ec2db796f21bae660d835afca3cb6068
+41产物引用/55证据文件和Post运行manifest15文件SHA已核对。
+
+实际失败：TypeError: dict() got multiple values for keyword argument 'branch'。静态定位在 run_branch(...).emit('branch_start', branch=branch, ...) 与 Engine.emit 内 dict(..., branch=self.branch, **data) 同名键。发生在事件落盘及engine.reset之前。此前controller fake的emit不同，漏掉真实事件记录器合并路径；本次只读取冻结源码定位，未运行复现/修复/探针。运行栈未保存，不伪造；原始failure、stdout/stderr均保留。
+
+实际完成了9模型初始化(policy1+Q4+D2+G0 2)和1次language embedding；strict policy loader813 tensors、缺项/多项0；Torch原类型torch._C._CUuuid一次str且目标匹配。不是全计算0。VLA/flow/D或G0前向/Q前向/动作梯度/环境实例/reset/物理/控制/RGB均0。真实G0触发、强制标记、P/V数值/约束及最终参数版本核验均未进入，字段null，不当方法失败标签。
+
+逐支coverage在BRANCH_COVERAGE：Post已启动但未到合法cut，C10实际0、tail discard/H20恢复未进入；Velocity未启动。父1对/Post numeric28对/init0对/graphics71对均returned，独立entered/returned重算与LAUNCH_RESULT一致且111caps内。NVML身份2与guard轮询范围分开；成功poll原始序列/次数仍null。
+
+同一预约进程组305957已完全退出，cleanup无signals、无外部进程终止；00:13:01全部8holder manager306666–306673恢复，00:13:07.946 occupancy_resolved，daemon27508未重启。被动保留了当前window全部8yield及恢复管理日志，时间只作manager日志时间。无安装/训练/重试/删除，B未参与，旧八release和冻结CPU包均未修改。

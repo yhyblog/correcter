@@ -1,0 +1,927 @@
+{
+  "checked_at_utc": "2026-09-19T14:53:52.405404+00:00",
+  "data": {
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/status.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/status.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/status.json",
+        "expected_sha256": null,
+        "verified_sha256": "5d8e68d619167a175e0ea9d83ea31183a2b6425b1d6e38ab64da662cbced585a",
+        "kind": "file",
+        "bytes": 3760,
+        "mtime_ns": 1789391250169644000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "schema_version": 1,
+        "machine": "A",
+        "hostname": "trial-303079830-trialrun-303079830-worker-0",
+        "updated_at_utc": "2026-09-14T13:07:30.159828+00:00",
+        "responsibility": "LIBERO official pi05 reference evaluation, pi05 SFT, final evaluation",
+        "phase": "complete",
+        "compute_started": true,
+        "formal_training_started": true,
+        "gpu_count": 8,
+        "gpu_model": "NVIDIA H100 80GB HBM3",
+        "planned_reference_run_id": "libero-pi05-official-ma-20260912-v2",
+        "planned_training_run_id": "libero-pi05-s42-ma-20260912-v1",
+        "assignment": "docs/vla-baselines-20260912-two-machines/ASSIGNMENT.md",
+        "peer_status": "Machine B confirmed: trial-303079988-trialrun-303079988-worker-0",
+        "compute_running": false,
+        "active_run_id": "libero-pi05-s42-ma-20260914-recovery-v1",
+        "supervisor_pid": null,
+        "log_directory": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/libero-pi05-s42-ma-20260912-v1-final",
+        "completed_suites": {
+          "_length": 1,
+          "_sample": [
+            "libero_object"
+          ]
+        },
+        "failed_suites": {
+          "_length": 0,
+          "_sample": []
+        },
+        "next_action": "Machine A complete; idle GPUs remain held",
+        "previous_runs": {
+          "_length": 2,
+          "_sample": [
+            {
+              "_keys": [
+                "active_run_id",
+                "phase",
+                "log_directory",
+                "summary"
+              ],
+              "_length": 4
+            },
+            {
+              "_keys": [
+                "active_run_id",
+                "phase",
+                "log_directory",
+                "summary"
+              ],
+              "_length": 4
+            }
+          ]
+        },
+        "pipeline_pid": null,
+        "pipeline_status": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/status.json",
+        "last_training_metrics": {
+          "optimizer_step": 30000,
+          "grad_norm": 0.03781053423881531,
+          "loss": 0.005604243837296963,
+          "param_norm": 1833.5555419921875
+        },
+        "gpu_queue_tail_holders": {
+          "4": {
+            "_keys": [
+              "pid",
+              "alive",
+              "driver_pids"
+            ],
+            "_length": 3
+          },
+          "5": {
+            "_keys": [
+              "pid",
+              "alive",
+              "driver_pids"
+            ],
+            "_length": 3
+          },
+          "6": {
+            "_keys": [
+              "pid",
+              "alive",
+              "driver_pids"
+            ],
+            "_length": 3
+          },
+          "7": {
+            "_keys": [
+              "pid",
+              "alive",
+              "driver_pids"
+            ],
+            "_length": 3
+          },
+          "1": {
+            "_keys": [
+              "pid",
+              "alive",
+              "driver_pids"
+            ],
+            "_length": 3
+          }
+        },
+        "gpu_queue_tail_issue": null,
+        "final_evaluation_episodes": {
+          "libero_spatial": 500,
+          "libero_object": 500,
+          "libero_goal": 500,
+          "libero_10": 500
+        },
+        "completed_stages": {
+          "_length": 4,
+          "_sample": [
+            "reference_evaluation",
+            "training_30000",
+            "final_evaluation"
+          ]
+        },
+        "recovery_directory": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914",
+        "local_recovery_directory": "/tmp/vla-machine-a-recovery-20260914",
+        "previous_final_run": "libero-pi05-s42-ma-20260912-v1-final",
+        "summary": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/results/results.json"
+      }
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/queue-status.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/queue-status.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/queue-status.json",
+        "expected_sha256": null,
+        "verified_sha256": "cbe3485938ce0c0b7acf564570db8141e7c543a5d47f13311af55e33e74cb8e3",
+        "kind": "file",
+        "bytes": 1532,
+        "mtime_ns": 1789391250165504000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "run_id": "libero-pi05-s42-ma-20260914-recovery-v1",
+        "hostname": "trial-303079830-trialrun-303079830-worker-0",
+        "pid": 601275,
+        "status": "complete",
+        "phase": "complete",
+        "created_at_utc": "2026-09-14T06:33:10.647131+00:00",
+        "updated_at_utc": "2026-09-14T13:07:30.159828+00:00",
+        "completed_stages": {
+          "_length": 4,
+          "_sample": [
+            "reference_evaluation",
+            "training_30000",
+            "final_evaluation"
+          ]
+        },
+        "local_directory": "/tmp/vla-machine-a-recovery-20260914",
+        "shared_directory": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914",
+        "reused_suites": {
+          "_length": 1,
+          "_sample": [
+            "libero_object"
+          ]
+        },
+        "rerun_suites": {
+          "_length": 3,
+          "_sample": [
+            "libero_spatial",
+            "libero_goal",
+            "libero_10"
+          ]
+        },
+        "occupancy_queue_tail_required": true,
+        "compute_running": false,
+        "child_pid": null,
+        "child_command": {
+          "_length": 9,
+          "_sample": [
+            "bash",
+            "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_lifecycle.sh",
+            "run"
+          ]
+        },
+        "episodes": {
+          "libero_spatial": 500,
+          "libero_object": 500,
+          "libero_goal": 500,
+          "libero_10": 500
+        },
+        "final_successes": 1933,
+        "occupancy_tail": "guard running; pid=60125",
+        "finished_at_utc": "2026-09-14T13:07:30.159840+00:00",
+        "result_directory": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/results"
+      }
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-b/status.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-b/status.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-b/status.json",
+        "expected_sha256": null,
+        "verified_sha256": "5a526392260adfc36ea605da5484b7366e7d9fd0559991ff16050c4e13cc8b57",
+        "kind": "file",
+        "bytes": 3787,
+        "mtime_ns": 1789279870339231000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "machine": "B",
+        "hostname": "trial-303079988-trialrun-303079988-worker-0",
+        "updated_at_utc": "2026-09-13T06:11:10.337724+00:00",
+        "phase": "queue_failed",
+        "responsibility": "MT50 pi05 reference; SmolVLA training/evaluation; X-VLA training/evaluation",
+        "gpu_count": 8,
+        "gpu_model": "NVIDIA H100 80GB HBM3",
+        "local_tmp_free_gib": 3014.9759101867676,
+        "shared_workspace": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace",
+        "shared_mount": "BF-bytefuse-arnold-recommend",
+        "peer_hostname": "trial-303079830-trialrun-303079830-worker-0",
+        "preflight": {
+          "passed": 50,
+          "failed": 0,
+          "verification": "all sizes and small-file SHA256; historical GPU tests not rerun"
+        },
+        "active_run_id": "mt50-smolvla-s42-mb-20260912-v1",
+        "pid": 94792,
+        "log": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-b/mt50-smolvla-s42-mb-20260912-v1.log",
+        "result_directory": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1",
+        "next_action": "Check all eight GPUs are free, then start SmolVLA 100k training with frozen seed=42 initialization",
+        "formal_training_started": true,
+        "supervisor_pid": 48743,
+        "command": {
+          "_length": 12,
+          "_sample": [
+            "bash",
+            "launchers/runtime.sh",
+            "mw-pi05-legacy"
+          ]
+        },
+        "compute_running": false,
+        "gpu_indices": {
+          "_length": 8,
+          "_sample": [
+            0,
+            1,
+            2
+          ]
+        },
+        "queue_status": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-b/queue-status.json",
+        "queue_supervisor_pid": 48743,
+        "exit_code": 0,
+        "validated_episodes": 2500,
+        "results": {
+          "per_task": {
+            "_keys": [
+              "assembly-v3",
+              "basketball-v3",
+              "bin-picking-v3",
+              "box-close-v3",
+              "button-press-topdown-v3",
+              "button-press-topdown-wall-v3",
+              "button-press-v3",
+              "button-press-wall-v3",
+              "coffee-button-v3",
+              "coffee-pull-v3",
+              "coffee-push-v3",
+              "dial-turn-v3",
+              "disassemble-v3",
+              "door-close-v3",
+              "door-lock-v3",
+              "door-open-v3",
+              "door-unlock-v3",
+              "drawer-close-v3",
+              "drawer-open-v3",
+              "faucet-close-v3",
+              "faucet-open-v3",
+              "hammer-v3",
+              "hand-insert-v3",
+              "handle-press-side-v3",
+              "handle-press-v3",
+              "handle-pull-side-v3",
+              "handle-pull-v3",
+              "lever-pull-v3",
+              "peg-insert-side-v3",
+              "peg-unplug-side-v3",
+              "pick-out-of-hole-v3",
+              "pick-place-v3",
+              "pick-place-wall-v3",
+              "plate-slide-back-side-v3",
+              "plate-slide-back-v3"
+            ],
+            "_length": 50
+          },
+          "per_difficulty": {
+            "_keys": [
+              "easy",
+              "medium",
+              "hard",
+              "very_hard"
+            ],
+            "_length": 4
+          },
+          "task_macro": 0.7723999999999998,
+          "difficulty_macro": 0.7119989177489177
+        },
+        "error": "Queue interrupted by signal 15"
+      }
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-b/queue-status.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-b/queue-status.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-b/queue-status.json",
+        "expected_sha256": null,
+        "verified_sha256": "620d15e2c90fa4071415f98d7774e4326ddc471fec8f9e83073c2f726dc0e8f2",
+        "kind": "file",
+        "bytes": 3083,
+        "mtime_ns": 1789279870333663000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "machine": "B",
+        "hostname": "trial-303079988-trialrun-303079988-worker-0",
+        "completed": {
+          "_length": 1,
+          "_sample": [
+            {
+              "_keys": [
+                "id",
+                "result"
+              ],
+              "_length": 2
+            }
+          ]
+        },
+        "formal_training_started": true,
+        "phase": "failed",
+        "queue_supervisor_pid": 48743,
+        "plan": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-b/queue.json",
+        "updated_at_utc": "2026-09-13T06:11:10.331002+00:00",
+        "active_run_id": "mt50-smolvla-s42-mb-20260912-v1",
+        "pid": 94792,
+        "last_check": "Existing reference continues unchanged",
+        "compute_running": false,
+        "log": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-b/mt50-smolvla-s42-mb-20260912-v1.log",
+        "result_directory": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1",
+        "gpu_indices": {
+          "_length": 8,
+          "_sample": [
+            0,
+            1,
+            2
+          ]
+        },
+        "error": "Queue interrupted by signal 15"
+      }
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/evaluations/libero/libero-pi05-s42-ma-20260914-recovery-v1/summary.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/evaluations/libero/libero-pi05-s42-ma-20260914-recovery-v1/summary.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/evaluations/libero/libero-pi05-s42-ma-20260914-recovery-v1/summary.json",
+        "expected_sha256": null,
+        "verified_sha256": "40bd30c1aa554619caba16777fe112cbb75f45870f19fd03eec19b126348a70d",
+        "kind": "file",
+        "bytes": 2934,
+        "mtime_ns": 1789391249983649000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "status": "complete",
+        "run_id": "libero-pi05-s42-ma-20260914-recovery-v1",
+        "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/libero/pi05/pi05_libero/libero-pi05-s42-ma-20260912-v1/29999",
+        "episodes": 2000,
+        "successes": 1933,
+        "success_rate": 0.9665,
+        "suites": {
+          "libero_spatial": {
+            "_keys": [
+              "episodes",
+              "successes",
+              "success_rate",
+              "episodes_sha256",
+              "local_output",
+              "output",
+              "source_run_id",
+              "reused_complete_suite"
+            ],
+            "_length": 8
+          },
+          "libero_object": {
+            "_keys": [
+              "episodes",
+              "successes",
+              "success_rate",
+              "episodes_sha256",
+              "local_output",
+              "output",
+              "source_run_id",
+              "reused_complete_suite"
+            ],
+            "_length": 8
+          },
+          "libero_goal": {
+            "_keys": [
+              "episodes",
+              "successes",
+              "success_rate",
+              "episodes_sha256",
+              "local_output",
+              "output",
+              "source_run_id",
+              "reused_complete_suite"
+            ],
+            "_length": 8
+          },
+          "libero_10": {
+            "_keys": [
+              "episodes",
+              "successes",
+              "success_rate",
+              "episodes_sha256",
+              "local_output",
+              "output",
+              "source_run_id",
+              "reused_complete_suite"
+            ],
+            "_length": 8
+          }
+        },
+        "independent_full_suite_rng_seed": 0
+      }
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/command-plan.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/command-plan.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/command-plan.json",
+        "expected_sha256": null,
+        "verified_sha256": "fed36542aaf115b0d5bcd6f12050d7cf8e90209f08e2938f5fec151a60d4b83f",
+        "kind": "file",
+        "bytes": 6115,
+        "mtime_ns": 1789367576740528000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "run_id": "libero-pi05-s42-ma-20260914-recovery-v1",
+        "reuse_complete_suite": "libero_object",
+        "reruns": {
+          "_length": 3,
+          "_sample": [
+            {
+              "_keys": [
+                "suite",
+                "gpu",
+                "commands"
+              ],
+              "_length": 3
+            },
+            {
+              "_keys": [
+                "suite",
+                "gpu",
+                "commands"
+              ],
+              "_length": 3
+            },
+            {
+              "_keys": [
+                "suite",
+                "gpu",
+                "commands"
+              ],
+              "_length": 3
+            }
+          ]
+        },
+        "queue_tail": {
+          "_length": 3,
+          "_sample": [
+            "bash",
+            "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_lifecycle.sh",
+            "start"
+          ]
+        },
+        "training_repeated": false
+      }
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/launch-verification.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/launch-verification.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/launch-verification.json",
+        "expected_sha256": null,
+        "verified_sha256": "5d49600b8f2eff68ae3bae667dcb06eadbd54c22fdb50d26852a4711b4cdacd1",
+        "kind": "file",
+        "bytes": 2579,
+        "mtime_ns": 1789367953385874000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "verified_at_utc": "2026-09-14T06:38:20.003126+00:00",
+        "run_id": "libero-pi05-s42-ma-20260914-recovery-v1",
+        "supervisor_pid": 601275,
+        "runtime": "three independent complete-suite evaluations running",
+        "suites": {
+          "_length": 3,
+          "_sample": [
+            {
+              "_keys": [
+                "suite",
+                "episodes_recorded",
+                "first_initial_state_matches_original",
+                "server_and_protocol_match_original",
+                "first_actions_hash_matches_original"
+              ],
+              "_length": 5
+            },
+            {
+              "_keys": [
+                "suite",
+                "episodes_recorded",
+                "first_initial_state_matches_original",
+                "server_and_protocol_match_original",
+                "first_actions_hash_matches_original"
+              ],
+              "_length": 5
+            },
+            {
+              "_keys": [
+                "suite",
+                "episodes_recorded",
+                "first_initial_state_matches_original",
+                "server_and_protocol_match_original",
+                "first_actions_hash_matches_original"
+              ],
+              "_length": 5
+            }
+          ]
+        },
+        "idle_gpu_holders": {
+          "3": {
+            "_keys": [
+              "pid",
+              "alive",
+              "driver_pids"
+            ],
+            "_length": 3
+          },
+          "4": {
+            "_keys": [
+              "pid",
+              "alive",
+              "driver_pids"
+            ],
+            "_length": 3
+          },
+          "5": {
+            "_keys": [
+              "pid",
+              "alive",
+              "driver_pids"
+            ],
+            "_length": 3
+          },
+          "6": {
+            "_keys": [
+              "pid",
+              "alive",
+              "driver_pids"
+            ],
+            "_length": 3
+          },
+          "7": {
+            "_keys": [
+              "pid",
+              "alive",
+              "driver_pids"
+            ],
+            "_length": 3
+          }
+        },
+        "cleanup_GiB": 145.26139955688268,
+        "first_episode_comparison": {
+          "_length": 3,
+          "_sample": [
+            {
+              "_keys": [
+                "suite",
+                "original_first",
+                "recovery_first"
+              ],
+              "_length": 3
+            },
+            {
+              "_keys": [
+                "suite",
+                "original_first",
+                "recovery_first"
+              ],
+              "_length": 3
+            },
+            {
+              "_keys": [
+                "suite",
+                "original_first",
+                "recovery_first"
+              ],
+              "_length": 3
+            }
+          ]
+        },
+        "verification_scope": "Same frozen protocol, checkpoint, initial state and RNG seed metadata. Whole action-trajectory bytes are not identical to the interrupted run; no partial trajectories are spliced. No bitwise reproducibility claim."
+      }
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/provenance.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/provenance.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/provenance.json",
+        "expected_sha256": null,
+        "verified_sha256": "5fe316a3af5eb106b68a2a56536f0c8ff2d81e407fcba883d0df2f1f84bbca83",
+        "kind": "file",
+        "bytes": 2728,
+        "mtime_ns": 1789367591101468000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "run_id": "libero-pi05-s42-ma-20260914-recovery-v1",
+        "hostname": "trial-303079830-trialrun-303079830-worker-0",
+        "created_at_utc": "2026-09-14T06:33:11.097591+00:00",
+        "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/libero/pi05/pi05_libero/libero-pi05-s42-ma-20260912-v1/29999",
+        "training_repeated": false,
+        "reuse": {
+          "libero_object": {
+            "_keys": [
+              "source_run_id",
+              "output",
+              "episodes",
+              "successes",
+              "success_rate",
+              "episodes_sha256"
+            ],
+            "_length": 6
+          }
+        },
+        "rerun_full_suites_from_task0_state0_rng0": {
+          "_length": 3,
+          "_sample": [
+            "libero_spatial",
+            "libero_goal",
+            "libero_10"
+          ]
+        },
+        "reason": "Old final evaluation interrupted by shared-storage quota",
+        "writable_output": "/tmp/vla-machine-a-recovery-20260914/workspace/artifacts/vla-baselines/evaluations/libero/libero-pi05-s42-ma-20260914-recovery-v1",
+        "publication_target": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/evaluations/libero/libero-pi05-s42-ma-20260914-recovery-v1",
+        "cleanup_report": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/cleanup-20260914/CLEANUP.md",
+        "source_sha256": {
+          "/tmp/vla-machine-a-recovery-20260914/scripts/recover_evaluation.py": "b184e2e18e1ef2b0e6db9b3c1669b049590e80ff02f3c236bad261f9e236c7a7",
+          "/tmp/vla-machine-a-recovery-20260914/scripts/runtime_entry.py": "81f15c35b954d0407912fa65cb234cfd1aaaa5035fef65b9fbc4793dfdef9c8a",
+          "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/run_libero_evaluation.py": "0b95a76ba6fa8264d4342fd43ebc628da35753e5421ab2a16270e3beddab4589",
+          "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/runtime.sh": "2ca08189a15fcfd567efe7c47ea196064bf7512a0abd5bf6818493b0521e2e16",
+          "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/eval_libero.py": "755b4cdb06b66db1b6e24898fb49db736b8a4d9d1f752f2c775578c31602a210",
+          "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/serve_pi05.py": "d0faa47e3887a27d6ccb3ed70263f6f5ab9780bb0fcd6424a20150b57aff7e1b",
+          "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/protocols/evaluation.json": "f2d3935a0c254f35b67b383e701bffbdf8f3bde7f91e3ccc07c312e740dd2ad2"
+        }
+      }
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/publication.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/publication.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/publication.json",
+        "expected_sha256": null,
+        "verified_sha256": "1d9eac2caa6ae70db753fd5d9b1d1ba2b61191d765c8e3e0e14725ef9f42ced9",
+        "kind": "file",
+        "bytes": 6176,
+        "mtime_ns": 1789391250132715000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "status": "complete_hash_verified",
+        "published_at_utc": "2026-09-14T13:07:30.130932+00:00",
+        "evaluation": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/evaluations/libero/libero-pi05-s42-ma-20260914-recovery-v1",
+          "files": {
+            "_length": 10,
+            "_sample": [
+              {
+                "_keys": [
+                  "path",
+                  "bytes",
+                  "sha256"
+                ],
+                "_length": 3
+              },
+              {
+                "_keys": [
+                  "path",
+                  "bytes",
+                  "sha256"
+                ],
+                "_length": 3
+              },
+              {
+                "_keys": [
+                  "path",
+                  "bytes",
+                  "sha256"
+                ],
+                "_length": 3
+              }
+            ]
+          }
+        },
+        "results": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/results",
+          "files": {
+            "_length": 7,
+            "_sample": [
+              {
+                "_keys": [
+                  "path",
+                  "bytes",
+                  "sha256"
+                ],
+                "_length": 3
+              },
+              {
+                "_keys": [
+                  "path",
+                  "bytes",
+                  "sha256"
+                ],
+                "_length": 3
+              },
+              {
+                "_keys": [
+                  "path",
+                  "bytes",
+                  "sha256"
+                ],
+                "_length": 3
+              }
+            ]
+          }
+        },
+        "logs": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/evaluation-logs",
+          "files": {
+            "_length": 16,
+            "_sample": [
+              {
+                "_keys": [
+                  "path",
+                  "bytes",
+                  "sha256"
+                ],
+                "_length": 3
+              },
+              {
+                "_keys": [
+                  "path",
+                  "bytes",
+                  "sha256"
+                ],
+                "_length": 3
+              },
+              {
+                "_keys": [
+                  "path",
+                  "bytes",
+                  "sha256"
+                ],
+                "_length": 3
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/status.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/status.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/status.json",
+        "expected_sha256": null,
+        "verified_sha256": "cbe3485938ce0c0b7acf564570db8141e7c543a5d47f13311af55e33e74cb8e3",
+        "kind": "file",
+        "bytes": 1532,
+        "mtime_ns": 1789391250162062000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "run_id": "libero-pi05-s42-ma-20260914-recovery-v1",
+        "hostname": "trial-303079830-trialrun-303079830-worker-0",
+        "pid": 601275,
+        "status": "complete",
+        "phase": "complete",
+        "created_at_utc": "2026-09-14T06:33:10.647131+00:00",
+        "updated_at_utc": "2026-09-14T13:07:30.159828+00:00",
+        "completed_stages": {
+          "_length": 4,
+          "_sample": [
+            "reference_evaluation",
+            "training_30000",
+            "final_evaluation"
+          ]
+        },
+        "local_directory": "/tmp/vla-machine-a-recovery-20260914",
+        "shared_directory": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914",
+        "reused_suites": {
+          "_length": 1,
+          "_sample": [
+            "libero_object"
+          ]
+        },
+        "rerun_suites": {
+          "_length": 3,
+          "_sample": [
+            "libero_spatial",
+            "libero_goal",
+            "libero_10"
+          ]
+        },
+        "occupancy_queue_tail_required": true,
+        "compute_running": false,
+        "child_pid": null,
+        "child_command": {
+          "_length": 9,
+          "_sample": [
+            "bash",
+            "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_lifecycle.sh",
+            "run"
+          ]
+        },
+        "episodes": {
+          "libero_spatial": 500,
+          "libero_object": 500,
+          "libero_goal": 500,
+          "libero_10": 500
+        },
+        "final_successes": 1933,
+        "occupancy_tail": "guard running; pid=60125",
+        "finished_at_utc": "2026-09-14T13:07:30.159840+00:00",
+        "result_directory": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/results"
+      }
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/validation.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/validation.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/coordination/20260912/machine-a/recovery-20260914/validation.json",
+        "expected_sha256": null,
+        "verified_sha256": "159f0c70773667ee7835e1fafb4fddd0dc3202977a3ab110087c13a4828ebacc",
+        "kind": "file",
+        "bytes": 1540,
+        "mtime_ns": 1789367576742880000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "utc": "2026-09-14T06:32:56.741391+00:00",
+        "cpu_tests_passed": 7,
+        "cases": {
+          "_length": 9,
+          "_sample": [
+            "whole-suite hash preserving reuse",
+            "incomplete suite rejected",
+            "duplicate row rejected"
+          ]
+        },
+        "scripts": {
+          "_length": 3,
+          "_sample": [
+            {
+              "_keys": [
+                "local",
+                "shared",
+                "sha256"
+              ],
+              "_length": 3
+            },
+            {
+              "_keys": [
+                "local",
+                "shared",
+                "sha256"
+              ],
+              "_length": 3
+            },
+            {
+              "_keys": [
+                "local",
+                "shared",
+                "sha256"
+              ],
+              "_length": 3
+            }
+          ]
+        }
+      }
+    }
+  }
+}

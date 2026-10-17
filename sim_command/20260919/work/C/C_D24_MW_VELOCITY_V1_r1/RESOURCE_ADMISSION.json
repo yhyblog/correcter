@@ -1,0 +1,36 @@
+{
+  "at_utc": "2026-09-22T05:58:34.746466+00:00",
+  "hostname": "trial-303269581-trialrun-303269581-worker-0",
+  "boot_id": "215be39c-da79-4f3e-ae0e-c08d40fad8f1",
+  "GPU_UUIDs": [
+    "GPU-7f71438a-f878-bc66-8a4e-569afc9e059e",
+    "GPU-660cc922-7249-e74d-ef3f-2375a073a009",
+    "GPU-7a6af46c-023f-10a9-3320-5f77d6931ceb",
+    "GPU-f8683145-0833-8aa1-5ded-e026f9ad9adb",
+    "GPU-c3f3580b-5658-e4bb-b7cf-006b40028a97",
+    "GPU-57220e5f-dc72-b04c-39bb-9857d5d720cd",
+    "GPU-6e06f449-5763-6e68-28a2-bb311c033bcd",
+    "GPU-ff17fd89-47b4-887c-f53a-ccdde554cb80"
+  ],
+  "GPU_model": "NVIDIA H100 80GB HBM3",
+  "planned_workers": 8,
+  "workers_per_base": 4,
+  "model_servers": 8,
+  "base_clients": 8,
+  "RAM": {
+    "returncode": 0,
+    "stdout": "               total        used        free      shared  buff/cache   available\nMem:     2163279470592 326907629568 2022417657856   514109440 63521857536 1836371841024\nSwap:              0           0           0\n",
+    "stderr": ""
+  },
+  "disk": {
+    "returncode": 0,
+    "stdout": "Filesystem                           1B-blocks          Used         Available Use% Mounted on\nBF-bytefuse-arnold-recommend 11258999068426240 3985613889536 11255013454536704   1% /mnt/bn/arnold-recommend\n/dev/nvme0n1p1                   3779301580800  217646260224     3369600815104   7% /tmp\n",
+    "stderr": ""
+  },
+  "cpu_affinity_count": 224,
+  "cgroup_limit_bytes": null,
+  "cgroup_unknown_reason": "controller mount not exposed in current container; no cgroup limit can be independently read",
+  "capacity_basis": "C ordinary8x80GB GPU and1.8TB available RAM; same frozen dual-resident B package; eight-way admission with observed resource supervision, no benchmark",
+  "separate_GPU_preflight": false,
+  "holder_policy": "all off full formal wave; restore after all descendants exit"
+}

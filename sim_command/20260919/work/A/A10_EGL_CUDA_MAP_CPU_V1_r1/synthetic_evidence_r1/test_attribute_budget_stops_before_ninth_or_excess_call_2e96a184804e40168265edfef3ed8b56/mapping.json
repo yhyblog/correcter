@@ -1,0 +1,290 @@
+{
+  "method": "EGL_CUDA_DEVICE_NV handle -> cuDeviceGetPCIBusId -> kernel PCI/UUID -> frozen NVML target",
+  "devices": [
+    {
+      "egl_index": 0,
+      "egl_handle": 83,
+      "extensions_raw": {
+        "kind": "bytes",
+        "bytes_hex": "45474c5f4e565f6465766963655f637564612045474c5f4558545f6465766963655f71756572795f6e616d65",
+        "utf8_with_replacement": "EGL_NV_device_cuda EGL_EXT_device_query_name"
+      },
+      "attribute": {
+        "return_code": 1,
+        "value": 5
+      },
+      "cuda_pci": {
+        "return_code": 0,
+        "buffer": {
+          "kind": "bytes",
+          "bytes_hex": "303030303a30663a30302e300000000000000000000000000000000000000000",
+          "utf8_with_replacement": "0000:0f:00.0\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+        }
+      },
+      "mapping": {
+        "pci_bus_id": "0000:0f:00.0",
+        "gpu_uuid": "GPU-fixture-0"
+      },
+      "decision": "non_target_no_context",
+      "extensions": [
+        "EGL_NV_device_cuda",
+        "EGL_EXT_device_query_name"
+      ],
+      "normalized_pci": "0000:0f:00.0",
+      "kernel_identity": {
+        "pci_bus_id": "0000:0f:00.0",
+        "gpu_uuid": "GPU-fixture-0"
+      }
+    },
+    {
+      "egl_index": 1,
+      "egl_handle": 21,
+      "extensions_raw": {
+        "kind": "bytes",
+        "bytes_hex": "45474c5f4e565f6465766963655f637564612045474c5f4558545f6465766963655f71756572795f6e616d65",
+        "utf8_with_replacement": "EGL_NV_device_cuda EGL_EXT_device_query_name"
+      },
+      "attribute": {
+        "return_code": 1,
+        "value": 7
+      },
+      "cuda_pci": {
+        "return_code": 0,
+        "buffer": {
+          "kind": "bytes",
+          "bytes_hex": "303030303a32643a30302e300000000000000000000000000000000000000000",
+          "utf8_with_replacement": "0000:2d:00.0\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+        }
+      },
+      "mapping": {
+        "pci_bus_id": "0000:2d:00.0",
+        "gpu_uuid": "GPU-fixture-1"
+      },
+      "decision": "non_target_no_context",
+      "extensions": [
+        "EGL_NV_device_cuda",
+        "EGL_EXT_device_query_name"
+      ],
+      "normalized_pci": "0000:2d:00.0",
+      "kernel_identity": {
+        "pci_bus_id": "0000:2d:00.0",
+        "gpu_uuid": "GPU-fixture-1"
+      }
+    },
+    {
+      "egl_index": 2,
+      "egl_handle": 48,
+      "extensions_raw": {
+        "kind": "bytes",
+        "bytes_hex": "45474c5f4e565f6465766963655f637564612045474c5f4558545f6465766963655f71756572795f6e616d65",
+        "utf8_with_replacement": "EGL_NV_device_cuda EGL_EXT_device_query_name"
+      },
+      "attribute": {
+        "return_code": 1,
+        "value": 0
+      },
+      "cuda_pci": {
+        "return_code": 0,
+        "buffer": {
+          "kind": "bytes",
+          "bytes_hex": "303030303a34343a30302e300000000000000000000000000000000000000000",
+          "utf8_with_replacement": "0000:44:00.0\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+        }
+      },
+      "mapping": {
+        "pci_bus_id": "0000:44:00.0",
+        "gpu_uuid": "GPU-fixture-2"
+      },
+      "decision": "target",
+      "extensions": [
+        "EGL_NV_device_cuda",
+        "EGL_EXT_device_query_name"
+      ],
+      "normalized_pci": "0000:44:00.0",
+      "kernel_identity": {
+        "pci_bus_id": "0000:44:00.0",
+        "gpu_uuid": "GPU-fixture-2"
+      }
+    },
+    {
+      "egl_index": 3,
+      "egl_handle": 72,
+      "extensions_raw": {
+        "kind": "bytes",
+        "bytes_hex": "45474c5f4e565f6465766963655f637564612045474c5f4558545f6465766963655f71756572795f6e616d65",
+        "utf8_with_replacement": "EGL_NV_device_cuda EGL_EXT_device_query_name"
+      },
+      "attribute": {
+        "return_code": 1,
+        "value": 4
+      },
+      "cuda_pci": {
+        "return_code": 0,
+        "buffer": {
+          "kind": "bytes",
+          "bytes_hex": "303030303a35623a30302e300000000000000000000000000000000000000000",
+          "utf8_with_replacement": "0000:5b:00.0\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+        }
+      },
+      "mapping": {
+        "pci_bus_id": "0000:5b:00.0",
+        "gpu_uuid": "GPU-fixture-3"
+      },
+      "decision": "non_target_no_context",
+      "extensions": [
+        "EGL_NV_device_cuda",
+        "EGL_EXT_device_query_name"
+      ],
+      "normalized_pci": "0000:5b:00.0",
+      "kernel_identity": {
+        "pci_bus_id": "0000:5b:00.0",
+        "gpu_uuid": "GPU-fixture-3"
+      }
+    },
+    {
+      "egl_index": 4,
+      "egl_handle": 64,
+      "extensions_raw": {
+        "kind": "bytes",
+        "bytes_hex": "45474c5f4e565f6465766963655f637564612045474c5f4558545f6465766963655f71756572795f6e616d65",
+        "utf8_with_replacement": "EGL_NV_device_cuda EGL_EXT_device_query_name"
+      },
+      "attribute": {
+        "return_code": 1,
+        "value": 2
+      },
+      "cuda_pci": {
+        "return_code": 0,
+        "buffer": {
+          "kind": "bytes",
+          "bytes_hex": "303030303a38393a30302e300000000000000000000000000000000000000000",
+          "utf8_with_replacement": "0000:89:00.0\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+        }
+      },
+      "mapping": {
+        "pci_bus_id": "0000:89:00.0",
+        "gpu_uuid": "GPU-fixture-4"
+      },
+      "decision": "non_target_no_context",
+      "extensions": [
+        "EGL_NV_device_cuda",
+        "EGL_EXT_device_query_name"
+      ],
+      "normalized_pci": "0000:89:00.0",
+      "kernel_identity": {
+        "pci_bus_id": "0000:89:00.0",
+        "gpu_uuid": "GPU-fixture-4"
+      }
+    },
+    {
+      "egl_index": 5,
+      "egl_handle": 91,
+      "extensions_raw": {
+        "kind": "bytes",
+        "bytes_hex": "45474c5f4e565f6465766963655f637564612045474c5f4558545f6465766963655f71756572795f6e616d65",
+        "utf8_with_replacement": "EGL_NV_device_cuda EGL_EXT_device_query_name"
+      },
+      "attribute": {
+        "return_code": 1,
+        "value": 6
+      },
+      "cuda_pci": {
+        "return_code": 0,
+        "buffer": {
+          "kind": "bytes",
+          "bytes_hex": "303030303a61383a30302e300000000000000000000000000000000000000000",
+          "utf8_with_replacement": "0000:a8:00.0\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+        }
+      },
+      "mapping": {
+        "pci_bus_id": "0000:a8:00.0",
+        "gpu_uuid": "GPU-fixture-5"
+      },
+      "decision": "non_target_no_context",
+      "extensions": [
+        "EGL_NV_device_cuda",
+        "EGL_EXT_device_query_name"
+      ],
+      "normalized_pci": "0000:a8:00.0",
+      "kernel_identity": {
+        "pci_bus_id": "0000:a8:00.0",
+        "gpu_uuid": "GPU-fixture-5"
+      }
+    },
+    {
+      "egl_index": 6,
+      "egl_handle": 36,
+      "extensions_raw": {
+        "kind": "bytes",
+        "bytes_hex": "45474c5f4e565f6465766963655f637564612045474c5f4558545f6465766963655f71756572795f6e616d65",
+        "utf8_with_replacement": "EGL_NV_device_cuda EGL_EXT_device_query_name"
+      },
+      "attribute": {
+        "return_code": 1,
+        "value": 3
+      },
+      "cuda_pci": {
+        "return_code": 0,
+        "buffer": {
+          "kind": "bytes",
+          "bytes_hex": "303030303a63303a30302e300000000000000000000000000000000000000000",
+          "utf8_with_replacement": "0000:c0:00.0\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+        }
+      },
+      "mapping": {
+        "pci_bus_id": "0000:c0:00.0",
+        "gpu_uuid": "GPU-fixture-6"
+      },
+      "decision": "non_target_no_context",
+      "extensions": [
+        "EGL_NV_device_cuda",
+        "EGL_EXT_device_query_name"
+      ],
+      "normalized_pci": "0000:c0:00.0",
+      "kernel_identity": {
+        "pci_bus_id": "0000:c0:00.0",
+        "gpu_uuid": "GPU-fixture-6"
+      }
+    },
+    {
+      "egl_index": 7,
+      "egl_handle": 55,
+      "extensions_raw": {
+        "kind": "bytes",
+        "bytes_hex": "45474c5f4e565f6465766963655f637564612045474c5f4558545f6465766963655f71756572795f6e616d65",
+        "utf8_with_replacement": "EGL_NV_device_cuda EGL_EXT_device_query_name"
+      },
+      "attribute": null,
+      "cuda_pci": null,
+      "mapping": null,
+      "decision": "refused",
+      "extensions": [
+        "EGL_NV_device_cuda",
+        "EGL_EXT_device_query_name"
+      ]
+    }
+  ],
+  "selected_egl_index": null,
+  "ordinal_assumption": false,
+  "stage": "candidate_7_attribute",
+  "cuda_init_return_code": 0,
+  "enumeration": {
+    "return_code": 1,
+    "count": 8,
+    "handles": [
+      83,
+      21,
+      48,
+      72,
+      64,
+      91,
+      36,
+      55
+    ]
+  },
+  "failure": {
+    "error_type": "Refused",
+    "error": "Operation cap exceeded before entry: egl_device_attribute_queries",
+    "stage": "candidate_7_attribute"
+  }
+}

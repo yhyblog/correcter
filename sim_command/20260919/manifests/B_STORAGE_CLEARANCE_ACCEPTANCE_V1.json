@@ -1,0 +1,27 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "accepted_at_utc": "2026-09-20T09:05:29.938522+00:00",
+  "status": "B_scoped_clearance_accepted_no_deletion_release",
+  "receipt": {
+    "path": "receipts/B/STORAGE_DEPENDENCY_REVIEW_V1.json",
+    "sha256": "346a058a607ed6f0b374763e177427b480a2403b3117b29dc2b038ae636af368"
+  },
+  "source_candidates": {
+    "path": "manifests/STORAGE_PAYLOAD_REVIEW_V1.json",
+    "sha256": "fcdc2a7a5505f801ad09d7a55b68420d2a0578a936845b71fee8fb7d61f8519a"
+  },
+  "candidate_file_count": 27,
+  "logical_bytes": 18013109184,
+  "B_processes_observed": 50,
+  "B_open_or_map_matches": 0,
+  "B_permission_gaps": 0,
+  "B_current_planned_dependencies": [],
+  "B_future_commitment": "No opening these27 files; report changed requirement to analysis before opening/recovery.",
+  "analysis_decision": "27 exact large payloads eligible for a later A-only deletion release; small metadata, final Smol050000 and full X base remain keep. No deletion performed or released by this acceptance.",
+  "remaining_execution_conditions": [
+    "A must immediately recheck exact identity/use/writers and any new dependency before deletion",
+    "separate exact-file release only; no directory removal or scope expansion"
+  ],
+  "active_deletion_release": null,
+  "root_deleted_files": 0
+}

@@ -1,0 +1,65 @@
+{
+  "task_id": "B11_COMMON_POOL_VIEWS_CPU_V1",
+  "authorization_sha256": "f0790bbfdbe263be1044ef9ce3773d4ab0b3a63616edf04feda2e86103edf7b5",
+  "files": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/consume.py",
+      "sha256": "30126e6d273a1fd6201a3e73456e7beb4d4c84ef49c74c01b84e0f6e99953702"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/publish.py",
+      "sha256": "752c8cb428ad3d3aac9cc4b0d6a24d49412c632680ae8c7f8e8e2fb10fb28c10"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/test_views.py",
+      "sha256": "68c204978f7affc956b73f7567bcd1a94a44bbafad8558e96d723705ddeca3e8"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/views.py",
+      "sha256": "175263d2d77c9eb5f3a5fa7273af0a674f499637f3b394074a4c581dcb83d3cd"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/CPU_INPUT_LOCK.json",
+      "sha256": "ab654b2c80d11109b1f07f78237596b98e3bf56d97db3777a7dd57a065349320"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_QUEUE_JOIN_V1_r1/cpu_wave.py",
+      "sha256": "834b3df2dadaeed31c9303b4d06186fa0359a8c2e0b1634896b5b1c28532c6ad"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "01_tests",
+      "argv": [
+        "/usr/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_views.py"
+      ]
+    },
+    {
+      "id": "02_consume",
+      "argv": [
+        "/usr/bin/python",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/consume.py",
+        "--out",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/integration_001"
+      ]
+    },
+    {
+      "id": "03_publish",
+      "argv": [
+        "/usr/bin/python",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/publish.py",
+        "--out",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B11_COMMON_POOL_VIEWS_CPU_V1_r1/integration_001",
+        "--wave",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_QUEUE_JOIN_V1_r1/cpu_waves/B11_001"
+      ]
+    }
+  ]
+}

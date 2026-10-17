@@ -1,0 +1,37 @@
+{
+  "observed_at_utc": "2026-09-22T15:40:25.946245+00:00",
+  "scope": "status only; no new science authorization",
+  "remaining_except_E1": [
+    {
+      "node": "A",
+      "experiment": "Random-multi H10/20/30/40/50 R/Post/Velocity",
+      "planned": 7500,
+      "status": "queued_after_current_E1"
+    },
+    {
+      "node": "B",
+      "experiment": "Smol specialized-head once remainder then multi R/Post/Velocity",
+      "multi_planned": 1500,
+      "status": "once_recovery_running_multi_waiting"
+    },
+    {
+      "node": "C",
+      "experiment": "X specialized-head multi R/Post/Velocity",
+      "planned": 1500,
+      "status": "running_once1500_complete"
+    }
+  ],
+  "E6_multi": {
+    "valid": 100,
+    "G0_R_successes": 26,
+    "D5_R_successes": 31,
+    "per_arm": 50,
+    "technical_failures": 0
+  },
+  "E3_E5_CPU": "delivered_pending_analysis_transcription",
+  "E1_current": "old_checkpoint_residual_advantage_fits_multi_evaluation_1200_in_progress",
+  "E1_fresh_full_Q": "not_launched; candidate next after existing priority validations; no default-loss change",
+  "LIBERO_Full": "closed_incomplete_G0_supervision_all_zero_not_a_runnable_remaining_job",
+  "real_world": "user_owned_pending",
+  "new_compute_launched_by_analysis": 0
+}

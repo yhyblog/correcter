@@ -1,0 +1,11 @@
+A_QUEUE_BOOTSTRAP_V1 r2：CPU实现与控制面已交付，科学队列尚未运行。
+
+隔离实现通过定向CPU/fake组合检查；实际8进程两波假任务、同一预约FD跨波、局部失败隔离及父启动进程退出后的存活检查已保存。未重新运行旧模型/环境实验。
+
+封包时分析端发布 deadline CONTROL revision7，明确停止剩余475源采集，转为D24常驻评测；原采集包未发布全局READY、未部署、未claim任何新源。复用代码和测试原样保留。
+
+实际运行的是CPU控制服务：PID 1264688，已归属PID1，两次独立heartbeat时间推进通过；服务没有科学任务启动入口。B的一次接入脚本是 persistent_queue/control_service_v1/START_B_CONTROL_ONLY.sh，由B自己执行；A未部署B。
+
+D24八卡常驻N评测入口与2500个episode配置已准备，9项定向CPU检查通过。启动命令被自动审批拒绝，原因是本会话明确授权尚未包含新D24评测范围；已向用户询问。命令未执行，无正式command/claim/新评测样本。不能把当前CPU_READY、控制服务READY或通知投递称为科学队列已运行。
+
+现有guard的缓存状态记录8卡holder均在运行。训练、删除及剩余475源采集均未启动。独立原会话CPU唤醒测试已排队；运输回执不是handler ACK，窗口关闭后的唤醒仍待真实证据。

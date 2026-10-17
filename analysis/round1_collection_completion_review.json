@@ -1,0 +1,143 @@
+{
+  "status": "passed",
+  "reviewed_at_utc": "2026-09-16T19:46:59.018531+00:00",
+  "scope": "independent collection completion and budget audit; no critic-effect assessment; trajectory payloads and old P0 not rescanned",
+  "registered_primary_slots": 400,
+  "completed_unique_slots": 400,
+  "split_counts": {
+    "train": 300,
+    "development": 100
+  },
+  "task_counts": {
+    "train": {
+      "disassemble-v3": 60,
+      "pick-place-wall-v3": 60,
+      "shelf-place-v3": 60,
+      "stick-pull-v3": 60,
+      "stick-push-v3": 60
+    },
+    "development": {
+      "disassemble-v3": 20,
+      "pick-place-wall-v3": 20,
+      "shelf-place-v3": 20,
+      "stick-pull-v3": 20,
+      "stick-push-v3": 20
+    }
+  },
+  "scene_registry_records": 400,
+  "unique_task_physical_fingerprints": 400,
+  "unique_task_exact_state_hashes": 400,
+  "scene_fingerprint_recomputed_from_fields": true,
+  "initial_scene_state_files_sha_verified": 400,
+  "replacement_or_rejected_scenes": 0,
+  "with_cut": 395,
+  "no_cut_retained": [
+    {
+      "episode_id": "pick-place-wall-v3__2026111616",
+      "task": "pick-place-wall-v3",
+      "split": "development",
+      "reason": "success",
+      "common_outcome": true,
+      "source_terminal_step": 60,
+      "saved_attempts": 57
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111631",
+      "task": "pick-place-wall-v3",
+      "split": "development",
+      "reason": "success",
+      "common_outcome": true,
+      "source_terminal_step": 57,
+      "saved_attempts": 57
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111653",
+      "task": "stick-pull-v3",
+      "split": "development",
+      "reason": "environment_done",
+      "common_outcome": false,
+      "source_terminal_step": 300,
+      "saved_attempts": 57
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111657",
+      "task": "shelf-place-v3",
+      "split": "development",
+      "reason": "success",
+      "common_outcome": true,
+      "source_terminal_step": 57,
+      "saved_attempts": 57
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111671",
+      "task": "pick-place-wall-v3",
+      "split": "development",
+      "reason": "success",
+      "common_outcome": true,
+      "source_terminal_step": 69,
+      "saved_attempts": 57
+    }
+  ],
+  "actual_branches": 22120,
+  "methods": [
+    "a0",
+    "xyz_positive",
+    "xyz_negative",
+    "gripper_positive",
+    "gripper_negative",
+    "random_half_positive",
+    "random_half_negative",
+    "random_full_positive",
+    "random_full_negative",
+    "velocity",
+    "direct",
+    "post",
+    "reverse_post",
+    "continue_native10"
+  ],
+  "replicates": 4,
+  "logical_policy_outcomes": 22400,
+  "counts_by_kind": {
+    "source_capture": 400,
+    "candidate_restore": 395,
+    "branch_including_restore": 22120
+  },
+  "stage_attempts": 22915,
+  "p0_attempts": 564,
+  "global_attempts": 23479,
+  "main_stage_limit": 23200,
+  "unused_main_attempts": 285,
+  "unused_explanation": "5 no-alarm development sources retained with common outcomes; each skips one candidate restore plus 14 methods x 4 suffixes = 57; total 285",
+  "claimed_main_attempts": 22915,
+  "unclaimed_main_attempts": 0,
+  "duplicate_main_attempt_identities": 0,
+  "source_or_branch_metadata_missing": 0,
+  "worker_status_complete": 32,
+  "worker_slot_coverage_exact": true,
+  "configuration_sha256": "f68b59f279ae4d03094ebe70f0185e29d7a65a8ce20903aed92ac4392f1e4fd2",
+  "freeze_sha256": "f46dda706607bf8ed52281d33a203471c2854b6c09f83e6d26d3b216a509d893",
+  "code_snapshot_sha256": "81151878a58b6f5e06d8d157a65fb9943b5fc8b10df7d8704ec34c4172dc5ffb",
+  "frozen_implementation_files_rehashed": false,
+  "launch_preflight_hashes_match": true,
+  "launch_result_sha256": "371d52fe1366a115a489863916960342e9ceb0ab2f282b8c4b35dc27055fe0eb",
+  "launch_returncode": 0,
+  "wave_wall_seconds_including_lifecycle": 7834.784906288609,
+  "ledger_sha256": "59366c2e08f34f1914b721e16111d1324b07cad187eab343efc21a460576d44f",
+  "reserve_used": 0,
+  "training_updates": 0,
+  "holder_evidence": {
+    "source": "/tmp/gpu_occupancy_guard/status.json",
+    "snapshot_age_seconds": 2.8431665897369385,
+    "fresh": true,
+    "guard_running": true,
+    "states": {
+      "holder": 8
+    },
+    "holder_count": 8,
+    "all_eight_holders_reported": true,
+    "gpu_computation_launched_by_watcher": false
+  },
+  "watcher_updated_at": "2026-09-16T19:06:13.745069+00:00",
+  "blockers": [],
+  "remaining_scope": "Static training dataset/tensor audit and READY preflight are separate; this review does not release optimization."
+}

@@ -1,0 +1,103 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "version": 1,
+  "published_at_utc": "2026-09-20T14:00:48.070360+00:00",
+  "status": "accepted_single_parent_train_index",
+  "coverage_plan_parent_count": 500,
+  "accepted_parent_count": 1,
+  "accepted_train_parents": 1,
+  "accepted_dev_parents": 0,
+  "remaining_planned_parent_slots": 499,
+  "remaining_slots_not_guaranteed_valid_samples": true,
+  "training_authorized": false,
+  "parents": [
+    {
+      "source": {
+        "absolute_target": 300,
+        "cut": 5,
+        "env_seed": 2026092000,
+        "instruction": "Pick and place a puck onto a shelf",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 2026092001,
+        "parent_source_id": "PROPOSED_MT50_shelf_train_0000_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "purpose": "first planned parent of coverage batch; not extra diagnostic",
+        "selection": "fixed proposed ordinal0 train cut5; no outcome-dependent seed replacement",
+        "source_id": "PROPOSED_MT50_shelf_train_0000",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "shelf-place-v3"
+      },
+      "node": "A",
+      "source_ordinal_within_task_train": 0,
+      "task": "shelf-place-v3",
+      "split": "train",
+      "cut": 5,
+      "native_H": 10,
+      "run_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4",
+      "release": {
+        "path": "releases/P11_A_COMMON_POOL_FIRST_PARENT_V4.json",
+        "sha256": "b924b93d2318edcf22dfe36d0bafee6df5feebc02432d26375e4e6ca37d3723a"
+      },
+      "acceptance": {
+        "path": "manifests/A11_COMMON_POOL_FIRST_PARENT_V4_ACCEPTANCE.json",
+        "sha256": "8f8a21f345162bf3bb02d238bc594a6d9f340e2ca00a7ce25ee6e44e61a45de8"
+      },
+      "runtime_manifest": {
+        "path": "results/A/A11_COMMON_POOL_FIRST_PARENT_V4/RUNTIME_FILE_MANIFEST.json",
+        "sha256": "6f68b72cfdc78d66719497c80bf07bb9c346f77c0e7e67fd382691977b64ed9f"
+      },
+      "attempt_coverage": {
+        "path": "results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/ATTEMPT_COVERAGE.json",
+        "sha256": "d8bfe574c7745e42cbae5c7e3c2bedd9c6deed3a630f237f8b72ab7a50bdca8d"
+      },
+      "paired_labels": {
+        "path": "results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/PAIRED_LABELS.json",
+        "sha256": "b81e21bd78adcd6d2ec8be36627c8f669858cc5e6780ef102bf69927eebff866"
+      },
+      "aggregate_indices": {
+        "gain_local_plus": {
+          "path": "results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/AGGREGATE_INDEX_gain_local_plus.json",
+          "sha256": "f898a07caef29affc87c7bc3dba8df013a4df876500fb788c020a570ca3d1dc6"
+        },
+        "gain_local_minus": {
+          "path": "results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/AGGREGATE_INDEX_gain_local_minus.json",
+          "sha256": "864670d347eea9bde668522d7dc9accfabb5237139a1c22d9e91243bf2a99308"
+        },
+        "pair": {
+          "path": "results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/AGGREGATE_INDEX_pair.json",
+          "sha256": "12da314284cb6b54c00a11674de0570f56c7eed306e7ccce5a712f884b1ea90c"
+        },
+        "G0": {
+          "path": "results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/AGGREGATE_INDEX_G0.json",
+          "sha256": "51fc4559142f9a9f2662cefb48fe8d2983af75d5460c3484e38d4099d3974758"
+        }
+      },
+      "bank": {
+        "path": "results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/BANK.json",
+        "sha256": "eee6e7d4e8bce152f07563e116af0c59f4b25d0d6acb10214d1cd28a71fa11c4"
+      },
+      "physical_attempts": 15,
+      "complete_repeat_groups": 7,
+      "independent_parent_count": 1,
+      "labels": {
+        "gain_local_plus": 0.0,
+        "gain_local_minus": 0.5,
+        "pair": -0.5,
+        "G0": 0.3333333333333333
+      },
+      "full_state_verified_scope": "frozen captured-field/MJB closure",
+      "physical_equality_proven": null,
+      "partial_hardlink_paths_excluded_from_sample_count": true,
+      "views": {
+        "Q_G0_paired_metadata": "accepted",
+        "D5_GAF_raw_fields": "available_for_B_window_index_compatibility_not_yet_accepted_as_completed_views",
+        "LVM_positive": "not_qualified_normal_policy_rollout_is_not_demonstration_and_endpoint_tokens_absent"
+      },
+      "historical_failed_attempt": "A11_COMMON_POOL_FIRST_PARENT_V3",
+      "failed_attempt_adds_parent_samples": 0
+    }
+  ],
+  "immutability": "Do not rename frozen PROPOSED source identifiers or change nested source.status; runtime authorization and this acceptance determine provenance. Append future parents in a new index version. No relabeling, held-data use or resampling of this accepted source."
+}

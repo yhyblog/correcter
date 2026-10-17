@@ -1,0 +1,213 @@
+{
+  "created_utc": "2026-09-26T03:29:20.261911+00:00",
+  "scope": "Metadata preparation only for native-feature D/G0 latency; no training, no Q, no GPU/model execution",
+  "source_old_assets": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/assets.json",
+  "models": {
+    "SmolVLA": {
+      "native_checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model",
+      "native_environment_id": "mw-smolvla-lr044",
+      "native_python": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-smolvla-lr044/bin/python",
+      "native_repository": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/lerobot-smolvla-8fff0fd",
+      "raw_horizon": 50,
+      "NFE": 10,
+      "policy_factory": "lerobot.policies.factory.get_policy_class(kind).from_pretrained(checkpoint,local_files_only=True,strict=True); make_pre_post_processors(policy.config,pretrained_path=checkpoint)",
+      "kind": "smolvla",
+      "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model",
+      "runtime_environment_id": "mw-smolvla-lr044",
+      "python": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-smolvla-lr044/bin/python",
+      "repository": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/lerobot-smolvla-8fff0fd",
+      "normal_H": 10,
+      "policy_config": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000/pretrained_model/config.json",
+      "native_image_preprocessing": {
+        "resize_with_padding": [
+          512,
+          512
+        ],
+        "input_rgb_shape": [
+          480,
+          480,
+          3
+        ],
+        "input_dtype": "uint8",
+        "use_saved_native_pre_post_processors": true
+      },
+      "old_DG0_direct_native_compatibility": false,
+      "old_DG0_reuse_in_new_timing": false,
+      "old_DG0_training_feature_space": "external pi05 visual4096/language2048; native-policy-data-specific but not native-visual features",
+      "new_random_networks": {
+        "D_members": 2,
+        "D_width": 256,
+        "D_parameters_per_member": 4474116,
+        "G0_members": 2,
+        "G0_width": 128,
+        "G0_parameters_per_member": 1468033,
+        "training_updates": 0,
+        "normalization": {
+          "mean": "zeros4096",
+          "std": "ones4096",
+          "delta_scale": "ones4096"
+        },
+        "load_old_weights": false,
+        "load_old_normalization": false
+      },
+      "old_evidence": {
+        "encoder_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_0/ENCODER_RESULT.json",
+        "old_normalization_for_provenance_only": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/dataset/NORMALIZATION.json"
+      },
+      "native_visual_channels": 960,
+      "native_vision_preconnector_channels": 768,
+      "native_language_channels": 960,
+      "native_visual_interface": "policy.model.vlm_with_expert.embed_image(image): native vision tower+connector",
+      "native_language_interface": "policy.model.vlm_with_expert.embed_language_tokens(native_token_ids)",
+      "native_visual_grid": "square post-connector tokens; config implies8x8 at512, runtime shape assertion required",
+      "native_visual_code": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/lerobot-smolvla-8fff0fd/src/lerobot/policies/smolvla/smolvlm_with_expert.py:179",
+      "native_base_config": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/base/smolvlm2-500m-7b375e1/config.json"
+    },
+    "X-VLA": {
+      "native_checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/xvla_mt50_s42_D24_r2/training/checkpoints/030000/pretrained_model",
+      "native_environment_id": "mw-xvla-lr044",
+      "native_python": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-xvla-lr044/bin/python",
+      "native_repository": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/lerobot-xvla-8fff0fd",
+      "raw_horizon": 30,
+      "NFE": 10,
+      "policy_factory": "lerobot.policies.factory.get_policy_class(kind).from_pretrained(checkpoint,local_files_only=True,strict=True); make_pre_post_processors(policy.config,pretrained_path=checkpoint)",
+      "kind": "xvla",
+      "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/xvla_mt50_s42_D24_r2/training/checkpoints/030000/pretrained_model",
+      "runtime_environment_id": "mw-xvla-lr044",
+      "python": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-xvla-lr044/bin/python",
+      "repository": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/lerobot-xvla-8fff0fd",
+      "normal_H": 10,
+      "policy_config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/xvla_mt50_s42_D24_r2/training/checkpoints/030000/pretrained_model/config.json",
+      "native_image_preprocessing": {
+        "resize_with_padding": [
+          224,
+          224
+        ],
+        "input_rgb_shape": [
+          480,
+          480,
+          3
+        ],
+        "input_dtype": "uint8",
+        "use_saved_native_pre_post_processors": true
+      },
+      "old_DG0_direct_native_compatibility": false,
+      "old_DG0_reuse_in_new_timing": false,
+      "old_DG0_training_feature_space": "external pi05 visual4096/language2048; native-policy-data-specific but not native-visual features",
+      "new_random_networks": {
+        "D_members": 2,
+        "D_width": 256,
+        "D_parameters_per_member": 4474116,
+        "G0_members": 2,
+        "G0_width": 128,
+        "G0_parameters_per_member": 1468033,
+        "training_updates": 0,
+        "normalization": {
+          "mean": "zeros4096",
+          "std": "ones4096",
+          "delta_scale": "ones4096"
+        },
+        "load_old_weights": false,
+        "load_old_normalization": false
+      },
+      "old_evidence": {
+        "encoder_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_4/ENCODER_RESULT.json",
+        "old_normalization_for_provenance_only": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_XVLA_AUX_RETRAIN_V1/dataset/NORMALIZATION.json"
+      },
+      "native_visual_channels": 1024,
+      "native_language_channels": 1024,
+      "native_visual_interface": "policy.model.vlm._encode_image(native_pixel_values): native Florence tower+projection+norm",
+      "native_language_interface": "policy.model.vlm.get_input_embeddings()(native_token_ids)",
+      "native_visual_grid": "spatial_avg_pool global token first, temporal_avg_pool spatial tokens after it; omit leading global token and square-reshape spatial tokens; expected7x7 at224, assert actual shape",
+      "native_visual_code": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/upstream/lerobot-xvla-8fff0fd/src/lerobot/policies/xvla/modeling_florence2.py:2510"
+    }
+  },
+  "runtime_launcher": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/runtime.sh",
+  "contexts_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/smol_x_native_feedback_latency_20260926/contexts.json",
+  "external_pi05_model_required": false,
+  "Q_included": false,
+  "D_G0_reference": {
+    "code": "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/src/ac_tmil/future_aware/models.py",
+    "D": "WorldModel(normalization,width=256)",
+    "G0": "BenefitModel(normalization,future=True,width=128)",
+    "input_shapes": {
+      "history": [
+        "B",
+        5,
+        4096
+      ],
+      "history_mask": [
+        "B",
+        5
+      ],
+      "past_actions": [
+        "B",
+        4,
+        4
+      ],
+      "proprio": [
+        "B",
+        5,
+        4
+      ],
+      "proprio_mask": [
+        "B",
+        5
+      ],
+      "language": [
+        "B",
+        2048
+      ],
+      "actions": [
+        "B",
+        5,
+        4
+      ],
+      "remaining": [
+        "B"
+      ]
+    },
+    "outputs": {
+      "D_visual": [
+        "B",
+        5,
+        4096
+      ],
+      "D_proprio": [
+        "B",
+        5,
+        4
+      ],
+      "G0": [
+        "B"
+      ]
+    },
+    "initialization": "fresh random D/G0; retain constructor including zero initialized D output heads; no old checkpoint/normalization"
+  },
+  "native_feature_shape_adapter": {
+    "visual": "native spatial tokens -> square grid -> adaptive_avg_pool2d4x4 -> fixed seeded random channel projection(native_dim,256), scaled by1/sqrt(native_dim) -> flatten16x256=4096",
+    "language": "native token embeddings averaged over attention-mask-valid instruction positions, then right zero-pad960(Smol)/1024(X) to2048; task embedding may be cached outside repeated monitor timing",
+    "normalization": "identity mean0/std1/delta1, not fitted",
+    "parameter_policy": "fixed seed before measurements; no fitting or threshold selection",
+    "semantics": "shape-compatible timing surrogate only, no valid learned benefit/gate/control interpretation"
+  },
+  "old_feedback_verification": {
+    "external_visual_used_for_both": true,
+    "external_checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model",
+    "old_visual_dim": 4096,
+    "old_language_dim": 2048,
+    "actual_code": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/adapter.py:345-445",
+    "saved_encoder_results": [
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_0/ENCODER_RESULT.json",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_1/ENCODER_RESULT.json",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_2/ENCODER_RESULT.json",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_3/ENCODER_RESULT.json",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_4/ENCODER_RESULT.json",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_5/ENCODER_RESULT.json",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_6/ENCODER_RESULT.json",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/inference_efficiency_20260925/workers/worker_7/ENCODER_RESULT.json"
+    ],
+    "finding": "Both old paths used identical frozen pi05 external feature provider encode_visual_batch, followed by pi05 spatial projection; D/G0 weights were separately fit to each base policy rollout data."
+  },
+  "interpretation": "Timing only for native feature extraction, fixed shape adapter, random D/G0. No Q or success/gate-quality claims."
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "corrector_queue_control_v1",
+  "revision": 3,
+  "updated_at_utc": "2026-09-21T13:02:20.635181+00:00",
+  "authorization": {
+    "path": "persistent_queue/AUTHORIZATION_V2.json",
+    "sha256": "d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928"
+  },
+  "global_stop": false,
+  "desired_state": "independent_node_pipelines",
+  "nodes": {
+    "A": {
+      "desired_state": "deploy_then_auto_collect_all475_without_B_barrier",
+      "enabled": true,
+      "actual_state": "awaiting_executor_deployment",
+      "control_plane_task": "A_QUEUE_BOOTSTRAP_V1",
+      "control_plane_task_revision": 2
+    },
+    "B": {
+      "desired_state": "migrate_join_toV2_and_prepare_independent_stages_no_collection",
+      "enabled": true,
+      "actual_state": "V1_join_waiter_observed_waiting_for_package",
+      "control_plane_task": "B_QUEUE_JOIN_V1",
+      "control_plane_task_revision": 2,
+      "collection_source_limit": 0
+    }
+  },
+  "shared_package_state": "not_yet_implemented",
+  "automatic_batch_advance": true,
+  "human_review_per_normal_batch": false,
+  "previous_authorization": {
+    "path": "persistent_queue/AUTHORIZATION_V1.json",
+    "sha256": "f0790bbfdbe263be1044ef9ce3773d4ab0b3a63616edf04feda2e86103edf7b5"
+  },
+  "only_current_authorization_valid_for_new_admission": true,
+  "operational_overrides": [
+    {
+      "path": "persistent_queue/OCCUPANCY_OVERRIDE_V1.json",
+      "sha256": "0e896062a9c69dc51e6d1332eca5413c683d2c9bbed113b9346f8dba27310916"
+    }
+  ],
+  "effective_holder_policy": "real_jobs_priority; supervised_idle_card_fill_allowed_during_wave; no_holder_on_active_formal_GPU"
+}

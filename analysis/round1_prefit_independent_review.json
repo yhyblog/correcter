@@ -1,0 +1,164 @@
+{
+  "schema": "native10_round1_prefit_independent_review_v1",
+  "reviewed_utc": "2026-09-16T19:56:21.474796+00:00",
+  "status": "passed",
+  "reviewer": "analysis/critic_data_audit",
+  "scope": "Read-only sealed metadata, referenced small-file SHA, split identities, PCA source list, bootstrap/mask records and saved reload reports. No loader/PCA/model/gradient/rollout execution. No rehash of underlying collection artifact tree.",
+  "new_simulator_calls": 0,
+  "new_optimizer_updates": 0,
+  "training_release_by_this_review": false,
+  "preflight": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/round1/round1_preflight_v1",
+    "seal_sha256": "3a97fff5235b804ec05afd6cc4dc6f25e89319c393d2fa21f70eda2296ed3930",
+    "result_sha256": "add02eae9a61d3576981197910132bffa35afdc3983cc99c8ec7995c72c0d0fe",
+    "sealed_files": 22,
+    "all_sealed_file_hashes_match": true,
+    "status": "passed",
+    "optimizer_updates": 0,
+    "simulator_calls": 0,
+    "both_paths_checked_before_any_optimizer_update": true
+  },
+  "dataset_bindings": {
+    "train": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_train_full_v1",
+      "seal_sha256": "08d8bf56408f65dc4302a588be987626ea2d4f420ab3a156c8c360ef8a7fd14a",
+      "input_audit_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round1_train_full_v1/input_audit.json",
+      "input_audit_sha256": "7de6ee45b9ee8bd68e9ba082d55a973b02a55741bc3a12c11e2d4ca472d9c1db",
+      "input_protocol_sha256": "2456b73fd0728be1fe42f50c3421dddcf30e298d918c746290d3edadb13152d4"
+    },
+    "development": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_development_full_v1",
+      "seal_sha256": "ff4084fa637fc5c50cbad1ee2010084d7b2658f42902700069b09ec71fdf8865",
+      "input_audit_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/dataset_audits/round1_development_full_v1/input_audit.json",
+      "input_audit_sha256": "b540489d63ad00b23fa183f4b4d47f268df8d444eafa0c6a527e2254cbc2876b",
+      "input_protocol_sha256": "2456b73fd0728be1fe42f50c3421dddcf30e298d918c746290d3edadb13152d4"
+    }
+  },
+  "coverage": {
+    "train_planned": 300,
+    "train_reached": 300,
+    "development_planned": 100,
+    "development_reached": 95,
+    "rounds": [
+      1
+    ],
+    "episode_split_checked": true
+  },
+  "input_summary": {
+    "train_planned_and_critic": 300,
+    "train_per_task": 60,
+    "development_planned": 100,
+    "development_critic": 95,
+    "development_common_no_cut": 5,
+    "development_no_cut_success": 4,
+    "development_no_cut_failure": 1,
+    "development_planned_per_task": 20,
+    "train_dev_actual_id_overlap": 0,
+    "both_input_audits_all_12_mandatory_checks_passed": true,
+    "both_missing_artifact_counts": 0,
+    "both_completed_collections_only": false,
+    "dataset_audit_seal_sha256": "53f0910a114df7d8e6ac35af44777d25deee7e0037ad3bbb3cecc72efaf488dc"
+  },
+  "pca": {
+    "fit_source_count": 300,
+    "ids_exactly_unique_train_in_row_order": true,
+    "dev_overlap": 0,
+    "bootstrap_duplicates_used": false,
+    "visual_dimension": 16,
+    "language_dimension": 8,
+    "visual_scale_floor_count": 0,
+    "language_scale_floor_count": 4,
+    "scale_floor": 0.001,
+    "visual_projected_clip_fraction": 0.0,
+    "language_projected_clip_fraction": 0.0,
+    "near_zero_language_components_interpretation": "Four near-zero retained components are expected with five task-language groups; preregistered scale floor and singleton reload audit applied."
+  },
+  "initial_assets": {
+    "A": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/round1/round1_preflight_v1/A/initial",
+      "seal_sha256": "4ee6854e6234a5f301dffcdb7b9d144f923fa0fdc0e706355c41399360e38296",
+      "model_hashes": {
+        "0": "8a08e1fbab88e17635a6cc4bec6f811a9fd435888a5298fd1782a6cb51fc0f09",
+        "1": "699045cdf0c7b2965aeaf4fb4e8459cfb66ad8b72c8cc02a01d2cc8bc0fa87b3",
+        "2": "f12692a54285f95e3b905abc985a645e674569113bc254d31bfc069728e5f15c",
+        "3": "88a560baa2d39a6b849173d040117ef72ee2ccec3949767b3b93652a34f3195a"
+      }
+    },
+    "B": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/round1/round1_preflight_v1/B/initial",
+      "seal_sha256": "4ba26a3eced526290b751f4f906f61f072916c3ae399efd4b17e5965bd9bf894",
+      "model_hashes": {
+        "0": "d082fd53fc3d64e4a7bb1acebc16e55da4dcf56dbc2d1c4ac701daea52ca836b",
+        "1": "647e5fac614adb5274bc98011e90b8fb0aaeef4eae04dd17b7e581a0bf9ca1fe",
+        "2": "740e653f97f1fbf6dfae0eafee50b17978e36eebd96f25a49ad6afe52db3219f",
+        "3": "78269a87a352b72a177ba6a069e61c414b6809c7fdaaf1f827d7f13d07bdfa36"
+      }
+    }
+  },
+  "bootstrap_review": {
+    "members": 8,
+    "sampled_episode_count_per_member": 300,
+    "sampled_per_task_per_member": 60,
+    "all_indices_match_ids_and_multiplicities": true,
+    "all_ids_in_train": true,
+    "source_grouped": true,
+    "outcome_weighting": false
+  },
+  "trainable_mask_review": {
+    "A": "Only residual and advantage: 8 of 20 parameter tensors per member",
+    "B": "All 20 small-critic parameter tensors per member",
+    "all_preprocessing_buffers_frozen": true
+  },
+  "reload_scope": {
+    "A": {
+      "status": "passed",
+      "source_count": 300,
+      "feature_cache_bit_exact": true,
+      "thirteen_candidate_member_probability_bit_exact": true,
+      "gradient_slots": [
+        0,
+        11
+      ],
+      "member_and_ensemble_gradient_bit_exact": true,
+      "members_checked": 4,
+      "a0_anchor_exactly_zero": true,
+      "state_and_anchor_immutable": true,
+      "input_action_representation": "bounded float32 [13,10,4]; designated slot0 a0 detached",
+      "ensemble_offline_float64_vs_online_float32_max_gain_difference": 5.21540641784668e-08,
+      "ensemble_summary_difference_is_report_only": true,
+      "probability_comparison": "member float32; same singleton two-slot arithmetic",
+      "real_data_claim_requires_real_input_provenance": true
+    },
+    "B": {
+      "status": "passed",
+      "source_count": 300,
+      "feature_cache_bit_exact": true,
+      "thirteen_candidate_member_probability_bit_exact": true,
+      "gradient_slots": [
+        0,
+        11
+      ],
+      "member_and_ensemble_gradient_bit_exact": true,
+      "members_checked": 4,
+      "a0_anchor_exactly_zero": true,
+      "state_and_anchor_immutable": true,
+      "input_action_representation": "bounded float32 [13,10,4]; designated slot0 a0 detached",
+      "ensemble_offline_float64_vs_online_float32_max_gain_difference": 0.0,
+      "ensemble_summary_difference_is_report_only": true,
+      "probability_comparison": "member float32; same singleton two-slot arithmetic",
+      "real_data_claim_requires_real_input_provenance": true
+    }
+  },
+  "limits": [
+    "Reload evidence covers all 300 train sources and probabilities for all 13 candidates; action-gradient checks cover a0 slot0 and post slot11, not every candidate slot.",
+    "Zero-update numerical readiness is not evidence of correction success or generalization.",
+    "Formal training must bind this exact preflight seal and reuse its initial assets, PCA, sampling identity and parameter masks; optimizer stage still requires the root READY release."
+  ],
+  "pass_scope": "Sealed round1 input datasets and zero-update preflight data/method readiness only; formal training authorization is issued separately by the root.",
+  "fit_after_existing_pipeline_contract": {
+    "selected_export_reload_check_present": true,
+    "evidence": "training_pipeline.py run exports the selected four trained checkpoints, calls audit_reload on development arrays/rows, checks reloaded selection metrics against the chosen metrics, then writes selected_reload_audit.json.",
+    "expected_scope": "95 reached development sources for all13 candidate probabilities and action gradients at slots0/11; full100 planned development denominator retained in selection metrics.",
+    "actual_post_training_audit": "pending; formal optimization has not yet occurred in this reviewed preflight."
+  }
+}

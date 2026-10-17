@@ -1,0 +1,80 @@
+{
+  "schema": "retained_document_training_plan_v2",
+  "execution_status": "not_executed",
+  "scope": "pi05 + MT50; single-fit D/Q then G0; other platforms adapt their own interfaces",
+  "split": "train/test",
+  "training": {
+    "optimizer": "AdamW",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "D": {
+      "width": 768,
+      "members": [
+        241,
+        242
+      ],
+      "updates_per_member": 4000,
+      "lr": 0.0003,
+      "weight_decay": 0.0001,
+      "ordinary_windows_per_batch": 64,
+      "local_groups_per_batch": 16,
+      "distinct_actions_per_local_group": 4
+    },
+    "Q": {
+      "width": 512,
+      "members": [
+        1041,
+        1042,
+        1043,
+        1044
+      ],
+      "updates_per_member": 4000,
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "source_groups_per_batch": 32
+    },
+    "G0": {
+      "width": 256,
+      "members": [
+        341,
+        342
+      ],
+      "updates_per_member": 4000,
+      "lr": 0.0001,
+      "weight_decay": 0.001,
+      "source_groups_per_batch": 16,
+      "loss": "MSE"
+    },
+    "scheduler": null,
+    "warmup": null,
+    "checkpoint": "fixed final update",
+    "gradient_accumulation": 1,
+    "global_gradient_clip": 1.0
+  },
+  "sampling": {
+    "Q_candidates": 9,
+    "Q_repeats": 4,
+    "G0_paired_repeats": 1,
+    "Q_executions_per_source": 36,
+    "G0_executions_per_source": 2
+  },
+  "real_robot_pairing": {
+    "threshold_rule": "elementwise min(reference replay repeatability error upper bound, task geometry/control allowed deviation), frozen before train/test collection",
+    "threshold_values": null,
+    "calibration_log": null,
+    "scope": "companion extension only; outside the current presentation configuration"
+  },
+  "sources": {
+    "optimizer_signature": "embodied-ai-workspace/environments/lerobot/lib/python3.12/site-packages/torch/optim/adamw.py",
+    "optimizer_launch": "Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/claims/jobs/D_1241.json",
+    "updates_config": "Corrector/sim_command/20260919/results/B/B_D24_SMOL_AUX_RETRAIN_V1/METHOD_FROZEN.json",
+    "Q_repeats": "Corrector/outputs/native10_training_20260916/input_bundles/final_train600_input_v1/train/arrays.npz:outcomes.shape=(600,13,4)",
+    "G0_repeats": "Corrector/sim_command/20260919/results/A/A_D24_LIBERO_FULL_NATIVE_V1/launch_r6/DATA_STATUS.json:G0_labels[*].repeats_per_branch=1"
+  },
+  "new_actual_training_updates": null,
+  "backbone": "pi05",
+  "environment": "MT50"
+}

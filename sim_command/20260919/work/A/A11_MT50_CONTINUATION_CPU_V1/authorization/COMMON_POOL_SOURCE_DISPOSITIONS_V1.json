@@ -1,0 +1,318 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "version": 1,
+  "published_at_utc": "2026-09-20T20:07:45.425665+00:00",
+  "coverage_plan_parent_count": 500,
+  "processed_planned_parent_slots": 9,
+  "accepted_paired_parents": 8,
+  "normal_only_pre_cut_success_parents": 1,
+  "remaining_unattempted_planned_slots": 491,
+  "replacement_authorized": false,
+  "training_authorized": false,
+  "parents": [
+    {
+      "source": {
+        "absolute_target": 300,
+        "cut": 5,
+        "env_seed": 2026092000,
+        "instruction": "Pick and place a puck onto a shelf",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 2026092001,
+        "parent_source_id": "PROPOSED_MT50_shelf_train_0000_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "purpose": "first planned parent of coverage batch; not extra diagnostic",
+        "selection": "fixed proposed ordinal0 train cut5; no outcome-dependent seed replacement",
+        "source_id": "PROPOSED_MT50_shelf_train_0000",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "shelf-place-v3"
+      },
+      "node": "A",
+      "status": "paired_accepted",
+      "paired_eligible": true,
+      "run_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4",
+      "acceptance": {
+        "path": "manifests/A11_COMMON_POOL_FIRST_PARENT_V4_ACCEPTANCE.json",
+        "sha256": "8f8a21f345162bf3bb02d238bc594a6d9f340e2ca00a7ce25ee6e44e61a45de8"
+      }
+    },
+    {
+      "source": {
+        "absolute_target": 300,
+        "cut": 5,
+        "env_seed": 2101296749,
+        "instruction": "Pick a nut out of a peg",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 8014819236357871939,
+        "ordinal": 0,
+        "parent_source_id": "PROPOSED_MT50_disassemble_train_0000_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|disassemble-v3|train|0|cut5",
+        "purpose": "eight fixed remaining A train slots of original 500-parent coverage plan",
+        "selection": "ordinal0 then1, task dictionary order, skip accepted shelf0; no result-based selection",
+        "source_id": "PROPOSED_MT50_disassemble_train_0000",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "disassemble-v3"
+      },
+      "node": "A",
+      "status": "paired_accepted",
+      "paired_eligible": true,
+      "run_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p00_disassemble_train0000_cut5",
+      "acceptance": {
+        "path": "manifests/A11_COMMON_POOL_BATCH1_V1_ACCEPTANCE.json",
+        "sha256": "d30881eb47a86f4cc41be170afa1b2addef36616bcc99bd4ef4b858237c5089b"
+      }
+    },
+    {
+      "source": {
+        "absolute_target": 300,
+        "cut": 5,
+        "env_seed": 1317397464,
+        "instruction": "Pick a puck, bypass a wall and place the puck",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 9051539271699936322,
+        "ordinal": 0,
+        "parent_source_id": "PROPOSED_MT50_pick_place_wall_train_0000_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|pick-place-wall-v3|train|0|cut5",
+        "purpose": "eight fixed remaining A train slots of original 500-parent coverage plan",
+        "selection": "ordinal0 then1, task dictionary order, skip accepted shelf0; no result-based selection",
+        "source_id": "PROPOSED_MT50_pick_place_wall_train_0000",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "pick-place-wall-v3"
+      },
+      "node": "A",
+      "status": "paired_accepted",
+      "paired_eligible": true,
+      "run_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p01_pick_place_wall_train0000_cut5",
+      "acceptance": {
+        "path": "manifests/A11_COMMON_POOL_BATCH1_V1_ACCEPTANCE.json",
+        "sha256": "d30881eb47a86f4cc41be170afa1b2addef36616bcc99bd4ef4b858237c5089b"
+      }
+    },
+    {
+      "source": {
+        "absolute_target": 300,
+        "cut": 5,
+        "env_seed": 1189644218,
+        "instruction": "Grasp a stick and pull a box with the stick",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 8946108781053521251,
+        "ordinal": 0,
+        "parent_source_id": "PROPOSED_MT50_stick_pull_train_0000_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|stick-pull-v3|train|0|cut5",
+        "purpose": "eight fixed remaining A train slots of original 500-parent coverage plan",
+        "selection": "ordinal0 then1, task dictionary order, skip accepted shelf0; no result-based selection",
+        "source_id": "PROPOSED_MT50_stick_pull_train_0000",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "stick-pull-v3"
+      },
+      "node": "A",
+      "status": "paired_accepted",
+      "paired_eligible": true,
+      "run_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p02_stick_pull_train0000_cut5",
+      "acceptance": {
+        "path": "manifests/A11_COMMON_POOL_BATCH1_V1_ACCEPTANCE.json",
+        "sha256": "d30881eb47a86f4cc41be170afa1b2addef36616bcc99bd4ef4b858237c5089b"
+      }
+    },
+    {
+      "source": {
+        "absolute_target": 300,
+        "cut": 5,
+        "env_seed": 686922949,
+        "instruction": "Grasp a stick and push a box using the stick",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 6998766813102916334,
+        "ordinal": 0,
+        "parent_source_id": "PROPOSED_MT50_stick_push_train_0000_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|stick-push-v3|train|0|cut5",
+        "purpose": "eight fixed remaining A train slots of original 500-parent coverage plan",
+        "selection": "ordinal0 then1, task dictionary order, skip accepted shelf0; no result-based selection",
+        "source_id": "PROPOSED_MT50_stick_push_train_0000",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "stick-push-v3"
+      },
+      "node": "A",
+      "status": "paired_accepted",
+      "paired_eligible": true,
+      "run_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p03_stick_push_train0000_cut5",
+      "acceptance": {
+        "path": "manifests/A11_COMMON_POOL_BATCH1_V1_ACCEPTANCE.json",
+        "sha256": "d30881eb47a86f4cc41be170afa1b2addef36616bcc99bd4ef4b858237c5089b"
+      }
+    },
+    {
+      "source": {
+        "absolute_target": 300,
+        "cut": 55,
+        "env_seed": 1572292984,
+        "instruction": "Pick a puck, bypass a wall and place the puck",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 8395148044507494801,
+        "ordinal": 1,
+        "parent_source_id": "PROPOSED_MT50_pick_place_wall_train_0001_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|pick-place-wall-v3|train|1|cut55",
+        "purpose": "eight fixed remaining A train slots of original 500-parent coverage plan",
+        "selection": "ordinal0 then1, task dictionary order, skip accepted shelf0; no result-based selection",
+        "source_id": "PROPOSED_MT50_pick_place_wall_train_0001",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "pick-place-wall-v3"
+      },
+      "node": "A",
+      "status": "paired_accepted",
+      "paired_eligible": true,
+      "run_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p05_pick_place_wall_train0001_cut55",
+      "acceptance": {
+        "path": "manifests/A11_COMMON_POOL_BATCH1_V1_ACCEPTANCE.json",
+        "sha256": "d30881eb47a86f4cc41be170afa1b2addef36616bcc99bd4ef4b858237c5089b"
+      }
+    },
+    {
+      "source": {
+        "absolute_target": 300,
+        "cut": 55,
+        "env_seed": 1389985904,
+        "instruction": "Pick and place a puck onto a shelf",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 4093328034983560901,
+        "ordinal": 1,
+        "parent_source_id": "PROPOSED_MT50_shelf_train_0001_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|shelf-place-v3|train|1|cut55",
+        "purpose": "eight fixed remaining A train slots of original 500-parent coverage plan",
+        "selection": "ordinal0 then1, task dictionary order, skip accepted shelf0; no result-based selection",
+        "source_id": "PROPOSED_MT50_shelf_train_0001",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "shelf-place-v3"
+      },
+      "node": "A",
+      "status": "paired_accepted",
+      "paired_eligible": true,
+      "run_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p06_shelf_train0001_cut55",
+      "acceptance": {
+        "path": "manifests/A11_COMMON_POOL_BATCH1_V1_ACCEPTANCE.json",
+        "sha256": "d30881eb47a86f4cc41be170afa1b2addef36616bcc99bd4ef4b858237c5089b"
+      }
+    },
+    {
+      "source": {
+        "absolute_target": 300,
+        "cut": 55,
+        "env_seed": 1195000414,
+        "instruction": "Grasp a stick and pull a box with the stick",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 4924591511774449267,
+        "ordinal": 1,
+        "parent_source_id": "PROPOSED_MT50_stick_pull_train_0001_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|stick-pull-v3|train|1|cut55",
+        "purpose": "eight fixed remaining A train slots of original 500-parent coverage plan",
+        "selection": "ordinal0 then1, task dictionary order, skip accepted shelf0; no result-based selection",
+        "source_id": "PROPOSED_MT50_stick_pull_train_0001",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "stick-pull-v3"
+      },
+      "node": "A",
+      "status": "paired_accepted",
+      "paired_eligible": true,
+      "run_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p07_stick_pull_train0001_cut55",
+      "acceptance": {
+        "path": "manifests/A11_COMMON_POOL_BATCH1_V1_ACCEPTANCE.json",
+        "sha256": "d30881eb47a86f4cc41be170afa1b2addef36616bcc99bd4ef4b858237c5089b"
+      }
+    },
+    {
+      "source": {
+        "absolute_target": 300,
+        "cut": 55,
+        "env_seed": 1919108575,
+        "instruction": "Pick a nut out of a peg",
+        "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+        "master_seed": 7344797999502455059,
+        "ordinal": 1,
+        "parent_source_id": "PROPOSED_MT50_disassemble_train_0001_parent",
+        "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+        "prefix_mode": "cold_policy_replay",
+        "proposal_seed_rule": "common_pool_batch_source_v1|disassemble-v3|train|1|cut55",
+        "purpose": "eight fixed remaining A train slots of original 500-parent coverage plan",
+        "selection": "ordinal0 then1, task dictionary order, skip accepted shelf0; no result-based selection",
+        "source_id": "PROPOSED_MT50_disassemble_train_0001",
+        "split": "train",
+        "status": "UNAUTHORIZED_TEMPLATE",
+        "task": "disassemble-v3"
+      },
+      "node": "A",
+      "status": "normal_complete_success_before_preplanned_cut",
+      "paired_eligible": false,
+      "run_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p04_disassemble_train0001_cut55",
+      "normal_success": 1,
+      "normal_terminal_absolute_step": 48,
+      "preplanned_cut": 55,
+      "physical_attempts": 1,
+      "not_started_branches": 14,
+      "labels": {
+        "G0": {
+          "raw_alias_masked": false,
+          "target": null,
+          "target_mask": false,
+          "valid_pair_repeat_ids": []
+        },
+        "gain_local_minus": {
+          "raw_alias_masked": false,
+          "target": null,
+          "target_mask": false,
+          "valid_pair_repeat_ids": []
+        },
+        "gain_local_plus": {
+          "raw_alias_masked": false,
+          "target": null,
+          "target_mask": false,
+          "valid_pair_repeat_ids": []
+        },
+        "pair": {
+          "raw_alias_masked": false,
+          "target": null,
+          "target_mask": false,
+          "valid_pair_repeat_ids": []
+        }
+      },
+      "attempt_coverage": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p04_disassemble_train0001_cut55/reserved/ATTEMPT_COVERAGE.json",
+        "sha256": "f7df47278e61af72a08e91aefd4bae4e552f423b2fcd423e410c36e82098ff49",
+        "size_bytes": 2044
+      },
+      "paired_labels": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/p04_disassemble_train0001_cut55/reserved/PAIRED_LABELS.json",
+        "sha256": "4b559d1dca153c58a903ce1acbfb5dda0e478ff416b7fabb35b0b973881ca146",
+        "size_bytes": 568
+      },
+      "acceptance": {
+        "path": "manifests/A11_COMMON_POOL_BATCH1_V1_ACCEPTANCE.json",
+        "sha256": "d30881eb47a86f4cc41be170afa1b2addef36616bcc99bd4ef4b858237c5089b"
+      },
+      "normal_trajectory_retained": true,
+      "auxiliary_window_views": "pending_B_CPU_qualification_not_discarded",
+      "retry_or_replacement_authorized": false
+    }
+  ],
+  "count_semantics": "Processed planned sources and paired-qualified parents are separate. The legally terminal p04 slot is consumed, not an outstanding slot to refill."
+}

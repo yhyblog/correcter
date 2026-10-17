@@ -1,0 +1,137 @@
+{
+  "actual_preserved_by_stage": {
+    "E1": {
+      "attempts": 420,
+      "technical_failures": 0,
+      "terminals": 420,
+      "unstarted": 780
+    },
+    "E6": {
+      "attempts": 100,
+      "technical_failures": 0,
+      "terminals": 100,
+      "unstarted": 0
+    },
+    "Random_multi": {
+      "attempts": 0,
+      "technical_failures": 0,
+      "terminals": 0,
+      "unstarted": 7500
+    }
+  },
+  "actual_wave_attempts_preserved": 520,
+  "all_owned_descendants_exited": true,
+  "application_delay_note": "frozen runner did not natively consume the new override; only exact manager SIGSTOP established the dispatch barrier. Earlier entries are retained and charged, not retroactively called prevented.",
+  "cancellation_observer_done": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_MULTI_PRIMARY_VALIDATION_V1/cancellation/Q_LOSS_PRIORITY_OVERRIDE_V1/DONE.json",
+  "cancelled_unstarted": {
+    "Random_multi": 7500,
+    "legacy_partial_Q_E1": 780
+  },
+  "delivered_workers_exited_utc": "2026-09-22T15:51:50.250764+00:00",
+  "disposition": "User-cancelled remainder; preserve raw partial_or_failed/exit3. The 520 recorded episode terminals have zero technical failures; unfinished cells are cancelled, not scientific success=false.",
+  "minimum_delivered_chunk_count": 8,
+  "minimum_delivered_chunk_size": 5,
+  "new_full_Q_task_launched": false,
+  "new_job_claims_after_dispatch_pause": [],
+  "new_scientific_budget": 0,
+  "next_action": "Consume the separate complete-Q training/dev-selection task when published; no legacy E1 or Random-multi continuation.",
+  "node_cumulative_attempts": 14896,
+  "old_claims_or_results_removed": 0,
+  "original_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_MULTI_PRIMARY_VALIDATION_V1/RESULT.json",
+  "override_sha256": "7e7c84f47284a71dee130bae1239ee3d18f04b176bbea7ad5a66e06da792b5a7",
+  "previous_receipt": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_MULTI_PRIMARY_VALIDATION_V1_Q_LOSS_OVERRIDE_RESULT_r1.json",
+  "prior_D24_attempts": 14376,
+  "publication_completed": true,
+  "raw_lifecycle_exit": 3,
+  "raw_original_status": "partial_or_failed",
+  "receipt_revision": 2,
+  "report": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_MULTI_PRIMARY_VALIDATION_V1/cancellation/Q_LOSS_PRIORITY_OVERRIDE_V1/REPORT_r2.md",
+  "restoration": {
+    "external_jobs_preserved": true,
+    "guard_status": {
+      "gpus": {
+        "0": {
+          "driver_pids": [
+            1662737
+          ],
+          "manager_pid": 2355584,
+          "state": "holder"
+        },
+        "1": {
+          "driver_pids": [
+            1662739
+          ],
+          "manager_pid": 2355585,
+          "state": "holder"
+        },
+        "2": {
+          "driver_pids": [
+            1662743
+          ],
+          "manager_pid": 2355586,
+          "state": "holder"
+        },
+        "3": {
+          "driver_pids": [
+            1662742
+          ],
+          "manager_pid": 2355587,
+          "state": "holder"
+        },
+        "4": {
+          "driver_pids": [
+            1662745
+          ],
+          "manager_pid": 2355588,
+          "state": "holder"
+        },
+        "5": {
+          "driver_pids": [
+            1662747
+          ],
+          "manager_pid": 2355589,
+          "state": "holder"
+        },
+        "6": {
+          "driver_pids": [
+            1662749
+          ],
+          "manager_pid": 2355590,
+          "state": "holder"
+        },
+        "7": {
+          "driver_pids": [
+            1662751
+          ],
+          "manager_pid": 2355591,
+          "state": "holder"
+        }
+      },
+      "pid": 27508,
+      "updated": 1790092328.0394368
+    },
+    "observed_at": {
+      "monotonic_seconds": 4132212.831622321,
+      "unix_seconds": 1790092328.2820487,
+      "utc": "2026-09-22T15:52:08.282051+00:00"
+    },
+    "status": "occupancy_resolved"
+  },
+  "scientific_compute_by_cancellation_handler": 0,
+  "shared_control_modified": false,
+  "status": "CANCELLED_REMAINDER_TERMINAL_HOLDERS_RESTORED",
+  "task_id": "A_D24_MULTI_PRIMARY_VALIDATION_V1",
+  "timing": {
+    "ACK_utc": "2026-09-22T15:49:25.077344+00:00",
+    "dispatch_frozen_utc": "2026-09-22T15:50:16.398493+00:00",
+    "override_issued_utc": "2026-09-22T15:46:22.152064+00:00",
+    "post_ACK_before_dispatch_pause_E1_entries": 21,
+    "post_override_before_dispatch_pause_E1_entries": 134,
+    "post_pause_allowed_chunk_entries": 15,
+    "post_pause_entries_within_exact_delivered_whitelist": true
+  },
+  "unrelated_process_signals": 0,
+  "utc": "2026-09-22T15:56:05.114711+00:00",
+  "weights_hot_swapped": false,
+  "worker_signals": 0
+}

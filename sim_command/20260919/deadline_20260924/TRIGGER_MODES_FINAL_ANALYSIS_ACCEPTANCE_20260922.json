@@ -1,0 +1,44 @@
+{
+  "issued_at_utc": "2026-09-22T13:44:26.322539+00:00",
+  "status": "accepted_final_numerical_results_and_preserved_failures",
+  "new_cells": 30,
+  "new_valid_episodes": 15000,
+  "all_main_and_trigger_cells": 50,
+  "all_main_and_trigger_valid_episodes": 25000,
+  "shared_source_identities": 500,
+  "historical_technical_attempts": 25,
+  "final_missing": 0,
+  "no_new_experiments": true,
+  "analysis_document": "../../docs/EXPERIMENT_ANALYSIS_20260922.md",
+  "derived_tables": "deadline_20260924/analysis_20260922_current/trigger/",
+  "sources": [
+    {
+      "node": "A",
+      "task_id": "A_D24_VELOCITY_TRIGGER_MODES_V1",
+      "receipt": "receipts/A/A_D24_VELOCITY_TRIGGER_MODES_V1_RESULT_r5.json",
+      "receipt_sha256": "7354073c3dd14c58eace2a40ad64f3b96abf6e6538b6adb2ef4b41f2189ca7d4",
+      "valid": 5000,
+      "historical_technical_attempts": 16,
+      "final_unresolved": 0
+    },
+    {
+      "node": "B",
+      "task_id": "B_D24_POST_TRIGGER_MODES_V1",
+      "receipt": "receipts/B/B_D24_POST_TRIGGER_MODES_V1_RESULT.json",
+      "receipt_sha256": "32d8a2594b84caeabc8e2d8ab38fe0ac3d49b0a9553ab67a57d9b03f367458cd",
+      "valid": 5000,
+      "historical_technical_attempts": 9,
+      "final_unresolved": 0
+    },
+    {
+      "node": "C",
+      "task_id": "C_D24_R_TRIGGER_MODES_V1",
+      "receipt": "receipts/C/C_D24_R_TRIGGER_MODES_V1_RESULT.json",
+      "receipt_sha256": "b5af395ab1c28783f49ea59e944f6c95d054cc81e4efb4d208ebbaa9ebb2a422",
+      "valid": 5000,
+      "historical_technical_attempts": 0,
+      "final_unresolved": 0
+    }
+  ],
+  "statistical_scope": "CPU exactMcNemar; independent15-comparisonHolm families pernewmode; existingpointwisebootstrapCI transcribed, no trainingseed uncertainty"
+}

@@ -1,0 +1,641 @@
+{
+  "created_at_utc": "2026-09-23T01:09:08.023174+00:00",
+  "scope": "Current Post-only full-Q L01 / deployment fit9101; LIBERO and Velocity excluded; component-claim audit from existing results only",
+  "validation_status": "share_with_caveats",
+  "sources": {
+    "dev": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_AUTORUN_POST_LED_V1/DEVELOPMENT_SELECTION.csv",
+    "ablation": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_AUTORUN_POST_LED_V1/ABLATION_CELLS.csv",
+    "ablation_pairs": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_AUTORUN_POST_LED_V1/PAIRED.csv",
+    "scope": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_AUTORUN_POST_LED_V1/PAPER_SCOPE_POLICY.json",
+    "training": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_AUTORUN_POST_LED_V1/METHOD_FROZEN.json",
+    "main_pairs": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/analysis_20260923_claims/main_pairs.json",
+    "e6_pairs": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_MULTI_PRIMARY_VALIDATION_V1/PAIRED.json",
+    "e6_g0": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_MULTI_PRIMARY_VALIDATION_V1_E6_G0_MULTI_H10_RESULT.json",
+    "e6_d5": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_MULTI_PRIMARY_VALIDATION_V1_E6_D5_MULTI_H10_RESULT.json",
+    "e6_once": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CORE_REMAINDER_V1/E6_FINAL_SUMMARY.json",
+    "e6_explanation": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/E6_COMPLETED_ANALYSIS_20260922.md",
+    "r_pairs": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_R_TRIGGER_MODES_V1/FINAL_PAIRED.json",
+    "r_cells": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_R_TRIGGER_MODES_V1/FINAL_CELLS.csv",
+    "r_method": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_R_TRIGGER_MODES_V1/METHOD_FROZEN.json",
+    "smol_summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_FULL_Q_LOSS_REFRESH_V1/evaluation_r1/FINAL_SUMMARY.json",
+    "smol_pairs": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_FULL_Q_LOSS_REFRESH_V1/evaluation_r1/PAIRED.json",
+    "smol_r": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_PI05_SELECTED_H20_H30_V1/R_cancelled_r3/FINAL_SUMMARY.json",
+    "smol_method": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SMOL_MULTI_EVAL_V1/METHOD_FROZEN.json",
+    "x_summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_FULL_Q_LOSS_REFRESH_V1/FINAL_SUMMARY.json",
+    "x_pairs": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_FULL_Q_LOSS_REFRESH_V1/POST_PAPER_PAIRED.json",
+    "x_method": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_D24_FULL_Q_LOSS_REFRESH_V1/METHOD_FROZEN.json",
+    "external_cells": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_AUTORUN_POST_LED_V1/E3_COMPARISON.csv",
+    "external_pairs": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_FULL_Q_AUTORUN_POST_LED_V1/E3_PAIRED.csv",
+    "external_scope": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/E3_H10_EXTERNAL_FINAL_20260922.md",
+    "vlac_lineage": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/E3_VLA_CORRECTOR_COMPARISON_20260922.md",
+    "gaf_summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/FINAL_SUMMARY.json",
+    "gaf_lineage": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_GAF_INTERNAL_HOLDOUT_V1/NUMERICAL_LINEAGE.md"
+  },
+  "loss_ablation": {
+    "training": "all 7058 Q parameters/member from scratch; fixed 4000 updates; seeds9101/9102/9103; no old network weights loaded",
+    "dev": {
+      "L00": {
+        "successes": 202,
+        "valid_evaluations": 300,
+        "per_fit": {
+          "9101": {
+            "successes": 65,
+            "valid_evaluations": 100
+          },
+          "9102": {
+            "successes": 68,
+            "valid_evaluations": 100
+          },
+          "9103": {
+            "successes": 69,
+            "valid_evaluations": 100
+          }
+        },
+        "success_percent": 67.33333333333333
+      },
+      "L10": {
+        "successes": 203,
+        "valid_evaluations": 300,
+        "per_fit": {
+          "9101": {
+            "successes": 68,
+            "valid_evaluations": 100
+          },
+          "9102": {
+            "successes": 67,
+            "valid_evaluations": 100
+          },
+          "9103": {
+            "successes": 68,
+            "valid_evaluations": 100
+          }
+        },
+        "success_percent": 67.66666666666667
+      },
+      "L01": {
+        "successes": 207,
+        "valid_evaluations": 300,
+        "per_fit": {
+          "9101": {
+            "successes": 70,
+            "valid_evaluations": 100
+          },
+          "9102": {
+            "successes": 68,
+            "valid_evaluations": 100
+          },
+          "9103": {
+            "successes": 69,
+            "valid_evaluations": 100
+          }
+        },
+        "success_percent": 69.0
+      },
+      "L11": {
+        "successes": 203,
+        "valid_evaluations": 300,
+        "per_fit": {
+          "9101": {
+            "successes": 69,
+            "valid_evaluations": 100
+          },
+          "9102": {
+            "successes": 67,
+            "valid_evaluations": 100
+          },
+          "9103": {
+            "successes": 67,
+            "valid_evaluations": 100
+          }
+        },
+        "success_percent": 67.66666666666667
+      }
+    },
+    "test": {
+      "L00": {
+        "successes": 108,
+        "valid_evaluations": 150,
+        "per_fit": {
+          "9101": {
+            "successes": 38,
+            "valid_evaluations": 50
+          },
+          "9102": {
+            "successes": 35,
+            "valid_evaluations": 50
+          },
+          "9103": {
+            "successes": 35,
+            "valid_evaluations": 50
+          }
+        },
+        "success_percent": 72.0
+      },
+      "L10": {
+        "successes": 104,
+        "valid_evaluations": 150,
+        "per_fit": {
+          "9101": {
+            "successes": 35,
+            "valid_evaluations": 50
+          },
+          "9102": {
+            "successes": 35,
+            "valid_evaluations": 50
+          },
+          "9103": {
+            "successes": 34,
+            "valid_evaluations": 50
+          }
+        },
+        "success_percent": 69.33333333333333
+      },
+      "L01": {
+        "successes": 103,
+        "valid_evaluations": 150,
+        "per_fit": {
+          "9101": {
+            "successes": 35,
+            "valid_evaluations": 50
+          },
+          "9102": {
+            "successes": 35,
+            "valid_evaluations": 50
+          },
+          "9103": {
+            "successes": 33,
+            "valid_evaluations": 50
+          }
+        },
+        "success_percent": 68.66666666666667
+      },
+      "L11": {
+        "successes": 108,
+        "valid_evaluations": 150,
+        "per_fit": {
+          "9101": {
+            "successes": 37,
+            "valid_evaluations": 50
+          },
+          "9102": {
+            "successes": 36,
+            "valid_evaluations": 50
+          },
+          "9103": {
+            "successes": 35,
+            "valid_evaluations": 50
+          }
+        },
+        "success_percent": 72.0
+      }
+    },
+    "dev_unique_sources_per_loss": 100,
+    "test_unique_sources_per_loss": 50,
+    "independent_source_warning": "300 dev and150 test evaluations reuse100 and50 source identities respectively over3 fit seeds; not300/150 independent initial states",
+    "selection": "L01=BCE+0.5pair; Post-only dev mean; deployment fit9101 fixed independently of test",
+    "claim": "L01 development selection is supported. Exclusive test superiority of pair/gain/full loss is not supported."
+  },
+  "e6_multi": {
+    "comparison": "G0 minus D5; same downstream R; H10/C10",
+    "paired_valid": 50,
+    "g0_successes": 26,
+    "d5_successes": 31,
+    "rescued": 2,
+    "harmed": 7,
+    "difference_pp": -10,
+    "pointwise95_CI_pp": [
+      -22,
+      0
+    ],
+    "exact_McNemar_p": 0.1796875,
+    "g0_intervention_mean": 4.8,
+    "d5_intervention_mean": 7.6,
+    "g0_sampling_calls": 1072,
+    "d5_sampling_calls": 1001,
+    "claim": "No evidence of G0 superiority over anomaly D5; no equivalence claim; fewer interventions is not a net-compute result."
+  },
+  "r_g0_once_vs_random_once": {
+    "rows": [
+      {
+        "H": 10,
+        "paired_valid": 500,
+        "g0_once_successes": 336,
+        "random_once_successes": 307,
+        "g0_minus_random_pp": 5.8,
+        "pointwise95_CI_pp": [
+          2.6,
+          9.0
+        ],
+        "random_actual_interventions": 250
+      },
+      {
+        "H": 20,
+        "paired_valid": 500,
+        "g0_once_successes": 312,
+        "random_once_successes": 242,
+        "g0_minus_random_pp": 14.0,
+        "pointwise95_CI_pp": [
+          11.0,
+          17.2
+        ],
+        "random_actual_interventions": 309
+      },
+      {
+        "H": 30,
+        "paired_valid": 500,
+        "g0_once_successes": 307,
+        "random_once_successes": 210,
+        "g0_minus_random_pp": 19.4,
+        "pointwise95_CI_pp": [
+          16.4,
+          22.6
+        ],
+        "random_actual_interventions": 341
+      },
+      {
+        "H": 40,
+        "paired_valid": 500,
+        "g0_once_successes": 290,
+        "random_once_successes": 211,
+        "g0_minus_random_pp": 15.8,
+        "pointwise95_CI_pp": [
+          12.4,
+          19.4
+        ],
+        "random_actual_interventions": 337
+      },
+      {
+        "H": 50,
+        "paired_valid": 500,
+        "g0_once_successes": 297,
+        "random_once_successes": 196,
+        "g0_minus_random_pp": 20.2,
+        "pointwise95_CI_pp": [
+          16.6,
+          23.6
+        ],
+        "random_actual_interventions": 345
+      }
+    ],
+    "q_independent": true,
+    "ci_method": "2000 within-fixed-task source bootstrap,seed20260921; pointwise; no multiplicity correction; no training-seed uncertainty",
+    "sign_convention": "Source FINAL_PAIRED uses Random minus G0; differences negated and CI bounds reversed here",
+    "claim": "G0-once beats this frozen Random-once R policy in all five H pointwise comparisons; not equal realized intervention budget; not evidence for new-Q Post random comparison or superiority over D5."
+  },
+  "post_action_correction": {
+    "paired_main_statistics_source": "deadline_20260924/analysis_20260923_claims/main_pairs.json",
+    "post_vs_R": [
+      {
+        "comparison": "Post-minus-R",
+        "H": 10,
+        "family": "Post-minus-R",
+        "paired_n": 500,
+        "left_success": 350,
+        "right_success": 343,
+        "delta_pp": 1.4000000000000001,
+        "rescued": 20,
+        "harmed": 13,
+        "equal": 467,
+        "ci95_low_pp": -0.6,
+        "ci95_high_pp": 3.5999999999999996,
+        "exact_mcnemar_p": 0.296206368599087,
+        "task_better": 12,
+        "task_equal": 31,
+        "task_worse": 7,
+        "holm_family_p": 1.0
+      },
+      {
+        "comparison": "Post-minus-R",
+        "H": 20,
+        "family": "Post-minus-R",
+        "paired_n": 500,
+        "left_success": 334,
+        "right_success": 324,
+        "delta_pp": 2.0,
+        "rescued": 23,
+        "harmed": 13,
+        "equal": 464,
+        "ci95_low_pp": -0.2,
+        "ci95_high_pp": 4.2,
+        "exact_mcnemar_p": 0.13249816396273675,
+        "task_better": 12,
+        "task_equal": 33,
+        "task_worse": 5,
+        "holm_family_p": 0.6624908198136837
+      },
+      {
+        "comparison": "Post-minus-R",
+        "H": 30,
+        "family": "Post-minus-R",
+        "paired_n": 500,
+        "left_success": 334,
+        "right_success": 330,
+        "delta_pp": 0.8,
+        "rescued": 22,
+        "harmed": 18,
+        "equal": 460,
+        "ci95_low_pp": -1.6,
+        "ci95_high_pp": 3.2,
+        "exact_mcnemar_p": 0.6358280026288412,
+        "task_better": 9,
+        "task_equal": 34,
+        "task_worse": 7,
+        "holm_family_p": 1.0
+      },
+      {
+        "comparison": "Post-minus-R",
+        "H": 40,
+        "family": "Post-minus-R",
+        "paired_n": 500,
+        "left_success": 324,
+        "right_success": 318,
+        "delta_pp": 1.2,
+        "rescued": 24,
+        "harmed": 18,
+        "equal": 458,
+        "ci95_low_pp": -1.2,
+        "ci95_high_pp": 3.5999999999999996,
+        "exact_mcnemar_p": 0.44079906734259566,
+        "task_better": 9,
+        "task_equal": 36,
+        "task_worse": 5,
+        "holm_family_p": 1.0
+      },
+      {
+        "comparison": "Post-minus-R",
+        "H": 50,
+        "family": "Post-minus-R",
+        "paired_n": 500,
+        "left_success": 323,
+        "right_success": 321,
+        "delta_pp": 0.4,
+        "rescued": 20,
+        "harmed": 18,
+        "equal": 462,
+        "ci95_low_pp": -1.7999999999999998,
+        "ci95_high_pp": 2.8000000000000003,
+        "exact_mcnemar_p": 0.8714146793645341,
+        "task_better": 8,
+        "task_equal": 37,
+        "task_worse": 5,
+        "holm_family_p": 1.0
+      }
+    ],
+    "post_vs_N": [
+      {
+        "comparison": "Post-minus-N",
+        "H": 10,
+        "family": "Post-minus-N",
+        "paired_n": 500,
+        "left_success": 350,
+        "right_success": 308,
+        "delta_pp": 8.4,
+        "rescued": 63,
+        "harmed": 21,
+        "equal": 416,
+        "ci95_low_pp": 5.4,
+        "ci95_high_pp": 11.4,
+        "exact_mcnemar_p": 4.968015141912969e-06,
+        "task_better": 18,
+        "task_equal": 27,
+        "task_worse": 5,
+        "holm_family_p": 4.968015141912969e-06
+      },
+      {
+        "comparison": "Post-minus-N",
+        "H": 20,
+        "family": "Post-minus-N",
+        "paired_n": 500,
+        "left_success": 334,
+        "right_success": 240,
+        "delta_pp": 18.8,
+        "rescued": 103,
+        "harmed": 9,
+        "equal": 388,
+        "ci95_low_pp": 15.8,
+        "ci95_high_pp": 22.0,
+        "exact_mcnemar_p": 2.314511484284655e-21,
+        "task_better": 27,
+        "task_equal": 22,
+        "task_worse": 1,
+        "holm_family_p": 4.62902296856931e-21
+      },
+      {
+        "comparison": "Post-minus-N",
+        "H": 30,
+        "family": "Post-minus-N",
+        "paired_n": 500,
+        "left_success": 334,
+        "right_success": 205,
+        "delta_pp": 25.8,
+        "rescued": 141,
+        "harmed": 12,
+        "equal": 347,
+        "ci95_low_pp": 22.400000000000002,
+        "ci95_high_pp": 29.2,
+        "exact_mcnemar_p": 4.218899609200956e-29,
+        "task_better": 33,
+        "task_equal": 15,
+        "task_worse": 2,
+        "holm_family_p": 1.6875598436803823e-28
+      },
+      {
+        "comparison": "Post-minus-N",
+        "H": 40,
+        "family": "Post-minus-N",
+        "paired_n": 500,
+        "left_success": 324,
+        "right_success": 205,
+        "delta_pp": 23.799999999999997,
+        "rescued": 130,
+        "harmed": 11,
+        "equal": 359,
+        "ci95_low_pp": 20.599999999999998,
+        "ci95_high_pp": 27.0,
+        "exact_mcnemar_p": 5.754681923240256e-27,
+        "task_better": 30,
+        "task_equal": 16,
+        "task_worse": 4,
+        "holm_family_p": 1.7264045769720768e-26
+      },
+      {
+        "comparison": "Post-minus-N",
+        "H": 50,
+        "family": "Post-minus-N",
+        "paired_n": 500,
+        "left_success": 323,
+        "right_success": 196,
+        "delta_pp": 25.4,
+        "rescued": 134,
+        "harmed": 7,
+        "equal": 359,
+        "ci95_low_pp": 22.0,
+        "ci95_high_pp": 28.599999999999998,
+        "exact_mcnemar_p": 1.4293474894005e-31,
+        "task_better": 30,
+        "task_equal": 20,
+        "task_worse": 0,
+        "holm_family_p": 7.1467374470025e-31
+      }
+    ],
+    "main_statistics_scope": {
+      "bootstrap": "5000 within-task paired resamples, ten sources per task, seed20260923; pointwise percentile95 intervals",
+      "significance": "Exact two-sided McNemar; Holm separately for five Post-N, five Post-R, three exploratory cross-H; no claim about training-seed uncertainty or unseen tasks"
+    },
+    "same_new_Q_multi_vs_once_H10": {
+      "paired_valid": 500,
+      "multi_successes": 350,
+      "once_successes": 341,
+      "difference_pp": 1.8,
+      "pointwise95_CI_pp": [
+        0.4,
+        3.4
+      ],
+      "exact_McNemar_p": 0.049041748046875,
+      "multiplicity_adjusted": false
+    },
+    "claim": "Strong system-vs-N evidence; all five Post-vs-R intervals cross zero, so the independent extra gain from Q action correction is unresolved. No constraint/anchor/PCA-specific causal claim."
+  },
+  "native_backbones": {
+    "Smol": {
+      "post_successes": 245,
+      "post_valid": 500,
+      "r_successes": 245,
+      "r_valid": 500,
+      "post_vs_N": {
+        "bootstrap": "fixed tasks; resample common valid sources within task;2000 draws seed20260922",
+        "contrast": "Post new multi - frozen N",
+        "descriptive": true,
+        "difference_pp": 2.0161290322580645,
+        "harmed": 16,
+        "independent_fit_groups": 1,
+        "missing_not_failure": true,
+        "new_successes": 244,
+        "no_trigger_conditioning": true,
+        "paired_valid": 496,
+        "pointwise95_CI_pp": [
+          -0.4032258064516129,
+          4.435483870967742
+        ],
+        "reference_successes": 234,
+        "rescued": 26
+      },
+      "post_vs_R_delta_pp": 0,
+      "post_vs_R_paired_CI": "not present in summaries reviewed; equality of aggregate rates is not equivalence",
+      "protocol": "Mesa llvmpipe80Hz/400Hz/.01; rawH50; nativeK10; NFE10; C10"
+    },
+    "X": {
+      "post_successes": 409,
+      "N_successes": 403,
+      "R_successes": 412,
+      "valid_each": 500,
+      "paired": {
+        "Post_multi_vs_N": {
+          "difference_pp": 1.2,
+          "harmed": 18,
+          "interval_method": "pointwise paired task cluster bootstrap,2000 draws,seed20260922; no imputation",
+          "new_successes": 409,
+          "paired_valid": 500,
+          "reference_successes": 403,
+          "rescued": 24,
+          "task_cluster_bootstrap_95_CI_pp": [
+            -1.6,
+            4.0
+          ]
+        },
+        "Post_multi_vs_R_multi": {
+          "difference_pp": -0.6,
+          "harmed": 11,
+          "interval_method": "pointwise paired task cluster bootstrap,2000 draws,seed20260922; no imputation",
+          "new_successes": 409,
+          "paired_valid": 500,
+          "reference_successes": 412,
+          "rescued": 8,
+          "task_cluster_bootstrap_95_CI_pp": [
+            -2.0,
+            0.8
+          ]
+        }
+      },
+      "protocol": "Mesa80Hz/.01; rawH30; nativeK10; NFE10; C10"
+    },
+    "claim": "Feasibility after policy-specific head adaptation; no consistent significant native benefit, no training-free plug-and-play, no cross-protocol pooling with pi05 EGL30Hz/.015."
+  },
+  "external": {
+    "current_cells": [
+      {
+        "method": "VLA-Corrector",
+        "H": "10",
+        "valid": "500",
+        "successes": "319",
+        "scope": "unchanged external result",
+        "loss": ""
+      },
+      {
+        "method": "GAF-v1 adapted",
+        "H": "10",
+        "valid": "500",
+        "successes": "315",
+        "scope": "unchanged external result",
+        "loss": ""
+      },
+      {
+        "method": "Post",
+        "H": "10",
+        "valid": "500",
+        "successes": "350",
+        "scope": "new selected-Q result",
+        "loss": "L01"
+      }
+    ],
+    "current_pairs": [
+      {
+        "comparison": "Post selected-Q G0-multi minus VLA-Corrector",
+        "paired_valid": "500",
+        "left_successes": "350",
+        "right_successes": "319",
+        "rescued": "61",
+        "harmed": "30",
+        "difference_pp": "6.2",
+        "CI95_low_pp": "3.0",
+        "CI95_high_pp": "9.4",
+        "McNemar_exact_p": "0.0015165131944572215",
+        "CI_scope": "pointwise within-fixed-task source bootstrap 2000 seed20260921; no training-seed uncertainty"
+      },
+      {
+        "comparison": "Post selected-Q G0-multi minus GAF-v1 adapted",
+        "paired_valid": "500",
+        "left_successes": "350",
+        "right_successes": "315",
+        "rescued": "61",
+        "harmed": "26",
+        "difference_pp": "7.0",
+        "CI95_low_pp": "4.0",
+        "CI95_high_pp": "10.0",
+        "McNemar_exact_p": "0.00022368935609481816",
+        "CI_scope": "pointwise within-fixed-task source bootstrap 2000 seed20260921; no training-seed uncertainty"
+      }
+    ],
+    "claim": "Current Post system has higher paired success than the frozen VLA-C and adapted GAF baselines in the specified H10 suite; not a matched-training-data or matched-intervention-budget method advantage; not broad SOTA. VLA-C8 log-derived terminal outcomes have missing exact cost; adapted GAF3 members form1 ensemble, trained on15 parents with2-parent internal holdout."
+  },
+  "three_innovations_strength": [
+    {
+      "innovation": "Gain-based selective intervention",
+      "strength": "mixed",
+      "supported": "Q-independent G0-once exceeds frozen random R policy across H",
+      "unsupported": "G0 exceeds anomaly D5; optimal/calibrated/sparse intervention"
+    },
+    {
+      "innovation": "Anchored difference/ranking supervision for local repair",
+      "strength": "weak for incremental empirical benefit",
+      "supported": "Full-Q training feasible; L01 selected on development set",
+      "unsupported": "Pair/gain/full-loss uniquely improves test outcome; genuine success gradient or new independent labels"
+    },
+    {
+      "innovation": "Constrained Post action repair integrated with selective replanning",
+      "strength": "strong at whole-system vs native N; weak for independent Q increment",
+      "supported": "New Post beats N across fiveH in frozen MT50; external system comparisons positive",
+      "unsupported": "All benefit comes from Q correction; Post consistently beats matched R; each constraint necessary; native universal benefit"
+    }
+  ]
+}

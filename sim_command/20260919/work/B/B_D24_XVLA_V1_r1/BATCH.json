@@ -1,0 +1,58 @@
+{
+  "batch_id": "D24_XVLA_r1",
+  "kind": "gpu",
+  "run_id": "D24_XVLA_r1",
+  "max_workers": 1,
+  "jobs": [
+    {
+      "job_id": "xvla_mt50_s42_D24_r1",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_XVLA_V1_r1/TRAIN_CONFIG.json",
+      "argv": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/runtime.sh",
+        "mw-xvla-lr044",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-xvla-lr044/bin/python",
+        "-m",
+        "accelerate.commands.launch",
+        "--multi_gpu",
+        "--num_processes=8",
+        "--num_machines=1",
+        "--mixed_precision=bf16",
+        "--main_process_port=29579",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_XVLA_V1_r1/xvla_train.py",
+        "xvla",
+        "--world-size",
+        "8",
+        "--run-id",
+        "D24-XVLA-s42-r1",
+        "--output",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/xvla_mt50_s42_D24_r1/training",
+        "--execute"
+      ],
+      "gpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "timeout_seconds": 24300,
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/xvla_mt50_s42_D24_r1",
+      "env": {
+        "D24_XVLA_CONFIG": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_XVLA_V1_r1/TRAIN_CONFIG.json",
+        "D24_XVLA_OUTPUT": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/xvla_mt50_s42_D24_r1",
+        "VLA_CPU_THREADS": "4"
+      }
+    }
+  ],
+  "after_batches": [
+    "D24_GPU_N_r1",
+    "D24_LIBERO_REPAIR_r2"
+  ],
+  "optimizer_updates_max": 30000,
+  "physical_rollout_attempts": 0,
+  "automatic_retry": false
+}

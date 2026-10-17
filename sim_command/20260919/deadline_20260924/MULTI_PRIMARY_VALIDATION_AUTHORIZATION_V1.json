@@ -1,0 +1,54 @@
+{
+  "schema": "corrector_multi_primary_validation_authorization_v1",
+  "status": "released",
+  "issued_at_utc": "2026-09-22T14:57:47.275795+00:00",
+  "user_request": "promoteunlimitedG0main; rerunrelatedvalidation; updateexperimentmaster",
+  "main_method": "G0-multi",
+  "protocol": {
+    "path": "deadline_20260924/MULTI_PRIMARY_VALIDATION_PLAN_V1.md",
+    "sha256": "7321a39f4768cf7927857b49e0972d911d5caced721a1edce774aa7bf91b9327"
+  },
+  "new_first_evaluations": 11800,
+  "new_training_updates": 0,
+  "new_collection_attempts": 0,
+  "already_complete_multi_primary_replay": false,
+  "second_approval_required": false,
+  "nodes": {
+    "A": {
+      "task_id": "A_D24_MULTI_PRIMARY_VALIDATION_V1",
+      "revision": 1,
+      "new_first_evaluations": 8800,
+      "stage_attempt_cap": 9500,
+      "cumulative_attempt_cap": 25000,
+      "new_optimizer_updates": 0,
+      "CPU_prepare_now": true,
+      "formal_start_after_own_task_family_exit": null,
+      "no_other_node_dependency": true
+    },
+    "B": {
+      "task_id": "B_D24_SMOL_MULTI_EVAL_V1",
+      "revision": 1,
+      "new_first_evaluations": 1500,
+      "stage_attempt_cap": 1650,
+      "cumulative_attempt_cap": 20000,
+      "new_optimizer_updates": 0,
+      "CPU_prepare_now": true,
+      "formal_start_after_own_task_family_exit": "B_D24_SMOL_AUX_RETRAIN_V1",
+      "no_other_node_dependency": true
+    },
+    "C": {
+      "task_id": "C_D24_XVLA_MULTI_EVAL_V1",
+      "revision": 1,
+      "new_first_evaluations": 1500,
+      "stage_attempt_cap": 1650,
+      "cumulative_attempt_cap": 14000,
+      "new_optimizer_updates": 0,
+      "CPU_prepare_now": true,
+      "formal_start_after_own_task_family_exit": "C_D24_XVLA_AUX_RETRAIN_V1",
+      "no_other_node_dependency": true
+    }
+  },
+  "science_admission_cutoff_utc": "2026-09-23T12:00:00Z",
+  "tables_due_utc": "2026-09-23T15:00:00Z",
+  "strict_consistency_audits_required": false
+}

@@ -1,0 +1,87 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A10_CAUSAL_EVENT_CPU_REPAIR_V1",
+  "revision": 1,
+  "accepted_at_utc": "2026-09-20T00:51:32.052357+00:00",
+  "status": "CPU_revision_accepted_for_independent_V2_engineering_preflight",
+  "receipt": {
+    "path": "receipts/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1_RESULT.json",
+    "sha256": "3a04684b5f4d32a5bc6475b39ac2255f63fda5d715d6105e270394f7d04838fa"
+  },
+  "report": {
+    "path": "results/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1/REPORT.md",
+    "sha256": "3d09b6781b8590f47e0b69d68cabf9e40d8460483c8cf3214dc46fb28aae7038"
+  },
+  "evidence_manifest": {
+    "path": "results/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1/EVIDENCE_MANIFEST.json",
+    "sha256": "87afeba3cf73d97f34b53a3a188355aa6839980e668e9da32f7b50c836be98a5"
+  },
+  "proposal": {
+    "path": "results/A/A10_CAUSAL_EVENT_CPU_REPAIR_V1/proposal/PROPOSAL.json",
+    "sha256": "629d826fb5f19210eaf34c864e4dae934f21a2437daf06822e53bdbbca7a693f"
+  },
+  "root_verification": {
+    "artifact_refs_SHA_size": 23,
+    "check_refs_SHA_size": 11,
+    "evidence_files_SHA_size": 563,
+    "code_files_SHA_size": 395,
+    "unchanged_code_files": 387,
+    "changed_existing_files": 6,
+    "new_stdlib_modules": 2,
+    "inputs_config_external_budget_byte_identical_to_V1": true,
+    "all111_caps_and_source_lifecycle_timeouts_identical": true,
+    "hardware_and_model_calls": 0,
+    "large_weight_rehashes": 0
+  },
+  "CPU_test_evidence": {
+    "event_checks": 54,
+    "synthetic_branch_cases": 50,
+    "metadata_cases": 16,
+    "pure_JSON_CLI": "PASS",
+    "AST_shell": "PASS",
+    "expected_old_synthetic_failure": "duplicate branch TypeError reproduced before reset/write",
+    "unexpected_fixture_failures": 0,
+    "real_compute_launched": false,
+    "V2_authorized": false,
+    "code_files": 395,
+    "unchanged_code_files": 387,
+    "changed_original_code_files": 6,
+    "added_stdlib_modules": 2
+  },
+  "synthetic_branch_outcomes": {
+    "C10_and_H20_checked": 15,
+    "G0_not_triggered": 4,
+    "stopped_at_reset": 6,
+    "early_prefix_stop": 12,
+    "early_C10_stop": 12,
+    "independent_prefix_mismatch": 1
+  },
+  "independent_reviews": {
+    "real_recorder_controller_and_exception_paths": "/root/pv_v3_numeric_acceptance_review",
+    "budget_lifecycle_and_pure_metadata_entry": "/root/pv_guard_install_review",
+    "blocking_findings": []
+  },
+  "accepted_changes": [
+    "Old real recorder/controller duplicate-branch regression reproduced synthetically, not old runtime traceback",
+    "New shared production recorder and actual controller/Engine.emit exercised in 50 synthetic branch cases",
+    "Protected identity and synthetic fields refuse same/different override before write/ID commit",
+    "Live primary and cleanup traceback stored separately; existing EGL cleanup catch covered synthetically",
+    "Independent V2 metadata and paths; no numeric or method change"
+  ],
+  "unvalidated": [
+    "real V2 joint native DG0/PV C10/H20 execution",
+    "independent replay observable prefix agreement",
+    "real V2 exception/hardware behavior"
+  ],
+  "scientific_scope": "Engineering preparation only; no task-success, trigger effectiveness, P/V ranking or hidden-state-equivalence result",
+  "old_real_failure_counts_preserved": {
+    "model_initializations": 9,
+    "language_embedding_forwards": 1
+  },
+  "old_runtime_stack_backfilled": false,
+  "old_releases_reusable": false,
+  "public_interface_unchanged": true,
+  "next_compute_requires_unique_release": "P10_A_CAUSAL_C10_PREFLIGHT_V2",
+  "publication_stage": "manifests/CAUSAL_C10_V2_PUBLICATION_STAGE",
+  "publication_check": "manifests/CAUSAL_C10_V2_PUBLICATION_STAGE/PUBLICATION_CHECK.json"
+}

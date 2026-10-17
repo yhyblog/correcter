@@ -1,0 +1,45 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "release_id": "P00_EGL_CPU_REPAIR_V1",
+  "issued_at_utc": "2026-09-19T17:15:21.781181+00:00",
+  "issuer": "analysis",
+  "kind": "cpu_egl_diagnosis_and_isolated_repair_preparation",
+  "task_ids": [
+    "A10_EGL_CPU_REPAIR_V1"
+  ],
+  "task_revision": 1,
+  "owner_host": "trial-303224955-trialrun-303224955-worker-0",
+  "task_brief": {
+    "path": "tasks/A10_EGL_CPU_REPAIR_V1.md",
+    "sha256": "3ee44ba769c81bfc91ca88abead61a8a18a8eefe03fbf31f485e1c70402bf104"
+  },
+  "dependency": "receipts/A/A10_PREFLIGHT_NATIVE_V1_RESULT.json",
+  "dependency_outcome": "technical_failure_consumed_and_closed",
+  "allowed": [
+    "targeted_read_only_library_loader_and_mount_diagnosis",
+    "isolated_process_library_vendor_config_preparation",
+    "necessary_small_trusted_userspace_dependency_staging",
+    "targeted_CPU_static_checks",
+    "graphics_only_bounded_probe_proposal"
+  ],
+  "limits": {
+    "model_gpu_inference_calls": 0,
+    "graphics_probe_attempts": 0,
+    "egl_device_enumerations": 0,
+    "egl_initialize_calls": 0,
+    "graphics_context_creations": 0,
+    "render_calls": 0,
+    "simulator_attempts": 0,
+    "environment_reset_calls": 0,
+    "optimizer_updates": 0,
+    "deletions": 0
+  },
+  "forbidden": [
+    "model_or_graphics_execution",
+    "global_driver_or_shared_environment_changes",
+    "container_restart",
+    "renderer_switch",
+    "historical_artifact_mutation",
+    "deletion"
+  ]
+}

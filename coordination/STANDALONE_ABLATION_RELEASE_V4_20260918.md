@@ -1,0 +1,19 @@
+# Standalone READY v4：运维兼容闭合，进入真实采样
+
+2026-09-18 UTC，分析端最终运行重绑。
+
+采用preparation/handoff_v4/future_ready_fields.json完整字段，SHA46f9ee7da5b431bf9e10eabe2d55d6c48d20091c98a2f0fede5837edec1128fc。相对此前科学契约，仅新增operational_runtime；scientific_parameters、solo_rule、statistics、carry_in、budget、execution_plans逐字段相同。
+
+有界运维修复独立审查PASS：旧1702项继承清单只允许两个外部GPU脚本按已审当前版本重新绑定，其余科学依赖保持；旧正文和原身份保留，新直接运维依赖显式绑定。不修改全局脚本、旧freeze或失败standalone_v1。
+
+真实旧八卡wave启动器已在mock子进程检查中接受预检与正式规格。预检保持5个真实worker/源，额外3个设备槽仅执行/usr/bin/true，没有模型、环境或attempt；正式仍为8卡×4worker。审计严格检查真实槽和空槽，不能复制源或漏计。
+
+CPU v6：86项针对性检查通过，24份当前代码before=after=current，seal5d53cb699f6b1b142a366168d25679bd44ea359b8d3f73a2401869715877bd1f。采样、纠偏与统计核心未变，cpu_v5的145项检查及方法审查继续适用；不重复同级检查。
+
+新pending为pending/operational_v1，sealde1ac02e0374b52899a4d38f76cb2750189ff6dedec740edd44fb4e97d6bac93；运维来源包seal2ced1eecc5139d3a02a2e1fcff1140a600d28e17ad652619d15d65cb6b91da4a。
+
+只释放standalone_preflight与standalone_formal。直接建立新的standalone_v2或其他新版本freeze；不得覆盖失败standalone_v1。固定50次预检通过同freeze完整审计后，直接唯一正式波次，计划1274次；随后全量审计、独立统计与成本/幅度分析，无需重复许可。
+
+新增cap1500/0opt，阶段60/1400/锁40；carry-in48183sim/51200opt。100原源、五任务各20初态、98cut+2common、4后缀及全部科学参数不变。三solo-R为主要比较，solo-full为结构诊断，不称新的未见held验证。
+
+此前失败及工程修订仍为0新增model/sim/opt。当前精确READY与本决定覆盖旧排队指令；已完成的日志、30/50计数、代码及运维修订不再重做。旧READY版本不得重复启动，任何真实技术异常仍停止回报。整波通过既有lifecycle，结束后现场确认8卡holder恢复。

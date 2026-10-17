@@ -1,0 +1,11 @@
+A_D24_E3_UNSTARTED_CONTINUATION_V1已实际启动且后台稳定（2026-09-22T04:55:20.125418+00:00）。新授权SHA 3a6c62f0a40b4aa5eb08dafa9cef65d15717cb7edcbe505bc951ab37c40f79ad；源表SHA12314afe0cefa81cc20f621056efc512e040be65092c4d9aff9c8f3b2ff704d5。新命令类型continuation_of_unstarted_sources，仅453个尚未ENTERED来源；旧47个全部排除，旧r2 retry_remaining=0及失败证据未改，不新增重试。
+
+实际启动命令：bash /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_E3_UNSTARTED_CONTINUATION_V1/START_CONTINUATION.sh。后台daemon PID1836396，八模型已READY，快照已有243个新结构化终局结果；本接续快照已记录technical_failure=0，worker退出0。计数会随后台继续增长，不能把进度快照称最终完成。全8holder退出ACK=2026-09-22T04:49:35.624735+00:00，早于首正式worker；保存的当前guard状态8卡reserved，未另查GPU。
+
+CPU定向检查6项PASS：453精确排除47、后来出现的claim/entered再剔除、8路互斥覆盖、原生科学代码仅改变各task剩余循环次数和进度总量、真实summary NaN问题及意外NaN拒绝。语义上未定义统计保留字段、null+reason+原始非有限类型；核心终局先存，核心非有限不吞掉。
+
+原39有效RESULT保留；旧8条已CPU唯一终局日志恢复至独立RECOVERED_RESULTS，每条绑定source/env/policy seed与原日志，缺调用/耗时/统计null。旧r2实际worker失败8单列；首V1模型前8个非零worker退出另列，不称历次运行整波技术0。终局将自动生成COMBINED_EPISODES.json和COMBINED_FINAL_SUMMARY.json，合并原39+恢复8+本次有效结果，未知结果不默认为失败。
+
+本次首次进入上限453，D24既有8367 attempt及本接续阶段既有247均保留；全部完成时分别8820和700，未重置18000/3000上限。E6与N8000/pilot120均不重跑。
+
+固定原会话终局通知已登记，STABLE_HANDOFF.json引用真实模型ready/样本进展；现在结束LLM等待。GAF内部15train/2holdout新决定已读取，真实小输入例可读；GAF下一步必要动作单位绑定/张量物化、3×10000fit及500评测仍在原授权内，见NEXT_AUTHORIZED_STAGE.json。GAF未开始训练，不影响当前453运行。

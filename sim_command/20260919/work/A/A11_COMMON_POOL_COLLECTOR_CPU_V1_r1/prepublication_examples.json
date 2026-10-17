@@ -1,0 +1,630 @@
+{
+  "schema_sha256": "5d6fe452b64766a540aa325938dc5ed5e50659d4a6f973cfda0d9fa47123b3ae",
+  "synthetic": true,
+  "example_semantics": "contract-only fixtures; references are symbolic, no real data or state proof",
+  "examples": [
+    {
+      "name": "normal_LVM_terminal_unknown",
+      "expected_admitted": [
+        "LVM"
+      ],
+      "record": {
+        "schema_version": "common_pool_sidecar_v1",
+        "schema_sha256": "5d6fe452b64766a540aa325938dc5ed5e50659d4a6f973cfda0d9fa47123b3ae",
+        "synthetic": true,
+        "record_id": "SYNTHETIC_LVM_NO_TERMINAL",
+        "record_ref": {
+          "path": "SYNTHETIC_ONLY/original_record",
+          "sha256": "536785ccb59a42380aaa2b291953f2881d41ff24367df75506ac357910065c1b",
+          "format": "synthetic_metadata"
+        },
+        "identity": {
+          "parent_id": "SYNTHETIC_DEMO_0",
+          "episode_id": "SYNTHETIC_DEMO_0",
+          "source_id": "SYNTHETIC_DEMO_0",
+          "physical_attempt_id": "SYNTHETIC_DEMO_0",
+          "run_id": "SYNTHETIC",
+          "branch_id": "normal_demo",
+          "task": "shelf-place-v3",
+          "split": "train",
+          "source_manifest_ref": {
+            "path": "SYNTHETIC_ONLY/demo_source",
+            "sha256": "7a30148ad8082c2215f6cccd736458e3fbfebaed785af862cff1cedb9479d573",
+            "format": "synthetic_metadata"
+          },
+          "source_signature": "1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        "protocol": {
+          "target_namespace": "normal_demo",
+          "cut_step": null,
+          "absolute_start_step": 0,
+          "absolute_end_step": 10,
+          "parent_absolute_target_state": null,
+          "commitment_steps": null,
+          "native_H": 10,
+          "generated_length": null
+        },
+        "input_signatures": {
+          "policy_sha256": null,
+          "encoder_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+          "preprocessing_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+          "normalizer_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+          "action_representation": "B_original_action_t",
+          "action_representation_sha256": "5555555555555555555555555555555555555555555555555555555555555555"
+        },
+        "outcome": {
+          "success": null,
+          "outcome_complete": false,
+          "reason": "not_applicable",
+          "last_observed_parent_state": 10,
+          "first_success_step": null,
+          "terminated": null,
+          "truncated": null,
+          "missing_reasons": [
+            "terminal_flags_unknown"
+          ]
+        },
+        "repeats": {
+          "repeat_id": null,
+          "planned_repeat_ids": [],
+          "complete_repeat_ids": [],
+          "valid_pair_repeat_ids": [],
+          "planned": false,
+          "entered": false,
+          "completed": false,
+          "missing": false,
+          "comparison_arms": [],
+          "paired_members": []
+        },
+        "plans": {
+          "candidate_family": "normal_demo",
+          "fresh_id": null,
+          "raw50_ref": null,
+          "raw_C10_sha256": null,
+          "raw_C5_sha256": null,
+          "raw_alias_group": null,
+          "old_queue_age": null,
+          "old_queue_remaining": null,
+          "noise_ref": null,
+          "suffix_stream_id": null,
+          "local_direction_ref": null,
+          "physical_alias_of": null
+        },
+        "restoration": {
+          "level": "not_applicable",
+          "schema_sha256": null,
+          "reference_state_ref": null,
+          "observed_state_ref": null,
+          "verification_ref": null,
+          "fields": [],
+          "unknown_fields": []
+        },
+        "window": {
+          "normal_demonstration": true,
+          "episode_ids": [
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0"
+          ],
+          "observed_steps": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "token_start_step": 0,
+          "token_end_step": 10,
+          "token_start_ref": {
+            "path": "SYNTHETIC_ONLY/token0",
+            "sha256": "677578fa480df7daa517233a6a8ac2ec5a5b88eec9a32e1764574bf97c140ffd",
+            "format": "synthetic_metadata"
+          },
+          "token_end_ref": {
+            "path": "SYNTHETIC_ONLY/token10",
+            "sha256": "2e2aaba981b52e7fc2ac2ea6005b52f7ef657592d2a7794a47a7d8e489f00f9e",
+            "format": "synthetic_metadata"
+          },
+          "token_shape": [
+            256,
+            2048
+          ],
+          "token_start_encoder_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+          "token_end_encoder_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+          "original_action_ref": {
+            "path": "SYNTHETIC_ONLY/action_t",
+            "sha256": "85f53f033b9e1461ba5c76839e5425ce0d550e15b791f408c0c7455d7eeb224f",
+            "format": "synthetic_metadata"
+          },
+          "original_action_shape": [
+            4
+          ],
+          "original_action_normalizer_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+          "executed_action_ref": null,
+          "executed_action_count": 0,
+          "executed_action_mapping_verified": false,
+          "arrived_future_steps": 10,
+          "feature_signature_verified": true,
+          "complete_GAF_target": false
+        },
+        "views": {
+          "LVM": {
+            "eligible": true,
+            "missing_reasons": []
+          },
+          "D5": {
+            "eligible": false,
+            "missing_reasons": [
+              "not_admitted_for_this_view"
+            ]
+          },
+          "GAF": {
+            "eligible": false,
+            "missing_reasons": [
+              "not_admitted_for_this_view"
+            ]
+          },
+          "Q_BCE": {
+            "eligible": false,
+            "missing_reasons": [
+              "not_admitted_for_this_view"
+            ]
+          },
+          "Q_GAIN": {
+            "eligible": false,
+            "missing_reasons": [
+              "not_admitted_for_this_view"
+            ]
+          },
+          "Q_PAIR": {
+            "eligible": false,
+            "missing_reasons": [
+              "not_admitted_for_this_view"
+            ]
+          },
+          "G0": {
+            "eligible": false,
+            "missing_reasons": [
+              "not_admitted_for_this_view"
+            ]
+          }
+        },
+        "missing_reasons": [
+          "terminal_flags_unknown"
+        ]
+      }
+    },
+    {
+      "name": "missing_LVM_endpoint",
+      "expected_admitted": [],
+      "record": {
+        "schema_version": "common_pool_sidecar_v1",
+        "schema_sha256": "5d6fe452b64766a540aa325938dc5ed5e50659d4a6f973cfda0d9fa47123b3ae",
+        "synthetic": true,
+        "record_id": "SYNTHETIC_LVM_MISSING_TOKEN",
+        "record_ref": {
+          "path": "SYNTHETIC_ONLY/original_record",
+          "sha256": "536785ccb59a42380aaa2b291953f2881d41ff24367df75506ac357910065c1b",
+          "format": "synthetic_metadata"
+        },
+        "identity": {
+          "parent_id": "SYNTHETIC_DEMO_0",
+          "episode_id": "SYNTHETIC_DEMO_0",
+          "source_id": "SYNTHETIC_DEMO_0",
+          "physical_attempt_id": "SYNTHETIC_DEMO_0",
+          "run_id": "SYNTHETIC",
+          "branch_id": "normal_demo",
+          "task": "shelf-place-v3",
+          "split": "train",
+          "source_manifest_ref": {
+            "path": "SYNTHETIC_ONLY/demo_source",
+            "sha256": "7a30148ad8082c2215f6cccd736458e3fbfebaed785af862cff1cedb9479d573",
+            "format": "synthetic_metadata"
+          },
+          "source_signature": "1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        "protocol": {
+          "target_namespace": "normal_demo",
+          "cut_step": null,
+          "absolute_start_step": 0,
+          "absolute_end_step": 10,
+          "parent_absolute_target_state": null,
+          "commitment_steps": null,
+          "native_H": 10,
+          "generated_length": null
+        },
+        "input_signatures": {
+          "policy_sha256": null,
+          "encoder_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+          "preprocessing_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+          "normalizer_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+          "action_representation": "B_original_action_t",
+          "action_representation_sha256": "5555555555555555555555555555555555555555555555555555555555555555"
+        },
+        "outcome": {
+          "success": null,
+          "outcome_complete": false,
+          "reason": "not_applicable",
+          "last_observed_parent_state": 10,
+          "first_success_step": null,
+          "terminated": null,
+          "truncated": null,
+          "missing_reasons": [
+            "terminal_flags_unknown"
+          ]
+        },
+        "repeats": {
+          "repeat_id": null,
+          "planned_repeat_ids": [],
+          "complete_repeat_ids": [],
+          "valid_pair_repeat_ids": [],
+          "planned": false,
+          "entered": false,
+          "completed": false,
+          "missing": false,
+          "comparison_arms": [],
+          "paired_members": []
+        },
+        "plans": {
+          "candidate_family": "normal_demo",
+          "fresh_id": null,
+          "raw50_ref": null,
+          "raw_C10_sha256": null,
+          "raw_C5_sha256": null,
+          "raw_alias_group": null,
+          "old_queue_age": null,
+          "old_queue_remaining": null,
+          "noise_ref": null,
+          "suffix_stream_id": null,
+          "local_direction_ref": null,
+          "physical_alias_of": null
+        },
+        "restoration": {
+          "level": "not_applicable",
+          "schema_sha256": null,
+          "reference_state_ref": null,
+          "observed_state_ref": null,
+          "verification_ref": null,
+          "fields": [],
+          "unknown_fields": []
+        },
+        "window": {
+          "normal_demonstration": true,
+          "episode_ids": [
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0"
+          ],
+          "observed_steps": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "token_start_step": 0,
+          "token_end_step": 10,
+          "token_start_ref": {
+            "path": "SYNTHETIC_ONLY/token0",
+            "sha256": "677578fa480df7daa517233a6a8ac2ec5a5b88eec9a32e1764574bf97c140ffd",
+            "format": "synthetic_metadata"
+          },
+          "token_end_ref": null,
+          "token_shape": [
+            256,
+            2048
+          ],
+          "token_start_encoder_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+          "token_end_encoder_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+          "original_action_ref": {
+            "path": "SYNTHETIC_ONLY/action_t",
+            "sha256": "85f53f033b9e1461ba5c76839e5425ce0d550e15b791f408c0c7455d7eeb224f",
+            "format": "synthetic_metadata"
+          },
+          "original_action_shape": [
+            4
+          ],
+          "original_action_normalizer_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+          "executed_action_ref": null,
+          "executed_action_count": 0,
+          "executed_action_mapping_verified": false,
+          "arrived_future_steps": 10,
+          "feature_signature_verified": true,
+          "complete_GAF_target": false
+        },
+        "views": {
+          "LVM": {
+            "eligible": false,
+            "missing_reasons": [
+              "token_end_missing"
+            ]
+          },
+          "D5": {
+            "eligible": false,
+            "missing_reasons": [
+              "not_admitted_for_this_view"
+            ]
+          },
+          "GAF": {
+            "eligible": false,
+            "missing_reasons": [
+              "not_admitted_for_this_view"
+            ]
+          },
+          "Q_BCE": {
+            "eligible": false,
+            "missing_reasons": [
+              "not_admitted_for_this_view"
+            ]
+          },
+          "Q_GAIN": {
+            "eligible": false,
+            "missing_reasons": [
+              "not_admitted_for_this_view"
+            ]
+          },
+          "Q_PAIR": {
+            "eligible": false,
+            "missing_reasons": [
+              "not_admitted_for_this_view"
+            ]
+          },
+          "G0": {
+            "eligible": false,
+            "missing_reasons": [
+              "not_admitted_for_this_view"
+            ]
+          }
+        },
+        "missing_reasons": [
+          "terminal_flags_unknown"
+        ]
+      }
+    },
+    {
+      "name": "Q_observable_only_no_pair",
+      "expected_admitted": [
+        "Q_BCE"
+      ],
+      "record": {
+        "schema_version": "common_pool_sidecar_v1",
+        "schema_sha256": "5d6fe452b64766a540aa325938dc5ed5e50659d4a6f973cfda0d9fa47123b3ae",
+        "synthetic": true,
+        "record_id": "SYNTHETIC_Q_OBSERVABLE_ONLY",
+        "record_ref": {
+          "path": "SYNTHETIC_ONLY/original_record",
+          "sha256": "536785ccb59a42380aaa2b291953f2881d41ff24367df75506ac357910065c1b",
+          "format": "synthetic_metadata"
+        },
+        "identity": {
+          "parent_id": "SYNTHETIC_PARENT",
+          "episode_id": "SYNTHETIC_PARENT",
+          "source_id": "SYNTHETIC_PARENT",
+          "physical_attempt_id": "SYNTHETIC_DEMO_0",
+          "run_id": "SYNTHETIC",
+          "branch_id": "Q/local_plus",
+          "task": "shelf-place-v3",
+          "split": "train",
+          "source_manifest_ref": {
+            "path": "SYNTHETIC_ONLY/demo_source",
+            "sha256": "7a30148ad8082c2215f6cccd736458e3fbfebaed785af862cff1cedb9479d573",
+            "format": "synthetic_metadata"
+          },
+          "source_signature": "1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        "protocol": {
+          "target_namespace": "Q_C10",
+          "cut_step": 5,
+          "absolute_start_step": 5,
+          "absolute_end_step": 300,
+          "parent_absolute_target_state": 300,
+          "commitment_steps": 10,
+          "native_H": 10,
+          "generated_length": 50
+        },
+        "input_signatures": {
+          "policy_sha256": null,
+          "encoder_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+          "preprocessing_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+          "normalizer_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+          "action_representation": "B_original_action_t",
+          "action_representation_sha256": "5555555555555555555555555555555555555555555555555555555555555555"
+        },
+        "outcome": {
+          "success": 0,
+          "outcome_complete": true,
+          "reason": "absolute_s300_complete",
+          "last_observed_parent_state": 300,
+          "first_success_step": null,
+          "terminated": null,
+          "truncated": true,
+          "missing_reasons": []
+        },
+        "repeats": {
+          "repeat_id": 0,
+          "planned_repeat_ids": [
+            0,
+            1
+          ],
+          "complete_repeat_ids": [
+            0
+          ],
+          "valid_pair_repeat_ids": [],
+          "planned": true,
+          "entered": true,
+          "completed": true,
+          "missing": false,
+          "comparison_arms": [
+            "local_plus",
+            "local_minus"
+          ],
+          "paired_members": []
+        },
+        "plans": {
+          "candidate_family": "local_plus",
+          "fresh_id": null,
+          "raw50_ref": null,
+          "raw_C10_sha256": "6666666666666666666666666666666666666666666666666666666666666666",
+          "raw_C5_sha256": null,
+          "raw_alias_group": "SYNTHETIC_RP",
+          "old_queue_age": null,
+          "old_queue_remaining": null,
+          "noise_ref": null,
+          "suffix_stream_id": null,
+          "local_direction_ref": null,
+          "physical_alias_of": null
+        },
+        "restoration": {
+          "level": "independent_replay_observable_match",
+          "schema_sha256": null,
+          "reference_state_ref": null,
+          "observed_state_ref": null,
+          "verification_ref": null,
+          "fields": [],
+          "unknown_fields": [
+            "full_state_closure"
+          ]
+        },
+        "window": {
+          "normal_demonstration": false,
+          "episode_ids": [
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0",
+            "SYNTHETIC_DEMO_0"
+          ],
+          "observed_steps": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "token_start_step": 0,
+          "token_end_step": 10,
+          "token_start_ref": {
+            "path": "SYNTHETIC_ONLY/token0",
+            "sha256": "677578fa480df7daa517233a6a8ac2ec5a5b88eec9a32e1764574bf97c140ffd",
+            "format": "synthetic_metadata"
+          },
+          "token_end_ref": {
+            "path": "SYNTHETIC_ONLY/token10",
+            "sha256": "2e2aaba981b52e7fc2ac2ea6005b52f7ef657592d2a7794a47a7d8e489f00f9e",
+            "format": "synthetic_metadata"
+          },
+          "token_shape": [
+            256,
+            2048
+          ],
+          "token_start_encoder_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+          "token_end_encoder_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+          "original_action_ref": {
+            "path": "SYNTHETIC_ONLY/action_t",
+            "sha256": "85f53f033b9e1461ba5c76839e5425ce0d550e15b791f408c0c7455d7eeb224f",
+            "format": "synthetic_metadata"
+          },
+          "original_action_shape": [
+            4
+          ],
+          "original_action_normalizer_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+          "executed_action_ref": {
+            "path": "SYNTHETIC_ONLY/executed10",
+            "sha256": "f6398803c62b6b0cd2c48c2d540a221e988b1aa0951d14b2b21d957a0e6fd030",
+            "format": "synthetic_metadata"
+          },
+          "executed_action_count": 10,
+          "executed_action_mapping_verified": true,
+          "arrived_future_steps": 10,
+          "feature_signature_verified": true,
+          "complete_GAF_target": true
+        },
+        "views": {
+          "LVM": {
+            "eligible": false,
+            "missing_reasons": [
+              "example_not_admitted"
+            ]
+          },
+          "D5": {
+            "eligible": false,
+            "missing_reasons": [
+              "example_not_admitted"
+            ]
+          },
+          "GAF": {
+            "eligible": false,
+            "missing_reasons": [
+              "example_not_admitted"
+            ]
+          },
+          "Q_BCE": {
+            "eligible": true,
+            "missing_reasons": []
+          },
+          "Q_GAIN": {
+            "eligible": false,
+            "missing_reasons": [
+              "example_not_admitted"
+            ]
+          },
+          "Q_PAIR": {
+            "eligible": false,
+            "missing_reasons": [
+              "example_not_admitted"
+            ]
+          },
+          "G0": {
+            "eligible": false,
+            "missing_reasons": [
+              "example_not_admitted"
+            ]
+          }
+        },
+        "missing_reasons": [
+          "full_state_closure"
+        ]
+      }
+    }
+  ]
+}

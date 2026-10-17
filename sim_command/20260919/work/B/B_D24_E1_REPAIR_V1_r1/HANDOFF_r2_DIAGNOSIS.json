@@ -1,0 +1,75 @@
+{
+  "at_utc": "2026-09-21T23:07:24.620001+00:00",
+  "original_run": "D24_E1_RENDER_REPAIR_r2",
+  "status": "known_pre_scientific_handoff_failure",
+  "reason": "90-second handoff expired with one original holder CUDA context still reported; formal command never launched",
+  "runner_entered": false,
+  "worker_claims_consumed": 0,
+  "scientific_operations": 0,
+  "original_result": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/D24_E1_RENDER_REPAIR_r2/RESULT.json",
+  "guard_restored": {
+    "pid": 35861,
+    "updated": 1790032042.3286147,
+    "gpus": {
+      "0": {
+        "state": "holder",
+        "manager_pid": 590489,
+        "driver_pids": [
+          1064520
+        ]
+      },
+      "1": {
+        "state": "holder",
+        "manager_pid": 590490,
+        "driver_pids": [
+          1064523
+        ]
+      },
+      "2": {
+        "state": "holder",
+        "manager_pid": 590491,
+        "driver_pids": [
+          1064524
+        ]
+      },
+      "3": {
+        "state": "holder",
+        "manager_pid": 590492,
+        "driver_pids": [
+          1064526
+        ]
+      },
+      "4": {
+        "state": "holder",
+        "manager_pid": 590493,
+        "driver_pids": [
+          1064528
+        ]
+      },
+      "5": {
+        "state": "holder",
+        "manager_pid": 590494,
+        "driver_pids": [
+          1064530
+        ]
+      },
+      "6": {
+        "state": "holder",
+        "manager_pid": 590495,
+        "driver_pids": [
+          1064532
+        ]
+      },
+      "7": {
+        "state": "holder",
+        "manager_pid": 590496,
+        "driver_pids": [
+          1064535
+        ]
+      }
+    }
+  },
+  "continuation": "D24_E1_RENDER_REPAIR_r3",
+  "change": "supported CORRECTOR_OCCUPANCY_HANDOFF_TIMEOUT_SECONDS=300; no guard edits or changed science",
+  "scientific_retry_index": 1
+}

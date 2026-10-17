@@ -1,0 +1,4040 @@
+{
+  "status": "complete",
+  "scope": "Read-only, post-hoc old-v3 diagnostic; no new simulation or fitting.",
+  "old_validation_used_to_choose_new_parameters": false,
+  "new_simulator_branches": 0,
+  "units": "Probabilities and gains are fractions; multiply gains by 100 for percentage points.",
+  "verification": {
+    "rescored_sources": 50,
+    "members": 4,
+    "candidates": 9,
+    "cpu_threads": 2,
+    "saved_probabilities_bitwise_equal": true,
+    "weights_before_after_sha_equal": true,
+    "dataset_file_seals_verified": true,
+    "source_outcomes_recomputed": true
+  },
+  "all_source_summary": {
+    "actual_a0": 0.6,
+    "predicted_a0": 0.5677790471771732,
+    "actual_selected": 0.54,
+    "predicted_selected": 0.6591637315927074,
+    "actual_gain": -0.06,
+    "predicted_gain": 0.09138468441553414,
+    "winner_gain_std": 0.042879601394459274,
+    "sources": 50,
+    "a0_bias_predicted_minus_actual": -0.032220952822826776,
+    "selected_bias_predicted_minus_actual": 0.11916373159270732,
+    "gain_bias_predicted_minus_actual": 0.15138468441553415,
+    "rescues": 16,
+    "harms": 40,
+    "a0_underestimated_sources": 31,
+    "negative_actual_gain_sources": 9,
+    "unanimous_positive_gain_but_negative_actual": 8
+  },
+  "accepted_summary": {
+    "actual_a0": 0.6686046511627907,
+    "predicted_a0": 0.6394522164428477,
+    "actual_selected": 0.5988372093023255,
+    "predicted_selected": 0.7457134773911431,
+    "actual_gain": -0.06976744186046512,
+    "predicted_gain": 0.10626126094829551,
+    "winner_gain_std": 0.036947653771128665,
+    "sources": 43,
+    "a0_bias_predicted_minus_actual": -0.029152434719943,
+    "selected_bias_predicted_minus_actual": 0.1468762680888176,
+    "gain_bias_predicted_minus_actual": 0.17602870280876062,
+    "rescues": 16,
+    "harms": 40,
+    "a0_underestimated_sources": 28,
+    "negative_actual_gain_sources": 9,
+    "unanimous_positive_gain_but_negative_actual": 8
+  },
+  "lift_summary": {
+    "actual_a0": 0.8125,
+    "predicted_a0": 0.21582949006309113,
+    "actual_selected": 0.16666666666666666,
+    "predicted_selected": 0.3664482403546572,
+    "actual_gain": -0.6458333333333334,
+    "predicted_gain": 0.15061875029156604,
+    "winner_gain_std": 0.0755506540859712,
+    "sources": 6,
+    "a0_bias_predicted_minus_actual": -0.5966705099369088,
+    "selected_bias_predicted_minus_actual": 0.19978157368799052,
+    "gain_bias_predicted_minus_actual": 0.7964520836248994,
+    "rescues": 0,
+    "harms": 31,
+    "a0_underestimated_sources": 5,
+    "negative_actual_gain_sources": 6,
+    "unanimous_positive_gain_but_negative_actual": 5
+  },
+  "selected_lift_sources": [
+    {
+      "case_id": "shelf-place-v3__2026103162",
+      "task": "shelf-place-v3",
+      "selected": "lift_return_regrasp",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.33066222444176674,
+      "actual_selected": 0.0,
+      "predicted_selected": 0.6034962236881256,
+      "actual_gain": -1.0,
+      "predicted_gain": 0.27283399924635887,
+      "member_predicted_a0": [
+        0.3582529127597809,
+        0.3942318558692932,
+        0.3352368175983429,
+        0.23492731153964996
+      ],
+      "member_predicted_selected": [
+        0.547815203666687,
+        0.7175583243370056,
+        0.5277109742164612,
+        0.6209003925323486
+      ],
+      "member_predicted_gains": [
+        0.18956229090690613,
+        0.3233264684677124,
+        0.1924741566181183,
+        0.38597308099269867
+      ],
+      "winner_gain_std": 0.084767067578572,
+      "raw_winner": "lift_return_regrasp",
+      "raw_predicted_gain": 0.27283399924635887,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 8,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__2026103163",
+      "task": "stick-pull-v3",
+      "selected": "lift_return_regrasp",
+      "accepted": true,
+      "actual_a0": 0.875,
+      "predicted_a0": 0.20053616911172867,
+      "actual_selected": 0.125,
+      "predicted_selected": 0.28912635892629623,
+      "actual_gain": -0.75,
+      "predicted_gain": 0.08859018981456757,
+      "member_predicted_a0": [
+        0.20850495994091034,
+        0.20810316503047943,
+        0.2109818011522293,
+        0.1745547503232956
+      ],
+      "member_predicted_selected": [
+        0.21448472142219543,
+        0.3845002353191376,
+        0.22474244236946106,
+        0.33277803659439087
+      ],
+      "member_predicted_gains": [
+        0.005979761481285095,
+        0.17639707028865814,
+        0.01376064121723175,
+        0.15822328627109528
+      ],
+      "winner_gain_std": 0.07902967890831387,
+      "raw_winner": "lift_return_regrasp",
+      "raw_predicted_gain": 0.08859018981456757,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 6,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__2026103172",
+      "task": "shelf-place-v3",
+      "selected": "lift_return_regrasp",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.1630429197102785,
+      "actual_selected": 0.625,
+      "predicted_selected": 0.2799031287431717,
+      "actual_gain": -0.375,
+      "predicted_gain": 0.11686020903289318,
+      "member_predicted_a0": [
+        0.16681531071662903,
+        0.20733626186847687,
+        0.1951143592596054,
+        0.08290574699640274
+      ],
+      "member_predicted_selected": [
+        0.19301840662956238,
+        0.39425167441368103,
+        0.26747459173202515,
+        0.2648678421974182
+      ],
+      "member_predicted_gains": [
+        0.02620309591293335,
+        0.18691541254520416,
+        0.07236023247241974,
+        0.18196209520101547
+      ],
+      "winner_gain_std": 0.06954305715692678,
+      "raw_winner": "lift_return_regrasp",
+      "raw_predicted_gain": 0.11686020903289318,
+      "actual_backoff": 0.125,
+      "rescues": 0,
+      "harms": 3,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__2026103182",
+      "task": "shelf-place-v3",
+      "selected": "lift_return_regrasp",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.2027987502515316,
+      "actual_selected": 0.0,
+      "predicted_selected": 0.431547187268734,
+      "actual_gain": -1.0,
+      "predicted_gain": 0.22874843701720238,
+      "member_predicted_a0": [
+        0.20218487083911896,
+        0.2801953852176666,
+        0.23877622187137604,
+        0.09003852307796478
+      ],
+      "member_predicted_selected": [
+        0.3128194510936737,
+        0.5903608798980713,
+        0.4270499646663666,
+        0.39595845341682434
+      ],
+      "member_predicted_gains": [
+        0.11063458025455475,
+        0.31016549468040466,
+        0.18827374279499054,
+        0.30591993033885956
+      ],
+      "winner_gain_std": 0.08392446111199728,
+      "raw_winner": "lift_return_regrasp",
+      "raw_predicted_gain": 0.22874843701720238,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 8,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__2026103183",
+      "task": "stick-pull-v3",
+      "selected": "lift_return_regrasp",
+      "accepted": true,
+      "actual_a0": 0.875,
+      "predicted_a0": 0.23774122819304466,
+      "actual_selected": 0.25,
+      "predicted_selected": 0.3071061633527279,
+      "actual_gain": -0.625,
+      "predicted_gain": 0.06936493515968323,
+      "member_predicted_a0": [
+        0.22713878750801086,
+        0.24467605352401733,
+        0.2654781639575958,
+        0.21367190778255463
+      ],
+      "member_predicted_selected": [
+        0.23707754909992218,
+        0.40585196018218994,
+        0.26214438676834106,
+        0.3233507573604584
+      ],
+      "member_predicted_gains": [
+        0.009938761591911316,
+        0.1611759066581726,
+        -0.0033337771892547607,
+        0.10967884957790375
+      ],
+      "winner_gain_std": 0.06868595028336694,
+      "raw_winner": "lift_return_regrasp",
+      "raw_predicted_gain": 0.06936493515968323,
+      "actual_backoff": 0.5,
+      "rescues": 0,
+      "harms": 5,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__2026103192",
+      "task": "shelf-place-v3",
+      "selected": "lift_return_regrasp",
+      "accepted": true,
+      "actual_a0": 0.125,
+      "predicted_a0": 0.16019564867019653,
+      "actual_selected": 0.0,
+      "predicted_selected": 0.28751038014888763,
+      "actual_gain": -0.125,
+      "predicted_gain": 0.1273147314786911,
+      "member_predicted_a0": [
+        0.1467311829328537,
+        0.22083266079425812,
+        0.20220467448234558,
+        0.07101407647132874
+      ],
+      "member_predicted_selected": [
+        0.170344740152359,
+        0.41645416617393494,
+        0.3148132264614105,
+        0.24842938780784607
+      ],
+      "member_predicted_gains": [
+        0.02361355721950531,
+        0.19562150537967682,
+        0.11260855197906494,
+        0.17741531133651733
+      ],
+      "winner_gain_std": 0.0673537094766503,
+      "raw_winner": "lift_return_regrasp",
+      "raw_predicted_gain": 0.1273147314786911,
+      "actual_backoff": 0.25,
+      "rescues": 0,
+      "harms": 1,
+      "actual_outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "training_lift": {
+    "reached_sources": 99,
+    "positive": 9,
+    "negative": 51,
+    "zero": 39,
+    "mean_gain": -0.33207070707070707
+  },
+  "overall_harms": 40,
+  "member_diagnostics": [
+    {
+      "member": "1041",
+      "all_a0_bias": -0.038731236532330515,
+      "lift_a0_bias": -0.5942286625504494,
+      "lift_gain_bias": 0.706822007894516
+    },
+    {
+      "member": "1042",
+      "all_a0_bias": -0.016520786583423614,
+      "lift_a0_bias": -0.5532707696159681,
+      "lift_gain_bias": 0.8714336430033048
+    },
+    {
+      "member": "1043",
+      "all_a0_bias": -0.024888738058507442,
+      "lift_a0_bias": -0.5712013269464175,
+      "lift_gain_bias": 0.7418572579820951
+    },
+    {
+      "member": "1044",
+      "all_a0_bias": -0.04874305011704564,
+      "lift_a0_bias": -0.6679812806348006,
+      "lift_gain_bias": 0.8656954256196817
+    }
+  ],
+  "member_a0_error_correlation": [
+    [
+      1.0,
+      0.9934922688638783,
+      0.9865592755921376,
+      0.9966621867322779
+    ],
+    [
+      0.9934922688638783,
+      1.0,
+      0.9905807994373041,
+      0.9892832438532851
+    ],
+    [
+      0.9865592755921376,
+      0.9905807994373043,
+      0.9999999999999999,
+      0.9857715187785486
+    ],
+    [
+      0.996662186732278,
+      0.9892832438532851,
+      0.9857715187785485,
+      1.0
+    ]
+  ],
+  "member_selected_gain_error_correlation": [
+    [
+      0.9999999999999998,
+      0.9831410681085886,
+      0.9683492353246012,
+      0.9685000496981097
+    ],
+    [
+      0.9831410681085887,
+      1.0,
+      0.9681349272396698,
+      0.9743790915503985
+    ],
+    [
+      0.9683492353246013,
+      0.9681349272396699,
+      1.0,
+      0.9733257755797943
+    ],
+    [
+      0.9685000496981097,
+      0.9743790915503984,
+      0.9733257755797944,
+      1.0
+    ]
+  ],
+  "scale_cancellation": {
+    "rule": {
+      "scale": 0.15518042704859472,
+      "kappa": 1.0,
+      "margin": 0.0,
+      "disabled": false
+    },
+    "formula": "scale*(mean_gain-kappa*std_gain)>0 iff mean_gain>kappa*std_gain when scale>0",
+    "checked_predictions": 99,
+    "all_decisions_identical": true,
+    "calibration_accepted": 41,
+    "validation_accepted": 43,
+    "action_magnitude_changed": false
+  },
+  "raw_calibration_bins": [
+    {
+      "sources": 10,
+      "predicted_mean": 0.01892849390860647,
+      "actual_mean": 0.1125
+    },
+    {
+      "sources": 10,
+      "predicted_mean": 0.057885255198925734,
+      "actual_mean": 0.075
+    },
+    {
+      "sources": 10,
+      "predicted_mean": 0.0893696216866374,
+      "actual_mean": 0.05
+    },
+    {
+      "sources": 10,
+      "predicted_mean": 0.1309360831975937,
+      "actual_mean": 0.05
+    },
+    {
+      "sources": 9,
+      "predicted_mean": 0.2246999806827969,
+      "actual_mean": -0.041666666666666664
+    }
+  ],
+  "rows": [
+    {
+      "case_id": "disassemble-v3__2026103150",
+      "task": "disassemble-v3",
+      "selected": "gripper_minus",
+      "accepted": true,
+      "actual_a0": 0.25,
+      "predicted_a0": 0.9002328962087631,
+      "actual_selected": 0.125,
+      "predicted_selected": 0.9679426550865173,
+      "actual_gain": -0.125,
+      "predicted_gain": 0.06770975887775421,
+      "member_predicted_a0": [
+        0.8754169940948486,
+        0.9311547875404358,
+        0.8997930884361267,
+        0.8945667147636414
+      ],
+      "member_predicted_selected": [
+        0.9705586433410645,
+        0.9763879776000977,
+        0.9588307738304138,
+        0.9659932255744934
+      ],
+      "member_predicted_gains": [
+        0.09514164924621582,
+        0.045233190059661865,
+        0.05903768539428711,
+        0.07142651081085205
+      ],
+      "winner_gain_std": 0.018348868210713826,
+      "raw_winner": "gripper_minus",
+      "raw_predicted_gain": 0.06770975887775421,
+      "actual_backoff": 0.875,
+      "rescues": 1,
+      "harms": 2,
+      "actual_outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026103151",
+      "task": "pick-place-wall-v3",
+      "selected": "gripper_plus",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.8646358698606491,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.939783900976181,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.07514803111553192,
+      "member_predicted_a0": [
+        0.8546853065490723,
+        0.885667622089386,
+        0.8644985556602478,
+        0.8536919951438904
+      ],
+      "member_predicted_selected": [
+        0.9492918252944946,
+        0.9515410661697388,
+        0.9233908653259277,
+        0.934911847114563
+      ],
+      "member_predicted_gains": [
+        0.09460651874542236,
+        0.06587344408035278,
+        0.05889230966567993,
+        0.08121985197067261
+      ],
+      "winner_gain_std": 0.013836240402181257,
+      "raw_winner": "gripper_plus",
+      "raw_predicted_gain": 0.07514803111553192,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__2026103152",
+      "task": "shelf-place-v3",
+      "selected": "gripper_plus",
+      "accepted": true,
+      "actual_a0": 0.0,
+      "predicted_a0": 0.37727922201156616,
+      "actual_selected": 0.0,
+      "predicted_selected": 0.46431051939725876,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.0870312973856926,
+      "member_predicted_a0": [
+        0.3840653598308563,
+        0.3692653477191925,
+        0.42797204852104187,
+        0.32781413197517395
+      ],
+      "member_predicted_selected": [
+        0.4916311502456665,
+        0.4539896249771118,
+        0.4786877930164337,
+        0.432933509349823
+      ],
+      "member_predicted_gains": [
+        0.10756579041481018,
+        0.08472427725791931,
+        0.050715744495391846,
+        0.10511937737464905
+      ],
+      "winner_gain_std": 0.022765026714501937,
+      "raw_winner": "gripper_plus",
+      "raw_predicted_gain": 0.0870312973856926,
+      "actual_backoff": 0.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__2026103153",
+      "task": "stick-pull-v3",
+      "selected": "replan",
+      "accepted": false,
+      "actual_a0": 0.0,
+      "predicted_a0": 0.030914452858269215,
+      "actual_selected": 0.0,
+      "predicted_selected": 0.030914452858269215,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.0,
+      "member_predicted_a0": [
+        0.026213372126221657,
+        0.04097680747509003,
+        0.033869896084070206,
+        0.02259773574769497
+      ],
+      "member_predicted_selected": [
+        0.026213372126221657,
+        0.04097680747509003,
+        0.033869896084070206,
+        0.02259773574769497
+      ],
+      "member_predicted_gains": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "winner_gain_std": 0.0133974583672366,
+      "raw_winner": "backoff_reapproach",
+      "raw_predicted_gain": 0.012891726102679968,
+      "actual_backoff": 0.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__2026103154",
+      "task": "stick-push-v3",
+      "selected": "gripper_minus",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.8524340093135834,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.9299116134643555,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.0774776041507721,
+      "member_predicted_a0": [
+        0.8882633447647095,
+        0.8695933818817139,
+        0.8018627166748047,
+        0.8500165939331055
+      ],
+      "member_predicted_selected": [
+        0.9624648690223694,
+        0.9431411027908325,
+        0.8942545056343079,
+        0.9197859764099121
+      ],
+      "member_predicted_gains": [
+        0.07420152425765991,
+        0.07354772090911865,
+        0.09239178895950317,
+        0.06976938247680664
+      ],
+      "winner_gain_std": 0.008775338620860424,
+      "raw_winner": "gripper_minus",
+      "raw_predicted_gain": 0.0774776041507721,
+      "actual_backoff": 0.875,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__2026103155",
+      "task": "disassemble-v3",
+      "selected": "gripper_plus",
+      "accepted": true,
+      "actual_a0": 0.0,
+      "predicted_a0": 0.8618843108415604,
+      "actual_selected": 0.0,
+      "predicted_selected": 0.9540559947490692,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.09217168390750885,
+      "member_predicted_a0": [
+        0.8373116254806519,
+        0.9037861824035645,
+        0.8575261235237122,
+        0.848913311958313
+      ],
+      "member_predicted_selected": [
+        0.960171103477478,
+        0.966688871383667,
+        0.9397251605987549,
+        0.949638843536377
+      ],
+      "member_predicted_gains": [
+        0.12285947799682617,
+        0.06290268898010254,
+        0.08219903707504272,
+        0.10072553157806396
+      ],
+      "winner_gain_std": 0.022198179908187482,
+      "raw_winner": "gripper_plus",
+      "raw_predicted_gain": 0.09217168390750885,
+      "actual_backoff": 0.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026103156",
+      "task": "pick-place-wall-v3",
+      "selected": "gripper_minus",
+      "accepted": true,
+      "actual_a0": 0.75,
+      "predicted_a0": 0.8984615206718445,
+      "actual_selected": 0.375,
+      "predicted_selected": 0.9578189998865128,
+      "actual_gain": -0.375,
+      "predicted_gain": 0.059357479214668274,
+      "member_predicted_a0": [
+        0.8812756538391113,
+        0.9151212573051453,
+        0.9089658856391907,
+        0.8884832859039307
+      ],
+      "member_predicted_selected": [
+        0.9597296118736267,
+        0.9665501713752747,
+        0.9521386623382568,
+        0.9528575539588928
+      ],
+      "member_predicted_gains": [
+        0.07845395803451538,
+        0.051428914070129395,
+        0.04317277669906616,
+        0.06437426805496216
+      ],
+      "winner_gain_std": 0.013366473117044569,
+      "raw_winner": "gripper_minus",
+      "raw_predicted_gain": 0.059357479214668274,
+      "actual_backoff": 1.0,
+      "rescues": 1,
+      "harms": 4,
+      "actual_outcomes": [
+        [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__2026103157",
+      "task": "shelf-place-v3",
+      "selected": "replan",
+      "accepted": false,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.529831275343895,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.529831275343895,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.0,
+      "member_predicted_a0": [
+        0.4329136610031128,
+        0.5904428362846375,
+        0.7014084458351135,
+        0.39456015825271606
+      ],
+      "member_predicted_selected": [
+        0.4329136610031128,
+        0.5904428362846375,
+        0.7014084458351135,
+        0.39456015825271606
+      ],
+      "member_predicted_gains": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "winner_gain_std": 0.24050676761270215,
+      "raw_winner": "settle_close",
+      "raw_predicted_gain": 0.14481429010629654,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__2026103158",
+      "task": "stick-pull-v3",
+      "selected": "backoff_reapproach",
+      "accepted": true,
+      "actual_a0": 0.125,
+      "predicted_a0": 0.12682724744081497,
+      "actual_selected": 0.0,
+      "predicted_selected": 0.2032950334250927,
+      "actual_gain": -0.125,
+      "predicted_gain": 0.07646778598427773,
+      "member_predicted_a0": [
+        0.12990717589855194,
+        0.1514732986688614,
+        0.09735102951526642,
+        0.12857748568058014
+      ],
+      "member_predicted_selected": [
+        0.1786925494670868,
+        0.20192590355873108,
+        0.10625319182872772,
+        0.3263084888458252
+      ],
+      "member_predicted_gains": [
+        0.04878537356853485,
+        0.05045260488986969,
+        0.008902162313461304,
+        0.19773100316524506
+      ],
+      "winner_gain_std": 0.07196003569279784,
+      "raw_winner": "backoff_reapproach",
+      "raw_predicted_gain": 0.07646778598427773,
+      "actual_backoff": 0.0,
+      "rescues": 0,
+      "harms": 1,
+      "actual_outcomes": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__2026103159",
+      "task": "stick-push-v3",
+      "selected": "gripper_plus",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.9574341326951981,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.9838651567697525,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.026431024074554443,
+      "member_predicted_a0": [
+        0.9588558673858643,
+        0.9602442383766174,
+        0.9589811563491821,
+        0.9516552686691284
+      ],
+      "member_predicted_selected": [
+        0.9880868196487427,
+        0.9881550073623657,
+        0.9808005094528198,
+        0.9784182906150818
+      ],
+      "member_predicted_gains": [
+        0.029230952262878418,
+        0.02791076898574829,
+        0.021819353103637695,
+        0.02676302194595337
+      ],
+      "winner_gain_std": 0.002802096295302184,
+      "raw_winner": "gripper_plus",
+      "raw_predicted_gain": 0.026431024074554443,
+      "actual_backoff": 0.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__2026103160",
+      "task": "disassemble-v3",
+      "selected": "gripper_plus",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.9048109203577042,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.9689221829175949,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.06411126255989075,
+      "member_predicted_a0": [
+        0.9002565741539001,
+        0.9245008230209351,
+        0.8972099423408508,
+        0.8972763419151306
+      ],
+      "member_predicted_selected": [
+        0.9769232869148254,
+        0.97408527135849,
+        0.9577077031135559,
+        0.9669724702835083
+      ],
+      "member_predicted_gains": [
+        0.07666671276092529,
+        0.04958444833755493,
+        0.06049776077270508,
+        0.06969612836837769
+      ],
+      "winner_gain_std": 0.010160164645143762,
+      "raw_winner": "gripper_plus",
+      "raw_predicted_gain": 0.06411126255989075,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026103161",
+      "task": "pick-place-wall-v3",
+      "selected": "gripper_minus",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.9556819945573807,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.9850550591945648,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.029373064637184143,
+      "member_predicted_a0": [
+        0.9294814467430115,
+        0.9778724908828735,
+        0.9703079462051392,
+        0.9450660943984985
+      ],
+      "member_predicted_selected": [
+        0.9809638261795044,
+        0.9927657842636108,
+        0.985673725605011,
+        0.9808169007301331
+      ],
+      "member_predicted_gains": [
+        0.05148237943649292,
+        0.014893293380737305,
+        0.015365779399871826,
+        0.03575080633163452
+      ],
+      "winner_gain_std": 0.015291870433129792,
+      "raw_winner": "gripper_minus",
+      "raw_predicted_gain": 0.029373064637184143,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__2026103162",
+      "task": "shelf-place-v3",
+      "selected": "lift_return_regrasp",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.33066222444176674,
+      "actual_selected": 0.0,
+      "predicted_selected": 0.6034962236881256,
+      "actual_gain": -1.0,
+      "predicted_gain": 0.27283399924635887,
+      "member_predicted_a0": [
+        0.3582529127597809,
+        0.3942318558692932,
+        0.3352368175983429,
+        0.23492731153964996
+      ],
+      "member_predicted_selected": [
+        0.547815203666687,
+        0.7175583243370056,
+        0.5277109742164612,
+        0.6209003925323486
+      ],
+      "member_predicted_gains": [
+        0.18956229090690613,
+        0.3233264684677124,
+        0.1924741566181183,
+        0.38597308099269867
+      ],
+      "winner_gain_std": 0.084767067578572,
+      "raw_winner": "lift_return_regrasp",
+      "raw_predicted_gain": 0.27283399924635887,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 8,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__2026103163",
+      "task": "stick-pull-v3",
+      "selected": "lift_return_regrasp",
+      "accepted": true,
+      "actual_a0": 0.875,
+      "predicted_a0": 0.20053616911172867,
+      "actual_selected": 0.125,
+      "predicted_selected": 0.28912635892629623,
+      "actual_gain": -0.75,
+      "predicted_gain": 0.08859018981456757,
+      "member_predicted_a0": [
+        0.20850495994091034,
+        0.20810316503047943,
+        0.2109818011522293,
+        0.1745547503232956
+      ],
+      "member_predicted_selected": [
+        0.21448472142219543,
+        0.3845002353191376,
+        0.22474244236946106,
+        0.33277803659439087
+      ],
+      "member_predicted_gains": [
+        0.005979761481285095,
+        0.17639707028865814,
+        0.01376064121723175,
+        0.15822328627109528
+      ],
+      "winner_gain_std": 0.07902967890831387,
+      "raw_winner": "lift_return_regrasp",
+      "raw_predicted_gain": 0.08859018981456757,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 6,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__2026103164",
+      "task": "stick-push-v3",
+      "selected": "gripper_plus",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.9493489414453506,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.9806054383516312,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.03125649690628052,
+      "member_predicted_a0": [
+        0.9511222243309021,
+        0.9530428647994995,
+        0.9496784210205078,
+        0.9435522556304932
+      ],
+      "member_predicted_selected": [
+        0.9856598377227783,
+        0.9859402179718018,
+        0.9763674139976501,
+        0.9744542837142944
+      ],
+      "member_predicted_gains": [
+        0.03453761339187622,
+        0.032897353172302246,
+        0.026688992977142334,
+        0.03090202808380127
+      ],
+      "winner_gain_std": 0.002934530412459259,
+      "raw_winner": "gripper_plus",
+      "raw_predicted_gain": 0.03125649690628052,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__2026103165",
+      "task": "disassemble-v3",
+      "selected": "gripper_plus",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.8642022162675858,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.9545323550701141,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.09033013880252838,
+      "member_predicted_a0": [
+        0.8519035577774048,
+        0.9004431962966919,
+        0.8543622493743896,
+        0.8500998616218567
+      ],
+      "member_predicted_selected": [
+        0.9642431735992432,
+        0.9654960036277771,
+        0.9383016228675842,
+        0.950088620185852
+      ],
+      "member_predicted_gains": [
+        0.11233961582183838,
+        0.0650528073310852,
+        0.08393937349319458,
+        0.09998875856399536
+      ],
+      "winner_gain_std": 0.017730562469337595,
+      "raw_winner": "gripper_plus",
+      "raw_predicted_gain": 0.09033013880252838,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026103166",
+      "task": "pick-place-wall-v3",
+      "selected": "xyz_minus",
+      "accepted": true,
+      "actual_a0": 0.0,
+      "predicted_a0": 0.7295425236225128,
+      "actual_selected": 0.0,
+      "predicted_selected": 0.8952636569738388,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.165721133351326,
+      "member_predicted_a0": [
+        0.7277636528015137,
+        0.7254818677902222,
+        0.7317042946815491,
+        0.7332202792167664
+      ],
+      "member_predicted_selected": [
+        0.9281337857246399,
+        0.9139702320098877,
+        0.8229806423187256,
+        0.915969967842102
+      ],
+      "member_predicted_gains": [
+        0.20037013292312622,
+        0.18848836421966553,
+        0.09127634763717651,
+        0.1827496886253357
+      ],
+      "winner_gain_std": 0.043447951008892594,
+      "raw_winner": "xyz_minus",
+      "raw_predicted_gain": 0.165721133351326,
+      "actual_backoff": 0.5,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__2026103167",
+      "task": "shelf-place-v3",
+      "selected": "backoff_reapproach",
+      "accepted": true,
+      "actual_a0": 0.125,
+      "predicted_a0": 0.2591862231492996,
+      "actual_selected": 0.625,
+      "predicted_selected": 0.4318856745958328,
+      "actual_gain": 0.5,
+      "predicted_gain": 0.1726994514465332,
+      "member_predicted_a0": [
+        0.24080544710159302,
+        0.2584659457206726,
+        0.306948184967041,
+        0.23052531480789185
+      ],
+      "member_predicted_selected": [
+        0.5528492331504822,
+        0.5780172944068909,
+        0.27741992473602295,
+        0.3192562460899353
+      ],
+      "member_predicted_gains": [
+        0.31204378604888916,
+        0.31955134868621826,
+        -0.029528260231018066,
+        0.08873093128204346
+      ],
+      "winner_gain_std": 0.1491048985258545,
+      "raw_winner": "backoff_reapproach",
+      "raw_predicted_gain": 0.1726994514465332,
+      "actual_backoff": 0.625,
+      "rescues": 5,
+      "harms": 1,
+      "actual_outcomes": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__2026103168",
+      "task": "stick-pull-v3",
+      "selected": "backoff_reapproach",
+      "accepted": true,
+      "actual_a0": 0.0,
+      "predicted_a0": 0.023667666595429182,
+      "actual_selected": 0.0,
+      "predicted_selected": 0.033272696658968925,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.009605030063539743,
+      "member_predicted_a0": [
+        0.02221771888434887,
+        0.03335266187787056,
+        0.02325264923274517,
+        0.01584763638675213
+      ],
+      "member_predicted_selected": [
+        0.028370685875415802,
+        0.03436053916811943,
+        0.02889528125524521,
+        0.04146428033709526
+      ],
+      "member_predicted_gains": [
+        0.006152966991066933,
+        0.0010078772902488708,
+        0.005642632022500038,
+        0.025616643950343132
+      ],
+      "winner_gain_std": 0.009459124599551269,
+      "raw_winner": "backoff_reapproach",
+      "raw_predicted_gain": 0.009605030063539743,
+      "actual_backoff": 0.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__2026103169",
+      "task": "stick-push-v3",
+      "selected": "gripper_plus",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.964798241853714,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.9868269115686417,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.022028669714927673,
+      "member_predicted_a0": [
+        0.9644514918327332,
+        0.9682794809341431,
+        0.9675938487052917,
+        0.958868145942688
+      ],
+      "member_predicted_selected": [
+        0.9896907806396484,
+        0.9907320141792297,
+        0.9852678775787354,
+        0.9816169738769531
+      ],
+      "member_predicted_gains": [
+        0.025239288806915283,
+        0.02245253324508667,
+        0.017674028873443604,
+        0.022748827934265137
+      ],
+      "winner_gain_std": 0.002737209343712798,
+      "raw_winner": "gripper_plus",
+      "raw_predicted_gain": 0.022028669714927673,
+      "actual_backoff": 0.25,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__2026103170",
+      "task": "disassemble-v3",
+      "selected": "gripper_plus",
+      "accepted": true,
+      "actual_a0": 0.0,
+      "predicted_a0": 0.8665736317634583,
+      "actual_selected": 0.0,
+      "predicted_selected": 0.955806165933609,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.08923253417015076,
+      "member_predicted_a0": [
+        0.8021382093429565,
+        0.9549692869186401,
+        0.866020679473877,
+        0.8431663513183594
+      ],
+      "member_predicted_selected": [
+        0.9488593339920044,
+        0.9844973087310791,
+        0.9426731467247009,
+        0.9471948742866516
+      ],
+      "member_predicted_gains": [
+        0.14672112464904785,
+        0.029528021812438965,
+        0.07665246725082397,
+        0.10402852296829224
+      ],
+      "winner_gain_std": 0.04256391135496116,
+      "raw_winner": "gripper_plus",
+      "raw_predicted_gain": 0.08923253417015076,
+      "actual_backoff": 0.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026103171",
+      "task": "pick-place-wall-v3",
+      "selected": "backoff_reapproach",
+      "accepted": true,
+      "actual_a0": 0.0,
+      "predicted_a0": 0.5439906567335129,
+      "actual_selected": 0.0,
+      "predicted_selected": 0.7890597283840179,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.24506907165050507,
+      "member_predicted_a0": [
+        0.48129212856292725,
+        0.47442036867141724,
+        0.6497386693954468,
+        0.5705114603042603
+      ],
+      "member_predicted_selected": [
+        0.7050501704216003,
+        0.8833692669868469,
+        0.894435465335846,
+        0.6733840107917786
+      ],
+      "member_predicted_gains": [
+        0.2237580418586731,
+        0.4089488983154297,
+        0.24469679594039917,
+        0.10287255048751831
+      ],
+      "winner_gain_std": 0.10900773687974419,
+      "raw_winner": "backoff_reapproach",
+      "raw_predicted_gain": 0.24506907165050507,
+      "actual_backoff": 0.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__2026103172",
+      "task": "shelf-place-v3",
+      "selected": "lift_return_regrasp",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.1630429197102785,
+      "actual_selected": 0.625,
+      "predicted_selected": 0.2799031287431717,
+      "actual_gain": -0.375,
+      "predicted_gain": 0.11686020903289318,
+      "member_predicted_a0": [
+        0.16681531071662903,
+        0.20733626186847687,
+        0.1951143592596054,
+        0.08290574699640274
+      ],
+      "member_predicted_selected": [
+        0.19301840662956238,
+        0.39425167441368103,
+        0.26747459173202515,
+        0.2648678421974182
+      ],
+      "member_predicted_gains": [
+        0.02620309591293335,
+        0.18691541254520416,
+        0.07236023247241974,
+        0.18196209520101547
+      ],
+      "winner_gain_std": 0.06954305715692678,
+      "raw_winner": "lift_return_regrasp",
+      "raw_predicted_gain": 0.11686020903289318,
+      "actual_backoff": 0.125,
+      "rescues": 0,
+      "harms": 3,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__2026103173",
+      "task": "stick-pull-v3",
+      "selected": "replan",
+      "accepted": false,
+      "actual_a0": 0.0,
+      "predicted_a0": 0.012926830677315593,
+      "actual_selected": 0.0,
+      "predicted_selected": 0.012926830677315593,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.0,
+      "member_predicted_a0": [
+        0.018658693879842758,
+        0.01611146703362465,
+        0.010309439152479172,
+        0.006627722643315792
+      ],
+      "member_predicted_selected": [
+        0.018658693879842758,
+        0.01611146703362465,
+        0.010309439152479172,
+        0.006627722643315792
+      ],
+      "member_predicted_gains": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "winner_gain_std": 0.011008392082918053,
+      "raw_winner": "backoff_reapproach",
+      "raw_predicted_gain": 0.008419109275564551,
+      "actual_backoff": 0.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__2026103174",
+      "task": "stick-push-v3",
+      "selected": "gripper_minus",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.9750579595565796,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.9918627738952637,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.016804814338684082,
+      "member_predicted_a0": [
+        0.9788345098495483,
+        0.9796577095985413,
+        0.9720341563224792,
+        0.9697054624557495
+      ],
+      "member_predicted_selected": [
+        0.9946868419647217,
+        0.9947949051856995,
+        0.98908931016922,
+        0.9888800382614136
+      ],
+      "member_predicted_gains": [
+        0.01585233211517334,
+        0.015137195587158203,
+        0.017055153846740723,
+        0.019174575805664062
+      ],
+      "winner_gain_std": 0.0015302462192586727,
+      "raw_winner": "gripper_minus",
+      "raw_predicted_gain": 0.016804814338684082,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__2026103175",
+      "task": "disassemble-v3",
+      "selected": "gripper_minus",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.7816535979509354,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.9208548963069916,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.1392012983560562,
+      "member_predicted_a0": [
+        0.7761098146438599,
+        0.807131826877594,
+        0.7555645704269409,
+        0.7878081798553467
+      ],
+      "member_predicted_selected": [
+        0.9412399530410767,
+        0.9291808009147644,
+        0.8874562382698059,
+        0.9255425930023193
+      ],
+      "member_predicted_gains": [
+        0.1651301383972168,
+        0.12204897403717041,
+        0.131891667842865,
+        0.13773441314697266
+      ],
+      "winner_gain_std": 0.015985066670773835,
+      "raw_winner": "gripper_minus",
+      "raw_predicted_gain": 0.1392012983560562,
+      "actual_backoff": 0.625,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026103176",
+      "task": "pick-place-wall-v3",
+      "selected": "gripper_plus",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.869300976395607,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.9439937919378281,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.07469281554222107,
+      "member_predicted_a0": [
+        0.8438525199890137,
+        0.8816812634468079,
+        0.8818808197975159,
+        0.8697893023490906
+      ],
+      "member_predicted_selected": [
+        0.9448418021202087,
+        0.9516828060150146,
+        0.9361312985420227,
+        0.9433192610740662
+      ],
+      "member_predicted_gains": [
+        0.10098928213119507,
+        0.07000154256820679,
+        0.054250478744506836,
+        0.07352995872497559
+      ],
+      "winner_gain_std": 0.01682820227260133,
+      "raw_winner": "gripper_plus",
+      "raw_predicted_gain": 0.07469281554222107,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__2026103177",
+      "task": "shelf-place-v3",
+      "selected": "backoff_reapproach",
+      "accepted": true,
+      "actual_a0": 0.0,
+      "predicted_a0": 0.42621181905269623,
+      "actual_selected": 0.25,
+      "predicted_selected": 0.6969610527157784,
+      "actual_gain": 0.25,
+      "predicted_gain": 0.2707492336630821,
+      "member_predicted_a0": [
+        0.34136322140693665,
+        0.46933549642562866,
+        0.5343092083930969,
+        0.3598393499851227
+      ],
+      "member_predicted_selected": [
+        0.8043433427810669,
+        0.8174185752868652,
+        0.7293742895126343,
+        0.436708003282547
+      ],
+      "member_predicted_gains": [
+        0.46298012137413025,
+        0.3480830788612366,
+        0.19506508111953735,
+        0.07686865329742432
+      ],
+      "winner_gain_std": 0.14684260978379926,
+      "raw_winner": "backoff_reapproach",
+      "raw_predicted_gain": 0.2707492336630821,
+      "actual_backoff": 0.25,
+      "rescues": 2,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__2026103178",
+      "task": "stick-pull-v3",
+      "selected": "replan",
+      "accepted": false,
+      "actual_a0": 0.125,
+      "predicted_a0": 0.06777774170041084,
+      "actual_selected": 0.125,
+      "predicted_selected": 0.06777774170041084,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.0,
+      "member_predicted_a0": [
+        0.0628531351685524,
+        0.07934479415416718,
+        0.06377175450325012,
+        0.06514128297567368
+      ],
+      "member_predicted_selected": [
+        0.0628531351685524,
+        0.07934479415416718,
+        0.06377175450325012,
+        0.06514128297567368
+      ],
+      "member_predicted_gains": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "winner_gain_std": 0.10629973529622526,
+      "raw_winner": "backoff_reapproach",
+      "raw_predicted_gain": 0.09817708097398281,
+      "actual_backoff": 0.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__2026103179",
+      "task": "stick-push-v3",
+      "selected": "backoff_reapproach",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.6253653764724731,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.8081180304288864,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.18275265395641327,
+      "member_predicted_a0": [
+        0.6807931065559387,
+        0.677838146686554,
+        0.5120170712471008,
+        0.6308131814002991
+      ],
+      "member_predicted_selected": [
+        0.845353364944458,
+        0.8216062188148499,
+        0.8905454874038696,
+        0.6749670505523682
+      ],
+      "member_predicted_gains": [
+        0.1645602583885193,
+        0.1437680721282959,
+        0.3785284161567688,
+        0.04415386915206909
+      ],
+      "winner_gain_std": 0.12184881317762493,
+      "raw_winner": "backoff_reapproach",
+      "raw_predicted_gain": 0.18275265395641327,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__2026103180",
+      "task": "disassemble-v3",
+      "selected": "backoff_reapproach",
+      "accepted": true,
+      "actual_a0": 0.0,
+      "predicted_a0": 0.7768247872591019,
+      "actual_selected": 0.0,
+      "predicted_selected": 0.9989029765129089,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.22207818925380707,
+      "member_predicted_a0": [
+        0.8015947937965393,
+        0.7852321863174438,
+        0.7391349673271179,
+        0.7813372015953064
+      ],
+      "member_predicted_selected": [
+        0.99945467710495,
+        0.9988512992858887,
+        0.9996610879898071,
+        0.99764484167099
+      ],
+      "member_predicted_gains": [
+        0.19785988330841064,
+        0.21361911296844482,
+        0.2605261206626892,
+        0.2163076400756836
+      ],
+      "winner_gain_std": 0.02328961668805247,
+      "raw_winner": "backoff_reapproach",
+      "raw_predicted_gain": 0.22207818925380707,
+      "actual_backoff": 0.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026103181",
+      "task": "pick-place-wall-v3",
+      "selected": "gripper_minus",
+      "accepted": true,
+      "actual_a0": 0.875,
+      "predicted_a0": 0.5788397341966629,
+      "actual_selected": 0.875,
+      "predicted_selected": 0.7592370212078094,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.18039728701114655,
+      "member_predicted_a0": [
+        0.579977810382843,
+        0.5351660251617432,
+        0.5972437858581543,
+        0.6029713153839111
+      ],
+      "member_predicted_selected": [
+        0.7996509075164795,
+        0.7285065650939941,
+        0.7314367890357971,
+        0.777353823184967
+      ],
+      "member_predicted_gains": [
+        0.21967309713363647,
+        0.19334053993225098,
+        0.13419300317764282,
+        0.1743825078010559
+      ],
+      "winner_gain_std": 0.031149359826771212,
+      "raw_winner": "gripper_minus",
+      "raw_predicted_gain": 0.18039728701114655,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__2026103182",
+      "task": "shelf-place-v3",
+      "selected": "lift_return_regrasp",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.2027987502515316,
+      "actual_selected": 0.0,
+      "predicted_selected": 0.431547187268734,
+      "actual_gain": -1.0,
+      "predicted_gain": 0.22874843701720238,
+      "member_predicted_a0": [
+        0.20218487083911896,
+        0.2801953852176666,
+        0.23877622187137604,
+        0.09003852307796478
+      ],
+      "member_predicted_selected": [
+        0.3128194510936737,
+        0.5903608798980713,
+        0.4270499646663666,
+        0.39595845341682434
+      ],
+      "member_predicted_gains": [
+        0.11063458025455475,
+        0.31016549468040466,
+        0.18827374279499054,
+        0.30591993033885956
+      ],
+      "winner_gain_std": 0.08392446111199728,
+      "raw_winner": "lift_return_regrasp",
+      "raw_predicted_gain": 0.22874843701720238,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 8,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__2026103183",
+      "task": "stick-pull-v3",
+      "selected": "lift_return_regrasp",
+      "accepted": true,
+      "actual_a0": 0.875,
+      "predicted_a0": 0.23774122819304466,
+      "actual_selected": 0.25,
+      "predicted_selected": 0.3071061633527279,
+      "actual_gain": -0.625,
+      "predicted_gain": 0.06936493515968323,
+      "member_predicted_a0": [
+        0.22713878750801086,
+        0.24467605352401733,
+        0.2654781639575958,
+        0.21367190778255463
+      ],
+      "member_predicted_selected": [
+        0.23707754909992218,
+        0.40585196018218994,
+        0.26214438676834106,
+        0.3233507573604584
+      ],
+      "member_predicted_gains": [
+        0.009938761591911316,
+        0.1611759066581726,
+        -0.0033337771892547607,
+        0.10967884957790375
+      ],
+      "winner_gain_std": 0.06868595028336694,
+      "raw_winner": "lift_return_regrasp",
+      "raw_predicted_gain": 0.06936493515968323,
+      "actual_backoff": 0.5,
+      "rescues": 0,
+      "harms": 5,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__2026103184",
+      "task": "stick-push-v3",
+      "selected": "gripper_minus",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.9633103162050247,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.9862736761569977,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.02296335995197296,
+      "member_predicted_a0": [
+        0.9654015898704529,
+        0.9656043648719788,
+        0.9675512909889221,
+        0.9546840190887451
+      ],
+      "member_predicted_selected": [
+        0.9899839162826538,
+        0.9900463223457336,
+        0.9854670763015747,
+        0.9795973896980286
+      ],
+      "member_predicted_gains": [
+        0.024582326412200928,
+        0.024441957473754883,
+        0.017915785312652588,
+        0.024913370609283447
+      ],
+      "winner_gain_std": 0.002919240240794571,
+      "raw_winner": "gripper_minus",
+      "raw_predicted_gain": 0.02296335995197296,
+      "actual_backoff": 0.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__2026103185",
+      "task": "disassemble-v3",
+      "selected": "gripper_plus",
+      "accepted": true,
+      "actual_a0": 0.75,
+      "predicted_a0": 0.7073871195316315,
+      "actual_selected": 0.875,
+      "predicted_selected": 0.8849834501743317,
+      "actual_gain": 0.125,
+      "predicted_gain": 0.1775963306427002,
+      "member_predicted_a0": [
+        0.6972585320472717,
+        0.7282553315162659,
+        0.6710071563720703,
+        0.733027458190918
+      ],
+      "member_predicted_selected": [
+        0.9111400842666626,
+        0.8931639194488525,
+        0.8343197703361511,
+        0.9013100266456604
+      ],
+      "member_predicted_gains": [
+        0.21388155221939087,
+        0.16490858793258667,
+        0.1633126139640808,
+        0.16828256845474243
+      ],
+      "winner_gain_std": 0.021025977077156716,
+      "raw_winner": "gripper_plus",
+      "raw_predicted_gain": 0.1775963306427002,
+      "actual_backoff": 1.0,
+      "rescues": 2,
+      "harms": 1,
+      "actual_outcomes": [
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026103186",
+      "task": "pick-place-wall-v3",
+      "selected": "gripper_minus",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.7570614516735077,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.8863599300384521,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.12929847836494446,
+      "member_predicted_a0": [
+        0.757619321346283,
+        0.7262658476829529,
+        0.7686240673065186,
+        0.7757365703582764
+      ],
+      "member_predicted_selected": [
+        0.9081253409385681,
+        0.8732922077178955,
+        0.8675687313079834,
+        0.8964534401893616
+      ],
+      "member_predicted_gains": [
+        0.15050601959228516,
+        0.14702636003494263,
+        0.09894466400146484,
+        0.1207168698310852
+      ],
+      "winner_gain_std": 0.02097042944753278,
+      "raw_winner": "gripper_minus",
+      "raw_predicted_gain": 0.12929847836494446,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__2026103187",
+      "task": "shelf-place-v3",
+      "selected": "replan",
+      "accepted": false,
+      "actual_a0": 0.0,
+      "predicted_a0": 0.14168951660394669,
+      "actual_selected": 0.0,
+      "predicted_selected": 0.14168951660394669,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.0,
+      "member_predicted_a0": [
+        0.1447434276342392,
+        0.1575947254896164,
+        0.1788501888513565,
+        0.08556972444057465
+      ],
+      "member_predicted_selected": [
+        0.1447434276342392,
+        0.1575947254896164,
+        0.1788501888513565,
+        0.08556972444057465
+      ],
+      "member_predicted_gains": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "winner_gain_std": 0.028160726822466876,
+      "raw_winner": "lift_return_regrasp",
+      "raw_predicted_gain": 0.01801607757806778,
+      "actual_backoff": 0.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__2026103188",
+      "task": "stick-pull-v3",
+      "selected": "gripper_plus",
+      "accepted": true,
+      "actual_a0": 0.0,
+      "predicted_a0": 0.09230942465364933,
+      "actual_selected": 0.0,
+      "predicted_selected": 0.11190567538142204,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.019596250727772713,
+      "member_predicted_a0": [
+        0.12491172552108765,
+        0.09017512947320938,
+        0.08149881660938263,
+        0.07265202701091766
+      ],
+      "member_predicted_selected": [
+        0.13391192257404327,
+        0.11201708018779755,
+        0.08640450239181519,
+        0.11528919637203217
+      ],
+      "member_predicted_gains": [
+        0.009000197052955627,
+        0.021841950714588165,
+        0.004905685782432556,
+        0.0426371693611145
+      ],
+      "winner_gain_std": 0.014697075829837048,
+      "raw_winner": "gripper_plus",
+      "raw_predicted_gain": 0.019596250727772713,
+      "actual_backoff": 0.125,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__2026103189",
+      "task": "stick-push-v3",
+      "selected": "gripper_plus",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.8917902559041977,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.9497892707586288,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.05799901485443115,
+      "member_predicted_a0": [
+        0.9099811911582947,
+        0.9097068309783936,
+        0.8525254130363464,
+        0.8949475884437561
+      ],
+      "member_predicted_selected": [
+        0.9703524708747864,
+        0.9606872797012329,
+        0.9223326444625854,
+        0.9457846879959106
+      ],
+      "member_predicted_gains": [
+        0.0603712797164917,
+        0.050980448722839355,
+        0.06980723142623901,
+        0.05083709955215454
+      ],
+      "winner_gain_std": 0.007836053224088582,
+      "raw_winner": "gripper_plus",
+      "raw_predicted_gain": 0.05799901485443115,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__2026103190",
+      "task": "disassemble-v3",
+      "selected": "gripper_minus",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.8827736377716064,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.9612985551357269,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.07852491736412048,
+      "member_predicted_a0": [
+        0.8720577955245972,
+        0.91118985414505,
+        0.8751091957092285,
+        0.87273770570755
+      ],
+      "member_predicted_selected": [
+        0.969670295715332,
+        0.9693425297737122,
+        0.9478431344032288,
+        0.9583382606506348
+      ],
+      "member_predicted_gains": [
+        0.09761250019073486,
+        0.05815267562866211,
+        0.07273393869400024,
+        0.08560055494308472
+      ],
+      "winner_gain_std": 0.01468812558325138,
+      "raw_winner": "gripper_minus",
+      "raw_predicted_gain": 0.07852491736412048,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026103191",
+      "task": "pick-place-wall-v3",
+      "selected": "gripper_minus",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.5931833386421204,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.7673840224742889,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.17420068383216858,
+      "member_predicted_a0": [
+        0.6087878346443176,
+        0.5488666892051697,
+        0.6041995286941528,
+        0.6108793020248413
+      ],
+      "member_predicted_selected": [
+        0.8196247816085815,
+        0.7341991662979126,
+        0.7366473078727722,
+        0.7790648341178894
+      ],
+      "member_predicted_gains": [
+        0.21083694696426392,
+        0.18533247709274292,
+        0.13244777917861938,
+        0.1681855320930481
+      ],
+      "winner_gain_std": 0.028485170242309024,
+      "raw_winner": "gripper_minus",
+      "raw_predicted_gain": 0.17420068383216858,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__2026103192",
+      "task": "shelf-place-v3",
+      "selected": "lift_return_regrasp",
+      "accepted": true,
+      "actual_a0": 0.125,
+      "predicted_a0": 0.16019564867019653,
+      "actual_selected": 0.0,
+      "predicted_selected": 0.28751038014888763,
+      "actual_gain": -0.125,
+      "predicted_gain": 0.1273147314786911,
+      "member_predicted_a0": [
+        0.1467311829328537,
+        0.22083266079425812,
+        0.20220467448234558,
+        0.07101407647132874
+      ],
+      "member_predicted_selected": [
+        0.170344740152359,
+        0.41645416617393494,
+        0.3148132264614105,
+        0.24842938780784607
+      ],
+      "member_predicted_gains": [
+        0.02361355721950531,
+        0.19562150537967682,
+        0.11260855197906494,
+        0.17741531133651733
+      ],
+      "winner_gain_std": 0.0673537094766503,
+      "raw_winner": "lift_return_regrasp",
+      "raw_predicted_gain": 0.1273147314786911,
+      "actual_backoff": 0.25,
+      "rescues": 0,
+      "harms": 1,
+      "actual_outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__2026103193",
+      "task": "stick-pull-v3",
+      "selected": "replan",
+      "accepted": false,
+      "actual_a0": 0.0,
+      "predicted_a0": 0.042013068683445454,
+      "actual_selected": 0.0,
+      "predicted_selected": 0.042013068683445454,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.0,
+      "member_predicted_a0": [
+        0.03346090763807297,
+        0.05284962058067322,
+        0.04696040600538254,
+        0.03478134050965309
+      ],
+      "member_predicted_selected": [
+        0.03346090763807297,
+        0.05284962058067322,
+        0.04696040600538254,
+        0.03478134050965309
+      ],
+      "member_predicted_gains": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "winner_gain_std": 0.04311799261417928,
+      "raw_winner": "backoff_reapproach",
+      "raw_predicted_gain": 0.0358180059120059,
+      "actual_backoff": 0.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__2026103194",
+      "task": "stick-push-v3",
+      "selected": "gripper_plus",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.8956360965967178,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.9575426131486893,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.061906516551971436,
+      "member_predicted_a0": [
+        0.89508455991745,
+        0.89299476146698,
+        0.8983254432678223,
+        0.8961396217346191
+      ],
+      "member_predicted_selected": [
+        0.9663594365119934,
+        0.9662595987319946,
+        0.9489015936851501,
+        0.9486498236656189
+      ],
+      "member_predicted_gains": [
+        0.07127487659454346,
+        0.07326483726501465,
+        0.05057615041732788,
+        0.052510201930999756
+      ],
+      "winner_gain_std": 0.010409677522730594,
+      "raw_winner": "gripper_plus",
+      "raw_predicted_gain": 0.061906516551971436,
+      "actual_backoff": 0.625,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "disassemble-v3__2026103195",
+      "task": "disassemble-v3",
+      "selected": "backoff_reapproach",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.8601376116275787,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.9731521159410477,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.11301450431346893,
+      "member_predicted_a0": [
+        0.8579103350639343,
+        0.8842141628265381,
+        0.8486372828483582,
+        0.8497886657714844
+      ],
+      "member_predicted_selected": [
+        0.9837612509727478,
+        0.9514222145080566,
+        0.98147052526474,
+        0.9759544730186462
+      ],
+      "member_predicted_gains": [
+        0.12585091590881348,
+        0.06720805168151855,
+        0.13283324241638184,
+        0.12616580724716187
+      ],
+      "winner_gain_std": 0.026592967652247,
+      "raw_winner": "backoff_reapproach",
+      "raw_predicted_gain": 0.11301450431346893,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026103196",
+      "task": "pick-place-wall-v3",
+      "selected": "gripper_plus",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.5932140201330185,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.7783132195472717,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.18509919941425323,
+      "member_predicted_a0": [
+        0.5990709066390991,
+        0.5550119876861572,
+        0.6142932772636414,
+        0.6044799089431763
+      ],
+      "member_predicted_selected": [
+        0.818793773651123,
+        0.7563543319702148,
+        0.7536080479621887,
+        0.7844967246055603
+      ],
+      "member_predicted_gains": [
+        0.21972286701202393,
+        0.20134234428405762,
+        0.13931477069854736,
+        0.18001681566238403
+      ],
+      "winner_gain_std": 0.0299361096779758,
+      "raw_winner": "gripper_plus",
+      "raw_predicted_gain": 0.18509919941425323,
+      "actual_backoff": 1.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "shelf-place-v3__2026103197",
+      "task": "shelf-place-v3",
+      "selected": "backoff_reapproach",
+      "accepted": true,
+      "actual_a0": 0.0,
+      "predicted_a0": 0.11104482226073742,
+      "actual_selected": 0.625,
+      "predicted_selected": 0.13597739301621914,
+      "actual_gain": 0.625,
+      "predicted_gain": 0.02493257075548172,
+      "member_predicted_a0": [
+        0.08219746500253677,
+        0.17757607996463776,
+        0.09135174006223679,
+        0.09305400401353836
+      ],
+      "member_predicted_selected": [
+        0.10059143602848053,
+        0.20810309052467346,
+        0.09426071494817734,
+        0.14095433056354523
+      ],
+      "member_predicted_gains": [
+        0.018393971025943756,
+        0.030527010560035706,
+        0.0029089748859405518,
+        0.047900326550006866
+      ],
+      "winner_gain_std": 0.01648186597758053,
+      "raw_winner": "backoff_reapproach",
+      "raw_predicted_gain": 0.02493257075548172,
+      "actual_backoff": 0.625,
+      "rescues": 5,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-pull-v3__2026103198",
+      "task": "stick-pull-v3",
+      "selected": "replan",
+      "accepted": false,
+      "actual_a0": 0.125,
+      "predicted_a0": 0.0673541659489274,
+      "actual_selected": 0.125,
+      "predicted_selected": 0.0673541659489274,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.0,
+      "member_predicted_a0": [
+        0.06204189360141754,
+        0.08170159161090851,
+        0.060951415449380875,
+        0.06472176313400269
+      ],
+      "member_predicted_selected": [
+        0.06204189360141754,
+        0.08170159161090851,
+        0.060951415449380875,
+        0.06472176313400269
+      ],
+      "member_predicted_gains": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "winner_gain_std": 0.1127398847687029,
+      "raw_winner": "backoff_reapproach",
+      "raw_predicted_gain": 0.09658293705433607,
+      "actual_backoff": 0.125,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "stick-push-v3__2026103199",
+      "task": "stick-push-v3",
+      "selected": "gripper_plus",
+      "accepted": true,
+      "actual_a0": 1.0,
+      "predicted_a0": 0.9193737953901291,
+      "actual_selected": 1.0,
+      "predicted_selected": 0.9718658775091171,
+      "actual_gain": 0.0,
+      "predicted_gain": 0.05249208211898804,
+      "member_predicted_a0": [
+        0.9189042448997498,
+        0.9165246486663818,
+        0.9125742316246033,
+        0.9294920563697815
+      ],
+      "member_predicted_selected": [
+        0.9775405526161194,
+        0.9769962430000305,
+        0.9611787796020508,
+        0.9717479348182678
+      ],
+      "member_predicted_gains": [
+        0.05863630771636963,
+        0.06047159433364868,
+        0.04860454797744751,
+        0.04225587844848633
+      ],
+      "winner_gain_std": 0.007438361893943341,
+      "raw_winner": "gripper_plus",
+      "raw_predicted_gain": 0.05249208211898804,
+      "actual_backoff": 0.0,
+      "rescues": 0,
+      "harms": 0,
+      "actual_outcomes": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "limitations": [
+    "Six lift selections are a post-hoc subgroup, not a prespecified causal partition.",
+    "Eight suffixes per source are paired replicates, not independent sources.",
+    "Old validation has only three executed arms; other candidate probabilities have no held real outcomes here.",
+    "Shared prediction error does not establish its physical contact cause or the behavior of a new continuous gradient.",
+    "This script reads no new flow study outcomes and selects no new algorithm parameter."
+  ],
+  "input_sha256": {
+    "analysis/ogg_flow_20260916_legacy.py": "32fd30f85270520e83c4999c102f0fb3a3b2c6f974a414929ea808736e563246",
+    "src/ac_tmil/ogg_research_v3/learning.py": "e21a83fdbf6b052d2ed610c6adfeaaf186e64e9db122d6e02cb03ff372a21432",
+    "src/ac_tmil/ogg_research_v3/learning_evaluation.py": "2e4af555f2ae43495568a412cbfb9f1eb66806ca00dec0f21d1db0d55561cfec",
+    "outputs/act_recap_ogg_research_v3_20260916/learning/frozen_policy.json": "bf4c70ce1d4f00a9b75ee1a7db89663e92ef9e1d5a31cef73eb465aff116cf08",
+    "outputs/act_recap_ogg_research_v3_20260916/learning/ranking.json": "fa8e2b4b0ee166372a036e1656036812be8d34335a1f287240a80f34a3d3436c",
+    "outputs/act_recap_ogg_research_v3_20260916/learning/final_evaluation.json": "2461092e53d277c4549af3d31a1bbcecf677e2639877bf916ebd25f7d9055c77",
+    "analysis/ogg_v3_flow_review_20260916/metrics.json": "5b530060f5c8048c81c285796c08b1fce854e1f9810cc606ea2c1852d91a2f75",
+    "outputs/act_recap_ogg_research_v3_20260916/learning/data/validation/complete.json": "921edd47dcc459808947149b699cf4d3ddf68068661f23e0b3e2f673cad7f8fc",
+    "outputs/act_recap_ogg_research_v3_20260916/learning/data/validation/rows.json": "3a5a99c84924ed7d23a25fce539edc4a6d074757eea7ce5989eee1e8579da75a",
+    "outputs/act_recap_ogg_research_v3_20260916/learning/data/validation/arrays.npz": "cd97a081ae5e019b2f8fdb05184ab713f603367a19078cf51eb5d2d29cc03810",
+    "outputs/act_recap_ogg_research_v3_20260916/learning/models/refit/member_1041/selected.pt": "9f5b8c8be268b507c612701069f3b835274fe8460d82b790f7d6a710c04c976c",
+    "outputs/act_recap_ogg_research_v3_20260916/learning/models/refit/member_1042/selected.pt": "3cb9551ff3e3f05c8bb5adaffa6fd00543d84aac8b8de57b6905aa39d30a272b",
+    "outputs/act_recap_ogg_research_v3_20260916/learning/models/refit/member_1043/selected.pt": "18ccbc5ca557fe40468d61d530a2e99f1498dda6dcd6af84ac910ec422c96777",
+    "outputs/act_recap_ogg_research_v3_20260916/learning/models/refit/member_1044/selected.pt": "a7d053daffc6f909e5acaad977c87292bd394bc5e9b7670ace3bbdba54e61def",
+    "outputs/act_recap_ogg_research_v3_20260916/data/pilot/h10/complete.json": "090c8cf080044b0076816f547b198cb49e619aa4c95644b3ad396bbb7ef8b87c",
+    "outputs/act_recap_ogg_research_v3_20260916/data/pilot/h10/rows.json": "bb22ad74d0518546f07602b50efbd37027ef781f1e52d01507f6dcebeebc7202",
+    "outputs/act_recap_ogg_research_v3_20260916/data/pilot/h10/arrays.npz": "83a9409949105f9f1acf29c14b5df85d699a9e41d820485eea25dcde4bb1d6a6",
+    "outputs/act_recap_ogg_research_v3_20260916/data/train_extra/h10/complete.json": "03bc70932508393cf072f1136fb9a0390e6904bf8ebfc5fc0d3fd9bfafdbbd27",
+    "outputs/act_recap_ogg_research_v3_20260916/data/train_extra/h10/rows.json": "b66a06b54b7772031f47adbb7b46178caab6bb060bd97e2762d85489880dcc87",
+    "outputs/act_recap_ogg_research_v3_20260916/data/train_extra/h10/arrays.npz": "35708e68f2b9cc876391c02f41399d2d5bea437325797f1aeb2bc2ac8cf73e8b",
+    "outputs/act_recap_ogg_research_v3_20260916/learning/data/calibration/rows.json": "ff5f4028f26dbaa4768aa6da419e57b868dcbad952f71f01bf0f2ea36e29f71b"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "schema": "queue_v2_independent_science_review_v1",
+  "created_at_utc": "2026-09-21T12:28:53.667466+00:00",
+  "verdict": "PASS_STAGED_V2_SCIENTIFIC_ASSIGNMENT",
+  "blocking": false,
+  "blockers": [],
+  "checks_passed": 2139,
+  "source_invariants": {
+    "source_keys": 500,
+    "scientific_source_fields_exactly_unchanged": true,
+    "split_seed_cut_sourceIDs_unchanged": true,
+    "ordering_unchanged": true,
+    "terminal_existing_exact_rows_unchanged": 17,
+    "legacy_Batch3_reserved_exact_rows_unchanged": 8,
+    "pending": 475,
+    "pending_owner_A": 475,
+    "pending_owner_B": 0,
+    "previous_B_pending_transferred": 250,
+    "no_resampling_or_refill": true
+  },
+  "budget": {
+    "dimensions": 116,
+    "stage_total_exactly_same_as_V1": true,
+    "per_task_budget_V1_unchanged": true,
+    "A_total_recomputed": true,
+    "B_collection_caps_zero": true,
+    "full_cold_attempt_cap": 7125
+  },
+  "dependencies": {
+    "A_main_no_transitive_B_dependency": true,
+    "A_owns_all16_main_cells": true,
+    "B_E3_waits_for_frozen_A_input_and_P20_A_not_A20_completion": true,
+    "B_E1_E6_E8_independent_of_full_MT50_collection": true
+  },
+  "E3_E5_fairness": {
+    "same_final_pool_and_evaluation_source_protocol_required": true,
+    "same_checkpoint_action_H10_environment_identity_required": true,
+    "method_specific_views_and_initialization_history_disclosed": true,
+    "B_selection_cannot_use_A_test_outcomes": true,
+    "paired_sources_not_claimed_exact_physical_equality": true,
+    "cross_host_raw_timing_not_algorithm_ranking": true,
+    "no_extra_efficiency_episodes": true
+  },
+  "scope": {
+    "review_of_staged_V2_only": true,
+    "no_live_authority_switch_claimed": true,
+    "no_code_or_model_or_hardware_execution": true,
+    "no_old_experiment_tree_scan": true,
+    "no_authority_modified": true,
+    "new_training_or_evaluation_authorized": false,
+    "daemon_running_proven": false
+  },
+  "evidence_refs": {
+    "persistent_queue/AUTHORIZATION_V2.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/AUTHORIZATION_V2.json",
+      "sha256": "d73448042b71ecb06940e8d891caf0ef8bef005018f155ee2743903981992928",
+      "size_bytes": 6988
+    },
+    "persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/INDEPENDENT_NODE_ASSIGNMENT_V2.md",
+      "sha256": "b16990af45bb61c3bb7f30f65bd4d8883a0330c9cebaaad2c3b6f5101ff6a427",
+      "size_bytes": 5464
+    },
+    "tasks/A_MAIN_PIPELINE_PREP_V1.md": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/tasks/A_MAIN_PIPELINE_PREP_V1.md",
+      "sha256": "2c0941f360d811962354184a5a4af4fb497282d1812ba76864c77173716f2a05",
+      "size_bytes": 1664
+    },
+    "tasks/B_INDEPENDENT_PIPELINE_PREP_V1.md": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/tasks/B_INDEPENDENT_PIPELINE_PREP_V1.md",
+      "sha256": "e1e6668bb222af561a4102393253e93cccd0b0161834eec2084f52a054a9094d",
+      "size_bytes": 2325
+    },
+    "persistent_queue/plan/AGGREGATE_LIMITS_V2.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/plan/AGGREGATE_LIMITS_V2.json",
+      "sha256": "f59b2c6a1bf939cac16edf25fad69003d99608878ffa6a70200031b76eb11654",
+      "size_bytes": 34272
+    },
+    "persistent_queue/plan/SOURCES_V2.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/plan/SOURCES_V2.json",
+      "sha256": "04f3ffec28f944f6d9ff23aa96a86dc015d5e1d46441836cc0c434a2ca0bf0bd",
+      "size_bytes": 363280
+    },
+    "persistent_queue/plan/STAGE_DAG_V2.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/plan/STAGE_DAG_V2.json",
+      "sha256": "f96fec2fb4ff00c6a1755971d97dbea4a0556c53be0433c1887b45211a408d83",
+      "size_bytes": 3868
+    },
+    "persistent_queue/plan/TASK_ORDINAL_OWNER_V2.json": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/persistent_queue/plan/TASK_ORDINAL_OWNER_V2.json",
+      "sha256": "0567c7593796756d162f809a747a44de631d6df5dc1dc68842e52d185181e7c7",
+      "size_bytes": 27040
+    }
+  }
+}

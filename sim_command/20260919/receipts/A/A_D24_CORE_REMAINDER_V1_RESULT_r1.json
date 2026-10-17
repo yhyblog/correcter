@@ -1,0 +1,98 @@
+{
+  "task_id": "A_D24_CORE_REMAINDER_V1",
+  "task_revision": 1,
+  "receipt_revision": 1,
+  "owner": "A",
+  "utc": "2026-09-22T04:33:59.441226+00:00",
+  "status": "E6_COMPLETE_E3_PARTIAL_PUBLICATION_FAILURE_GAF_INPUT_BLOCKED",
+  "task_fully_complete": false,
+  "authorization_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/CONTINUATION_AUTHORIZATION_20260922_V1.json",
+  "authorization_sha256": "3e6a0aab7abe79365192c953d45b4e13b44139ab26ffadb6f7c3f82547107d8b",
+  "E6": {
+    "status": "complete",
+    "episodes": 200,
+    "successes_test": {
+      "G0": 26,
+      "D5": 30
+    },
+    "test_denominator_each": 50,
+    "paired_outcomes": {
+      "D5_only": 5,
+      "G0_only": 1,
+      "both_failure": 19,
+      "both_success": 25
+    },
+    "technical_failures": 0,
+    "threshold": 0.2521600950570383,
+    "threshold_dev_episode_count": 100,
+    "threshold_success_labels_used": false,
+    "result": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CORE_REMAINDER_V1/E6_FINAL_SUMMARY.json",
+      "sha256": "8004d492d9b880c119457df703663f6f2d366b3565606d09b007b4ea7123e25f",
+      "bytes": 4825
+    },
+    "per_task_csv": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CORE_REMAINDER_V1/E6_PER_TASK_CELLS.csv",
+      "sha256": "02535fe1bdc5407ffe242770cd3d736267ca641773a8ad22d324b935edd01557",
+      "bytes": 657
+    }
+  },
+  "E3_VLA_Corrector": {
+    "status": "PARTIAL_PUBLICATION_FAILURE",
+    "physical_attempts": 47,
+    "structured_results": 39,
+    "publication_failures": 8,
+    "unstarted": 453,
+    "reconciliation": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CORE_REMAINDER_V1/E3_PUBLICATION_FAILURE_RECONCILIATION_r1.json",
+      "sha256": "a3a1b15bfbf0fc8fb44ad038da8293ed3eaee401976fdb78b22a00df4adce252",
+      "bytes": 2464
+    },
+    "CPU_repair_check": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CORE_REMAINDER_V1/repairs/native_summary_json_v1/CPU_CHECK.json",
+      "sha256": "3b63deb88be843bd383efbd528f78caea3b89311a180070546e6bb9943fb9f4d",
+      "bytes": 871
+    },
+    "further_launch": false
+  },
+  "GAF": {
+    "status": "blocked_legal_development_input",
+    "fits": 0,
+    "updates": 0,
+    "evaluation_episodes": 0,
+    "evidence": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CORE_REMAINDER_V1/GAF_INPUT_STATUS_r2.json",
+      "sha256": "baec691fb32933674e8e0c74db661c5b1328efbbf36d4d380ea254b7236e9ef8",
+      "bytes": 3291
+    }
+  },
+  "cumulative": {
+    "prior_A_D24_physical_attempts": 8120,
+    "current_continuation_physical_attempts": 247,
+    "A_total_physical_attempts": 8367,
+    "continuation_cap": 3000,
+    "A_cap": 18000,
+    "small_network_updates_this_continuation": 0,
+    "budget_reset": false
+  },
+  "occupancy": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CORE_REMAINDER_V1/OCCUPANCY_AND_EXIT_SUMMARY_r1.json",
+    "sha256": "98a9e1e60a5a91cb01aacd40cf1e51847e3841169f06d96c852ca97672e7a7dd",
+    "bytes": 4502
+  },
+  "next_actions": {
+    "E6": "complete; never repeat",
+    "E3": "CPU repair ready; retry-boundary interpretation for only unstarted453 requested from analysis",
+    "GAF": "legal independent development observations required; only this method paused"
+  },
+  "scientific_background_running": false,
+  "daemon_status": "idle_after_full_exit_and_publication",
+  "completed_old_jobs_repeated": false,
+  "remaining475_collection": false,
+  "deleted_files": 0,
+  "report": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_CORE_REMAINDER_V1_REPORT_r1.md",
+    "sha256": "28c85279afb2bea352d815b639d7c894e1f154f56e3ad6b283776935de2768f2",
+    "bytes": 3296
+  }
+}

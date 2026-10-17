@@ -1,0 +1,1203 @@
+{
+  "fixture_only_not_authorization": true,
+  "inputs": {
+    "control": {
+      "schema_version": 1,
+      "campaign_id": "corrector-sim-20260919",
+      "revision": 24,
+      "updated_at_utc": "2026-09-19T21:32:30.717025+00:00",
+      "mode": "preflight",
+      "stop_requested": false,
+      "allowed_task_ids": [
+        "A00",
+        "B00",
+        "A10",
+        "B10",
+        "A10_PREFLIGHT_REVISION_R2",
+        "B10_PREFLIGHT_REVISION_R2",
+        "A10_EGL_CPU_REPAIR_V1",
+        "A10_EGL_CUDA_MAP_CPU_V1",
+        "A10_NATIVE_EGL_INTEGRATION_CPU_V1",
+        "A10_TORCH_UUID_ABI_CPU_REPAIR_V1",
+        "A10_PV_OFFLINE_PREFLIGHT_CPU_V1",
+        "A10_PV_AUTH_METADATA_CPU_V1",
+        "A10_PV_OFFLINE_PREFLIGHT_V2"
+      ],
+      "formal_gpu_runs_enabled": true,
+      "preparation_scope": [
+        "read_only_inventory",
+        "cpu_static_checks",
+        "node_receipts",
+        "existing_gpu_guard_policy",
+        "isolated_code_and_config_edits",
+        "cpu_static_synthetic_checks"
+      ],
+      "current_compute_limits": {
+        "simulator_attempts": 0,
+        "environment_instances": 0,
+        "wrapper_instances": 0,
+        "taskset_constructions": 0,
+        "environment_reset_calls": 0,
+        "reset_model_calls": 0,
+        "initialization_physics_substeps": 0,
+        "policy_physics_substeps": 0,
+        "physics_steps": 0,
+        "env_steps": 0,
+        "graphics_context_creations": 0,
+        "render_calls": 0,
+        "rgb_readback_calls": 0,
+        "explicit_EGL_calls": 0,
+        "explicit_CUDA_driver_calls": 0,
+        "explicit_driver_dlopen_calls": 0,
+        "completed_rollouts": 0,
+        "monitor_calls": 0,
+        "D_forward_calls": 0,
+        "G0_forward_calls": 0,
+        "vla_backward_calls": 0,
+        "vla_parameter_backward_calls": 0,
+        "critic_parameter_updates": 0,
+        "optimizer_updates": 0,
+        "training_updates": 0,
+        "retries": 0,
+        "deletions": 0,
+        "baseline_sampling_calls": 0,
+        "offline_attempts": 1,
+        "native_nvml_identity_queries": 2,
+        "policy_device_selections": 1,
+        "policy_device_property_queries": 1,
+        "model_initializations": 5,
+        "policy_model_loads": 1,
+        "policy_state_file_loads": 1,
+        "policy_state_dict_loads": 1,
+        "critic_model_loads": 4,
+        "tokenizer_loads": 1,
+        "preprocessor_loads": 1,
+        "postprocessor_loads": 1,
+        "normalizer_transform_loads": 1,
+        "projection_loads": 1,
+        "context_builds": 1,
+        "preprocessor_calls": 2,
+        "tokenizer_calls": 3,
+        "image_preprocessing_calls": 2,
+        "visual_encoder_forwards": 4,
+        "language_embedding_forwards": 2,
+        "encoder_forward_calls": 6,
+        "spatial_projection_calls": 1,
+        "prefix_transformer_forwards": 1,
+        "action_expert_forwards": 10,
+        "flow_forward_calls": 10,
+        "noise_draws": 1,
+        "vla_sampling_calls": 1,
+        "model_gpu_inference_calls": 1,
+        "critic_feature_transforms": 4,
+        "critic_forward_calls": 40,
+        "objective_forward_calls": 10,
+        "action_gradient_calls": 4,
+        "critic_backward_calls": 4,
+        "post_action_gradient_calls": 1,
+        "velocity_action_gradient_calls": 3,
+        "own_projection_calls": 4,
+        "raw_constraint_audits": 2,
+        "postprocessor_calls": 1
+      },
+      "scope": {
+        "external_method_comparison": "pi05_metaworld_simulation_only",
+        "metaworld_main_tasks": 50,
+        "mechanism_tasks": 5,
+        "keep_smolvla_xvla_metaworld": true,
+        "keep_pi05_libero": true,
+        "real_world_owner": "user",
+        "real_world_external_baselines": false
+      },
+      "roles": {
+        "A": {
+          "hostname": "trial-303224955-trialrun-303224955-worker-0",
+          "executor_session_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13"
+        },
+        "B": {
+          "hostname": "trial-303225685-trialrun-303225685-worker-0",
+          "executor_session_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2"
+        },
+        "analysis": {
+          "session_id": "01a0b91f-355f-7cd1-ae36-412500534ffb"
+        }
+      },
+      "historical_runs": "completed_read_only_no_restart",
+      "note": "离线P/V V1元数据失败已验收关闭，claim/计算0。仅发布A10_PV_AUTH_METADATA_CPU_V1修订V2身份/路径与纯CPU元数据合同；board ready与release released分离，算法/输入/预算不变。当前无计算或删除release，B仍仅CPU。",
+      "active_preparation_release": "releases/P00_PREP_V1.json",
+      "storage_policy": "contracts/STORAGE_RETENTION_V1.md",
+      "storage_cleanup": {
+        "inventory_by": [
+          "A",
+          "B"
+        ],
+        "decisions_by": "analysis",
+        "shared_historical_deletion_by": "A",
+        "deletion_requires_exact_path_analysis_manifest": true,
+        "active_deletion_release": null,
+        "non_vla_projects_excluded": true
+      },
+      "active_analysis_decisions": "contracts/INVENTORY_DECISIONS_V1.md",
+      "active_followup_preparation_release": "releases/P00_PREFLIGHT_CORRECTIONS_V1.json",
+      "active_compute_release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V2",
+      "active_compute_release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V2.json",
+      "active_compute_task_ids": [
+        "A10_PV_OFFLINE_PREFLIGHT_V2"
+      ],
+      "per_task_compute_limits": {
+        "A10_PV_OFFLINE_PREFLIGHT_V2": {
+          "simulator_attempts": 0,
+          "environment_instances": 0,
+          "wrapper_instances": 0,
+          "taskset_constructions": 0,
+          "environment_reset_calls": 0,
+          "reset_model_calls": 0,
+          "initialization_physics_substeps": 0,
+          "policy_physics_substeps": 0,
+          "physics_steps": 0,
+          "env_steps": 0,
+          "graphics_context_creations": 0,
+          "render_calls": 0,
+          "rgb_readback_calls": 0,
+          "explicit_EGL_calls": 0,
+          "explicit_CUDA_driver_calls": 0,
+          "explicit_driver_dlopen_calls": 0,
+          "completed_rollouts": 0,
+          "monitor_calls": 0,
+          "D_forward_calls": 0,
+          "G0_forward_calls": 0,
+          "vla_backward_calls": 0,
+          "vla_parameter_backward_calls": 0,
+          "critic_parameter_updates": 0,
+          "optimizer_updates": 0,
+          "training_updates": 0,
+          "retries": 0,
+          "deletions": 0,
+          "baseline_sampling_calls": 0,
+          "offline_attempts": 1,
+          "native_nvml_identity_queries": 2,
+          "policy_device_selections": 1,
+          "policy_device_property_queries": 1,
+          "model_initializations": 5,
+          "policy_model_loads": 1,
+          "policy_state_file_loads": 1,
+          "policy_state_dict_loads": 1,
+          "critic_model_loads": 4,
+          "tokenizer_loads": 1,
+          "preprocessor_loads": 1,
+          "postprocessor_loads": 1,
+          "normalizer_transform_loads": 1,
+          "projection_loads": 1,
+          "context_builds": 1,
+          "preprocessor_calls": 2,
+          "tokenizer_calls": 3,
+          "image_preprocessing_calls": 2,
+          "visual_encoder_forwards": 4,
+          "language_embedding_forwards": 2,
+          "encoder_forward_calls": 6,
+          "spatial_projection_calls": 1,
+          "prefix_transformer_forwards": 1,
+          "action_expert_forwards": 10,
+          "flow_forward_calls": 10,
+          "noise_draws": 1,
+          "vla_sampling_calls": 1,
+          "model_gpu_inference_calls": 1,
+          "critic_feature_transforms": 4,
+          "critic_forward_calls": 40,
+          "objective_forward_calls": 10,
+          "action_gradient_calls": 4,
+          "critic_backward_calls": 4,
+          "post_action_gradient_calls": 1,
+          "velocity_action_gradient_calls": 3,
+          "own_projection_calls": 4,
+          "raw_constraint_audits": 2,
+          "postprocessor_calls": 1
+        }
+      },
+      "closed_compute_releases": [
+        {
+          "release_id": "P10_A_NATIVE_PREFLIGHT_V1",
+          "closure": "releases/P10_A_NATIVE_PREFLIGHT_V1_CLOSED.json"
+        },
+        {
+          "release_id": "P10_A_EGL_GRAPHICS_PROBE_V1",
+          "closure": "releases/P10_A_EGL_GRAPHICS_PROBE_V1_CLOSED.json"
+        },
+        {
+          "release_id": "P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1",
+          "closure": "releases/P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_CLOSED.json"
+        },
+        {
+          "release_id": "P10_A_NATIVE_PREFLIGHT_V2",
+          "closure": "releases/P10_A_NATIVE_PREFLIGHT_V2_CLOSED.json"
+        },
+        {
+          "release_id": "P10_A_NATIVE_PREFLIGHT_V3",
+          "closure": "releases/P10_A_NATIVE_PREFLIGHT_V3_CLOSED.json"
+        },
+        {
+          "release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V1",
+          "closure": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V1_CLOSED.json"
+        }
+      ],
+      "active_egl_preparation_release": "releases/P00_EGL_CPU_REPAIR_V1.json",
+      "active_egl_mapping_preparation_release": "releases/P00_EGL_CUDA_MAP_CPU_V1.json",
+      "active_native_egl_preparation_release": "releases/P00_NATIVE_EGL_INTEGRATION_CPU_V1.json",
+      "compute_limit_semantics": "Incremental entered-first explicit operations; returned separately. Nested aliases (encoder6=vision4+language2; model_initializations5=policy1+Q4; critic_backward4=action_gradient4=Post1+Velocity3; GPU model inference1=sampling1) must not be summed. Torch/CUDA/cuBLAS internal calls and kernel counts are unmeasured, not asserted zero. NVML identity2 excludes persistent guard polling.",
+      "active_torch_uuid_preparation_release": "releases/P00_TORCH_UUID_ABI_CPU_REPAIR_V1.json",
+      "active_PV_offline_preparation_release": "releases/P00_PV_OFFLINE_PREFLIGHT_CPU_V1.json",
+      "active_PV_authorization_preparation_release": "releases/P00_PV_AUTH_METADATA_CPU_V1.json",
+      "task_state_contract": "contracts/TASK_STATE_CONTRACT_V1.md",
+      "fixture_only_not_authorization": true
+    },
+    "board": {
+      "campaign_id": "corrector-sim-20260919",
+      "revision": 31,
+      "owner": "analysis",
+      "tasks": [
+        {
+          "id": "A00",
+          "owner": "A",
+          "status": "complete",
+          "revision": 1,
+          "dependencies": [],
+          "brief": "tasks/A00.md",
+          "release": null,
+          "acknowledgement": "receipts/A/A00_ACK.json",
+          "accepted_at_utc": "2026-09-19T15:11:05.205789+00:00",
+          "result": "receipts/A/A00_RESULT.json"
+        },
+        {
+          "id": "B00",
+          "owner": "B",
+          "status": "complete",
+          "revision": 1,
+          "dependencies": [],
+          "brief": "tasks/B00.md",
+          "release": null,
+          "acknowledgement": "receipts/B/B00_ACK.json",
+          "accepted_at_utc": "2026-09-19T15:11:05.205789+00:00",
+          "result": "receipts/B/B00_RESULT.json"
+        },
+        {
+          "id": "P00",
+          "owner": "analysis",
+          "status": "complete",
+          "revision": 1,
+          "dependencies": [],
+          "brief": "MASTER_PLAN.md",
+          "release": "releases/P00_PREP_V1.json",
+          "artifact": "contracts/P00_PREPARATION_CONTRACT_V1.md"
+        },
+        {
+          "id": "A10",
+          "owner": "A",
+          "status": "complete",
+          "revision": 1,
+          "dependencies": [
+            "P00",
+            "A00"
+          ],
+          "brief": "tasks/A10_CORE_PREPARATION.md",
+          "release": "releases/P00_PREP_V1.json",
+          "dependency_receipt_suffices": true,
+          "prerequisites_verified_at_utc": "2026-09-19T15:11:05.205789+00:00",
+          "acknowledgement": "receipts/A/A10_ACK.json",
+          "published_interface": "manifests/PUBLIC_INTERFACE_V1.json",
+          "result": "receipts/A/A10_RESULT.json",
+          "acceptance": "manifests/P10_PREPARATION_ACCEPTANCE_V1.json"
+        },
+        {
+          "id": "B10",
+          "owner": "B",
+          "status": "complete",
+          "revision": 1,
+          "dependencies": [
+            "P00",
+            "B00"
+          ],
+          "brief": "tasks/B10_BASELINES_PREPARATION.md",
+          "release": "releases/P00_PREP_V1.json",
+          "dependency_receipt_suffices": true,
+          "prerequisites_verified_at_utc": "2026-09-19T15:11:05.205789+00:00",
+          "acknowledgement": "receipts/B/B10_ACK.json",
+          "interface_handoff": "tasks/B10_INTERFACE_V1_HANDOFF.md",
+          "interface_feedback": "receipts/B/A10_INTERFACE_FEEDBACK.md",
+          "result": "receipts/B/B10_RESULT.json",
+          "acceptance": "manifests/P10_PREPARATION_ACCEPTANCE_V1.json"
+        },
+        {
+          "id": "P10",
+          "owner": "analysis",
+          "status": "in_progress",
+          "revision": 1,
+          "dependencies": [
+            "A10",
+            "B10"
+          ],
+          "brief": "MASTER_PLAN.md",
+          "release": null,
+          "review": "contracts/P10_LIMITED_PREFLIGHT_REVIEW_V1.md",
+          "active_limited_preflight": null,
+          "last_preflight_result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V1_RESULT.json"
+        },
+        {
+          "id": "A11",
+          "owner": "A",
+          "status": "planned",
+          "revision": 1,
+          "dependencies": [
+            "P10"
+          ],
+          "brief": "MASTER_PLAN.md",
+          "release": null
+        },
+        {
+          "id": "B11",
+          "owner": "B",
+          "status": "planned",
+          "revision": 1,
+          "dependencies": [
+            "P10"
+          ],
+          "brief": "MASTER_PLAN.md",
+          "release": null
+        },
+        {
+          "id": "A12",
+          "owner": "A",
+          "status": "planned",
+          "revision": 1,
+          "dependencies": [
+            "A11",
+            "B11"
+          ],
+          "brief": "MASTER_PLAN.md",
+          "release": null
+        },
+        {
+          "id": "B12",
+          "owner": "B",
+          "status": "planned",
+          "revision": 1,
+          "dependencies": [
+            "A11",
+            "B11"
+          ],
+          "brief": "MASTER_PLAN.md",
+          "release": null
+        },
+        {
+          "id": "B13",
+          "owner": "B",
+          "status": "planned",
+          "revision": 1,
+          "dependencies": [
+            "P10"
+          ],
+          "brief": "MASTER_PLAN.md",
+          "release": null
+        },
+        {
+          "id": "P20",
+          "owner": "analysis",
+          "status": "planned",
+          "revision": 1,
+          "dependencies": [
+            "A12",
+            "B12",
+            "B13"
+          ],
+          "brief": "tasks/P20_EVALUATION_CONTRACT.md",
+          "release": null
+        },
+        {
+          "id": "A20",
+          "owner": "A",
+          "status": "planned",
+          "revision": 1,
+          "dependencies": [
+            "P20"
+          ],
+          "brief": "tasks/P20_EVALUATION_CONTRACT.md",
+          "release": null
+        },
+        {
+          "id": "B20",
+          "owner": "B",
+          "status": "planned",
+          "revision": 1,
+          "dependencies": [
+            "P20"
+          ],
+          "brief": "tasks/P20_EVALUATION_CONTRACT.md",
+          "release": null
+        },
+        {
+          "id": "B21",
+          "owner": "B",
+          "status": "planned",
+          "revision": 1,
+          "dependencies": [
+            "P20"
+          ],
+          "brief": "MASTER_PLAN.md",
+          "release": null
+        },
+        {
+          "id": "A30",
+          "owner": "A",
+          "status": "planned",
+          "revision": 1,
+          "dependencies": [
+            "P20"
+          ],
+          "brief": "MASTER_PLAN.md",
+          "release": null
+        },
+        {
+          "id": "B30",
+          "owner": "B",
+          "status": "planned",
+          "revision": 1,
+          "dependencies": [
+            "P20"
+          ],
+          "brief": "MASTER_PLAN.md",
+          "release": null
+        },
+        {
+          "id": "P90",
+          "owner": "analysis",
+          "status": "planned",
+          "revision": 1,
+          "dependencies": [
+            "A20",
+            "B20",
+            "B21",
+            "A30",
+            "B30"
+          ],
+          "brief": "MASTER_PLAN.md",
+          "release": null
+        },
+        {
+          "id": "A10_PREFLIGHT_REVISION_R2",
+          "owner": "A",
+          "status": "complete",
+          "revision": 1,
+          "dependencies": [
+            "A10"
+          ],
+          "brief": "tasks/A10_PREFLIGHT_REVISION_R2.md",
+          "release": "releases/P00_PREFLIGHT_CORRECTIONS_V1.json",
+          "acknowledgement": "receipts/A/A10_PREFLIGHT_REVISION_R2_ACK.json",
+          "result": "receipts/A/A10_PREFLIGHT_REVISION_R2_RESULT.json",
+          "acceptance": "manifests/A10_PREFLIGHT_V4_ACCEPTANCE.json"
+        },
+        {
+          "id": "B10_PREFLIGHT_REVISION_R2",
+          "owner": "B",
+          "status": "ready",
+          "revision": 1,
+          "dependencies": [
+            "B10"
+          ],
+          "brief": "tasks/B10_PREFLIGHT_REVISION_R2.md",
+          "release": "releases/P00_PREFLIGHT_CORRECTIONS_V1.json",
+          "storage_followup": "tasks/B_STORAGE_CLEARANCE_V1.md"
+        },
+        {
+          "id": "A10_PREFLIGHT_NATIVE_V1",
+          "owner": "A",
+          "status": "failed",
+          "revision": 1,
+          "dependencies": [
+            "A10_PREFLIGHT_REVISION_R2"
+          ],
+          "brief": "tasks/A10_PREFLIGHT_NATIVE_V1.md",
+          "release": "releases/P10_A_NATIVE_PREFLIGHT_V1.json",
+          "wave_id": "corrector-sim-20260919-A-native-preflight-wave01",
+          "run_id": "A10_PREFLIGHT_NATIVE_V1_r1_A_v4_wave01",
+          "shard_id": "A-native-diagnostic-shelf-place-2026091900",
+          "acknowledgement": "receipts/A/A10_PREFLIGHT_NATIVE_V1_ACK.json",
+          "failure_class": "technical_EGL_render",
+          "result": "receipts/A/A10_PREFLIGHT_NATIVE_V1_RESULT.json",
+          "release_closed": "releases/P10_A_NATIVE_PREFLIGHT_V1_CLOSED.json",
+          "attempt_consumed": true
+        },
+        {
+          "id": "A10_EGL_CPU_REPAIR_V1",
+          "owner": "A",
+          "status": "complete",
+          "revision": 1,
+          "dependencies": [
+            "A10_PREFLIGHT_NATIVE_V1"
+          ],
+          "dependency_outcome_required": "failed_technical_and_release_closed",
+          "brief": "tasks/A10_EGL_CPU_REPAIR_V1.md",
+          "release": "releases/P00_EGL_CPU_REPAIR_V1.json",
+          "acknowledgement": "receipts/A/A10_EGL_CPU_REPAIR_V1_ACK.json",
+          "result": "receipts/A/A10_EGL_CPU_REPAIR_V1_RESULT.json",
+          "acceptance": "manifests/EGL_CPU_REPAIR_V1_ACCEPTANCE.json"
+        },
+        {
+          "id": "A10_EGL_GRAPHICS_PROBE_V1",
+          "owner": "A",
+          "status": "failed",
+          "revision": 1,
+          "dependencies": [
+            "A10_EGL_CPU_REPAIR_V1"
+          ],
+          "brief": "tasks/A10_EGL_GRAPHICS_PROBE_V1.md",
+          "release": "releases/P10_A_EGL_GRAPHICS_PROBE_V1.json",
+          "wave_id": "corrector-sim-20260919-A-graphics-probe-wave02",
+          "run_id": "A10_EGL_GRAPHICS_PROBE_V1_r1_A_wave02",
+          "shard_id": "A-EGL-static64-device17198167-once",
+          "acknowledgement": "receipts/A/A10_EGL_GRAPHICS_PROBE_V1_ACK.json",
+          "failure_class": "technical_EGL_device_mapping",
+          "result": "receipts/A/A10_EGL_GRAPHICS_PROBE_V1_RESULT.json",
+          "release_closed": "releases/P10_A_EGL_GRAPHICS_PROBE_V1_CLOSED.json",
+          "attempt_consumed": true
+        },
+        {
+          "id": "A10_EGL_CUDA_MAP_CPU_V1",
+          "owner": "A",
+          "status": "complete",
+          "revision": 1,
+          "dependencies": [
+            "A10_EGL_GRAPHICS_PROBE_V1"
+          ],
+          "dependency_outcome_required": "failed_mapping_and_release_closed",
+          "brief": "tasks/A10_EGL_CUDA_MAP_CPU_V1.md",
+          "release": "releases/P00_EGL_CUDA_MAP_CPU_V1.json",
+          "acknowledgement": "receipts/A/A10_EGL_CUDA_MAP_CPU_V1_ACK.json",
+          "result": "receipts/A/A10_EGL_CUDA_MAP_CPU_V1_RESULT.json",
+          "acceptance": "manifests/EGL_CUDA_MAP_CPU_V1_ACCEPTANCE.json",
+          "accepted_at_utc": "2026-09-19T18:39:42.896731+00:00"
+        },
+        {
+          "id": "A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1",
+          "owner": "A",
+          "status": "complete",
+          "revision": 1,
+          "dependencies": [
+            "A10_EGL_CUDA_MAP_CPU_V1"
+          ],
+          "brief": "tasks/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1.md",
+          "release": "releases/P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1.json",
+          "wave_id": "corrector-sim-20260919-A-CUDA-map-graphics-wave03",
+          "run_id": "A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1_A_wave03",
+          "shard_id": "A-EGL-CUDA-map-static64-device17198167-once",
+          "acknowledgement": "receipts/A/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_ACK.json",
+          "result": "receipts/A/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_RESULT.json",
+          "release_closed": "releases/P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_CLOSED.json",
+          "attempt_consumed": true,
+          "acceptance": "manifests/A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_FINAL_ACCEPTANCE.json",
+          "accepted_at_utc": "2026-09-19T18:53:36.642494+00:00"
+        },
+        {
+          "id": "A10_NATIVE_EGL_INTEGRATION_CPU_V1",
+          "owner": "A",
+          "status": "complete",
+          "revision": 1,
+          "dependencies": [
+            "A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1"
+          ],
+          "dependency_outcome_required": "success_accepted_and_release_closed",
+          "brief": "tasks/A10_NATIVE_EGL_INTEGRATION_CPU_V1.md",
+          "release": "releases/P00_NATIVE_EGL_INTEGRATION_CPU_V1.json",
+          "acknowledgement": "receipts/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1_ACK.json",
+          "result": "receipts/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1_RESULT.json",
+          "acceptance": "manifests/NATIVE_EGL_INTEGRATION_CPU_V1_ACCEPTANCE.json",
+          "accepted_at_utc": "2026-09-19T19:33:46.649379+00:00"
+        },
+        {
+          "id": "A10_PREFLIGHT_NATIVE_V2",
+          "revision": 1,
+          "owner": "A",
+          "status": "failed",
+          "release": "releases/P10_A_NATIVE_PREFLIGHT_V2.json",
+          "dependencies": [
+            "A10_NATIVE_EGL_INTEGRATION_CPU_V1"
+          ],
+          "brief": "tasks/A10_PREFLIGHT_NATIVE_V2.md",
+          "wave_id": "corrector-sim-20260919-A-native-V2-wave04",
+          "run_id": "A10_PREFLIGHT_NATIVE_V2_r1_A_wave04",
+          "shard_id": "A-native-V2-shelf-place-once",
+          "acknowledgement": "receipts/A/A10_PREFLIGHT_NATIVE_V2_ACK.json",
+          "result": "receipts/A/A10_PREFLIGHT_NATIVE_V2_RESULT.json",
+          "failure_class": "technical_Torch_UUID_representation_contract",
+          "acceptance": "manifests/A_NATIVE_PREFLIGHT_V2_FINAL_ACCEPTANCE.json",
+          "release_closed": "releases/P10_A_NATIVE_PREFLIGHT_V2_CLOSED.json",
+          "attempt_consumed": true,
+          "diagnostic_attempts_entered": 0,
+          "accepted_at_utc": "2026-09-19T19:48:55.756697+00:00"
+        },
+        {
+          "id": "A10_TORCH_UUID_ABI_CPU_REPAIR_V1",
+          "owner": "A",
+          "status": "complete",
+          "revision": 1,
+          "dependencies": [
+            "A10_PREFLIGHT_NATIVE_V2"
+          ],
+          "dependency_outcome_required": "technical_failure_accepted_and_release_closed",
+          "brief": "tasks/A10_TORCH_UUID_ABI_CPU_REPAIR_V1.md",
+          "release": "releases/P00_TORCH_UUID_ABI_CPU_REPAIR_V1.json",
+          "acknowledgement": "receipts/A/A10_TORCH_UUID_ABI_CPU_REPAIR_V1_ACK.json",
+          "result": "receipts/A/A10_TORCH_UUID_ABI_CPU_REPAIR_V1_RESULT.json",
+          "acceptance": "manifests/TORCH_UUID_ABI_CPU_REPAIR_V1_ACCEPTANCE.json",
+          "accepted_at_utc": "2026-09-19T20:12:12.019548+00:00"
+        },
+        {
+          "id": "A10_PREFLIGHT_NATIVE_V3",
+          "revision": 1,
+          "owner": "A",
+          "status": "complete",
+          "release": "releases/P10_A_NATIVE_PREFLIGHT_V3.json",
+          "dependencies": [
+            "A10_TORCH_UUID_ABI_CPU_REPAIR_V1"
+          ],
+          "brief": "tasks/A10_PREFLIGHT_NATIVE_V3.md",
+          "wave_id": "corrector-sim-20260919-A-native-V3-wave05",
+          "run_id": "A10_PREFLIGHT_NATIVE_V3_r1_A_wave05",
+          "shard_id": "A-native-V3-shelf-place-once",
+          "acknowledgement": "receipts/A/A10_PREFLIGHT_NATIVE_V3_ACK.json",
+          "result": "receipts/A/A10_PREFLIGHT_NATIVE_V3_RESULT.json",
+          "acceptance": "manifests/A_NATIVE_PREFLIGHT_V3_FINAL_ACCEPTANCE.json",
+          "release_closed": "releases/P10_A_NATIVE_PREFLIGHT_V3_CLOSED.json",
+          "attempt_consumed": true,
+          "accepted_at_utc": "2026-09-19T20:33:57.487934+00:00"
+        },
+        {
+          "id": "A10_PV_OFFLINE_PREFLIGHT_CPU_V1",
+          "owner": "A",
+          "status": "complete",
+          "revision": 1,
+          "dependencies": [
+            "A10_PREFLIGHT_NATIVE_V3"
+          ],
+          "dependency_outcome_required": "finite_native_success_accepted_and_release_closed",
+          "brief": "tasks/A10_PV_OFFLINE_PREFLIGHT_CPU_V1.md",
+          "release": "releases/P00_PV_OFFLINE_PREFLIGHT_CPU_V1.json",
+          "acknowledgement": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1_ACK.json",
+          "result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1_RESULT.json",
+          "acceptance": "manifests/PV_OFFLINE_PREFLIGHT_CPU_V1_ACCEPTANCE.json",
+          "accepted_at_utc": "2026-09-19T21:16:20.283242+00:00"
+        },
+        {
+          "id": "A10_PV_OFFLINE_PREFLIGHT_V1",
+          "owner": "A",
+          "revision": 1,
+          "status": "failed",
+          "release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V1.json",
+          "dependencies": [
+            "A10_PV_OFFLINE_PREFLIGHT_CPU_V1"
+          ],
+          "brief": "tasks/A10_PV_OFFLINE_PREFLIGHT_V1.md",
+          "wave_id": "corrector-sim-20260919-A-PV-offline-wave06",
+          "run_id": "A10_PV_OFFLINE_PREFLIGHT_V1_r1_A_wave06",
+          "shard_id": "A-PV-offline-shelf-place-step0-cached-once",
+          "acknowledgement": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V1_ACK.json",
+          "result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V1_RESULT.json",
+          "acceptance": "manifests/A_PV_OFFLINE_PREFLIGHT_V1_FAILURE_ACCEPTANCE.json",
+          "closed_release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V1_CLOSED.json",
+          "command_opportunity_consumed": true,
+          "claim_consumed": false,
+          "compute_attempts": 0,
+          "accepted_at_utc": "2026-09-19T21:30:21.125418+00:00"
+        },
+        {
+          "id": "A10_PV_AUTH_METADATA_CPU_V1",
+          "owner": "A",
+          "status": "ready",
+          "revision": 1,
+          "dependencies": [
+            "A10_PV_OFFLINE_PREFLIGHT_V1"
+          ],
+          "dependency_outcome_required": "failure_evidence_accepted_and_release_closed_no_compute",
+          "brief": "tasks/A10_PV_AUTH_METADATA_CPU_V1.md",
+          "release": "releases/P00_PV_AUTH_METADATA_CPU_V1.json",
+          "expected_result": "receipts/A/A10_PV_AUTH_METADATA_CPU_V1_RESULT.json"
+        },
+        {
+          "id": "A10_PV_OFFLINE_PREFLIGHT_V2",
+          "owner": "A",
+          "revision": 1,
+          "status": "ready",
+          "release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V2.json",
+          "dependencies": [
+            "A10_PV_AUTH_METADATA_CPU_V1"
+          ],
+          "dependency_outcome_required": "CPU_metadata_package_accepted_and_independent_compute_release_published",
+          "brief": "tasks/A10_PV_OFFLINE_PREFLIGHT_V2.md",
+          "wave_id": "corrector-sim-20260919-A-PV-offline-V2-wave07",
+          "run_id": "A10_PV_OFFLINE_PREFLIGHT_V2_r1_A_wave07",
+          "shard_id": "A-PV-offline-V2-shelf-place-step0-cached-once",
+          "acknowledgement": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V2_ACK.json",
+          "expected_result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V2_RESULT.json"
+        }
+      ],
+      "updated_at_utc": "2026-09-19T21:32:30.717025+00:00",
+      "fixture_only_not_authorization": true
+    },
+    "release": {
+      "status": "UNAUTHORIZED_TEMPLATE",
+      "issuer": "analysis",
+      "campaign_id": "corrector-sim-20260919",
+      "task_id": "A10_PV_OFFLINE_PREFLIGHT_V2",
+      "task_revision": 1,
+      "node_role": "A",
+      "owner_host": "trial-303224955-trialrun-303224955-worker-0",
+      "release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V2",
+      "wave_id": "corrector-sim-20260919-A-PV-offline-V2-wave07",
+      "run_id": "A10_PV_OFFLINE_PREFLIGHT_V2_r1_A_wave07",
+      "shard_id": "A-PV-offline-V2-shelf-place-step0-cached-once",
+      "proposal_sha256": "9e7a80a211eba6a4e3c65bd2fb3764fe0fbd974c4190c9f2e77091c04a62e02c",
+      "code_manifest_sha256": "6aebda83f18a1698e815d522866106a0e84eb1adf669b7d097131f3f858ac161",
+      "input_manifest_sha256": "706b2e94b543e404c7a3ce6baee88d1736c61cf2ea4e9e491643af95e1fc1fb0",
+      "config_sha256": "109bfe6482e7491cb8ad6ef4821bf55b536f4d8f9a734fd0100e71ee516cd48b",
+      "external_source_manifest_sha256": "088c97a731211ccb51f989fe024fe608c1d005838c505d8335768788a75b768c",
+      "resource_caps": {
+        "simulator_attempts": 0,
+        "environment_instances": 0,
+        "wrapper_instances": 0,
+        "taskset_constructions": 0,
+        "environment_reset_calls": 0,
+        "reset_model_calls": 0,
+        "initialization_physics_substeps": 0,
+        "policy_physics_substeps": 0,
+        "physics_steps": 0,
+        "env_steps": 0,
+        "graphics_context_creations": 0,
+        "render_calls": 0,
+        "rgb_readback_calls": 0,
+        "explicit_EGL_calls": 0,
+        "explicit_CUDA_driver_calls": 0,
+        "explicit_driver_dlopen_calls": 0,
+        "completed_rollouts": 0,
+        "monitor_calls": 0,
+        "D_forward_calls": 0,
+        "G0_forward_calls": 0,
+        "vla_backward_calls": 0,
+        "vla_parameter_backward_calls": 0,
+        "critic_parameter_updates": 0,
+        "optimizer_updates": 0,
+        "training_updates": 0,
+        "retries": 0,
+        "deletions": 0,
+        "baseline_sampling_calls": 0,
+        "offline_attempts": 1,
+        "native_nvml_identity_queries": 2,
+        "policy_device_selections": 1,
+        "policy_device_property_queries": 1,
+        "model_initializations": 5,
+        "policy_model_loads": 1,
+        "policy_state_file_loads": 1,
+        "policy_state_dict_loads": 1,
+        "critic_model_loads": 4,
+        "tokenizer_loads": 1,
+        "preprocessor_loads": 1,
+        "postprocessor_loads": 1,
+        "normalizer_transform_loads": 1,
+        "projection_loads": 1,
+        "context_builds": 1,
+        "preprocessor_calls": 2,
+        "tokenizer_calls": 3,
+        "image_preprocessing_calls": 2,
+        "visual_encoder_forwards": 4,
+        "language_embedding_forwards": 2,
+        "encoder_forward_calls": 6,
+        "spatial_projection_calls": 1,
+        "prefix_transformer_forwards": 1,
+        "action_expert_forwards": 10,
+        "flow_forward_calls": 10,
+        "noise_draws": 1,
+        "vla_sampling_calls": 1,
+        "model_gpu_inference_calls": 1,
+        "critic_feature_transforms": 4,
+        "critic_forward_calls": 40,
+        "objective_forward_calls": 10,
+        "action_gradient_calls": 4,
+        "critic_backward_calls": 4,
+        "post_action_gradient_calls": 1,
+        "velocity_action_gradient_calls": 3,
+        "own_projection_calls": 4,
+        "raw_constraint_audits": 2,
+        "postprocessor_calls": 1
+      },
+      "device": {
+        "gpu_uuid": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe",
+        "gpu_index": 0,
+        "gpu_model": "NVIDIA H100 80GB HBM3",
+        "driver": "535.161.08",
+        "pci_bus_id": "0000:0f:00.0"
+      },
+      "cuda_environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe,GPU-64240b2e-5845-da58-e703-61322f21cbf6,GPU-2254f286-1a7d-edf8-e4a4-f24c051cab83,GPU-8a8b08b1-2a03-ae94-bac7-4f690cf5c5d8,GPU-ec35bc25-f521-4261-e3a3-cf536a41aa64,GPU-7a3ce392-0958-db98-bd25-b95810298e5f,GPU-b63ae919-c2a3-ff8c-3527-2f924152251f,GPU-893accc7-1601-840b-ea72-5d8302ef6d44",
+        "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+        "NVIDIA_VISIBLE_DEVICES": "GPU-b63ae919-c2a3-ff8c-3527-2f924152251f,GPU-ec35bc25-f521-4261-e3a3-cf536a41aa64,GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe,GPU-2254f286-1a7d-edf8-e4a4-f24c051cab83,GPU-64240b2e-5845-da58-e703-61322f21cbf6,GPU-7a3ce392-0958-db98-bd25-b95810298e5f,GPU-893accc7-1601-840b-ea72-5d8302ef6d44,GPU-8a8b08b1-2a03-ae94-bac7-4f690cf5c5d8"
+      },
+      "wave_participants": [
+        "A"
+      ],
+      "max_retries": 0,
+      "timeout_seconds": 1800,
+      "kill_grace_seconds": 30,
+      "template_is_authorization": false,
+      "real_command": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/commands/run_proposed_pv_offline.sh",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V2.json"
+      ],
+      "fixture_only_not_authorization": true
+    },
+    "proposal": {
+      "proposal_id": "A10_PV_OFFLINE_PREFLIGHT_V2_proposal_r1",
+      "status": "proposed_not_released",
+      "publication_is_authorization": false,
+      "campaign_id": "corrector-sim-20260919",
+      "task_id": "A10_PV_OFFLINE_PREFLIGHT_V2",
+      "task_revision": 1,
+      "node_role": "A",
+      "owner_host": "trial-303224955-trialrun-303224955-worker-0",
+      "wave_participants": [
+        "A"
+      ],
+      "config": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/config/CONFIG.json",
+        "sha256": "109bfe6482e7491cb8ad6ef4821bf55b536f4d8f9a734fd0100e71ee516cd48b",
+        "size_bytes": 6616
+      },
+      "input_manifest": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/INPUT_MANIFEST.json",
+        "sha256": "706b2e94b543e404c7a3ce6baee88d1736c61cf2ea4e9e491643af95e1fc1fb0",
+        "size_bytes": 15890
+      },
+      "code_manifest": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/code/CODE_MANIFEST.json",
+        "sha256": "6aebda83f18a1698e815d522866106a0e84eb1adf669b7d097131f3f858ac161",
+        "size_bytes": 73442
+      },
+      "external_sources": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/EXTERNAL_SOURCE_MANIFEST.json",
+        "sha256": "088c97a731211ccb51f989fe024fe608c1d005838c505d8335768788a75b768c",
+        "size_bytes": 15482
+      },
+      "command": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/commands/run_proposed_pv_offline.sh",
+        "sha256": "965dfc3fa5e11aebd4976d5d0b84a546f26341fd52ac7757df9109f35728a9b7",
+        "size_bytes": 344
+      },
+      "real_command": [
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/commands/run_proposed_pv_offline.sh",
+        "NEW_RELEASE_JSON"
+      ],
+      "required_release_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V2.json",
+      "device": {
+        "gpu_uuid": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe",
+        "gpu_index": 0,
+        "gpu_model": "NVIDIA H100 80GB HBM3",
+        "driver": "535.161.08",
+        "pci_bus_id": "0000:0f:00.0"
+      },
+      "cuda_environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe,GPU-64240b2e-5845-da58-e703-61322f21cbf6,GPU-2254f286-1a7d-edf8-e4a4-f24c051cab83,GPU-8a8b08b1-2a03-ae94-bac7-4f690cf5c5d8,GPU-ec35bc25-f521-4261-e3a3-cf536a41aa64,GPU-7a3ce392-0958-db98-bd25-b95810298e5f,GPU-b63ae919-c2a3-ff8c-3527-2f924152251f,GPU-893accc7-1601-840b-ea72-5d8302ef6d44",
+        "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+        "NVIDIA_VISIBLE_DEVICES": "GPU-b63ae919-c2a3-ff8c-3527-2f924152251f,GPU-ec35bc25-f521-4261-e3a3-cf536a41aa64,GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe,GPU-2254f286-1a7d-edf8-e4a4-f24c051cab83,GPU-64240b2e-5845-da58-e703-61322f21cbf6,GPU-7a3ce392-0958-db98-bd25-b95810298e5f,GPU-893accc7-1601-840b-ea72-5d8302ef6d44,GPU-8a8b08b1-2a03-ae94-bac7-4f690cf5c5d8"
+      },
+      "source": {
+        "source_id": "A10-native-queue-diagnostic-shelf-place-v3-2026091900",
+        "task": "shelf-place-v3",
+        "parent_episode_id": "A10-native-queue-diagnostic-shelf-place-v3-2026091900",
+        "env_seed": 2026091900,
+        "generation_seed": 2026091901,
+        "suffix_seed": 2026091902,
+        "split": "development",
+        "selection": "one fixed diagnostic identity; no outcome-based replacement",
+        "step": 0,
+        "cut_is_legal_alarm": false,
+        "instruction": "Pick and place a puck onto a shelf",
+        "observation_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_diagnostic_runs/ba0faa37ed325af8c2c61221310c8bb23f47fd10a109ff5a3d4847866d4f1f2a/observation_step0.npz",
+        "raw_plans_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_diagnostic_runs/ba0faa37ed325af8c2c61221310c8bb23f47fd10a109ff5a3d4847866d4f1f2a/raw_plans.npy",
+        "raw_index": 0,
+        "raw50_sha256": "2bc5fa612387cbce688a610fa2d3ba09ebc87b0f8dabd74be524f02234562464",
+        "noise_sha256": "b3126bc00d8e44f80cf1ae879db97042477bcfb1408262dd25ce2d9bad22d052",
+        "noise_shape": [
+          1,
+          50,
+          32
+        ],
+        "noise_dtype": "float32",
+        "noise_generator": "torch.normal(mean=0,std=1,size=(1,50,32),device=cuda:0,dtype=float32); default CUDA generator reseeded 2026091901 immediately before call",
+        "history_length": 1,
+        "history_mask": [
+          false,
+          false,
+          false,
+          false,
+          true
+        ],
+        "past_executed_actions": 0,
+        "future_step1_permitted": false
+      },
+      "resource_caps": {
+        "simulator_attempts": 0,
+        "environment_instances": 0,
+        "wrapper_instances": 0,
+        "taskset_constructions": 0,
+        "environment_reset_calls": 0,
+        "reset_model_calls": 0,
+        "initialization_physics_substeps": 0,
+        "policy_physics_substeps": 0,
+        "physics_steps": 0,
+        "env_steps": 0,
+        "graphics_context_creations": 0,
+        "render_calls": 0,
+        "rgb_readback_calls": 0,
+        "explicit_EGL_calls": 0,
+        "explicit_CUDA_driver_calls": 0,
+        "explicit_driver_dlopen_calls": 0,
+        "completed_rollouts": 0,
+        "monitor_calls": 0,
+        "D_forward_calls": 0,
+        "G0_forward_calls": 0,
+        "vla_backward_calls": 0,
+        "vla_parameter_backward_calls": 0,
+        "critic_parameter_updates": 0,
+        "optimizer_updates": 0,
+        "training_updates": 0,
+        "retries": 0,
+        "deletions": 0,
+        "baseline_sampling_calls": 0,
+        "offline_attempts": 1,
+        "native_nvml_identity_queries": 2,
+        "policy_device_selections": 1,
+        "policy_device_property_queries": 1,
+        "model_initializations": 5,
+        "policy_model_loads": 1,
+        "policy_state_file_loads": 1,
+        "policy_state_dict_loads": 1,
+        "critic_model_loads": 4,
+        "tokenizer_loads": 1,
+        "preprocessor_loads": 1,
+        "postprocessor_loads": 1,
+        "normalizer_transform_loads": 1,
+        "projection_loads": 1,
+        "context_builds": 1,
+        "preprocessor_calls": 2,
+        "tokenizer_calls": 3,
+        "image_preprocessing_calls": 2,
+        "visual_encoder_forwards": 4,
+        "language_embedding_forwards": 2,
+        "encoder_forward_calls": 6,
+        "spatial_projection_calls": 1,
+        "prefix_transformer_forwards": 1,
+        "action_expert_forwards": 10,
+        "flow_forward_calls": 10,
+        "noise_draws": 1,
+        "vla_sampling_calls": 1,
+        "model_gpu_inference_calls": 1,
+        "critic_feature_transforms": 4,
+        "critic_forward_calls": 40,
+        "objective_forward_calls": 10,
+        "action_gradient_calls": 4,
+        "critic_backward_calls": 4,
+        "post_action_gradient_calls": 1,
+        "velocity_action_gradient_calls": 3,
+        "own_projection_calls": 4,
+        "raw_constraint_audits": 2,
+        "postprocessor_calls": 1
+      },
+      "diagnostic_caps": {
+        "simulator_attempts": 0,
+        "environment_instances": 0,
+        "wrapper_instances": 0,
+        "taskset_constructions": 0,
+        "environment_reset_calls": 0,
+        "reset_model_calls": 0,
+        "initialization_physics_substeps": 0,
+        "policy_physics_substeps": 0,
+        "physics_steps": 0,
+        "env_steps": 0,
+        "graphics_context_creations": 0,
+        "render_calls": 0,
+        "rgb_readback_calls": 0,
+        "explicit_EGL_calls": 0,
+        "explicit_CUDA_driver_calls": 0,
+        "explicit_driver_dlopen_calls": 0,
+        "completed_rollouts": 0,
+        "monitor_calls": 0,
+        "D_forward_calls": 0,
+        "G0_forward_calls": 0,
+        "vla_backward_calls": 0,
+        "vla_parameter_backward_calls": 0,
+        "critic_parameter_updates": 0,
+        "optimizer_updates": 0,
+        "training_updates": 0,
+        "retries": 0,
+        "deletions": 0,
+        "baseline_sampling_calls": 0,
+        "offline_attempts": 1,
+        "native_nvml_identity_queries": 1,
+        "policy_device_selections": 1,
+        "policy_device_property_queries": 1,
+        "model_initializations": 5,
+        "policy_model_loads": 1,
+        "policy_state_file_loads": 1,
+        "policy_state_dict_loads": 1,
+        "critic_model_loads": 4,
+        "tokenizer_loads": 1,
+        "preprocessor_loads": 1,
+        "postprocessor_loads": 1,
+        "normalizer_transform_loads": 1,
+        "projection_loads": 1,
+        "context_builds": 1,
+        "preprocessor_calls": 2,
+        "tokenizer_calls": 3,
+        "image_preprocessing_calls": 2,
+        "visual_encoder_forwards": 4,
+        "language_embedding_forwards": 2,
+        "encoder_forward_calls": 6,
+        "spatial_projection_calls": 1,
+        "prefix_transformer_forwards": 1,
+        "action_expert_forwards": 10,
+        "flow_forward_calls": 10,
+        "noise_draws": 1,
+        "vla_sampling_calls": 1,
+        "model_gpu_inference_calls": 1,
+        "critic_feature_transforms": 4,
+        "critic_forward_calls": 40,
+        "objective_forward_calls": 10,
+        "action_gradient_calls": 4,
+        "critic_backward_calls": 4,
+        "post_action_gradient_calls": 1,
+        "velocity_action_gradient_calls": 3,
+        "own_projection_calls": 4,
+        "raw_constraint_audits": 2,
+        "postprocessor_calls": 1
+      },
+      "launcher_caps": {
+        "native_nvml_identity_queries": 1
+      },
+      "max_retries": 0,
+      "timeout_seconds": 1800,
+      "kill_grace_seconds": 30,
+      "restoration_observation_timeout_seconds": 120,
+      "timeout_scope": "timed diagnostic child only: second full input SHA pass, imports, model loads, encoders, Post and Velocity, in-process finalization",
+      "timeout_outside": [
+        "first full input SHA/device check",
+        "guard active check/reservation/holder release",
+        "entire process-group drain after child exits",
+        "reservation release",
+        "occupancy restoration observation up to120s"
+      ],
+      "timed_child_TERM_deadline_seconds": 1800,
+      "timed_child_KILL_nominal_deadline_seconds": 1830,
+      "end_to_end_strict_upper_bound_seconds": null,
+      "process_family_scope": "existing isolated lifecycle session, inherited formal.lock through timeout/child; no detached descendants; TERM then KILL, retain reservation until no live members; post-KILL drain has no finite hard bound",
+      "occupancy": "All eight A holders stopped through entire formal process group, including failures; restore only after group exit. B is absent.",
+      "cost_semantics": {
+        "kind": "cached single-snapshot numerical diagnostic",
+        "deployment_samples": {
+          "Post": 1,
+          "Velocity": 2
+        },
+        "diagnostic_samples": {
+          "Post": 0,
+          "Velocity": 1
+        },
+        "deployment_cost_comparison": false
+      },
+      "call_quote": {
+        "Q": {
+          "member_loads": 4,
+          "feature_transforms": 4,
+          "objective_calls": 10,
+          "member_forward_calls": 40,
+          "slots_per_member_forward": 2,
+          "anchor_slot_evaluations": 40,
+          "candidate_slot_evaluations": 40,
+          "action_gradients": 4,
+          "successful_member_backward_paths_derived": 16,
+          "parameter_updates": 0,
+          "objective_breakdown": {
+            "shared_anchor_score": 1,
+            "Post_gradient": 1,
+            "Post_final_score": 1,
+            "Velocity_three_gradient_points": 3,
+            "Velocity_three_local_after_scores": 3,
+            "Velocity_final_score": 1
+          },
+          "note": "local after/final scores are finite diagnostics only; no improvement acceptance gate or retry"
+        },
+        "encoder": {
+          "SFT_model_loads": 1,
+          "Q_visual": 1,
+          "guided_visual_including_two_padded_cameras": 3,
+          "Q_language_embedding": 1,
+          "guided_language_embedding": 1,
+          "prefix_transformer": 1,
+          "flow_action_expert": 10,
+          "D": 0,
+          "G0": 0,
+          "legacy_pooling_models": 0,
+          "spatial_projection": 1
+        },
+        "matching": {
+          "own_projection": 2,
+          "independent_replay_in_constraint_audit": 2,
+          "raw_constraint_audits": 2,
+          "model_calls_in_matching": 0
+        }
+      },
+      "counter_scope": "Incremental entered-first explicit operations; returned separately. Nested aliases (encoder6=vision4+language2; model_initializations5=policy1+Q4; critic_backward4=action_gradient4=Post1+Velocity3; GPU model inference1=sampling1) must not be summed. Torch/CUDA/cuBLAS internal calls and kernel counts are unmeasured, not asserted zero. NVML identity2 excludes persistent guard polling.",
+      "noise_rule": "Exactly one original model.sample_noise torch.normal after default CPU/current-CUDA seed2026091901; [1,50,32]float32. Require saved V3 SHA before guided sampling; pass tensor explicitly. No mismatch repair, extra draw or baseline.",
+      "input_gaps": {
+        "missing_saved_noise_tensor": "rebuildable by frozen RNG, runtime SHA validation still pending",
+        "missing_internal_raw50x32": "not needed: Post uses bounded command anchor; Velocity uses rebuilt initial noise and saved bounded anchor",
+        "future_features": "must compute same-source step0 vision/language after release",
+        "known_blockers": []
+      },
+      "resource_estimates": {
+        "gpu_count": 1,
+        "reserved_holder_GPU_count": 8,
+        "vram_peak_GiB": 40,
+        "host_RAM_peak_GiB": 64,
+        "additional_disk_GiB": 2,
+        "estimates_measured": false,
+        "model_weight_bytes": 9354050752,
+        "large_weight_hash_passes": 2,
+        "large_weight_hash_bytes": 18708101504,
+        "CPU_preparation_large_weight_hash_passes": 0,
+        "D_G0_models_loaded": 0,
+        "Q_models_placement": "CPU, frozen eval; two threads during Q arithmetic",
+        "policy_encoder_placement": "fixed cuda:0 H100, original checkpoint precision; no AMP override",
+        "extra_notes": "Q gradients traverse detached candidate actions and CPU/GPU copies, never VLA parameters. All outputs/cache/logs retained; no delete operation."
+      },
+      "unvalidated": [
+        "real encoder outputs at step0",
+        "runtime noise hash equality",
+        "Q/P/V finite numerical behavior on this snapshot",
+        "MT50 Q adaptation",
+        "D/G0 triggers",
+        "C10 execution and complete task outcomes"
+      ],
+      "successful_output_is_task_success_sample": false,
+      "authorization_identity": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_AUTH_METADATA_CPU_V1/proposal/IDENTITY.json",
+        "sha256": "c0d73ea44eba6c02cfa730c68da774dba832de5bc9d99479ef50848e717534c7",
+        "size_bytes": 1714
+      },
+      "_sha256": "9e7a80a211eba6a4e3c65bd2fb3764fe0fbd974c4190c9f2e77091c04a62e02c"
+    },
+    "release_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V2.json",
+    "hostname": "trial-303224955-trialrun-303224955-worker-0"
+  },
+  "result": {
+    "case": "release_template_is_not_authorized",
+    "expected": "rejected",
+    "actual": "rejected",
+    "error": "Release identity/caps differ from frozen proposal"
+  }
+}

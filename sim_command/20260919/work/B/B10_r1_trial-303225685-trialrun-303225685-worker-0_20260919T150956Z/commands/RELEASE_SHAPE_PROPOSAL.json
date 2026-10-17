@@ -1,0 +1,14 @@
+{
+  "notice": "Proposed future release contract; analysis must bind actual task/revision/host/config/code/caps; this file cannot authorize execution.",
+  "campaign_id": "corrector-sim-20260919",
+  "kind": "formal_compute",
+  "release_id": null,
+  "task_id": null,
+  "task_revision": null,
+  "hostname": "trial-303225685-trialrun-303225685-worker-0",
+  "participating_hosts": [
+    "trial-303225685-trialrun-303225685-worker-0"
+  ],
+  "jobs": "job_id -> {config_sha256,code_manifest_sha256,limits}; task board must point at release",
+  "cross_host_wave": "Not supported by run_formal_job.sh. A/B shared wave needs coordinator barrier inside both lifecycle wrappers and explicit failure/recovery release. No automatic timeout-to-success or early holder restoration."
+}

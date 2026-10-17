@@ -1,0 +1,39 @@
+{
+  "created_at_utc": "2026-09-22T15:55:59.138893+00:00",
+  "authorization": {
+    "path": "deadline_20260924/FULL_Q_LOSS_SELECTION_AUTHORIZATION_V1.json",
+    "sha256": "8fc0bf2c7c0c761d9fba424fb7fb127af8a9c505668fccd7231126535c6422c1"
+  },
+  "concurrency_rule": {
+    "path": "deadline_20260924/EVALUATION_CONCURRENCY_24_V1.md",
+    "sha256": "8b13ba1b96d286b1be68f6d96c300017af95ae637120bb7c34c69ac943e33b29"
+  },
+  "A": {
+    "direct_transport": "accepted",
+    "queue_id": "01a0c9d1-b87f-7750-9f65-f2a91fa0f804",
+    "cancellation_ACK": "receipts/A/A_D24_MULTI_PRIMARY_VALIDATION_V1_Q_LOSS_OVERRIDE_ACK.json",
+    "old_stage_RESULT": "results/A/A_D24_MULTI_PRIMARY_VALIDATION_V1/RESULT.json",
+    "Random_multi_entered": 0,
+    "old_E1_valid_preserved": 420,
+    "new_task_ACK_observed": false
+  },
+  "B": {
+    "shared_dispatch": "published",
+    "local_queue_attempt": "no local rollout found for remote B thread; no message delivered by local CLI",
+    "task_discovery_authorization_registered_in_both_controls": true,
+    "new_task_ACK_observed": false,
+    "discovery_event_id": "B_bd012e04d2e6e27bfd1953931e9e5b96",
+    "discovery_event_type": "dependency_changed",
+    "board_release_registered": true
+  },
+  "C": {
+    "shared_dispatch": "published",
+    "task_discovery_authorization_registered_in_both_controls": true,
+    "new_task_ACK_observed": false,
+    "discovery_event_id": "C_7e99dfdf5a30dcf9eb7bc001c3d963e0",
+    "discovery_eligible": true
+  },
+  "no_scientific_compute_by_analysis": true,
+  "metadata_checks": "new refs, counts and dual registries PASS; no weight hashes",
+  "updated_at_utc": "2026-09-22T15:56:42.792123+00:00"
+}

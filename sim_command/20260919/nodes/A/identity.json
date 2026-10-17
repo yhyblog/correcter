@@ -1,0 +1,195 @@
+{
+  "role": "A",
+  "hostname": "trial-303224955-trialrun-303224955-worker-0",
+  "session_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+  "workspace_path": "/mnt/bn/arnold-recommend/yaohaoyang",
+  "checked_at_utc": "2026-09-19T15:09:13.824306+00:00",
+  "shared_mount_check": {
+    "local_mount": {
+      "filesystems": [
+        {
+          "target": "/mnt/bn/arnold-recommend",
+          "source": "BF-bytefuse-arnold-recommend",
+          "fstype": "virtio_pfs_010309",
+          "options": "rw,nosuid,nodev,relatime,user_id=0,group_id=0,default_permissions,allow_other,dev=455"
+        }
+      ]
+    },
+    "read_and_atomic_write_A_receipt": true,
+    "cross_host_bytes_identity": "B must independently verify; A did not run remote commands"
+  },
+  "gpu_model": "NVIDIA H100 80GB HBM3",
+  "gpu_count": 8,
+  "driver_version": "535.161.08",
+  "gpu_inventory": {
+    "command": [
+      "nvidia-smi",
+      "--query-gpu=index,name,uuid,driver_version,memory.total,memory.used,utilization.gpu",
+      "--format=csv,noheader"
+    ],
+    "returncode": 0,
+    "stdout": "0, NVIDIA H100 80GB HBM3, GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe, 535.161.08, 81559 MiB, 1013 MiB, 50 %\n1, NVIDIA H100 80GB HBM3, GPU-64240b2e-5845-da58-e703-61322f21cbf6, 535.161.08, 81559 MiB, 1013 MiB, 49 %\n2, NVIDIA H100 80GB HBM3, GPU-2254f286-1a7d-edf8-e4a4-f24c051cab83, 535.161.08, 81559 MiB, 1013 MiB, 49 %\n3, NVIDIA H100 80GB HBM3, GPU-8a8b08b1-2a03-ae94-bac7-4f690cf5c5d8, 535.161.08, 81559 MiB, 1013 MiB, 49 %\n4, NVIDIA H100 80GB HBM3, GPU-ec35bc25-f521-4261-e3a3-cf536a41aa64, 535.161.08, 81559 MiB, 1013 MiB, 49 %\n5, NVIDIA H100 80GB HBM3, GPU-7a3ce392-0958-db98-bd25-b95810298e5f, 535.161.08, 81559 MiB, 1013 MiB, 49 %\n6, NVIDIA H100 80GB HBM3, GPU-b63ae919-c2a3-ff8c-3527-2f924152251f, 535.161.08, 81559 MiB, 1013 MiB, 50 %\n7, NVIDIA H100 80GB HBM3, GPU-893accc7-1601-840b-ea72-5d8302ef6d44, 535.161.08, 81559 MiB, 1013 MiB, 50 %\n",
+    "stderr": ""
+  },
+  "environment_summary": [
+    {
+      "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+      "prefix": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot",
+      "base_prefix": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot",
+      "packages": {
+        "torch": "2.7.1",
+        "numpy": "2.2.6",
+        "mujoco": "3.6.0",
+        "metaworld": "3.0.0",
+        "gymnasium": "1.2.3",
+        "transformers": "5.4.0",
+        "lerobot": "0.5.1",
+        "jax": null,
+        "flax": null,
+        "robosuite": "1.4.0"
+      }
+    },
+    {
+      "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+      "prefix": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-smolvla-lr044",
+      "base_prefix": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot",
+      "packages": {
+        "torch": "2.7.1",
+        "numpy": "2.2.6",
+        "mujoco": "3.6.0",
+        "metaworld": "3.0.0",
+        "gymnasium": "1.3.0",
+        "transformers": "4.57.1",
+        "lerobot": "0.4.4",
+        "jax": null,
+        "flax": null,
+        "robosuite": null
+      }
+    },
+    {
+      "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+      "prefix": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/mw-xvla-lr044",
+      "base_prefix": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot",
+      "packages": {
+        "torch": "2.7.1",
+        "numpy": "2.2.6",
+        "mujoco": "3.6.0",
+        "metaworld": "3.0.0",
+        "gymnasium": "1.3.0",
+        "transformers": "4.57.1",
+        "lerobot": "0.4.4",
+        "jax": null,
+        "flax": null,
+        "robosuite": null
+      }
+    },
+    {
+      "python": "3.11.14 | packaged by conda-forge | (main, Jan 26 2026, 23:48:32) [GCC 14.3.0]",
+      "prefix": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/pi05-openpi-jax",
+      "base_prefix": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/piper-wine",
+      "packages": {
+        "torch": "2.7.1",
+        "numpy": "1.26.4",
+        "mujoco": "2.3.7",
+        "metaworld": null,
+        "gymnasium": "0.29.1",
+        "transformers": "4.53.2",
+        "lerobot": "0.1.0",
+        "jax": "0.5.3",
+        "flax": "0.10.2",
+        "robosuite": null
+      }
+    },
+    {
+      "python": "3.8.20 (default, Oct  2 2024, 16:34:12) \n[Clang 18.1.8 ]",
+      "prefix": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/libero-sim-openpi",
+      "base_prefix": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/cache/python/cpython-3.8-linux-x86_64-gnu",
+      "packages": {
+        "torch": "1.11.0+cu113",
+        "numpy": "1.22.4",
+        "mujoco": "3.2.3",
+        "metaworld": null,
+        "gymnasium": null,
+        "transformers": "4.21.1",
+        "lerobot": null,
+        "jax": null,
+        "flax": null,
+        "robosuite": "1.4.1"
+      }
+    }
+  ],
+  "machine_local_checkpoint_gaps": [
+    "/tmp/act_recap_future_aware_20260914/checkpoint_cache/030000/pretrained_model"
+  ],
+  "persistent_asset_gaps": [
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/pi05-base",
+    "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-latents-pi05-mt50"
+  ],
+  "occupancy_status_source": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A00_r1/node_probe.json",
+  "occupancy_state_source_is_machine_local": "/tmp/gpu_occupancy_guard/status.json",
+  "occupancy": {
+    "pid": 27508,
+    "updated": 1789829999.3353884,
+    "gpus": {
+      "0": {
+        "state": "holder",
+        "manager_pid": 27512,
+        "driver_pids": [
+          3299747
+        ]
+      },
+      "1": {
+        "state": "holder",
+        "manager_pid": 27513,
+        "driver_pids": [
+          3299748
+        ]
+      },
+      "2": {
+        "state": "holder",
+        "manager_pid": 27514,
+        "driver_pids": [
+          3299750
+        ]
+      },
+      "3": {
+        "state": "holder",
+        "manager_pid": 27515,
+        "driver_pids": [
+          3299752
+        ]
+      },
+      "4": {
+        "state": "holder",
+        "manager_pid": 27516,
+        "driver_pids": [
+          3299754
+        ]
+      },
+      "5": {
+        "state": "holder",
+        "manager_pid": 27517,
+        "driver_pids": [
+          3299756
+        ]
+      },
+      "6": {
+        "state": "holder",
+        "manager_pid": 27518,
+        "driver_pids": [
+          3299758
+        ]
+      },
+      "7": {
+        "state": "holder",
+        "manager_pid": 27519,
+        "driver_pids": [
+          3299760
+        ]
+      }
+    }
+  },
+  "formal_project_jobs_observed": [],
+  "gpu_processes_match_guard_driver_pids": true,
+  "shared_guard_log_warning": "Guard appends to common workspace gpu_occupancy_guard.log and gpu_occupancy_guard.holders.log without host-qualified paths. Use node-local status and host-stamped snapshots; plan isolated logging in later engineering."
+}

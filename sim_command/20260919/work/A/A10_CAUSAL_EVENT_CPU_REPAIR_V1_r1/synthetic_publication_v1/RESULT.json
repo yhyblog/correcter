@@ -1,0 +1,125 @@
+{
+  "status": "PASS",
+  "synthetic": true,
+  "checks": [
+    {
+      "name": "ready_released_same_source",
+      "status": "PASS",
+      "synthetic": true,
+      "accepted": true,
+      "refusal": null
+    },
+    {
+      "name": "running_released_same_source",
+      "status": "PASS",
+      "synthetic": true,
+      "accepted": true,
+      "refusal": null
+    },
+    {
+      "name": "board_released_rejected",
+      "status": "PASS",
+      "synthetic": true,
+      "accepted": false,
+      "refusal": "Task board mismatch"
+    },
+    {
+      "name": "template_not_authorization",
+      "status": "PASS",
+      "synthetic": true,
+      "accepted": false,
+      "refusal": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "name": "old_release_rejected",
+      "status": "PASS",
+      "synthetic": true,
+      "accepted": false,
+      "refusal": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "name": "closed_release_rejected",
+      "status": "PASS",
+      "synthetic": true,
+      "accepted": false,
+      "refusal": "Release is closed"
+    },
+    {
+      "name": "wrong_task_rejected",
+      "status": "PASS",
+      "synthetic": true,
+      "accepted": false,
+      "refusal": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "name": "wrong_revision_rejected",
+      "status": "PASS",
+      "synthetic": true,
+      "accepted": false,
+      "refusal": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "name": "wrong_host_rejected",
+      "status": "PASS",
+      "synthetic": true,
+      "accepted": false,
+      "refusal": "Wrong physical host"
+    },
+    {
+      "name": "wrong_run_rejected",
+      "status": "PASS",
+      "synthetic": true,
+      "accepted": false,
+      "refusal": "Wrong unique run_id"
+    },
+    {
+      "name": "wrong_wave_rejected",
+      "status": "PASS",
+      "synthetic": true,
+      "accepted": false,
+      "refusal": "Wrong unique wave_id"
+    },
+    {
+      "name": "wrong_shard_rejected",
+      "status": "PASS",
+      "synthetic": true,
+      "accepted": false,
+      "refusal": "Wrong unique shard_id"
+    },
+    {
+      "name": "changed_caps_rejected",
+      "status": "PASS",
+      "synthetic": true,
+      "accepted": false,
+      "refusal": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "name": "changed_proposal_SHA_rejected",
+      "status": "PASS",
+      "synthetic": true,
+      "accepted": false,
+      "refusal": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "name": "changed_handoff_rejected",
+      "status": "PASS",
+      "synthetic": true,
+      "accepted": false,
+      "refusal": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "name": "current_prepare_CONTROL_rejected",
+      "status": "PASS",
+      "synthetic": true,
+      "accepted": false,
+      "refusal": "No current unique causal C10 compute authorization"
+    }
+  ],
+  "check_count": 16,
+  "pure_JSON_CLI_passed": true,
+  "source_templates_unchanged": true,
+  "real_release_or_claim_created": false,
+  "real_launcher_invocations": 0,
+  "hardware_imports": [],
+  "large_weights_hashed": 0
+}

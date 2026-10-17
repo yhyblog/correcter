@@ -1,0 +1,698 @@
+{
+  "checked_at_utc": "2026-09-23T13:42:27.142171+00:00",
+  "observer_host": "trial-303224955-trialrun-303224955-worker-0",
+  "B_host": "trial-303225685-trialrun-303225685-worker-0",
+  "inspection_scope": "read_only_shared_artifacts; no remote live PID/GPU claim; wrote only /tmp reports; no launch or message",
+  "status": "r2_launched_then_failed_before_model_loading_zero_new_attempts_no_r3_evidence",
+  "old_wave": {
+    "terminal_utc": "2026-09-23T13:28:55.451801+00:00",
+    "status": "partial",
+    "attempts": 3439,
+    "valid": 3055,
+    "technical_failure_attempts": 384,
+    "unstarted": 561,
+    "missing": 945,
+    "all_owned_descendants_exited": true,
+    "holders_restored_after_exit": true
+  },
+  "cells": [
+    {
+      "method": "N",
+      "H": 40,
+      "valid": 500,
+      "planned": 500,
+      "successes": 191,
+      "success_rate": 0.382,
+      "missing": 0,
+      "mean_policy_samples": 5.78,
+      "mean_natural_samples": 5.78,
+      "mean_candidate_samples": 0.0,
+      "mean_flow_calls": 57.8
+    },
+    {
+      "method": "N",
+      "H": 50,
+      "valid": 500,
+      "planned": 500,
+      "successes": 169,
+      "success_rate": 0.338,
+      "missing": 0,
+      "mean_policy_samples": 4.576,
+      "mean_natural_samples": 4.576,
+      "mean_candidate_samples": 0.0,
+      "mean_flow_calls": 45.76
+    },
+    {
+      "method": "Post",
+      "H": 40,
+      "valid": 500,
+      "planned": 500,
+      "successes": 223,
+      "success_rate": 0.446,
+      "missing": 0,
+      "mean_policy_samples": 10.134,
+      "mean_natural_samples": 6.934,
+      "mean_candidate_samples": 3.2,
+      "mean_flow_calls": 101.34
+    },
+    {
+      "method": "Post",
+      "H": 50,
+      "valid": 500,
+      "planned": 500,
+      "successes": 228,
+      "success_rate": 0.456,
+      "missing": 0,
+      "mean_policy_samples": 9.28,
+      "mean_natural_samples": 6.108,
+      "mean_candidate_samples": 3.172,
+      "mean_flow_calls": 92.8
+    },
+    {
+      "method": "R",
+      "H": 40,
+      "valid": 500,
+      "planned": 500,
+      "successes": 222,
+      "success_rate": 0.444,
+      "missing": 0,
+      "mean_policy_samples": 10.302,
+      "mean_natural_samples": 7.026,
+      "mean_candidate_samples": 3.276,
+      "mean_flow_calls": 103.02
+    },
+    {
+      "method": "R",
+      "H": 50,
+      "valid": 500,
+      "planned": 500,
+      "successes": 226,
+      "success_rate": 0.452,
+      "missing": 0,
+      "mean_policy_samples": 9.462,
+      "mean_natural_samples": 6.198,
+      "mean_candidate_samples": 3.264,
+      "mean_flow_calls": 94.62
+    },
+    {
+      "method": "Velocity",
+      "H": 40,
+      "valid": 28,
+      "planned": 500,
+      "successes": 20,
+      "success_rate": 0.7142857142857143,
+      "missing": 472
+    },
+    {
+      "method": "Velocity",
+      "H": 50,
+      "valid": 27,
+      "planned": 500,
+      "successes": 18,
+      "success_rate": 0.6666666666666666,
+      "missing": 473
+    }
+  ],
+  "sample_mean_definition": "policy_queries / valid500 (native + candidate policy samples), natural and candidate components separately; every policy sample has10 flow calls. Partial Velocity counters mix technical-attempt costs so no partial sample mean is computed from cell totals.",
+  "failure": {
+    "error_counts": {
+      "RuntimeError(\"encoder: RuntimeError('Inference tensors cannot be saved for backward. To work around you can make a clone to get a normal tensor and use it in autograd.')\")": 384
+    },
+    "root_cause": "cached inference-mode action-normalization statistics cannot be saved for action-only autograd",
+    "same_root_cause_as_A_r2": true,
+    "A_reusable_adapter": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/code/action_postprocessor.py",
+    "A_repair": "wrap every saved postprocessor call in torch.inference_mode(False); keep saved transform and action graph",
+    "B_private_repair": "smol_server initializes Post/Velocity inverse transform outside inference mode; native_velocity clones cached inference stats to normal tensors within inference_mode(False) before action-only autograd",
+    "B_CPU_check": {
+      "exists": true,
+      "mtime_utc": "2026-09-23T13:39:35.637197+00:00",
+      "content": {
+        "GPU_probe": false,
+        "actual_normalizer_implementation_used": true,
+        "device": "cpu",
+        "finite_expected_action_gradient": true,
+        "model_weights_or_scientific_configuration_changed": false,
+        "normalization_values_bitwise_preserved": true,
+        "original_failure_reproduced": "Inference tensors cannot be saved for backward. To work around you can make a clone to get a normal tensor and use it in autograd.",
+        "repeated_guidance_passed": true,
+        "status": "passed",
+        "synthetic_CPU_statistics": true,
+        "tail_gradient_zero": true
+      }
+    }
+  },
+  "recovery": {
+    "root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r2",
+    "planned_units": 945,
+    "prior_status_counts": {
+      "technical_failure": 384,
+      "unstarted": 561
+    },
+    "valid_old_units_excluded": 3055,
+    "valid_pending_overlap": 0,
+    "same_fault_restart_ordinal": 1,
+    "runtime_evidence": {
+      "HEARTBEAT.json": {
+        "exists": true,
+        "mtime_utc": "2026-09-23T13:40:44.912267+00:00",
+        "content": {
+          "authorization_sha256": "4f8406e67e2d0b73beda277b3bc633749060f30e8420e8513285780a06952c5f",
+          "process": {
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "host": "trial-303225685-trialrun-303225685-worker-0",
+            "pgid": 1953953,
+            "pid": 1953953,
+            "ppid": 1,
+            "start_ticks": 108642343,
+            "state": "R"
+          },
+          "restoration": {
+            "external_jobs_preserved": true,
+            "guard_status": {
+              "gpus": {
+                "0": {
+                  "driver_pids": [
+                    2347552
+                  ],
+                  "manager_pid": 1954197,
+                  "state": "holder"
+                },
+                "1": {
+                  "driver_pids": [
+                    2347554
+                  ],
+                  "manager_pid": 1954198,
+                  "state": "holder"
+                },
+                "2": {
+                  "driver_pids": [
+                    2347556
+                  ],
+                  "manager_pid": 1954199,
+                  "state": "holder"
+                },
+                "3": {
+                  "driver_pids": [
+                    2347558
+                  ],
+                  "manager_pid": 1954200,
+                  "state": "holder"
+                },
+                "4": {
+                  "driver_pids": [
+                    2347562
+                  ],
+                  "manager_pid": 1954201,
+                  "state": "holder"
+                },
+                "5": {
+                  "driver_pids": [
+                    2347561
+                  ],
+                  "manager_pid": 1954202,
+                  "state": "holder"
+                },
+                "6": {
+                  "driver_pids": [
+                    2347564
+                  ],
+                  "manager_pid": 1954203,
+                  "state": "holder"
+                },
+                "7": {
+                  "driver_pids": [
+                    2347566
+                  ],
+                  "manager_pid": 1954204,
+                  "state": "holder"
+                }
+              },
+              "pid": 776269,
+              "updated": 1790170829.3300054
+            },
+            "observed_at": {
+              "monotonic_seconds": 1086456.869121593,
+              "unix_seconds": 1790170829.5102062,
+              "utc": "2026-09-23T13:40:29.510209+00:00"
+            },
+            "status": "occupancy_resolved"
+          },
+          "status": "terminal_partial_or_failed",
+          "utc": "2026-09-23T13:40:44.910699+00:00"
+        }
+      },
+      "CLAIM.json": {
+        "exists": true,
+        "mtime_utc": "2026-09-23T13:39:56.155072+00:00",
+        "content": {
+          "absolute_wall_deadline_unix": 1790175420.0,
+          "authorization_sha256": "4f8406e67e2d0b73beda277b3bc633749060f30e8420e8513285780a06952c5f",
+          "config": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r2/config/CONFIG.json",
+            "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r2/config/CONFIG.json",
+            "sha256": "f89b0dc2b5bc254df24392feab3afc2e293173b3a5bc302a05d839846c194e5b",
+            "size_bytes": 2767
+          },
+          "method_frozen": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r2/METHOD_FROZEN.json",
+            "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r2/METHOD_FROZEN.json",
+            "sha256": "dbf29f43da2a917cb6056a45352545155af2e2b306244fe1757cd76c9d05ea88",
+            "size_bytes": 6583
+          },
+          "process": {
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "pid": 1953953,
+            "session_id": 1953953,
+            "start_ticks": 108642343
+          },
+          "run_id": "D24_B_SMOL_H40_H50_VELOCITY_RECOVERY_r2",
+          "sources": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r2/SOURCE_INDEX.json",
+            "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r2/SOURCE_INDEX.json",
+            "sha256": "2793349a89761be16db7e4030f33eb6a299b186a6c11d9cabd858cdbd2e60c8e",
+            "size_bytes": 1547180
+          },
+          "task_id": "B_D24_CROSSBASE_H_SWEEP_V1",
+          "utc": "2026-09-23T13:39:56.153164+00:00"
+        }
+      },
+      "MODELS_READY.json": {
+        "exists": false
+      },
+      "ENCODERS_READY.json": {
+        "exists": false
+      },
+      "STABLE_HANDOFF.json": {
+        "exists": false
+      },
+      "RESULT.json": {
+        "exists": true,
+        "mtime_utc": "2026-09-23T13:40:44.908514+00:00",
+        "content": {
+          "all_owned_descendants_exited": true,
+          "at_utc": "2026-09-23T13:40:44.906900+00:00",
+          "exit_code": 3,
+          "fatal": null,
+          "final_summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r2/FINAL_SUMMARY.json",
+          "occupancy_handoff_complete": true,
+          "publication_completed": true,
+          "publication_error": null,
+          "receipt": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_RESULT_r2.json",
+          "run_id": "D24_B_SMOL_H40_H50_VELOCITY_RECOVERY_r2",
+          "status": "partial",
+          "task_id": "B_D24_CROSSBASE_H_SWEEP_V1"
+        }
+      },
+      "CPU_REPAIR_CHECK.json": {
+        "exists": true,
+        "mtime_utc": "2026-09-23T13:39:35.637197+00:00",
+        "content": {
+          "GPU_probe": false,
+          "actual_normalizer_implementation_used": true,
+          "device": "cpu",
+          "finite_expected_action_gradient": true,
+          "model_weights_or_scientific_configuration_changed": false,
+          "normalization_values_bitwise_preserved": true,
+          "original_failure_reproduced": "Inference tensors cannot be saved for backward. To work around you can make a clone to get a normal tensor and use it in autograd.",
+          "repeated_guidance_passed": true,
+          "status": "passed",
+          "synthetic_CPU_statistics": true,
+          "tail_gradient_zero": true
+        }
+      },
+      "PREDECESSOR_EXIT_CHECK.json": {
+        "exists": true,
+        "mtime_utc": "2026-09-23T13:38:39.450164+00:00",
+        "content": {
+          "all_predecessor_processes_exited": true,
+          "control_revision": 86,
+          "grant": {
+            "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/CROSSBASE_H_SWEEP_V1/AUTHORIZATION.json",
+            "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/CROSSBASE_H_SWEEP_V1/AUTHORIZATION.json",
+            "sha256": "4f8406e67e2d0b73beda277b3bc633749060f30e8420e8513285780a06952c5f",
+            "size_bytes": 10671
+          },
+          "guard": {
+            "gpus": {
+              "0": {
+                "driver_pids": [
+                  2155081
+                ],
+                "manager_pid": 1946913,
+                "state": "holder"
+              },
+              "1": {
+                "driver_pids": [
+                  2155085
+                ],
+                "manager_pid": 1946914,
+                "state": "holder"
+              },
+              "2": {
+                "driver_pids": [
+                  2155084
+                ],
+                "manager_pid": 1946915,
+                "state": "holder"
+              },
+              "3": {
+                "driver_pids": [
+                  2155087
+                ],
+                "manager_pid": 1946916,
+                "state": "holder"
+              },
+              "4": {
+                "driver_pids": [
+                  2155091
+                ],
+                "manager_pid": 1946917,
+                "state": "holder"
+              },
+              "5": {
+                "driver_pids": [
+                  2155093
+                ],
+                "manager_pid": 1946918,
+                "state": "holder"
+              },
+              "6": {
+                "driver_pids": [
+                  2155095
+                ],
+                "manager_pid": 1946919,
+                "state": "holder"
+              },
+              "7": {
+                "driver_pids": [
+                  2155097
+                ],
+                "manager_pid": 1946920,
+                "state": "holder"
+              }
+            },
+            "pid": 776269,
+            "updated": 1790170718.5609863
+          },
+          "host": "trial-303225685-trialrun-303225685-worker-0",
+          "predecessor_manager": {
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "host": "trial-303225685-trialrun-303225685-worker-0",
+            "pgid": 1750414,
+            "pid": 1750414,
+            "ppid": 1750293,
+            "start_ticks": 108104370,
+            "state": "R"
+          },
+          "predecessor_service": {
+            "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+            "hostname": "trial-303225685-trialrun-303225685-worker-0",
+            "pid": 1750287,
+            "session_id": 1750287,
+            "start_ticks": 108102501
+          },
+          "predecessor_service_alive": false,
+          "queue_revision": 58,
+          "related_B_control_processes": [
+            {
+              "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+              "command": "/usr/bin/python /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_LONG_TASK_WAKEUP_V1_r1/wakeup.py daemon ",
+              "host": "trial-303225685-trialrun-303225685-worker-0",
+              "pgid": 452085,
+              "pid": 452085,
+              "ppid": 1,
+              "start_ticks": 91710679,
+              "state": "S"
+            },
+            {
+              "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+              "command": "/bin/bash -c /usr/bin/python - <<'PY'\nimport sys,os,json,socket,time\nfrom pathlib import Path\nC=Path('/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919');N=C/'results/B/B_D24_CROSSBASE_H_SWEEP_V1';R=N/'recovery/velocity_r2'\nsys.path.insert(0,str(R/'code'));from qio import read,atomic_json,process_identity,utc,ref\nc=read(C/'CONTROL.",
+              "host": "trial-303225685-trialrun-303225685-worker-0",
+              "pgid": 1953251,
+              "pid": 1953251,
+              "ppid": 1053486,
+              "start_ticks": 108634671,
+              "state": "S"
+            }
+          ],
+          "remaining_formal_group_members": [],
+          "resource_cpu_affinity": 224,
+          "thread_id": "01a0b9c5-1e4b-7b73-9336-229e6df349a2",
+          "utc": "2026-09-23T13:38:39.446782+00:00"
+        }
+      },
+      "ATTEMPT_COUNTER.json": {
+        "exists": false
+      }
+    },
+    "latest_receipts": [
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_RUNNING.json",
+        "mtime_utc": "2026-09-23T13:40:44.916218+00:00",
+        "status": "terminal_partial_or_failed",
+        "run_id": null,
+        "process": {
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "host": "trial-303225685-trialrun-303225685-worker-0",
+          "pgid": 1953953,
+          "pid": 1953953,
+          "ppid": 1,
+          "start_ticks": 108642343,
+          "state": "R"
+        },
+        "utc": "2026-09-23T13:40:44.914574+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_RESULT_r1.json",
+        "mtime_utc": "2026-09-23T13:40:44.846741+00:00",
+        "status": "partial",
+        "run_id": "D24_B_SMOL_H40_H50_VELOCITY_RECOVERY_r2",
+        "process": null,
+        "utc": "2026-09-23T13:40:43.371112+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_RESULT_r2.json",
+        "mtime_utc": "2026-09-23T13:40:44.838435+00:00",
+        "status": "partial",
+        "run_id": "D24_B_SMOL_H40_H50_VELOCITY_RECOVERY_r2",
+        "process": null,
+        "utc": "2026-09-23T13:40:43.371112+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_RUNNING.json",
+        "mtime_utc": "2026-09-23T13:28:55.461997+00:00",
+        "status": "terminal_partial_or_failed",
+        "run_id": null,
+        "process": {
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "host": "trial-303225685-trialrun-303225685-worker-0",
+          "pgid": 1750287,
+          "pid": 1750287,
+          "ppid": 1,
+          "start_ticks": 108102501,
+          "state": "R"
+        },
+        "utc": "2026-09-23T13:28:55.460258+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_STABLE_HANDOFF.json",
+        "mtime_utc": "2026-09-23T12:14:21.853259+00:00",
+        "status": "STABLE_HANDOFF",
+        "run_id": "D24_B_SMOL_H40_H50_r1",
+        "process": null,
+        "utc": "2026-09-23T12:14:21.826641+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_IMPLEMENTATION.json",
+        "mtime_utc": "2026-09-23T12:11:21.149255+00:00",
+        "status": null,
+        "run_id": null,
+        "process": null,
+        "utc": "2026-09-23T12:11:21.142998+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_ACK.json",
+        "mtime_utc": "2026-09-23T11:58:30.097866+00:00",
+        "status": "accepted_preparing_private_H_C10_adapter",
+        "run_id": "D24_B_SMOL_H40_H50_r1",
+        "process": {
+          "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+          "host": "trial-303225685-trialrun-303225685-worker-0",
+          "pgid": 1745534,
+          "pid": 1745535,
+          "ppid": 1745534,
+          "start_ticks": 108033699,
+          "state": "R"
+        },
+        "utc": "2026-09-23T11:58:30.087572+00:00"
+      }
+    ],
+    "latest_result": {
+      "all_owned_descendants_exited": true,
+      "at_utc": "2026-09-23T13:40:44.906900+00:00",
+      "exit_code": 3,
+      "fatal": null,
+      "final_summary": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r2/FINAL_SUMMARY.json",
+      "occupancy_handoff_complete": true,
+      "publication_completed": true,
+      "publication_error": null,
+      "receipt": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_RESULT_r2.json",
+      "run_id": "D24_B_SMOL_H40_H50_VELOCITY_RECOVERY_r2",
+      "status": "partial",
+      "task_id": "B_D24_CROSSBASE_H_SWEEP_V1"
+    },
+    "latest_manager_exit": {
+      "all_owned_processes_exited": true,
+      "cleanup": {
+        "actions": [],
+        "elapsed_seconds": 0.0010846699588000774,
+        "process_group": 1954174,
+        "scope": "guard-created isolated session; native diagnostic forbids detached descendants",
+        "status": "all_formal_group_members_exited"
+      },
+      "fatal": {
+        "message": "[Errno 2] No such file or directory: '/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r2/phases/01_Smol_Velocity_H40'",
+        "traceback": "Traceback (most recent call last):\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r2/code/manager.py\", line 66, in main\n    phase_root=ROOT/'phases'/phase;phase_root.mkdir(exist_ok=False);servers=[];clients=[];error=None;started=time.monotonic();max_active={str(g):0 for g in range(8)};max_total=0\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/pathlib.py\", line 1117, in mkdir\n    os.mkdir(self, mode)\nFileNotFoundError: [Errno 2] No such file or directory: '/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r2/phases/01_Smol_Velocity_H40'\n",
+        "type": "FileNotFoundError"
+      },
+      "phases": [],
+      "utc": "2026-09-23T13:40:17.960058+00:00"
+    },
+    "r2_recovery_attempts": 0,
+    "r3_evidence_seen": false,
+    "observed_recovery_directories": [
+      "velocity_r2",
+      "velocity_r3"
+    ],
+    "latest_heartbeat": {
+      "authorization_sha256": "4f8406e67e2d0b73beda277b3bc633749060f30e8420e8513285780a06952c5f",
+      "process": {
+        "boot_id": "292a2299-7f93-4ef9-a6f8-6d6abfc804fd",
+        "host": "trial-303225685-trialrun-303225685-worker-0",
+        "pgid": 1953953,
+        "pid": 1953953,
+        "ppid": 1,
+        "start_ticks": 108642343,
+        "state": "R"
+      },
+      "restoration": {
+        "external_jobs_preserved": true,
+        "guard_status": {
+          "gpus": {
+            "0": {
+              "driver_pids": [
+                2347552
+              ],
+              "manager_pid": 1954197,
+              "state": "holder"
+            },
+            "1": {
+              "driver_pids": [
+                2347554
+              ],
+              "manager_pid": 1954198,
+              "state": "holder"
+            },
+            "2": {
+              "driver_pids": [
+                2347556
+              ],
+              "manager_pid": 1954199,
+              "state": "holder"
+            },
+            "3": {
+              "driver_pids": [
+                2347558
+              ],
+              "manager_pid": 1954200,
+              "state": "holder"
+            },
+            "4": {
+              "driver_pids": [
+                2347562
+              ],
+              "manager_pid": 1954201,
+              "state": "holder"
+            },
+            "5": {
+              "driver_pids": [
+                2347561
+              ],
+              "manager_pid": 1954202,
+              "state": "holder"
+            },
+            "6": {
+              "driver_pids": [
+                2347564
+              ],
+              "manager_pid": 1954203,
+              "state": "holder"
+            },
+            "7": {
+              "driver_pids": [
+                2347566
+              ],
+              "manager_pid": 1954204,
+              "state": "holder"
+            }
+          },
+          "pid": 776269,
+          "updated": 1790170829.3300054
+        },
+        "observed_at": {
+          "monotonic_seconds": 1086456.869121593,
+          "unix_seconds": 1790170829.5102062,
+          "utc": "2026-09-23T13:40:29.510209+00:00"
+        },
+        "status": "occupancy_resolved"
+      },
+      "status": "terminal_partial_or_failed",
+      "utc": "2026-09-23T13:40:44.910699+00:00"
+    },
+    "r2_failure": {
+      "at_utc": "2026-09-23T13:40:17.960058+00:00",
+      "type": "FileNotFoundError",
+      "message": "Missing recovery root phases parent directory; manager.py line66 phase_root.mkdir(exist_ok=False) cannot create phases/01_Smol_Velocity_H40",
+      "before_model_loading": true,
+      "new_attempts": 0,
+      "same_as_original_autograd_failure": false,
+      "all_owned_descendants_exited": true,
+      "holders_restored_after_exit": true
+    },
+    "metadata_caveat": "RECOVERY_ACK written13:40:51 says recovery_started but r2 RESULT/HEARTBEAT already terminal13:40:44, so ACK is not evidence of active evaluation. RESULT_r1 receipt was overwritten by r2 combined publication; original root FINAL_SUMMARY and recovery PREDECESSOR_RECEIPT retain original data."
+  },
+  "budget": {
+    "stage_cap": 4400,
+    "old_stage_attempts": 3439,
+    "remaining_stage_attempts": 961,
+    "planned_remaining_units": 945,
+    "projected_stage_attempts": 4384,
+    "spare_after_one_attempt_each": 16,
+    "prior_node_attempts": 25561,
+    "projected_node_attempts": 26506,
+    "node_cap": 30250,
+    "admission_cutoff_utc": "2026-09-23T14:45:00Z",
+    "formal_exit_and_publication_target_utc": "2026-09-23T15:00:00Z"
+  },
+  "analysis_delivery_recommendation": {
+    "new_science_decision_or_budget_required": false,
+    "message_kind": "concrete engineering continuation directive under existing authorization, not new approval",
+    "concrete_instruction": "B should promptly repair private launcher directory initialization (create phases/episodes/unit_claims and other required parents before manager), preserve failed r2 manager/cleanup evidence, and continue in uniquely claimed versioned r3 or equivalent lineage after own local exit check. Reuse current CPU-validated autograd repair or A private action_postprocessor wrapper; no science or weights change. Resume945 missing Velocity H40/H50 units only;3439 old attempts plus945=4384≤4400, no3055 valid unit replay. Before formal entry stop all holders via lifecycle and confirm descendants exited; first planned unfinished source must demonstrate actual guidance before ramp. No extra GPU preflight. Keep latest terminal status authoritative over stale recovery_started ACK; publish actual MODEL_READY/progress/STABLE_HANDOFF and original-thread trigger. A/C independent work continues. Fix r2 publisher to avoid overwriting original RESULT_r1 receipt; keep preserved original evidence."
+  },
+  "sources": [
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/FINAL_SUMMARY.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/FINAL_EPISODES.csv",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/chain/CHAIN_RESULT.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r2/RECOVERY_MANIFEST.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r2/CPU_REPAIR_CHECK.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r2/PREDECESSOR_EXIT_CHECK.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/RECOVERY_PLAN.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/CHANGE_REVIEW.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/CROSSBASE_H_SWEEP_V1/AUTHORIZATION.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r2/chain/MANAGER_EXIT.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r2/RESULT.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_CROSSBASE_H_SWEEP_V1/recovery/velocity_r2/FINAL_SUMMARY.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_ACK.json"
+  ]
+}

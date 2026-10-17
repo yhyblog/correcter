@@ -1,0 +1,19 @@
+{
+  "at_utc": "2026-09-21T12:19:38.966173+00:00",
+  "checks": {
+    "PID_start_identity_check": true,
+    "SHA_host_authorization_protocol_entry_validation": true,
+    "detached_two_jobs": true,
+    "failed_command_no_retry": true,
+    "idempotent_start": true,
+    "unknown_execution_blocks": true
+  },
+  "coverage": "B bootstrap only; full collector queue tests remain A package activation gate",
+  "evidence_roots": [
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_QUEUE_JOIN_V1_r1/selftests/a534f037950e470fad8ef000e81f0b96"
+  ],
+  "first_sandbox_attempt": "failed: sandbox /proc identity unavailable and flock unsupported; switched to host local /tmp locks and tested with host process namespace",
+  "status": "PASS",
+  "synthetic_only": true,
+  "tests_passed": 4
+}

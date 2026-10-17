@@ -1,0 +1,141 @@
+{
+  "status": "passed_bounded_heldout_completion_resource_scene_review",
+  "reviewed_utc": "2026-09-17T04:06:35.527448+00:00",
+  "scope": "Held completion,resource journal,new initial scenes,small frozen manifests,actual-selection identity and final handoff metadata. No raw trajectory audit,branch success values,model,simulation or tests.",
+  "blockers": [],
+  "coverage": {
+    "workers": 32,
+    "primary_slots": 100,
+    "original_ids_canonical_sha256": "f05bbfeb92da78d8fb9242bd28b116cf6f5a4cff252b5ad0487506e0bd108afc",
+    "per_task": {
+      "disassemble-v3": 20,
+      "pick-place-wall-v3": 20,
+      "shelf-place-v3": 20,
+      "stick-pull-v3": 20,
+      "stick-push-v3": 20
+    },
+    "cut_sources": 98,
+    "common_sources": 2,
+    "physical_branches": 1960,
+    "method_suffix_pairs_per_cut_source": 20,
+    "opaque_worker_files_sha_checked": 164,
+    "worker_seals_canonical_sha256": "5c0caa80ca3d3a3fc31f92f9d653f8f1f13c51010b810ba821635439d431c532"
+  },
+  "resources": {
+    "stage": "heldout",
+    "heldout_simulator_attempts": 2158,
+    "heldout_by_kind": {
+      "source_capture": 100,
+      "candidate_restore": 98,
+      "branch_including_restore": 1960
+    },
+    "branch_attempts_by_method": {
+      "direct": 392,
+      "continue_native10": 392,
+      "post": 392,
+      "alarm_replan10": 392,
+      "velocity": 392
+    },
+    "calibration_simulator_attempts": 1156,
+    "global_simulator_attempts": 48183,
+    "global_optimizer_updates": 51200,
+    "new_optimizer_updates": 0,
+    "technical_reserve_used": 0,
+    "replacements": 0,
+    "automatic_retries": 0,
+    "technical_failures_observed": 0,
+    "old_ledger_rows": 97225,
+    "new_unique_ledger_identities": 2158,
+    "global_ledger_rows": 99383,
+    "old_ledger_prefix_sha256": "4f289c308a418803fcf291553823378ddefebf1714de1da19d9f0ea43274a7f5",
+    "old_prefix_byte_preserved": true,
+    "ledger_sha256": "3f293430a26d7c0405c33b797788fdfd099f3b8d0a42aec7c37a89338a4ef552",
+    "heldout_cap": 2200,
+    "unused_heldout_cap": 42,
+    "global_simulator_remaining": 1817,
+    "note": "2158 belongs to heldout,not calibration. Calibration stays1156. Journal99383 includes51200 optimizer updates and must not be described as99383 simulator attempts."
+  },
+  "initial_scenes": {
+    "registry_rows_before": 800,
+    "registry_rows_after": 900,
+    "old_prefix_bytes": 539548,
+    "old_prefix_sha256": "313bd9bd1a9cd8e35919abf42609677b9e45b1058fe33f17abd2e9eabfaa0250",
+    "old_prefix_byte_preserved": true,
+    "registry_sha256": "ac233e096e1d0a35454f6f3efe6e72ae2652ee83ab94f3555f8bd29727cd53df",
+    "new_held_accepted": 100,
+    "within_task_distinct": {
+      "stick-pull-v3": 20,
+      "pick-place-wall-v3": 20,
+      "shelf-place-v3": 20,
+      "disassemble-v3": 20,
+      "stick-push-v3": 20
+    },
+    "cross_split_same_task_collisions": 0,
+    "initialization_replacements": 0,
+    "before_first_action_zero_control_steps_all": true,
+    "sealed_identity_and_state_files_verified": 100,
+    "scene_seals_canonical_sha256": "18efb9ee9137032f697f4fedf8499920c11984d33d644aa892aaec8ec5dc5e23",
+    "limit": "Physical uniqueness is by the registered metaworld fingerprint and sealed initial-state identity; no environment replay or independent numerical fingerprint recomputation."
+  },
+  "sealed_identity": {
+    "ready_sha256": "b4241436b80706e2edc3ed9f5c16ef3dca02dab029732776c7411f73779f5d3d",
+    "config_sha256": "d86dc14afddf81a37587ff020cd36cc07e85869bf315502dc1778a97bda8f795",
+    "freeze_sha256": "a2db97fd0c76650e730b58836b0cd6059d25c76f42e5da4e2ce06611784d11b8",
+    "registered_old_freeze_manifests_sha_rechecked": 5,
+    "actual_selection_complete_sha256": "2afa80bc07c9cf3f87c5bb8a21bcc8b36baf2a129d25e86b37731de386c7144e",
+    "actual_selection_result_sha256": "87f1a411e8e82ecc4274875f93a264962824566271231338226d0a01e788f658",
+    "old_training_payloads_reaudited": false
+  },
+  "lifecycle": {
+    "returncode": 0,
+    "controller_started_utc": "2026-09-17T03:46:47.203537+00:00",
+    "controller_finished_utc": "2026-09-17T04:02:41.218765+00:00",
+    "controller_command_wall_seconds": 954.0152270104736,
+    "runner_wall_seconds_including_lifecycle": 931.922114526853,
+    "timing_note": "Controller measures outer runner command start through exit; runner measures its contained lifecycle wave. Both include startup within their boundaries and are not cumulative worker time or isolated inference time.",
+    "all_eight_holders_restored": true,
+    "saved_gpu_evidence_sha256": "0dc66c0ee857841ebab3f72ed5910109ab8de973c5e26bbb0feb460d6e35dd0b",
+    "live_gpu_probe_performed": false
+  },
+  "existing_full_audit": {
+    "status": "passed_and_sealed",
+    "primary": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_audits/heldout_v1",
+      "seal_sha256": "d776f54ceb94879bc1945a6e5e02736d04ba9d7e4652e02e06280be3a85a833e",
+      "result_sha256": "d9d536e27c34e04b8a0d829c41d7312cf087296364b70e9590f5a9fe23e315c5",
+      "status": "passed"
+    },
+    "independent_reaggregation": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_independent_audits/heldout_v1",
+      "seal_sha256": "66fd7f8903d143822949dbddc297e31c16e132c06851f260ebf65cd8fcbd76ce",
+      "result_sha256": "e63867e0c446859a4e18cbfa1c2ecdaecafd99c197293e8922e8d58dd96c51e5",
+      "status": "passed"
+    },
+    "sealed_file_hashes_verified": true,
+    "resource_and_coverage_metadata_matches_independent_review": true,
+    "technical_missing": 0,
+    "failed_or_unresolved_attempts": 0,
+    "no_duplicate_audit_started": true,
+    "outcome_statistics_not_recomputed_or_inspected": true
+  },
+  "technical_evidence_remaining": [],
+  "wave_result_sha256": "0874dabd4d89003ef8966511e7d6959db8ac7ac84a26c751c42cd87a1076b753",
+  "execution_result_sha256_at_review": "16c2f080a129e76c1b15884a5736b27234671effd2c0c1da2f26258894b8f7fb",
+  "new_compute_by_review": 0,
+  "finalized_utc": "2026-09-17T04:08:50.208745+00:00",
+  "final_handoff": {
+    "status": "passed_small_package_consistency",
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_handoffs/heldout_v1",
+    "seal_sha256": "b8463a5588838bf4a06ffccde7048190d738921bcd14f11e3257ddd939c4fbd9",
+    "four_payload_hashes_verified": true,
+    "summary_resource_coverage_and_audit_bindings_match": true,
+    "coordination_handoff": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_HELDOUT_EXECUTOR_HANDOFF.md",
+      "sha256": "f0b6bb48f6c86f291168ead065b8ff8cd60e5415a09ed122b5169b828a687499"
+    },
+    "automatic_next_stage": false
+  },
+  "raw_branch_success_values_read": false,
+  "interim_effects_read": false,
+  "success_rate_or_treatment_effect_tables_inspected": false
+}

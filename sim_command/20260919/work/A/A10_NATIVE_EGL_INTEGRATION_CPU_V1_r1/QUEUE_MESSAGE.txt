@@ -1,0 +1,10 @@
+A10_NATIVE_EGL_INTEGRATION_CPU_V1 r1 已完成，仅CPU。新RESULT：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1_RESULT.json
+SHA256 33f2a829475d66b04f5c9e449ca994d900a5931065422f487034c5c0fec63399
+短REPORT：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1_REPORT.md
+CPU_READY：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1/CPU_READY.json
+新PROPOSAL：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1/proposal/PROPOSAL.json
+PROPOSAL SHA256 5aefe16520dbd95c03d3e60cde19965122bc1fea3dcd0a7dd8322f8bf1401dd6
+
+已将已验收535隔离库/八UUID可见性/CUDAhandle→PCI/内核UUID接到私有mujoco.egl shim，当前Gymnasium OffScreenViewer直接消费选中handle；policy逻辑设备按UUID绑定并加Torch文本UUID复核，完整8设备映射缺一则在策略绑定前停止。初态和步后各1张corner2 480×480RGB，共1EGLcontext/1MjrContext、2render/readPixels；reset返回/完整观测/2个可用NPZ分列。初始化仍2native+1wrapper、52reset/104reset_model/5200do_simulation/26000子步；提案5native/50flow/1控制步13子步，0rollout/monitor/反向/更新/重试。
+18项定向fake通过（含提取当前Gymnasium类验证两帧复用），3CPU授权拒绝、11AST、2shell语法通过。23产物引用和490manifest文件SHA已核对。当前CONTROL15/TASK_BOARD22计算全0；本轮GPU/CUDA/EGL/NVML/dlopen/模型/环境/reset/物理推进/训练/删除全0，holder未查询未停止，旧v4/v5/graphics包和共享包不动。
+显式graphics成功目标108操作；库内部CUDA/GL调用未逐项计量，不能把适配显式cuInit=1理解为全进程次数。V2未实跑、未授权；新RELEASE_TEMPLATE/CONTROL_REQUIRED与唯一真实sh及CPU授权入口均在新包，模板状态未授权。真实入口已有全SHA检查，不额外先跑checker；全8holder生命周期加独占claim/进程组退出保护；1800+30仅子进程，预约/清理/恢复另计。建议仅审阅并另发A10_PREFLIGHT_NATIVE_V2新release；不复用旧额度。全部新证据保留，无delete。

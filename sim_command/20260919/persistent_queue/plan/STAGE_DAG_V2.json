@@ -1,0 +1,157 @@
+{
+  "stages": [
+    {
+      "id": "A_QUEUE_BOOTSTRAP_V1",
+      "owner": "A",
+      "authorized": "implementation_deployment_control_plane_and_gated_collection",
+      "dependencies": []
+    },
+    {
+      "id": "B_QUEUE_JOIN_V1",
+      "owner": "B",
+      "authorized": "join_and_control_plane_only",
+      "dependencies": []
+    },
+    {
+      "id": "A_MAIN_PIPELINE_PREP_V1",
+      "owner": "A",
+      "authorized": "CPU_only",
+      "dependencies": []
+    },
+    {
+      "id": "B_INDEPENDENT_PIPELINE_PREP_V1",
+      "owner": "B",
+      "authorized": "CPU_only",
+      "dependencies": []
+    },
+    {
+      "id": "B11",
+      "owner": "B",
+      "authorized": "existing_CPU_view_contract",
+      "dependencies": [],
+      "inputs": "immutable accepted snapshots; no need to wait for complete pool"
+    },
+    {
+      "id": "A11",
+      "owner": "A",
+      "authorized": "475_frozen_pending_sources_after_machine_gates",
+      "dependencies": [
+        "A_QUEUE_BOOTSTRAP_V1"
+      ],
+      "source_set": {
+        "path": "persistent_queue/plan/SOURCES_V2.json",
+        "sha256": "04f3ffec28f944f6d9ff23aa96a86dc015d5e1d46441836cc0c434a2ca0bf0bd"
+      }
+    },
+    {
+      "id": "A12",
+      "owner": "A",
+      "authorized": false,
+      "dependencies": [
+        "A11",
+        "A_MAIN_PIPELINE_PREP_V1"
+      ],
+      "scope": "own D5/G0/Q views and MT50 main-method adaptation"
+    },
+    {
+      "id": "P20_A",
+      "owner": "analysis",
+      "authorized": false,
+      "dependencies": [
+        "A12"
+      ],
+      "scope": "main16 cells evaluation recipe and immutable shared evaluation identity"
+    },
+    {
+      "id": "A20",
+      "owner": "A",
+      "authorized": false,
+      "dependencies": [
+        "P20_A"
+      ],
+      "scope": "all16 E4/E9 main cells and embedded E5"
+    },
+    {
+      "id": "B12",
+      "owner": "B",
+      "authorized": false,
+      "dependencies": [
+        "A11",
+        "B11",
+        "B_INDEPENDENT_PIPELINE_PREP_V1"
+      ],
+      "scope": "VLA-Corrector/GAF same final training pool as A"
+    },
+    {
+      "id": "P20_B_EXTERNAL",
+      "owner": "analysis",
+      "authorized": false,
+      "dependencies": [
+        "B12",
+        "P20_A"
+      ],
+      "scope": "E3 external comparison stage recipe"
+    },
+    {
+      "id": "B20",
+      "owner": "B",
+      "authorized": false,
+      "dependencies": [
+        "P20_B_EXTERNAL"
+      ],
+      "scope": "E3 external methods and E5; no A20 execution prerequisite"
+    },
+    {
+      "id": "B13",
+      "owner": "B",
+      "authorized": false,
+      "dependencies": [
+        "B_INDEPENDENT_PIPELINE_PREP_V1"
+      ],
+      "scope": "five-task E1/E6 training from qualified historical inputs"
+    },
+    {
+      "id": "P20_B_MECHANISM",
+      "owner": "analysis",
+      "authorized": false,
+      "dependencies": [
+        "B13"
+      ],
+      "scope": "independent E1/E6 evaluation recipe"
+    },
+    {
+      "id": "B21",
+      "owner": "B",
+      "authorized": false,
+      "dependencies": [
+        "P20_B_MECHANISM"
+      ],
+      "scope": "E1/E6 evaluations and E5; no complete MT50 pool prerequisite"
+    },
+    {
+      "id": "B30",
+      "owner": "B",
+      "authorized": false,
+      "dependencies": [
+        "B_INDEPENDENT_PIPELINE_PREP_V1"
+      ],
+      "scope": "E8 per-backbone/environment independently frozen recipes; missing one does not block others"
+    },
+    {
+      "id": "P90",
+      "owner": "analysis",
+      "authorized": false,
+      "dependencies": [
+        "A20",
+        "B20",
+        "B21",
+        "B30"
+      ],
+      "scope": "final paper aggregation only; never a runtime barrier"
+    }
+  ],
+  "failure_domain": "node/affected stage; B status cannot stop A",
+  "A_runtime_dependencies_on_B": [],
+  "B_to_A_data_flow": "read-only immutable A publications; no ACK gate on A",
+  "training_and_evaluation_GPU_authorized": false
+}

@@ -1,0 +1,233 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "role": "A",
+  "checked_at_utc": "2026-09-19T15:46:40.877254+00:00",
+  "scope": "known experiment model paths only; no non-VLA scan",
+  "active_deletion_release": null,
+  "deleted_paths": [],
+  "deleted_bytes": 0,
+  "capacity_receipt": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_r1/node_capacity.json",
+  "candidates": [
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/models/vla-sft-030000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/sft_pi05_mt50/checkpoints/030000/pretrained_model",
+      "project": "vla-corrector",
+      "type": "directory",
+      "logical_bytes": 9354084596,
+      "purpose": "pi05_mt50_sft_030000",
+      "completed_or_unused_evidence": "Completed asset, explicitly required by INVENTORY_DECISIONS_V1; no evidence it is unused",
+      "dependency_checks": [
+        "A00_ASSETS.json",
+        "contracts/INVENTORY_DECISIONS_V1.md",
+        "current P00 preparation inputs"
+      ],
+      "replacement_retained_asset": null,
+      "recommendation": "keep",
+      "risk": "Deletion removes an explicitly retained model/input; historical audit and future experiments depend on it"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected",
+      "project": "Corrector",
+      "type": "directory",
+      "logical_bytes": 6037665,
+      "purpose": "Q_selected_bundle",
+      "completed_or_unused_evidence": "Completed asset, explicitly required by INVENTORY_DECISIONS_V1; no evidence it is unused",
+      "dependency_checks": [
+        "A00_ASSETS.json",
+        "contracts/INVENTORY_DECISIONS_V1.md",
+        "current P00 preparation inputs"
+      ],
+      "replacement_retained_asset": null,
+      "recommendation": "keep",
+      "risk": "Deletion removes an explicitly retained model/input; historical audit and future experiments depend on it"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/corrector_pi05_mt50/h1_k10/best_cosine_model.pt",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/corrector_pi05_mt50/h1_k10/best_cosine_model.pt",
+      "project": "vla-corrector",
+      "type": "file",
+      "logical_bytes": 170051647,
+      "purpose": "vla_corrector_best_cosine",
+      "completed_or_unused_evidence": "Completed asset, explicitly required by INVENTORY_DECISIONS_V1; no evidence it is unused",
+      "dependency_checks": [
+        "A00_ASSETS.json",
+        "contracts/INVENTORY_DECISIONS_V1.md",
+        "current P00 preparation inputs"
+      ],
+      "replacement_retained_asset": null,
+      "recommendation": "keep",
+      "risk": "Deletion removes an explicitly retained model/input; historical audit and future experiments depend on it"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "project": "vla-baselines/SmolVLA (inventory-confirmed experiment input)",
+      "type": "directory",
+      "logical_bytes": 1610506270,
+      "purpose": "smolvla_partial_50000",
+      "completed_or_unused_evidence": "Completed asset, explicitly required by INVENTORY_DECISIONS_V1; no evidence it is unused",
+      "dependency_checks": [
+        "A00_ASSETS.json",
+        "contracts/INVENTORY_DECISIONS_V1.md",
+        "current P00 preparation inputs"
+      ],
+      "replacement_retained_asset": null,
+      "recommendation": "keep",
+      "risk": "Deletion removes an explicitly retained model/input; historical audit and future experiments depend on it"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/005000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/005000",
+      "project": "vla-baselines/SmolVLA (ownership needs explicit cleanup-manifest inclusion)",
+      "type": "directory",
+      "logical_bytes": 1610506291,
+      "purpose": "Historical intermediate SmolVLA step5000",
+      "completed_or_unused_evidence": "Checkpoint exists; queue previously stopped at 50000. Continued selection/recovery or B dependencies not ruled out.",
+      "dependency_checks": [
+        "Final step50000 selected as E8 candidate by analysis",
+        "Not proven absent from historical seals or B references; no delete recommendation"
+      ],
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "recommendation": "defer",
+      "risk": "Must check recovery/selection and historical manifest references on both nodes before analysis can approve deletion"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/010000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/010000",
+      "project": "vla-baselines/SmolVLA (ownership needs explicit cleanup-manifest inclusion)",
+      "type": "directory",
+      "logical_bytes": 1610506294,
+      "purpose": "Historical intermediate SmolVLA step10000",
+      "completed_or_unused_evidence": "Checkpoint exists; queue previously stopped at 50000. Continued selection/recovery or B dependencies not ruled out.",
+      "dependency_checks": [
+        "Final step50000 selected as E8 candidate by analysis",
+        "Not proven absent from historical seals or B references; no delete recommendation"
+      ],
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "recommendation": "defer",
+      "risk": "Must check recovery/selection and historical manifest references on both nodes before analysis can approve deletion"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/015000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/015000",
+      "project": "vla-baselines/SmolVLA (ownership needs explicit cleanup-manifest inclusion)",
+      "type": "directory",
+      "logical_bytes": 1610506294,
+      "purpose": "Historical intermediate SmolVLA step15000",
+      "completed_or_unused_evidence": "Checkpoint exists; queue previously stopped at 50000. Continued selection/recovery or B dependencies not ruled out.",
+      "dependency_checks": [
+        "Final step50000 selected as E8 candidate by analysis",
+        "Not proven absent from historical seals or B references; no delete recommendation"
+      ],
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "recommendation": "defer",
+      "risk": "Must check recovery/selection and historical manifest references on both nodes before analysis can approve deletion"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/020000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/020000",
+      "project": "vla-baselines/SmolVLA (ownership needs explicit cleanup-manifest inclusion)",
+      "type": "directory",
+      "logical_bytes": 1610506292,
+      "purpose": "Historical intermediate SmolVLA step20000",
+      "completed_or_unused_evidence": "Checkpoint exists; queue previously stopped at 50000. Continued selection/recovery or B dependencies not ruled out.",
+      "dependency_checks": [
+        "Final step50000 selected as E8 candidate by analysis",
+        "Not proven absent from historical seals or B references; no delete recommendation"
+      ],
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "recommendation": "defer",
+      "risk": "Must check recovery/selection and historical manifest references on both nodes before analysis can approve deletion"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/025000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/025000",
+      "project": "vla-baselines/SmolVLA (ownership needs explicit cleanup-manifest inclusion)",
+      "type": "directory",
+      "logical_bytes": 1610506294,
+      "purpose": "Historical intermediate SmolVLA step25000",
+      "completed_or_unused_evidence": "Checkpoint exists; queue previously stopped at 50000. Continued selection/recovery or B dependencies not ruled out.",
+      "dependency_checks": [
+        "Final step50000 selected as E8 candidate by analysis",
+        "Not proven absent from historical seals or B references; no delete recommendation"
+      ],
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "recommendation": "defer",
+      "risk": "Must check recovery/selection and historical manifest references on both nodes before analysis can approve deletion"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/030000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/030000",
+      "project": "vla-baselines/SmolVLA (ownership needs explicit cleanup-manifest inclusion)",
+      "type": "directory",
+      "logical_bytes": 1610506294,
+      "purpose": "Historical intermediate SmolVLA step30000",
+      "completed_or_unused_evidence": "Checkpoint exists; queue previously stopped at 50000. Continued selection/recovery or B dependencies not ruled out.",
+      "dependency_checks": [
+        "Final step50000 selected as E8 candidate by analysis",
+        "Not proven absent from historical seals or B references; no delete recommendation"
+      ],
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "recommendation": "defer",
+      "risk": "Must check recovery/selection and historical manifest references on both nodes before analysis can approve deletion"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/035000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/035000",
+      "project": "vla-baselines/SmolVLA (ownership needs explicit cleanup-manifest inclusion)",
+      "type": "directory",
+      "logical_bytes": 1610506292,
+      "purpose": "Historical intermediate SmolVLA step35000",
+      "completed_or_unused_evidence": "Checkpoint exists; queue previously stopped at 50000. Continued selection/recovery or B dependencies not ruled out.",
+      "dependency_checks": [
+        "Final step50000 selected as E8 candidate by analysis",
+        "Not proven absent from historical seals or B references; no delete recommendation"
+      ],
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "recommendation": "defer",
+      "risk": "Must check recovery/selection and historical manifest references on both nodes before analysis can approve deletion"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/040000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/040000",
+      "project": "vla-baselines/SmolVLA (ownership needs explicit cleanup-manifest inclusion)",
+      "type": "directory",
+      "logical_bytes": 1610506294,
+      "purpose": "Historical intermediate SmolVLA step40000",
+      "completed_or_unused_evidence": "Checkpoint exists; queue previously stopped at 50000. Continued selection/recovery or B dependencies not ruled out.",
+      "dependency_checks": [
+        "Final step50000 selected as E8 candidate by analysis",
+        "Not proven absent from historical seals or B references; no delete recommendation"
+      ],
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "recommendation": "defer",
+      "risk": "Must check recovery/selection and historical manifest references on both nodes before analysis can approve deletion"
+    },
+    {
+      "absolute_path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/045000",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/045000",
+      "project": "vla-baselines/SmolVLA (ownership needs explicit cleanup-manifest inclusion)",
+      "type": "directory",
+      "logical_bytes": 1610506294,
+      "purpose": "Historical intermediate SmolVLA step45000",
+      "completed_or_unused_evidence": "Checkpoint exists; queue previously stopped at 50000. Continued selection/recovery or B dependencies not ruled out.",
+      "dependency_checks": [
+        "Final step50000 selected as E8 candidate by analysis",
+        "Not proven absent from historical seals or B references; no delete recommendation"
+      ],
+      "replacement_retained_asset": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/artifacts/vla-baselines/runs/metaworld/smolvla/mt50-smolvla-s42-mb-20260912-v1/checkpoints/050000",
+      "recommendation": "defer",
+      "risk": "Must check recovery/selection and historical manifest references on both nodes before analysis can approve deletion"
+    }
+  ],
+  "protected_elsewhere": [
+    "MT50/LIBERO raw data",
+    "all native10/standalone seals and referenced raw trees",
+    "D/G0/Q/PCA/normalizers",
+    "X-VLA initialization",
+    "LIBERO final inference bundle",
+    "runtime environments and tokenizer caches"
+  ],
+  "note": "keep/defer are executor evidence-based recommendations; only analysis can publish an exact deletion manifest"
+}

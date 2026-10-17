@@ -1,0 +1,222 @@
+{
+  "schema": "native10_round2_policy5_launch_executor_check_v1",
+  "status": "passed_with_separate_authorization_supplement",
+  "created_utc": "2026-09-17T01:36:20.566628+00:00",
+  "blockers": [],
+  "role": "Independent bounded read-only launch metadata receipt; not an additional launch gate",
+  "bindings": {
+    "ready": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_protocols/round2_policy_v1/coordination/NATIVE10_ANALYSIS_READY.json",
+      "sha256": "7af5045a44944894cc8c89eb10f8110c2098d7458718fe0550d03a42fe30b953",
+      "version": 11
+    },
+    "config": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_protocols/round2_policy_v1/config.json",
+      "sha256": "d2a60785fc84063e02fee965fa8ba009b3880783ac58adf5dc9ce4011c819dc0"
+    },
+    "freeze": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_protocols/round2_policy_v1/freeze.json",
+      "sha256": "cdbb364de29b44fea522f3740c185ccc97337f9123662e720e2f7903def5f292",
+      "files": 1124,
+      "code_files": 673
+    },
+    "fresh_inputs": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/round2_policy_inputs_v1",
+      "seal_sha256": "d256e1742cbf44bbf3883f0fb34077ea74073928f2d592ad4ac11c3dab85fb3e"
+    },
+    "guard_cpu": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/round2_policy_cpu_20260917_v1",
+      "seal_sha256": "8dff6d4fba6b04c0a3673f6a42e5873aca659729c547388749801c4074ad0db1"
+    },
+    "entry_review": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/round2_policy_entry_review.json",
+      "sha256": "c87ef5a57dbab02262548b0f56d0b8c16f23aa50c3772ccfd7369e813476be31"
+    }
+  },
+  "active_stage_scopes": {
+    "round2_development_policy": "round2_development_policy"
+  },
+  "source_contract": {
+    "original_collection": {
+      "config_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/config.json",
+      "config_sha256": "f68b59f279ae4d03094ebe70f0185e29d7a65a8ce20903aed92ac4392f1e4fd2",
+      "freeze_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/freeze.json",
+      "freeze_sha256": "f46dda706607bf8ed52281d33a203471c2854b6c09f83e6d26d3b216a509d893",
+      "bank_version": "round1_labels_v1"
+    },
+    "original_source_protocol_sha256": "2456b73fd0728be1fe42f50c3421dddcf30e298d918c746290d3edadb13152d4",
+    "planned_slots": 100,
+    "cut_sources": 95,
+    "known_common_sources": 5,
+    "per_task": {
+      "disassemble-v3": 20,
+      "pick-place-wall-v3": 20,
+      "shelf-place-v3": 20,
+      "stick-pull-v3": 20,
+      "stick-push-v3": 20
+    },
+    "physical_initial_scenes": 100,
+    "source_collection_generation_round": 1,
+    "candidate_generation_round": 2,
+    "original_development_case_round": null,
+    "original_source_resolution_and_bank_seals_independently_checked": 295,
+    "ordered_ids_sha256": "7febdc814dee2c203378865a8371de6698bc727e783ee537312dce734a37db89"
+  },
+  "selected_critic": {
+    "path": "A",
+    "step": 4000,
+    "directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected",
+    "model_hashes": {
+      "0": "39bbbb9e2fa2cb14695c4ce31a9d91c806dfd690a888d2a9c44d9eb3bf0be129",
+      "1": "dab0dd69ad2bd4a132aede8c37ae4734cac2c12d7533d1c96cc058e1b52bad1d",
+      "2": "ce2a29d123d1c3eea25b90ba0999cacc793ad25346709a94d6b52cf92a8ffca2",
+      "3": "178c052783502646085fdb78be115e54d6d7ffc1225dac9af24d1cc64cafebf9"
+    },
+    "training_binding": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1",
+      "seal_sha256": "864c00cfa1cfcbcc8736a898ab22e5afa821f15afbe2b8dc687f7731f2eea83e",
+      "selected_seal_sha256": "f40ff4f3356ee8f14d687348f9f9cc7addf1b1e93233b81645312973f7e02d6a",
+      "selected_reload_audit_sha256": "b16b8183e6d6a69345375a266840afaffebf514873d62868f0327496bf795a92",
+      "model_review": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/final_trained_model_review.json",
+        "sha256": "51dc687f285e92c0b81032bad5694ebca7f649fba597e121943362871305a928"
+      }
+    }
+  },
+  "resources": {
+    "expected_simulator_attempts": 1995,
+    "stage_hard_limit": 2100,
+    "optimizer_updates": 0,
+    "source_captures": 0,
+    "replacements_allowed": false,
+    "old_guided_reuse_allowed": false,
+    "global_before": {
+      "simulator_attempts": 42874,
+      "training_updates": 51200
+    },
+    "global_limits": {
+      "simulator_attempts": 50000,
+      "training_updates": 51200
+    }
+  },
+  "checks": {
+    "ready_config_freeze_and_protocol_digest_match": true,
+    "only_round2_policy_stage_active": true,
+    "original100_ids_scenes_source_and_cut_bindings_retained": true,
+    "source_round1_not_falsified_as_new_generation": true,
+    "scientific_settings_equal_original_collection": true,
+    "A4000_selected_and_real_reload_model_review_bindings_match": true,
+    "all_four_checkpoint_sha_identities_present_in_freeze": true,
+    "new_actual_runner_shell_collector_guard_wiring_reviewed": true,
+    "actual_model_and_new_bank_guards_required_before_branches": true,
+    "cpu_seal_results_log_before_after_current_code_match": true,
+    "cpu_tests_passed": 41,
+    "cpu_code_files": 11,
+    "core_execution_code_files_independently_rehashed": 9,
+    "inherited_freeze_entries_retained": 747,
+    "statistics_source_task_order_and_seed_match": true,
+    "seven_source_paired_comparisons_unchanged": true,
+    "launch_config_freeze_command_and_before_counts_match": true
+  },
+  "authorization_supplement": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/execution_control/round2_policy_v1/authorization_supplement_v1",
+    "complete_sha256": "8de354bc83094d319f144c5384ee807eb83dbf58ce6217fec5e48bd9654effd5",
+    "manifest_sha256": "24ae740f9815bca6a9bb96d254ddb55fe58332cb3aaaef8846024a12a38f950d",
+    "absolute_top_level_references_rehashed_and_snapshotted": 8,
+    "files_verified": 9,
+    "created_utc": "2026-09-17T01:34:37.930519+00:00",
+    "stage_counts_at_creation": {
+      "simulator_attempts": 297
+    },
+    "global_counts_at_creation": {
+      "simulator_attempts": 43171,
+      "training_updates": 51200
+    },
+    "references_missing_from_original_freeze_inventory": [
+      {
+        "ready_key": "previous_ready_sha256",
+        "original_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_fit_protocols/final_fit_v1/coordination/NATIVE10_ANALYSIS_READY.json",
+        "sha256": "e44b37c380d50ce1bf88acc9f6c832fae1367b12fae0b0074076b269cce4938f"
+      },
+      {
+        "ready_key": "final_static_input_execution_result_sha256",
+        "original_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/execution_control/final_static_inputs_v1/result.json",
+        "sha256": "215224c3b5a15b0d5a5254ecfd9ba58f933123230212e815732384b815e8e311"
+      },
+      {
+        "ready_key": "final_preview_spec_review_sha256",
+        "original_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/final_preview_spec_review.json",
+        "sha256": "3ee240d95ae5215756e74fbb7015555bb1ee48da0cb9058e76cb4326afd8170f"
+      },
+      {
+        "ready_key": "round2_policy_ready_contract_sha256",
+        "original_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_preparations/round2_policy_pending_v1/ready_contract.json",
+        "sha256": "ee4480883eb7acd25da146286c5550f945ff50efe647717609546d3fa685232f"
+      },
+      {
+        "ready_key": "round2_policy_ready_binding_supplement_sha256",
+        "original_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_preparation_handoffs/round2_policy_v1/ready_binding_supplement.json",
+        "sha256": "0baf6c1605ebdcd1d31b856037e469c99a0b905fa5f7b67bf078188068235e16"
+      },
+      {
+        "ready_key": "round2_policy_preparation_seal_sha256",
+        "original_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_preparation_handoffs/round2_policy_v1/complete.json",
+        "sha256": "478a292ae194d2fef9c9a554ebcf79fdafdfc28c249c2ad4fc518984b4a4628f"
+      },
+      {
+        "ready_key": "round2_policy_entry_review_sha256",
+        "original_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/round2_policy_entry_review.json",
+        "sha256": "c87ef5a57dbab02262548b0f56d0b8c16f23aa50c3772ccfd7369e813476be31"
+      }
+    ],
+    "prebranch_supplement": false,
+    "original_ready_already_bound_exact_reference_sha256": true,
+    "prepare_release_checked_reference_sha256_before_launch": true,
+    "original_freeze_config_code_ready_changed": false,
+    "scientific_or_budget_change": false
+  },
+  "launch": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/execution_control/round2_policy_v1/actual_launch.json",
+    "sha256": "e60af704684f3a94ddba689938002f399b6da3a553f783d7c870d0bbcd73d8a8",
+    "started_utc": "2026-09-17T01:30:18.196490+00:00",
+    "pid": 460687,
+    "controller_pid": 460465,
+    "command": [
+      "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python",
+      "-u",
+      "-m",
+      "experiments.native10_training_20260916.policy5_round2_runner_v1",
+      "launch",
+      "--config",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_protocols/round2_policy_v1/config.json",
+      "--freeze",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy_protocols/round2_policy_v1/freeze.json",
+      "--stage",
+      "round2_development_policy",
+      "--bank-version",
+      "round2_policy_v1",
+      "--wave-id",
+      "round2_policy_v1_01",
+      "--workers",
+      "32"
+    ],
+    "lifecycle_owned_by_runner": true
+  },
+  "operations_performed": {
+    "model_calls": 0,
+    "weight_deserializations": 0,
+    "simulator_calls": 0,
+    "optimizer_updates": 0,
+    "tests_run": 0,
+    "job_launches": 0,
+    "current_policy_outcome_reads": 0,
+    "existing_files_modified": 0
+  },
+  "limitations": [
+    "The original freeze.files omitted some absolute top-level READY review references. This receipt does not claim they were included.",
+    "Exact review hashes were already bound in the immutable READY and checked by prepare.release before launch; the separate inventory snapshots were created after launch, at 297 stage simulator attempts.",
+    "This bounded review verified small identities, 295 source/resolution/old-bank seals, 11 CPU-covered code files and nine core files; it did not repeat all trajectories, large weights or every inherited frozen dependency.",
+    "Selected checkpoint SHA identities were checked against frozen manifests and independent model review; no weight payload deserialization occurred.",
+    "No policy outcomes were read. Runtime bank/loaded-identity/trajectory checks and scientific effect conclusions remain separate; this is not a policy effectiveness result."
+  ]
+}

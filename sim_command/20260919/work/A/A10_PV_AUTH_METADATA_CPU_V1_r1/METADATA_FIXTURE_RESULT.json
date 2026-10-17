@@ -1,0 +1,305 @@
+{
+  "status": "passed",
+  "scope": "V2 identity/state/path metadata only; no numeric or whole-suite tests",
+  "pure_validator_cases": [
+    {
+      "case": "V2_board_ready",
+      "expected": "accepted",
+      "actual": "accepted",
+      "error": null
+    },
+    {
+      "case": "V2_board_running",
+      "expected": "accepted",
+      "actual": "accepted",
+      "error": null
+    },
+    {
+      "case": "board_released_rejected",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Task board mismatch"
+    },
+    {
+      "case": "board_owner_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Task board mismatch"
+    },
+    {
+      "case": "board_revision_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Task board mismatch"
+    },
+    {
+      "case": "board_release_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Task release mismatch"
+    },
+    {
+      "case": "board_duplicate_task",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Task board mismatch"
+    },
+    {
+      "case": "board_missing_task",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Task board mismatch"
+    },
+    {
+      "case": "control_campaign_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "No current unique offline PV compute authorization"
+    },
+    {
+      "case": "control_mode_prepare",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "No current unique offline PV compute authorization"
+    },
+    {
+      "case": "control_compute_disabled",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "No current unique offline PV compute authorization"
+    },
+    {
+      "case": "control_stop_requested",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "No current unique offline PV compute authorization"
+    },
+    {
+      "case": "control_active_release_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "No current unique offline PV compute authorization"
+    },
+    {
+      "case": "control_active_task_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "No current unique offline PV compute authorization"
+    },
+    {
+      "case": "control_active_task_not_unique",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "No current unique offline PV compute authorization"
+    },
+    {
+      "case": "control_release_path_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Active release path mismatch"
+    },
+    {
+      "case": "control_task_not_allowed",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "No current unique offline PV compute authorization"
+    },
+    {
+      "case": "control_global_caps_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "CONTROL must expose exactly this finite PV budget"
+    },
+    {
+      "case": "control_task_caps_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "CONTROL must expose exactly this finite PV budget"
+    },
+    {
+      "case": "control_task_caps_missing",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "CONTROL must expose exactly this finite PV budget"
+    },
+    {
+      "case": "closed_release_in_control",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Release is closed"
+    },
+    {
+      "case": "release_template_is_not_authorized",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "case": "release_old_V1_identity",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "case": "release_revision_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "case": "release_caps_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "case": "release_host_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "case": "actual_host_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Wrong physical host"
+    },
+    {
+      "case": "release_device_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "case": "release_cuda_environment_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "case": "release_timeout_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "case": "release_grace_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "case": "release_extra_wave_participant",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "case": "release_retry_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "case": "proposal_sha256_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "case": "code_manifest_sha256_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "case": "input_manifest_sha256_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "case": "config_sha256_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "case": "external_source_manifest_sha256_wrong",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Release identity/caps differ from frozen proposal"
+    },
+    {
+      "case": "run_id_invalid",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Invalid unique run_id"
+    },
+    {
+      "case": "wave_id_invalid",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Invalid unique wave_id"
+    },
+    {
+      "case": "shard_id_invalid",
+      "expected": "rejected",
+      "actual": "rejected",
+      "error": "Invalid unique shard_id"
+    }
+  ],
+  "authorization_guard_checks": [
+    {
+      "case": "old_V1_path_rejected",
+      "actual": "rejected",
+      "error": "Only the designated new analysis release is accepted",
+      "synthetic_campaign_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PV_AUTH_METADATA_CPU_V1_r1/metadata_fixtures/closed_path_fixture"
+    },
+    {
+      "case": "closure_file_rejected",
+      "actual": "rejected",
+      "error": "Release closure exists",
+      "synthetic_campaign_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PV_AUTH_METADATA_CPU_V1_r1/metadata_fixtures/closed_path_fixture"
+    },
+    {
+      "case": "duplicate_claim_exclusive_writer_semantics",
+      "actual": "rejected_FileExistsError",
+      "marker_unchanged": true,
+      "claim_function_invocations": 0,
+      "proof": "actual unchanged write_new plus claim AST call-site, synthetic marker only"
+    }
+  ],
+  "publication_entry_pass": {
+    "status": "PASS_METADATA_ONLY_NOT_AUTHORIZATION",
+    "task_id": "A10_PV_OFFLINE_PREFLIGHT_V2",
+    "release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V2",
+    "board_status": "ready",
+    "release_status": "released",
+    "proposal_sha256": "9e7a80a211eba6a4e3c65bd2fb3764fe0fbd974c4190c9f2e77091c04a62e02c",
+    "manifest_entries_followed": false,
+    "hardware_identity_verified": false,
+    "real_launcher_invocations": 0,
+    "compute_release_claims": 0,
+    "holder_operations": 0,
+    "large_weight_hashes": 0,
+    "publication_is_authorization": false
+  },
+  "publication_entry_rejection": {
+    "status": "rejected",
+    "error": "Task board mismatch"
+  },
+  "fixture_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PV_AUTH_METADATA_CPU_V1_r1/metadata_fixtures",
+  "forbidden_audit_events": [],
+  "real_launcher_invocations": 0,
+  "claim_function_invocations": 0,
+  "compute_release_claims": 0,
+  "holder_queries": 0,
+  "holder_stops": 0,
+  "large_weight_hashes": 0,
+  "model_array_binary_reads": 0,
+  "torch_imports": 0,
+  "dlopen_calls": 0,
+  "algorithm_fake_suite_runs": 0,
+  "deletions": 0
+}

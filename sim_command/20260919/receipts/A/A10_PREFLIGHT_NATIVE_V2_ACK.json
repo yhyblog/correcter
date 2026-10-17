@@ -1,0 +1,198 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A10_PREFLIGHT_NATIVE_V2",
+  "task_revision": 1,
+  "node_role": "A",
+  "hostname": "trial-303224955-trialrun-303224955-worker-0",
+  "executor_session_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+  "started_at_utc": "2026-09-19T19:36:30.179213+00:00",
+  "control_revision": 16,
+  "task_board_revision": 23,
+  "release_id": "P10_A_NATIVE_PREFLIGHT_V2",
+  "release_sha256": "bd38ccbf541af9d52ade18da27e64c3ef04c853c9aa76d7f363ec2712b671c04",
+  "claim_checked_absent": true,
+  "existing_run_checked_absent": true,
+  "old_releases_closed": [
+    {
+      "release_id": "P10_A_NATIVE_PREFLIGHT_V1",
+      "closure": "releases/P10_A_NATIVE_PREFLIGHT_V1_CLOSED.json"
+    },
+    {
+      "release_id": "P10_A_EGL_GRAPHICS_PROBE_V1",
+      "closure": "releases/P10_A_EGL_GRAPHICS_PROBE_V1_CLOSED.json"
+    },
+    {
+      "release_id": "P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1",
+      "closure": "releases/P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_CLOSED.json"
+    }
+  ],
+  "allowed_scope": [
+    "Execute frozen A-only sh exactly once",
+    "One shelf-place diagnostic, five paired H samples and one control step",
+    "Audit existing artifacts and lossless CPU RGB views",
+    "Process-group cleanup and all-eight-holder lifecycle"
+  ],
+  "resource_caps": {
+    "simulator_attempts": 1,
+    "env_steps": 1,
+    "vla_sampling_calls": 5,
+    "flow_forward_calls": 50,
+    "vla_backward_calls": 0,
+    "critic_forward_calls": 0,
+    "critic_backward_calls": 0,
+    "monitor_calls": 0,
+    "optimizer_updates": 0
+  },
+  "initialization_caps": {
+    "model_initializations": 1,
+    "environment_instances": 2,
+    "wrapper_instances": 1,
+    "taskset_constructions": 1,
+    "taskset_reset_calls": 50,
+    "wrapper_initialization_reset_calls": 1,
+    "initialization_reset_calls": 51,
+    "diagnostic_reset_calls": 1,
+    "environment_reset_calls": 52,
+    "reset_model_calls": 104,
+    "initialization_do_simulation_calls": 5200,
+    "initialization_physics_substeps": 26000,
+    "policy_do_simulation_calls": 1,
+    "policy_physics_substeps": 13
+  },
+  "graphics_caps": {
+    "egl_device_enumerations": 1,
+    "egl_device_string_queries": 8,
+    "probe_explicit_egl_get_proc_address_calls": 5,
+    "egl_device_attribute_queries": 8,
+    "cuda_driver_initializations": 1,
+    "cuda_device_pci_queries": 8,
+    "egl_error_queries": 35,
+    "probe_explicit_driver_library_loads": 2,
+    "probe_explicit_cuda_symbol_lookups": 2,
+    "probe_explicit_egl_core_symbol_lookups": 11,
+    "cuda_device_count_queries": 0,
+    "cuda_uuid_queries": 0,
+    "cuda_error_string_queries": 0,
+    "egl_device_binary_queries": 0,
+    "egl_drm_string_queries": 0,
+    "egl_platform_display_calls": 1,
+    "egl_initialize_calls": 1,
+    "egl_choose_config_calls": 1,
+    "egl_bind_api_calls": 1,
+    "graphics_context_creations": 1,
+    "egl_make_current_calls": 2,
+    "egl_query_string_calls": 2,
+    "probe_explicit_gl_string_queries": 3,
+    "static_scene_constructions": 0,
+    "static_scene_data_constructions": 0,
+    "explicit_mj_forward_calls": 0,
+    "mujoco_render_context_creations": 1,
+    "mujoco_render_context_frees": 1,
+    "mujoco_scene_updates": 2,
+    "render_calls": 2,
+    "rgb_readback_calls": 2,
+    "egl_destroy_context_calls": 1,
+    "egl_terminate_calls": 1,
+    "egl_release_thread_calls": 1,
+    "mujoco_set_buffer_calls": 1,
+    "offscreen_viewer_creations": 1,
+    "policy_device_selections": 1,
+    "policy_device_property_queries": 1
+  },
+  "observation_caps": {
+    "diagnostic_native_resets_returned": 1,
+    "diagnostic_observations_returned": 1,
+    "post_control_observations_returned": 1,
+    "complete_observations_returned": 2,
+    "usable_observation_artifacts": 2
+  },
+  "inputs_checked": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/CONTROL.json",
+      "sha256": "c0c446e4223e1cde77117c3eefebf58ba63fdf7510d6cfde7fcd980ad8015aba",
+      "frozen_copy": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V2_r1/inputs/CONTROL.json"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/TASK_BOARD.json",
+      "sha256": "30aedef1f7ef676b7d3f9724a5016193384797e30391719c22c777d7e25cd475",
+      "frozen_copy": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V2_r1/inputs/TASK_BOARD.json"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/tasks/A10_PREFLIGHT_NATIVE_V2.md",
+      "sha256": "2061cd7a39ea919e90ec64563ca9bacb747518d4c46248d6d0da5c0295c375f7",
+      "frozen_copy": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V2_r1/inputs/tasks/A10_PREFLIGHT_NATIVE_V2.md"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_NATIVE_PREFLIGHT_V2.json",
+      "sha256": "bd38ccbf541af9d52ade18da27e64c3ef04c853c9aa76d7f363ec2712b671c04",
+      "frozen_copy": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V2_r1/inputs/releases/P10_A_NATIVE_PREFLIGHT_V2.json"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/NATIVE_EGL_INTEGRATION_CPU_V1_ACCEPTANCE.json",
+      "sha256": "fd9bad27c043b4f79fce8a01fc633d65185623ca15f3f8ede6370833a239f6f4",
+      "frozen_copy": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V2_r1/inputs/manifests/NATIVE_EGL_INTEGRATION_CPU_V1_ACCEPTANCE.json"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1/proposal/PROPOSAL.json",
+      "sha256": "5aefe16520dbd95c03d3e60cde19965122bc1fea3dcd0a7dd8322f8bf1401dd6",
+      "frozen_copy": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V2_r1/inputs/results/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1/proposal/PROPOSAL.json"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1/code/CODE_MANIFEST.json",
+      "sha256": "cc77bcc589965bd59435640ca98060d8ace1f76f8e1f5e0a8b5ffc3ad63a29c9",
+      "frozen_copy": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V2_r1/inputs/results/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1/code/CODE_MANIFEST.json"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1/INTEGRATION_MANIFEST.json",
+      "sha256": "3c07f509df5ae7f2bb1a01cfaef612b7daf437d383698303e7284b15fe750266",
+      "frozen_copy": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V2_r1/inputs/results/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1/INTEGRATION_MANIFEST.json"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1/config/INTEGRATION.json",
+      "sha256": "5c68aac2c2f88ac38421cf7a6835a4cd3783baa37b7f735e990f6cec328328ae",
+      "frozen_copy": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V2_r1/inputs/results/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1/config/INTEGRATION.json"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_NATIVE_PREFLIGHT_V1_CLOSED.json",
+      "sha256": "7574117b24d27f7fc99b3212238d5027f545db8f8077dd77bae0732f4ef2ff02",
+      "frozen_copy": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V2_r1/inputs/releases/P10_A_NATIVE_PREFLIGHT_V1_CLOSED.json"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_EGL_GRAPHICS_PROBE_V1_CLOSED.json",
+      "sha256": "148a6f72e707574d88d245c3dff3e7142742125a7d7badaedc435a706bbfdc84",
+      "frozen_copy": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V2_r1/inputs/releases/P10_A_EGL_GRAPHICS_PROBE_V1_CLOSED.json"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_CLOSED.json",
+      "sha256": "b5d8ee18305cae68d6a1bb628216e4dd84e9dec92831c23e03ee6a405c140d1c",
+      "frozen_copy": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V2_r1/inputs/releases/P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_CLOSED.json"
+    }
+  ],
+  "command": [
+    "bash",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1/commands/run_proposed_native_preflight.sh",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_NATIVE_PREFLIGHT_V2.json"
+  ],
+  "working_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_NATIVE_EGL_INTEGRATION_CPU_V1",
+  "extra_CPU_checker_invocations": 0,
+  "large_weight_hashes_before_launcher": 0,
+  "occupancy_precheck": {
+    "source": "Read-only guard status and /proc manager checks in host context",
+    "guard_pid": 27508,
+    "holder_managers": [
+      220701,
+      220702,
+      220703,
+      220704,
+      220705,
+      220706,
+      220707,
+      220708
+    ],
+    "all_eight_alive": true,
+    "no_extra_NVML_query": true
+  },
+  "max_retries": 0,
+  "deletions": 0,
+  "release_consumed_on_any_claim": true
+}

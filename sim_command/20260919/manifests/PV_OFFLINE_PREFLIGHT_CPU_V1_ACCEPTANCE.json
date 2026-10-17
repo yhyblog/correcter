@@ -1,0 +1,93 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "accepted_at_utc": "2026-09-19T21:16:20.283242+00:00",
+  "status": "CPU_offline_PV_preparation_accepted_for_one_numeric_diagnostic",
+  "task_id": "A10_PV_OFFLINE_PREFLIGHT_CPU_V1",
+  "receipt": {
+    "path": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1_RESULT.json",
+    "sha256": "78f30d15c17a8ca4fd46d02a0d7ec8257003ac01c7918a67f4d71a11867ded8f"
+  },
+  "report": {
+    "path": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1_REPORT.md",
+    "sha256": "cbd7d20e5c48a0109ceb5f1f4a382fe1284d12d9f369016320e520ec71d69bd4"
+  },
+  "CPU_READY": {
+    "path": "results/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1/CPU_READY.json",
+    "sha256": "52c1b049e9e9a400ffd3a7535fbb9a843509d018db85b3f267712d18362c1b11"
+  },
+  "proposal": {
+    "path": "results/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1/proposal/PROPOSAL.json",
+    "sha256": "11619dc4d5b8a4575a9d988de6f785f15368bfa4860e2948cef98847b70e55d9"
+  },
+  "code_manifest": {
+    "path": "results/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1/code/CODE_MANIFEST.json",
+    "sha256": "4e790e12efdcb133e5ae9aca2b797aa35455409d052aa3067a15be2b8fbc1ada"
+  },
+  "input_manifest": {
+    "path": "results/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1/INPUT_MANIFEST.json",
+    "sha256": "706b2e94b543e404c7a3ce6baee88d1736c61cf2ea4e9e491643af95e1fc1fb0"
+  },
+  "external_source_manifest": {
+    "path": "results/A/A10_PV_OFFLINE_PREFLIGHT_CPU_V1/EXTERNAL_SOURCE_MANIFEST.json",
+    "sha256": "088c97a731211ccb51f989fe024fe608c1d005838c505d8335768788a75b768c"
+  },
+  "root_verification": {
+    "RESULT_artifact_references_SHA_and_size": 19,
+    "code_manifest_files_SHA_and_size": 380,
+    "external_sources_SHA_and_size": 33,
+    "global_per_task_release_proposal_caps_equal": true,
+    "launcher_plus_diagnostic_caps_equal_total": true,
+    "runtime_probes": 0,
+    "tests_rerun": 0,
+    "large_model_hash_passes": 0
+  },
+  "executor_CPU_evidence": {
+    "targeted_cases_passed": 28,
+    "retained_evidence_files": 433,
+    "real_compute_attempts": 0
+  },
+  "independent_reviews": [
+    {
+      "agent": "/root/pv_offline_algorithm_review",
+      "blocking_findings": []
+    },
+    {
+      "agent": "/root/pv_offline_loader_guard_review",
+      "blocking_findings": []
+    }
+  ],
+  "accepted_scope": [
+    "Only saved step0 conditions and anchor; legal existing00001 mask, no step1 future input",
+    "Same-source encoder, frozen spatial projection and each selected5taskA4000member PCA/norm",
+    "Saved raw50 sufficient for bounded anchor and bit preservation;one reconstructed noise draw must match V3 SHA",
+    "Post S-squared gradient and Velocity final3tau detached guidance with independent own-radius projection",
+    "10ensemble/40member forwards and4action gradients; local/final scores diagnostic only, no Q acceptance gate",
+    "Strict observed original single SFT state load rejects silent random fallback before forward",
+    "One A-only offline attempt, full-process-group occupancy lifecycle and no environment/render/training"
+  ],
+  "private_accounting": "Launcher/diagnostic integer IDs are separate private ledgers; reconcile each then aggregate resource units, never concatenate as interface_v1 UUID stream",
+  "historical_comment_limit": "Copied post_direction docstring mentions old common radius; executable entry uses independent solo projection. Frozen bundle unchanged.",
+  "runtime_still_unvalidated": [
+    "real encoder outputs at step0",
+    "runtime noise hash equality",
+    "Q/P/V finite numerical behavior on this snapshot",
+    "MT50 Q adaptation",
+    "D/G0 triggers",
+    "C10 execution and complete task outcomes"
+  ],
+  "cost_semantics": {
+    "kind": "cached single-snapshot numerical diagnostic",
+    "deployment_samples": {
+      "Post": 1,
+      "Velocity": 2
+    },
+    "diagnostic_samples": {
+      "Post": 0,
+      "Velocity": 1
+    },
+    "deployment_cost_comparison": false
+  },
+  "task_success_rate_sample": false,
+  "new_release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V1.json",
+  "old_release_reuse": false
+}

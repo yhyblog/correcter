@@ -1,0 +1,117 @@
+{
+  "task_id": "A10_GUARD_HANDOFF_INSTALL_V1",
+  "revision": 1,
+  "node_role": "A",
+  "status": "ACK",
+  "at_utc": "2026-09-19T22:39:21.511415+00:00",
+  "host": "trial-303224955-trialrun-303224955-worker-0",
+  "release": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P00_A_GUARD_HANDOFF_INSTALL_V1.json",
+    "sha256": "5d47401e8c571f0a8a453fd2d9a076c8a7552858b1140e9a1f073bd0e5bce5a0",
+    "size_bytes": 2806
+  },
+  "control": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/CONTROL.json",
+    "sha256": "1f8a5c6aed9cf45e268f37159807521e70ec4430f422374a0253ab6df492167f",
+    "size_bytes": 19627
+  },
+  "control_revision": 28,
+  "task_board": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/TASK_BOARD.json",
+    "sha256": "f578a0c76276306fb25074317e6f0a2235983876a449e3b663858149dc90c99a",
+    "size_bytes": 18083
+  },
+  "task_board_revision": 35,
+  "board_entry": {
+    "id": "A10_GUARD_HANDOFF_INSTALL_V1",
+    "owner": "A",
+    "status": "ready",
+    "revision": 1,
+    "dependencies": [
+      "A10_PV_HANDOFF_CPU_REPAIR_V1"
+    ],
+    "brief": "tasks/A10_GUARD_HANDOFF_INSTALL_V1.md",
+    "release": "releases/P00_A_GUARD_HANDOFF_INSTALL_V1.json",
+    "expected_result": "receipts/A/A10_GUARD_HANDOFF_INSTALL_V1_RESULT.json",
+    "scope": "one_guard_file_CPU_transition_no_compute_no_restart"
+  },
+  "verified_small_file_identities": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/tasks/A10_GUARD_HANDOFF_INSTALL_V1.md",
+      "sha256": "8d5bd74d667cc45afe7820d99c5bb3de0a433fdee2ae1bf24d8eb3d761958887",
+      "size_bytes": 3667
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/commands/transition_guard_file_cpu.py",
+      "sha256": "a19f376f2acb1dfeb47c6028bf0460ce71668153579eb554bdc8476b4ffbeafe",
+      "size_bytes": 5031
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/guard_patch/INSTALLATION_PROPOSAL.json",
+      "sha256": "28bcda15f95a949bd513a42cd4d9803a721f14da1bf1546abb7749740d741eb8",
+      "size_bytes": 4954
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/guard_patch/PATCH_IDENTITY.json",
+      "sha256": "7b67f2bf815958cf0d518f76b0c939b816c8611dbaeff92ed43b87c48502c32a",
+      "size_bytes": 2360
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/guard_patch/gpu_occupancy_guard.original.py",
+      "sha256": "d499982dff72c3b74ddab0e13e359edccb5f282900c534030b3816b58495fcaf",
+      "size_bytes": 8683
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/guard_patch/gpu_occupancy_guard.patched.py",
+      "sha256": "7910c567a47ddf68294d92fc9698cc780aeb130ddefde0337414bfcd88cb85a4",
+      "size_bytes": 10704
+    }
+  ],
+  "target_before": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_guard.py",
+    "sha256": "d499982dff72c3b74ddab0e13e359edccb5f282900c534030b3816b58495fcaf",
+    "size_bytes": 8683,
+    "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_guard.py",
+    "is_symlink": false,
+    "regular_file": true,
+    "mode": "0o644",
+    "uid": 1000,
+    "gid": 1000,
+    "inode": 5910974545001805,
+    "device": 1048775,
+    "mtime_ns": 1789654372355956000,
+    "ctime_ns": 1789654372355956000
+  },
+  "unique_paths_absent_before_ack": [
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/guard_file_transitions/P00_A_GUARD_HANDOFF_INSTALL_V1",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_GUARD_HANDOFF_INSTALL_V1_ACK.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_GUARD_HANDOFF_INSTALL_V1_RESULT.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P00_A_GUARD_HANDOFF_INSTALL_V1_CLOSED.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V3.json",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_GUARD_HANDOFF_INSTALL_V1_r1",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_GUARD_HANDOFF_INSTALL_V1"
+  ],
+  "closed_compute_release_count": 7,
+  "real_command": [
+    "/usr/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/commands/transition_guard_file_cpu.py",
+    "--release",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P00_A_GUARD_HANDOFF_INSTALL_V1.json",
+    "--operation",
+    "install"
+  ],
+  "working_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1",
+  "authorized_command_invocations": 1,
+  "authorized_shared_file_replacements": 1,
+  "compute_authorized": false,
+  "V3_compute_authorized": false,
+  "no_guard_import_or_execution": true,
+  "no_GPU_or_holder_query_or_stop": true,
+  "no_formal_lock_or_daemon_restart": true,
+  "no_deletion_or_rollback": true,
+  "evidence_work": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_GUARD_HANDOFF_INSTALL_V1_r1",
+  "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_GUARD_HANDOFF_INSTALL_V1"
+}

@@ -1,0 +1,89 @@
+{
+  "device_nodes": [
+    {
+      "path": "/dev/nvidia0",
+      "exists": false
+    },
+    {
+      "path": "/dev/nvidiactl",
+      "exists": false
+    },
+    {
+      "path": "/dev/nvidia-uvm",
+      "exists": false
+    },
+    {
+      "path": "/dev/nvidia-modeset",
+      "exists": false
+    },
+    {
+      "path": "/dev/nvidia-caps",
+      "exists": false
+    },
+    {
+      "path": "/dev/dri",
+      "exists": false
+    }
+  ],
+  "target_DRM_sysfs": [
+    {
+      "path": "/sys/class/drm/renderD128",
+      "device": "/sys/devices/pci0000:07/0000:07:01.0/0000:08:00.0/0000:09:08.0/0000:0d:00.0/0000:0e:10.0/0000:0f:00.0",
+      "uevent": "DRIVER=nvidia\nPCI_CLASS=30200\nPCI_ID=10DE:2330\nPCI_SUBSYS_ID=10DE:16C1\nPCI_SLOT_NAME=0000:0f:00.0\nMODALIAS=pci:v000010DEd00002330sv000010DEsd000016C1bc03sc02i00\n"
+    },
+    {
+      "path": "/sys/class/drm/card1",
+      "device": "/sys/devices/pci0000:07/0000:07:01.0/0000:08:00.0/0000:09:08.0/0000:0d:00.0/0000:0e:10.0/0000:0f:00.0",
+      "uevent": "DRIVER=nvidia\nPCI_CLASS=30200\nPCI_ID=10DE:2330\nPCI_SUBSYS_ID=10DE:16C1\nPCI_SLOT_NAME=0000:0f:00.0\nMODALIAS=pci:v000010DEd00002330sv000010DEsd000016C1bc03sc02i00\n"
+    }
+  ],
+  "occupancy_read_only_status": {
+    "source": "/tmp/gpu_occupancy_guard/status.json",
+    "checked_at_utc": "2026-09-19T17:42:09.909244+00:00",
+    "updated": 1789839729.8686428,
+    "gpu_count": 8,
+    "gpus": {
+      "0": {
+        "state": "holder",
+        "manager_pid": 193237,
+        "manager_exists": true
+      },
+      "1": {
+        "state": "holder",
+        "manager_pid": 193238,
+        "manager_exists": true
+      },
+      "2": {
+        "state": "holder",
+        "manager_pid": 193239,
+        "manager_exists": true
+      },
+      "3": {
+        "state": "holder",
+        "manager_pid": 193240,
+        "manager_exists": true
+      },
+      "4": {
+        "state": "holder",
+        "manager_pid": 193241,
+        "manager_exists": true
+      },
+      "5": {
+        "state": "holder",
+        "manager_pid": 193242,
+        "manager_exists": true
+      },
+      "6": {
+        "state": "holder",
+        "manager_pid": 193243,
+        "manager_exists": true
+      },
+      "7": {
+        "state": "holder",
+        "manager_pid": 193244,
+        "manager_exists": true
+      }
+    }
+  },
+  "NVML_or_EGL_queries": 0
+}

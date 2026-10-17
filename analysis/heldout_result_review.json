@@ -1,0 +1,1222 @@
+{
+  "status": "passed_independent_heldout_statistics_review",
+  "created_utc": "2026-09-17T04:09:20.963773+00:00",
+  "scope": "Independently recomputed complete 100 x 5 x 4 from sealed source_records, without invoking the production reducer or repeating trajectory audit.",
+  "inputs": {
+    "main_complete": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_audits/heldout_v1/complete.json",
+      "sha256": "d776f54ceb94879bc1945a6e5e02736d04ba9d7e4652e02e06280be3a85a833e"
+    },
+    "main_result": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_audits/heldout_v1/result.json",
+      "sha256": "d9d536e27c34e04b8a0d829c41d7312cf087296364b70e9590f5a9fe23e315c5"
+    },
+    "source_records": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_audits/heldout_v1/source_records.json",
+      "sha256": "12ca94b91e819338b9de9ee6ca5d068fd8973aa84d53b32fd06b51a07bec36ac"
+    },
+    "frozen_config": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/heldout_protocols/heldout_v1/config.json",
+      "sha256": "d86dc14afddf81a37587ff020cd36cc07e85869bf315502dc1778a97bda8f795"
+    },
+    "sealed_audit_files_verified": {
+      "budget_snapshot.jsonl": "3f293430a26d7c0405c33b797788fdfd099f3b8d0a42aec7c37a89338a4ef552",
+      "result.json": "d9d536e27c34e04b8a0d829c41d7312cf087296364b70e9590f5a9fe23e315c5",
+      "scene_registry_snapshot.jsonl": "ac233e096e1d0a35454f6f3efe6e72ae2652ee83ab94f3555f8bd29727cd53df",
+      "source_records.json": "12ca94b91e819338b9de9ee6ca5d068fd8973aa84d53b32fd06b51a07bec36ac",
+      "wave_completion.json": "2740ee813c8649331161aaacfa7e0eb45466b058ee024057f87be5a8b8252bba"
+    },
+    "actual_final_selection": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_selections/final_selection_v1",
+      "seal_sha256": "2afa80bc07c9cf3f87c5bb8a21bcc8b36baf2a129d25e86b37731de386c7144e",
+      "result_sha256": "87f1a411e8e82ecc4274875f93a264962824566271231338226d0a01e788f658"
+    }
+  },
+  "checks": {
+    "original_registration_order_exact": true,
+    "primary_sources": 100,
+    "per_task_counts": {
+      "disassemble-v3": 20,
+      "pick-place-wall-v3": 20,
+      "shelf-place-v3": 20,
+      "stick-pull-v3": 20,
+      "stick-push-v3": 20
+    },
+    "replicates_per_source": 4,
+    "cut_sources": 98,
+    "no_cut_sources": 2,
+    "no_cut_outcomes": [
+      {
+        "episode_id": "pick-place-wall-v3__2026111866",
+        "task": "pick-place-wall-v3",
+        "common_outcome": false
+      },
+      {
+        "episode_id": "pick-place-wall-v3__2026111881",
+        "task": "pick-place-wall-v3",
+        "common_outcome": true
+      }
+    ],
+    "technical_missing": 0,
+    "technical_completion_and_scene_audit_passed": true,
+    "five_arms_seven_comparisons_task_tables_exact_agreement": true,
+    "seven_intervals_exactly_reproduced": true,
+    "primary_assessment_exact_agreement": true,
+    "selection_or_threshold_changed": false
+  },
+  "overall": {
+    "sources": 100,
+    "logical_outcomes_per_arm": 400,
+    "success_counts": {
+      "continue_native10": 168,
+      "alarm_replan10": 214,
+      "velocity": 237,
+      "direct": 234,
+      "post": 250
+    },
+    "success_rates": {
+      "continue_native10": 0.42,
+      "alarm_replan10": 0.535,
+      "velocity": 0.5925,
+      "direct": 0.585,
+      "post": 0.625
+    },
+    "comparisons": {
+      "alarm_replan10_minus_continue_native10": {
+        "gain": 0.115,
+        "rescues": 79,
+        "harms": 33,
+        "positive_sources": 28,
+        "negative_sources": 13,
+        "zero_sources": 59,
+        "source_95ci": [
+          0.03,
+          0.2025
+        ]
+      },
+      "velocity_minus_alarm_replan10": {
+        "gain": 0.0575,
+        "rescues": 32,
+        "harms": 9,
+        "positive_sources": 13,
+        "negative_sources": 5,
+        "zero_sources": 82,
+        "source_95ci": [
+          0.0075,
+          0.11
+        ]
+      },
+      "direct_minus_alarm_replan10": {
+        "gain": 0.05,
+        "rescues": 36,
+        "harms": 16,
+        "positive_sources": 15,
+        "negative_sources": 7,
+        "zero_sources": 78,
+        "source_95ci": [
+          -0.01,
+          0.1075
+        ]
+      },
+      "post_minus_alarm_replan10": {
+        "gain": 0.09,
+        "rescues": 46,
+        "harms": 10,
+        "positive_sources": 18,
+        "negative_sources": 6,
+        "zero_sources": 76,
+        "source_95ci": [
+          0.0325,
+          0.15
+        ]
+      },
+      "velocity_minus_continue_native10": {
+        "gain": 0.1725,
+        "rescues": 84,
+        "harms": 15,
+        "positive_sources": 30,
+        "negative_sources": 9,
+        "zero_sources": 61,
+        "source_95ci": [
+          0.0975,
+          0.25
+        ]
+      },
+      "direct_minus_continue_native10": {
+        "gain": 0.165,
+        "rescues": 82,
+        "harms": 16,
+        "positive_sources": 28,
+        "negative_sources": 9,
+        "zero_sources": 63,
+        "source_95ci": [
+          0.0925,
+          0.245
+        ]
+      },
+      "post_minus_continue_native10": {
+        "gain": 0.205,
+        "rescues": 94,
+        "harms": 12,
+        "positive_sources": 35,
+        "negative_sources": 6,
+        "zero_sources": 59,
+        "source_95ci": [
+          0.13,
+          0.2825
+        ]
+      }
+    }
+  },
+  "per_task": {
+    "disassemble-v3": {
+      "sources": 20,
+      "logical_outcomes_per_arm": 80,
+      "success_counts": {
+        "continue_native10": 52,
+        "alarm_replan10": 49,
+        "velocity": 59,
+        "direct": 64,
+        "post": 60
+      },
+      "success_rates": {
+        "continue_native10": 0.65,
+        "alarm_replan10": 0.6125,
+        "velocity": 0.7375,
+        "direct": 0.8,
+        "post": 0.75
+      },
+      "comparisons": {
+        "alarm_replan10_minus_continue_native10": {
+          "gain": -0.0375,
+          "rescues": 14,
+          "harms": 17,
+          "positive_sources": 5,
+          "negative_sources": 6,
+          "zero_sources": 9
+        },
+        "velocity_minus_alarm_replan10": {
+          "gain": 0.125,
+          "rescues": 14,
+          "harms": 4,
+          "positive_sources": 6,
+          "negative_sources": 3,
+          "zero_sources": 11
+        },
+        "direct_minus_alarm_replan10": {
+          "gain": 0.1875,
+          "rescues": 18,
+          "harms": 3,
+          "positive_sources": 7,
+          "negative_sources": 2,
+          "zero_sources": 11
+        },
+        "post_minus_alarm_replan10": {
+          "gain": 0.1375,
+          "rescues": 18,
+          "harms": 7,
+          "positive_sources": 6,
+          "negative_sources": 3,
+          "zero_sources": 11
+        },
+        "velocity_minus_continue_native10": {
+          "gain": 0.0875,
+          "rescues": 15,
+          "harms": 8,
+          "positive_sources": 4,
+          "negative_sources": 5,
+          "zero_sources": 11
+        },
+        "direct_minus_continue_native10": {
+          "gain": 0.15,
+          "rescues": 15,
+          "harms": 3,
+          "positive_sources": 4,
+          "negative_sources": 3,
+          "zero_sources": 13
+        },
+        "post_minus_continue_native10": {
+          "gain": 0.1,
+          "rescues": 12,
+          "harms": 4,
+          "positive_sources": 4,
+          "negative_sources": 2,
+          "zero_sources": 14
+        }
+      }
+    },
+    "pick-place-wall-v3": {
+      "sources": 20,
+      "logical_outcomes_per_arm": 80,
+      "success_counts": {
+        "continue_native10": 30,
+        "alarm_replan10": 58,
+        "velocity": 58,
+        "direct": 60,
+        "post": 66
+      },
+      "success_rates": {
+        "continue_native10": 0.375,
+        "alarm_replan10": 0.725,
+        "velocity": 0.725,
+        "direct": 0.75,
+        "post": 0.825
+      },
+      "comparisons": {
+        "alarm_replan10_minus_continue_native10": {
+          "gain": 0.35,
+          "rescues": 29,
+          "harms": 1,
+          "positive_sources": 11,
+          "negative_sources": 1,
+          "zero_sources": 8
+        },
+        "velocity_minus_alarm_replan10": {
+          "gain": 0.0,
+          "rescues": 0,
+          "harms": 0,
+          "positive_sources": 0,
+          "negative_sources": 0,
+          "zero_sources": 20
+        },
+        "direct_minus_alarm_replan10": {
+          "gain": 0.025,
+          "rescues": 3,
+          "harms": 1,
+          "positive_sources": 1,
+          "negative_sources": 1,
+          "zero_sources": 18
+        },
+        "post_minus_alarm_replan10": {
+          "gain": 0.1,
+          "rescues": 8,
+          "harms": 0,
+          "positive_sources": 3,
+          "negative_sources": 0,
+          "zero_sources": 17
+        },
+        "velocity_minus_continue_native10": {
+          "gain": 0.35,
+          "rescues": 29,
+          "harms": 1,
+          "positive_sources": 11,
+          "negative_sources": 1,
+          "zero_sources": 8
+        },
+        "direct_minus_continue_native10": {
+          "gain": 0.375,
+          "rescues": 31,
+          "harms": 1,
+          "positive_sources": 11,
+          "negative_sources": 1,
+          "zero_sources": 8
+        },
+        "post_minus_continue_native10": {
+          "gain": 0.45,
+          "rescues": 37,
+          "harms": 1,
+          "positive_sources": 12,
+          "negative_sources": 1,
+          "zero_sources": 7
+        }
+      }
+    },
+    "shelf-place-v3": {
+      "sources": 20,
+      "logical_outcomes_per_arm": 80,
+      "success_counts": {
+        "continue_native10": 16,
+        "alarm_replan10": 14,
+        "velocity": 18,
+        "direct": 17,
+        "post": 22
+      },
+      "success_rates": {
+        "continue_native10": 0.2,
+        "alarm_replan10": 0.175,
+        "velocity": 0.225,
+        "direct": 0.2125,
+        "post": 0.275
+      },
+      "comparisons": {
+        "alarm_replan10_minus_continue_native10": {
+          "gain": -0.025,
+          "rescues": 6,
+          "harms": 8,
+          "positive_sources": 2,
+          "negative_sources": 3,
+          "zero_sources": 15
+        },
+        "velocity_minus_alarm_replan10": {
+          "gain": 0.05,
+          "rescues": 8,
+          "harms": 4,
+          "positive_sources": 4,
+          "negative_sources": 1,
+          "zero_sources": 15
+        },
+        "direct_minus_alarm_replan10": {
+          "gain": 0.0375,
+          "rescues": 4,
+          "harms": 1,
+          "positive_sources": 3,
+          "negative_sources": 1,
+          "zero_sources": 16
+        },
+        "post_minus_alarm_replan10": {
+          "gain": 0.1,
+          "rescues": 9,
+          "harms": 1,
+          "positive_sources": 5,
+          "negative_sources": 1,
+          "zero_sources": 14
+        },
+        "velocity_minus_continue_native10": {
+          "gain": 0.025,
+          "rescues": 6,
+          "harms": 4,
+          "positive_sources": 3,
+          "negative_sources": 1,
+          "zero_sources": 16
+        },
+        "direct_minus_continue_native10": {
+          "gain": 0.0125,
+          "rescues": 7,
+          "harms": 6,
+          "positive_sources": 3,
+          "negative_sources": 1,
+          "zero_sources": 16
+        },
+        "post_minus_continue_native10": {
+          "gain": 0.075,
+          "rescues": 11,
+          "harms": 5,
+          "positive_sources": 6,
+          "negative_sources": 1,
+          "zero_sources": 13
+        }
+      }
+    },
+    "stick-pull-v3": {
+      "sources": 20,
+      "logical_outcomes_per_arm": 80,
+      "success_counts": {
+        "continue_native10": 7,
+        "alarm_replan10": 17,
+        "velocity": 22,
+        "direct": 21,
+        "post": 22
+      },
+      "success_rates": {
+        "continue_native10": 0.0875,
+        "alarm_replan10": 0.2125,
+        "velocity": 0.275,
+        "direct": 0.2625,
+        "post": 0.275
+      },
+      "comparisons": {
+        "alarm_replan10_minus_continue_native10": {
+          "gain": 0.125,
+          "rescues": 13,
+          "harms": 3,
+          "positive_sources": 4,
+          "negative_sources": 2,
+          "zero_sources": 14
+        },
+        "velocity_minus_alarm_replan10": {
+          "gain": 0.0625,
+          "rescues": 6,
+          "harms": 1,
+          "positive_sources": 2,
+          "negative_sources": 1,
+          "zero_sources": 17
+        },
+        "direct_minus_alarm_replan10": {
+          "gain": 0.05,
+          "rescues": 7,
+          "harms": 3,
+          "positive_sources": 3,
+          "negative_sources": 1,
+          "zero_sources": 16
+        },
+        "post_minus_alarm_replan10": {
+          "gain": 0.0625,
+          "rescues": 7,
+          "harms": 2,
+          "positive_sources": 3,
+          "negative_sources": 2,
+          "zero_sources": 15
+        },
+        "velocity_minus_continue_native10": {
+          "gain": 0.1875,
+          "rescues": 17,
+          "harms": 2,
+          "positive_sources": 6,
+          "negative_sources": 2,
+          "zero_sources": 12
+        },
+        "direct_minus_continue_native10": {
+          "gain": 0.175,
+          "rescues": 16,
+          "harms": 2,
+          "positive_sources": 6,
+          "negative_sources": 2,
+          "zero_sources": 12
+        },
+        "post_minus_continue_native10": {
+          "gain": 0.1875,
+          "rescues": 17,
+          "harms": 2,
+          "positive_sources": 7,
+          "negative_sources": 2,
+          "zero_sources": 11
+        }
+      }
+    },
+    "stick-push-v3": {
+      "sources": 20,
+      "logical_outcomes_per_arm": 80,
+      "success_counts": {
+        "continue_native10": 63,
+        "alarm_replan10": 76,
+        "velocity": 80,
+        "direct": 72,
+        "post": 80
+      },
+      "success_rates": {
+        "continue_native10": 0.7875,
+        "alarm_replan10": 0.95,
+        "velocity": 1.0,
+        "direct": 0.9,
+        "post": 1.0
+      },
+      "comparisons": {
+        "alarm_replan10_minus_continue_native10": {
+          "gain": 0.1625,
+          "rescues": 17,
+          "harms": 4,
+          "positive_sources": 6,
+          "negative_sources": 1,
+          "zero_sources": 13
+        },
+        "velocity_minus_alarm_replan10": {
+          "gain": 0.05,
+          "rescues": 4,
+          "harms": 0,
+          "positive_sources": 1,
+          "negative_sources": 0,
+          "zero_sources": 19
+        },
+        "direct_minus_alarm_replan10": {
+          "gain": -0.05,
+          "rescues": 4,
+          "harms": 8,
+          "positive_sources": 1,
+          "negative_sources": 2,
+          "zero_sources": 17
+        },
+        "post_minus_alarm_replan10": {
+          "gain": 0.05,
+          "rescues": 4,
+          "harms": 0,
+          "positive_sources": 1,
+          "negative_sources": 0,
+          "zero_sources": 19
+        },
+        "velocity_minus_continue_native10": {
+          "gain": 0.2125,
+          "rescues": 17,
+          "harms": 0,
+          "positive_sources": 6,
+          "negative_sources": 0,
+          "zero_sources": 14
+        },
+        "direct_minus_continue_native10": {
+          "gain": 0.1125,
+          "rescues": 13,
+          "harms": 4,
+          "positive_sources": 4,
+          "negative_sources": 2,
+          "zero_sources": 14
+        },
+        "post_minus_continue_native10": {
+          "gain": 0.2125,
+          "rescues": 17,
+          "harms": 0,
+          "positive_sources": 6,
+          "negative_sources": 0,
+          "zero_sources": 14
+        }
+      }
+    }
+  },
+  "alarm_conditioned": {
+    "sources": 98,
+    "logical_outcomes_per_arm": 392,
+    "success_counts": {
+      "continue_native10": 164,
+      "alarm_replan10": 210,
+      "velocity": 233,
+      "direct": 230,
+      "post": 246
+    },
+    "success_rates": {
+      "continue_native10": 0.41836734693877553,
+      "alarm_replan10": 0.5357142857142857,
+      "velocity": 0.5943877551020408,
+      "direct": 0.5867346938775511,
+      "post": 0.6275510204081632
+    },
+    "comparisons": {
+      "alarm_replan10_minus_continue_native10": {
+        "gain": 0.11734693877551021,
+        "rescues": 79,
+        "harms": 33,
+        "positive_sources": 28,
+        "negative_sources": 13,
+        "zero_sources": 57
+      },
+      "velocity_minus_alarm_replan10": {
+        "gain": 0.058673469387755105,
+        "rescues": 32,
+        "harms": 9,
+        "positive_sources": 13,
+        "negative_sources": 5,
+        "zero_sources": 80
+      },
+      "direct_minus_alarm_replan10": {
+        "gain": 0.05102040816326531,
+        "rescues": 36,
+        "harms": 16,
+        "positive_sources": 15,
+        "negative_sources": 7,
+        "zero_sources": 76
+      },
+      "post_minus_alarm_replan10": {
+        "gain": 0.09183673469387756,
+        "rescues": 46,
+        "harms": 10,
+        "positive_sources": 18,
+        "negative_sources": 6,
+        "zero_sources": 74
+      },
+      "velocity_minus_continue_native10": {
+        "gain": 0.1760204081632653,
+        "rescues": 84,
+        "harms": 15,
+        "positive_sources": 30,
+        "negative_sources": 9,
+        "zero_sources": 59
+      },
+      "direct_minus_continue_native10": {
+        "gain": 0.1683673469387755,
+        "rescues": 82,
+        "harms": 16,
+        "positive_sources": 28,
+        "negative_sources": 9,
+        "zero_sources": 61
+      },
+      "post_minus_continue_native10": {
+        "gain": 0.20918367346938777,
+        "rescues": 94,
+        "harms": 12,
+        "positive_sources": 35,
+        "negative_sources": 6,
+        "zero_sources": 57
+      }
+    }
+  },
+  "no_cut_common_outcomes": {
+    "sources": 2,
+    "logical_outcomes_per_arm": 8,
+    "success_counts": {
+      "continue_native10": 4,
+      "alarm_replan10": 4,
+      "velocity": 4,
+      "direct": 4,
+      "post": 4
+    },
+    "success_rates": {
+      "continue_native10": 0.5,
+      "alarm_replan10": 0.5,
+      "velocity": 0.5,
+      "direct": 0.5,
+      "post": 0.5
+    },
+    "comparisons": {
+      "alarm_replan10_minus_continue_native10": {
+        "gain": 0.0,
+        "rescues": 0,
+        "harms": 0,
+        "positive_sources": 0,
+        "negative_sources": 0,
+        "zero_sources": 2
+      },
+      "velocity_minus_alarm_replan10": {
+        "gain": 0.0,
+        "rescues": 0,
+        "harms": 0,
+        "positive_sources": 0,
+        "negative_sources": 0,
+        "zero_sources": 2
+      },
+      "direct_minus_alarm_replan10": {
+        "gain": 0.0,
+        "rescues": 0,
+        "harms": 0,
+        "positive_sources": 0,
+        "negative_sources": 0,
+        "zero_sources": 2
+      },
+      "post_minus_alarm_replan10": {
+        "gain": 0.0,
+        "rescues": 0,
+        "harms": 0,
+        "positive_sources": 0,
+        "negative_sources": 0,
+        "zero_sources": 2
+      },
+      "velocity_minus_continue_native10": {
+        "gain": 0.0,
+        "rescues": 0,
+        "harms": 0,
+        "positive_sources": 0,
+        "negative_sources": 0,
+        "zero_sources": 2
+      },
+      "direct_minus_continue_native10": {
+        "gain": 0.0,
+        "rescues": 0,
+        "harms": 0,
+        "positive_sources": 0,
+        "negative_sources": 0,
+        "zero_sources": 2
+      },
+      "post_minus_continue_native10": {
+        "gain": 0.0,
+        "rescues": 0,
+        "harms": 0,
+        "positive_sources": 0,
+        "negative_sources": 0,
+        "zero_sources": 2
+      }
+    }
+  },
+  "primary_assessment": {
+    "comparison": "post_minus_alarm_replan10",
+    "method_fixed_before_heldout": "post",
+    "paired_success_difference": 36,
+    "point_estimate": 0.09,
+    "practical_target": 0.05,
+    "point_estimate_target_met": true,
+    "source_95ci": [
+      0.0325,
+      0.15
+    ],
+    "ci_supports_positive_gain": true,
+    "true_gain_at_least_target_guaranteed": false,
+    "nonpositive_or_crossing_ci_does_not_prove_ineffectiveness": true,
+    "posthoc_method_selection": false,
+    "selection_rule_changed": false,
+    "interpretation": "Report point target attainment and interval evidence separately; neither guarantees a true gain of at least five percentage points."
+  },
+  "post_concentration": {
+    "paired_changed_sources": 24,
+    "positive_net_successes": 46,
+    "negative_net_successes": -10,
+    "largest_positive_source_net": 4,
+    "top2_share_of_positive_source_net": 0.17391304347826086,
+    "top5_share_of_positive_source_net": 0.43478260869565216,
+    "positive_net_task_count": 5
+  },
+  "post_changed_sources": [
+    {
+      "episode_id": "disassemble-v3__2026111750",
+      "task": "disassemble-v3",
+      "replan": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "post": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "rescues": 4,
+      "harms": 0,
+      "net_successes": 4
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111751",
+      "task": "pick-place-wall-v3",
+      "replan": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "post": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "rescues": 3,
+      "harms": 0,
+      "net_successes": 3
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111753",
+      "task": "stick-pull-v3",
+      "replan": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "post": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "rescues": 0,
+      "harms": 1,
+      "net_successes": -1
+    },
+    {
+      "episode_id": "disassemble-v3__2026111755",
+      "task": "disassemble-v3",
+      "replan": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "post": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "rescues": 3,
+      "harms": 0,
+      "net_successes": 3
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111757",
+      "task": "shelf-place-v3",
+      "replan": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "post": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rescues": 1,
+      "harms": 0,
+      "net_successes": 1
+    },
+    {
+      "episode_id": "disassemble-v3__2026111765",
+      "task": "disassemble-v3",
+      "replan": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "post": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "rescues": 0,
+      "harms": 2,
+      "net_successes": -2
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111773",
+      "task": "stick-pull-v3",
+      "replan": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "post": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "rescues": 1,
+      "harms": 0,
+      "net_successes": 1
+    },
+    {
+      "episode_id": "stick-push-v3__2026111779",
+      "task": "stick-push-v3",
+      "replan": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "post": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "rescues": 4,
+      "harms": 0,
+      "net_successes": 4
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111788",
+      "task": "stick-pull-v3",
+      "replan": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "post": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "rescues": 2,
+      "harms": 0,
+      "net_successes": 2
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111792",
+      "task": "shelf-place-v3",
+      "replan": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "post": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "rescues": 3,
+      "harms": 0,
+      "net_successes": 3
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111793",
+      "task": "stick-pull-v3",
+      "replan": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "post": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "rescues": 4,
+      "harms": 0,
+      "net_successes": 4
+    },
+    {
+      "episode_id": "disassemble-v3__2026111795",
+      "task": "disassemble-v3",
+      "replan": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "post": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "rescues": 1,
+      "harms": 0,
+      "net_successes": 1
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111797",
+      "task": "shelf-place-v3",
+      "replan": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "post": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "rescues": 1,
+      "harms": 0,
+      "net_successes": 1
+    },
+    {
+      "episode_id": "stick-pull-v3__2026111798",
+      "task": "stick-pull-v3",
+      "replan": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "post": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "rescues": 0,
+      "harms": 1,
+      "net_successes": -1
+    },
+    {
+      "episode_id": "disassemble-v3__2026111855",
+      "task": "disassemble-v3",
+      "replan": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "post": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "rescues": 2,
+      "harms": 0,
+      "net_successes": 2
+    },
+    {
+      "episode_id": "disassemble-v3__2026111865",
+      "task": "disassemble-v3",
+      "replan": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "post": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "rescues": 4,
+      "harms": 0,
+      "net_successes": 4
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111876",
+      "task": "pick-place-wall-v3",
+      "replan": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "post": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "rescues": 3,
+      "harms": 0,
+      "net_successes": 3
+    },
+    {
+      "episode_id": "disassemble-v3__2026111880",
+      "task": "disassemble-v3",
+      "replan": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "post": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "rescues": 4,
+      "harms": 0,
+      "net_successes": 4
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111882",
+      "task": "shelf-place-v3",
+      "replan": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "post": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "rescues": 1,
+      "harms": 0,
+      "net_successes": 1
+    },
+    {
+      "episode_id": "disassemble-v3__2026111885",
+      "task": "disassemble-v3",
+      "replan": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "post": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "rescues": 0,
+      "harms": 4,
+      "net_successes": -4
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111887",
+      "task": "shelf-place-v3",
+      "replan": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "post": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "rescues": 3,
+      "harms": 0,
+      "net_successes": 3
+    },
+    {
+      "episode_id": "disassemble-v3__2026111890",
+      "task": "disassemble-v3",
+      "replan": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "post": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "rescues": 0,
+      "harms": 1,
+      "net_successes": -1
+    },
+    {
+      "episode_id": "pick-place-wall-v3__2026111896",
+      "task": "pick-place-wall-v3",
+      "replan": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "post": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "rescues": 2,
+      "harms": 0,
+      "net_successes": 2
+    },
+    {
+      "episode_id": "shelf-place-v3__2026111897",
+      "task": "shelf-place-v3",
+      "replan": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "post": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "rescues": 0,
+      "harms": 1,
+      "net_successes": -1
+    }
+  ],
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 2026091622,
+    "task_order": [
+      "disassemble-v3",
+      "pick-place-wall-v3",
+      "shelf-place-v3",
+      "stick-pull-v3",
+      "stick-push-v3"
+    ],
+    "unit": "whole logical primary source within task",
+    "quantile_method": "linear",
+    "interval": "percentile95",
+    "multiplicity_adjusted": false,
+    "suffixes_are_independent_sources": false,
+    "use": "Fixed heldout primary comparison plus six preregistered secondary descriptions"
+  },
+  "interpretation": [
+    "Heldout primary comparison is fixed Post minus replan. Post hoc winners or new gates are not selected.",
+    "All five task point estimates for Post minus replan are positive. Per-task statistical significance was neither computed nor established by this review.",
+    "The 5 pp point-estimate target and the CI supporting positive gain are separate claims. The interval does not establish a true gain of at least 5 pp.",
+    "The heldout cohort is not pooled with the development or calibration cohorts.",
+    "A source has four paired suffixes, not four independent initial states; all 100 registered sources remain in the denominator, including no-alarm common outcomes.",
+    "Physical trajectory, loaded model, suffix identity, ledger and cross-split uniqueness audits are inherited from the completed upstream audit rather than repeated here."
+  ],
+  "resources": {
+    "new_model_calls": 0,
+    "new_simulator_calls": 0,
+    "new_optimizer_updates": 0,
+    "trajectory_audit_repeated": false,
+    "new_selection_created": false
+  }
+}

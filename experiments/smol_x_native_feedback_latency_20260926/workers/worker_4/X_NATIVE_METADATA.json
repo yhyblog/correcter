@@ -1,0 +1,35 @@
+{
+  "kind": "xvla",
+  "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/xvla_mt50_s42_D24_r2/training/checkpoints/030000/pretrained_model",
+  "device": "cuda:0",
+  "policy_parameters": 879482456,
+  "vision_parameters": 360632320,
+  "raw_horizon": 30,
+  "n_action_steps": 10,
+  "NFE": 10,
+  "image_resize": [
+    224,
+    224
+  ],
+  "native_visual_entry": "policy.model.vlm._encode_image",
+  "native_visual_output": [
+    50,
+    1024
+  ],
+  "returned_visual_shape": [
+    5,
+    49,
+    1024
+  ],
+  "native_language_dimension": 1024,
+  "language_pooling": "masked mean of native Florence/BART input embeddings",
+  "visual_history_batch_size": 1,
+  "visual_history_frames": 5,
+  "external_pi05_loaded": false,
+  "trained_native_DG0_loaded": false,
+  "processor_instances": 3,
+  "shared_frozen_policy": true,
+  "sampling": "native ten-step recurrence with explicit per-call torch.Generator",
+  "postprocess": "entire [1,30,4] once; original processor transfers result to CPU once",
+  "initialize_host_seconds": 16.88466797210276
+}

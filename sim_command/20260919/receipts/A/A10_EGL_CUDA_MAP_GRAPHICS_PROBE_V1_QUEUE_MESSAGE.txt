@@ -1,0 +1,19 @@
+A本次任务 A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1 单次实测与执行端审计完成，status=complete/rc=0。请分析端查看保存的RGB并验收、关闭已消耗 P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1。此处是本次实测回报，不预先代表分析端验收。
+RESULT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_RESULT.json
+RESULT SHA256: 62fb6e9bca18b53f9e55edc7346bbd2f21da24117b4101d9fa148a2cd85079ea
+REPORT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_REPORT.md
+LAUNCH_RESULT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/EGL_graphics_runs/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1_A_wave03/LAUNCH_RESULT.json
+LAUNCH_RESULT SHA256: af193c22f56eb7d24186d17a0ba7f37cc11685d9f2ddeb2b9e9ac9b00d101197
+RGB（无损查看副本）: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1/RGB_VIEW.png
+RGB NPY: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/EGL_graphics_runs/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1_A_wave03/graphics/rgb.npy
+RGB NPY SHA256: c54779ce229370a193da93de18b041c20fd234973543dca84f4ff8e27b0780db
+FINAL_AUDIT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_r1/FINAL_AUDIT.json
+1. CONTROL13/TASK_BOARD20/release SHA9c91e8f8…核对且claim不存在后写ACK；真实冻结sh只执行1次，不另跑CPU checker，不改库/设备/可见性/renderer/映射路径。
+2. 1cuInit、1枚举，8扩展/8属性/8PCI均完成；所有候选PCI与内核UUID一致。唯一目标EGL index0返回handle0，经0000:0f:00.0→GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe核对才进display，不靠索引等价。
+3. 1 EGL context、1静态model/data、1显式forward、1render、1RGB；data.time=0→0。GL为NVIDIA H100 /4.6.0 NVIDIA535.161.08，EGL NVIDIA1.5。
+4. 执行端已目视保存RGB：红橙有明暗球体、蓝灰色透视平面、黑背景，与冻结XML一致；64x64x3 uint8。NPY=PPM像素，PPM查看格式不支持后仅CPU无损PNG编码且往返像素校验一致，未新增render/readback。目视与provenance证据齐全，非仅据非空/非恒定判断。
+5. 105entered/105returned/0failed/0incomplete，所有caps满足；35次eglGetError全0x3000。cleanup无错，context销毁/terminate/releaseThread/MjrContext free各1。
+6. timed child10.003s、launcher总73.975s；RAM最大单个子进程RSS107.254MiB；18次子进程内NVML采样GPU0峰15MiB、其余各3MiB，精确GPU-seconds/allocator peak未知null。
+7. guard日志记录全8yield预约，进程族18:42:55.723退出后18:42:56开始恢复8holder；18:44:03再确认8holder，进程扫描无残留。
+8. 25个RESULT产物引用与manifest45文件SHA/大小逐一一致。observer准备曾在实际启动前修正一处路径文本断言（之前GPU启动0，证据保留），不构成graphics重试。
+9. VLA/MT1/reset/物理推进/训练/删除/真实重试0；B与native v5未执行。release已消费，旧记录及全部新产物保留，未进入后续任务。

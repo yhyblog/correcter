@@ -1,0 +1,430 @@
+{
+  "checked_utc": "2026-09-23T16:12:49.518899+00:00",
+  "scope": "single fixed snapshot; first four published qualified pairs only; CPU JSON/media inspection; no scientific launch/render/GPU/implementation reads",
+  "SUMMARY_snapshot": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_POST_DEMO_VIDEOS_V1/SUMMARY.json",
+    "utc": "2026-09-23T16:11:12.244167+00:00",
+    "candidate_pairs": 79,
+    "qualified_pairs": 8,
+    "recording_attempts": 106,
+    "all_candidates_disposed": false
+  },
+  "all_checks_pass": true,
+  "pairs": [
+    {
+      "candidate_id": "button-press-wall-v3_H20_source02",
+      "task": "button-press-wall-v3",
+      "H": 20,
+      "source_id": "D24_NEW_TEST_button-press-wall-v3_02",
+      "published_utc": "2026-09-23T16:10:35.787248+00:00",
+      "metadata": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/button-press-wall-v3/button-press-wall-v3_H20_source02/metadata.json",
+      "comparison": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/button-press-wall-v3/button-press-wall-v3_H20_source02/comparison.mp4",
+      "preview": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/button-press-wall-v3/button-press-wall-v3_H20_source02/preview.jpg",
+      "result_refs": {
+        "N": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_POST_DEMO_VIDEOS_V1/episodes/721eec5ba6e41574544da4bff9317f655622c4b5c8b8a98a98e5b369afd5087d/attempt_1/RESULT.json",
+        "Post": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_POST_DEMO_VIDEOS_V1/episodes/3f975dbdbc7cc0b662dd0dd34ee7f58ff18b12bc531d9f4a83ed736b346de674/attempt_1/RESULT.json"
+      },
+      "initial_refs": {
+        "N": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_POST_DEMO_VIDEOS_V1/episodes/721eec5ba6e41574544da4bff9317f655622c4b5c8b8a98a98e5b369afd5087d/attempt_1/INITIAL.json",
+        "Post": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_POST_DEMO_VIDEOS_V1/episodes/3f975dbdbc7cc0b662dd0dd34ee7f58ff18b12bc531d9f4a83ed736b346de674/attempt_1/INITIAL.json"
+      },
+      "N_success": false,
+      "Post_success": true,
+      "N_steps": 300,
+      "Post_steps": 43,
+      "Post_interventions": [
+        5,
+        20
+      ],
+      "Q_loss": "L11",
+      "Q_fit_seed": 9101,
+      "mode": "G0-multi",
+      "same_initial_fields_checked": [
+        "task",
+        "source_id",
+        "H",
+        "env_seed",
+        "policy_seed",
+        "camera",
+        "native_time",
+        "proprio",
+        "shape",
+        "rgb_sha256",
+        "state"
+      ],
+      "checks": {
+        "task": true,
+        "source_id": true,
+        "H": true,
+        "env_seed": true,
+        "policy_seed": true,
+        "camera": true,
+        "native_time": true,
+        "proprio": true,
+        "shape": true,
+        "rgb_sha256": true,
+        "state": true,
+        "initial_verified_before_policy_request": true,
+        "actual_results_complete": true,
+        "actual_outcome_pair": true,
+        "actual_post_L11_multi": true,
+        "actual_no_intervention_cap": true,
+        "actual_G0_not_forced": true,
+        "fps_30_all": true,
+        "raw_dimensions": true,
+        "comparison_dimensions": true,
+        "frame_counts": true,
+        "composition_declares_N_top_Post_bottom": true,
+        "composition_declares_hold_after_Post_terminal": true
+      },
+      "video_probe": {
+        "baseline.mp4": {
+          "codec_name": "h264",
+          "width": 480,
+          "height": 480,
+          "avg_frame_rate": "30/1",
+          "duration": "10.033333",
+          "nb_frames": "301",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/button-press-wall-v3/button-press-wall-v3_H20_source02/baseline.mp4",
+          "bytes": 1838481
+        },
+        "post.mp4": {
+          "codec_name": "h264",
+          "width": 480,
+          "height": 480,
+          "avg_frame_rate": "30/1",
+          "duration": "1.466667",
+          "nb_frames": "44",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/button-press-wall-v3/button-press-wall-v3_H20_source02/post.mp4",
+          "bytes": 375074
+        },
+        "comparison.mp4": {
+          "codec_name": "h264",
+          "width": 480,
+          "height": 1128,
+          "avg_frame_rate": "30/1",
+          "duration": "10.033333",
+          "nb_frames": "301",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/button-press-wall-v3/button-press-wall-v3_H20_source02/comparison.mp4",
+          "bytes": 721088
+        }
+      },
+      "held_Post_frames": 257,
+      "hidden_state_equivalence_claimed": false
+    },
+    {
+      "candidate_id": "button-press-topdown-v3_H20_source02",
+      "task": "button-press-topdown-v3",
+      "H": 20,
+      "source_id": "D24_NEW_TEST_button-press-topdown-v3_02",
+      "published_utc": "2026-09-23T16:10:36.460744+00:00",
+      "metadata": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/button-press-topdown-v3/button-press-topdown-v3_H20_source02/metadata.json",
+      "comparison": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/button-press-topdown-v3/button-press-topdown-v3_H20_source02/comparison.mp4",
+      "preview": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/button-press-topdown-v3/button-press-topdown-v3_H20_source02/preview.jpg",
+      "result_refs": {
+        "N": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_POST_DEMO_VIDEOS_V1/episodes/1974f5312df8680273f6cdd55988e9690f1ad7c947a4a4d087d915a79af923e5/attempt_1/RESULT.json",
+        "Post": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_POST_DEMO_VIDEOS_V1/episodes/6f514337451f416832698dc1f5db9ce323dc7900327127c4d8e545d713534d8d/attempt_1/RESULT.json"
+      },
+      "initial_refs": {
+        "N": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_POST_DEMO_VIDEOS_V1/episodes/1974f5312df8680273f6cdd55988e9690f1ad7c947a4a4d087d915a79af923e5/attempt_1/INITIAL.json",
+        "Post": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_POST_DEMO_VIDEOS_V1/episodes/6f514337451f416832698dc1f5db9ce323dc7900327127c4d8e545d713534d8d/attempt_1/INITIAL.json"
+      },
+      "N_success": false,
+      "Post_success": true,
+      "N_steps": 300,
+      "Post_steps": 44,
+      "Post_interventions": [
+        10
+      ],
+      "Q_loss": "L11",
+      "Q_fit_seed": 9101,
+      "mode": "G0-multi",
+      "same_initial_fields_checked": [
+        "task",
+        "source_id",
+        "H",
+        "env_seed",
+        "policy_seed",
+        "camera",
+        "native_time",
+        "proprio",
+        "shape",
+        "rgb_sha256",
+        "state"
+      ],
+      "checks": {
+        "task": true,
+        "source_id": true,
+        "H": true,
+        "env_seed": true,
+        "policy_seed": true,
+        "camera": true,
+        "native_time": true,
+        "proprio": true,
+        "shape": true,
+        "rgb_sha256": true,
+        "state": true,
+        "initial_verified_before_policy_request": true,
+        "actual_results_complete": true,
+        "actual_outcome_pair": true,
+        "actual_post_L11_multi": true,
+        "actual_no_intervention_cap": true,
+        "actual_G0_not_forced": true,
+        "fps_30_all": true,
+        "raw_dimensions": true,
+        "comparison_dimensions": true,
+        "frame_counts": true,
+        "composition_declares_N_top_Post_bottom": true,
+        "composition_declares_hold_after_Post_terminal": true
+      },
+      "video_probe": {
+        "baseline.mp4": {
+          "codec_name": "h264",
+          "width": 480,
+          "height": 480,
+          "avg_frame_rate": "30/1",
+          "duration": "10.033333",
+          "nb_frames": "301",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/button-press-topdown-v3/button-press-topdown-v3_H20_source02/baseline.mp4",
+          "bytes": 2266231
+        },
+        "post.mp4": {
+          "codec_name": "h264",
+          "width": 480,
+          "height": 480,
+          "avg_frame_rate": "30/1",
+          "duration": "1.500000",
+          "nb_frames": "45",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/button-press-topdown-v3/button-press-topdown-v3_H20_source02/post.mp4",
+          "bytes": 423129
+        },
+        "comparison.mp4": {
+          "codec_name": "h264",
+          "width": 480,
+          "height": 1128,
+          "avg_frame_rate": "30/1",
+          "duration": "10.033333",
+          "nb_frames": "301",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/button-press-topdown-v3/button-press-topdown-v3_H20_source02/comparison.mp4",
+          "bytes": 960182
+        }
+      },
+      "held_Post_frames": 256,
+      "hidden_state_equivalence_claimed": false
+    },
+    {
+      "candidate_id": "basketball-v3_H10_source03",
+      "task": "basketball-v3",
+      "H": 10,
+      "source_id": "D24_NEW_TEST_basketball-v3_03",
+      "published_utc": "2026-09-23T16:10:44.131008+00:00",
+      "metadata": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/basketball-v3/basketball-v3_H10_source03/metadata.json",
+      "comparison": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/basketball-v3/basketball-v3_H10_source03/comparison.mp4",
+      "preview": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/basketball-v3/basketball-v3_H10_source03/preview.jpg",
+      "result_refs": {
+        "N": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_POST_DEMO_VIDEOS_V1/episodes/51c203ddf2a774bdc1f87164f47513bb3810e88133b4552f4ce537af4ad64df8/attempt_1/RESULT.json",
+        "Post": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_POST_DEMO_VIDEOS_V1/episodes/2338fafc5fe964b3ede4d240c222642aae14c14d1f41df5346c8b1a061580c5c/attempt_1/RESULT.json"
+      },
+      "initial_refs": {
+        "N": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_POST_DEMO_VIDEOS_V1/episodes/51c203ddf2a774bdc1f87164f47513bb3810e88133b4552f4ce537af4ad64df8/attempt_1/INITIAL.json",
+        "Post": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_POST_DEMO_VIDEOS_V1/episodes/2338fafc5fe964b3ede4d240c222642aae14c14d1f41df5346c8b1a061580c5c/attempt_1/INITIAL.json"
+      },
+      "N_success": false,
+      "Post_success": true,
+      "N_steps": 300,
+      "Post_steps": 89,
+      "Post_interventions": [
+        5,
+        50
+      ],
+      "Q_loss": "L11",
+      "Q_fit_seed": 9101,
+      "mode": "G0-multi",
+      "same_initial_fields_checked": [
+        "task",
+        "source_id",
+        "H",
+        "env_seed",
+        "policy_seed",
+        "camera",
+        "native_time",
+        "proprio",
+        "shape",
+        "rgb_sha256",
+        "state"
+      ],
+      "checks": {
+        "task": true,
+        "source_id": true,
+        "H": true,
+        "env_seed": true,
+        "policy_seed": true,
+        "camera": true,
+        "native_time": true,
+        "proprio": true,
+        "shape": true,
+        "rgb_sha256": true,
+        "state": true,
+        "initial_verified_before_policy_request": true,
+        "actual_results_complete": true,
+        "actual_outcome_pair": true,
+        "actual_post_L11_multi": true,
+        "actual_no_intervention_cap": true,
+        "actual_G0_not_forced": true,
+        "fps_30_all": true,
+        "raw_dimensions": true,
+        "comparison_dimensions": true,
+        "frame_counts": true,
+        "composition_declares_N_top_Post_bottom": true,
+        "composition_declares_hold_after_Post_terminal": true
+      },
+      "video_probe": {
+        "baseline.mp4": {
+          "codec_name": "h264",
+          "width": 480,
+          "height": 480,
+          "avg_frame_rate": "30/1",
+          "duration": "10.033333",
+          "nb_frames": "301",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/basketball-v3/basketball-v3_H10_source03/baseline.mp4",
+          "bytes": 2321124
+        },
+        "post.mp4": {
+          "codec_name": "h264",
+          "width": 480,
+          "height": 480,
+          "avg_frame_rate": "30/1",
+          "duration": "3.000000",
+          "nb_frames": "90",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/basketball-v3/basketball-v3_H10_source03/post.mp4",
+          "bytes": 764671
+        },
+        "comparison.mp4": {
+          "codec_name": "h264",
+          "width": 480,
+          "height": 1128,
+          "avg_frame_rate": "30/1",
+          "duration": "10.033333",
+          "nb_frames": "301",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/basketball-v3/basketball-v3_H10_source03/comparison.mp4",
+          "bytes": 1096188
+        }
+      },
+      "held_Post_frames": 211,
+      "hidden_state_equivalence_claimed": false
+    },
+    {
+      "candidate_id": "bin-picking-v3_H10_source06",
+      "task": "bin-picking-v3",
+      "H": 10,
+      "source_id": "D24_NEW_TEST_bin-picking-v3_06",
+      "published_utc": "2026-09-23T16:10:44.965672+00:00",
+      "metadata": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/bin-picking-v3/bin-picking-v3_H10_source06/metadata.json",
+      "comparison": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/bin-picking-v3/bin-picking-v3_H10_source06/comparison.mp4",
+      "preview": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/bin-picking-v3/bin-picking-v3_H10_source06/preview.jpg",
+      "result_refs": {
+        "N": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_POST_DEMO_VIDEOS_V1/episodes/53ad50db72e1b641e9310cab6277df9716230662e997a6e9fe1eb24c8fb0ab77/attempt_1/RESULT.json",
+        "Post": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_POST_DEMO_VIDEOS_V1/episodes/4cb83251225e974a036ed9f7aac5ea7b31f29b46647c9000ef9418de01617c47/attempt_1/RESULT.json"
+      },
+      "initial_refs": {
+        "N": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_POST_DEMO_VIDEOS_V1/episodes/53ad50db72e1b641e9310cab6277df9716230662e997a6e9fe1eb24c8fb0ab77/attempt_1/INITIAL.json",
+        "Post": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_POST_DEMO_VIDEOS_V1/episodes/4cb83251225e974a036ed9f7aac5ea7b31f29b46647c9000ef9418de01617c47/attempt_1/INITIAL.json"
+      },
+      "N_success": false,
+      "Post_success": true,
+      "N_steps": 300,
+      "Post_steps": 72,
+      "Post_interventions": [
+        5
+      ],
+      "Q_loss": "L11",
+      "Q_fit_seed": 9101,
+      "mode": "G0-multi",
+      "same_initial_fields_checked": [
+        "task",
+        "source_id",
+        "H",
+        "env_seed",
+        "policy_seed",
+        "camera",
+        "native_time",
+        "proprio",
+        "shape",
+        "rgb_sha256",
+        "state"
+      ],
+      "checks": {
+        "task": true,
+        "source_id": true,
+        "H": true,
+        "env_seed": true,
+        "policy_seed": true,
+        "camera": true,
+        "native_time": true,
+        "proprio": true,
+        "shape": true,
+        "rgb_sha256": true,
+        "state": true,
+        "initial_verified_before_policy_request": true,
+        "actual_results_complete": true,
+        "actual_outcome_pair": true,
+        "actual_post_L11_multi": true,
+        "actual_no_intervention_cap": true,
+        "actual_G0_not_forced": true,
+        "fps_30_all": true,
+        "raw_dimensions": true,
+        "comparison_dimensions": true,
+        "frame_counts": true,
+        "composition_declares_N_top_Post_bottom": true,
+        "composition_declares_hold_after_Post_terminal": true
+      },
+      "video_probe": {
+        "baseline.mp4": {
+          "codec_name": "h264",
+          "width": 480,
+          "height": 480,
+          "avg_frame_rate": "30/1",
+          "duration": "10.033333",
+          "nb_frames": "301",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/bin-picking-v3/bin-picking-v3_H10_source06/baseline.mp4",
+          "bytes": 1882340
+        },
+        "post.mp4": {
+          "codec_name": "h264",
+          "width": 480,
+          "height": 480,
+          "avg_frame_rate": "30/1",
+          "duration": "2.433333",
+          "nb_frames": "73",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/bin-picking-v3/bin-picking-v3_H10_source06/post.mp4",
+          "bytes": 611919
+        },
+        "comparison.mp4": {
+          "codec_name": "h264",
+          "width": 480,
+          "height": 1128,
+          "avg_frame_rate": "30/1",
+          "duration": "10.033333",
+          "nb_frames": "301",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/bin-picking-v3/bin-picking-v3_H10_source06/comparison.mp4",
+          "bytes": 826078
+        }
+      },
+      "held_Post_frames": 228,
+      "hidden_state_equivalence_claimed": false
+    }
+  ],
+  "visual_review": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/demo_videos/POST_VS_PI05_20260923/A/button-press-wall-v3/button-press-wall-v3_H20_source02/preview.jpg",
+    "reviewed": true,
+    "observations": "Four timepoint contact sheet at step0/5/43/300 shows N above, Post below; same initial scene and view; lower final success frame held with yellow Episode ended-frame held text; clear outcome labels."
+  },
+  "limits": [
+    "Task success labels checked against newly recorded actual terminal RESULT, not inferred from screenshot or historical selection.",
+    "Compared stored physical/state/proprio fields and initial RGB hashes; no whole hidden-state/MJB equality claim.",
+    "Four mp4 headers independently ffprobed, composition filter saved and inspected; only first-preview contact sheet visually inspected in this audit, not all frames or all pairs.",
+    "Model selection identity checked in recorded RESULT/metadata; no model reloading or large weight rehash.",
+    "Outcome-selected qualitative recordings are not new unbiased success-rate samples.",
+    "SUMMARY changes as active recording publishes; this audit does not assert current completion beyond frozen snapshot."
+  ]
+}

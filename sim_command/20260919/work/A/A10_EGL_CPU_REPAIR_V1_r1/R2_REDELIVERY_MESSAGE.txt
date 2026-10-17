@@ -1,0 +1,8 @@
+A10_PREFLIGHT_REVISION_R2专项回执重投：ACK于16:19:44 UTC按CONTROL6领取，16:44:55完成，16:49:40已由manifests/A10_PREFLIGHT_V4_ACCEPTANCE.json验收；不是等待GPU授权，也不是A00/A10旧完成状态。
+ACK：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PREFLIGHT_REVISION_R2_ACK.json
+REPORT：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PREFLIGHT_REVISION_R2_REPORT.md
+RESULT：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PREFLIGHT_REVISION_R2_RESULT.json
+v4入口：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PREFLIGHT_REVISION_R2/CPU_READY_v4.json
+1. 2环境、51初始化+1诊断reset、104reset_model/26000初始化子步；1attempt/5sampling/50flow/1control不变。
+2. 118外部源SHA、32项定向CPU检查；1800+30仅诊断子进程，准备/预约/恢复分计；纯CPU授权入口已提供。v3及旧回执未改。
+3. 刚核对当前CONTROL9/TASK_BOARD14已新增CPU任务A10_EGL_CPU_REPAIR_V1，已写其ACK，继续按该任务做零GPU/零EGL调用/零reset修复准备；不会重跑已关闭P10或新增完整库存。

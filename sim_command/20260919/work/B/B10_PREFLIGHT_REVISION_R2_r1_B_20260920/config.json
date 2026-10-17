@@ -1,0 +1,71 @@
+{
+  "job_id": "lvm_gpu_probe_2_r2",
+  "kind": "lvm_gpu_probe",
+  "proposal_only": true,
+  "timeout_seconds": 180,
+  "retry_cap": 0,
+  "inputs": {
+    "model": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/corrector_pi05_mt50/h1_k10/best_cosine_model.pt",
+      "sha256": "0efadcfdfde814fc4e929d007ed0b95894de33f0d51e3d3cae512605e223d168",
+      "bytes": 170051647
+    },
+    "model_config": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/corrector_pi05_mt50/h1_k10/config.json",
+      "sha256": "4f7cc842b2e17bb5ff526dfcdfd7e94a680d1431bd9cf7af1b9f88373bc0b232",
+      "bytes": 981
+    }
+  },
+  "limits": {
+    "simulator_attempts": 0,
+    "completed_rollouts": 0,
+    "vla_sampling_calls": 0,
+    "model_gpu_inference_calls": 2,
+    "optimizer_updates": 0,
+    "optimizer_attempts": 0,
+    "model_initializations": 1,
+    "training_forward_calls": 0,
+    "training_updates": 0,
+    "env_steps": 0,
+    "environment_reset_calls": 0,
+    "flow_forward_calls": 0,
+    "vla_backward_calls": 0,
+    "critic_forward_calls": 0,
+    "critic_backward_calls": 0
+  },
+  "expected_peak_vram_GiB_estimate": 2,
+  "disk_peak_GiB_estimate": 0.1,
+  "gpu_seconds_upper_bound": 200,
+  "notes": "Synthetic-token shape/finiteness probe only; does not establish VLA feature, renderer or task performance validity.",
+  "termination_grace_seconds": 20,
+  "all_GPU_reservation_seconds_upper_bound": 1600,
+  "campaign_id": "corrector-sim-20260919",
+  "hostname": "trial-303225685-trialrun-303225685-worker-0",
+  "compute_task_id": "B10_LVM_PREFLIGHT_V1",
+  "compute_task_revision": 1,
+  "compute_release_id": "P10_B_LVM_PREFLIGHT_V1",
+  "gpu": {
+    "index": 0,
+    "uuid": "GPU-4143840e-6c2e-d4c4-8c60-4005cfa1f917",
+    "name": "NVIDIA H100 80GB HBM3",
+    "driver_version": "535.161.08",
+    "pci_bus_id": "00000000:0F:00.0",
+    "cuda_visible_devices": "GPU-4143840e-6c2e-d4c4-8c60-4005cfa1f917",
+    "logical_device": "cuda:0"
+  },
+  "lifecycle_dependencies": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_lifecycle.sh",
+      "sha256": "3248ae959f5e43bca50c361818f620cff21eb87d10b1ee6b2d8c8756df623248"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_guard.py",
+      "sha256": "7910c567a47ddf68294d92fc9698cc780aeb130ddefde0337414bfcd88cb85a4"
+    }
+  ],
+  "read_only_identity_queries": {
+    "normal_formal_command": 2,
+    "verify_only": 1,
+    "meaning": "Two nvidia-smi commands for outer verification and inner execution validation; internal NVML function count is not measured; no CUDA initialization"
+  }
+}

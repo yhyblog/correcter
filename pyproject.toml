@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vla-corrector"
+version = "0.1.0"
+description = "Frozen critic guidance for flow velocity, direct injection and post-sampling correction"
+requires-python = ">=3.10"
+dependencies = ["numpy", "torch", "safetensors"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

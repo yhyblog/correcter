@@ -1,0 +1,60 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "accepted_at_utc": "2026-09-19T16:49:40.859903+00:00",
+  "status": "accepted_for_limited_A_only_preflight",
+  "receipt": {
+    "path": "receipts/A/A10_PREFLIGHT_REVISION_R2_RESULT.json",
+    "sha256": "e65578bea059d498976ca22221d8272de1f2bfed4688784a82b678d41c8f8b65"
+  },
+  "ready": {
+    "path": "results/A/A10_PREFLIGHT_REVISION_R2/CPU_READY_v4.json",
+    "sha256": "ba74f6ca167c5f31e45f0a5d112a8a5d6d1a28b5dc5a0ec6c640c277a79de025"
+  },
+  "proposal_sha256": "63caf8ce1cfc43f6dadd05a8a140a996645092f532b0ce770528cc45dad51bed",
+  "code_manifest_sha256": "9e07c74a850e457993c70e4138491c18ed31b0ef83d96088a0ef9f4c17a60b76",
+  "review_scope": [
+    "Previous initialization-count gap and real source identities",
+    "Entered-before-operation finite caps and terminal accounting",
+    "Device/host/current release and taskboard matching",
+    "Timeout scope and A-only failure restoration"
+  ],
+  "limits": {
+    "resource_caps": {
+      "simulator_attempts": 1,
+      "env_steps": 1,
+      "vla_sampling_calls": 5,
+      "flow_forward_calls": 50,
+      "vla_backward_calls": 0,
+      "critic_forward_calls": 0,
+      "critic_backward_calls": 0,
+      "monitor_calls": 0,
+      "optimizer_updates": 0
+    },
+    "initialization_caps": {
+      "model_initializations": 1,
+      "environment_instances": 2,
+      "wrapper_instances": 1,
+      "taskset_constructions": 1,
+      "taskset_reset_calls": 50,
+      "wrapper_initialization_reset_calls": 1,
+      "initialization_reset_calls": 51,
+      "diagnostic_reset_calls": 1,
+      "environment_reset_calls": 52,
+      "reset_model_calls": 104,
+      "initialization_do_simulation_calls": 5200,
+      "initialization_physics_substeps": 26000,
+      "policy_do_simulation_calls": 1,
+      "policy_physics_substeps": 13
+    }
+  },
+  "released_task": "A10_PREFLIGHT_NATIVE_V1",
+  "release": "releases/P10_A_NATIVE_PREFLIGHT_V1.json",
+  "not_validated_yet": [
+    "D/G0/Q GPU binding",
+    "Post/Velocity real gradient and sampler numerical checks",
+    "full episodes",
+    "MT50 trained corrector",
+    "multi-host wave barrier",
+    "real model/environment runtime outcome"
+  ]
+}

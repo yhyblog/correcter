@@ -1,0 +1,65 @@
+{
+  "batch_id": "D24_LIBERO_REPAIR_r2",
+  "kind": "gpu",
+  "run_id": "D24_LIBERO_REPAIR_r2",
+  "max_workers": 3,
+  "jobs": [
+    {
+      "job_id": "pi05official_N_libero_object_r2",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/pi05official_N_libero_object_r2.json",
+      "argv": [
+        "/usr/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/libero_job.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/pi05official_N_libero_object_r2.json"
+      ],
+      "gpus": [
+        5
+      ],
+      "timeout_seconds": 43200,
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/pi05official_N_libero_object_r2",
+      "env": {
+        "XDG_RUNTIME_DIR": "/tmp/corrector_B_D24_xdg/pi05official_N_libero_object_r2"
+      }
+    },
+    {
+      "job_id": "pi05official_N_libero_goal_r2",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/pi05official_N_libero_goal_r2.json",
+      "argv": [
+        "/usr/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/libero_job.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/pi05official_N_libero_goal_r2.json"
+      ],
+      "gpus": [
+        6
+      ],
+      "timeout_seconds": 43200,
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/pi05official_N_libero_goal_r2",
+      "env": {
+        "XDG_RUNTIME_DIR": "/tmp/corrector_B_D24_xdg/pi05official_N_libero_goal_r2"
+      }
+    },
+    {
+      "job_id": "pi05official_N_libero_10_r2",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/pi05official_N_libero_10_r2.json",
+      "argv": [
+        "/usr/bin/python",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/libero_job.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_SPRINT_V1_r1/configs/pi05official_N_libero_10_r2.json"
+      ],
+      "gpus": [
+        7
+      ],
+      "timeout_seconds": 43200,
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/pi05official_N_libero_10_r2",
+      "env": {
+        "XDG_RUNTIME_DIR": "/tmp/corrector_B_D24_xdg/pi05official_N_libero_10_r2"
+      }
+    }
+  ],
+  "physical_rollout_attempts": 300,
+  "automatic_retry": false,
+  "scheduling": "queued behind existing singleton formal reservation; no overlapping/duplicate scientific launch"
+}

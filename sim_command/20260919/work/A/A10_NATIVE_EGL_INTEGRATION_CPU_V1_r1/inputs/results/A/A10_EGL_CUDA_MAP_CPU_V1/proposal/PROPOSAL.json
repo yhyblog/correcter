@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "status": "proposed_not_released",
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1",
+  "task_revision": 1,
+  "role": "A",
+  "published_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1",
+  "created_at_utc": "2026-09-19T18:31:09.385639+00:00",
+  "dependency": "P10_A_EGL_GRAPHICS_PROBE_V1 mapping failure accepted and closed; no reuse",
+  "bundle_manifest_sha256": "c60bdc602ea96962f794f1b21fce4d57a9d0f6c03b681bc8a78904af259f47fe",
+  "external_source_manifest_sha256": "cfc6929ab17ec41a5e5a07cfcea188df13ea385cb929467e24b1d53272e292b1",
+  "device": {
+    "gpu_uuid": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe",
+    "gpu_index": 0,
+    "gpu_model": "NVIDIA H100 80GB HBM3",
+    "driver": "535.161.08",
+    "pci_bus_id": "0000:0f:00.0"
+  },
+  "python": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/bin/python",
+  "python_library_directory": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/lib",
+  "renderer_route": "NVIDIA_EGL",
+  "resource_caps": {
+    "graphics_probe_attempts": 1,
+    "egl_device_enumerations": 1,
+    "egl_device_string_queries": 8,
+    "probe_explicit_egl_get_proc_address_calls": 5,
+    "egl_device_attribute_queries": 8,
+    "cuda_driver_initializations": 1,
+    "cuda_device_pci_queries": 8,
+    "egl_error_queries": 35,
+    "probe_explicit_driver_library_loads": 2,
+    "probe_explicit_cuda_symbol_lookups": 2,
+    "probe_explicit_egl_core_symbol_lookups": 11,
+    "cuda_context_creations": 0,
+    "cuda_kernel_launches": 0,
+    "cuda_device_count_queries": 0,
+    "cuda_uuid_queries": 0,
+    "cuda_error_string_queries": 0,
+    "egl_device_binary_queries": 0,
+    "egl_drm_string_queries": 0,
+    "egl_platform_display_calls": 1,
+    "egl_initialize_calls": 1,
+    "egl_choose_config_calls": 1,
+    "egl_bind_api_calls": 1,
+    "graphics_context_creations": 1,
+    "egl_make_current_calls": 2,
+    "egl_query_string_calls": 2,
+    "probe_explicit_gl_string_queries": 3,
+    "static_scene_constructions": 1,
+    "static_scene_data_constructions": 1,
+    "explicit_mj_forward_calls": 1,
+    "mujoco_render_context_creations": 1,
+    "mujoco_render_context_frees": 1,
+    "mujoco_scene_updates": 1,
+    "render_calls": 1,
+    "rgb_readback_calls": 1,
+    "egl_destroy_context_calls": 1,
+    "egl_terminate_calls": 1,
+    "egl_release_thread_calls": 1,
+    "model_initializations": 0,
+    "model_gpu_inference_calls": 0,
+    "vla_sampling_calls": 0,
+    "flow_forward_calls": 0,
+    "simulator_attempts": 0,
+    "metaworld_environment_instances": 0,
+    "environment_reset_calls": 0,
+    "physics_steps": 0,
+    "env_steps": 0,
+    "completed_rollouts": 0,
+    "optimizer_updates": 0
+  },
+  "max_retries": 0,
+  "timeout_seconds": 120,
+  "kill_grace_seconds": 10,
+  "wave_participants": [
+    "A"
+  ],
+  "occupancy_lifecycle": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_lifecycle.sh",
+  "occupancy_policy": "Reserve all8 A GPUs; stop all A holder compute for entire child process family, including failure; restore only after wave exit; B unaffected",
+  "graphics_worker_processes": 1,
+  "initialization": "One static MuJoCo model/data, no joints or actuators, one explicit mj_forward; no mj_step/reset/MetaWorld/policy",
+  "mapping": "EGL_NV_device_cuda -> unchanged returned CUDA handle -> PCI -> kernel UUID -> fixed NVML target; unique only",
+  "counter_boundary": "Counts are probe application API invocations; GLVND internal per-vendor dispatch and OpenGL driver internal work are not separately claimed. Explicit lookup/string counters are named accordingly.",
+  "physical_time_advance_seconds": 0,
+  "timeout_scope": "Timed graphics child includes repeated CPU SHA, imports, EGL mapping/init, static scene, one render/readback, cleanup; pre-hash/reservation/release/restoration outside",
+  "end_to_end_strict_upper_bound_seconds": null,
+  "restoration_observation_timeout_seconds": 120,
+  "outputs": [
+    "device_mapping.json",
+    "renderer_identity.json",
+    "rgb.npy",
+    "rgb.ppm",
+    "shape/dtype/hash",
+    "cleanup.json",
+    "phase events",
+    "RESULT.json",
+    "LAUNCH_RESULT.json",
+    "api_results.jsonl",
+    "loader_identity.json"
+  ],
+  "resource_estimates_not_measured": {
+    "peak_GPU_memory_MiB": 1024,
+    "peak_process_RAM_MiB": 2048,
+    "new_run_output_disk_MiB": 32
+  },
+  "limits_of_success": "Proves single static EGL RGB readback only; not MetaWorld full reset/render chain, VLA/P/V, rollout or training",
+  "platform_action_now": "None; no driver/device mounts or container changes. CPU prepared, runtime CUDA/EGL mapping remains unvalidated.",
+  "cuda_environment": {
+    "CUDA_VISIBLE_DEVICES": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe,GPU-64240b2e-5845-da58-e703-61322f21cbf6,GPU-2254f286-1a7d-edf8-e4a4-f24c051cab83,GPU-8a8b08b1-2a03-ae94-bac7-4f690cf5c5d8,GPU-ec35bc25-f521-4261-e3a3-cf536a41aa64,GPU-7a3ce392-0958-db98-bd25-b95810298e5f,GPU-b63ae919-c2a3-ff8c-3527-2f924152251f,GPU-893accc7-1601-840b-ea72-5d8302ef6d44",
+    "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+    "NVIDIA_VISIBLE_DEVICES": "GPU-b63ae919-c2a3-ff8c-3527-2f924152251f,GPU-ec35bc25-f521-4261-e3a3-cf536a41aa64,GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe,GPU-2254f286-1a7d-edf8-e4a4-f24c051cab83,GPU-64240b2e-5845-da58-e703-61322f21cbf6,GPU-7a3ce392-0958-db98-bd25-b95810298e5f,GPU-893accc7-1601-840b-ea72-5d8302ef6d44,GPU-8a8b08b1-2a03-ae94-bac7-4f690cf5c5d8"
+  },
+  "physical_inventory": [
+    {
+      "pci_bus_id": "0000:0f:00.0",
+      "gpu_uuid": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe",
+      "kernel_path": "/proc/driver/nvidia/gpus/0000:0f:00.0/information",
+      "cpu_snapshot_sha256": "e48afbda9cac68ef104cb419f93a6799d564748504ca17412086db7708713b6c"
+    },
+    {
+      "pci_bus_id": "0000:2d:00.0",
+      "gpu_uuid": "GPU-64240b2e-5845-da58-e703-61322f21cbf6",
+      "kernel_path": "/proc/driver/nvidia/gpus/0000:2d:00.0/information",
+      "cpu_snapshot_sha256": "c30da1fa6d0379d0ec6863972255131e1a1890d7bd88a70eb6f2d99e63004c5d"
+    },
+    {
+      "pci_bus_id": "0000:44:00.0",
+      "gpu_uuid": "GPU-2254f286-1a7d-edf8-e4a4-f24c051cab83",
+      "kernel_path": "/proc/driver/nvidia/gpus/0000:44:00.0/information",
+      "cpu_snapshot_sha256": "c1dcd8c545ad178ee09af7bf50da8c915c2cd8b6dc322aede54262b6c23e848b"
+    },
+    {
+      "pci_bus_id": "0000:5b:00.0",
+      "gpu_uuid": "GPU-8a8b08b1-2a03-ae94-bac7-4f690cf5c5d8",
+      "kernel_path": "/proc/driver/nvidia/gpus/0000:5b:00.0/information",
+      "cpu_snapshot_sha256": "5fdcb73715d4c715308ff0974ea225bd419b698788a7c90bc0b447a50636d038"
+    },
+    {
+      "pci_bus_id": "0000:89:00.0",
+      "gpu_uuid": "GPU-ec35bc25-f521-4261-e3a3-cf536a41aa64",
+      "kernel_path": "/proc/driver/nvidia/gpus/0000:89:00.0/information",
+      "cpu_snapshot_sha256": "020b612892234f8189f315d3d0ea376fb90d5e3db057fe5b7a83c1bb71bb3287"
+    },
+    {
+      "pci_bus_id": "0000:a8:00.0",
+      "gpu_uuid": "GPU-7a3ce392-0958-db98-bd25-b95810298e5f",
+      "kernel_path": "/proc/driver/nvidia/gpus/0000:a8:00.0/information",
+      "cpu_snapshot_sha256": "9c8a89f7cd51df993c899deffa9a9ac4a08707b191150756eccc4f4dec067ec2"
+    },
+    {
+      "pci_bus_id": "0000:c0:00.0",
+      "gpu_uuid": "GPU-b63ae919-c2a3-ff8c-3527-2f924152251f",
+      "kernel_path": "/proc/driver/nvidia/gpus/0000:c0:00.0/information",
+      "cpu_snapshot_sha256": "c122452ad8e5e27b741a123091fcfcacc765eb66f73a980f03521c17f931a6fe"
+    },
+    {
+      "pci_bus_id": "0000:d8:00.0",
+      "gpu_uuid": "GPU-893accc7-1601-840b-ea72-5d8302ef6d44",
+      "kernel_path": "/proc/driver/nvidia/gpus/0000:d8:00.0/information",
+      "cpu_snapshot_sha256": "e106d0999dc23dc16a6841fccf96213ac9641d99ae13b3c850b6c1f2ba069c82"
+    }
+  ],
+  "CUDA_driver_identity": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/CUDA_DRIVER_IDENTITY.json",
+  "ABI_contract": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/ABI_CONTRACT.json",
+  "raw_diagnostics": "api_results.jsonl records raw NULL/empty/return values and budgeted EGL error observations",
+  "helper_caps_derivation": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/CAPS_AND_CONTROL.md"
+}

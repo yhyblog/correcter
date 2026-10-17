@@ -1,0 +1,64 @@
+passed str_bare
+passed str_prefixed
+passed str_upper_hex
+passed str_prefixed_upper_hex
+passed trusted_CUuuid_once
+passed trusted_CUuuid_prefixed_once
+passed trusted_CUuuid_uppercase_once
+passed spoof_same_module_qualname
+passed arbitrary_stringifiable
+passed bytes
+passed none
+passed integer
+passed str_subclass
+passed CUuuid_subclass
+passed trusted_class_missing
+passed trusted_token_not_class
+passed str_allowed_without_CUuuid_token
+passed different_valid_UUID
+passed CUuuid_different_valid_UUID
+passed malformed_empty
+passed malformed_space_before
+passed malformed_space_after
+passed malformed_newline
+passed malformed_truncated
+passed malformed_unhyphenated
+passed malformed_lowercase_prefix
+passed malformed_duplicate_prefix
+passed malformed_braces
+passed malformed_non_hex
+passed malformed_unicode_digit
+passed malformed_unicode_hyphen
+passed malformed_embedded_nul
+passed CUuuid_malformed
+passed CUuuid_conversion_exception
+passed CUuuid_str_non_string_return
+passed binding_str_success
+passed binding_CUuuid_success
+passed binding_conversion_failure_retains_type
+passed binding_identity_failure_retains_evidence
+passed binding_spoof_rejected_without_str
+passed binding_arbitrary_rejected_without_str
+passed synthetic_V3_metadata_accepts
+passed template_not_authorized
+passed current_prepare_CONTROL_denied
+passed old_V2_release_denied
+passed V2_task_rejected_even_consistent_synthetic_ids
+passed missing_V3_per_task_budget_denied
+passed CPU_P00_denied_before_input_hash
+passed template_path_denied_before_input_hash
+passed targeted_static_scope_unchanged
+{
+  "status": "passed",
+  "cases": 50,
+  "passed": 50,
+  "blocked_operations": [],
+  "heavy_imports_present": [],
+  "real_hardware_calls": 0,
+  "torch_imports": 0,
+  "holder_queries": 0,
+  "holder_stops": 0,
+  "model_bytes_hashed": 0,
+  "real_entry_invocations": 0,
+  "synthetic_metadata_never_released": true
+}

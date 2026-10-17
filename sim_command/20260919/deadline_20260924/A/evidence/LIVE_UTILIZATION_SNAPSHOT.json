@@ -1,0 +1,14 @@
+{
+  "utc": "2026-09-21T16:10:09.405919+00:00",
+  "purpose": "read-only live authorized eight-worker evaluation monitoring, not a GPU benchmark",
+  "query": [
+    "nvidia-smi",
+    "--query-gpu=index,uuid,utilization.gpu,memory.used,memory.free",
+    "--format=csv,noheader,nounits"
+  ],
+  "query_calls": 1,
+  "returncode": 0,
+  "stdout": "0, GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe, 43, 10398, 70609\n1, GPU-64240b2e-5845-da58-e703-61322f21cbf6, 49, 10358, 70649\n2, GPU-2254f286-1a7d-edf8-e4a4-f24c051cab83, 46, 10412, 70595\n3, GPU-8a8b08b1-2a03-ae94-bac7-4f690cf5c5d8, 54, 10392, 70615\n4, GPU-ec35bc25-f521-4261-e3a3-cf536a41aa64, 61, 10334, 70673\n5, GPU-7a3ce392-0958-db98-bd25-b95810298e5f, 62, 10478, 70529\n6, GPU-b63ae919-c2a3-ff8c-3527-2f924152251f, 46, 10428, 70579\n7, GPU-893accc7-1601-840b-ea72-5d8302ef6d44, 62, 10506, 70501\n",
+  "stderr": "",
+  "one_sample_is_not_time_average": true
+}

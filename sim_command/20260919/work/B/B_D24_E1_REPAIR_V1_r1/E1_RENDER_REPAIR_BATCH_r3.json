@@ -1,0 +1,195 @@
+{
+  "batch_id": "D24_E1_RENDER_REPAIR_r3",
+  "run_id": "D24_E1_RENDER_REPAIR_r3",
+  "kind": "gpu",
+  "max_workers": 8,
+  "hold_idle": false,
+  "formal_holder_policy": "all holders off until entire wave including failures drains",
+  "jobs": [
+    {
+      "job_id": "e1eval_PV_worker0_render_r3",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/configs/e1eval_PV_worker0_render_r3.json",
+      "gpus": [
+        0
+      ],
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/e1eval_PV_worker0_render_r3",
+      "timeout_seconds": 43200,
+      "argv": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/runtime.sh",
+        "mw-pi05-legacy",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/bin/python",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/e1_eval.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/configs/e1eval_PV_worker0_render_r3.json"
+      ],
+      "env": {
+        "XDG_RUNTIME_DIR": "/tmp/corrector_B_D24_xdg/e1eval_PV_worker0_render_r2",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    {
+      "job_id": "e1eval_PV_worker1_render_r3",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/configs/e1eval_PV_worker1_render_r3.json",
+      "gpus": [
+        1
+      ],
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/e1eval_PV_worker1_render_r3",
+      "timeout_seconds": 43200,
+      "argv": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/runtime.sh",
+        "mw-pi05-legacy",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/bin/python",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/e1_eval.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/configs/e1eval_PV_worker1_render_r3.json"
+      ],
+      "env": {
+        "XDG_RUNTIME_DIR": "/tmp/corrector_B_D24_xdg/e1eval_PV_worker1_render_r2",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    {
+      "job_id": "e1eval_PV_worker2_render_r3",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/configs/e1eval_PV_worker2_render_r3.json",
+      "gpus": [
+        2
+      ],
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/e1eval_PV_worker2_render_r3",
+      "timeout_seconds": 43200,
+      "argv": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/runtime.sh",
+        "mw-pi05-legacy",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/bin/python",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/e1_eval.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/configs/e1eval_PV_worker2_render_r3.json"
+      ],
+      "env": {
+        "XDG_RUNTIME_DIR": "/tmp/corrector_B_D24_xdg/e1eval_PV_worker2_render_r2",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    {
+      "job_id": "e1eval_PV_worker3_render_r3",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/configs/e1eval_PV_worker3_render_r3.json",
+      "gpus": [
+        3
+      ],
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/e1eval_PV_worker3_render_r3",
+      "timeout_seconds": 43200,
+      "argv": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/runtime.sh",
+        "mw-pi05-legacy",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/bin/python",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/e1_eval.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/configs/e1eval_PV_worker3_render_r3.json"
+      ],
+      "env": {
+        "XDG_RUNTIME_DIR": "/tmp/corrector_B_D24_xdg/e1eval_PV_worker3_render_r2",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    {
+      "job_id": "e1eval_PV_worker4_render_r3",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/configs/e1eval_PV_worker4_render_r3.json",
+      "gpus": [
+        4
+      ],
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/e1eval_PV_worker4_render_r3",
+      "timeout_seconds": 43200,
+      "argv": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/runtime.sh",
+        "mw-pi05-legacy",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/bin/python",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/e1_eval.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/configs/e1eval_PV_worker4_render_r3.json"
+      ],
+      "env": {
+        "XDG_RUNTIME_DIR": "/tmp/corrector_B_D24_xdg/e1eval_PV_worker4_render_r2",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    {
+      "job_id": "e1eval_PV_worker5_render_r3",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/configs/e1eval_PV_worker5_render_r3.json",
+      "gpus": [
+        5
+      ],
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/e1eval_PV_worker5_render_r3",
+      "timeout_seconds": 43200,
+      "argv": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/runtime.sh",
+        "mw-pi05-legacy",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/bin/python",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/e1_eval.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/configs/e1eval_PV_worker5_render_r3.json"
+      ],
+      "env": {
+        "XDG_RUNTIME_DIR": "/tmp/corrector_B_D24_xdg/e1eval_PV_worker5_render_r2",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    {
+      "job_id": "e1eval_PV_worker6_render_r3",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/configs/e1eval_PV_worker6_render_r3.json",
+      "gpus": [
+        6
+      ],
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/e1eval_PV_worker6_render_r3",
+      "timeout_seconds": 43200,
+      "argv": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/runtime.sh",
+        "mw-pi05-legacy",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/bin/python",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/e1_eval.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/configs/e1eval_PV_worker6_render_r3.json"
+      ],
+      "env": {
+        "XDG_RUNTIME_DIR": "/tmp/corrector_B_D24_xdg/e1eval_PV_worker6_render_r2",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    {
+      "job_id": "e1eval_PV_worker7_render_r3",
+      "config": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/configs/e1eval_PV_worker7_render_r3.json",
+      "gpus": [
+        7
+      ],
+      "output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/e1eval_PV_worker7_render_r3",
+      "timeout_seconds": 43200,
+      "argv": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/projects/vla-baselines/launchers/runtime.sh",
+        "mw-pi05-legacy",
+        "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/bin/python",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/e1_eval.py",
+        "--config",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_REPAIR_V1_r1/configs/e1eval_PV_worker7_render_r3.json"
+      ],
+      "env": {
+        "XDG_RUNTIME_DIR": "/tmp/corrector_B_D24_xdg/e1eval_PV_worker7_render_r2",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    }
+  ],
+  "handoff_timeout_seconds": 300
+}

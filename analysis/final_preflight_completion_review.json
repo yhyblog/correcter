@@ -1,0 +1,147 @@
+{
+  "status": "passed",
+  "reviewed_at_utc": "2026-09-17T00:04:21.449840+00:00",
+  "scope": "Bounded resource,execution-receipt and seal-binding review only. No model calls,new simulations,optimizer updates,code changes,underlying data rescans or repeated numerical/initial-state audit. Independent scientific review of actual numeric evidence is separate.",
+  "blockers": [],
+  "resources": {
+    "simulator_attempts_total": 42874,
+    "optimizer_updates_total": 19200,
+    "technical_reserve_used": 0,
+    "new_simulator_attempts": 0,
+    "new_optimizer_updates": 0,
+    "journal_rows": 62074,
+    "ledger_sha256": "189cdf5c04a3782b5e540c3761fa682481dedad6ea91e703e705713e2d076973",
+    "live_before_after_byte_identical": true,
+    "ledger_stable_during_review": true
+  },
+  "execution": {
+    "receipt_seal": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_fit_execution/preflight/final_preflight_v1/complete.json",
+      "sha256": "d2ba158591ea7fee9c9caca75e7ad2fc2f9b236c3709a35344512d6ab14ec23d"
+    },
+    "control_result": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/execution_control/final_preflight_v1/result.json",
+      "sha256": "fc845033fbf7116caa6f8bc6823fdb8431acea97f849402706e33bdf01822c3e"
+    },
+    "status": "passed",
+    "cpu_only": true,
+    "gpu_holders_yielded": false,
+    "wall_seconds": 426.2158675920218,
+    "total_with_preparation_seconds": 435.4980439879,
+    "next_stage_started": false,
+    "training_released": false
+  },
+  "protocol": {
+    "config": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_fit_protocols/final_preflight_v1/config.json",
+      "sha256": "c7fcdf6a8f3c6c633ffcedbe5ad8e263c0f99b9c53655c9badd83ab060c220ca"
+    },
+    "freeze": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_fit_protocols/final_preflight_v1/freeze.json",
+      "sha256": "90a3095500a2ee71da4016f96cff5ee084bf9fc2cc97ae97a92b23bedc6edf5a"
+    },
+    "ready": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_fit_protocols/final_preflight_v1/coordination/NATIVE10_ANALYSIS_READY.json",
+      "sha256": "684fa1d88290a68a64e21e898695a9271602e5bec0ecff7c707962ad625ff521",
+      "version": 9
+    },
+    "specification_sha256": "08891c3ee6feb71aa41a8cfa7cb0fbed61930e16eb8938cf5bfeff1dd24ad946",
+    "all_bound_to_execution_and_pipeline": true
+  },
+  "pipeline_preflight": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1",
+    "seal_sha256": "eb1e39d4ee145ebecce9b16593a9c1fd901fd7dcc2a5c9e8746f657e4c202d3e",
+    "result_sha256": "d693a7d1fa4f1d5a0be4f2141966f35d97390e6e427c4c5cb6803bfc8791c79d",
+    "status": "passed",
+    "optimizer_updates": 0,
+    "model_fit_complete": false,
+    "initial_asset_seals": {
+      "A": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/A/initial",
+        "seal_sha256": "1172a88851c52eb99fff353afaaf82466c6839c704c3c63a81e88bc31b00f2dc",
+        "model_hashes": {
+          "0": "8a08e1fbab88e17635a6cc4bec6f811a9fd435888a5298fd1782a6cb51fc0f09",
+          "1": "699045cdf0c7b2965aeaf4fb4e8459cfb66ad8b72c8cc02a01d2cc8bc0fa87b3",
+          "2": "f12692a54285f95e3b905abc985a645e674569113bc254d31bfc069728e5f15c",
+          "3": "88a560baa2d39a6b849173d040117ef72ee2ccec3949767b3b93652a34f3195a"
+        }
+      },
+      "B": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/B/initial",
+        "seal_sha256": "cd36e7e59bed7a9a649801b4a39ca1c2aab6ea44ec2566e475f66d7fb5d0f7a6",
+        "model_hashes": {
+          "0": "b7642417b613f25d12884d262b37e3fbd38d15f23f2a59b9e410aa9852e0fd4d",
+          "1": "8a246d74a0c805051ba05978500041cadcd281ccb7cf18530036671420056020",
+          "2": "fd2a4d53348e3ccd52e5235a2d0a90df3b330b23a76185da635a0e635863dc42",
+          "3": "e1e6d1dd4d4ee151ff8691f37f2b69768a3b1bbf821c7d79a80cc6b842894e8a"
+        }
+      }
+    },
+    "reported_all_eight_initial_states_checked": true,
+    "reported_canonical_reload_passed": true,
+    "reported_numeric_contract": "canonical_strict_passed_dense_reported",
+    "numeric_results_independently_recomputed_by_this_review": false
+  },
+  "bounded_verification": {
+    "checks": 38,
+    "files_hashed": 13,
+    "bytes_hashed": 44184501,
+    "pipeline_payloads_or_child_dataset_payloads_rehashed": false,
+    "all131frozen_files_rehashed": false
+  },
+  "verified_files": {
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_fit_execution/preflight/final_preflight_v1/complete.json": {
+      "sha256": "d2ba158591ea7fee9c9caca75e7ad2fc2f9b236c3709a35344512d6ab14ec23d",
+      "bytes": 564
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/execution_control/final_preflight_v1/result.json": {
+      "sha256": "fc845033fbf7116caa6f8bc6823fdb8431acea97f849402706e33bdf01822c3e",
+      "bytes": 3881
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/complete.json": {
+      "sha256": "eb1e39d4ee145ebecce9b16593a9c1fd901fd7dcc2a5c9e8746f657e4c202d3e",
+      "bytes": 2968
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/result.json": {
+      "sha256": "d693a7d1fa4f1d5a0be4f2141966f35d97390e6e427c4c5cb6803bfc8791c79d",
+      "bytes": 1080238
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_fit_execution/preflight/final_preflight_v1/budget_after.jsonl": {
+      "sha256": "189cdf5c04a3782b5e540c3761fa682481dedad6ea91e703e705713e2d076973",
+      "bytes": 20580679
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_fit_execution/preflight/final_preflight_v1/budget_before.jsonl": {
+      "sha256": "189cdf5c04a3782b5e540c3761fa682481dedad6ea91e703e705713e2d076973",
+      "bytes": 20580679
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_fit_execution/preflight/final_preflight_v1/registration.json": {
+      "sha256": "f6a97f4149445e9e2076fe0c83589e621db9b7b49a6098f35ff403b02005ef77",
+      "bytes": 1347
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_fit_execution/preflight/final_preflight_v1/result.json": {
+      "sha256": "adf1e4dfca69fac32f90647153cf4698493ef8c38e7950e6099dec6961ef9a1d",
+      "bytes": 1603
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_fit_protocols/final_preflight_v1/config.json": {
+      "sha256": "c7fcdf6a8f3c6c633ffcedbe5ad8e263c0f99b9c53655c9badd83ab060c220ca",
+      "bytes": 1816797
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_fit_protocols/final_preflight_v1/freeze.json": {
+      "sha256": "90a3095500a2ee71da4016f96cff5ee084bf9fc2cc97ae97a92b23bedc6edf5a",
+      "bytes": 32827
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_fit_protocols/final_preflight_v1/coordination/NATIVE10_ANALYSIS_READY.json": {
+      "sha256": "684fa1d88290a68a64e21e898695a9271602e5bec0ecff7c707962ad625ff521",
+      "bytes": 80866
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/A/initial/complete.json": {
+      "sha256": "1172a88851c52eb99fff353afaaf82466c6839c704c3c63a81e88bc31b00f2dc",
+      "bytes": 1026
+    },
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/B/initial/complete.json": {
+      "sha256": "cd36e7e59bed7a9a649801b4a39ca1c2aab6ea44ec2566e475f66d7fb5d0f7a6",
+      "bytes": 1026
+    }
+  },
+  "final_training_released_by_this_review": false
+}

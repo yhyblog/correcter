@@ -1,0 +1,140 @@
+{
+  "status": "saved_output_CPU_checks_passed",
+  "complete_manifest_artifacts_verified": 23,
+  "transition_schema_and_identity_valid": true,
+  "transition": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_diagnostic_runs/ba0faa37ed325af8c2c61221310c8bb23f47fd10a109ff5a3d4847866d4f1f2a/transition.json",
+    "sha256": "c16b014c75f666c9c5c4252cde62d46331558b4e2dae4de880a22f788afa8404",
+    "size_bytes": 5111
+  },
+  "raw_plans": {
+    "artifact": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_diagnostic_runs/ba0faa37ed325af8c2c61221310c8bb23f47fd10a109ff5a3d4847866d4f1f2a/raw_plans.npy",
+      "sha256": "9b8ff7946506e99c46e6a8e6530587a92b5c25e7d800d25f61ec2b9965d9c60c",
+      "size_bytes": 4128
+    },
+    "shape": [
+      5,
+      50,
+      4
+    ],
+    "dtype": "float32",
+    "all_five_plans_bitwise_equal": true,
+    "paired_noise_sha256": "b3126bc00d8e44f80cf1ae879db97042477bcfb1408262dd25ce2d9bad22d052",
+    "all_five_measured_noise_hashes_equal": true,
+    "horizons": [
+      10,
+      20,
+      30,
+      40,
+      50
+    ],
+    "queue_lengths_after_first_pop": [
+      9,
+      19,
+      29,
+      39,
+      49
+    ],
+    "flow_calls_per_probe": {
+      "0": 10,
+      "1": 10,
+      "2": 10,
+      "3": 10,
+      "4": 10
+    },
+    "samples_per_probe": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1
+    },
+    "actual_first_command": [
+      0.8360106945037842,
+      -0.9216208457946777,
+      3.8925652503967285,
+      -0.9861142635345459
+    ]
+  },
+  "one_step_reward": 0.0,
+  "one_step_success": false,
+  "terminated": false,
+  "truncated": false,
+  "terminal_success": null,
+  "completed_rollouts": 0,
+  "frames": [
+    {
+      "phase": "diagnostic",
+      "NPZ": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_diagnostic_runs/ba0faa37ed325af8c2c61221310c8bb23f47fd10a109ff5a3d4847866d4f1f2a/observation_step0.npz",
+        "sha256": "e906177d8727ab5721b388fed2f7742fff613aace0dc46131e7c376a81a93402",
+        "size_bytes": 285105
+      },
+      "PPM": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_diagnostic_runs/ba0faa37ed325af8c2c61221310c8bb23f47fd10a109ff5a3d4847866d4f1f2a/RGB_diagnostic.ppm",
+        "sha256": "fd5399053facbb3b23da09e834b98aeb160939a792c3d6f94eab44099bd72320",
+        "size_bytes": 691215
+      },
+      "PNG": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V3_r1/RGB_views/RGB_diagnostic.png",
+        "sha256": "74f623dff65246bd5560863c04792f0df14a6a02bdd33e3cdfe02dde962dbf83",
+        "size_bytes": 255027
+      },
+      "shape": [
+        480,
+        480,
+        3
+      ],
+      "pixels_sha256": "d109b7767bbaa958f20dc6a08999742a0b821654d11bbb3c98dc1ea24940223f",
+      "NPZ_PPM_PNG_pixels_identical": true,
+      "saved_proprioception": [
+        0.004584200357827181,
+        0.6013881376581924,
+        0.19514345792565135,
+        1.0
+      ],
+      "no_crop_flip_resize_or_color_change": true
+    },
+    {
+      "phase": "post_control",
+      "NPZ": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_diagnostic_runs/ba0faa37ed325af8c2c61221310c8bb23f47fd10a109ff5a3d4847866d4f1f2a/observation_step1.npz",
+        "sha256": "ae84b3ab12c632353bff19f008da64dc9e31cc0b6b73dcf98ed2ff10ac3d7340",
+        "size_bytes": 284497
+      },
+      "PPM": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_diagnostic_runs/ba0faa37ed325af8c2c61221310c8bb23f47fd10a109ff5a3d4847866d4f1f2a/RGB_post_control.ppm",
+        "sha256": "c23021cd9c0829a65ed43e67d6454f3ccbf95cff756a48888fb1c1977b633667",
+        "size_bytes": 691215
+      },
+      "PNG": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PREFLIGHT_NATIVE_V3_r1/RGB_views/RGB_post_control.png",
+        "sha256": "716e5b24ad3228142faf2384cdec040f09ba820130ab58a39f6d0f2918b7ce2e",
+        "size_bytes": 254737
+      },
+      "shape": [
+        480,
+        480,
+        3
+      ],
+      "pixels_sha256": "d9557082cf6889e8484994e8e8a1ca930ebec1b9881009f6e95c82b382834665",
+      "NPZ_PPM_PNG_pixels_identical": true,
+      "saved_proprioception": [
+        0.010762943542905199,
+        0.5962463885083208,
+        0.2002311250594355,
+        1.0
+      ],
+      "no_crop_flip_resize_or_color_change": true
+    }
+  ],
+  "changed_RGB_pixels": 23915,
+  "PNG_encodings": 2,
+  "extra_render_calls": 0,
+  "extra_RGB_readbacks": 0,
+  "GPU_calls": 0,
+  "new_model_or_environment_imports": 0,
+  "large_weight_hashes": 0,
+  "visual_scene_review": "Pending inspection of the saved PNG images; pixel equality alone is not scene validation"
+}

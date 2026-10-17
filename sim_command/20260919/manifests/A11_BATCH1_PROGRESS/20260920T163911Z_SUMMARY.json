@@ -1,0 +1,60 @@
+{
+  "observed_at_utc": "2026-09-20T16:39:11.440833+00:00",
+  "status": "running_snapshot_not_final_acceptance",
+  "source": "results/A/P11_COMMON_POOL_BATCH1_runs/PROPOSED_A11_batch1_A_V1/reserved/SCHEDULER_EVENTS.jsonl",
+  "source_read_sha256": "dc083d036ffc51e0cea2eff83bddd2a1e3adfd79d3ac15685e710196e9e2b339",
+  "partial_last_record_ignored": false,
+  "elapsed_wall_minutes": 79.63142313333333,
+  "per_parent": {
+    "p00_disassemble_train0000_cut5": {
+      "started": 15,
+      "exited": 15,
+      "zero_exit": 15,
+      "nonzero_exit": 0,
+      "running_roles": []
+    },
+    "p01_pick_place_wall_train0000_cut5": {
+      "started": 15,
+      "exited": 15,
+      "zero_exit": 15,
+      "nonzero_exit": 0,
+      "running_roles": []
+    },
+    "p02_stick_pull_train0000_cut5": {
+      "started": 4,
+      "exited": 3,
+      "zero_exit": 3,
+      "nonzero_exit": 0,
+      "running_roles": [
+        "Q_local_plus_r0"
+      ]
+    },
+    "p03_stick_push_train0000_cut5": {
+      "started": 3,
+      "exited": 2,
+      "zero_exit": 2,
+      "nonzero_exit": 0,
+      "running_roles": [
+        "Q_a0_r1"
+      ]
+    }
+  },
+  "planned_parents": 8,
+  "admitted_parents": 4,
+  "parents_with_all15_processes_exited": [
+    "p00_disassemble_train0000_cut5",
+    "p01_pick_place_wall_train0000_cut5"
+  ],
+  "planned_branches": 120,
+  "started_branches": 37,
+  "exited_branches": 35,
+  "nonzero_exits": 0,
+  "active_branches": 2,
+  "process_exit_fraction": 0.2916666666666667,
+  "accepted_parents_total": 1,
+  "newly_accepted_parents": 0,
+  "B11_ACK_present": false,
+  "B11_RESULT_present": false,
+  "A_batch_RESULT_present": false,
+  "no_hardware_or_process_queries": true
+}

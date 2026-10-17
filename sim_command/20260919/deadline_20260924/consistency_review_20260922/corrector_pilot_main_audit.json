@@ -1,0 +1,159 @@
+{
+  "scope": "read-only CPU small saved CSV/JSON + targeted terminal/seed/instruction lines; no rollout/model import",
+  "stats": {
+    "all50": {
+      "N": {
+        "successes": 308,
+        "n": 500
+      },
+      "R": {
+        "successes": 336,
+        "n": 500
+      },
+      "Post": {
+        "successes": 345,
+        "n": 500
+      },
+      "Velocity": {
+        "successes": 340,
+        "n": 500
+      }
+    },
+    "historical_five_task_names": {
+      "N": {
+        "successes": 28,
+        "n": 50
+      },
+      "R": {
+        "successes": 32,
+        "n": 50
+      },
+      "Post": {
+        "successes": 36,
+        "n": 50
+      },
+      "Velocity": {
+        "successes": 33,
+        "n": 50
+      }
+    },
+    "disassemble_only": {
+      "N": {
+        "successes": 10,
+        "n": 10
+      },
+      "R": {
+        "successes": 9,
+        "n": 10
+      },
+      "Post": {
+        "successes": 10,
+        "n": 10
+      },
+      "Velocity": {
+        "successes": 10,
+        "n": 10
+      }
+    }
+  },
+  "pilot_cells": {
+    "R_once": {
+      "n": 20,
+      "successes": 13,
+      "at_least_two_interventions": 0
+    },
+    "R_multi": {
+      "n": 20,
+      "successes": 13,
+      "at_least_two_interventions": 6
+    },
+    "Post_once": {
+      "n": 20,
+      "successes": 16,
+      "at_least_two_interventions": 0
+    },
+    "Post_multi": {
+      "n": 20,
+      "successes": 16,
+      "at_least_two_interventions": 4
+    },
+    "Velocity_once": {
+      "n": 20,
+      "successes": 15,
+      "at_least_two_interventions": 0
+    },
+    "Velocity_multi": {
+      "n": 20,
+      "successes": 15,
+      "at_least_two_interventions": 6
+    }
+  },
+  "pilot_env_seed_overlap_main500": 0,
+  "same_main_source_identity_mismatches": {
+    "Post_H10": 0,
+    "Post_H20": 0,
+    "Post_H30": 0,
+    "Post_H40": 0,
+    "Post_H50": 0,
+    "R_H10": 0,
+    "Velocity_H10": 0,
+    "Velocity_H20": 0,
+    "Velocity_H30": 0,
+    "Velocity_H40": 0,
+    "Velocity_H50": 0
+  },
+  "main_reaggregation": {
+    "Post_H10": {
+      "n": 500,
+      "successes": 345
+    },
+    "Post_H20": {
+      "n": 500,
+      "successes": 322
+    },
+    "Post_H30": {
+      "n": 500,
+      "successes": 316
+    },
+    "Post_H40": {
+      "n": 500,
+      "successes": 300
+    },
+    "Post_H50": {
+      "n": 500,
+      "successes": 300
+    },
+    "R_H10": {
+      "n": 500,
+      "successes": 336
+    },
+    "Velocity_H10": {
+      "n": 500,
+      "successes": 340
+    },
+    "Velocity_H20": {
+      "n": 500,
+      "successes": 316
+    },
+    "Velocity_H30": {
+      "n": 500,
+      "successes": 309
+    },
+    "Velocity_H40": {
+      "n": 500,
+      "successes": 295
+    },
+    "Velocity_H50": {
+      "n": 500,
+      "successes": 296
+    }
+  },
+  "same_checkpoint_declared": true,
+  "checkpoint_sha_from_evidence": "dff338a91dbe534ca3c4525ba82df9324662e3c87131f42ed6e3d1b7bf0e94d4",
+  "same_selected_Q_metadata": true,
+  "same_guidance": true,
+  "same_solo_rule": true,
+  "runtime_instruction_pilot": "Pick a nut out of a peg",
+  "runtime_instruction_main_disassemble": "Pick a nut out of a peg",
+  "new_compute": 0
+}

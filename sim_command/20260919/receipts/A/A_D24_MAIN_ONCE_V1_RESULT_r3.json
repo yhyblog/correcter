@@ -1,0 +1,96 @@
+{
+  "task_id": "A_D24_SPRINT_V1",
+  "stage": "A_D24_MAIN_ONCE_V1",
+  "utc": "2026-09-21T18:03:06.366381+00:00",
+  "status": "ORIGINAL_BACKGROUND_CHAIN_CONTINUES",
+  "original_command_utc": "2026-09-21T17:20:24.983663+00:00",
+  "launch_opportunities_total": 1,
+  "new_launches_this_callback": 0,
+  "startup_receipt": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_MAIN_ONCE_V1_RESULT_r1.json",
+  "fixed_models_training_coverage": "pi05-MT50 SFT030000; D/G0/Q historical five-task frozen models, cross-MT50 evaluation",
+  "interventions_max": 1,
+  "completed_cells": {
+    "Post_H10": {
+      "attempts": 500,
+      "terminals": 500,
+      "successes": 345,
+      "technical_failures": 0
+    },
+    "Post_H30": {
+      "attempts": 500,
+      "terminals": 500,
+      "successes": 316,
+      "technical_failures": 0
+    },
+    "R_H10": {
+      "attempts": 500,
+      "terminals": 500,
+      "successes": 336,
+      "technical_failures": 0
+    },
+    "Velocity_H10": {
+      "attempts": 500,
+      "terminals": 500,
+      "successes": 340,
+      "technical_failures": 0
+    },
+    "Velocity_H30": {
+      "attempts": 500,
+      "terminals": 500,
+      "successes": 309,
+      "technical_failures": 0
+    }
+  },
+  "saved_summary_utc": "2026-09-21T18:02:53.165672+00:00",
+  "saved_heartbeat": {
+    "authorization_sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80",
+    "holders": "own_holder_exit_ACK_before_GPU; exited_worker_cards_may_fill",
+    "process": {
+      "boot_id": "9011c00c-6953-4cb3-a724-1a6f90d196d4",
+      "host": "trial-303224955-trialrun-303224955-worker-0",
+      "pgid": 1340697,
+      "pid": 1340697,
+      "ppid": 1,
+      "start_ticks": 405110942,
+      "state": "R"
+    },
+    "progress": {
+      "active_jobs": {
+        "0": "Post_H50_reach-wall-v3",
+        "1": "Post_H50_push-back-v3",
+        "2": "Post_H50_shelf-place-v3",
+        "3": "Post_H50_push-v3",
+        "4": "Post_H50_push-wall-v3",
+        "5": "Post_H50_pick-out-of-hole-v3",
+        "6": "Post_H50_reach-v3",
+        "7": "Post_H50_plate-slide-back-v3"
+      },
+      "holder_policy": "formal_priority; completed_family_only_auxiliary_fill; ACK_before_Popen",
+      "living_workers": 8,
+      "loaded_workers": 8,
+      "manager": {
+        "boot_id": "9011c00c-6953-4cb3-a724-1a6f90d196d4",
+        "host": "trial-303224955-trialrun-303224955-worker-0",
+        "pgid": 1341158,
+        "pid": 1341158,
+        "ppid": 1340703,
+        "start_ticks": 405116136,
+        "state": "R"
+      },
+      "pending_jobs": 57,
+      "status": "running",
+      "utc": "2026-09-21T18:02:59.226338+00:00"
+    },
+    "status": "formal_chain",
+    "utc": "2026-09-21T18:03:03.533050+00:00"
+  },
+  "same_cohort_as_N": true,
+  "N_and_pilot_not_rerun": true,
+  "remaining475_enabled": false,
+  "auxiliary_holder_START_records_at_read": 0,
+  "current_GPU_queries": 0,
+  "formal_code_changed": false,
+  "current_chain_terminal": false,
+  "stable_handoff": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_MAIN_ONCE_V1/STABLE_HANDOFF.json",
+  "next": "existing daemon continues H50 then H20/H40; do not duplicate launch; end conversation wait"
+}

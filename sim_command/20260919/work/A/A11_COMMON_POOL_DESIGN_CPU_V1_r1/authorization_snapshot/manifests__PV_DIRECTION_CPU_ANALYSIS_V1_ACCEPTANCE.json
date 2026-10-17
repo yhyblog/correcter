@@ -1,0 +1,118 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A10_PV_DIRECTION_CPU_ANALYSIS_V1",
+  "revision": 1,
+  "accepted_at_utc": "2026-09-20T01:52:44.582113+00:00",
+  "status": "saved_data_CPU_analysis_accepted_root_cause_unresolved",
+  "receipt": {
+    "path": "receipts/A/A10_PV_DIRECTION_CPU_ANALYSIS_V1_RESULT.json",
+    "sha256": "d683ea6acc05618b3b2429b0f9490fe156a7028fc93a5e21916b8b5f46fa1565"
+  },
+  "report": {
+    "path": "results/A/A10_PV_DIRECTION_CPU_ANALYSIS_V1/REPORT.md",
+    "sha256": "410ebb2e48f519fcc95aa6463e1fcea39633b672fb8c804219d0aed2433d197c"
+  },
+  "evidence_manifest": {
+    "path": "results/A/A10_PV_DIRECTION_CPU_ANALYSIS_V1/EVIDENCE_MANIFEST.json",
+    "sha256": "5eebd21244850806a88980a9c3a6d62b04b48a1aceb8ede48e23907c198d0426"
+  },
+  "delivery_audit": {
+    "path": "work/A/A10_PV_DIRECTION_CPU_ANALYSIS_V1_r1/DELIVERY_AUDIT.json",
+    "sha256": "dbb3c13cf4603f0e953c49c0021f3036aedfa3a93b15a820ba99a01ae3d4d5bd"
+  },
+  "verification": {
+    "artifact_refs_SHA_size": 32,
+    "evidence_manifest_files_SHA_size": 86,
+    "unique_files_SHA_size": 87,
+    "saved_relation_checks": 78,
+    "float32_writeback_checks": 4,
+    "formula_text_SHA_files": 12,
+    "new_model_hardware_projection_or_test_execution_by_analysis": 0
+  },
+  "mutable_authority_inputs_valid_at_review": {
+    "CONTROL": {
+      "original_path": "CONTROL.json",
+      "archived_bytes": "manifests/PV_DIRECTION_CPU_ACCEPTANCE_INPUTS/CONTROL36.json",
+      "sha256": "0b4c698c787c3049ee89883897a2c2d111920b567497c898b643d12e56d7774b"
+    },
+    "TASK_BOARD": {
+      "original_path": "TASK_BOARD.json",
+      "archived_bytes": "manifests/PV_DIRECTION_CPU_ACCEPTANCE_INPUTS/TASK_BOARD43.json",
+      "sha256": "632d642bef8b5b34065fabab006006590601527691fbe0a5f95a3511810a3ef3"
+    }
+  },
+  "independent_reviews": {
+    "saved_numeric_and_units": "/root/pv_v3_numeric_acceptance_review",
+    "optional_logging_cost": "/root/pv_guard_install_review",
+    "next_common_pool_scope": "/root/interface_v1_semantics_review",
+    "blocking_findings": []
+  },
+  "findings": {
+    "cut5_Velocity_dot_stages": {
+      "guided_native_raw_delta": -0.11863949671939544,
+      "guided_clamped_delta": -0.11582739494171956,
+      "masked_direction": -0.11681748687201543,
+      "unit_direction": -1.5405323378490055,
+      "requested_delta": -0.06851492174180975,
+      "actual_delta": -0.06851491684393937
+    },
+    "step0_Velocity_dot_stages": {
+      "guided_native_raw_delta": 0.0945347008066646,
+      "guided_clamped_delta": 0.07114134475786504,
+      "masked_direction": 0.06916891839141082,
+      "actual_delta": 0.06728364426888428
+    },
+    "negative_direction_already_at_saved_guided_output": true,
+    "first_negative_tau": null,
+    "root_cause": null,
+    "independent_final_guided_Q": null,
+    "local_member_probabilities_recomputed": false,
+    "local_scalar_J_differences_computed": true,
+    "final_J_from_saved_probabilities": {
+      "step0_Post": 0.05305620655417442,
+      "step0_Velocity": 0.06152614206075668,
+      "cut5_Post": 0.013589136302471161,
+      "cut5_Velocity": -0.1560668647289276
+    },
+    "accepted_flag_means": "fixed update executed; no Q acceptance gate",
+    "genuine_G0_trigger": false,
+    "forced_engineering_intervention": true,
+    "G0_value_inherited_accepted_evidence": -0.057708123698830605
+  },
+  "scientific_limits": [
+    "two states are not a controlled ablation or error-rate denominator",
+    "same saved context/Q/anchor identity permits within-state geometry only",
+    "cut5 forced intervention with no G0 trigger is not a full-method failure sample",
+    "historical five-task Q is compatibility evidence, not MT50 completion",
+    "no branch ranking, Q gate, new alpha, radius, seed or winner selection"
+  ],
+  "accepted_interpretation": [
+    "At cut5 the negative anchor-gradient dot already exists in native guided output; final clamp/mask/own-radius/writeback did not first cause its sign",
+    "step0 same-stage dots are positive; states differ and cannot estimate occurrence rate or rank methods",
+    "S squared, minus tau and negative dt are locally sign compatible; no established root cause",
+    "Per-tau missing vectors and member probabilities remain unknown; independent final guided Q remains null",
+    "cut5 G0 false and intervention forced; not a complete-method failure"
+  ],
+  "analysis_decision": {
+    "standalone_replay_now": false,
+    "reason": "Saved evidence narrows the risk without a demonstrated sign error; one forced source does not justify immediate tuning or another standalone run. Risk remains open and may be investigated during later planned development calls.",
+    "parameter_or_Q_gate_change_authorized": false,
+    "optional_future_logging_preference": "active_clean_existing_intermediates_only_if_required_in_a_separately_authorized_planned_guided_call",
+    "logging_quote_is_not_whole_run_budget": true,
+    "logging_estimate": {
+      "float32_or_smaller_payload_bytes_per_guided_call": 98624,
+      "headers_metadata_estimate_bytes": 131072,
+      "tensor_exports_to_CPU_upper_bound_pending_tau_dtype_audit": 32,
+      "already_CPU_member_probability_copies": 6,
+      "additional_model_forwards_or_gradients": 0,
+      "sync_latency_and_staging_peak": null,
+      "extra_tau_time_dt_scalar_exports_require_explicit_budget": true
+    },
+    "full_clean_logging_selected": false,
+    "independent_final_guided_Q_evaluation_selected": false,
+    "implementation_or_real_logging_authorized": false
+  },
+  "new_compute_authorized": false,
+  "old_ten_compute_releases_reusable": false,
+  "next_CPU_task": "A11_COMMON_POOL_DESIGN_CPU_V1"
+}

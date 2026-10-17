@@ -1,0 +1,625 @@
+{
+  "source_horizon": "per_job_H",
+  "prefix_horizon": "per_job_H",
+  "suffix_horizon": "per_job_H",
+  "control_budget": 300,
+  "generated_horizon": 50,
+  "gate_threshold": 0.05,
+  "guidance": {
+    "alpha": 10.0,
+    "times": [
+      0.3,
+      0.2,
+      0.1
+    ],
+    "clip_derivative": "true clamp through same T",
+    "velocity": "v-alpha*tau*grad_u R(T(u))",
+    "direct": "v-alpha*grad_u R(T(u))",
+    "clean": "u=x_tau-tau*v; sampler Euler dt=-.1",
+    "no_step_backtracking": true
+  },
+  "matching": {
+    "xyz_rms": 0.05,
+    "gripper_rms": 0.1,
+    "xyz_linf": 0.15,
+    "gripper_linf": 0.4,
+    "boundary_clearance": 0.05,
+    "tolerance": 1e-06,
+    "zero_threshold": 1e-10,
+    "algorithm": "project_solo own symmetric feasible group radius; inherited numerical implementation",
+    "amplitude_can_expand_native": true,
+    "native_arms_separately_executed": false,
+    "post_metric": "environment grad times ((q99-q01)/2)^2, matching internal clean-action Euclidean gradient",
+    "random": "independent Gaussian three knots per action dimension, linear interpolation over ten steps",
+    "reverse": "negative of projected direct command delta",
+    "zero_group": "zero direction stays zero for that method and group",
+    "shared_radius_dependencies": "none; each method uses own symmetric feasible radius"
+  },
+  "cpu": {
+    "worker_threads": 4,
+    "critic_threads": 2
+  },
+  "seed_namespace": "corrector_native10_training_20260916_v1",
+  "critic_assets": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B_D24_E1_EVAL_V1_r1/assets/L11_s9101",
+  "selected_model": {
+    "member_hashes": {
+      "1041": "b8c4127505c3c304d7c81f3f43f65a068a08315f713d15a45827bdff08485478",
+      "1042": "4e40a7515408aa7953a1166c02b75b4ae926bbfa49701c3e3a4b831041c36224",
+      "1043": "83c7690e32fbad5970ea66a63a3281d716ea1819d7fce72c8c7a96da7e82f615",
+      "1044": "53a43fef24d7ad2bd8bd3626576f7c3a31bbfafa6bf49e4a57d5ecb2f5f54e95"
+    },
+    "ensemble": {
+      "loss": "L11",
+      "complete_training_seed": 9101,
+      "members": [
+        {
+          "member": 1041,
+          "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/e1_L11_s9101_m1041/final.pt",
+          "lineage": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/e1_L11_s9101_m1041/training_lineage.json"
+        },
+        {
+          "member": 1042,
+          "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/e1_L11_s9101_m1042/final.pt",
+          "lineage": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/e1_L11_s9101_m1042/training_lineage.json"
+        },
+        {
+          "member": 1043,
+          "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/e1_L11_s9101_m1043/final.pt",
+          "lineage": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/e1_L11_s9101_m1043/training_lineage.json"
+        },
+        {
+          "member": 1044,
+          "checkpoint": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/e1_L11_s9101_m1044/final.pt",
+          "lineage": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_SPRINT_V1/r1/jobs/e1_L11_s9101_m1044/training_lineage.json"
+        }
+      ]
+    }
+  },
+  "solo_rule": {
+    "radius": "own_symmetric_capacity",
+    "shrink": 0.999999,
+    "expand_native": true,
+    "other_direction_dependencies": false,
+    "each_method_regenerates_a0": true,
+    "random_fallback": false,
+    "q_acceptance_gate": false
+  },
+  "task_id": "B_D24_SPRINT_V1",
+  "revision": 1,
+  "deadline_utc": "2026-09-23T12:00:00Z",
+  "methods": [
+    "Velocity"
+  ],
+  "source_count": 50,
+  "max_episodes": 50,
+  "repeat": 0,
+  "monitor_interval": 5,
+  "history_length": 5,
+  "model_id": "pi05_MT50_SFT030000",
+  "renderer": "Mesa llvmpipe",
+  "once_controls": "frozen N test table first10 ordinal; no old20 sources",
+  "physical_clock": "30Hz control 400Hz physics .015 action scale",
+  "max_interventions": 1,
+  "run_stage": "E1_loss_ablation",
+  "commitment": 10,
+  "policy_stream": "same per-episode CUDA generator as N; candidate keyed source policy_seed/cut; natural generator independent of candidate",
+  "cells": [
+    {
+      "method": "Velocity",
+      "H": 10
+    }
+  ],
+  "training_coverage": "historical five tasks, train600,192000 total E1 updates already complete",
+  "holder_policy": "all eight holders off for whole formal wave",
+  "planned_prior_attempts": 1401,
+  "method": "Velocity",
+  "loss": "L11",
+  "complete_training_seed": 9101,
+  "H": 10,
+  "sources": [
+    {
+      "source_id": "D24_NEW_TEST_disassemble-v3_00",
+      "task": "disassemble-v3",
+      "ordinal": 0,
+      "split": "test",
+      "env_seed": 398075461,
+      "policy_seed": 5729631586841882130,
+      "instruction": "Pick a nut out of a peg",
+      "domain": "corrector_D24_new_test_v1|disassemble-v3|0"
+    },
+    {
+      "source_id": "D24_NEW_TEST_disassemble-v3_01",
+      "task": "disassemble-v3",
+      "ordinal": 1,
+      "split": "test",
+      "env_seed": 974473159,
+      "policy_seed": 4787032607948406,
+      "instruction": "Pick a nut out of a peg",
+      "domain": "corrector_D24_new_test_v1|disassemble-v3|1"
+    },
+    {
+      "source_id": "D24_NEW_TEST_disassemble-v3_02",
+      "task": "disassemble-v3",
+      "ordinal": 2,
+      "split": "test",
+      "env_seed": 1189006665,
+      "policy_seed": 1315478060057638718,
+      "instruction": "Pick a nut out of a peg",
+      "domain": "corrector_D24_new_test_v1|disassemble-v3|2"
+    },
+    {
+      "source_id": "D24_NEW_TEST_disassemble-v3_03",
+      "task": "disassemble-v3",
+      "ordinal": 3,
+      "split": "test",
+      "env_seed": 803399802,
+      "policy_seed": 6675739877911123459,
+      "instruction": "Pick a nut out of a peg",
+      "domain": "corrector_D24_new_test_v1|disassemble-v3|3"
+    },
+    {
+      "source_id": "D24_NEW_TEST_disassemble-v3_04",
+      "task": "disassemble-v3",
+      "ordinal": 4,
+      "split": "test",
+      "env_seed": 1113545997,
+      "policy_seed": 6392610585471705555,
+      "instruction": "Pick a nut out of a peg",
+      "domain": "corrector_D24_new_test_v1|disassemble-v3|4"
+    },
+    {
+      "source_id": "D24_NEW_TEST_disassemble-v3_05",
+      "task": "disassemble-v3",
+      "ordinal": 5,
+      "split": "test",
+      "env_seed": 1428382719,
+      "policy_seed": 8339279840110491404,
+      "instruction": "Pick a nut out of a peg",
+      "domain": "corrector_D24_new_test_v1|disassemble-v3|5"
+    },
+    {
+      "source_id": "D24_NEW_TEST_disassemble-v3_06",
+      "task": "disassemble-v3",
+      "ordinal": 6,
+      "split": "test",
+      "env_seed": 1256285173,
+      "policy_seed": 2326589910939027234,
+      "instruction": "Pick a nut out of a peg",
+      "domain": "corrector_D24_new_test_v1|disassemble-v3|6"
+    },
+    {
+      "source_id": "D24_NEW_TEST_disassemble-v3_07",
+      "task": "disassemble-v3",
+      "ordinal": 7,
+      "split": "test",
+      "env_seed": 1292381416,
+      "policy_seed": 3944046941510583130,
+      "instruction": "Pick a nut out of a peg",
+      "domain": "corrector_D24_new_test_v1|disassemble-v3|7"
+    },
+    {
+      "source_id": "D24_NEW_TEST_disassemble-v3_08",
+      "task": "disassemble-v3",
+      "ordinal": 8,
+      "split": "test",
+      "env_seed": 2070886968,
+      "policy_seed": 7848335240233190488,
+      "instruction": "Pick a nut out of a peg",
+      "domain": "corrector_D24_new_test_v1|disassemble-v3|8"
+    },
+    {
+      "source_id": "D24_NEW_TEST_disassemble-v3_09",
+      "task": "disassemble-v3",
+      "ordinal": 9,
+      "split": "test",
+      "env_seed": 1738338597,
+      "policy_seed": 7581612583476164908,
+      "instruction": "Pick a nut out of a peg",
+      "domain": "corrector_D24_new_test_v1|disassemble-v3|9"
+    },
+    {
+      "source_id": "D24_NEW_TEST_pick-place-wall-v3_00",
+      "task": "pick-place-wall-v3",
+      "ordinal": 0,
+      "split": "test",
+      "env_seed": 2091576611,
+      "policy_seed": 2456401041720459573,
+      "instruction": "Pick a puck, bypass a wall and place the puck",
+      "domain": "corrector_D24_new_test_v1|pick-place-wall-v3|0"
+    },
+    {
+      "source_id": "D24_NEW_TEST_pick-place-wall-v3_01",
+      "task": "pick-place-wall-v3",
+      "ordinal": 1,
+      "split": "test",
+      "env_seed": 2076070755,
+      "policy_seed": 6413430426876845785,
+      "instruction": "Pick a puck, bypass a wall and place the puck",
+      "domain": "corrector_D24_new_test_v1|pick-place-wall-v3|1"
+    },
+    {
+      "source_id": "D24_NEW_TEST_pick-place-wall-v3_02",
+      "task": "pick-place-wall-v3",
+      "ordinal": 2,
+      "split": "test",
+      "env_seed": 1253524962,
+      "policy_seed": 1492490386061973243,
+      "instruction": "Pick a puck, bypass a wall and place the puck",
+      "domain": "corrector_D24_new_test_v1|pick-place-wall-v3|2"
+    },
+    {
+      "source_id": "D24_NEW_TEST_pick-place-wall-v3_03",
+      "task": "pick-place-wall-v3",
+      "ordinal": 3,
+      "split": "test",
+      "env_seed": 102779082,
+      "policy_seed": 1557367564676014815,
+      "instruction": "Pick a puck, bypass a wall and place the puck",
+      "domain": "corrector_D24_new_test_v1|pick-place-wall-v3|3"
+    },
+    {
+      "source_id": "D24_NEW_TEST_pick-place-wall-v3_04",
+      "task": "pick-place-wall-v3",
+      "ordinal": 4,
+      "split": "test",
+      "env_seed": 1977089705,
+      "policy_seed": 4072667216801605163,
+      "instruction": "Pick a puck, bypass a wall and place the puck",
+      "domain": "corrector_D24_new_test_v1|pick-place-wall-v3|4"
+    },
+    {
+      "source_id": "D24_NEW_TEST_pick-place-wall-v3_05",
+      "task": "pick-place-wall-v3",
+      "ordinal": 5,
+      "split": "test",
+      "env_seed": 746602696,
+      "policy_seed": 8198330767114235513,
+      "instruction": "Pick a puck, bypass a wall and place the puck",
+      "domain": "corrector_D24_new_test_v1|pick-place-wall-v3|5"
+    },
+    {
+      "source_id": "D24_NEW_TEST_pick-place-wall-v3_06",
+      "task": "pick-place-wall-v3",
+      "ordinal": 6,
+      "split": "test",
+      "env_seed": 2096624747,
+      "policy_seed": 6384129618005111808,
+      "instruction": "Pick a puck, bypass a wall and place the puck",
+      "domain": "corrector_D24_new_test_v1|pick-place-wall-v3|6"
+    },
+    {
+      "source_id": "D24_NEW_TEST_pick-place-wall-v3_07",
+      "task": "pick-place-wall-v3",
+      "ordinal": 7,
+      "split": "test",
+      "env_seed": 382907154,
+      "policy_seed": 1173562514359941495,
+      "instruction": "Pick a puck, bypass a wall and place the puck",
+      "domain": "corrector_D24_new_test_v1|pick-place-wall-v3|7"
+    },
+    {
+      "source_id": "D24_NEW_TEST_pick-place-wall-v3_08",
+      "task": "pick-place-wall-v3",
+      "ordinal": 8,
+      "split": "test",
+      "env_seed": 1167694576,
+      "policy_seed": 3833866541681547034,
+      "instruction": "Pick a puck, bypass a wall and place the puck",
+      "domain": "corrector_D24_new_test_v1|pick-place-wall-v3|8"
+    },
+    {
+      "source_id": "D24_NEW_TEST_pick-place-wall-v3_09",
+      "task": "pick-place-wall-v3",
+      "ordinal": 9,
+      "split": "test",
+      "env_seed": 976397554,
+      "policy_seed": 7333303511647808183,
+      "instruction": "Pick a puck, bypass a wall and place the puck",
+      "domain": "corrector_D24_new_test_v1|pick-place-wall-v3|9"
+    },
+    {
+      "source_id": "D24_NEW_TEST_shelf-place-v3_00",
+      "task": "shelf-place-v3",
+      "ordinal": 0,
+      "split": "test",
+      "env_seed": 503263400,
+      "policy_seed": 5490295187927001537,
+      "instruction": "Pick and place a puck onto a shelf",
+      "domain": "corrector_D24_new_test_v1|shelf-place-v3|0"
+    },
+    {
+      "source_id": "D24_NEW_TEST_shelf-place-v3_01",
+      "task": "shelf-place-v3",
+      "ordinal": 1,
+      "split": "test",
+      "env_seed": 526423778,
+      "policy_seed": 4796521644664174893,
+      "instruction": "Pick and place a puck onto a shelf",
+      "domain": "corrector_D24_new_test_v1|shelf-place-v3|1"
+    },
+    {
+      "source_id": "D24_NEW_TEST_shelf-place-v3_02",
+      "task": "shelf-place-v3",
+      "ordinal": 2,
+      "split": "test",
+      "env_seed": 1210758351,
+      "policy_seed": 4764716669848010220,
+      "instruction": "Pick and place a puck onto a shelf",
+      "domain": "corrector_D24_new_test_v1|shelf-place-v3|2"
+    },
+    {
+      "source_id": "D24_NEW_TEST_shelf-place-v3_03",
+      "task": "shelf-place-v3",
+      "ordinal": 3,
+      "split": "test",
+      "env_seed": 1440683014,
+      "policy_seed": 3366607169653171485,
+      "instruction": "Pick and place a puck onto a shelf",
+      "domain": "corrector_D24_new_test_v1|shelf-place-v3|3"
+    },
+    {
+      "source_id": "D24_NEW_TEST_shelf-place-v3_04",
+      "task": "shelf-place-v3",
+      "ordinal": 4,
+      "split": "test",
+      "env_seed": 53652771,
+      "policy_seed": 8676928420576935933,
+      "instruction": "Pick and place a puck onto a shelf",
+      "domain": "corrector_D24_new_test_v1|shelf-place-v3|4"
+    },
+    {
+      "source_id": "D24_NEW_TEST_shelf-place-v3_05",
+      "task": "shelf-place-v3",
+      "ordinal": 5,
+      "split": "test",
+      "env_seed": 1227190486,
+      "policy_seed": 7212974159307950637,
+      "instruction": "Pick and place a puck onto a shelf",
+      "domain": "corrector_D24_new_test_v1|shelf-place-v3|5"
+    },
+    {
+      "source_id": "D24_NEW_TEST_shelf-place-v3_06",
+      "task": "shelf-place-v3",
+      "ordinal": 6,
+      "split": "test",
+      "env_seed": 1534477892,
+      "policy_seed": 2862067062097414975,
+      "instruction": "Pick and place a puck onto a shelf",
+      "domain": "corrector_D24_new_test_v1|shelf-place-v3|6"
+    },
+    {
+      "source_id": "D24_NEW_TEST_shelf-place-v3_07",
+      "task": "shelf-place-v3",
+      "ordinal": 7,
+      "split": "test",
+      "env_seed": 2140935991,
+      "policy_seed": 8294178425424660679,
+      "instruction": "Pick and place a puck onto a shelf",
+      "domain": "corrector_D24_new_test_v1|shelf-place-v3|7"
+    },
+    {
+      "source_id": "D24_NEW_TEST_shelf-place-v3_08",
+      "task": "shelf-place-v3",
+      "ordinal": 8,
+      "split": "test",
+      "env_seed": 204291969,
+      "policy_seed": 1077323433555012833,
+      "instruction": "Pick and place a puck onto a shelf",
+      "domain": "corrector_D24_new_test_v1|shelf-place-v3|8"
+    },
+    {
+      "source_id": "D24_NEW_TEST_shelf-place-v3_09",
+      "task": "shelf-place-v3",
+      "ordinal": 9,
+      "split": "test",
+      "env_seed": 2046218180,
+      "policy_seed": 4183616360247107930,
+      "instruction": "Pick and place a puck onto a shelf",
+      "domain": "corrector_D24_new_test_v1|shelf-place-v3|9"
+    },
+    {
+      "source_id": "D24_NEW_TEST_stick-pull-v3_00",
+      "task": "stick-pull-v3",
+      "ordinal": 0,
+      "split": "test",
+      "env_seed": 1964313822,
+      "policy_seed": 3846633409039378321,
+      "instruction": "Grasp a stick and pull a box with the stick",
+      "domain": "corrector_D24_new_test_v1|stick-pull-v3|0"
+    },
+    {
+      "source_id": "D24_NEW_TEST_stick-pull-v3_01",
+      "task": "stick-pull-v3",
+      "ordinal": 1,
+      "split": "test",
+      "env_seed": 729410562,
+      "policy_seed": 2153635566075077927,
+      "instruction": "Grasp a stick and pull a box with the stick",
+      "domain": "corrector_D24_new_test_v1|stick-pull-v3|1"
+    },
+    {
+      "source_id": "D24_NEW_TEST_stick-pull-v3_02",
+      "task": "stick-pull-v3",
+      "ordinal": 2,
+      "split": "test",
+      "env_seed": 1288096929,
+      "policy_seed": 1022558937676087439,
+      "instruction": "Grasp a stick and pull a box with the stick",
+      "domain": "corrector_D24_new_test_v1|stick-pull-v3|2"
+    },
+    {
+      "source_id": "D24_NEW_TEST_stick-pull-v3_03",
+      "task": "stick-pull-v3",
+      "ordinal": 3,
+      "split": "test",
+      "env_seed": 1220456860,
+      "policy_seed": 9079937391189331207,
+      "instruction": "Grasp a stick and pull a box with the stick",
+      "domain": "corrector_D24_new_test_v1|stick-pull-v3|3"
+    },
+    {
+      "source_id": "D24_NEW_TEST_stick-pull-v3_04",
+      "task": "stick-pull-v3",
+      "ordinal": 4,
+      "split": "test",
+      "env_seed": 839971284,
+      "policy_seed": 7937914865717506866,
+      "instruction": "Grasp a stick and pull a box with the stick",
+      "domain": "corrector_D24_new_test_v1|stick-pull-v3|4"
+    },
+    {
+      "source_id": "D24_NEW_TEST_stick-pull-v3_05",
+      "task": "stick-pull-v3",
+      "ordinal": 5,
+      "split": "test",
+      "env_seed": 436218425,
+      "policy_seed": 3778428051347944551,
+      "instruction": "Grasp a stick and pull a box with the stick",
+      "domain": "corrector_D24_new_test_v1|stick-pull-v3|5"
+    },
+    {
+      "source_id": "D24_NEW_TEST_stick-pull-v3_06",
+      "task": "stick-pull-v3",
+      "ordinal": 6,
+      "split": "test",
+      "env_seed": 228903424,
+      "policy_seed": 8616236112611261723,
+      "instruction": "Grasp a stick and pull a box with the stick",
+      "domain": "corrector_D24_new_test_v1|stick-pull-v3|6"
+    },
+    {
+      "source_id": "D24_NEW_TEST_stick-pull-v3_07",
+      "task": "stick-pull-v3",
+      "ordinal": 7,
+      "split": "test",
+      "env_seed": 414770730,
+      "policy_seed": 1085109509513572272,
+      "instruction": "Grasp a stick and pull a box with the stick",
+      "domain": "corrector_D24_new_test_v1|stick-pull-v3|7"
+    },
+    {
+      "source_id": "D24_NEW_TEST_stick-pull-v3_08",
+      "task": "stick-pull-v3",
+      "ordinal": 8,
+      "split": "test",
+      "env_seed": 109561323,
+      "policy_seed": 743458443962490456,
+      "instruction": "Grasp a stick and pull a box with the stick",
+      "domain": "corrector_D24_new_test_v1|stick-pull-v3|8"
+    },
+    {
+      "source_id": "D24_NEW_TEST_stick-pull-v3_09",
+      "task": "stick-pull-v3",
+      "ordinal": 9,
+      "split": "test",
+      "env_seed": 838760120,
+      "policy_seed": 7974831009362157360,
+      "instruction": "Grasp a stick and pull a box with the stick",
+      "domain": "corrector_D24_new_test_v1|stick-pull-v3|9"
+    },
+    {
+      "source_id": "D24_NEW_TEST_stick-push-v3_00",
+      "task": "stick-push-v3",
+      "ordinal": 0,
+      "split": "test",
+      "env_seed": 831143188,
+      "policy_seed": 604439553856049087,
+      "instruction": "Grasp a stick and push a box using the stick",
+      "domain": "corrector_D24_new_test_v1|stick-push-v3|0"
+    },
+    {
+      "source_id": "D24_NEW_TEST_stick-push-v3_01",
+      "task": "stick-push-v3",
+      "ordinal": 1,
+      "split": "test",
+      "env_seed": 1944177704,
+      "policy_seed": 315608754996327593,
+      "instruction": "Grasp a stick and push a box using the stick",
+      "domain": "corrector_D24_new_test_v1|stick-push-v3|1"
+    },
+    {
+      "source_id": "D24_NEW_TEST_stick-push-v3_02",
+      "task": "stick-push-v3",
+      "ordinal": 2,
+      "split": "test",
+      "env_seed": 1629309418,
+      "policy_seed": 7541547686296210962,
+      "instruction": "Grasp a stick and push a box using the stick",
+      "domain": "corrector_D24_new_test_v1|stick-push-v3|2"
+    },
+    {
+      "source_id": "D24_NEW_TEST_stick-push-v3_03",
+      "task": "stick-push-v3",
+      "ordinal": 3,
+      "split": "test",
+      "env_seed": 882195563,
+      "policy_seed": 1993696475712584199,
+      "instruction": "Grasp a stick and push a box using the stick",
+      "domain": "corrector_D24_new_test_v1|stick-push-v3|3"
+    },
+    {
+      "source_id": "D24_NEW_TEST_stick-push-v3_04",
+      "task": "stick-push-v3",
+      "ordinal": 4,
+      "split": "test",
+      "env_seed": 1068375387,
+      "policy_seed": 5378895714375332048,
+      "instruction": "Grasp a stick and push a box using the stick",
+      "domain": "corrector_D24_new_test_v1|stick-push-v3|4"
+    },
+    {
+      "source_id": "D24_NEW_TEST_stick-push-v3_05",
+      "task": "stick-push-v3",
+      "ordinal": 5,
+      "split": "test",
+      "env_seed": 1849331760,
+      "policy_seed": 2858643067140279097,
+      "instruction": "Grasp a stick and push a box using the stick",
+      "domain": "corrector_D24_new_test_v1|stick-push-v3|5"
+    },
+    {
+      "source_id": "D24_NEW_TEST_stick-push-v3_06",
+      "task": "stick-push-v3",
+      "ordinal": 6,
+      "split": "test",
+      "env_seed": 887262895,
+      "policy_seed": 446632424432207793,
+      "instruction": "Grasp a stick and push a box using the stick",
+      "domain": "corrector_D24_new_test_v1|stick-push-v3|6"
+    },
+    {
+      "source_id": "D24_NEW_TEST_stick-push-v3_07",
+      "task": "stick-push-v3",
+      "ordinal": 7,
+      "split": "test",
+      "env_seed": 1315621693,
+      "policy_seed": 9006195142203761475,
+      "instruction": "Grasp a stick and push a box using the stick",
+      "domain": "corrector_D24_new_test_v1|stick-push-v3|7"
+    },
+    {
+      "source_id": "D24_NEW_TEST_stick-push-v3_08",
+      "task": "stick-push-v3",
+      "ordinal": 8,
+      "split": "test",
+      "env_seed": 1875073546,
+      "policy_seed": 2665135716580739388,
+      "instruction": "Grasp a stick and push a box using the stick",
+      "domain": "corrector_D24_new_test_v1|stick-push-v3|8"
+    },
+    {
+      "source_id": "D24_NEW_TEST_stick-push-v3_09",
+      "task": "stick-push-v3",
+      "ordinal": 9,
+      "split": "test",
+      "env_seed": 353909750,
+      "policy_seed": 5949121665268552192,
+      "instruction": "Grasp a stick and push a box using the stick",
+      "domain": "corrector_D24_new_test_v1|stick-push-v3|9"
+    }
+  ],
+  "overall_B_attempt_cap": 16000,
+  "comparison": "four losses x three complete fit seeds x two operators on identical50 test sources",
+  "cross_host_comparison_caveat": "E1 internal comparisons share B Mesa renderer; A NVIDIA-rendered N/R are not exact renderer-matched controls",
+  "config_frozen_at_utc": "2026-09-21T22:11:11.109922+00:00"
+}

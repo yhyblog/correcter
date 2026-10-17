@@ -1,0 +1,10 @@
+{
+  "at_utc": "2026-09-19T20:23:59.181919+00:00",
+  "command": "lerobot/bin/python -B work/A/A10_PREFLIGHT_NATIVE_V3_r1/audit_saved_outputs.py",
+  "exit_code": 1,
+  "stage": "CPU NumPy import before saved-output reads or PNG writes",
+  "cause": "Auditor rejected ctypes.PyDLL(None), used by NumPy importing ctypes.pythonapi; no named library or GPU API entered",
+  "recovery": "Retain original auditor; r2 permits only current-process Python handle/symbol introspection while named libraries, Torch/model/environment/GPU imports remain blocked",
+  "formal_compute_retries": 0,
+  "new_hardware_probes": 0
+}

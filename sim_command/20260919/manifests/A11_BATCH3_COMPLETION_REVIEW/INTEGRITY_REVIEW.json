@@ -1,0 +1,1449 @@
+{
+  "schema": "independent_batch_completion_integrity_review_v1",
+  "created_utc": "2026-09-21T14:22:59.665727+00:00",
+  "task_id": "A11_COMMON_POOL_BATCH3_V1",
+  "status": "PASS",
+  "expected_source_sha256": {
+    "RESULT": "d62b9c685c209990fede7cc8bc3b714c816d01bff2e619fa3a0139fc423ba258",
+    "REPORT": "89527335964c0905d62fca44c18a2b211ca4292456d5a89dc30dcc773cac7fb1",
+    "EVIDENCE_MANIFEST": "e44cd33d2bf2cb5d53b0c0472a0d079d8095ba2ee2633fdf27eecc924340ecea"
+  },
+  "reference_verification": {
+    "artifacts": 23,
+    "manifest_entries": 82,
+    "core_reference_occurrences": 111,
+    "core_unique_files": 83,
+    "core_failed_references": 0,
+    "all_reference_occurrences_including_additional_expected_and_ack_refs": 125,
+    "total_unique_files_stream_hashed_in_this_review": 89,
+    "total_unique_bytes_stream_hashed_in_this_review": 106442304,
+    "runtime_index_hash_passes": 1,
+    "runtime_index_content_entries_traversed": 0
+  },
+  "checks": [
+    {
+      "check": "core_reference_counts",
+      "pass": true,
+      "detail": {
+        "artifacts": 23,
+        "manifest_files": 82,
+        "reference_occurrences": 111,
+        "unique_files": 83
+      }
+    },
+    {
+      "check": "task_host_revision_identity",
+      "pass": true
+    },
+    {
+      "check": "release_identity",
+      "pass": true
+    },
+    {
+      "check": "116_resource_caps_identical",
+      "pass": true
+    },
+    {
+      "check": "parent_caps_sum",
+      "pass": true
+    },
+    {
+      "check": "8parents_concurrency2_scheduler_identity",
+      "pass": true
+    },
+    {
+      "check": "one_command_and_zero_retry_authority",
+      "pass": true
+    },
+    {
+      "check": "dedicated_claim_directory_single_file",
+      "pass": true
+    },
+    {
+      "check": "dedicated_command_directory_single_file",
+      "pass": true
+    },
+    {
+      "check": "consumed_claim_and_command_identity",
+      "pass": true
+    },
+    {
+      "check": "outer_command_matches_ack",
+      "pass": true
+    },
+    {
+      "check": "frozen_control_and_board_revisions",
+      "pass": true
+    },
+    {
+      "check": "queued_final_request_matches_final_evidence",
+      "pass": true
+    },
+    {
+      "check": "queued_delivery_thread_matches_request",
+      "pass": true
+    },
+    {
+      "check": "saved_final_verification_matches_evidence",
+      "pass": true
+    },
+    {
+      "check": "scientific_acceptance_remains_separate",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "verified_references": [
+    {
+      "label": "RESULT_expected",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A11_COMMON_POOL_BATCH3_V1_RESULT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A11_COMMON_POOL_BATCH3_V1_RESULT.json",
+      "size_bytes": 46573,
+      "sha256": "d62b9c685c209990fede7cc8bc3b714c816d01bff2e619fa3a0139fc423ba258",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_1",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/ARTIFACT_REFERENCE_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/ARTIFACT_REFERENCE_AUDIT.json",
+      "size_bytes": 5980,
+      "sha256": "544448e217b904052d82290563b88979658fa0aa026b03db972213d38333bae2",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_2",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/AUDIT_INTERMEDIATE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/AUDIT_INTERMEDIATE.json",
+      "size_bytes": 8606,
+      "sha256": "5ecc9c2d9b676407bc2fa0b69cdb8fd5c61cacb477e65160aa7899fc8cee9bea",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_3",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/DATA_QUALIFICATION_NOTE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/DATA_QUALIFICATION_NOTE.json",
+      "size_bytes": 3112,
+      "sha256": "cf46e693e3efad0cf15cb8722d4d9f7e8352ecfff1ae0aa2968c6e66317ab7a4",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_4",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/DEVICE_AND_LOADER_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/DEVICE_AND_LOADER_AUDIT.json",
+      "size_bytes": 293665,
+      "sha256": "1f7a6e2df1934fa35dd070371b027b3e8ca407381f2071f926ab4a17fd5532c5",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_5",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/EXIT_AND_RESTORATION.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/EXIT_AND_RESTORATION.json",
+      "size_bytes": 189469,
+      "sha256": "5552ae0e8a8b228a123c251a160374b6d79b256f770371ef4572649b07fa3c55",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_6",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/FAILURE_AND_MISSING_EVIDENCE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/FAILURE_AND_MISSING_EVIDENCE.json",
+      "size_bytes": 217,
+      "sha256": "cac382520e07fc9569be9e28b719c34929716e40d70c0adeb1f2ff271879e5e5",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_7",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/INDEPENDENT_LEDGER_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/INDEPENDENT_LEDGER_AUDIT.json",
+      "size_bytes": 5704677,
+      "sha256": "847c2e5a939e43565a4a1241df49e5604606d4961419c4106e493ba435907d8b",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_8",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/INDEPENDENT_PAIRED_LABELS.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/INDEPENDENT_PAIRED_LABELS.json",
+      "size_bytes": 19368,
+      "sha256": "6e2363bec7283cc0cea5d2b56888ec4e0b585d18ac6e0205ca0ccb3786ae81b8",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_9",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/INITIALIZATION_STAGE_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/INITIALIZATION_STAGE_AUDIT.json",
+      "size_bytes": 799467,
+      "sha256": "5d42da0a831466f5d5277e45a33a677fb987c1bb2e21179ca455999619baa0be",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_10",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/LAUNCH_RESULT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/LAUNCH_RESULT.json",
+      "size_bytes": 4564,
+      "sha256": "69f0485c267dd29ec3e90e919f4b9c1c74d069aa42e2975be04254af94baf6dd",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_11",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_POLICY_OVERRIDE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_POLICY_OVERRIDE.json",
+      "size_bytes": 17533,
+      "sha256": "0c8eb9889cd5bef43cc481b968ac6e956848778fbe6804753646fafc40d8e3bf",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_12",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OUTER.stderr",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OUTER.stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_13",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OUTER.stdout",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OUTER.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_14",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OUTER_COMMAND_ENTERED.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OUTER_COMMAND_ENTERED.json",
+      "size_bytes": 613,
+      "sha256": "a92c2e05851767bca63ecb6e4c30e8b768525ad2461670c5c8c069fe09f1d197",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_15",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OUTER_EXIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OUTER_EXIT.json",
+      "size_bytes": 810,
+      "sha256": "ce8d7e5d1ef3ae45ea5707f6727d7b9eed89f8824c38b4c9c786f9b34c97bc51",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_16",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/PARENT_AND_BRANCH_COVERAGE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/PARENT_AND_BRANCH_COVERAGE.json",
+      "size_bytes": 1497048,
+      "sha256": "636044b849198666fa39114ae73b501ac28aa985b2945b3f5aab6db654f7aae3",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_17",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/REPORT.md",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/REPORT.md",
+      "size_bytes": 4538,
+      "sha256": "89527335964c0905d62fca44c18a2b211ca4292456d5a89dc30dcc773cac7fb1",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_18",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/RUNTIME_FILES.jsonl",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/RUNTIME_FILES.jsonl",
+      "size_bytes": 82744484,
+      "sha256": "ab73730299f3f99629fd7489ac6add967babdc5a7fd74efcc567deca2a3c60f2",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_19",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/SAVED_STORAGE_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/SAVED_STORAGE_AUDIT.json",
+      "size_bytes": 61579,
+      "sha256": "a23c58bcd6367823f486b61df3ee6665b980bf55728b7f2de179f463047e20eb",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_20",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/SAVED_TIMING_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/SAVED_TIMING_AUDIT.json",
+      "size_bytes": 408175,
+      "sha256": "cd8210874510338ee48c2257dd54a8a31aa523376c3029f3b5a1515b2312defc",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_21",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/SCHEDULER_AUX_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/SCHEDULER_AUX_AUDIT.json",
+      "size_bytes": 5137,
+      "sha256": "7b754713858bce129e855a7f7c9641d192b27008a35d28d26da2aae61c5b7800",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_22",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/STATE_CLOSURE_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/STATE_CLOSURE_AUDIT.json",
+      "size_bytes": 10520825,
+      "sha256": "e6ad014d223271e7a4aa3c1e01ba7569c41f5ae6a827d3cb2210b22ac32c88c4",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "artifact_23",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/WAVE_EXIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/WAVE_EXIT.json",
+      "size_bytes": 108001,
+      "sha256": "9ecf1bdab6203aadcbbce6910a1491db38ead69e5841d97d7e64bbc8e8f1cc98",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_1",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A11_COMMON_POOL_BATCH3_V1_ACK.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A11_COMMON_POOL_BATCH3_V1_ACK.json",
+      "size_bytes": 9779,
+      "sha256": "e9aeb88f1e09bfbf9c9d24c43d9d373cf654c7c058304655b4b167dff8eca9e8",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_2",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/ARTIFACT_REFERENCE_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/ARTIFACT_REFERENCE_AUDIT.json",
+      "size_bytes": 5980,
+      "sha256": "544448e217b904052d82290563b88979658fa0aa026b03db972213d38333bae2",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_3",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/AUDIT_INTERMEDIATE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/AUDIT_INTERMEDIATE.json",
+      "size_bytes": 8606,
+      "sha256": "5ecc9c2d9b676407bc2fa0b69cdb8fd5c61cacb477e65160aa7899fc8cee9bea",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_4",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/DATA_QUALIFICATION_NOTE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/DATA_QUALIFICATION_NOTE.json",
+      "size_bytes": 3112,
+      "sha256": "cf46e693e3efad0cf15cb8722d4d9f7e8352ecfff1ae0aa2968c6e66317ab7a4",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_5",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/DEVICE_AND_LOADER_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/DEVICE_AND_LOADER_AUDIT.json",
+      "size_bytes": 293665,
+      "sha256": "1f7a6e2df1934fa35dd070371b027b3e8ca407381f2071f926ab4a17fd5532c5",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_6",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/EXIT_AND_RESTORATION.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/EXIT_AND_RESTORATION.json",
+      "size_bytes": 189469,
+      "sha256": "5552ae0e8a8b228a123c251a160374b6d79b256f770371ef4572649b07fa3c55",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_7",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/FAILURE_AND_MISSING_EVIDENCE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/FAILURE_AND_MISSING_EVIDENCE.json",
+      "size_bytes": 217,
+      "sha256": "cac382520e07fc9569be9e28b719c34929716e40d70c0adeb1f2ff271879e5e5",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_8",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/INDEPENDENT_LEDGER_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/INDEPENDENT_LEDGER_AUDIT.json",
+      "size_bytes": 5704677,
+      "sha256": "847c2e5a939e43565a4a1241df49e5604606d4961419c4106e493ba435907d8b",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_9",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/INDEPENDENT_PAIRED_LABELS.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/INDEPENDENT_PAIRED_LABELS.json",
+      "size_bytes": 19368,
+      "sha256": "6e2363bec7283cc0cea5d2b56888ec4e0b585d18ac6e0205ca0ccb3786ae81b8",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_10",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/INITIALIZATION_STAGE_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/INITIALIZATION_STAGE_AUDIT.json",
+      "size_bytes": 799467,
+      "sha256": "5d42da0a831466f5d5277e45a33a677fb987c1bb2e21179ca455999619baa0be",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_11",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/LAUNCH_RESULT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/LAUNCH_RESULT.json",
+      "size_bytes": 4564,
+      "sha256": "69f0485c267dd29ec3e90e919f4b9c1c74d069aa42e2975be04254af94baf6dd",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_12",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_POLICY_OVERRIDE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_POLICY_OVERRIDE.json",
+      "size_bytes": 17533,
+      "sha256": "0c8eb9889cd5bef43cc481b968ac6e956848778fbe6804753646fafc40d8e3bf",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_13",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OUTER.stderr",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OUTER.stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_14",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OUTER.stdout",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OUTER.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_15",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OUTER_COMMAND_ENTERED.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OUTER_COMMAND_ENTERED.json",
+      "size_bytes": 613,
+      "sha256": "a92c2e05851767bca63ecb6e4c30e8b768525ad2461670c5c8c069fe09f1d197",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_16",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OUTER_EXIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OUTER_EXIT.json",
+      "size_bytes": 810,
+      "sha256": "ce8d7e5d1ef3ae45ea5707f6727d7b9eed89f8824c38b4c9c786f9b34c97bc51",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_17",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/PARENT_AND_BRANCH_COVERAGE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/PARENT_AND_BRANCH_COVERAGE.json",
+      "size_bytes": 1497048,
+      "sha256": "636044b849198666fa39114ae73b501ac28aa985b2945b3f5aab6db654f7aae3",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_18",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/REPORT.md",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/REPORT.md",
+      "size_bytes": 4538,
+      "sha256": "89527335964c0905d62fca44c18a2b211ca4292456d5a89dc30dcc773cac7fb1",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_19",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/RUNTIME_FILES.jsonl",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/RUNTIME_FILES.jsonl",
+      "size_bytes": 82744484,
+      "sha256": "ab73730299f3f99629fd7489ac6add967babdc5a7fd74efcc567deca2a3c60f2",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_20",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/SAVED_STORAGE_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/SAVED_STORAGE_AUDIT.json",
+      "size_bytes": 61579,
+      "sha256": "a23c58bcd6367823f486b61df3ee6665b980bf55728b7f2de179f463047e20eb",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_21",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/SAVED_TIMING_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/SAVED_TIMING_AUDIT.json",
+      "size_bytes": 408175,
+      "sha256": "cd8210874510338ee48c2257dd54a8a31aa523376c3029f3b5a1515b2312defc",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_22",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/SCHEDULER_AUX_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/SCHEDULER_AUX_AUDIT.json",
+      "size_bytes": 5137,
+      "sha256": "7b754713858bce129e855a7f7c9641d192b27008a35d28d26da2aae61c5b7800",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_23",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/STATE_CLOSURE_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/STATE_CLOSURE_AUDIT.json",
+      "size_bytes": 10520825,
+      "sha256": "e6ad014d223271e7a4aa3c1e01ba7569c41f5ae6a827d3cb2210b22ac32c88c4",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_24",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/WAVE_EXIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/WAVE_EXIT.json",
+      "size_bytes": 108001,
+      "sha256": "9ecf1bdab6203aadcbbce6910a1491db38ead69e5841d97d7e64bbc8e8f1cc98",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_25",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_claims/P11_A_COMMON_POOL_BATCH3_V1.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_claims/P11_A_COMMON_POOL_BATCH3_V1.json",
+      "size_bytes": 205,
+      "sha256": "16760f6056b37631acfc4887efb6f4a2bbe57f0b2034c548aaf0abc7f7fff969",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_26",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_commands/P11_A_COMMON_POOL_BATCH3_V1.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_BATCH3_commands/P11_A_COMMON_POOL_BATCH3_V1.json",
+      "size_bytes": 155,
+      "sha256": "1bf7866f18f533ac7709d8598f4a5f931639c362c1fac623343c01594c7e2187",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_27",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/ACK_METADATA_NOTE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/ACK_METADATA_NOTE.json",
+      "size_bytes": 344,
+      "sha256": "c229499961a6a6d4792c1b3d18b52f370ea7719116aece5c524f2c81789dff9a",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_28",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/CPU_AUDIT_ARTIFACTS.stderr",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/CPU_AUDIT_ARTIFACTS.stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_29",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/CPU_AUDIT_ARTIFACTS.stdout",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/CPU_AUDIT_ARTIFACTS.stdout",
+      "size_bytes": 562,
+      "sha256": "529391914b08a741ec7f7d647fab1ff2a364f84511bb163b60f169e9c0f3162f",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_30",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/CPU_AUDIT_ARTIFACTS_EXIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/CPU_AUDIT_ARTIFACTS_EXIT.json",
+      "size_bytes": 408,
+      "sha256": "6c81e619f988d2c591acaf300b5405ba26332175da22da0256a0eeea5841b767",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_31",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/CPU_AUDIT_METADATA.stderr",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/CPU_AUDIT_METADATA.stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_32",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/CPU_AUDIT_METADATA.stdout",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/CPU_AUDIT_METADATA.stdout",
+      "size_bytes": 118,
+      "sha256": "01e382ddbca2e322af4a6a754cbe3e44dc374b9e118e5b6eb2652ec139b64ea3",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_33",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/CPU_AUDIT_METADATA_EXIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/CPU_AUDIT_METADATA_EXIT.json",
+      "size_bytes": 396,
+      "sha256": "4fdfae2d1e52ebecd63954e4bef1880f0b81874a8f0610776f0ba1ff674a4b0a",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_34",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/DELIVERY_QUALIFICATION_ADAPTATION.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/DELIVERY_QUALIFICATION_ADAPTATION.json",
+      "size_bytes": 748,
+      "sha256": "85cc52bd746aafc0a94dc376990f69465c4d38b9feda895fe57d4bc403796db5",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_35",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/EXECUTION_SESSION.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/EXECUTION_SESSION.json",
+      "size_bytes": 201,
+      "sha256": "0821a9492ffbfc22a019797678683f06e97ae1efe09d08928737083646fdb11d",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_36",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/DELIVERY_ADAPTATION.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/DELIVERY_ADAPTATION.json",
+      "size_bytes": 414,
+      "sha256": "5e7a5a32976fe9d48f62198b0470b4f8b95a589f9cffb514d9f9976c7b1d0a2d",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_37",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/EVENTS.jsonl",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/EVENTS.jsonl",
+      "size_bytes": 7775,
+      "sha256": "81356281e7ca752b792adea9327092445fb2807a5618a8977da064a06136a6d1",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_38",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/GPU7_YIELD_SAVED_EVIDENCE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/GPU7_YIELD_SAVED_EVIDENCE.json",
+      "size_bytes": 1877,
+      "sha256": "8e988855e11c3c05e6dfea3a099e6a1d4b965a68833b4a8a8556ec3e34a0e9be",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_39",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/GPU_0.log",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/GPU_0.log",
+      "size_bytes": 1958,
+      "sha256": "078e35a1b8f23e229865e85df3bf9a50cc1e28f65fcbecf19a3abafb4cf90da3",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_40",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/GPU_1.log",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/GPU_1.log",
+      "size_bytes": 1958,
+      "sha256": "2b00636090c1696b13286dbcca6af9471c8caed5ca9f80be9ce9dffe45377452",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_41",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/GPU_2.log",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/GPU_2.log",
+      "size_bytes": 1958,
+      "sha256": "da86f0ffa1daadcb4b83b84743fb586de2c7f2d8f6eef5d9873fa9033b306131",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_42",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/GPU_3.log",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/GPU_3.log",
+      "size_bytes": 1958,
+      "sha256": "d289a94f021afed0f99f3465f142dee83ea5c2012399676be420c085be5b7b9c",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_43",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/GPU_4.log",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/GPU_4.log",
+      "size_bytes": 1987,
+      "sha256": "67116dd28f2957b790652089cf6ab9c30066650802493f4156ba0cb5c7cd243a",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_44",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/GPU_5.log",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/GPU_5.log",
+      "size_bytes": 1784,
+      "sha256": "64903f1eb0ea58277eeea0ff32fb3f19c6c8bcca21df33d6a0ec0f0fa9b7a243",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_45",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/GPU_6.log",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/GPU_6.log",
+      "size_bytes": 570,
+      "sha256": "b6b89e0385b79753a6d0e5eefa0e94420dc789a9078f0ed4bea3208c6b4171f5",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_46",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/GPU_7.log",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/GPU_7.log",
+      "size_bytes": 302,
+      "sha256": "519141b71e53151db4ef69059bdf5d6d55743c9f930531d30a4b0b4403e84fc9",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_47",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/POST_EXIT_EXISTING_GUARD_STATUS.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/POST_EXIT_EXISTING_GUARD_STATUS.json",
+      "size_bytes": 1275,
+      "sha256": "33996311f55d75a0b808de0d535283245cf4de6bb7001eb483e40c114573d61a",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_48",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/QUEUE_CONCURRENCY8_DELIVERY.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/QUEUE_CONCURRENCY8_DELIVERY.json",
+      "size_bytes": 240,
+      "sha256": "ebb26b7b522ffb17f8a4a8a3460e8d2219b154833f176fe92ebd3ec63169d3e0",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_49",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/QUEUE_CONCURRENCY8_REQUEST.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/QUEUE_CONCURRENCY8_REQUEST.json",
+      "size_bytes": 1066,
+      "sha256": "351e0b11a89aa7042d7a81e8f5ef5620345a477ca8812afb3476e6a0fb0e5fd8",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_50",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/QUEUE_OVERRIDE_DELIVERY.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/QUEUE_OVERRIDE_DELIVERY.json",
+      "size_bytes": 248,
+      "sha256": "f1c1c01a237bea30922a9584bf61f89be5e07e6b6853d5b647b741b6576150b6",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_51",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/QUEUE_OVERRIDE_MESSAGE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/QUEUE_OVERRIDE_MESSAGE.json",
+      "size_bytes": 1143,
+      "sha256": "8add62c66549613d090af6dfbd7317c8aedeff56ce026f5efc69699aa7bc9662",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_52",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/SPAWN.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/SPAWN.json",
+      "size_bytes": 165,
+      "sha256": "7899bd8814e807cb6a909de088f6740142ea4c689f083bc704610a7204a46779",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_53",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/STATUS.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/STATUS.json",
+      "size_bytes": 146,
+      "sha256": "9e4e6a511d9957c9179f572d29cefa831c6177905d85b7c2574943f6ea1df6fc",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_54",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/SUPERVISOR.stderr",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/SUPERVISOR.stderr",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_55",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/SUPERVISOR.stdout",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/SUPERVISOR.stdout",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_56",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/SUPERVISOR_EXIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/SUPERVISOR_EXIT.json",
+      "size_bytes": 214,
+      "sha256": "5edc17357ca9163d6ab2030fef5adde95cf746e705d5bef106ab7b372bd71a77",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_57",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/SUPERVISOR_STARTED.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/SUPERVISOR_STARTED.json",
+      "size_bytes": 476,
+      "sha256": "df977c45e75225faf01343c3ce9b60a7b8823c648d7febfcc9586469de825221",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_58",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/USER_AUTHORIZATION.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/USER_AUTHORIZATION.json",
+      "size_bytes": 1993,
+      "sha256": "fd8f5b74cbb22b8f1597c1062febb9528d588a113047c2706f593e3cdefd43d0",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_59",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/UTILIZATION_CHECK_1.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/UTILIZATION_CHECK_1.json",
+      "size_bytes": 815,
+      "sha256": "e670bfb1e3f49a5ed72a279f2f2ba1ba14ec3535039ef2692ba4a69a9a205f05",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_60",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/UTILIZATION_CHECK_2.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_OVERRIDE/UTILIZATION_CHECK_2.json",
+      "size_bytes": 839,
+      "sha256": "91c1c086e61921e1eb9f9ca7e0acef7c4a87917df803d4f6e631f8b59cbdd38e",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_61",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/QUEUE_STARTED_DELIVERY.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/QUEUE_STARTED_DELIVERY.json",
+      "size_bytes": 239,
+      "sha256": "17931f9527cf3abb1bbecacb0b48496f5a762fd36b863f844c0794f729837b10",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_62",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/QUEUE_STARTED_MESSAGE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/QUEUE_STARTED_MESSAGE.json",
+      "size_bytes": 904,
+      "sha256": "298f3ee924717be68a04a49d26b62ca321eaad8f7974deb5d06e89c983896590",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_63",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/SAVED_AUDIT_REUSE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/SAVED_AUDIT_REUSE.json",
+      "size_bytes": 3465,
+      "sha256": "066aa559f5075816a98782bc6848c221840a398a89a3e475188889919770f297",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_64",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/SAVED_PROGRESS.jsonl",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/SAVED_PROGRESS.jsonl",
+      "size_bytes": 3476657,
+      "sha256": "42a9d44b3fa664917629cda1a5e0ef67a37ca4ca43f5e891b83262f53e7ba342",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_65",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/audit_after_exit.py",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/audit_after_exit.py",
+      "size_bytes": 26769,
+      "sha256": "2bc2377f6dd68601b1cf3586a774075c69040350ee3412d9a56f3817e8ce081a",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_66",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/audit_artifacts_after_exit.py",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/audit_artifacts_after_exit.py",
+      "size_bytes": 17111,
+      "sha256": "353bc4cea928db02eb1fa1ef85f56d9783820efe6a8458f6d3454a0c2361252c",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_67",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/audit_occupancy_override.py",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/audit_occupancy_override.py",
+      "size_bytes": 4172,
+      "sha256": "32ae572f72de71aa130394c42a31f3f9647a15f4922f527791da07528c672e9e",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_68",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/audit_saved_helpers.py",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/audit_saved_helpers.py",
+      "size_bytes": 8250,
+      "sha256": "2e6116d619af5c85e4e0343008beee1c41997ae2287f3c525975ee3ba0be2f69",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_69",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/A11_BATCH3_PREP_CPU_V1_ACCEPTANCE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/A11_BATCH3_PREP_CPU_V1_ACCEPTANCE.json",
+      "size_bytes": 3375,
+      "sha256": "0cf867d30e026fcf7a0dba52781ca4b6a4f71125f1ebf89194cd846bd8424942",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_70",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/A11_COMMON_POOL_BATCH3_V1.md",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/A11_COMMON_POOL_BATCH3_V1.md",
+      "size_bytes": 4291,
+      "sha256": "6c7667e280d6c8bc0b70bf9c4688591ee01c151475c9595b3727b9f34a2e0765",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_71",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/BATCH3_RISK_AND_SCOPE_V1.md",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/BATCH3_RISK_AND_SCOPE_V1.md",
+      "size_bytes": 2360,
+      "sha256": "dc3177169ee2171385c7ba272f6b094fd75d40c52deaaec82629a7e3a238dd0a",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_72",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/CONTROL.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/CONTROL.json",
+      "size_bytes": 111792,
+      "sha256": "17e6ab9da64df6ecc2ab0e9a240c9484999974d2f0eef8fd3bbe37b29754c163",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_73",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/DISPATCH_A.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/DISPATCH_A.json",
+      "size_bytes": 32241,
+      "sha256": "20c3d42b148cb060b253f8edfb385615d0426ce871360e4fd5f16996a77eca3d",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_74",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/P11_A_COMMON_POOL_BATCH3_V1.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/P11_A_COMMON_POOL_BATCH3_V1.json",
+      "size_bytes": 70141,
+      "sha256": "ff7326818d5a232d5d2ad1ec8032ae6c37762f71f089087243096f7c06a589e3",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_75",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/PUBLICATION_CHECK_RESULT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/PUBLICATION_CHECK_RESULT.json",
+      "size_bytes": 1066,
+      "sha256": "6ae4b16ed27f5fa0f92dc651d5bc012cf31db67ce13ef46aea917534fa191f0d",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_76",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/TASK_BOARD.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/TASK_BOARD.json",
+      "size_bytes": 38726,
+      "sha256": "db8906c136d960dfa1ee1939b65ffea23b3414caf714715deb24f87104cd1083",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_77",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/build_delivery_after_audit.py",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/build_delivery_after_audit.py",
+      "size_bytes": 14669,
+      "sha256": "23b97f35556a23142b76e5a247e3c1bb44e72028991e21c8a96ea6b265f33f35",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_78",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/build_delivery_before_qualification_note.snapshot",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/build_delivery_before_qualification_note.snapshot",
+      "size_bytes": 13858,
+      "sha256": "9613c7c5bc65abe1aa56e7bca562c83ff232282d9a4a0ea1c81a60d33fd2702e",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_79",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/execute_once.py",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/execute_once.py",
+      "size_bytes": 2092,
+      "sha256": "b6c641595e1a7b6a38ab58da55a2515c222e70ec33fcba86f6eb70f2f9a32827",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_80",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/occupancy_override.py",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/occupancy_override.py",
+      "size_bytes": 6254,
+      "sha256": "6d03dc176228b81005979bc8bd911164edea3323d1a960d5b19794aa74681e89",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_81",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/poll_saved.py",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/poll_saved.py",
+      "size_bytes": 3692,
+      "sha256": "8a229387619259725815b6ac4a3ac9923e57f13c80c3af6b812ec5990372d188",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "manifest_82",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/run_cpu_audit_stage.py",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/run_cpu_audit_stage.py",
+      "size_bytes": 1262,
+      "sha256": "f918ae7362c1c65403b3d5712ae881eb76eed71f0634e3535d35c5984e050659",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "result_ack",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A11_COMMON_POOL_BATCH3_V1_ACK.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A11_COMMON_POOL_BATCH3_V1_ACK.json",
+      "size_bytes": 9779,
+      "sha256": "e9aeb88f1e09bfbf9c9d24c43d9d373cf654c7c058304655b4b167dff8eca9e8",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "result_data_qualification_note",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/DATA_QUALIFICATION_NOTE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/DATA_QUALIFICATION_NOTE.json",
+      "size_bytes": 3112,
+      "sha256": "cf46e693e3efad0cf15cb8722d4d9f7e8352ecfff1ae0aa2968c6e66317ab7a4",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "result_evidence_manifest",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/EVIDENCE_MANIFEST.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/EVIDENCE_MANIFEST.json",
+      "size_bytes": 35411,
+      "sha256": "e44cd33d2bf2cb5d53b0c0472a0d079d8095ba2ee2633fdf27eecc924340ecea",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "result_release_ref",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/P11_A_COMMON_POOL_BATCH3_V1.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/P11_A_COMMON_POOL_BATCH3_V1.json",
+      "size_bytes": 70141,
+      "sha256": "ff7326818d5a232d5d2ad1ec8032ae6c37762f71f089087243096f7c06a589e3",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "result_report",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/REPORT.md",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/REPORT.md",
+      "size_bytes": 4538,
+      "sha256": "89527335964c0905d62fca44c18a2b211ca4292456d5a89dc30dcc773cac7fb1",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "result_user_occupancy_override",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_POLICY_OVERRIDE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OCCUPANCY_POLICY_OVERRIDE.json",
+      "size_bytes": 17533,
+      "sha256": "0c8eb9889cd5bef43cc481b968ac6e956848778fbe6804753646fafc40d8e3bf",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "REPORT_expected",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/REPORT.md",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/REPORT.md",
+      "size_bytes": 4538,
+      "sha256": "89527335964c0905d62fca44c18a2b211ca4292456d5a89dc30dcc773cac7fb1",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "EVIDENCE_MANIFEST_expected",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/EVIDENCE_MANIFEST.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/EVIDENCE_MANIFEST.json",
+      "size_bytes": 35411,
+      "sha256": "e44cd33d2bf2cb5d53b0c0472a0d079d8095ba2ee2633fdf27eecc924340ecea",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "runtime_manifest_ref",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/RUNTIME_FILES.jsonl",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/RUNTIME_FILES.jsonl",
+      "size_bytes": 82744484,
+      "sha256": "ab73730299f3f99629fd7489ac6add967babdc5a7fd74efcc567deca2a3c60f2",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "ACK_frozen_authorization_1",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/CONTROL.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/CONTROL.json",
+      "size_bytes": 111792,
+      "sha256": "17e6ab9da64df6ecc2ab0e9a240c9484999974d2f0eef8fd3bbe37b29754c163",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "ACK_frozen_authorization_2",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/TASK_BOARD.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/TASK_BOARD.json",
+      "size_bytes": 38726,
+      "sha256": "db8906c136d960dfa1ee1939b65ffea23b3414caf714715deb24f87104cd1083",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "ACK_frozen_authorization_3",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/DISPATCH_A.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/DISPATCH_A.json",
+      "size_bytes": 32241,
+      "sha256": "20c3d42b148cb060b253f8edfb385615d0426ce871360e4fd5f16996a77eca3d",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "ACK_frozen_authorization_4",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/A11_COMMON_POOL_BATCH3_V1.md",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/A11_COMMON_POOL_BATCH3_V1.md",
+      "size_bytes": 4291,
+      "sha256": "6c7667e280d6c8bc0b70bf9c4688591ee01c151475c9595b3727b9f34a2e0765",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "ACK_frozen_authorization_5",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/P11_A_COMMON_POOL_BATCH3_V1.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/P11_A_COMMON_POOL_BATCH3_V1.json",
+      "size_bytes": 70141,
+      "sha256": "ff7326818d5a232d5d2ad1ec8032ae6c37762f71f089087243096f7c06a589e3",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "ACK_frozen_authorization_6",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/BATCH3_RISK_AND_SCOPE_V1.md",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/BATCH3_RISK_AND_SCOPE_V1.md",
+      "size_bytes": 2360,
+      "sha256": "dc3177169ee2171385c7ba272f6b094fd75d40c52deaaec82629a7e3a238dd0a",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "ACK_frozen_authorization_7",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/A11_BATCH3_PREP_CPU_V1_ACCEPTANCE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/A11_BATCH3_PREP_CPU_V1_ACCEPTANCE.json",
+      "size_bytes": 3375,
+      "sha256": "0cf867d30e026fcf7a0dba52781ca4b6a4f71125f1ebf89194cd846bd8424942",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "ACK_frozen_authorization_8",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/PUBLICATION_CHECK_RESULT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/PUBLICATION_CHECK_RESULT.json",
+      "size_bytes": 1066,
+      "sha256": "6ae4b16ed27f5fa0f92dc651d5bc012cf31db67ce13ef46aea917534fa191f0d",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "ACK_command_script",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/commands/run_proposed_batch3.sh",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/commands/run_proposed_batch3.sh",
+      "size_bytes": 493,
+      "sha256": "c0f39aa405fd0387b61baa65b54a946315e6090f3c55151a28b859c26f7cb743",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    },
+    {
+      "label": "original_live_release",
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P11_A_COMMON_POOL_BATCH3_V1.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P11_A_COMMON_POOL_BATCH3_V1.json",
+      "size_bytes": 70141,
+      "sha256": "ff7326818d5a232d5d2ad1ec8032ae6c37762f71f089087243096f7c06a589e3",
+      "stable_during_read": true,
+      "pass": true,
+      "failed_fields": []
+    }
+  ],
+  "work_final_delivery": {
+    "QUEUE_FINAL_REQUEST.json": {
+      "file": {
+        "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/QUEUE_FINAL_REQUEST.json",
+        "size_bytes": 3398,
+        "sha256": "3ba18b735594706dbcffaaa46f5beec3843233d5f5d03abc607956686df6a177",
+        "stable_during_read": true
+      },
+      "content": {
+        "thread": "01a0b91f-355f-7cd1-ae36-412500534ffb",
+        "message": "执行端A提交 A11_COMMON_POOL_BATCH3_V1 正式完成回执，待分析独立验收/关闭。本次冻结bash=1/claim=1，外层exit0、LAUNCH_RESULT=complete；8父源/120 child均退出0且完整终局（43绝对s300、77提前成功）。未重试、换源、扩并发或继续下一批。\nRESULT=/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A11_COMMON_POOL_BATCH3_V1_RESULT.json\nSHA256=d62b9c685c209990fede7cc8bc3b714c816d01bff2e619fa3a0139fc423ba258\nREPORT=/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/REPORT.md\nSHA256=89527335964c0905d62fca44c18a2b211ca4292456d5a89dc30dcc773cac7fb1\nMANIFEST=/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/EVIDENCE_MANIFEST.json\nSHA256=e44cd33d2bf2cb5d53b0c0472a0d079d8095ba2ee2633fdf27eecc924340ecea\n23产物引用/82 manifest/83唯一文件最后核验PASS（111总引用）；当前runtime清单148623路径/74734独立inode，约15.386GB唯一inode字节。116caps独立重算entered=returned，无失败/未闭合/超额；采样1690、flow16900、控制16481、obs16601、reset6240、初始化物理3127800，其中door-lock direct7800已实际核对。Q/D/G0前向、梯度、训练、重试、删除均0。112非normal比较=96逻辑候选替换+16old控制，old intervened/plan_replaced均false。\n资格须分开：全8源均15终局/14精确闭合状态比较/7完整双repeat组，physical_equality_proven=null；7源四目标均有效。p04 door-close的a0/local_plus/local_minus为同一800字节raw50（SHA 33d0dac0feb02e731de7918c3e24f7f6cc1db28928c37f93c0a4928803078c6f），3个Q目标raw-alias mask=false/target=null，G0有效target0。详见DATA_QUALIFICATION_NOTE.json；这是部分目标资格而非模型技术失败，不推断别名根因、不重采，具体视图接收由分析决定。当前有效索引仍16，未自行接收本批。\n用户运行中明确要求8卡都占用以避免整机<50%被停机，因此已执行先前queue说明的临时空闲卡holder覆盖：共享guard/formal.lock及正式并发2/源/seed/算法/116caps未改，但不能再声称整波8holder一直停算。OCCUPANCY_POLICY_OVERRIDE.json独立记录9次临时holder启动及全部退出、2次额外nvidia-smi核查、按正式START让卡，以及后续常驻8holder快照；两次整机利用率瞬时均值71.625%/70.375%，不冒充持续均值。额外占卡CUDA/GEMM完整操作数未知，不混入116正式账本；时序条件改变，不作可比吞吐基准。正式整组退出、组退出后数据成本发布、常驻8holder恢复均通过，未杀无关进程。\n请关闭本次机会，余量不复用。用户另明确要求多卡同时做有用任务，下一批应以8 GPU/8独立父源并发为目标，核实RAM/IO/存储并冻结相应调度；该请求已于13:17 queue（01a0c41d-26bb-70b3-b37d-92b74b2e6f0d）。本批已结束，不热改旧包。保存时序显示cold加载窗口，8 worker本身不保证利用率始终>50%，请将窗口占卡/交接纳入新安排；如8有硬约束请给证据和可行最大并发，勿默认沿用2。当前无新计算release，执行端停止后续正式计算，仅保持8卡常驻占卡。",
+        "created_utc": "2026-09-21T14:14:14.313233+00:00"
+      }
+    },
+    "QUEUE_FINAL_DELIVERY.json": {
+      "file": {
+        "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/QUEUE_FINAL_DELIVERY.json",
+        "size_bytes": 259,
+        "sha256": "91649cc9313cdef9e4f8d477d5ff4890b4ac87fbf88690855c28a64c0daee6a0",
+        "stable_during_read": true
+      },
+      "content": {
+        "returncode": 0,
+        "stdout": "Queued message 01a0c451-40a6-7d12-9309-bb8c1b25bace for thread 01a0b91f-355f-7cd1-ae36-412500534ffb.\n",
+        "stderr": "",
+        "at_utc": "2026-09-21T14:14:14.537447+00:00",
+        "queue_is_delivery_not_acceptance_or_release": true
+      }
+    },
+    "QUEUE_FINAL_VERIFICATION.json": {
+      "file": {
+        "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/QUEUE_FINAL_VERIFICATION.json",
+        "size_bytes": 698,
+        "sha256": "90e367a7bdad72533b81909301cd78ca6e84805a5b621da9a428fee9846e53d9",
+        "stable_during_read": true
+      },
+      "content": {
+        "at_utc": "2026-09-21T14:13:04.961666+00:00",
+        "status": "PASS",
+        "manifest_files": 82,
+        "result_artifact_refs": 23,
+        "total_checked_refs": 111,
+        "unique_files_checked": 83,
+        "errors": [],
+        "result_sha256": "d62b9c685c209990fede7cc8bc3b714c816d01bff2e619fa3a0139fc423ba258",
+        "report_sha256": "89527335964c0905d62fca44c18a2b211ca4292456d5a89dc30dcc773cac7fb1",
+        "manifest_sha256": "e44cd33d2bf2cb5d53b0c0472a0d079d8095ba2ee2633fdf27eecc924340ecea",
+        "raw_exit": 0,
+        "formal_command_count": 1,
+        "claims": 1,
+        "complete_outcomes": 120,
+        "all_four_target_parent_candidates": 7,
+        "partial_target_parent_candidates": 1,
+        "baseline_holders": 8,
+        "large_model_payloads_rehashed": 0
+      }
+    }
+  },
+  "claim_uniqueness_scope": "Exactly one file in each dedicated Batch3 claim and command directory, matching frozen release paths and saved invocation=1; no campaign-wide directory scan.",
+  "qualification_boundary": {
+    "receipt_status": "FORMAL_WAVE_EXITED_PENDING_ANALYSIS",
+    "raw_outer_exit": 0,
+    "complete_outcomes": 120,
+    "four_target_parent_candidates": 7,
+    "partial_target_parent_candidates": 1,
+    "new_accepted_parent_count": 0,
+    "independent_scientific_or_ledger_recomputation": false,
+    "occupancy_note": "Saved user-authorized override is a separate evidence artifact; this review does not assert all-eight holders stopped throughout the wave or independently validate live occupancy."
+  },
+  "batch2_closure_schema_reference": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P11_A_COMMON_POOL_BATCH2_V1_CLOSED.json",
+    "keys": [
+      "campaign_id",
+      "release_id",
+      "release_sha256",
+      "closed_at_utc",
+      "status",
+      "result",
+      "raw_outer_exit_code",
+      "reason",
+      "command_invocations",
+      "claim_count",
+      "claim_consumed",
+      "branch_attempts",
+      "new_paired_parent_count",
+      "remaining_budget_reusable",
+      "future_compute_requires_new_release",
+      "occupancy_restoration",
+      "final_acceptance"
+    ],
+    "status": "consumed_success_closed",
+    "recommendation": "Reuse closure structure for consumed opportunity, immutable RESULT reference, raw exit0, claim1/command1, branch120 and nonreusable remaining budget. Keep 7 full-target and 1 partial-target candidates explicit; do not auto-accept 8 paired parents. final_acceptance and accepted-view count must follow scientific review. Record occupancy override separately from formal 116 caps. A future queue compute release is independent from this consumed release."
+  },
+  "excluded": [
+    "No runtime index payload paths traversed, statted, or hashed; no 15GB raw-data/weight reread or 148k-tree traversal.",
+    "No GPU, NVML, OS hardware, process, holder, launcher, checker, model, or experiment command.",
+    "No authority/release/CONTROL/BOARD/index modification.",
+    "No independent recomputation of scientific labels, formal ledger totals, state equality, or live restoration.",
+    "Queue receipt proves saved enqueue success, not original-thread wakeup, result acceptance, or further compute authorization."
+  ],
+  "unbound_supplemental_files_note": "QUEUE_FINAL_REQUEST/DELIVERY/VERIFICATION postdate the EVIDENCE_MANIFEST. They were separately fingerprinted and content-checked here; their hashes are not claimed to be included in the original 82-entry manifest."
+}

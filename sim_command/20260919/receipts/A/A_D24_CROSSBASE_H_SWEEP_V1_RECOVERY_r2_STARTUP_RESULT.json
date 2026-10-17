@@ -1,0 +1,162 @@
+{
+  "task_id": "A_D24_CROSSBASE_H_SWEEP_V1",
+  "run_id": "A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2",
+  "utc": "2026-09-23T13:16:17.728350+00:00",
+  "status": "RUNNING_STABLE_HANDOFF",
+  "original_event_ack": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1/notifications/chain_terminal/HANDLER_ACK.json",
+  "original_terminal_counts": {
+    "attempts": 2442,
+    "valid": 2061,
+    "technical_failure_attempts": 381,
+    "unentered": 1558
+  },
+  "continuation": {
+    "eligible_units": 1939,
+    "first_entries": 1558,
+    "technical_corrections": 381,
+    "valid_old_units_excluded": 2061,
+    "maximum_projected_stage_attempts": 4381,
+    "original_stage_cap": 4400,
+    "private_repair_restart_ordinal": 1,
+    "stage_order": [
+      [
+        "Post",
+        20
+      ],
+      [
+        "Post",
+        30
+      ],
+      [
+        "Velocity",
+        20
+      ],
+      [
+        "Velocity",
+        30
+      ]
+    ]
+  },
+  "process": {
+    "boot_id": "9011c00c-6953-4cb3-a724-1a6f90d196d4",
+    "host": "trial-303224955-trialrun-303224955-worker-0",
+    "pgid": 3593078,
+    "pid": 3593078,
+    "ppid": 1,
+    "start_ticks": 420878290,
+    "state": "R"
+  },
+  "manager": {
+    "boot_id": "9011c00c-6953-4cb3-a724-1a6f90d196d4",
+    "host": "trial-303224955-trialrun-303224955-worker-0",
+    "pgid": 3594011,
+    "pid": 3594011,
+    "ppid": 3593083,
+    "start_ticks": 420886163,
+    "state": "R"
+  },
+  "Smol_models_ready": 8,
+  "external_encoder_and_aux_services_ready": 8,
+  "actual_L11_four_member_bindings_verified": true,
+  "logical_branch_target": 192,
+  "living_branch_processes_at_snapshot": 191,
+  "active_environment_snapshot": 172,
+  "peak_active_so_far": 188,
+  "first_valid_terminal": {
+    "unit_id": "SmolVLA|D24_MW_t00_e00|Post|G0-multi|20|L11|9101",
+    "result_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/episodes/9ad3b68b5a70a7a5d07bb0534af75a57d17c223ef78e3d85cf5cc2910a3bad8a/RESULT.json",
+    "status": "complete",
+    "success": false,
+    "steps": 300,
+    "interventions": 1,
+    "counters": {
+      "candidate_queries": 1,
+      "environment_initialization_seconds": 0.7200013594701886,
+      "environment_initializations": 1,
+      "environment_resets": 1,
+      "environment_seconds": 86.20437395852059,
+      "environment_steps": 300,
+      "model_service_RPC_seconds": 9.234007998369634,
+      "natural_queries": 16,
+      "policy_flow_calls": 170,
+      "policy_queries": 17,
+      "policy_seconds": 4.319387558847666
+    },
+    "encoder_counters": {
+      "D_forward_calls": 118,
+      "G0_forward_calls": 118,
+      "Q_ensemble_forward_calls": 1,
+      "Q_member_forward_calls": 4,
+      "action_gradient_calls": 1,
+      "encoder_seconds": 4.067573552019894,
+      "language_encoder_calls": 0,
+      "language_encoder_seconds": 0.0,
+      "monitor_calls": 59,
+      "visual_encoder_calls": 291,
+      "visual_observations": 291
+    }
+  },
+  "summary_snapshot": {
+    "utc": "2026-09-23T13:15:58.781350+00:00",
+    "actual_attempts": 272,
+    "valid_new": 80,
+    "technical_missing": 0,
+    "original_stage_cumulative_attempts": 2714,
+    "A_cumulative_attempts": 28010
+  },
+  "whole_wave_holder_policy": "all8_off_including_loading_gaps_and_tail_until_all_owned_processes_exit_and_publication",
+  "holder_exit_ack": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/chain/HOLDER_EXIT_ACK.json",
+    "sha256_at_read": "e77f55212896856dc5e7e84c60b94a762141fb63ddb6d1b8a2be17054a1c7fdf"
+  },
+  "stable_handoff": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/STABLE_HANDOFF.json",
+    "sha256_at_read": "02f85b5c08414581600d351706e31ad15bebfa119947b97335e1f2f77ecfd0c3"
+  },
+  "completion_trigger": {
+    "event": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/outbox/chain_terminal.json",
+    "thread": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+    "ordinary_background_service": true,
+    "no_LLM_ACK_gate": true
+  },
+  "checks": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/CPU_REPAIR_CHECK.json",
+    "sha256_at_read": "a33f67b844e4b0f79c01cb8b58c86cef17db8739f9b262a99c44afcb3d888b40"
+  },
+  "change_review": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/CHANGE_REVIEW.json",
+    "sha256_at_read": "8f63562576dbcce6d429d03edcaee81ec98928309d11e36028419ea852ab4de4"
+  },
+  "evidence": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/CLAIM.json",
+      "sha256_at_read": "58cf4c7997ff75c1d230760b46651ae0817ae9a281620d7230d4d9abc19c8c02"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/CHAIN_COMMAND.json",
+      "sha256_at_read": "d4d23ebcbeb10ffe07039b9203fb00515e96a11517e4391d2210a6a38cc11b2f"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/MODELS_READY.json",
+      "sha256_at_read": "c840e128a1fdc8214004d6bdbb6c19a9afaa67be9ae67e9689263fda02bf8f83"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/ENCODERS_READY.json",
+      "sha256_at_read": "fb0dff9d91ca0b959aa705b0ece638d5079de7d07e6cbe1b9c6b1a27561b1759"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/HEARTBEAT.json",
+      "sha256_at_read": "eaa56fd18d42d8104fbcd5052fd6f8d126642d0761790c555165be7121ad43e0"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/SUMMARY.json",
+      "sha256_at_read": "082f53618d1e1399a65c5a5a924ecfff7ed051b85b82fc32c2189ee67dad066e"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2/CODE_MANIFEST.json",
+      "sha256_at_read": "b957fcfb2d62cf9262ee6b79faaaee9a9ca21181ea29b8771587ce51c8903060"
+    }
+  ],
+  "new_scientific_configuration": false,
+  "original_evidence_preserved": true
+}

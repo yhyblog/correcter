@@ -1,0 +1,84 @@
+{
+  "schema": "corrector_scientific_partial_receipt_acceptance_v1",
+  "issued_at_utc": "2026-09-22T04:38:37.743294+00:00",
+  "issuer": "analysis",
+  "task_id": "A_D24_CORE_REMAINDER_V1",
+  "status": "partial_receipt_accepted_continuation_already_authorized",
+  "task_fully_complete": false,
+  "receipt": {
+    "path": "receipts/A/A_D24_CORE_REMAINDER_V1_RESULT_r1.json",
+    "sha256": "6ceac17f58453d22fbf62c723888429753f0ef5f1b8c6367784374284d6fb573"
+  },
+  "E6": {
+    "accepted_complete": true,
+    "episodes": 200,
+    "G0_success": 26,
+    "D5_success": 30,
+    "test_n_each": 50,
+    "technical_failures": 0,
+    "rerun": false,
+    "analysis": "deadline_20260924/E6_COMPLETED_ANALYSIS_20260922.md",
+    "task_summary_authority": "results/A/A_D24_CORE_REMAINDER_V1/E6_PER_TASK_CELLS.csv"
+  },
+  "E3": {
+    "original_structured_valid": 39,
+    "original_structured_success": 12,
+    "recovered_terminal_valid": 8,
+    "recovered_terminal_success": 8,
+    "accepted_outcomes_total": 47,
+    "accepted_success_total": 20,
+    "publication_failures_preserved": 8,
+    "old_raw_exit": 3,
+    "recovery": {
+      "path": "results/A/A_D24_CORE_REMAINDER_V1/E3_RECOVERED_TERMINAL_PROGRESS_V1.json",
+      "sha256": "323889ec2283dce75ed4ff28b20ff5a060d3011b1e213bb91de74e31b74cb9bb"
+    },
+    "recovery_status": "accepted_log_derived_terminal_success_not_original_RESULT",
+    "source_ids": [
+      "D24_NEW_TEST_coffee-button-v3_00",
+      "D24_NEW_TEST_coffee-pull-v3_02",
+      "D24_NEW_TEST_bin-picking-v3_03",
+      "D24_NEW_TEST_dial-turn-v3_03",
+      "D24_NEW_TEST_button-press-topdown-v3_01",
+      "D24_NEW_TEST_button-press-topdown-wall-v3_00",
+      "D24_NEW_TEST_button-press-v3_00",
+      "D24_NEW_TEST_button-press-wall-v3_00"
+    ],
+    "basis": [
+      "native formula includes current success and current episode denominator before global increment; no reset when changing tasks",
+      "0.1percent displayed precision gives unique boolean true for each record",
+      "worker task/episode to source/envseed/policyseed mapping confirmed",
+      "perworker serialization exception occurs after terminal episode summary; adapter terminates on success"
+    ],
+    "fields_kept_null": [
+      "actual_sampling_calls",
+      "actual_flow_calls",
+      "elapsed_seconds"
+    ],
+    "do_not_replace_costs_with_progress_infer_req_or_timing": true,
+    "use_in_final_success_table": true,
+    "retain_provenance_marker": true,
+    "cost_denominator_must_disclose_missing8": true,
+    "do_not_report_partial47_as_MT50_method_ranking": true,
+    "remaining_unstarted": 453,
+    "replay_47_allowed": false
+  },
+  "continuation_decision_already_effective": {
+    "path": "deadline_20260924/E3_UNSTARTED_CONTINUATION_AUTHORIZATION_V1.json",
+    "sha256": "3a6c62f0a40b4aa5eb08dafa9cef65d15717cb7edcbe505bc951ab37c40f79ad"
+  },
+  "continuation_issued_at_utc": "2026-09-22T04:30:12.880851+00:00",
+  "no_new_release_or_user_approval_needed": true,
+  "GAF_decision_already_effective": {
+    "path": "deadline_20260924/GAF_INTERNAL_HOLDOUT_20260922_V1.json",
+    "sha256": "00164634bff4149593e0110c1bed6491eb0f042f94d2a599157b73a4912c18ec"
+  },
+  "stale_receipt_next_actions_disposition": "requested retry interpretation already resolved; dev0 of original split does not block frozen GAF internal holdout materialization",
+  "cumulative_attempts_at_receipt": 8367,
+  "continuation_attempts_at_receipt": 247,
+  "budget_reset": false,
+  "original_receipts_and_failures_modified": false,
+  "new_compute_performed_by_analysis": false,
+  "dispatch_redelivery_queue_message_id": "01a0c766-a96b-7311-8805-0ee2ed322968",
+  "dispatch_is_not_execution_proof": true
+}

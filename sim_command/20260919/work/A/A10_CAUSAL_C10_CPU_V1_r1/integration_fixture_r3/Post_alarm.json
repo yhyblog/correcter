@@ -1,0 +1,354 @@
+{
+  "status": "C10_and_H20_checked",
+  "step": 16,
+  "remaining": 19,
+  "horizon": 20,
+  "trace": [
+    [
+      "branch_start",
+      {
+        "branch": "Post",
+        "state_restored": false,
+        "shared_prefix": false
+      }
+    ],
+    [
+      "sample",
+      {
+        "label": "prefix",
+        "step": 0
+      }
+    ],
+    [
+      "forecast_created",
+      {
+        "created_at": 0,
+        "target_steps": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "available_observations": [
+          0
+        ],
+        "planned_actions": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.01,
+            0.01,
+            0.01,
+            0.01
+          ],
+          [
+            0.02,
+            0.02,
+            0.02,
+            0.02
+          ],
+          [
+            0.03,
+            0.03,
+            0.03,
+            0.03
+          ],
+          [
+            0.04,
+            0.04,
+            0.04,
+            0.04
+          ]
+        ]
+      }
+    ],
+    [
+      "control",
+      {
+        "index": 0,
+        "plan_id": "native_prefix_H20",
+        "command": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    [
+      "control",
+      {
+        "index": 1,
+        "plan_id": "native_prefix_H20",
+        "command": [
+          0.01,
+          0.01,
+          0.01,
+          0.01
+        ]
+      }
+    ],
+    [
+      "control",
+      {
+        "index": 2,
+        "plan_id": "native_prefix_H20",
+        "command": [
+          0.02,
+          0.02,
+          0.02,
+          0.02
+        ]
+      }
+    ],
+    [
+      "control",
+      {
+        "index": 3,
+        "plan_id": "native_prefix_H20",
+        "command": [
+          0.03,
+          0.03,
+          0.03,
+          0.03
+        ]
+      }
+    ],
+    [
+      "control",
+      {
+        "index": 4,
+        "plan_id": "native_prefix_H20",
+        "command": [
+          0.04,
+          0.04,
+          0.04,
+          0.04
+        ]
+      }
+    ],
+    [
+      "cut_legality",
+      {
+        "step": 5,
+        "legal": true,
+        "reason": "legal_non_natural_cut",
+        "age": 5,
+        "remaining": 15
+      }
+    ],
+    [
+      "trigger_decision",
+      {
+        "step": 5,
+        "real_G0_score": 0.2,
+        "threshold": 0.05,
+        "real_G0_trigger": true,
+        "scheduled_engineering_enabled": true,
+        "forced_engineering_intervention": false,
+        "execute_intervention": true,
+        "residual": [
+          123.0
+        ],
+        "residual_used_by_G0": false,
+        "G0_target": "mean_fresh_minus_old_execute5_then_fixed10",
+        "Q_acceptance_gate": false
+      }
+    ],
+    [
+      "old_H20_queue_discarded",
+      {
+        "plan_id": "native_prefix_H20",
+        "raw_unexecuted": 45,
+        "committed_remaining": 15,
+        "age": 5
+      }
+    ],
+    [
+      "intervene",
+      {
+        "branch": "Post"
+      }
+    ],
+    [
+      "control",
+      {
+        "index": 5,
+        "plan_id": "Post_C10",
+        "command": [
+          0.4,
+          0.4,
+          0.4,
+          0.4
+        ]
+      }
+    ],
+    [
+      "control",
+      {
+        "index": 6,
+        "plan_id": "Post_C10",
+        "command": [
+          0.4,
+          0.4,
+          0.4,
+          0.4
+        ]
+      }
+    ],
+    [
+      "control",
+      {
+        "index": 7,
+        "plan_id": "Post_C10",
+        "command": [
+          0.4,
+          0.4,
+          0.4,
+          0.4
+        ]
+      }
+    ],
+    [
+      "control",
+      {
+        "index": 8,
+        "plan_id": "Post_C10",
+        "command": [
+          0.4,
+          0.4,
+          0.4,
+          0.4
+        ]
+      }
+    ],
+    [
+      "control",
+      {
+        "index": 9,
+        "plan_id": "Post_C10",
+        "command": [
+          0.4,
+          0.4,
+          0.4,
+          0.4
+        ]
+      }
+    ],
+    [
+      "control",
+      {
+        "index": 10,
+        "plan_id": "Post_C10",
+        "command": [
+          0.4,
+          0.4,
+          0.4,
+          0.4
+        ]
+      }
+    ],
+    [
+      "control",
+      {
+        "index": 11,
+        "plan_id": "Post_C10",
+        "command": [
+          0.4,
+          0.4,
+          0.4,
+          0.4
+        ]
+      }
+    ],
+    [
+      "control",
+      {
+        "index": 12,
+        "plan_id": "Post_C10",
+        "command": [
+          0.4,
+          0.4,
+          0.4,
+          0.4
+        ]
+      }
+    ],
+    [
+      "control",
+      {
+        "index": 13,
+        "plan_id": "Post_C10",
+        "command": [
+          0.4,
+          0.4,
+          0.4,
+          0.4
+        ]
+      }
+    ],
+    [
+      "control",
+      {
+        "index": 14,
+        "plan_id": "Post_C10",
+        "command": [
+          0.4,
+          0.4,
+          0.4,
+          0.4
+        ]
+      }
+    ],
+    [
+      "clear_hidden",
+      {}
+    ],
+    [
+      "C10_tail_discarded",
+      {
+        "plan_id": "Post_C10",
+        "raw_unexecuted": 40,
+        "committed_remaining": 0,
+        "age": 10,
+        "hidden_policy_queue_empty": true
+      }
+    ],
+    [
+      "sample",
+      {
+        "label": "restore",
+        "step": 15
+      }
+    ],
+    [
+      "control",
+      {
+        "index": 15,
+        "plan_id": "restored_native_H20",
+        "command": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    [
+      "native_H20_restored",
+      {
+        "step": 16,
+        "remaining": 19,
+        "first_restore_action_executed": true,
+        "first_success": false,
+        "native_terminated": false,
+        "native_truncated": false
+      }
+    ]
+  ]
+}

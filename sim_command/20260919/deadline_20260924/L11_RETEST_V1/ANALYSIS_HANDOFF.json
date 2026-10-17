@@ -1,0 +1,40 @@
+{
+  "issued_at_utc": "2026-09-23T02:21:23.050324+00:00",
+  "status": "THREE_EXECUTORS_ACKNOWLEDGED_PREPARING_AUTOMATIC_FORMAL_QUEUES",
+  "task_ids": [
+    "A_D24_L11_RETEST_V1",
+    "B_D24_L11_RETEST_V1",
+    "C_D24_L11_RETEST_V1"
+  ],
+  "ACKs": {
+    "A": {
+      "path": "receipts/A/A_D24_L11_RETEST_V1_ACK.json",
+      "sha256": "52ec3640d45b2b94ce286b17bd689fef18b5a358830e8f0e195ec24a6643b99e"
+    },
+    "B": {
+      "path": "receipts/B/B_D24_L11_RETEST_V1_ACK.json",
+      "sha256": "e6457e8beb137a42aac0a0eef4f96973835d5ecb43d965f2e5f1cc05cfce10e6"
+    },
+    "C": {
+      "path": "receipts/C/C_D24_L11_RETEST_V1_ACK.json",
+      "sha256": "41df875c95c7cb24e4cdcb5ab97648629bd09fcaa806943f2c3efcef930fa10c"
+    }
+  },
+  "authorization": {
+    "path": "deadline_20260924/L11_RETEST_V1/AUTHORIZATION.json",
+    "sha256": "a978519ba24dfb3aba22cf5ce8472d9b855e788e44266a28e0d006be876d5e87"
+  },
+  "targets": {
+    "per_GPU": 24,
+    "GPUs_per_node": 8,
+    "per_node": 192,
+    "across_ABC": 576
+  },
+  "targets_are_not_measured_actual_concurrency": true,
+  "new_units": 7900,
+  "reused_units": 100,
+  "science_invocations_by_analysis": 0,
+  "shared_control_ready_for_independent_execution": true,
+  "further_approval_required": false,
+  "final_data_policy": "MASTER all versions; PAPER only selected valid L11 Post and eligible independent baseline evidence"
+}

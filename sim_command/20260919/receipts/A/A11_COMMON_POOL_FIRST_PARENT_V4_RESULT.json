@@ -1,0 +1,2032 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A11_COMMON_POOL_FIRST_PARENT_V4",
+  "revision": 1,
+  "owner": "A",
+  "hostname": "trial-303224955-trialrun-303224955-worker-0",
+  "status": "LIMITED_FIRST_PARENT_COLLECTION_COMPLETE",
+  "at_utc": "2026-09-20T13:50:02.820622+00:00",
+  "ACK": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A11_COMMON_POOL_FIRST_PARENT_V4_ACK.json",
+    "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A11_COMMON_POOL_FIRST_PARENT_V4_ACK.json",
+    "sha256": "4c46aef925825f32ed070066b3648c2b4355e2c1df12b1ff7d1b728b18e71ffb",
+    "size_bytes": 8801
+  },
+  "release": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P11_A_COMMON_POOL_FIRST_PARENT_V4.json",
+    "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P11_A_COMMON_POOL_FIRST_PARENT_V4.json",
+    "sha256": "b924b93d2318edcf22dfe36d0bafee6df5feebc02432d26375e4e6ca37d3723a",
+    "size_bytes": 10552
+  },
+  "claim": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_claims/P11_A_COMMON_POOL_FIRST_PARENT_V4.json",
+    "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_claims/P11_A_COMMON_POOL_FIRST_PARENT_V4.json",
+    "sha256": "d931202e27ecdabc48362835ba960341fa3e13bbd149399762c1e9f7216f7aee",
+    "size_bytes": 219
+  },
+  "command_record": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_commands/P11_A_COMMON_POOL_FIRST_PARENT_V4.json",
+    "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_commands/P11_A_COMMON_POOL_FIRST_PARENT_V4.json",
+    "sha256": "792a9b27ef0a6fbe421410ae498ac2320ae1bd948412fdd39d026e105e218d94",
+    "size_bytes": 156
+  },
+  "command_invocations": 1,
+  "claim_count": 1,
+  "raw_exit_code": 0,
+  "elapsed_seconds": 4337.168725160882,
+  "actual_branch_attempts": 15,
+  "actually_started_branches": [
+    "normal",
+    "Q_a0_r0",
+    "Q_a0_r1",
+    "Q_local_plus_r0",
+    "Q_local_plus_r1",
+    "Q_local_minus_r0",
+    "Q_local_minus_r1",
+    "G0_old_r0",
+    "G0_old_r1",
+    "G0_fresh0_r0",
+    "G0_fresh0_r1",
+    "G0_fresh1_r0",
+    "G0_fresh1_r1",
+    "G0_fresh2_r0",
+    "G0_fresh2_r1"
+  ],
+  "not_started_branches": [],
+  "completed_rollouts": 15,
+  "legal_cut_count": 15,
+  "full_state_qualified_attempts": 14,
+  "single_outcome_qualified_attempts": 15,
+  "absolute_s300_count": 12,
+  "legal_early_success_terminals": [
+    {
+      "branch": "Q_local_minus_r1",
+      "first_success_step": 84
+    },
+    {
+      "branch": "G0_fresh1_r0",
+      "first_success_step": 61
+    },
+    {
+      "branch": "G0_fresh2_r0",
+      "first_success_step": 59
+    }
+  ],
+  "complete_repeat_pairs": [
+    {
+      "arm": "Q_a0",
+      "observed_repeat_ids": [
+        0,
+        1
+      ],
+      "both_outcomes_complete": true,
+      "both_full_state_verified": true
+    },
+    {
+      "arm": "Q_local_plus",
+      "observed_repeat_ids": [
+        0,
+        1
+      ],
+      "both_outcomes_complete": true,
+      "both_full_state_verified": true
+    },
+    {
+      "arm": "Q_local_minus",
+      "observed_repeat_ids": [
+        0,
+        1
+      ],
+      "both_outcomes_complete": true,
+      "both_full_state_verified": true
+    },
+    {
+      "arm": "G0_old",
+      "observed_repeat_ids": [
+        0,
+        1
+      ],
+      "both_outcomes_complete": true,
+      "both_full_state_verified": true
+    },
+    {
+      "arm": "G0_fresh0",
+      "observed_repeat_ids": [
+        0,
+        1
+      ],
+      "both_outcomes_complete": true,
+      "both_full_state_verified": true
+    },
+    {
+      "arm": "G0_fresh1",
+      "observed_repeat_ids": [
+        0,
+        1
+      ],
+      "both_outcomes_complete": true,
+      "both_full_state_verified": true
+    },
+    {
+      "arm": "G0_fresh2",
+      "observed_repeat_ids": [
+        0,
+        1
+      ],
+      "both_outcomes_complete": true,
+      "both_full_state_verified": true
+    }
+  ],
+  "qualified_target_labels": {
+    "gain_local_plus": {
+      "target_mask": true,
+      "target": 0.0,
+      "valid_pair_repeat_ids": [
+        0,
+        1
+      ]
+    },
+    "gain_local_minus": {
+      "target_mask": true,
+      "target": 0.5,
+      "valid_pair_repeat_ids": [
+        0,
+        1
+      ]
+    },
+    "pair": {
+      "target_mask": true,
+      "target": -0.5,
+      "valid_pair_repeat_ids": [
+        0,
+        1
+      ]
+    },
+    "G0": {
+      "target_mask": true,
+      "target": 0.3333333333333333,
+      "valid_pair_repeat_ids": [
+        0,
+        1
+      ]
+    }
+  },
+  "success_rate": null,
+  "success_rate_missing_reason": "One fixed planned parent; not a method success-rate sample or ranking.",
+  "per_branch_coverage": [
+    {
+      "family": null,
+      "repeat": null,
+      "result_present": true,
+      "role": "normal",
+      "sidecar_present": true,
+      "started": true,
+      "execution_status": "complete",
+      "controls_returned": 300,
+      "observations_returned": 301,
+      "legal_cut_reached": true,
+      "commitment_steps_returned": 0,
+      "discarded_raw_tail": null,
+      "H10_suffix_resumed": false,
+      "absolute_s300_reached": true,
+      "outcome_complete": true,
+      "success": 0,
+      "success_missing_reason": null,
+      "restore_level": "reference_capture",
+      "full_state_verified": false,
+      "qualification_scope": "normal reference capture only",
+      "intervention_evidence": {
+        "commitment_entered": false,
+        "entry_event_id": null,
+        "kind": "not_entered",
+        "online_G0_triggered": false,
+        "plan_key": null,
+        "plan_replaced": false,
+        "returned_commitment_steps": 0
+      },
+      "sidecar_restoration": {
+        "level": "not_applicable",
+        "observed_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/CUT_STATE.json",
+          "sha256": "efa57b3ff2ede1176fcd996fe01f4e8e4c5afe9073495ecb65649e77b97c53f6"
+        },
+        "reference_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/CUT_REFERENCE.json",
+          "sha256": "20378be5c561369e5d5dedc4c89e0686f30eca5ec6909b54ac7a54b3f4fe02ad"
+        },
+        "schema_sha256": "76f432ac03c4c9d24ecb4557db4371fe2d4d4d61643094b9c9b2d3f0b233ecdc",
+        "unknown_fields": [
+          "no_paired_state_comparison"
+        ],
+        "verification_ref": null
+      },
+      "single_outcome_qualified": true,
+      "repeat_metadata": {
+        "comparison_arms": [],
+        "complete_repeat_ids": [],
+        "completed": true,
+        "entered": true,
+        "missing": false,
+        "paired_members": [],
+        "planned": true,
+        "planned_repeat_ids": [],
+        "repeat_id": null,
+        "valid_pair_repeat_ids": []
+      }
+    },
+    {
+      "family": "a0",
+      "repeat": 0,
+      "result_present": true,
+      "role": "Q_a0_r0",
+      "sidecar_present": true,
+      "started": true,
+      "execution_status": "complete",
+      "controls_returned": 300,
+      "observations_returned": 301,
+      "legal_cut_reached": true,
+      "commitment_steps_returned": 10,
+      "discarded_raw_tail": 40,
+      "H10_suffix_resumed": true,
+      "absolute_s300_reached": true,
+      "outcome_complete": true,
+      "success": 0,
+      "success_missing_reason": null,
+      "restore_level": "full_state_verified",
+      "full_state_verified": true,
+      "qualification_scope": "exact captured fields under frozen closure contract; no broader hidden-state theorem",
+      "intervention_evidence": {
+        "commitment_entered": true,
+        "entry_event_id": 4,
+        "kind": "forced_collection_candidate",
+        "online_G0_triggered": false,
+        "plan_key": "a0",
+        "plan_replaced": true,
+        "returned_commitment_steps": 10
+      },
+      "sidecar_restoration": {
+        "level": "full_state_verified",
+        "observed_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/Q_a0_r0/CUT_STATE.json",
+          "sha256": "efa57b3ff2ede1176fcd996fe01f4e8e4c5afe9073495ecb65649e77b97c53f6"
+        },
+        "reference_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/CUT_REFERENCE.json",
+          "sha256": "20378be5c561369e5d5dedc4c89e0686f30eca5ec6909b54ac7a54b3f4fe02ad"
+        },
+        "schema_sha256": "76f432ac03c4c9d24ecb4557db4371fe2d4d4d61643094b9c9b2d3f0b233ecdc",
+        "unknown_fields": [],
+        "verification_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/Q_a0_r0/STATE_VERIFICATION.json",
+          "sha256": "85238cc9ee3f361d08b7746bb8c4e246dbb171a69ef1e376477448c31ac54aa8"
+        }
+      },
+      "single_outcome_qualified": true,
+      "repeat_metadata": {
+        "comparison_arms": [],
+        "complete_repeat_ids": [
+          0
+        ],
+        "completed": true,
+        "entered": true,
+        "missing": false,
+        "paired_members": [],
+        "planned": true,
+        "planned_repeat_ids": [
+          0,
+          1
+        ],
+        "repeat_id": 0,
+        "valid_pair_repeat_ids": []
+      }
+    },
+    {
+      "family": "a0",
+      "repeat": 1,
+      "result_present": true,
+      "role": "Q_a0_r1",
+      "sidecar_present": true,
+      "started": true,
+      "execution_status": "complete",
+      "controls_returned": 300,
+      "observations_returned": 301,
+      "legal_cut_reached": true,
+      "commitment_steps_returned": 10,
+      "discarded_raw_tail": 40,
+      "H10_suffix_resumed": true,
+      "absolute_s300_reached": true,
+      "outcome_complete": true,
+      "success": 0,
+      "success_missing_reason": null,
+      "restore_level": "full_state_verified",
+      "full_state_verified": true,
+      "qualification_scope": "exact captured fields under frozen closure contract; no broader hidden-state theorem",
+      "intervention_evidence": {
+        "commitment_entered": true,
+        "entry_event_id": 4,
+        "kind": "forced_collection_candidate",
+        "online_G0_triggered": false,
+        "plan_key": "a0",
+        "plan_replaced": true,
+        "returned_commitment_steps": 10
+      },
+      "sidecar_restoration": {
+        "level": "full_state_verified",
+        "observed_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/Q_a0_r1/CUT_STATE.json",
+          "sha256": "efa57b3ff2ede1176fcd996fe01f4e8e4c5afe9073495ecb65649e77b97c53f6"
+        },
+        "reference_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/CUT_REFERENCE.json",
+          "sha256": "20378be5c561369e5d5dedc4c89e0686f30eca5ec6909b54ac7a54b3f4fe02ad"
+        },
+        "schema_sha256": "76f432ac03c4c9d24ecb4557db4371fe2d4d4d61643094b9c9b2d3f0b233ecdc",
+        "unknown_fields": [],
+        "verification_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/Q_a0_r1/STATE_VERIFICATION.json",
+          "sha256": "85238cc9ee3f361d08b7746bb8c4e246dbb171a69ef1e376477448c31ac54aa8"
+        }
+      },
+      "single_outcome_qualified": true,
+      "repeat_metadata": {
+        "comparison_arms": [],
+        "complete_repeat_ids": [
+          1
+        ],
+        "completed": true,
+        "entered": true,
+        "missing": false,
+        "paired_members": [],
+        "planned": true,
+        "planned_repeat_ids": [
+          0,
+          1
+        ],
+        "repeat_id": 1,
+        "valid_pair_repeat_ids": []
+      }
+    },
+    {
+      "family": "local_plus",
+      "repeat": 0,
+      "result_present": true,
+      "role": "Q_local_plus_r0",
+      "sidecar_present": true,
+      "started": true,
+      "execution_status": "complete",
+      "controls_returned": 300,
+      "observations_returned": 301,
+      "legal_cut_reached": true,
+      "commitment_steps_returned": 10,
+      "discarded_raw_tail": 40,
+      "H10_suffix_resumed": true,
+      "absolute_s300_reached": true,
+      "outcome_complete": true,
+      "success": 0,
+      "success_missing_reason": null,
+      "restore_level": "full_state_verified",
+      "full_state_verified": true,
+      "qualification_scope": "exact captured fields under frozen closure contract; no broader hidden-state theorem",
+      "intervention_evidence": {
+        "commitment_entered": true,
+        "entry_event_id": 4,
+        "kind": "forced_collection_candidate",
+        "online_G0_triggered": false,
+        "plan_key": "local_plus",
+        "plan_replaced": true,
+        "returned_commitment_steps": 10
+      },
+      "sidecar_restoration": {
+        "level": "full_state_verified",
+        "observed_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/Q_local_plus_r0/CUT_STATE.json",
+          "sha256": "efa57b3ff2ede1176fcd996fe01f4e8e4c5afe9073495ecb65649e77b97c53f6"
+        },
+        "reference_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/CUT_REFERENCE.json",
+          "sha256": "20378be5c561369e5d5dedc4c89e0686f30eca5ec6909b54ac7a54b3f4fe02ad"
+        },
+        "schema_sha256": "76f432ac03c4c9d24ecb4557db4371fe2d4d4d61643094b9c9b2d3f0b233ecdc",
+        "unknown_fields": [],
+        "verification_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/Q_local_plus_r0/STATE_VERIFICATION.json",
+          "sha256": "85238cc9ee3f361d08b7746bb8c4e246dbb171a69ef1e376477448c31ac54aa8"
+        }
+      },
+      "single_outcome_qualified": true,
+      "repeat_metadata": {
+        "comparison_arms": [],
+        "complete_repeat_ids": [
+          0
+        ],
+        "completed": true,
+        "entered": true,
+        "missing": false,
+        "paired_members": [],
+        "planned": true,
+        "planned_repeat_ids": [
+          0,
+          1
+        ],
+        "repeat_id": 0,
+        "valid_pair_repeat_ids": []
+      }
+    },
+    {
+      "family": "local_plus",
+      "repeat": 1,
+      "result_present": true,
+      "role": "Q_local_plus_r1",
+      "sidecar_present": true,
+      "started": true,
+      "execution_status": "complete",
+      "controls_returned": 300,
+      "observations_returned": 301,
+      "legal_cut_reached": true,
+      "commitment_steps_returned": 10,
+      "discarded_raw_tail": 40,
+      "H10_suffix_resumed": true,
+      "absolute_s300_reached": true,
+      "outcome_complete": true,
+      "success": 0,
+      "success_missing_reason": null,
+      "restore_level": "full_state_verified",
+      "full_state_verified": true,
+      "qualification_scope": "exact captured fields under frozen closure contract; no broader hidden-state theorem",
+      "intervention_evidence": {
+        "commitment_entered": true,
+        "entry_event_id": 4,
+        "kind": "forced_collection_candidate",
+        "online_G0_triggered": false,
+        "plan_key": "local_plus",
+        "plan_replaced": true,
+        "returned_commitment_steps": 10
+      },
+      "sidecar_restoration": {
+        "level": "full_state_verified",
+        "observed_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/Q_local_plus_r1/CUT_STATE.json",
+          "sha256": "efa57b3ff2ede1176fcd996fe01f4e8e4c5afe9073495ecb65649e77b97c53f6"
+        },
+        "reference_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/CUT_REFERENCE.json",
+          "sha256": "20378be5c561369e5d5dedc4c89e0686f30eca5ec6909b54ac7a54b3f4fe02ad"
+        },
+        "schema_sha256": "76f432ac03c4c9d24ecb4557db4371fe2d4d4d61643094b9c9b2d3f0b233ecdc",
+        "unknown_fields": [],
+        "verification_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/Q_local_plus_r1/STATE_VERIFICATION.json",
+          "sha256": "85238cc9ee3f361d08b7746bb8c4e246dbb171a69ef1e376477448c31ac54aa8"
+        }
+      },
+      "single_outcome_qualified": true,
+      "repeat_metadata": {
+        "comparison_arms": [],
+        "complete_repeat_ids": [
+          1
+        ],
+        "completed": true,
+        "entered": true,
+        "missing": false,
+        "paired_members": [],
+        "planned": true,
+        "planned_repeat_ids": [
+          0,
+          1
+        ],
+        "repeat_id": 1,
+        "valid_pair_repeat_ids": []
+      }
+    },
+    {
+      "family": "local_minus",
+      "repeat": 0,
+      "result_present": true,
+      "role": "Q_local_minus_r0",
+      "sidecar_present": true,
+      "started": true,
+      "execution_status": "complete",
+      "controls_returned": 300,
+      "observations_returned": 301,
+      "legal_cut_reached": true,
+      "commitment_steps_returned": 10,
+      "discarded_raw_tail": 40,
+      "H10_suffix_resumed": true,
+      "absolute_s300_reached": true,
+      "outcome_complete": true,
+      "success": 0,
+      "success_missing_reason": null,
+      "restore_level": "full_state_verified",
+      "full_state_verified": true,
+      "qualification_scope": "exact captured fields under frozen closure contract; no broader hidden-state theorem",
+      "intervention_evidence": {
+        "commitment_entered": true,
+        "entry_event_id": 4,
+        "kind": "forced_collection_candidate",
+        "online_G0_triggered": false,
+        "plan_key": "local_minus",
+        "plan_replaced": true,
+        "returned_commitment_steps": 10
+      },
+      "sidecar_restoration": {
+        "level": "full_state_verified",
+        "observed_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/Q_local_minus_r0/CUT_STATE.json",
+          "sha256": "efa57b3ff2ede1176fcd996fe01f4e8e4c5afe9073495ecb65649e77b97c53f6"
+        },
+        "reference_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/CUT_REFERENCE.json",
+          "sha256": "20378be5c561369e5d5dedc4c89e0686f30eca5ec6909b54ac7a54b3f4fe02ad"
+        },
+        "schema_sha256": "76f432ac03c4c9d24ecb4557db4371fe2d4d4d61643094b9c9b2d3f0b233ecdc",
+        "unknown_fields": [],
+        "verification_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/Q_local_minus_r0/STATE_VERIFICATION.json",
+          "sha256": "85238cc9ee3f361d08b7746bb8c4e246dbb171a69ef1e376477448c31ac54aa8"
+        }
+      },
+      "single_outcome_qualified": true,
+      "repeat_metadata": {
+        "comparison_arms": [],
+        "complete_repeat_ids": [
+          0
+        ],
+        "completed": true,
+        "entered": true,
+        "missing": false,
+        "paired_members": [],
+        "planned": true,
+        "planned_repeat_ids": [
+          0,
+          1
+        ],
+        "repeat_id": 0,
+        "valid_pair_repeat_ids": []
+      }
+    },
+    {
+      "family": "local_minus",
+      "repeat": 1,
+      "result_present": true,
+      "role": "Q_local_minus_r1",
+      "sidecar_present": true,
+      "started": true,
+      "execution_status": "complete",
+      "controls_returned": 84,
+      "observations_returned": 85,
+      "legal_cut_reached": true,
+      "commitment_steps_returned": 10,
+      "discarded_raw_tail": 40,
+      "H10_suffix_resumed": true,
+      "absolute_s300_reached": false,
+      "outcome_complete": true,
+      "success": 1,
+      "success_missing_reason": null,
+      "restore_level": "full_state_verified",
+      "full_state_verified": true,
+      "qualification_scope": "exact captured fields under frozen closure contract; no broader hidden-state theorem",
+      "intervention_evidence": {
+        "commitment_entered": true,
+        "entry_event_id": 4,
+        "kind": "forced_collection_candidate",
+        "online_G0_triggered": false,
+        "plan_key": "local_minus",
+        "plan_replaced": true,
+        "returned_commitment_steps": 10
+      },
+      "sidecar_restoration": {
+        "level": "full_state_verified",
+        "observed_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/Q_local_minus_r1/CUT_STATE.json",
+          "sha256": "efa57b3ff2ede1176fcd996fe01f4e8e4c5afe9073495ecb65649e77b97c53f6"
+        },
+        "reference_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/CUT_REFERENCE.json",
+          "sha256": "20378be5c561369e5d5dedc4c89e0686f30eca5ec6909b54ac7a54b3f4fe02ad"
+        },
+        "schema_sha256": "76f432ac03c4c9d24ecb4557db4371fe2d4d4d61643094b9c9b2d3f0b233ecdc",
+        "unknown_fields": [],
+        "verification_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/Q_local_minus_r1/STATE_VERIFICATION.json",
+          "sha256": "85238cc9ee3f361d08b7746bb8c4e246dbb171a69ef1e376477448c31ac54aa8"
+        }
+      },
+      "single_outcome_qualified": true,
+      "repeat_metadata": {
+        "comparison_arms": [],
+        "complete_repeat_ids": [
+          1
+        ],
+        "completed": true,
+        "entered": true,
+        "missing": false,
+        "paired_members": [],
+        "planned": true,
+        "planned_repeat_ids": [
+          0,
+          1
+        ],
+        "repeat_id": 1,
+        "valid_pair_repeat_ids": []
+      }
+    },
+    {
+      "family": "old",
+      "repeat": 0,
+      "result_present": true,
+      "role": "G0_old_r0",
+      "sidecar_present": true,
+      "started": true,
+      "execution_status": "complete",
+      "controls_returned": 300,
+      "observations_returned": 301,
+      "legal_cut_reached": true,
+      "commitment_steps_returned": 5,
+      "discarded_raw_tail": 40,
+      "H10_suffix_resumed": true,
+      "absolute_s300_reached": true,
+      "outcome_complete": true,
+      "success": 0,
+      "success_missing_reason": null,
+      "restore_level": "full_state_verified",
+      "full_state_verified": true,
+      "qualification_scope": "exact captured fields under frozen closure contract; no broader hidden-state theorem",
+      "intervention_evidence": {
+        "commitment_entered": true,
+        "entry_event_id": 4,
+        "kind": "old_queue_control",
+        "online_G0_triggered": false,
+        "plan_key": "old",
+        "plan_replaced": false,
+        "returned_commitment_steps": 5
+      },
+      "sidecar_restoration": {
+        "level": "full_state_verified",
+        "observed_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/G0_old_r0/CUT_STATE.json",
+          "sha256": "efa57b3ff2ede1176fcd996fe01f4e8e4c5afe9073495ecb65649e77b97c53f6"
+        },
+        "reference_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/CUT_REFERENCE.json",
+          "sha256": "20378be5c561369e5d5dedc4c89e0686f30eca5ec6909b54ac7a54b3f4fe02ad"
+        },
+        "schema_sha256": "76f432ac03c4c9d24ecb4557db4371fe2d4d4d61643094b9c9b2d3f0b233ecdc",
+        "unknown_fields": [],
+        "verification_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/G0_old_r0/STATE_VERIFICATION.json",
+          "sha256": "85238cc9ee3f361d08b7746bb8c4e246dbb171a69ef1e376477448c31ac54aa8"
+        }
+      },
+      "single_outcome_qualified": true,
+      "repeat_metadata": {
+        "comparison_arms": [],
+        "complete_repeat_ids": [
+          0
+        ],
+        "completed": true,
+        "entered": true,
+        "missing": false,
+        "paired_members": [],
+        "planned": true,
+        "planned_repeat_ids": [
+          0,
+          1
+        ],
+        "repeat_id": 0,
+        "valid_pair_repeat_ids": []
+      }
+    },
+    {
+      "family": "old",
+      "repeat": 1,
+      "result_present": true,
+      "role": "G0_old_r1",
+      "sidecar_present": true,
+      "started": true,
+      "execution_status": "complete",
+      "controls_returned": 300,
+      "observations_returned": 301,
+      "legal_cut_reached": true,
+      "commitment_steps_returned": 5,
+      "discarded_raw_tail": 40,
+      "H10_suffix_resumed": true,
+      "absolute_s300_reached": true,
+      "outcome_complete": true,
+      "success": 0,
+      "success_missing_reason": null,
+      "restore_level": "full_state_verified",
+      "full_state_verified": true,
+      "qualification_scope": "exact captured fields under frozen closure contract; no broader hidden-state theorem",
+      "intervention_evidence": {
+        "commitment_entered": true,
+        "entry_event_id": 4,
+        "kind": "old_queue_control",
+        "online_G0_triggered": false,
+        "plan_key": "old",
+        "plan_replaced": false,
+        "returned_commitment_steps": 5
+      },
+      "sidecar_restoration": {
+        "level": "full_state_verified",
+        "observed_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/G0_old_r1/CUT_STATE.json",
+          "sha256": "efa57b3ff2ede1176fcd996fe01f4e8e4c5afe9073495ecb65649e77b97c53f6"
+        },
+        "reference_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/CUT_REFERENCE.json",
+          "sha256": "20378be5c561369e5d5dedc4c89e0686f30eca5ec6909b54ac7a54b3f4fe02ad"
+        },
+        "schema_sha256": "76f432ac03c4c9d24ecb4557db4371fe2d4d4d61643094b9c9b2d3f0b233ecdc",
+        "unknown_fields": [],
+        "verification_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/G0_old_r1/STATE_VERIFICATION.json",
+          "sha256": "85238cc9ee3f361d08b7746bb8c4e246dbb171a69ef1e376477448c31ac54aa8"
+        }
+      },
+      "single_outcome_qualified": true,
+      "repeat_metadata": {
+        "comparison_arms": [],
+        "complete_repeat_ids": [
+          1
+        ],
+        "completed": true,
+        "entered": true,
+        "missing": false,
+        "paired_members": [],
+        "planned": true,
+        "planned_repeat_ids": [
+          0,
+          1
+        ],
+        "repeat_id": 1,
+        "valid_pair_repeat_ids": []
+      }
+    },
+    {
+      "family": "fresh0",
+      "repeat": 0,
+      "result_present": true,
+      "role": "G0_fresh0_r0",
+      "sidecar_present": true,
+      "started": true,
+      "execution_status": "complete",
+      "controls_returned": 300,
+      "observations_returned": 301,
+      "legal_cut_reached": true,
+      "commitment_steps_returned": 5,
+      "discarded_raw_tail": 45,
+      "H10_suffix_resumed": true,
+      "absolute_s300_reached": true,
+      "outcome_complete": true,
+      "success": 0,
+      "success_missing_reason": null,
+      "restore_level": "full_state_verified",
+      "full_state_verified": true,
+      "qualification_scope": "exact captured fields under frozen closure contract; no broader hidden-state theorem",
+      "intervention_evidence": {
+        "commitment_entered": true,
+        "entry_event_id": 4,
+        "kind": "forced_collection_candidate",
+        "online_G0_triggered": false,
+        "plan_key": "fresh0",
+        "plan_replaced": true,
+        "returned_commitment_steps": 5
+      },
+      "sidecar_restoration": {
+        "level": "full_state_verified",
+        "observed_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/G0_fresh0_r0/CUT_STATE.json",
+          "sha256": "efa57b3ff2ede1176fcd996fe01f4e8e4c5afe9073495ecb65649e77b97c53f6"
+        },
+        "reference_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/CUT_REFERENCE.json",
+          "sha256": "20378be5c561369e5d5dedc4c89e0686f30eca5ec6909b54ac7a54b3f4fe02ad"
+        },
+        "schema_sha256": "76f432ac03c4c9d24ecb4557db4371fe2d4d4d61643094b9c9b2d3f0b233ecdc",
+        "unknown_fields": [],
+        "verification_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/G0_fresh0_r0/STATE_VERIFICATION.json",
+          "sha256": "85238cc9ee3f361d08b7746bb8c4e246dbb171a69ef1e376477448c31ac54aa8"
+        }
+      },
+      "single_outcome_qualified": true,
+      "repeat_metadata": {
+        "comparison_arms": [],
+        "complete_repeat_ids": [
+          0
+        ],
+        "completed": true,
+        "entered": true,
+        "missing": false,
+        "paired_members": [],
+        "planned": true,
+        "planned_repeat_ids": [
+          0,
+          1
+        ],
+        "repeat_id": 0,
+        "valid_pair_repeat_ids": []
+      }
+    },
+    {
+      "family": "fresh0",
+      "repeat": 1,
+      "result_present": true,
+      "role": "G0_fresh0_r1",
+      "sidecar_present": true,
+      "started": true,
+      "execution_status": "complete",
+      "controls_returned": 300,
+      "observations_returned": 301,
+      "legal_cut_reached": true,
+      "commitment_steps_returned": 5,
+      "discarded_raw_tail": 45,
+      "H10_suffix_resumed": true,
+      "absolute_s300_reached": true,
+      "outcome_complete": true,
+      "success": 0,
+      "success_missing_reason": null,
+      "restore_level": "full_state_verified",
+      "full_state_verified": true,
+      "qualification_scope": "exact captured fields under frozen closure contract; no broader hidden-state theorem",
+      "intervention_evidence": {
+        "commitment_entered": true,
+        "entry_event_id": 4,
+        "kind": "forced_collection_candidate",
+        "online_G0_triggered": false,
+        "plan_key": "fresh0",
+        "plan_replaced": true,
+        "returned_commitment_steps": 5
+      },
+      "sidecar_restoration": {
+        "level": "full_state_verified",
+        "observed_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/G0_fresh0_r1/CUT_STATE.json",
+          "sha256": "efa57b3ff2ede1176fcd996fe01f4e8e4c5afe9073495ecb65649e77b97c53f6"
+        },
+        "reference_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/CUT_REFERENCE.json",
+          "sha256": "20378be5c561369e5d5dedc4c89e0686f30eca5ec6909b54ac7a54b3f4fe02ad"
+        },
+        "schema_sha256": "76f432ac03c4c9d24ecb4557db4371fe2d4d4d61643094b9c9b2d3f0b233ecdc",
+        "unknown_fields": [],
+        "verification_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/G0_fresh0_r1/STATE_VERIFICATION.json",
+          "sha256": "85238cc9ee3f361d08b7746bb8c4e246dbb171a69ef1e376477448c31ac54aa8"
+        }
+      },
+      "single_outcome_qualified": true,
+      "repeat_metadata": {
+        "comparison_arms": [],
+        "complete_repeat_ids": [
+          1
+        ],
+        "completed": true,
+        "entered": true,
+        "missing": false,
+        "paired_members": [],
+        "planned": true,
+        "planned_repeat_ids": [
+          0,
+          1
+        ],
+        "repeat_id": 1,
+        "valid_pair_repeat_ids": []
+      }
+    },
+    {
+      "family": "fresh1",
+      "repeat": 0,
+      "result_present": true,
+      "role": "G0_fresh1_r0",
+      "sidecar_present": true,
+      "started": true,
+      "execution_status": "complete",
+      "controls_returned": 61,
+      "observations_returned": 62,
+      "legal_cut_reached": true,
+      "commitment_steps_returned": 5,
+      "discarded_raw_tail": 45,
+      "H10_suffix_resumed": true,
+      "absolute_s300_reached": false,
+      "outcome_complete": true,
+      "success": 1,
+      "success_missing_reason": null,
+      "restore_level": "full_state_verified",
+      "full_state_verified": true,
+      "qualification_scope": "exact captured fields under frozen closure contract; no broader hidden-state theorem",
+      "intervention_evidence": {
+        "commitment_entered": true,
+        "entry_event_id": 4,
+        "kind": "forced_collection_candidate",
+        "online_G0_triggered": false,
+        "plan_key": "fresh1",
+        "plan_replaced": true,
+        "returned_commitment_steps": 5
+      },
+      "sidecar_restoration": {
+        "level": "full_state_verified",
+        "observed_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/G0_fresh1_r0/CUT_STATE.json",
+          "sha256": "efa57b3ff2ede1176fcd996fe01f4e8e4c5afe9073495ecb65649e77b97c53f6"
+        },
+        "reference_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/CUT_REFERENCE.json",
+          "sha256": "20378be5c561369e5d5dedc4c89e0686f30eca5ec6909b54ac7a54b3f4fe02ad"
+        },
+        "schema_sha256": "76f432ac03c4c9d24ecb4557db4371fe2d4d4d61643094b9c9b2d3f0b233ecdc",
+        "unknown_fields": [],
+        "verification_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/G0_fresh1_r0/STATE_VERIFICATION.json",
+          "sha256": "85238cc9ee3f361d08b7746bb8c4e246dbb171a69ef1e376477448c31ac54aa8"
+        }
+      },
+      "single_outcome_qualified": true,
+      "repeat_metadata": {
+        "comparison_arms": [],
+        "complete_repeat_ids": [
+          0
+        ],
+        "completed": true,
+        "entered": true,
+        "missing": false,
+        "paired_members": [],
+        "planned": true,
+        "planned_repeat_ids": [
+          0,
+          1
+        ],
+        "repeat_id": 0,
+        "valid_pair_repeat_ids": []
+      }
+    },
+    {
+      "family": "fresh1",
+      "repeat": 1,
+      "result_present": true,
+      "role": "G0_fresh1_r1",
+      "sidecar_present": true,
+      "started": true,
+      "execution_status": "complete",
+      "controls_returned": 300,
+      "observations_returned": 301,
+      "legal_cut_reached": true,
+      "commitment_steps_returned": 5,
+      "discarded_raw_tail": 45,
+      "H10_suffix_resumed": true,
+      "absolute_s300_reached": true,
+      "outcome_complete": true,
+      "success": 0,
+      "success_missing_reason": null,
+      "restore_level": "full_state_verified",
+      "full_state_verified": true,
+      "qualification_scope": "exact captured fields under frozen closure contract; no broader hidden-state theorem",
+      "intervention_evidence": {
+        "commitment_entered": true,
+        "entry_event_id": 4,
+        "kind": "forced_collection_candidate",
+        "online_G0_triggered": false,
+        "plan_key": "fresh1",
+        "plan_replaced": true,
+        "returned_commitment_steps": 5
+      },
+      "sidecar_restoration": {
+        "level": "full_state_verified",
+        "observed_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/G0_fresh1_r1/CUT_STATE.json",
+          "sha256": "efa57b3ff2ede1176fcd996fe01f4e8e4c5afe9073495ecb65649e77b97c53f6"
+        },
+        "reference_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/CUT_REFERENCE.json",
+          "sha256": "20378be5c561369e5d5dedc4c89e0686f30eca5ec6909b54ac7a54b3f4fe02ad"
+        },
+        "schema_sha256": "76f432ac03c4c9d24ecb4557db4371fe2d4d4d61643094b9c9b2d3f0b233ecdc",
+        "unknown_fields": [],
+        "verification_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/G0_fresh1_r1/STATE_VERIFICATION.json",
+          "sha256": "85238cc9ee3f361d08b7746bb8c4e246dbb171a69ef1e376477448c31ac54aa8"
+        }
+      },
+      "single_outcome_qualified": true,
+      "repeat_metadata": {
+        "comparison_arms": [],
+        "complete_repeat_ids": [
+          1
+        ],
+        "completed": true,
+        "entered": true,
+        "missing": false,
+        "paired_members": [],
+        "planned": true,
+        "planned_repeat_ids": [
+          0,
+          1
+        ],
+        "repeat_id": 1,
+        "valid_pair_repeat_ids": []
+      }
+    },
+    {
+      "family": "fresh2",
+      "repeat": 0,
+      "result_present": true,
+      "role": "G0_fresh2_r0",
+      "sidecar_present": true,
+      "started": true,
+      "execution_status": "complete",
+      "controls_returned": 59,
+      "observations_returned": 60,
+      "legal_cut_reached": true,
+      "commitment_steps_returned": 5,
+      "discarded_raw_tail": 45,
+      "H10_suffix_resumed": true,
+      "absolute_s300_reached": false,
+      "outcome_complete": true,
+      "success": 1,
+      "success_missing_reason": null,
+      "restore_level": "full_state_verified",
+      "full_state_verified": true,
+      "qualification_scope": "exact captured fields under frozen closure contract; no broader hidden-state theorem",
+      "intervention_evidence": {
+        "commitment_entered": true,
+        "entry_event_id": 4,
+        "kind": "forced_collection_candidate",
+        "online_G0_triggered": false,
+        "plan_key": "fresh2",
+        "plan_replaced": true,
+        "returned_commitment_steps": 5
+      },
+      "sidecar_restoration": {
+        "level": "full_state_verified",
+        "observed_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/G0_fresh2_r0/CUT_STATE.json",
+          "sha256": "efa57b3ff2ede1176fcd996fe01f4e8e4c5afe9073495ecb65649e77b97c53f6"
+        },
+        "reference_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/CUT_REFERENCE.json",
+          "sha256": "20378be5c561369e5d5dedc4c89e0686f30eca5ec6909b54ac7a54b3f4fe02ad"
+        },
+        "schema_sha256": "76f432ac03c4c9d24ecb4557db4371fe2d4d4d61643094b9c9b2d3f0b233ecdc",
+        "unknown_fields": [],
+        "verification_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/G0_fresh2_r0/STATE_VERIFICATION.json",
+          "sha256": "85238cc9ee3f361d08b7746bb8c4e246dbb171a69ef1e376477448c31ac54aa8"
+        }
+      },
+      "single_outcome_qualified": true,
+      "repeat_metadata": {
+        "comparison_arms": [],
+        "complete_repeat_ids": [
+          0
+        ],
+        "completed": true,
+        "entered": true,
+        "missing": false,
+        "paired_members": [],
+        "planned": true,
+        "planned_repeat_ids": [
+          0,
+          1
+        ],
+        "repeat_id": 0,
+        "valid_pair_repeat_ids": []
+      }
+    },
+    {
+      "family": "fresh2",
+      "repeat": 1,
+      "result_present": true,
+      "role": "G0_fresh2_r1",
+      "sidecar_present": true,
+      "started": true,
+      "execution_status": "complete",
+      "controls_returned": 300,
+      "observations_returned": 301,
+      "legal_cut_reached": true,
+      "commitment_steps_returned": 5,
+      "discarded_raw_tail": 45,
+      "H10_suffix_resumed": true,
+      "absolute_s300_reached": true,
+      "outcome_complete": true,
+      "success": 0,
+      "success_missing_reason": null,
+      "restore_level": "full_state_verified",
+      "full_state_verified": true,
+      "qualification_scope": "exact captured fields under frozen closure contract; no broader hidden-state theorem",
+      "intervention_evidence": {
+        "commitment_entered": true,
+        "entry_event_id": 4,
+        "kind": "forced_collection_candidate",
+        "online_G0_triggered": false,
+        "plan_key": "fresh2",
+        "plan_replaced": true,
+        "returned_commitment_steps": 5
+      },
+      "sidecar_restoration": {
+        "level": "full_state_verified",
+        "observed_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/G0_fresh2_r1/CUT_STATE.json",
+          "sha256": "efa57b3ff2ede1176fcd996fe01f4e8e4c5afe9073495ecb65649e77b97c53f6"
+        },
+        "reference_state_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/CUT_REFERENCE.json",
+          "sha256": "20378be5c561369e5d5dedc4c89e0686f30eca5ec6909b54ac7a54b3f4fe02ad"
+        },
+        "schema_sha256": "76f432ac03c4c9d24ecb4557db4371fe2d4d4d61643094b9c9b2d3f0b233ecdc",
+        "unknown_fields": [],
+        "verification_ref": {
+          "format": "json",
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/G0_fresh2_r1/STATE_VERIFICATION.json",
+          "sha256": "85238cc9ee3f361d08b7746bb8c4e246dbb171a69ef1e376477448c31ac54aa8"
+        }
+      },
+      "single_outcome_qualified": true,
+      "repeat_metadata": {
+        "comparison_arms": [],
+        "complete_repeat_ids": [
+          1
+        ],
+        "completed": true,
+        "entered": true,
+        "missing": false,
+        "paired_members": [],
+        "planned": true,
+        "planned_repeat_ids": [
+          0,
+          1
+        ],
+        "repeat_id": 1,
+        "valid_pair_repeat_ids": []
+      }
+    }
+  ],
+  "state_qualification_scope": "Frozen captured-field/MJB closure only; physical_equality_proven remains null.",
+  "source": {
+    "absolute_target": 300,
+    "cut": 5,
+    "env_seed": 2026092000,
+    "instruction": "Pick and place a puck onto a shelf",
+    "local_probe_rng": "CPython3.12 random.Random.gauss;12 nodes; independent seed derived by pool_protocol.stream_seed",
+    "master_seed": 2026092001,
+    "parent_source_id": "PROPOSED_MT50_shelf_train_0000_parent",
+    "policy_noise_rng": "torch.Generator on fixed target device; exact saved float32(1,50,32) noise",
+    "prefix_mode": "cold_policy_replay",
+    "purpose": "first planned parent of coverage batch; not extra diagnostic",
+    "selection": "fixed proposed ordinal0 train cut5; no outcome-dependent seed replacement",
+    "source_id": "PROPOSED_MT50_shelf_train_0000",
+    "split": "train",
+    "status": "UNAUTHORIZED_TEMPLATE",
+    "task": "shelf-place-v3"
+  },
+  "device": {
+    "driver": "535.161.08",
+    "gpu_index": 0,
+    "gpu_model": "NVIDIA H100 80GB HBM3",
+    "gpu_uuid": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe",
+    "pci_bus_id": "0000:0f:00.0"
+  },
+  "identity": {
+    "node_role": "A",
+    "release_id": "P11_A_COMMON_POOL_FIRST_PARENT_V4",
+    "run_id": "PROPOSED_A11_shelf_train0000_parent_V4",
+    "shard_id": "PROPOSED_A11_shelf_train_cut5_parent0000_V4",
+    "task_id": "A11_COMMON_POOL_FIRST_PARENT_V4",
+    "task_revision": 1,
+    "wave_id": "PROPOSED_A11_first_parent_A_only_V4"
+  },
+  "entered": {
+    "CPU_candidate_raw50_writes": 2,
+    "CPU_local_direction_draws": 12,
+    "CPU_own_radius_group_calculations": 2,
+    "D_forward_calls": 0,
+    "G0_forward_calls": 0,
+    "action_expert_forwards": 3840,
+    "action_gradient_calls": 0,
+    "callback_read_calls": 120,
+    "completed_rollouts": 15,
+    "control_observation_calls": 3804,
+    "critic_forward_calls": 0,
+    "cuda_device_count_queries": 0,
+    "cuda_device_pci_queries": 120,
+    "cuda_driver_initializations": 15,
+    "cuda_error_string_queries": 0,
+    "cuda_uuid_queries": 0,
+    "deletions": 0,
+    "diagnostic_reset_calls": 15,
+    "egl_bind_api_calls": 15,
+    "egl_choose_config_calls": 15,
+    "egl_destroy_context_calls": 15,
+    "egl_device_attribute_queries": 120,
+    "egl_device_binary_queries": 0,
+    "egl_device_enumerations": 15,
+    "egl_device_string_queries": 120,
+    "egl_drm_string_queries": 0,
+    "egl_error_queries": 525,
+    "egl_initialize_calls": 15,
+    "egl_make_current_calls": 30,
+    "egl_platform_display_calls": 15,
+    "egl_query_string_calls": 30,
+    "egl_release_thread_calls": 15,
+    "egl_terminate_calls": 15,
+    "encoder_forward_calls": 5370,
+    "env_steps": 3804,
+    "environment_instances": 30,
+    "environment_reset_calls": 780,
+    "environment_seed_calls": 15,
+    "environment_state_restores": 0,
+    "explicit_mj_forward_calls": 0,
+    "feature_state_serializations": 3819,
+    "flow_forward_calls": 3840,
+    "full_state_captures": 15,
+    "full_state_comparisons": 14,
+    "graphics_context_creations": 15,
+    "image_preprocessing_calls": 4203,
+    "initialization_do_simulation_calls": 78000,
+    "initialization_mj_forward_calls": 3150,
+    "initialization_physics_substeps": 390000,
+    "initialization_reset_calls": 765,
+    "language_embedding_forwards": 399,
+    "mj_getState_calls": 15,
+    "mj_saveModel_calls": 15,
+    "mj_sizeModel_calls": 15,
+    "mj_stateSize_calls": 15,
+    "model_gpu_inference_calls": 384,
+    "model_initializations": 15,
+    "mujoco_render_context_creations": 15,
+    "mujoco_render_context_frees": 15,
+    "mujoco_scene_updates": 3819,
+    "mujoco_set_buffer_calls": 15,
+    "native_mj_forward_calls": 6954,
+    "native_nvml_identity_queries": 16,
+    "noise_draws": 384,
+    "numpy_rng_seed_calls": 15,
+    "numpy_rng_state_reads": 90,
+    "observation_calls": 3819,
+    "offscreen_viewer_creations": 15,
+    "optimizer_updates": 0,
+    "plugin_field_reads": 30,
+    "policy_device_property_queries": 15,
+    "policy_device_selections": 15,
+    "policy_do_simulation_calls": 3804,
+    "policy_mj_forward_calls": 3804,
+    "policy_model_loads": 15,
+    "policy_physics_substeps": 50719,
+    "policy_state_dict_loads": 15,
+    "policy_state_file_loads": 15,
+    "postprocessor_calls": 384,
+    "postprocessor_loads": 15,
+    "prefix_transformer_forwards": 384,
+    "preprocessor_calls": 4203,
+    "preprocessor_loads": 15,
+    "probe_explicit_cuda_symbol_lookups": 30,
+    "probe_explicit_driver_library_loads": 30,
+    "probe_explicit_egl_core_symbol_lookups": 165,
+    "probe_explicit_egl_get_proc_address_calls": 75,
+    "probe_explicit_gl_string_queries": 45,
+    "projection_loads": 15,
+    "python_rng_seed_calls": 15,
+    "python_rng_state_reads": 15,
+    "render_calls": 3819,
+    "reset_model_calls": 1560,
+    "reset_observation_calls": 15,
+    "retries": 0,
+    "rgb_readback_calls": 3819,
+    "simulator_attempts": 15,
+    "spatial_projection_calls": 3819,
+    "state_document_writes": 16,
+    "state_field_digest_calls": 6300,
+    "state_serialization_calls": 15,
+    "static_scene_constructions": 0,
+    "static_scene_data_constructions": 0,
+    "taskset_constructions": 15,
+    "taskset_reset_calls": 750,
+    "tokenizer_calls": 4218,
+    "tokenizer_loads": 15,
+    "torch_generator_creations": 384,
+    "torch_generator_seed_calls": 384,
+    "torch_global_seed_calls": 30,
+    "torch_rng_state_reads": 30,
+    "training_updates": 0,
+    "visual_encoder_forwards": 4971,
+    "vla_sampling_calls": 384,
+    "wrapper_initialization_reset_calls": 15,
+    "wrapper_instances": 15
+  },
+  "returned": {
+    "CPU_candidate_raw50_writes": 2,
+    "CPU_local_direction_draws": 12,
+    "CPU_own_radius_group_calculations": 2,
+    "D_forward_calls": 0,
+    "G0_forward_calls": 0,
+    "action_expert_forwards": 3840,
+    "action_gradient_calls": 0,
+    "callback_read_calls": 120,
+    "completed_rollouts": 15,
+    "control_observation_calls": 3804,
+    "critic_forward_calls": 0,
+    "cuda_device_count_queries": 0,
+    "cuda_device_pci_queries": 120,
+    "cuda_driver_initializations": 15,
+    "cuda_error_string_queries": 0,
+    "cuda_uuid_queries": 0,
+    "deletions": 0,
+    "diagnostic_reset_calls": 15,
+    "egl_bind_api_calls": 15,
+    "egl_choose_config_calls": 15,
+    "egl_destroy_context_calls": 15,
+    "egl_device_attribute_queries": 120,
+    "egl_device_binary_queries": 0,
+    "egl_device_enumerations": 15,
+    "egl_device_string_queries": 120,
+    "egl_drm_string_queries": 0,
+    "egl_error_queries": 525,
+    "egl_initialize_calls": 15,
+    "egl_make_current_calls": 30,
+    "egl_platform_display_calls": 15,
+    "egl_query_string_calls": 30,
+    "egl_release_thread_calls": 15,
+    "egl_terminate_calls": 15,
+    "encoder_forward_calls": 5370,
+    "env_steps": 3804,
+    "environment_instances": 30,
+    "environment_reset_calls": 780,
+    "environment_seed_calls": 15,
+    "environment_state_restores": 0,
+    "explicit_mj_forward_calls": 0,
+    "feature_state_serializations": 3819,
+    "flow_forward_calls": 3840,
+    "full_state_captures": 15,
+    "full_state_comparisons": 14,
+    "graphics_context_creations": 15,
+    "image_preprocessing_calls": 4203,
+    "initialization_do_simulation_calls": 78000,
+    "initialization_mj_forward_calls": 3150,
+    "initialization_physics_substeps": 390000,
+    "initialization_reset_calls": 765,
+    "language_embedding_forwards": 399,
+    "mj_getState_calls": 15,
+    "mj_saveModel_calls": 15,
+    "mj_sizeModel_calls": 15,
+    "mj_stateSize_calls": 15,
+    "model_gpu_inference_calls": 384,
+    "model_initializations": 15,
+    "mujoco_render_context_creations": 15,
+    "mujoco_render_context_frees": 15,
+    "mujoco_scene_updates": 3819,
+    "mujoco_set_buffer_calls": 15,
+    "native_mj_forward_calls": 6954,
+    "native_nvml_identity_queries": 16,
+    "noise_draws": 384,
+    "numpy_rng_seed_calls": 15,
+    "numpy_rng_state_reads": 90,
+    "observation_calls": 3819,
+    "offscreen_viewer_creations": 15,
+    "optimizer_updates": 0,
+    "plugin_field_reads": 30,
+    "policy_device_property_queries": 15,
+    "policy_device_selections": 15,
+    "policy_do_simulation_calls": 3804,
+    "policy_mj_forward_calls": 3804,
+    "policy_model_loads": 15,
+    "policy_physics_substeps": 50719,
+    "policy_state_dict_loads": 15,
+    "policy_state_file_loads": 15,
+    "postprocessor_calls": 384,
+    "postprocessor_loads": 15,
+    "prefix_transformer_forwards": 384,
+    "preprocessor_calls": 4203,
+    "preprocessor_loads": 15,
+    "probe_explicit_cuda_symbol_lookups": 30,
+    "probe_explicit_driver_library_loads": 30,
+    "probe_explicit_egl_core_symbol_lookups": 165,
+    "probe_explicit_egl_get_proc_address_calls": 75,
+    "probe_explicit_gl_string_queries": 45,
+    "projection_loads": 15,
+    "python_rng_seed_calls": 15,
+    "python_rng_state_reads": 15,
+    "render_calls": 3819,
+    "reset_model_calls": 1560,
+    "reset_observation_calls": 15,
+    "retries": 0,
+    "rgb_readback_calls": 3819,
+    "simulator_attempts": 15,
+    "spatial_projection_calls": 3819,
+    "state_document_writes": 16,
+    "state_field_digest_calls": 6300,
+    "state_serialization_calls": 15,
+    "static_scene_constructions": 0,
+    "static_scene_data_constructions": 0,
+    "taskset_constructions": 15,
+    "taskset_reset_calls": 750,
+    "tokenizer_calls": 4218,
+    "tokenizer_loads": 15,
+    "torch_generator_creations": 384,
+    "torch_generator_seed_calls": 384,
+    "torch_global_seed_calls": 30,
+    "torch_rng_state_reads": 30,
+    "training_updates": 0,
+    "visual_encoder_forwards": 4971,
+    "vla_sampling_calls": 384,
+    "wrapper_initialization_reset_calls": 15,
+    "wrapper_instances": 15
+  },
+  "failed": {
+    "CPU_candidate_raw50_writes": 0,
+    "CPU_local_direction_draws": 0,
+    "CPU_own_radius_group_calculations": 0,
+    "D_forward_calls": 0,
+    "G0_forward_calls": 0,
+    "action_expert_forwards": 0,
+    "action_gradient_calls": 0,
+    "callback_read_calls": 0,
+    "completed_rollouts": 0,
+    "control_observation_calls": 0,
+    "critic_forward_calls": 0,
+    "cuda_device_count_queries": 0,
+    "cuda_device_pci_queries": 0,
+    "cuda_driver_initializations": 0,
+    "cuda_error_string_queries": 0,
+    "cuda_uuid_queries": 0,
+    "deletions": 0,
+    "diagnostic_reset_calls": 0,
+    "egl_bind_api_calls": 0,
+    "egl_choose_config_calls": 0,
+    "egl_destroy_context_calls": 0,
+    "egl_device_attribute_queries": 0,
+    "egl_device_binary_queries": 0,
+    "egl_device_enumerations": 0,
+    "egl_device_string_queries": 0,
+    "egl_drm_string_queries": 0,
+    "egl_error_queries": 0,
+    "egl_initialize_calls": 0,
+    "egl_make_current_calls": 0,
+    "egl_platform_display_calls": 0,
+    "egl_query_string_calls": 0,
+    "egl_release_thread_calls": 0,
+    "egl_terminate_calls": 0,
+    "encoder_forward_calls": 0,
+    "env_steps": 0,
+    "environment_instances": 0,
+    "environment_reset_calls": 0,
+    "environment_seed_calls": 0,
+    "environment_state_restores": 0,
+    "explicit_mj_forward_calls": 0,
+    "feature_state_serializations": 0,
+    "flow_forward_calls": 0,
+    "full_state_captures": 0,
+    "full_state_comparisons": 0,
+    "graphics_context_creations": 0,
+    "image_preprocessing_calls": 0,
+    "initialization_do_simulation_calls": 0,
+    "initialization_mj_forward_calls": 0,
+    "initialization_physics_substeps": 0,
+    "initialization_reset_calls": 0,
+    "language_embedding_forwards": 0,
+    "mj_getState_calls": 0,
+    "mj_saveModel_calls": 0,
+    "mj_sizeModel_calls": 0,
+    "mj_stateSize_calls": 0,
+    "model_gpu_inference_calls": 0,
+    "model_initializations": 0,
+    "mujoco_render_context_creations": 0,
+    "mujoco_render_context_frees": 0,
+    "mujoco_scene_updates": 0,
+    "mujoco_set_buffer_calls": 0,
+    "native_mj_forward_calls": 0,
+    "native_nvml_identity_queries": 0,
+    "noise_draws": 0,
+    "numpy_rng_seed_calls": 0,
+    "numpy_rng_state_reads": 0,
+    "observation_calls": 0,
+    "offscreen_viewer_creations": 0,
+    "optimizer_updates": 0,
+    "plugin_field_reads": 0,
+    "policy_device_property_queries": 0,
+    "policy_device_selections": 0,
+    "policy_do_simulation_calls": 0,
+    "policy_mj_forward_calls": 0,
+    "policy_model_loads": 0,
+    "policy_physics_substeps": 0,
+    "policy_state_dict_loads": 0,
+    "policy_state_file_loads": 0,
+    "postprocessor_calls": 0,
+    "postprocessor_loads": 0,
+    "prefix_transformer_forwards": 0,
+    "preprocessor_calls": 0,
+    "preprocessor_loads": 0,
+    "probe_explicit_cuda_symbol_lookups": 0,
+    "probe_explicit_driver_library_loads": 0,
+    "probe_explicit_egl_core_symbol_lookups": 0,
+    "probe_explicit_egl_get_proc_address_calls": 0,
+    "probe_explicit_gl_string_queries": 0,
+    "projection_loads": 0,
+    "python_rng_seed_calls": 0,
+    "python_rng_state_reads": 0,
+    "render_calls": 0,
+    "reset_model_calls": 0,
+    "reset_observation_calls": 0,
+    "retries": 0,
+    "rgb_readback_calls": 0,
+    "simulator_attempts": 0,
+    "spatial_projection_calls": 0,
+    "state_document_writes": 0,
+    "state_field_digest_calls": 0,
+    "state_serialization_calls": 0,
+    "static_scene_constructions": 0,
+    "static_scene_data_constructions": 0,
+    "taskset_constructions": 0,
+    "taskset_reset_calls": 0,
+    "tokenizer_calls": 0,
+    "tokenizer_loads": 0,
+    "torch_generator_creations": 0,
+    "torch_generator_seed_calls": 0,
+    "torch_global_seed_calls": 0,
+    "torch_rng_state_reads": 0,
+    "training_updates": 0,
+    "visual_encoder_forwards": 0,
+    "vla_sampling_calls": 0,
+    "wrapper_initialization_reset_calls": 0,
+    "wrapper_instances": 0
+  },
+  "incomplete": {
+    "CPU_candidate_raw50_writes": 0,
+    "CPU_local_direction_draws": 0,
+    "CPU_own_radius_group_calculations": 0,
+    "D_forward_calls": 0,
+    "G0_forward_calls": 0,
+    "action_expert_forwards": 0,
+    "action_gradient_calls": 0,
+    "callback_read_calls": 0,
+    "completed_rollouts": 0,
+    "control_observation_calls": 0,
+    "critic_forward_calls": 0,
+    "cuda_device_count_queries": 0,
+    "cuda_device_pci_queries": 0,
+    "cuda_driver_initializations": 0,
+    "cuda_error_string_queries": 0,
+    "cuda_uuid_queries": 0,
+    "deletions": 0,
+    "diagnostic_reset_calls": 0,
+    "egl_bind_api_calls": 0,
+    "egl_choose_config_calls": 0,
+    "egl_destroy_context_calls": 0,
+    "egl_device_attribute_queries": 0,
+    "egl_device_binary_queries": 0,
+    "egl_device_enumerations": 0,
+    "egl_device_string_queries": 0,
+    "egl_drm_string_queries": 0,
+    "egl_error_queries": 0,
+    "egl_initialize_calls": 0,
+    "egl_make_current_calls": 0,
+    "egl_platform_display_calls": 0,
+    "egl_query_string_calls": 0,
+    "egl_release_thread_calls": 0,
+    "egl_terminate_calls": 0,
+    "encoder_forward_calls": 0,
+    "env_steps": 0,
+    "environment_instances": 0,
+    "environment_reset_calls": 0,
+    "environment_seed_calls": 0,
+    "environment_state_restores": 0,
+    "explicit_mj_forward_calls": 0,
+    "feature_state_serializations": 0,
+    "flow_forward_calls": 0,
+    "full_state_captures": 0,
+    "full_state_comparisons": 0,
+    "graphics_context_creations": 0,
+    "image_preprocessing_calls": 0,
+    "initialization_do_simulation_calls": 0,
+    "initialization_mj_forward_calls": 0,
+    "initialization_physics_substeps": 0,
+    "initialization_reset_calls": 0,
+    "language_embedding_forwards": 0,
+    "mj_getState_calls": 0,
+    "mj_saveModel_calls": 0,
+    "mj_sizeModel_calls": 0,
+    "mj_stateSize_calls": 0,
+    "model_gpu_inference_calls": 0,
+    "model_initializations": 0,
+    "mujoco_render_context_creations": 0,
+    "mujoco_render_context_frees": 0,
+    "mujoco_scene_updates": 0,
+    "mujoco_set_buffer_calls": 0,
+    "native_mj_forward_calls": 0,
+    "native_nvml_identity_queries": 0,
+    "noise_draws": 0,
+    "numpy_rng_seed_calls": 0,
+    "numpy_rng_state_reads": 0,
+    "observation_calls": 0,
+    "offscreen_viewer_creations": 0,
+    "optimizer_updates": 0,
+    "plugin_field_reads": 0,
+    "policy_device_property_queries": 0,
+    "policy_device_selections": 0,
+    "policy_do_simulation_calls": 0,
+    "policy_mj_forward_calls": 0,
+    "policy_model_loads": 0,
+    "policy_physics_substeps": 0,
+    "policy_state_dict_loads": 0,
+    "policy_state_file_loads": 0,
+    "postprocessor_calls": 0,
+    "postprocessor_loads": 0,
+    "prefix_transformer_forwards": 0,
+    "preprocessor_calls": 0,
+    "preprocessor_loads": 0,
+    "probe_explicit_cuda_symbol_lookups": 0,
+    "probe_explicit_driver_library_loads": 0,
+    "probe_explicit_egl_core_symbol_lookups": 0,
+    "probe_explicit_egl_get_proc_address_calls": 0,
+    "probe_explicit_gl_string_queries": 0,
+    "projection_loads": 0,
+    "python_rng_seed_calls": 0,
+    "python_rng_state_reads": 0,
+    "render_calls": 0,
+    "reset_model_calls": 0,
+    "reset_observation_calls": 0,
+    "retries": 0,
+    "rgb_readback_calls": 0,
+    "simulator_attempts": 0,
+    "spatial_projection_calls": 0,
+    "state_document_writes": 0,
+    "state_field_digest_calls": 0,
+    "state_serialization_calls": 0,
+    "static_scene_constructions": 0,
+    "static_scene_data_constructions": 0,
+    "taskset_constructions": 0,
+    "taskset_reset_calls": 0,
+    "tokenizer_calls": 0,
+    "tokenizer_loads": 0,
+    "torch_generator_creations": 0,
+    "torch_generator_seed_calls": 0,
+    "torch_global_seed_calls": 0,
+    "torch_rng_state_reads": 0,
+    "training_updates": 0,
+    "visual_encoder_forwards": 0,
+    "vla_sampling_calls": 0,
+    "wrapper_initialization_reset_calls": 0,
+    "wrapper_instances": 0
+  },
+  "counts_complete": true,
+  "within_all_116_caps": true,
+  "private_ledger_scopes": 46,
+  "event_pairs": {
+    "entered": 147971,
+    "returned": 147971,
+    "failed": 0,
+    "incomplete": 0
+  },
+  "public_cost_event_refs": [],
+  "public_cost_event_refs_reason": "Private collection costs are SHA-indexed separately; no public UUID event bridge.",
+  "primary_and_cleanup_failures": [],
+  "cleanup_and_restoration": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/EXIT_AND_RESTORATION.json",
+    "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/EXIT_AND_RESTORATION.json",
+    "sha256": "1c844a256b25f7ab9f8e8239ca969b46ff096a9fd6914590322231c9b1a2eebf",
+    "size_bytes": 46655
+  },
+  "restored_holder_count": 8,
+  "successful_handoff_raw_poll_count": null,
+  "handoff_missing_reason": "existing guard retains no successful raw poll series; no additional probe",
+  "timeouts": {
+    "GPU_compute_seconds_cap": null,
+    "child_grace_seconds": 30,
+    "child_seconds": 1800,
+    "drain_TERM_seconds": 30,
+    "drain_poll_seconds": 0.2,
+    "end_to_end_hard_bound_seconds": null,
+    "handoff_seconds": 300,
+    "lock_wait_seconds": null,
+    "preparation_seconds": 900,
+    "reserved_wave_grace_seconds": 30,
+    "reserved_wave_seconds": 27900,
+    "restoration_observation_seconds": 120
+  },
+  "GPU_seconds": null,
+  "GPU_seconds_missing_reason": "No direct compute-duration measurement.",
+  "storage_evidence": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/STORAGE_AUDIT.json",
+    "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/STORAGE_AUDIT.json",
+    "sha256": "1d7acc8f1b458da4e05f176fb0d550fd7a9f0b410265acddbc175988effe774e",
+    "size_bytes": 3926
+  },
+  "visual_evidence": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/VISUAL_INSPECTION.json",
+    "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/VISUAL_INSPECTION.json",
+    "sha256": "7a0f6ec20c44f2caa72e88bed4b32877885405992c84fa5e2a5647084f3d9992",
+    "size_bytes": 10103
+  },
+  "report": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/REPORT.md",
+    "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/REPORT.md",
+    "sha256": "58f8a2840c1faeb60208256e92ee33246872dd786a1c1b4f26569932ce4e9c82",
+    "size_bytes": 3455
+  },
+  "LAUNCH_RESULT": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/LAUNCH_RESULT.json",
+    "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/LAUNCH_RESULT.json",
+    "sha256": "7e3bb6db5de36b90c6a0aa8f1942d0a054201cbf362fad4b0d8a993276e38bfa",
+    "size_bytes": 15145
+  },
+  "evidence_manifest": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/EVIDENCE_MANIFEST.json",
+    "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/EVIDENCE_MANIFEST.json",
+    "sha256": "178889504b0fa1c1d83702c8b81c84c94b83c3bfd9015b015dcb93ec22ed0ae3",
+    "size_bytes": 17659404
+  },
+  "artifact_refs": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/AUDIT_SUMMARY.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/AUDIT_SUMMARY.json",
+      "sha256": "be8d67e8252ffba2a7efdadf1749bdc54b6565bf64cab938b8a000dc0dc918dd",
+      "size_bytes": 4453
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/BANK_AND_REPEAT_QUALIFICATION.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/BANK_AND_REPEAT_QUALIFICATION.json",
+      "sha256": "68d7ca9c1bb3e744dadb37fe5923213124a795228519daf663f1896b1782ba6d",
+      "size_bytes": 22716
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/BRANCH_COVERAGE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/BRANCH_COVERAGE.json",
+      "sha256": "9a2dead001b06d4e3a432ec0d07a57df06f7434a43c5f058b9bafad456593ed3",
+      "size_bytes": 56765
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/DELIVERY_CHECKS.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/DELIVERY_CHECKS.json",
+      "sha256": "7aaff3e17a1a7daa7df259c87a01deb41e7d655ce3e21db9d1194b3a1eca24f4",
+      "size_bytes": 2686
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/DEVICE_AND_STRICT_LOADER_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/DEVICE_AND_STRICT_LOADER_AUDIT.json",
+      "sha256": "158ae0df98af0c87058763cabf63a61342fd5d6da5bb47132436750fc9d90021",
+      "size_bytes": 20452
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/EVIDENCE_MANIFEST.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/EVIDENCE_MANIFEST.json",
+      "sha256": "178889504b0fa1c1d83702c8b81c84c94b83c3bfd9015b015dcb93ec22ed0ae3",
+      "size_bytes": 17659404
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/EXIT_AND_RESTORATION.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/EXIT_AND_RESTORATION.json",
+      "sha256": "1c844a256b25f7ab9f8e8239ca969b46ff096a9fd6914590322231c9b1a2eebf",
+      "size_bytes": 46655
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/HOLDER_MANAGER_LOG_WINDOW.txt",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/HOLDER_MANAGER_LOG_WINDOW.txt",
+      "sha256": "0b9be82051fcaf4be647cd1ff56f6aefae2fbdfba8bbb35c8388dfc5766d7346",
+      "size_bytes": 976
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/IDENTITY_AND_INPUTS.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/IDENTITY_AND_INPUTS.json",
+      "sha256": "b10d6bce32547519d0862261096747b01927ed57ca1233eda93561b2c4a9ad1d",
+      "size_bytes": 47617
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/INDEPENDENT_LABEL_ARITHMETIC.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/INDEPENDENT_LABEL_ARITHMETIC.json",
+      "sha256": "d83733f47e6156bdf7393a92b0b2c81e6fef24abee5f7d06efff63b5f3c7c698",
+      "size_bytes": 3131
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/INDEPENDENT_LEDGER_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/INDEPENDENT_LEDGER_AUDIT.json",
+      "sha256": "fd55af82c9de95cb8e0207989b2d509eb1f268aff6864e31a434e1c1ff567143",
+      "size_bytes": 881220
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/LAUNCH_RESULT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/LAUNCH_RESULT.json",
+      "sha256": "7e3bb6db5de36b90c6a0aa8f1942d0a054201cbf362fad4b0d8a993276e38bfa",
+      "size_bytes": 15145
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/REPORT.md",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/REPORT.md",
+      "sha256": "58f8a2840c1faeb60208256e92ee33246872dd786a1c1b4f26569932ce4e9c82",
+      "size_bytes": 3455
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/RUNTIME_FILE_MANIFEST.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/RUNTIME_FILE_MANIFEST.json",
+      "sha256": "6f68b72cfdc78d66719497c80bf07bb9c346f77c0e7e67fd382691977b64ed9f",
+      "size_bytes": 17636609
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/RUNTIME_REFERENCE_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/RUNTIME_REFERENCE_AUDIT.json",
+      "sha256": "29a3e38e50417c99317c813161ea14f509ed0c7ae9595cc8e3dd4d373508d31e",
+      "size_bytes": 14158953
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/SAVED_RGB_CONVERSION_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/SAVED_RGB_CONVERSION_AUDIT.json",
+      "sha256": "f60ffcb0841c30e5e78975961190de4156ae6950b6c3211f7a187aeeb09e9e31",
+      "size_bytes": 9846
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/STATE_AND_COMMITMENT_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/STATE_AND_COMMITMENT_AUDIT.json",
+      "sha256": "4fc7eac493afe431ba8311b1fa3917480cd609b1348457c45b2a335d3a4246b7",
+      "size_bytes": 50912
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/STORAGE_AUDIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/STORAGE_AUDIT.json",
+      "sha256": "1d7acc8f1b458da4e05f176fb0d550fd7a9f0b410265acddbc175988effe774e",
+      "size_bytes": 3926
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/VISUAL_INSPECTION.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/VISUAL_INSPECTION.json",
+      "sha256": "7a0f6ec20c44f2caa72e88bed4b32877885405992c84fa5e2a5647084f3d9992",
+      "size_bytes": 10103
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_FIRST_PARENT_V4_r1/OUTER_COMMAND_RECORD.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_FIRST_PARENT_V4_r1/OUTER_COMMAND_RECORD.json",
+      "sha256": "14003a9ac2129c027da2fe296caad76a371274aa2ebb14aaabe79472c57ceda0",
+      "size_bytes": 601
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_FIRST_PARENT_V4_r1/OUTER_EXECUTION_RESULT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_FIRST_PARENT_V4_r1/OUTER_EXECUTION_RESULT.json",
+      "sha256": "7c90da9cbf2802d5d0427190004c0efceeda97d934607244bf3cb52bb9633cfa",
+      "size_bytes": 1026
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_FIRST_PARENT_V4_r1/command.stdout",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_FIRST_PARENT_V4_r1/command.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_FIRST_PARENT_V4_r1/command.stderr",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_FIRST_PARENT_V4_r1/command.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/launcher/LAUNCH_RESULT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/launcher/LAUNCH_RESULT.json",
+      "sha256": "7e3bb6db5de36b90c6a0aa8f1942d0a054201cbf362fad4b0d8a993276e38bfa",
+      "size_bytes": 15145
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/launcher/PRIVATE_COST_INDEX.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/launcher/PRIVATE_COST_INDEX.json",
+      "sha256": "fa145fb3b58c9bde1b5bdd17ec3011b18d6cf612f16f467ec0e6c095f415ae3a",
+      "size_bytes": 1441
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/launcher/STORAGE_ADMISSION.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/launcher/STORAGE_ADMISSION.json",
+      "sha256": "22a916e3ce091f4602abc98c9794f304f676d08fb27b8ce1352f4c0c944f1061",
+      "size_bytes": 1336
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/launcher/LIFECYCLE_REQUESTED.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/launcher/LIFECYCLE_REQUESTED.json",
+      "sha256": "13b504ca667bd1309549acfa0477e63a311e34d02c646bc544d8cdf08ccd8952",
+      "size_bytes": 71
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/launcher/NVML_IDENTITY.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/launcher/NVML_IDENTITY.json",
+      "sha256": "a934e6ab1f8b6dfad73f8dfc4b7b5652bfa59cfe71f0ff2b366edd10f22a157f",
+      "size_bytes": 1067
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/launcher/HANDOFF_ENVIRONMENT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/launcher/HANDOFF_ENVIRONMENT.json",
+      "sha256": "6e64fef7a26982eecf6dc27eb8340eacfd46bf5a77e1867b5cc3a6e4602f1abc",
+      "size_bytes": 486
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/WAVE_EXIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/WAVE_EXIT.json",
+      "sha256": "1156042b32fd0423cfa802291657f5a0d8d97f470b3705a7fbbb192c099e6026",
+      "size_bytes": 11526
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/PROCESS_GROUP_EXIT.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/PROCESS_GROUP_EXIT.json",
+      "sha256": "4e09331ba9b0fd0f125e24290844280118743a9b2b8feb6127620b114d4d303f",
+      "size_bytes": 219
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/PRIVATE_COST_INDEX.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/PRIVATE_COST_INDEX.json",
+      "sha256": "11fc1abcd6921cfd7db2ccf2bbf2a9bfe28c5cd9959fe2d8ca51ba1767a611e1",
+      "size_bytes": 25041
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/ATTEMPT_COVERAGE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/ATTEMPT_COVERAGE.json",
+      "sha256": "d8bfe574c7745e42cbae5c7e3c2bedd9c6deed3a630f237f8b72ab7a50bdca8d",
+      "size_bytes": 1982
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/PAIRED_LABELS.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/reserved/PAIRED_LABELS.json",
+      "sha256": "b81e21bd78adcd6d2ec8be36627c8f669858cc5e6780ef102bf69927eebff866",
+      "size_bytes": 12464
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/BANK.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/BANK.json",
+      "sha256": "eee6e7d4e8bce152f07563e116af0c59f4b25d0d6acb10214d1cd28a71fa11c4",
+      "size_bytes": 6127
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/CUT_REFERENCE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/CUT_REFERENCE.json",
+      "sha256": "20378be5c561369e5d5dedc4c89e0686f30eca5ec6909b54ac7a54b3f4fe02ad",
+      "size_bytes": 5833580
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/CUT_STATE.json",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/CUT_STATE.json",
+      "sha256": "efa57b3ff2ede1176fcd996fe01f4e8e4c5afe9073495ecb65649e77b97c53f6",
+      "size_bytes": 5830216
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/cut_model.mjb",
+      "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P11_COMMON_POOL_V4_runs/PROPOSED_A11_shelf_train0000_parent_V4/normal/cut_model.mjb",
+      "sha256": "4be9e53e4dedefd45683d7bed973c093c308ef231700a23d507effe886e48668",
+      "size_bytes": 21089333
+    }
+  ],
+  "delivery_checks": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/DELIVERY_CHECKS.json",
+    "realpath": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_FIRST_PARENT_V4/DELIVERY_CHECKS.json",
+    "sha256": "7aaff3e17a1a7daa7df259c87a01deb41e7d655ce3e21db9d1194b3a1eca24f4",
+    "size_bytes": 2686
+  },
+  "release_consumed": true,
+  "release_closure_by_analysis_pending": true,
+  "remaining_caps_reusable": false,
+  "automatic_retry": false,
+  "old_releases_reused": [],
+  "preceding_V3_consumed_closed": true,
+  "postrun_audit": "saved evidence CPU only; no additional model/driver/environment/holder probe",
+  "shared_installations": 0,
+  "daemon_restarts": 0,
+  "training_updates": 0,
+  "deletions": 0,
+  "retries": 0,
+  "B_participated": false,
+  "public_interface_modified": false,
+  "old_packages_and_receipts_modified": false,
+  "scientific_interpretation": "This collector and planned parent execution/data qualification only; no MT50 training completion or online trigger claim.",
+  "next_action": "wait for analysis acceptance and closure; no automatic next parent, training or evaluation"
+}

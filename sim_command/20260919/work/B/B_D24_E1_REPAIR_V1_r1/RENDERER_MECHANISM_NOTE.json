@@ -1,0 +1,18 @@
+{
+  "at_utc": "2026-09-21T23:10:43.067721+00:00",
+  "evidence_type": "source-analysis explanation confirmed by isolated old-development reproduction",
+  "legacy_renderer": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/embodied-ai-workspace/environments/lerobot/lib/python3.12/site-packages/gymnasium/envs/mujoco/mujoco_rendering.py",
+    "sha256": "e1ba5d5ac3f00b4b64dd93bce00caf8038bb05bd228db960ce10478e4786385b"
+  },
+  "sequence": [
+    "Engine.runtime retains the previous environment after env.close().",
+    "New environment reset renders a valid initial image in its new GL context.",
+    "Engine.set_episode replaces old runtime; delayed old MuJoCo renderer destruction occurs after the new context is current.",
+    "Unpatched OffScreenViewer.free releases only EGL and leaves its MuJoCo render context to later destruction.",
+    "CPU reproduction with the same retained Runtime reference yields all-black observations after the first action of subsequent environments."
+  ],
+  "repair": "Explicit con.free in its own still-current context before EGL free, idempotent cleanup, bind current context for every render; reject black RGB.",
+  "comparison_scope": "This defect is established for the B E1 legacy resident-engine path. Smol/X standalone workers do not retain Engine.runtime across task changes, and their completed outputs are not automatically reclassified by this diagnosis.",
+  "cost": "No extra simulator/GPU operations; source analysis only"
+}

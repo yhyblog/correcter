@@ -1,0 +1,101 @@
+{
+  "schema": "final_input_interfaces_independent_review_v1",
+  "status": "passed_synthetic_interface_preparation_only",
+  "created_utc": "2026-09-16T22:27:56.715369+00:00",
+  "blockers_for_current_interface_preparation": [],
+  "new_simulator_attempts": 0,
+  "new_model_calls": 0,
+  "new_pca_fits": 0,
+  "new_model_initializations": 0,
+  "new_optimizer_updates": 0,
+  "real_dataset_loader_called_by_this_review": false,
+  "in_progress_outcomes_read": false,
+  "evidence": {
+    "handoff": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_FINAL_INPUT_PREPARATION_HANDOFF.md",
+      "sha256": "19461d9e09bdbb5526ea5d76b4319bd9d217c9a2639dc69936e153fa52e6a943"
+    },
+    "contract": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_FINAL_INPUT_CONTRACT.md",
+      "sha256": "bceeccecbe2f5a41a27f05e8245ee8b9e68c525e8cb3d653a3460f275fab54a0"
+    },
+    "summary": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/final_input_interfaces_20260916_v1/summary.json",
+      "sha256": "b097805b9d598b1061145e1430b951c95918df2bbbe11dc1fdfe3dcfba4f17ea"
+    },
+    "complete": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/final_input_interfaces_20260916_v1/complete.json",
+      "sha256": "2414e825243f462d8db08d75e138a488c85f13b610ab63ac03f2d0f906242b28"
+    },
+    "cpu_archives": [
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/round2_dataset_audit_cpu_20260916_v1",
+        "tests_passed": 26,
+        "complete_sha256": "72dd34d7c04c55ec309cda368304d2794d6139495ac1aef4f3fe8c3303b86a85",
+        "result_sha256": "7e6297589d565f132cbdd4e87832c0f708e9beaea7793b6f92cf172cc13887b0",
+        "returncode": 0,
+        "all_archive_files_sha_verified": true,
+        "code_sha_before_after_current_equal": true,
+        "bound_code_count": 11
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/final_input_bundle_cpu_20260916_v2",
+        "tests_passed": 20,
+        "complete_sha256": "5a39a734247a77808e9f0e5a8ced6bd90201da4ba7574fd932e41786d33979e2",
+        "result_sha256": "d3ae08b0eabd4099b4bbe83705c0df9dc8827935f1f2d74ccafa5286491f80cc",
+        "returncode": 0,
+        "all_archive_files_sha_verified": true,
+        "code_sha_before_after_current_equal": true,
+        "bound_code_count": 7
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/final_prepare_cpu_20260916_v1",
+        "tests_passed": 20,
+        "complete_sha256": "4870886d3e77e2cdad76316567dd55232f1fc056d3b64269a2d01174426e4341",
+        "result_sha256": "3d245dc2f1e1723400832b1a68d4c4342d257b1ccdbe2bb1f95177dad347a12a",
+        "returncode": 0,
+        "all_archive_files_sha_verified": true,
+        "code_sha_before_after_current_equal": true,
+        "bound_code_count": 2
+      }
+    ],
+    "six_implementation_test_hashes_match_summary": true,
+    "implementation_and_test_sha256": {
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/round2_dataset_audit_v1.py": "96d30c604ce3ae0270c6727be56905c754e3f0c6b3e33e03ca9fb5705445972d",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/final_input_bundle_v1.py": "0f0a2257510c2ce97d346c69391d8216ae48b3154948210e1f59cc4709ac9fe4",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/final_prepare_v1.py": "ba1930f6b559b9d2d6d7e6aabfac0af11258d1379496c239880984b96e24386f",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/tests/test_round2_dataset_audit_v1.py": "4dd00fde9e644589bbbb881a07ae4843a3d4976223f679aeede0c1526eb38ab1",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/tests/test_final_input_bundle_v1.py": "7673746c8b2045d81ead8007209774dd43c983a0c45fe9e0da67b337dc6d32ab",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/tests/test_final_prepare_v1.py": "fdf5e5d2412e716548e18b174b183a792909c5a7b7a14bf378d5a682d0d588fe"
+    }
+  },
+  "checked_contracts": {
+    "post_wave_gate": "round2_dataset_audit.run_audit checks wave exit,32 worker identities,300 resolutions and full resource ledger before _load. Existing sealed readiness is explicit provenance, not training permission. Incomplete/exhausted technical slots cannot pass as complete train input.",
+    "true_child_protocols": "Each child dataset/input audit/bank matches its own collection protocol. Development shares the original round1 protocol; round2 remains distinct. Child five-field bindings and row provenance remain unchanged; bundle has its own schema/hash.",
+    "generation_critic": "_critic binds ranking/config and four checkpoint SHA without tensor deserialization; member identifiers come from each real ranking, allowing historical1041–1044 and B2000–3. Per-source sidecar preserves original teacher/bank/source/attempt identity.",
+    "canonical_features": "Feature contract binds frozen upstream feature code,VLA identity,ActionTransform implementation and quantile metadata/state SHA. Requires vision4096/language2048 pre-projection arrays, original state order/masks/remaining and raw/C(raw) actions. Different critic PCA coordinates are not combined. Derived arrays are rechecked against child arrays on bundle load.",
+    "dev_round_and_denominator": "Development filtering does not require episode round=1; original null round is preserved. Prepare distinguishes95 effective checkpoint inference sources from100 planned selection outcomes, including5 no-cut common outcomes.",
+    "planned_vs_effective": "600 planned records required; valid no-cut keeps known natural outcome and no fabricated critic row. Rows must equal unique critic-eligible actual episodes in planned order. No technical missing labels are imputed as failure or common outcome.",
+    "source_weighting": "Sampling recipe draws N_t with replacement for each task with N_t effective train episodes, totalN_effective; no teacher/round/Q/outcome weights. PCA recipe uses each unique effective train source once before bootstrap. Current prepare only records counts/seeds, does not materialize bootstrap or PCA.",
+    "paths_and_model_operations": "Pending final specification retains A original old weights/projections and residual/advantage adaptation, B fresh init after unique train-only PCA16/8, fixed losses/checkpoints/4000 per member. Execution fields explicitly report0 PCA/initialization/optimization and both training/preflight unreleased.",
+    "synthetic_coverage": "26 wrapper+20 bundle+20 prepare tests pass. Named cases include sealed600 create/load→prepare, null dev round,597-effective-source effective-count handling without fabricating600, technical missing rejection, canonical/teacher/protocol tampering rejection, dev purpose separation, and missing wave gate before round2 read."
+  },
+  "next_execution_interface_needed": {
+    "current_pending_is_not_real_preflight_executor": true,
+    "required_new_protocol_paths": [
+      "bundle/two-collection preflight specification validator",
+      "bundle-aware preflight execution and sealing",
+      "bundle-aware load_preflight used by subsequent fit"
+    ],
+    "reason": "Old training_pipeline._specification, _require_preflight and load_preflight enforce a single collection protocol. New pending fields alone do not make those old orchestration entries usable.",
+    "must_reuse_later": "After explicitly released real final preflight, subsequent fit must consume its exact sealed PCA, eight A/B initial states, actual bootstrap lists, trainable masks, design/runtime/child bundle bindings; no fresh PCA or independent reinitialization.",
+    "audit_scope_to_preserve": "All effective canonical sources,13 candidate probabilities and action gradients at slots0/11, a0 zero advantage, frozen state/buffers, near-zero PCA floor and singleton/export/reload checks. Do not describe two gradient slots as all13-gradient coverage.",
+    "optimization_stage": "training_final remains separate, simulator0/max32000 optimizer updates; not released by interface preparation."
+  },
+  "limitations": [
+    "Only archived synthetic CPU evidence and bounded implementation segments reviewed.",
+    "No765-file full-freeze rescan; no real source/branch label packs, models or PCA executed/read for this review.",
+    "Passing synthetic interfaces is not a passed real600-source dataset audit, real PCA audit, numerical initialization/reload audit or final training authorization.",
+    "Initial failing bundle test was documented as an invalid cross-task duplicate fixture; finalv2 archive passes with a same-task duplicate fixture. This review does not erase the failed archive."
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "checked_at_utc": "2026-09-19T15:51:55.501620+00:00",
+  "checks": [
+    {
+      "check": "published_cpu_suite",
+      "command": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/commands_v1/cpu_checks.sh"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "status": "passed",
+      "stdout": "........................................                                 [100%]\n40 passed in 0.64s\n",
+      "stderr": "",
+      "physical_compute_started": false
+    },
+    {
+      "check": "published_shell_syntax",
+      "command": [
+        "bash",
+        "-n",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/commands_v1/run_proposed_native_preflight.sh",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/commands_v1/cpu_checks.sh"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "status": "passed",
+      "stdout": "",
+      "stderr": "",
+      "physical_compute_started": false
+    },
+    {
+      "check": "denial_under_current_P00",
+      "command": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/commands_v1/run_proposed_native_preflight.sh",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P00_PREP_V1.json"
+      ],
+      "returncode": 1,
+      "expected_returncode": 1,
+      "status": "passed",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v1/launch_preflight.py\", line 34, in <module>\n    main()\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v1/launch_preflight.py\", line 16, in main\n    control, release, proposal = load_authorization(args.campaign, args.release, args.proposal)\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v1/core/release.py\", line 55, in load_authorization\n    authorize(control, release, proposal)\n  File \"/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v1/core/release.py\", line 15, in authorize\n    raise ContractError('Formal compute is not released by current CONTROL')\ncore.validation.ContractError: Formal compute is not released by current CONTROL\n",
+      "physical_compute_started": false
+    },
+    {
+      "check": "native_cli_help_only",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/code_snapshot_v1/preflight_pi05.py",
+        "--help"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "status": "passed",
+      "stdout": "usage: preflight_pi05.py [-h] --campaign CAMPAIGN --release RELEASE --proposal\n                         PROPOSAL\n\noptions:\n  -h, --help           show this help message and exit\n  --campaign CAMPAIGN\n  --release RELEASE\n  --proposal PROPOSAL\n",
+      "stderr": "",
+      "physical_compute_started": false
+    }
+  ],
+  "status": "passed",
+  "real_resource_counts": {
+    "simulator_attempts": 0,
+    "vla_sampling_calls": 0,
+    "optimizer_updates": 0,
+    "gpu_seconds": 0
+  }
+}

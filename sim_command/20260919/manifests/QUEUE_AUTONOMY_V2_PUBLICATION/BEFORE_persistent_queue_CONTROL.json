@@ -1,0 +1,28 @@
+{
+  "schema": "corrector_queue_control_v1",
+  "revision": 1,
+  "updated_at_utc": "2026-09-21T12:06:03.995391+00:00",
+  "authorization": {
+    "path": "persistent_queue/AUTHORIZATION_V1.json",
+    "sha256": "f0790bbfdbe263be1044ef9ce3773d4ab0b3a63616edf04feda2e86103edf7b5"
+  },
+  "global_stop": false,
+  "desired_state": "bootstrap_then_automatic_collection",
+  "nodes": {
+    "A": {
+      "desired_state": "join_and_run_when_machine_gates_pass",
+      "enabled": true,
+      "actual_state": "awaiting_executor_deployment",
+      "control_plane_task": "A_QUEUE_BOOTSTRAP_V1"
+    },
+    "B": {
+      "desired_state": "join_and_run_when_machine_gates_pass",
+      "enabled": true,
+      "actual_state": "awaiting_executor_deployment",
+      "control_plane_task": "B_QUEUE_JOIN_V1"
+    }
+  },
+  "shared_package_state": "not_yet_implemented",
+  "automatic_batch_advance": true,
+  "human_review_per_normal_batch": false
+}

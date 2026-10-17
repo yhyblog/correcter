@@ -1,0 +1,570 @@
+{
+  "audit_utc": "2026-09-24T13:46:40.621750+00:00",
+  "scope": "Read-only latest top-level receipts (32/node) plus bounded final aggregation and document checks; no full result-tree crawl, code, hardware or experiment work.",
+  "new_scientific_evidence_since_current_paper": false,
+  "finding": "Current EXPERIMENT_FOR_PAPER.md already contains all 14 final L11 Post cells (7000 valid terminals). Latest scientific additions are 2026-09-23 H sweep, not 2026-09-24 new trials.",
+  "formal_post_configuration": {
+    "loss": "L11=BCE+gain+0.5pair",
+    "fit_seed": 9101,
+    "main_mode": "G0-multi",
+    "additional_once_comparison": "pi05 H10 only"
+  },
+  "formal_post_cells": {
+    "SmolVLA/Post/G0-multi/H10": {
+      "valid": 500,
+      "successes": 250,
+      "sr_percent": 50.0,
+      "mean_policy_calls": 20.382,
+      "mean_interventions": 2.7
+    },
+    "X-VLA/Post/G0-multi/H10": {
+      "valid": 500,
+      "successes": 411,
+      "sr_percent": 82.19999999999999,
+      "mean_policy_calls": 13.412,
+      "mean_interventions": 2.884
+    },
+    "pi05/Post/G0-multi/H10": {
+      "valid": 500,
+      "successes": 346,
+      "sr_percent": 69.19999999999999,
+      "mean_policy_calls": 14.248,
+      "mean_interventions": 2.05
+    },
+    "pi05/Post/G0-multi/H20": {
+      "valid": 500,
+      "successes": 336,
+      "sr_percent": 67.2,
+      "mean_policy_calls": 9.968,
+      "mean_interventions": 2.39
+    },
+    "pi05/Post/G0-multi/H30": {
+      "valid": 500,
+      "successes": 331,
+      "sr_percent": 66.2,
+      "mean_policy_calls": 8.678,
+      "mean_interventions": 2.616
+    },
+    "pi05/Post/G0-multi/H40": {
+      "valid": 500,
+      "successes": 324,
+      "sr_percent": 64.8,
+      "mean_policy_calls": 7.966,
+      "mean_interventions": 2.594
+    },
+    "pi05/Post/G0-multi/H50": {
+      "valid": 500,
+      "successes": 326,
+      "sr_percent": 65.2,
+      "mean_policy_calls": 7.422,
+      "mean_interventions": 2.624
+    },
+    "pi05/Post/G0-once/H10": {
+      "valid": 500,
+      "successes": 343,
+      "sr_percent": 68.60000000000001,
+      "mean_policy_calls": 13.84,
+      "mean_interventions": 0.782
+    },
+    "SmolVLA/Post/G0-multi/H20": {
+      "valid": 500,
+      "successes": 251,
+      "sr_percent": 50.2,
+      "mean_policy_calls": 13.338,
+      "mean_interventions": 3.096
+    },
+    "SmolVLA/Post/G0-multi/H30": {
+      "valid": 500,
+      "successes": 238,
+      "sr_percent": 47.599999999999994,
+      "mean_policy_calls": 11.098,
+      "mean_interventions": 3.194
+    },
+    "SmolVLA/Post/G0-multi/H40": {
+      "valid": 500,
+      "successes": 223,
+      "sr_percent": 44.6,
+      "mean_policy_calls": 10.134,
+      "mean_interventions": 3.2
+    },
+    "SmolVLA/Post/G0-multi/H50": {
+      "valid": 500,
+      "successes": 228,
+      "sr_percent": 45.6,
+      "mean_policy_calls": 9.28,
+      "mean_interventions": 3.172
+    },
+    "X-VLA/Post/G0-multi/H20": {
+      "valid": 500,
+      "successes": 398,
+      "sr_percent": 79.60000000000001,
+      "mean_policy_calls": 10.352,
+      "mean_interventions": 3.396
+    },
+    "X-VLA/Post/G0-multi/H30": {
+      "valid": 500,
+      "successes": 385,
+      "sr_percent": 77.0,
+      "mean_policy_calls": 9.898,
+      "mean_interventions": 3.848
+    }
+  },
+  "accepted_sources": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/L11_FINAL_ROLLUP_20260923/FINAL_ROLLUP.json",
+      "use": "8 original final Post cells, including pi05 H10 once and all three backbones H10"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/FINAL_DATA_CONSOLIDATION_20260923/FINAL_CROSSBASE_H_SWEEP_DATA.json",
+      "use": "6 new final Post H cells: Smol H20/30/40/50, X H20/30"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/FINAL_DATA_CONSOLIDATION_20260923/FINAL_L11_POST_PAIRED_STATS.json",
+      "use": "pi05 final paired comparisons"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/FINAL_DATA_CONSOLIDATION_20260923/FINAL_CROSSBASE_POST_PAIRED_STATS.json",
+      "use": "new H final paired comparisons"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/deadline_20260924/FINAL_DATA_CONSOLIDATION_20260923/FINAL_L11_POST_PER_TASK.csv",
+      "use": "50 task disaggregation of pi05 fiveH"
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/docs/EXPERIMENT_FOR_PAPER.md",
+      "use": "curated E6, R random-once, external systems, L11 loss ablation, parameters and measurement caveats"
+    }
+  ],
+  "not_admissible_as_final_post": [
+    {
+      "item": "Post Random-once and old fiveH Post trigger comparison",
+      "reason": "B_D24_POST_TRIGGER_MODES_V1 frozen Q=A4000, not current full-Q L11/fit9101. Can retain explicit historical context but cannot relabel as current L11 or use old paired Post differences for currentQ. Current L11 once comparison exists only H10.",
+      "evidence": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B_D24_POST_TRIGGER_MODES_V1/recovery_r3/METHOD_FROZEN.json"
+    },
+    {
+      "item": "QGF/QPILOTS",
+      "reason": "Only literature references in MASTER; no matching actual experiment receipt found. Do not fabricate comparison rows as completed.",
+      "evidence": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/docs/EXPERIMENT_RESULTS_MASTER.md#line217"
+    },
+    {
+      "item": "Real-world three tasks",
+      "reason": "User counts /60 recorded, but Ours exact Post/Velocity branch, Q identity and intervention configuration unbound. Not eligible for a final Post-L11 table without user/config confirmation.",
+      "evidence": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/docs/EXPERIMENT_RESULTS_MASTER.md#F4"
+    },
+    {
+      "item": "LIBERO full system",
+      "reason": "Latest C receipt is dependency gap audit with full_test_attempts=0 and full_success_rate=null, not new completed result. Operator-only old BCE not final D/G0/L11.",
+      "evidence": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_BASELINE_GAPS_E8_TABLES_V1_A_FULL_DEPENDENCY_AUDIT_r1.json"
+    },
+    {
+      "item": "September23 Post demo videos",
+      "reason": "Selected rescue pairs for qualitative presentation, not unconditional task success-rate results; user currently excludes video work.",
+      "evidence": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_POST_DEMO_VIDEOS_V1_RESULT_r1.json"
+    },
+    {
+      "item": "Old L01 / older A4000 final Post numbers",
+      "reason": "Superseded weights; preserved in MASTER, not mixed with current L11."
+    }
+  ],
+  "current_missingness": [
+    "Smol H10 N has496 valid,4unknown; all500 Post cannot be treated as paired496 without common-source restriction.",
+    "VLA-Corrector terminal outcomes500 valid but8 log-derived / exact cost492 only.",
+    "Smol/X H10 action-gradient count fields sparse; preserve coverage.",
+    "Multi G0 vs D5 result favors D5 point estimate, report negative result.",
+    "Prior 50 ablation sources overlap main500 and used selection; disclose nonblind overlap."
+  ],
+  "latest_receipt_scan": {
+    "A": [
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_POST_DEMO_VIDEOS_V1_REPORT_r1.md",
+        "mtime_utc": "2026-09-23T16:14:27.744567+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_POST_DEMO_VIDEOS_V1_RESULT_r1.json",
+        "mtime_utc": "2026-09-23T16:14:27.737704+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_POST_DEMO_VIDEOS_V1_STARTUP_REPORT.md",
+        "mtime_utc": "2026-09-23T16:12:37.157371+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_POST_DEMO_VIDEOS_V1_STARTUP_RESULT.json",
+        "mtime_utc": "2026-09-23T16:12:37.152591+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_POST_DEMO_VIDEOS_V1_LAUNCH_RECEIPT.json",
+        "mtime_utc": "2026-09-23T16:05:58.627650+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_POST_DEMO_VIDEOS_V1_ACK.json",
+        "mtime_utc": "2026-09-23T15:48:13.115865+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_CROSSBASE_H_SWEEP_V1_REPORT_r2.md",
+        "mtime_utc": "2026-09-23T13:50:35.222031+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_CROSSBASE_H_SWEEP_V1_RESULT_r2.json",
+        "mtime_utc": "2026-09-23T13:50:35.216660+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2_STARTUP_RESULT.json",
+        "mtime_utc": "2026-09-23T13:16:17.749335+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2_LAUNCH_RECEIPT.json",
+        "mtime_utc": "2026-09-23T13:09:06.827584+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_r2_ACK.json",
+        "mtime_utc": "2026-09-23T13:08:09.253007+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_CROSSBASE_H_SWEEP_V1_REPORT.md",
+        "mtime_utc": "2026-09-23T12:57:26.554019+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_CROSSBASE_H_SWEEP_V1_RESULT_r1.json",
+        "mtime_utc": "2026-09-23T12:57:26.548518+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_CROSSBASE_H_SWEEP_V1_STARTUP_RESULT.json",
+        "mtime_utc": "2026-09-23T12:16:18.293051+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_CROSSBASE_H_SWEEP_V1_LAUNCH_RECEIPT.json",
+        "mtime_utc": "2026-09-23T12:12:51.976095+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_CROSSBASE_H_SWEEP_V1_ACK.json",
+        "mtime_utc": "2026-09-23T11:56:34.044706+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_L11_RENDER_RECOVERY_V1_REPORT.md",
+        "mtime_utc": "2026-09-23T05:22:10.197582+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_L11_RENDER_RECOVERY_V1_RESULT_r1.json",
+        "mtime_utc": "2026-09-23T05:22:10.192028+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_L11_RENDER_RECOVERY_V1_STARTUP_RESULT.json",
+        "mtime_utc": "2026-09-23T04:51:53.302041+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_L11_RENDER_RECOVERY_V1_ACK.json",
+        "mtime_utc": "2026-09-23T04:24:39.110786+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_L11_RETEST_V1_REPORT.md",
+        "mtime_utc": "2026-09-23T04:08:26.816504+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_L11_RETEST_V1_RESULT_r1.json",
+        "mtime_utc": "2026-09-23T04:08:26.811157+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_L11_RETEST_V1_STARTUP_RESULT.json",
+        "mtime_utc": "2026-09-23T02:37:42.946614+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_L11_RETEST_V1_ACK.json",
+        "mtime_utc": "2026-09-23T02:18:19.366843+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_QUOTA_INDEPENDENT_QUEUE_V1_RESULT.json",
+        "mtime_utc": "2026-09-22T18:03:43.584416+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_QUOTA_INDEPENDENT_QUEUE_V1_ACK.json",
+        "mtime_utc": "2026-09-22T17:57:01.262560+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_AUTORECOVERY_QUEUE_RULE_V1_REPORT.md",
+        "mtime_utc": "2026-09-22T17:52:09.138438+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_AUTORECOVERY_QUEUE_RULE_V1_RESULT.json",
+        "mtime_utc": "2026-09-22T17:52:09.132020+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_AUTORECOVERY_QUEUE_RULE_V1_ACK.json",
+        "mtime_utc": "2026-09-22T17:34:10.009505+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_FULL_Q_AUTORUN_HANDOFF_V2_COMPATIBILITY_ACK.json",
+        "mtime_utc": "2026-09-22T17:32:57.489581+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_FULL_Q_AUTORUN_HANDOFF_V2_POST_LED_RESULT_r3.json",
+        "mtime_utc": "2026-09-22T17:27:44.248351+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A_D24_FULL_Q_AUTORUN_HANDOFF_V2_POST_LED_RESULT_r2.json",
+        "mtime_utc": "2026-09-22T17:23:50.494118+00:00"
+      }
+    ],
+    "B": [
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_POST_DEMO_VIDEOS_V1_EVENT_AUDIT_r1.json",
+        "mtime_utc": "2026-09-23T16:20:29.522414+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_QUEUE_JOIN_V1_AUDIT_B_4fde5aa79257bede62f12cac2dbaa296.json",
+        "mtime_utc": "2026-09-23T16:18:15.761563+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_QUEUE_JOIN_V1_AUDIT_B_0bc6d578438d9f543b8d40b926e8696c.json",
+        "mtime_utc": "2026-09-23T16:15:55.963268+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_POST_DEMO_VIDEOS_V1_FINAL_AUDIT.json",
+        "mtime_utc": "2026-09-23T16:13:15.232788+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_POST_DEMO_VIDEOS_V1_STABLE_HANDOFF.json",
+        "mtime_utc": "2026-09-23T16:13:15.228758+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_POST_DEMO_VIDEOS_V1_RUNNING.json",
+        "mtime_utc": "2026-09-23T16:09:54.042373+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_POST_DEMO_VIDEOS_V1_RESULT_r1.json",
+        "mtime_utc": "2026-09-23T16:09:54.015264+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_POST_DEMO_VIDEOS_V1_FIRST_PREVIEW.json",
+        "mtime_utc": "2026-09-23T16:08:40.526181+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_POST_DEMO_VIDEOS_V1_ACK.json",
+        "mtime_utc": "2026-09-23T16:05:47.060387+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_POST_DEMO_VIDEOS_V1_ACK_r1.json",
+        "mtime_utc": "2026-09-23T16:04:49.884420+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_FINAL_HANDOFF.json",
+        "mtime_utc": "2026-09-23T14:14:20.996802+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_RUNNING.json",
+        "mtime_utc": "2026-09-23T14:10:15.587954+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_RESULT_LATEST.json",
+        "mtime_utc": "2026-09-23T14:10:15.495133+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_RESULT_r3.json",
+        "mtime_utc": "2026-09-23T14:10:15.486704+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_R2_STARTUP_AUDIT.json",
+        "mtime_utc": "2026-09-23T13:57:14.611574+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_DECISION_V2_ACK.json",
+        "mtime_utc": "2026-09-23T13:54:53.127626+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_STABLE_HANDOFF.json",
+        "mtime_utc": "2026-09-23T13:49:12.618064+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_RECOVERY_ACK.json",
+        "mtime_utc": "2026-09-23T13:43:27.355111+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_RESULT_r1.json",
+        "mtime_utc": "2026-09-23T13:40:44.846741+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_RESULT_r2.json",
+        "mtime_utc": "2026-09-23T13:40:44.838435+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_RUNNING.json",
+        "mtime_utc": "2026-09-23T13:28:55.461997+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_165fb8ca64fed8ff81f67d81125d679d_AUDIT.json",
+        "mtime_utc": "2026-09-23T12:14:21.874652+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_STABLE_HANDOFF.json",
+        "mtime_utc": "2026-09-23T12:14:21.853259+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_IMPLEMENTATION.json",
+        "mtime_utc": "2026-09-23T12:11:21.149255+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_CROSSBASE_H_SWEEP_V1_ACK.json",
+        "mtime_utc": "2026-09-23T11:58:30.097866+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_c1ab955ae838a37a8c7911ce77f87582_AUDIT.json",
+        "mtime_utc": "2026-09-23T05:11:12.323895+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_5e3211c4635f6210a4bde3d5b05e291d_AUDIT.json",
+        "mtime_utc": "2026-09-23T05:08:17.271739+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_L11_RENDER_RECOVERY_V1_FINAL_HANDOFF.json",
+        "mtime_utc": "2026-09-23T05:08:17.261927+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_L11_RENDER_RECOVERY_V1_RUNNING.json",
+        "mtime_utc": "2026-09-23T05:03:01.338575+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_L11_RENDER_RECOVERY_V1_RESULT_r1.json",
+        "mtime_utc": "2026-09-23T05:03:01.303988+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_94e03fdd1f3c1d01b9416db35e18d901_AUDIT.json",
+        "mtime_utc": "2026-09-23T04:42:51.705963+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/B/B_D24_L11_RENDER_RECOVERY_V1_STABLE_HANDOFF.json",
+        "mtime_utc": "2026-09-23T04:42:51.687984+00:00"
+      }
+    ],
+    "C": [
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_BASELINE_GAPS_E8_TABLES_V1_A_FULL_DEPENDENCY_AUDIT_r1.json",
+        "mtime_utc": "2026-09-23T15:11:16.276388+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_CROSSBASE_H_SWEEP_V1_AUDITED_r1.json",
+        "mtime_utc": "2026-09-23T13:47:41.578413+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_CROSSBASE_H_SWEEP_V1_RESULT_r1.json",
+        "mtime_utc": "2026-09-23T13:36:34.868737+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_TASK_DISCOVERY_SERVICE_V1_RESULT.json",
+        "mtime_utc": "2026-09-23T11:56:14.278282+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_CROSSBASE_H_SWEEP_V1_ACK.json",
+        "mtime_utc": "2026-09-23T11:56:10.669908+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_L11_RENDER_RECOVERY_V1_RESULT_r1.json",
+        "mtime_utc": "2026-09-23T05:34:31.457394+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_L11_RENDER_RECOVERY_V1_ACK.json",
+        "mtime_utc": "2026-09-23T04:24:26.415594+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_L11_RETEST_V1_R5_EVENT_AUDIT.json",
+        "mtime_utc": "2026-09-23T04:20:59.927767+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_L11_RETEST_V1_TERMINAL_AUDIT.json",
+        "mtime_utc": "2026-09-23T04:16:59.092650+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_L11_RETEST_V1_TASK_EXPORT.json",
+        "mtime_utc": "2026-09-23T04:13:02.859871+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_L11_RETEST_V1_RESULT_r5.json",
+        "mtime_utc": "2026-09-23T04:11:17.591287+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_L11_RETEST_V1_RESULT_r4.json",
+        "mtime_utc": "2026-09-23T03:56:33.981890+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_L11_RETEST_V1_STABLE_HANDOFF.json",
+        "mtime_utc": "2026-09-23T03:19:37.189032+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_L11_RETEST_V1_RESULT_r3.json",
+        "mtime_utc": "2026-09-23T03:13:34.140697+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_L11_RETEST_V1_CONTINUATION_r3.json",
+        "mtime_utc": "2026-09-23T03:07:08.787450+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_L11_RETEST_V1_RESULT_r2.json",
+        "mtime_utc": "2026-09-23T03:03:20.944102+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_L11_RETEST_V1_CONTINUATION_r2.json",
+        "mtime_utc": "2026-09-23T02:56:32.826983+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_L11_RETEST_V1_RESULT_r1.json",
+        "mtime_utc": "2026-09-23T02:43:24.180405+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_L11_RETEST_V1_ACK.json",
+        "mtime_utc": "2026-09-23T02:19:01.367561+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_AUTORECOVERY_QUEUE_RULE_V1_TERMINAL_AUDIT_r1.json",
+        "mtime_utc": "2026-09-22T18:37:48.805156+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_PI05_SELECTED_H40_H50_V1_TERMINAL_AUDIT_r1.json",
+        "mtime_utc": "2026-09-22T18:27:31.168836+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_PI05_SELECTED_H40_H50_V1_RESULT_r1.json",
+        "mtime_utc": "2026-09-22T18:20:33.351227+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_FULL_Q_LOSS_REFRESH_V1_TERMINAL_AUDIT_r1.json",
+        "mtime_utc": "2026-09-22T18:15:15.945191+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_QUOTA_INDEPENDENT_QUEUE_V1_RESULT.json",
+        "mtime_utc": "2026-09-22T18:09:23.819969+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_FULL_Q_LOSS_REFRESH_V1_RESULT_r1.json",
+        "mtime_utc": "2026-09-22T17:55:59.253045+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_QUOTA_INDEPENDENT_QUEUE_V1_ACK.json",
+        "mtime_utc": "2026-09-22T17:48:50.300307+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_AUTORECOVERY_QUEUE_RULE_V1_RESULT.json",
+        "mtime_utc": "2026-09-22T17:42:37.670013+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_AUTORECOVERY_QUEUE_RULE_V1_ACK.json",
+        "mtime_utc": "2026-09-22T17:16:05.581830+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_PI05_SELECTED_H40_H50_V1_ACK.json",
+        "mtime_utc": "2026-09-22T16:46:37.017201+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_XVLA_MULTI_EVAL_V1_RESULT_r1.json",
+        "mtime_utc": "2026-09-22T16:32:00.688628+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_FULL_Q_LOSS_REFRESH_V1_ACK.json",
+        "mtime_utc": "2026-09-22T16:13:31.487066+00:00"
+      },
+      {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/C/C_D24_XVLA_MULTI_EVAL_V1_ACK.json",
+        "mtime_utc": "2026-09-22T15:52:27.644206+00:00"
+      }
+    ]
+  },
+  "project_files_modified": false,
+  "scientific_launches": 0
+}

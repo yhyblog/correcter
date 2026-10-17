@@ -1,0 +1,123 @@
+{
+  "task_id": "A10_EGL_CUDA_MAP_CPU_V1",
+  "completed_at_utc": "2026-09-19T18:32:52.537631+00:00",
+  "synthetic_test_count": 31,
+  "synthetic_tests_passed": 31,
+  "denial_checks": [
+    {
+      "command": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/commands/check_authorization_cpu.sh",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P00_EGL_CUDA_MAP_CPU_V1.json"
+      ],
+      "returncode": 2,
+      "stdout": "{\"status\": \"denied\", \"error\": \"A new released graphics-only task is required\", \"CPU_only\": true, \"graphics_started\": false}\n",
+      "stderr": "",
+      "expected_returncode": 2
+    },
+    {
+      "command": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/commands/check_authorization_cpu.sh",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_EGL_GRAPHICS_PROBE_V1.json"
+      ],
+      "returncode": 2,
+      "stdout": "{\"status\": \"denied\", \"error\": \"A new released graphics-only task is required\", \"CPU_only\": true, \"graphics_started\": false}\n",
+      "stderr": "",
+      "expected_returncode": 2
+    },
+    {
+      "command": [
+        "bash",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/commands/check_authorization_cpu.sh",
+        "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/proposal/RELEASE_TEMPLATE.json"
+      ],
+      "returncode": 2,
+      "stdout": "{\"status\": \"denied\", \"error\": \"A new released graphics-only task is required\", \"CPU_only\": true, \"graphics_started\": false}\n",
+      "stderr": "",
+      "expected_returncode": 2
+    }
+  ],
+  "published_bundle_SHA_verified_files": 33,
+  "published_code_AST_files": 7,
+  "shell_syntax_checks": 2,
+  "unchanged_lifecycle_and_CPU_checker_files": [
+    "run_reserved_graphics.py",
+    "wave_timing.py",
+    "authorize_cpu.py"
+  ],
+  "old_source_immutability_targeted_checks": [
+    "code/graphics_probe.py",
+    "code/probe_contract.py",
+    "code/launch_graphics.py",
+    "code/run_reserved_graphics.py",
+    "code/wave_timing.py",
+    "scene.xml"
+  ],
+  "previous_failure_RESULT_unchanged": true,
+  "actual_graphics_CUDA_calls": 0,
+  "NVML_subprocesses_in_CPU_task": 0,
+  "occupancy_guard_snapshot": {
+    "pid": 27508,
+    "updated": 1789842772.0845077,
+    "gpus": {
+      "0": {
+        "state": "holder",
+        "manager_pid": 209152,
+        "driver_pids": [
+          1902411
+        ]
+      },
+      "1": {
+        "state": "holder",
+        "manager_pid": 209153,
+        "driver_pids": [
+          1902416
+        ]
+      },
+      "2": {
+        "state": "holder",
+        "manager_pid": 209154,
+        "driver_pids": [
+          1902413
+        ]
+      },
+      "3": {
+        "state": "holder",
+        "manager_pid": 209155,
+        "driver_pids": [
+          1902420
+        ]
+      },
+      "4": {
+        "state": "holder",
+        "manager_pid": 209156,
+        "driver_pids": [
+          1902417
+        ]
+      },
+      "5": {
+        "state": "holder",
+        "manager_pid": 209157,
+        "driver_pids": [
+          1902421
+        ]
+      },
+      "6": {
+        "state": "holder",
+        "manager_pid": 209158,
+        "driver_pids": [
+          1902423
+        ]
+      },
+      "7": {
+        "state": "holder",
+        "manager_pid": 209159,
+        "driver_pids": [
+          1902425
+        ]
+      }
+    }
+  },
+  "note": "No old full test suite, no runtime library load, no real launcher; inherited external manifest reused, changed CUDA source and headers hashed only"
+}

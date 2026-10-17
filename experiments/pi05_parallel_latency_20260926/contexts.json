@@ -1,0 +1,703 @@
+{
+  "created_utc": "2026-09-26T02:38:01.102359+00:00",
+  "scope": "Saved real observation replay for inference timing only; no new collection or closed-loop performance evaluation",
+  "selection": "ASCII-sorted five existing mechanism test tasks; first four parent IDs per task; prefer saved cut005, otherwise earliest saved snapshot. All selected rows have cut005. No use of score or success to select.",
+  "pool_root": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool",
+  "count": 20,
+  "tasks": [
+    "disassemble-v3",
+    "pick-place-wall-v3",
+    "shelf-place-v3",
+    "stick-pull-v3",
+    "stick-push-v3"
+  ],
+  "per_task": 4,
+  "all_cut5": true,
+  "npz_schema": {
+    "pixels": {
+      "shape": [
+        480,
+        480,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "agent_pos": {
+      "shape": [
+        4
+      ],
+      "dtype": "float64"
+    },
+    "frames": {
+      "shape": [
+        5,
+        480,
+        480,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "props": {
+      "shape": [
+        5,
+        4
+      ],
+      "dtype": "float64"
+    },
+    "prefix": {
+      "shape": [
+        5,
+        4
+      ],
+      "dtype": "float32"
+    },
+    "raw": {
+      "shape": [
+        50,
+        4
+      ],
+      "dtype": "float32"
+    },
+    "age": {
+      "shape": [],
+      "dtype": "int64"
+    },
+    "H": {
+      "shape": [],
+      "dtype": "int64"
+    },
+    "observed__history": {
+      "shape": [
+        1,
+        5,
+        4096
+      ],
+      "dtype": "float32"
+    },
+    "observed__history_mask": {
+      "shape": [
+        1,
+        5
+      ],
+      "dtype": "bool"
+    },
+    "observed__proprio": {
+      "shape": [
+        1,
+        5,
+        4
+      ],
+      "dtype": "float32"
+    },
+    "observed__proprio_mask": {
+      "shape": [
+        1,
+        5
+      ],
+      "dtype": "bool"
+    },
+    "observed__past_actions": {
+      "shape": [
+        1,
+        4,
+        4
+      ],
+      "dtype": "float32"
+    },
+    "observed__language": {
+      "shape": [
+        1,
+        2048
+      ],
+      "dtype": "float32"
+    },
+    "observed__remaining": {
+      "shape": [
+        1
+      ],
+      "dtype": "float32"
+    }
+  },
+  "contexts": [
+    {
+      "context_index": 0,
+      "source_id": "MECH1_test_disassemble-v3_000",
+      "source": {
+        "source_id": "MECH1_test_disassemble-v3_000",
+        "parent_episode_id": "disassemble-v3__2030543234",
+        "task": "disassemble-v3",
+        "instruction": "Pick a nut out of a peg",
+        "env_seed": 2030543234,
+        "policy_seed": 2152824627161837573,
+        "split": "test",
+        "ordinal": 0,
+        "cuts": [
+          5,
+          25,
+          75
+        ]
+      },
+      "task": "disassemble-v3",
+      "instruction": "Pick a nut out of a peg",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_disassemble-v3_000/cut005/snapshot/STATE.json",
+      "state_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_disassemble-v3_000/cut005/snapshot/state.npz",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_disassemble-v3_000/cut005/snapshot/state.npz",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295,
+      "state_size_bytes": 1456875
+    },
+    {
+      "context_index": 1,
+      "source_id": "MECH1_test_disassemble-v3_001",
+      "source": {
+        "source_id": "MECH1_test_disassemble-v3_001",
+        "parent_episode_id": "disassemble-v3__1191869600",
+        "task": "disassemble-v3",
+        "instruction": "Pick a nut out of a peg",
+        "env_seed": 1191869600,
+        "policy_seed": 8725961338313411110,
+        "split": "test",
+        "ordinal": 1,
+        "cuts": [
+          5,
+          25,
+          75
+        ]
+      },
+      "task": "disassemble-v3",
+      "instruction": "Pick a nut out of a peg",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_disassemble-v3_001/cut005/snapshot/STATE.json",
+      "state_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_disassemble-v3_001/cut005/snapshot/state.npz",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_disassemble-v3_001/cut005/snapshot/state.npz",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295,
+      "state_size_bytes": 1455797
+    },
+    {
+      "context_index": 2,
+      "source_id": "MECH1_test_disassemble-v3_002",
+      "source": {
+        "source_id": "MECH1_test_disassemble-v3_002",
+        "parent_episode_id": "disassemble-v3__1939389933",
+        "task": "disassemble-v3",
+        "instruction": "Pick a nut out of a peg",
+        "env_seed": 1939389933,
+        "policy_seed": 8076445205696410193,
+        "split": "test",
+        "ordinal": 2,
+        "cuts": [
+          5,
+          25,
+          75
+        ]
+      },
+      "task": "disassemble-v3",
+      "instruction": "Pick a nut out of a peg",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_disassemble-v3_002/cut005/snapshot/STATE.json",
+      "state_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_disassemble-v3_002/cut005/snapshot/state.npz",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_disassemble-v3_002/cut005/snapshot/state.npz",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295,
+      "state_size_bytes": 1456772
+    },
+    {
+      "context_index": 3,
+      "source_id": "MECH1_test_disassemble-v3_003",
+      "source": {
+        "source_id": "MECH1_test_disassemble-v3_003",
+        "parent_episode_id": "disassemble-v3__798887511",
+        "task": "disassemble-v3",
+        "instruction": "Pick a nut out of a peg",
+        "env_seed": 798887511,
+        "policy_seed": 904669329633975002,
+        "split": "test",
+        "ordinal": 3,
+        "cuts": [
+          5,
+          25,
+          75
+        ]
+      },
+      "task": "disassemble-v3",
+      "instruction": "Pick a nut out of a peg",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_disassemble-v3_003/cut005/snapshot/STATE.json",
+      "state_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_disassemble-v3_003/cut005/snapshot/state.npz",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_disassemble-v3_003/cut005/snapshot/state.npz",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295,
+      "state_size_bytes": 1455936
+    },
+    {
+      "context_index": 4,
+      "source_id": "MECH1_test_pick-place-wall-v3_000",
+      "source": {
+        "source_id": "MECH1_test_pick-place-wall-v3_000",
+        "parent_episode_id": "pick-place-wall-v3__125184722",
+        "task": "pick-place-wall-v3",
+        "instruction": "Pick a puck, bypass a wall and place the puck",
+        "env_seed": 125184722,
+        "policy_seed": 6514821984534170068,
+        "split": "test",
+        "ordinal": 0,
+        "cuts": [
+          5,
+          25,
+          75
+        ]
+      },
+      "task": "pick-place-wall-v3",
+      "instruction": "Pick a puck, bypass a wall and place the puck",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_pick-place-wall-v3_000/cut005/snapshot/STATE.json",
+      "state_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_pick-place-wall-v3_000/cut005/snapshot/state.npz",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_pick-place-wall-v3_000/cut005/snapshot/state.npz",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295,
+      "state_size_bytes": 1493612
+    },
+    {
+      "context_index": 5,
+      "source_id": "MECH1_test_pick-place-wall-v3_001",
+      "source": {
+        "source_id": "MECH1_test_pick-place-wall-v3_001",
+        "parent_episode_id": "pick-place-wall-v3__1185537120",
+        "task": "pick-place-wall-v3",
+        "instruction": "Pick a puck, bypass a wall and place the puck",
+        "env_seed": 1185537120,
+        "policy_seed": 2346696884082834946,
+        "split": "test",
+        "ordinal": 1,
+        "cuts": [
+          5,
+          25,
+          75
+        ]
+      },
+      "task": "pick-place-wall-v3",
+      "instruction": "Pick a puck, bypass a wall and place the puck",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_pick-place-wall-v3_001/cut005/snapshot/STATE.json",
+      "state_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_pick-place-wall-v3_001/cut005/snapshot/state.npz",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_pick-place-wall-v3_001/cut005/snapshot/state.npz",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295,
+      "state_size_bytes": 1493246
+    },
+    {
+      "context_index": 6,
+      "source_id": "MECH1_test_pick-place-wall-v3_002",
+      "source": {
+        "source_id": "MECH1_test_pick-place-wall-v3_002",
+        "parent_episode_id": "pick-place-wall-v3__1814739390",
+        "task": "pick-place-wall-v3",
+        "instruction": "Pick a puck, bypass a wall and place the puck",
+        "env_seed": 1814739390,
+        "policy_seed": 8312141575976433679,
+        "split": "test",
+        "ordinal": 2,
+        "cuts": [
+          5,
+          25,
+          75
+        ]
+      },
+      "task": "pick-place-wall-v3",
+      "instruction": "Pick a puck, bypass a wall and place the puck",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_pick-place-wall-v3_002/cut005/snapshot/STATE.json",
+      "state_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_pick-place-wall-v3_002/cut005/snapshot/state.npz",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_pick-place-wall-v3_002/cut005/snapshot/state.npz",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295,
+      "state_size_bytes": 1492732
+    },
+    {
+      "context_index": 7,
+      "source_id": "MECH1_test_pick-place-wall-v3_003",
+      "source": {
+        "source_id": "MECH1_test_pick-place-wall-v3_003",
+        "parent_episode_id": "pick-place-wall-v3__577293943",
+        "task": "pick-place-wall-v3",
+        "instruction": "Pick a puck, bypass a wall and place the puck",
+        "env_seed": 577293943,
+        "policy_seed": 390527636790116610,
+        "split": "test",
+        "ordinal": 3,
+        "cuts": [
+          5,
+          25,
+          75
+        ]
+      },
+      "task": "pick-place-wall-v3",
+      "instruction": "Pick a puck, bypass a wall and place the puck",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_pick-place-wall-v3_003/cut005/snapshot/STATE.json",
+      "state_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_pick-place-wall-v3_003/cut005/snapshot/state.npz",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_pick-place-wall-v3_003/cut005/snapshot/state.npz",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295,
+      "state_size_bytes": 1492856
+    },
+    {
+      "context_index": 8,
+      "source_id": "MECH1_test_shelf-place-v3_000",
+      "source": {
+        "source_id": "MECH1_test_shelf-place-v3_000",
+        "parent_episode_id": "shelf-place-v3__1141840289",
+        "task": "shelf-place-v3",
+        "instruction": "Pick and place a puck onto a shelf",
+        "env_seed": 1141840289,
+        "policy_seed": 1330639901180197347,
+        "split": "test",
+        "ordinal": 0,
+        "cuts": [
+          5,
+          25,
+          75
+        ]
+      },
+      "task": "shelf-place-v3",
+      "instruction": "Pick and place a puck onto a shelf",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_shelf-place-v3_000/cut005/snapshot/STATE.json",
+      "state_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_shelf-place-v3_000/cut005/snapshot/state.npz",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_shelf-place-v3_000/cut005/snapshot/state.npz",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295,
+      "state_size_bytes": 1696427
+    },
+    {
+      "context_index": 9,
+      "source_id": "MECH1_test_shelf-place-v3_001",
+      "source": {
+        "source_id": "MECH1_test_shelf-place-v3_001",
+        "parent_episode_id": "shelf-place-v3__2121250309",
+        "task": "shelf-place-v3",
+        "instruction": "Pick and place a puck onto a shelf",
+        "env_seed": 2121250309,
+        "policy_seed": 6626624511828662305,
+        "split": "test",
+        "ordinal": 1,
+        "cuts": [
+          5,
+          25,
+          75
+        ]
+      },
+      "task": "shelf-place-v3",
+      "instruction": "Pick and place a puck onto a shelf",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_shelf-place-v3_001/cut005/snapshot/STATE.json",
+      "state_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_shelf-place-v3_001/cut005/snapshot/state.npz",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_shelf-place-v3_001/cut005/snapshot/state.npz",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295,
+      "state_size_bytes": 1713589
+    },
+    {
+      "context_index": 10,
+      "source_id": "MECH1_test_shelf-place-v3_002",
+      "source": {
+        "source_id": "MECH1_test_shelf-place-v3_002",
+        "parent_episode_id": "shelf-place-v3__195272034",
+        "task": "shelf-place-v3",
+        "instruction": "Pick and place a puck onto a shelf",
+        "env_seed": 195272034,
+        "policy_seed": 252382218807975022,
+        "split": "test",
+        "ordinal": 2,
+        "cuts": [
+          5,
+          25,
+          75
+        ]
+      },
+      "task": "shelf-place-v3",
+      "instruction": "Pick and place a puck onto a shelf",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_shelf-place-v3_002/cut005/snapshot/STATE.json",
+      "state_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_shelf-place-v3_002/cut005/snapshot/state.npz",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_shelf-place-v3_002/cut005/snapshot/state.npz",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295,
+      "state_size_bytes": 1708054
+    },
+    {
+      "context_index": 11,
+      "source_id": "MECH1_test_shelf-place-v3_003",
+      "source": {
+        "source_id": "MECH1_test_shelf-place-v3_003",
+        "parent_episode_id": "shelf-place-v3__107214145",
+        "task": "shelf-place-v3",
+        "instruction": "Pick and place a puck onto a shelf",
+        "env_seed": 107214145,
+        "policy_seed": 4097414368753896560,
+        "split": "test",
+        "ordinal": 3,
+        "cuts": [
+          5,
+          25,
+          75
+        ]
+      },
+      "task": "shelf-place-v3",
+      "instruction": "Pick and place a puck onto a shelf",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_shelf-place-v3_003/cut005/snapshot/STATE.json",
+      "state_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_shelf-place-v3_003/cut005/snapshot/state.npz",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_shelf-place-v3_003/cut005/snapshot/state.npz",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295,
+      "state_size_bytes": 1684963
+    },
+    {
+      "context_index": 12,
+      "source_id": "MECH1_test_stick-pull-v3_000",
+      "source": {
+        "source_id": "MECH1_test_stick-pull-v3_000",
+        "parent_episode_id": "stick-pull-v3__349767123",
+        "task": "stick-pull-v3",
+        "instruction": "Grasp a stick and pull a box with the stick",
+        "env_seed": 349767123,
+        "policy_seed": 5340444203070393804,
+        "split": "test",
+        "ordinal": 0,
+        "cuts": [
+          5,
+          25,
+          75
+        ]
+      },
+      "task": "stick-pull-v3",
+      "instruction": "Grasp a stick and pull a box with the stick",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-pull-v3_000/cut005/snapshot/STATE.json",
+      "state_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-pull-v3_000/cut005/snapshot/state.npz",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-pull-v3_000/cut005/snapshot/state.npz",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295,
+      "state_size_bytes": 1502967
+    },
+    {
+      "context_index": 13,
+      "source_id": "MECH1_test_stick-pull-v3_001",
+      "source": {
+        "source_id": "MECH1_test_stick-pull-v3_001",
+        "parent_episode_id": "stick-pull-v3__18342629",
+        "task": "stick-pull-v3",
+        "instruction": "Grasp a stick and pull a box with the stick",
+        "env_seed": 18342629,
+        "policy_seed": 3908761087587621249,
+        "split": "test",
+        "ordinal": 1,
+        "cuts": [
+          5,
+          25,
+          75
+        ]
+      },
+      "task": "stick-pull-v3",
+      "instruction": "Grasp a stick and pull a box with the stick",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-pull-v3_001/cut005/snapshot/STATE.json",
+      "state_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-pull-v3_001/cut005/snapshot/state.npz",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-pull-v3_001/cut005/snapshot/state.npz",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295,
+      "state_size_bytes": 1506205
+    },
+    {
+      "context_index": 14,
+      "source_id": "MECH1_test_stick-pull-v3_002",
+      "source": {
+        "source_id": "MECH1_test_stick-pull-v3_002",
+        "parent_episode_id": "stick-pull-v3__338123475",
+        "task": "stick-pull-v3",
+        "instruction": "Grasp a stick and pull a box with the stick",
+        "env_seed": 338123475,
+        "policy_seed": 6626145640552654282,
+        "split": "test",
+        "ordinal": 2,
+        "cuts": [
+          5,
+          25,
+          75
+        ]
+      },
+      "task": "stick-pull-v3",
+      "instruction": "Grasp a stick and pull a box with the stick",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-pull-v3_002/cut005/snapshot/STATE.json",
+      "state_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-pull-v3_002/cut005/snapshot/state.npz",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-pull-v3_002/cut005/snapshot/state.npz",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295,
+      "state_size_bytes": 1504336
+    },
+    {
+      "context_index": 15,
+      "source_id": "MECH1_test_stick-pull-v3_003",
+      "source": {
+        "source_id": "MECH1_test_stick-pull-v3_003",
+        "parent_episode_id": "stick-pull-v3__2066979986",
+        "task": "stick-pull-v3",
+        "instruction": "Grasp a stick and pull a box with the stick",
+        "env_seed": 2066979986,
+        "policy_seed": 4389666553045428112,
+        "split": "test",
+        "ordinal": 3,
+        "cuts": [
+          5,
+          25,
+          75
+        ]
+      },
+      "task": "stick-pull-v3",
+      "instruction": "Grasp a stick and pull a box with the stick",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-pull-v3_003/cut005/snapshot/STATE.json",
+      "state_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-pull-v3_003/cut005/snapshot/state.npz",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-pull-v3_003/cut005/snapshot/state.npz",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295,
+      "state_size_bytes": 1506301
+    },
+    {
+      "context_index": 16,
+      "source_id": "MECH1_test_stick-push-v3_000",
+      "source": {
+        "source_id": "MECH1_test_stick-push-v3_000",
+        "parent_episode_id": "stick-push-v3__1311238354",
+        "task": "stick-push-v3",
+        "instruction": "Grasp a stick and push a box using the stick",
+        "env_seed": 1311238354,
+        "policy_seed": 8961598668899331145,
+        "split": "test",
+        "ordinal": 0,
+        "cuts": [
+          5,
+          25,
+          75
+        ]
+      },
+      "task": "stick-push-v3",
+      "instruction": "Grasp a stick and push a box using the stick",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-push-v3_000/cut005/snapshot/STATE.json",
+      "state_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-push-v3_000/cut005/snapshot/state.npz",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-push-v3_000/cut005/snapshot/state.npz",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295,
+      "state_size_bytes": 1497284
+    },
+    {
+      "context_index": 17,
+      "source_id": "MECH1_test_stick-push-v3_001",
+      "source": {
+        "source_id": "MECH1_test_stick-push-v3_001",
+        "parent_episode_id": "stick-push-v3__1160256540",
+        "task": "stick-push-v3",
+        "instruction": "Grasp a stick and push a box using the stick",
+        "env_seed": 1160256540,
+        "policy_seed": 4289202756567615887,
+        "split": "test",
+        "ordinal": 1,
+        "cuts": [
+          5,
+          25,
+          75
+        ]
+      },
+      "task": "stick-push-v3",
+      "instruction": "Grasp a stick and push a box using the stick",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-push-v3_001/cut005/snapshot/STATE.json",
+      "state_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-push-v3_001/cut005/snapshot/state.npz",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-push-v3_001/cut005/snapshot/state.npz",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295,
+      "state_size_bytes": 1497692
+    },
+    {
+      "context_index": 18,
+      "source_id": "MECH1_test_stick-push-v3_002",
+      "source": {
+        "source_id": "MECH1_test_stick-push-v3_002",
+        "parent_episode_id": "stick-push-v3__1286819087",
+        "task": "stick-push-v3",
+        "instruction": "Grasp a stick and push a box using the stick",
+        "env_seed": 1286819087,
+        "policy_seed": 2969948733702573272,
+        "split": "test",
+        "ordinal": 2,
+        "cuts": [
+          5,
+          25,
+          75
+        ]
+      },
+      "task": "stick-push-v3",
+      "instruction": "Grasp a stick and push a box using the stick",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-push-v3_002/cut005/snapshot/STATE.json",
+      "state_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-push-v3_002/cut005/snapshot/state.npz",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-push-v3_002/cut005/snapshot/state.npz",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295,
+      "state_size_bytes": 1494853
+    },
+    {
+      "context_index": 19,
+      "source_id": "MECH1_test_stick-push-v3_003",
+      "source": {
+        "source_id": "MECH1_test_stick-push-v3_003",
+        "parent_episode_id": "stick-push-v3__1630718121",
+        "task": "stick-push-v3",
+        "instruction": "Grasp a stick and push a box using the stick",
+        "env_seed": 1630718121,
+        "policy_seed": 4567041941187123739,
+        "split": "test",
+        "ordinal": 3,
+        "cuts": [
+          5,
+          25,
+          75
+        ]
+      },
+      "task": "stick-push-v3",
+      "instruction": "Grasp a stick and push a box using the stick",
+      "state_json": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-push-v3_003/cut005/snapshot/STATE.json",
+      "state_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-push-v3_003/cut005/snapshot/state.npz",
+      "snapshot_npz": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/C/C_MECHANISM_20260924_V1/pool/MECH1_test_stick-push-v3_003/cut005/snapshot/state.npz",
+      "cut": 5,
+      "age": 5,
+      "H": 10,
+      "budget_remaining": 295,
+      "state_size_bytes": 1495564
+    }
+  ]
+}

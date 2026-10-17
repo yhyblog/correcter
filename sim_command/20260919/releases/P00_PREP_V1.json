@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "release_id": "P00_PREP_V1",
+  "campaign_id": "corrector-sim-20260919",
+  "issued_at_utc": "2026-09-19T15:04:03.636379+00:00",
+  "issuer": "analysis",
+  "kind": "cpu_interface_preparation",
+  "task_ids": [
+    "A10",
+    "B10"
+  ],
+  "task_revision": 1,
+  "control_revision": 3,
+  "contract": {
+    "path": "contracts/P00_PREPARATION_CONTRACT_V1.md",
+    "sha256": "b8fe737874ea7771bef87e5ed188f5c0eff619492d5656c9d58de9cbf1e078cd"
+  },
+  "data_log_contract": {
+    "path": "contracts/DATA_LOG_CONTRACT_V1.md",
+    "sha256": "c0276b27c006c9687fd11cb01420fb468adff7c7019a4f3e57633ee15b535c65"
+  },
+  "task_briefs": {
+    "A10": {
+      "path": "tasks/A10_CORE_PREPARATION.md",
+      "sha256": "5f2b36c0cec166a6c3c56d9670cf1c7e4b9e3ece48e2071fd0ccc4674a863f36"
+    },
+    "B10": {
+      "path": "tasks/B10_BASELINES_PREPARATION.md",
+      "sha256": "c90c20cb743ce3b0dcf65f7050a0a13d7823ebf3ad48eb6f289fff7e783f41d9"
+    }
+  },
+  "owner_hosts": {
+    "A10": "trial-303224955-trialrun-303224955-worker-0",
+    "B10": "trial-303225685-trialrun-303225685-worker-0"
+  },
+  "prerequisites": {
+    "A10": {
+      "receipt": "receipts/A/A00_RESULT.json",
+      "status": "complete",
+      "compute_counts_zero": true
+    },
+    "B10": {
+      "receipt": "receipts/B/B00_RESULT.json",
+      "status": "complete",
+      "compute_counts_zero": true
+    }
+  },
+  "limits": {
+    "simulator_attempts": 0,
+    "model_gpu_inference_calls": 0,
+    "optimizer_updates": 0
+  },
+  "allowed": [
+    "isolated_code_and_config_edits",
+    "cpu_static_synthetic_checks",
+    "asset_format_inventory",
+    "necessary_small_public_code_checkout_B_only",
+    "own_role_receipts_and_artifacts"
+  ],
+  "forbidden": [
+    "gpu_model_execution",
+    "simulator_rollouts",
+    "shared_environment_upgrades",
+    "historical_artifact_mutation",
+    "large_model_downloads"
+  ],
+  "completion": [
+    "schema_and_small_example",
+    "code_snapshot",
+    "static_check_result",
+    "bounded_preflight_command_files_and_count_estimates",
+    "short_report_and_final_receipt"
+  ],
+  "note": "Independent progression after own inventory receipt is complete; no peer inventory barrier. Formal GPU preflight requires a separate P10 release."
+}

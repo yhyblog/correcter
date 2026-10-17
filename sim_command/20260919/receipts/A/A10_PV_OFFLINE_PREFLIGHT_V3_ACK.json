@@ -1,0 +1,209 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "task_id": "A10_PV_OFFLINE_PREFLIGHT_V3",
+  "revision": 1,
+  "role": "A",
+  "hostname": "trial-303224955-trialrun-303224955-worker-0",
+  "session_id": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+  "status": "ACK",
+  "at_utc": "2026-09-19T22:50:54.414007+00:00",
+  "release": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V3.json",
+    "sha256": "8761531b842bde05f2c7677cf568e32e88c13bde1aee11bd82286cf74897aa36",
+    "size_bytes": 9501
+  },
+  "control": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/CONTROL.json",
+    "sha256": "4cb1a92e96df545e077ab1731b5a62a0647f0c465b3ca01ef6274af3b3d803b5",
+    "size_bytes": 23257
+  },
+  "control_revision": 30,
+  "task_board": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/TASK_BOARD.json",
+    "sha256": "c501354197d0ae058d3ffba847382211601a6ac10115a5a5da3aec938bc2fbfb",
+    "size_bytes": 19277
+  },
+  "task_board_revision": 37,
+  "board_entry": {
+    "id": "A10_PV_OFFLINE_PREFLIGHT_V3",
+    "owner": "A",
+    "revision": 1,
+    "status": "ready",
+    "release": "releases/P10_A_PV_OFFLINE_PREFLIGHT_V3.json",
+    "dependencies": [
+      "A10_PV_HANDOFF_CPU_REPAIR_V1"
+    ],
+    "dependency_outcome_required": "CPU_handoff_package_accepted_shared_patch_separately_installed_and_independent_compute_release_published",
+    "brief": "tasks/A10_PV_OFFLINE_PREFLIGHT_V3.md",
+    "wave_id": "corrector-sim-20260919-A-PV-offline-V3-wave08",
+    "run_id": "A10_PV_OFFLINE_PREFLIGHT_V3_r1_A_wave08",
+    "shard_id": "A-PV-offline-V3-shelf-place-step0-cached-once",
+    "acknowledgement": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V3_ACK.json",
+    "expected_result": "receipts/A/A10_PV_OFFLINE_PREFLIGHT_V3_RESULT.json"
+  },
+  "task_brief": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/tasks/A10_PV_OFFLINE_PREFLIGHT_V3.md",
+    "sha256": "ccb3feaedd22ac91ec19fa67422ca471034d7b667585d98b1f8d94e50488ac24",
+    "size_bytes": 6986
+  },
+  "proposal": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/proposal/PROPOSAL.json",
+    "sha256": "c07750be489911e2d7363729d8ed186605f8792337c9f4118677e20a3af1ca2a",
+    "size_bytes": 14534
+  },
+  "command_file": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/commands/run_proposed_pv_offline.sh",
+    "sha256": "a7bafb4ef1288e9fb1598faeb495c01e72f44c0db3f632e6371a8a3e55b95bc4",
+    "size_bytes": 400
+  },
+  "real_command": [
+    "bash",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1/commands/run_proposed_pv_offline.sh",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V3.json"
+  ],
+  "working_directory": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_HANDOFF_CPU_REPAIR_V1",
+  "unique_path_state_before_ACK": {
+    "claim": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_PV_V3_release_claims/P10_A_PV_OFFLINE_PREFLIGHT_V3.json",
+      "exists": false,
+      "is_symlink": false
+    },
+    "launcher_output": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/P10_PV_V3_launcher_runs/A10_PV_OFFLINE_PREFLIGHT_V3_r1_A_wave08",
+      "exists": false,
+      "is_symlink": false
+    },
+    "runtime_cache": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/P10_PV_V3_runtime_cache/A10_PV_OFFLINE_PREFLIGHT_V3_r1_A_wave08",
+      "exists": false,
+      "is_symlink": false
+    },
+    "closed_release": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V3_CLOSED.json",
+      "exists": false,
+      "is_symlink": false
+    },
+    "ACK": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PV_OFFLINE_PREFLIGHT_V3_ACK.json",
+      "exists": false,
+      "is_symlink": false
+    },
+    "RESULT": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PV_OFFLINE_PREFLIGHT_V3_RESULT.json",
+      "exists": false,
+      "is_symlink": false
+    },
+    "outer_work": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PV_OFFLINE_PREFLIGHT_V3_r1",
+      "exists": false,
+      "is_symlink": false
+    },
+    "summary_output": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_OFFLINE_PREFLIGHT_V3",
+      "exists": false,
+      "is_symlink": false
+    }
+  },
+  "resource_caps": {
+    "simulator_attempts": 0,
+    "environment_instances": 0,
+    "wrapper_instances": 0,
+    "taskset_constructions": 0,
+    "environment_reset_calls": 0,
+    "reset_model_calls": 0,
+    "initialization_physics_substeps": 0,
+    "policy_physics_substeps": 0,
+    "physics_steps": 0,
+    "env_steps": 0,
+    "graphics_context_creations": 0,
+    "render_calls": 0,
+    "rgb_readback_calls": 0,
+    "explicit_EGL_calls": 0,
+    "explicit_CUDA_driver_calls": 0,
+    "explicit_driver_dlopen_calls": 0,
+    "completed_rollouts": 0,
+    "monitor_calls": 0,
+    "D_forward_calls": 0,
+    "G0_forward_calls": 0,
+    "vla_backward_calls": 0,
+    "vla_parameter_backward_calls": 0,
+    "critic_parameter_updates": 0,
+    "optimizer_updates": 0,
+    "training_updates": 0,
+    "retries": 0,
+    "deletions": 0,
+    "baseline_sampling_calls": 0,
+    "offline_attempts": 1,
+    "native_nvml_identity_queries": 2,
+    "policy_device_selections": 1,
+    "policy_device_property_queries": 1,
+    "model_initializations": 5,
+    "policy_model_loads": 1,
+    "policy_state_file_loads": 1,
+    "policy_state_dict_loads": 1,
+    "critic_model_loads": 4,
+    "tokenizer_loads": 1,
+    "preprocessor_loads": 1,
+    "postprocessor_loads": 1,
+    "normalizer_transform_loads": 1,
+    "projection_loads": 1,
+    "context_builds": 1,
+    "preprocessor_calls": 2,
+    "tokenizer_calls": 3,
+    "image_preprocessing_calls": 2,
+    "visual_encoder_forwards": 4,
+    "language_embedding_forwards": 2,
+    "encoder_forward_calls": 6,
+    "spatial_projection_calls": 1,
+    "prefix_transformer_forwards": 1,
+    "action_expert_forwards": 10,
+    "flow_forward_calls": 10,
+    "noise_draws": 1,
+    "vla_sampling_calls": 1,
+    "model_gpu_inference_calls": 1,
+    "critic_feature_transforms": 4,
+    "critic_forward_calls": 40,
+    "objective_forward_calls": 10,
+    "action_gradient_calls": 4,
+    "critic_backward_calls": 4,
+    "post_action_gradient_calls": 1,
+    "velocity_action_gradient_calls": 3,
+    "own_projection_calls": 4,
+    "raw_constraint_audits": 2,
+    "postprocessor_calls": 1
+  },
+  "occupancy_handoff": {
+    "environment_variable": "CORRECTOR_OCCUPANCY_HANDOFF_TIMEOUT_SECONDS",
+    "required_value": "300",
+    "timeout_seconds": 300,
+    "default_seconds": 90,
+    "minimum_seconds": 1,
+    "maximum_seconds": 300,
+    "guard_path": "/mnt/bn/arnold-recommend/yaohaoyang/gpu_occupancy_guard.py",
+    "guard_expected_sha256": "7910c567a47ddf68294d92fc9698cc780aeb130ddefde0337414bfcd88cb85a4",
+    "guard_expected_size_bytes": 10704,
+    "active_guard_required": true,
+    "formal_lock_path": "/tmp/gpu_occupancy_guard/formal.lock",
+    "poll_sleep_seconds_max": 1,
+    "existing_query_timeout_seconds": 15,
+    "failure_last_observation_rows_max": 64
+  },
+  "timeout_seconds": 1800,
+  "kill_grace_seconds": 30,
+  "device": {
+    "gpu_uuid": "GPU-17198167-95ac-ca23-d6a3-58bb5568a8fe",
+    "gpu_index": 0,
+    "gpu_model": "NVIDIA H100 80GB HBM3",
+    "driver": "535.161.08",
+    "pci_bus_id": "0000:0f:00.0"
+  },
+  "no_extra_checker_or_probe": true,
+  "command_opportunity_limit": 1,
+  "max_retries": 0,
+  "old_compute_releases_reusable": false,
+  "analysis_acceptance_required_after_completion": true,
+  "outer_evidence": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PV_OFFLINE_PREFLIGHT_V3_r1",
+  "heartbeat": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A10_PV_OFFLINE_PREFLIGHT_V3_r1/HEARTBEAT.jsonl",
+  "summary_output": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_OFFLINE_PREFLIGHT_V3",
+  "claims_created_by_ACK": 0
+}

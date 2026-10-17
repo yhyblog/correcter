@@ -1,0 +1,52 @@
+{
+  "stages": [
+    {
+      "id": "queue_bootstrap",
+      "owners": [
+        "A",
+        "B"
+      ],
+      "authorized": true,
+      "completion": "actual daemon readiness/control-plane checks"
+    },
+    {
+      "id": "B11_views",
+      "owners": [
+        "B"
+      ],
+      "authorized": "existing CPU adaptation plus queue integration",
+      "dependency": "immutable public/sidecar/supplement and accepted pool; not waiting all collection"
+    },
+    {
+      "id": "common_pool_collection",
+      "owners": [
+        "A",
+        "B"
+      ],
+      "authorized": true,
+      "dependency": "node_ready + queue_aware_package_pass + storage/identity_admission + legacy_exit_on_A",
+      "source_set": {
+        "path": "persistent_queue/plan/SOURCES_V1.json",
+        "sha256": "799add7a1d105425343690f501dae0c8a6dae84359548fe735b400af35dafc7c"
+      }
+    },
+    {
+      "id": "A12_B12_B13_training",
+      "owners": [
+        "A",
+        "B"
+      ],
+      "authorized": false,
+      "status": "waiting_once_only_stage_recipe_and_data_gate_freeze"
+    },
+    {
+      "id": "P20_E3_E4_E9_E1_E6_E8",
+      "owners": [
+        "A",
+        "B"
+      ],
+      "authorized": false,
+      "status": "waiting_once_only_model_evaluation_contract_freeze"
+    }
+  ]
+}

@@ -1,0 +1,703 @@
+{
+  "schema": "native10_final_preflight_completion_independent_metadata_check_v1",
+  "status": "passed_with_explicit_scope_limits",
+  "utc": "2026-09-17T00:07:24.091306+00:00",
+  "preflight": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1",
+    "seal_sha256": "eb1e39d4ee145ebecce9b16593a9c1fd901fd7dcc2a5c9e8746f657e4c202d3e",
+    "result_sha256": "d693a7d1fa4f1d5a0be4f2141966f35d97390e6e427c4c5cb6803bfc8791c79d"
+  },
+  "seals_verified": [
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1",
+      "seal_sha256": "eb1e39d4ee145ebecce9b16593a9c1fd901fd7dcc2a5c9e8746f657e4c202d3e",
+      "verified_files": 27,
+      "bytes_hashed": 18171849
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/final_fit_execution/preflight/final_preflight_v1",
+      "seal_sha256": "d2ba158591ea7fee9c9caca75e7ad2fc2f9b236c3709a35344512d6ab14ec23d",
+      "verified_files": 4,
+      "bytes_hashed": 41164308
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/A/initial",
+      "seal_sha256": "1172a88851c52eb99fff353afaaf82466c6839c704c3c63a81e88bc31b00f2dc",
+      "verified_files": 6,
+      "bytes_hashed": 4410391
+    },
+    {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/fit_preflight/final/final_preflight_v1/B/initial",
+      "seal_sha256": "cd36e7e59bed7a9a649801b4a39ca1c2aab6ea44ec2566e475f66d7fb5d0f7a6",
+      "verified_files": 6,
+      "bytes_hashed": 4410391
+    }
+  ],
+  "coverage": {
+    "train_planned": 600,
+    "train_effective": 600,
+    "train_unique": 600,
+    "train_per_task": {
+      "disassemble-v3": 120,
+      "pick-place-wall-v3": 120,
+      "shelf-place-v3": 120,
+      "stick-pull-v3": 120,
+      "stick-push-v3": 120
+    },
+    "train_per_round": {
+      "1": 300,
+      "2": 300
+    },
+    "development_planned": 100,
+    "development_effective": 95,
+    "development_no_cut": 5,
+    "development_no_cut_ids": [
+      "pick-place-wall-v3__2026111616",
+      "pick-place-wall-v3__2026111631",
+      "pick-place-wall-v3__2026111671",
+      "shelf-place-v3__2026111657",
+      "stick-pull-v3__2026111653"
+    ],
+    "train_development_disjoint": true,
+    "development_outcomes_not_read": true
+  },
+  "pca": {
+    "fit_source_count": 600,
+    "all_train_ids_once": true,
+    "all_ids_equal_effective_train_in_order": true,
+    "development_calibration_heldout_excluded": true,
+    "bootstrap_duplicates_used": false,
+    "visual_dimension": 16,
+    "language_dimension": 8,
+    "scale_floor": 0.001,
+    "visual_floored_components": 0,
+    "language_floored_components": 4,
+    "note": "The pca_fit_audit function-local note says it does not perform reload auditing; separate sealed A/B reload_audit records and the final result provide that later completed evidence."
+  },
+  "members": [
+    {
+      "path": "A",
+      "member": 0,
+      "model_sha256": "8a08e1fbab88e17635a6cc4bec6f811a9fd435888a5298fd1782a6cb51fc0f09",
+      "bootstrap_count": 600,
+      "bootstrap_unique_count": 397,
+      "bootstrap_task_counts": {
+        "disassemble-v3": 120,
+        "pick-place-wall-v3": 120,
+        "shelf-place-v3": 120,
+        "stick-pull-v3": 120,
+        "stick-push-v3": 120
+      },
+      "bootstrap_seed": 8074302939562697923,
+      "bootstrap_reconstructed_exact": true,
+      "minibatch_seed": 707158696582486475,
+      "minibatch_shape": [
+        4000,
+        32
+      ],
+      "minibatch_reconstructed_exact": true,
+      "minibatch_plan_sha256": "f0d1f9ebc5e4cdc7df58aa7a75736d5f8cb970721691d30c77f08b82161a80c6",
+      "parameters": 7058,
+      "trainable_parameters": 2529,
+      "trainable_tensor_names": [
+        "residual.0.weight",
+        "residual.0.bias",
+        "residual.2.weight",
+        "residual.2.bias",
+        "advantage.0.weight",
+        "advantage.0.bias",
+        "advantage.2.weight",
+        "advantage.2.bias"
+      ],
+      "all_buffers_frozen": true
+    },
+    {
+      "path": "A",
+      "member": 1,
+      "model_sha256": "699045cdf0c7b2965aeaf4fb4e8459cfb66ad8b72c8cc02a01d2cc8bc0fa87b3",
+      "bootstrap_count": 600,
+      "bootstrap_unique_count": 382,
+      "bootstrap_task_counts": {
+        "disassemble-v3": 120,
+        "pick-place-wall-v3": 120,
+        "shelf-place-v3": 120,
+        "stick-pull-v3": 120,
+        "stick-push-v3": 120
+      },
+      "bootstrap_seed": 8206238132407596710,
+      "bootstrap_reconstructed_exact": true,
+      "minibatch_seed": 1188288932685621416,
+      "minibatch_shape": [
+        4000,
+        32
+      ],
+      "minibatch_reconstructed_exact": true,
+      "minibatch_plan_sha256": "93729c34530437d4fa8a3008df2da554cb30ef966ee1d05de8dc522991c122d3",
+      "parameters": 7058,
+      "trainable_parameters": 2529,
+      "trainable_tensor_names": [
+        "residual.0.weight",
+        "residual.0.bias",
+        "residual.2.weight",
+        "residual.2.bias",
+        "advantage.0.weight",
+        "advantage.0.bias",
+        "advantage.2.weight",
+        "advantage.2.bias"
+      ],
+      "all_buffers_frozen": true
+    },
+    {
+      "path": "A",
+      "member": 2,
+      "model_sha256": "f12692a54285f95e3b905abc985a645e674569113bc254d31bfc069728e5f15c",
+      "bootstrap_count": 600,
+      "bootstrap_unique_count": 379,
+      "bootstrap_task_counts": {
+        "disassemble-v3": 120,
+        "pick-place-wall-v3": 120,
+        "shelf-place-v3": 120,
+        "stick-pull-v3": 120,
+        "stick-push-v3": 120
+      },
+      "bootstrap_seed": 2734489069896537540,
+      "bootstrap_reconstructed_exact": true,
+      "minibatch_seed": 3477186322032436839,
+      "minibatch_shape": [
+        4000,
+        32
+      ],
+      "minibatch_reconstructed_exact": true,
+      "minibatch_plan_sha256": "f26298f2084636d18cf828a9ee14c8c33c242453be00aec1ad3e2f57fd421684",
+      "parameters": 7058,
+      "trainable_parameters": 2529,
+      "trainable_tensor_names": [
+        "residual.0.weight",
+        "residual.0.bias",
+        "residual.2.weight",
+        "residual.2.bias",
+        "advantage.0.weight",
+        "advantage.0.bias",
+        "advantage.2.weight",
+        "advantage.2.bias"
+      ],
+      "all_buffers_frozen": true
+    },
+    {
+      "path": "A",
+      "member": 3,
+      "model_sha256": "88a560baa2d39a6b849173d040117ef72ee2ccec3949767b3b93652a34f3195a",
+      "bootstrap_count": 600,
+      "bootstrap_unique_count": 384,
+      "bootstrap_task_counts": {
+        "disassemble-v3": 120,
+        "pick-place-wall-v3": 120,
+        "shelf-place-v3": 120,
+        "stick-pull-v3": 120,
+        "stick-push-v3": 120
+      },
+      "bootstrap_seed": 1717096176492517433,
+      "bootstrap_reconstructed_exact": true,
+      "minibatch_seed": 2597592405850488066,
+      "minibatch_shape": [
+        4000,
+        32
+      ],
+      "minibatch_reconstructed_exact": true,
+      "minibatch_plan_sha256": "a9e2e65ec9cb6e4545de9e67a9ca78f5c110c9bfffc468c88185cca3727f7b35",
+      "parameters": 7058,
+      "trainable_parameters": 2529,
+      "trainable_tensor_names": [
+        "residual.0.weight",
+        "residual.0.bias",
+        "residual.2.weight",
+        "residual.2.bias",
+        "advantage.0.weight",
+        "advantage.0.bias",
+        "advantage.2.weight",
+        "advantage.2.bias"
+      ],
+      "all_buffers_frozen": true
+    },
+    {
+      "path": "B",
+      "member": 0,
+      "model_sha256": "b7642417b613f25d12884d262b37e3fbd38d15f23f2a59b9e410aa9852e0fd4d",
+      "bootstrap_count": 600,
+      "bootstrap_unique_count": 366,
+      "bootstrap_task_counts": {
+        "disassemble-v3": 120,
+        "pick-place-wall-v3": 120,
+        "shelf-place-v3": 120,
+        "stick-pull-v3": 120,
+        "stick-push-v3": 120
+      },
+      "bootstrap_seed": 320576547378648196,
+      "bootstrap_reconstructed_exact": true,
+      "minibatch_seed": 5399835882095241185,
+      "minibatch_shape": [
+        4000,
+        32
+      ],
+      "minibatch_reconstructed_exact": true,
+      "minibatch_plan_sha256": "882dace31f33207d32258ccf4bbb34127bcd14f5f9485e7c8789a1610d71b46a",
+      "parameters": 7058,
+      "trainable_parameters": 7058,
+      "trainable_tensor_names": [
+        "state.0.weight",
+        "state.0.bias",
+        "state.2.weight",
+        "state.2.bias",
+        "action.0.weight",
+        "action.0.bias",
+        "action.2.weight",
+        "action.2.bias",
+        "residual.0.weight",
+        "residual.0.bias",
+        "residual.2.weight",
+        "residual.2.bias",
+        "head.0.weight",
+        "head.0.bias",
+        "head.2.weight",
+        "head.2.bias",
+        "advantage.0.weight",
+        "advantage.0.bias",
+        "advantage.2.weight",
+        "advantage.2.bias"
+      ],
+      "all_buffers_frozen": true
+    },
+    {
+      "path": "B",
+      "member": 1,
+      "model_sha256": "8a246d74a0c805051ba05978500041cadcd281ccb7cf18530036671420056020",
+      "bootstrap_count": 600,
+      "bootstrap_unique_count": 377,
+      "bootstrap_task_counts": {
+        "disassemble-v3": 120,
+        "pick-place-wall-v3": 120,
+        "shelf-place-v3": 120,
+        "stick-pull-v3": 120,
+        "stick-push-v3": 120
+      },
+      "bootstrap_seed": 723932116741926423,
+      "bootstrap_reconstructed_exact": true,
+      "minibatch_seed": 7386761500416250184,
+      "minibatch_shape": [
+        4000,
+        32
+      ],
+      "minibatch_reconstructed_exact": true,
+      "minibatch_plan_sha256": "7801aa37826ff604952b105ffbbf0e589f177b6ac1e3f91a4f82a9fc074e7435",
+      "parameters": 7058,
+      "trainable_parameters": 7058,
+      "trainable_tensor_names": [
+        "state.0.weight",
+        "state.0.bias",
+        "state.2.weight",
+        "state.2.bias",
+        "action.0.weight",
+        "action.0.bias",
+        "action.2.weight",
+        "action.2.bias",
+        "residual.0.weight",
+        "residual.0.bias",
+        "residual.2.weight",
+        "residual.2.bias",
+        "head.0.weight",
+        "head.0.bias",
+        "head.2.weight",
+        "head.2.bias",
+        "advantage.0.weight",
+        "advantage.0.bias",
+        "advantage.2.weight",
+        "advantage.2.bias"
+      ],
+      "all_buffers_frozen": true
+    },
+    {
+      "path": "B",
+      "member": 2,
+      "model_sha256": "fd2a4d53348e3ccd52e5235a2d0a90df3b330b23a76185da635a0e635863dc42",
+      "bootstrap_count": 600,
+      "bootstrap_unique_count": 372,
+      "bootstrap_task_counts": {
+        "disassemble-v3": 120,
+        "pick-place-wall-v3": 120,
+        "shelf-place-v3": 120,
+        "stick-pull-v3": 120,
+        "stick-push-v3": 120
+      },
+      "bootstrap_seed": 3584880979620477752,
+      "bootstrap_reconstructed_exact": true,
+      "minibatch_seed": 8408824073082358690,
+      "minibatch_shape": [
+        4000,
+        32
+      ],
+      "minibatch_reconstructed_exact": true,
+      "minibatch_plan_sha256": "50180b9385650cf69db62d7baaa60dc1c5a10577bd78539217099ffdf3533c38",
+      "parameters": 7058,
+      "trainable_parameters": 7058,
+      "trainable_tensor_names": [
+        "state.0.weight",
+        "state.0.bias",
+        "state.2.weight",
+        "state.2.bias",
+        "action.0.weight",
+        "action.0.bias",
+        "action.2.weight",
+        "action.2.bias",
+        "residual.0.weight",
+        "residual.0.bias",
+        "residual.2.weight",
+        "residual.2.bias",
+        "head.0.weight",
+        "head.0.bias",
+        "head.2.weight",
+        "head.2.bias",
+        "advantage.0.weight",
+        "advantage.0.bias",
+        "advantage.2.weight",
+        "advantage.2.bias"
+      ],
+      "all_buffers_frozen": true
+    },
+    {
+      "path": "B",
+      "member": 3,
+      "model_sha256": "e1e6d1dd4d4ee151ff8691f37f2b69768a3b1bbf821c7d79a80cc6b842894e8a",
+      "bootstrap_count": 600,
+      "bootstrap_unique_count": 385,
+      "bootstrap_task_counts": {
+        "disassemble-v3": 120,
+        "pick-place-wall-v3": 120,
+        "shelf-place-v3": 120,
+        "stick-pull-v3": 120,
+        "stick-push-v3": 120
+      },
+      "bootstrap_seed": 7320558718981339172,
+      "bootstrap_reconstructed_exact": true,
+      "minibatch_seed": 1442615820401789829,
+      "minibatch_shape": [
+        4000,
+        32
+      ],
+      "minibatch_reconstructed_exact": true,
+      "minibatch_plan_sha256": "5b9d7a6e3b0b5f36ab9b5a21d299bd176e5a644d11f639731c2d87c3305b42e9",
+      "parameters": 7058,
+      "trainable_parameters": 7058,
+      "trainable_tensor_names": [
+        "state.0.weight",
+        "state.0.bias",
+        "state.2.weight",
+        "state.2.bias",
+        "action.0.weight",
+        "action.0.bias",
+        "action.2.weight",
+        "action.2.bias",
+        "residual.0.weight",
+        "residual.0.bias",
+        "residual.2.weight",
+        "residual.2.bias",
+        "head.0.weight",
+        "head.0.bias",
+        "head.2.weight",
+        "head.2.bias",
+        "advantage.0.weight",
+        "advantage.0.bias",
+        "advantage.2.weight",
+        "advantage.2.bias"
+      ],
+      "all_buffers_frozen": true
+    }
+  ],
+  "canonical_checks": [
+    {
+      "path": "A",
+      "purpose": "train",
+      "sources": 600,
+      "members": 4,
+      "probability_slots": 13,
+      "gradient_slots": [
+        0,
+        11
+      ],
+      "all_canonical_checks_passed": true,
+      "checks": {
+        "feature_cache_bit_exact": true,
+        "thirteen_candidate_member_probability_bit_exact": true,
+        "member_and_ensemble_gradient_bit_exact": true,
+        "a0_anchor_exactly_zero": true,
+        "state_and_anchor_immutable": true
+      },
+      "offline_f64_summary_vs_online_f32_gain_max_difference": 5.21540641784668e-08
+    },
+    {
+      "path": "A",
+      "purpose": "development",
+      "sources": 95,
+      "members": 4,
+      "probability_slots": 13,
+      "gradient_slots": [
+        0,
+        11
+      ],
+      "all_canonical_checks_passed": true,
+      "checks": {
+        "feature_cache_bit_exact": true,
+        "thirteen_candidate_member_probability_bit_exact": true,
+        "member_and_ensemble_gradient_bit_exact": true,
+        "a0_anchor_exactly_zero": true,
+        "state_and_anchor_immutable": true
+      },
+      "offline_f64_summary_vs_online_f32_gain_max_difference": 3.5390257835388184e-08
+    },
+    {
+      "path": "B",
+      "purpose": "train",
+      "sources": 600,
+      "members": 4,
+      "probability_slots": 13,
+      "gradient_slots": [
+        0,
+        11
+      ],
+      "all_canonical_checks_passed": true,
+      "checks": {
+        "feature_cache_bit_exact": true,
+        "thirteen_candidate_member_probability_bit_exact": true,
+        "member_and_ensemble_gradient_bit_exact": true,
+        "a0_anchor_exactly_zero": true,
+        "state_and_anchor_immutable": true
+      },
+      "offline_f64_summary_vs_online_f32_gain_max_difference": 0.0
+    },
+    {
+      "path": "B",
+      "purpose": "development",
+      "sources": 95,
+      "members": 4,
+      "probability_slots": 13,
+      "gradient_slots": [
+        0,
+        11
+      ],
+      "all_canonical_checks_passed": true,
+      "checks": {
+        "feature_cache_bit_exact": true,
+        "thirteen_candidate_member_probability_bit_exact": true,
+        "member_and_ensemble_gradient_bit_exact": true,
+        "a0_anchor_exactly_zero": true,
+        "state_and_anchor_immutable": true
+      },
+      "offline_f64_summary_vs_online_f32_gain_max_difference": 0.0
+    }
+  ],
+  "dense_checks": [
+    {
+      "path": "A",
+      "purpose": "train",
+      "sources": 600,
+      "status": "reported_differences",
+      "all_bit_exact": false,
+      "all_finite": true,
+      "new_tolerance_introduced": false,
+      "production_path": "canonical singleton source; two slots [a0,candidate]",
+      "max_abs_difference": {
+        "observed": 0.0,
+        "projected_features": 0.00014901161921443418,
+        "probabilities": 1.8298625946044922e-05,
+        "member_gradient_0": 2.5212764739990234e-05,
+        "member_gradient_11": 1.609325408935547e-05,
+        "ensemble_gradient_0": 1.1563301086425781e-05,
+        "ensemble_gradient_11": 8.52346420288086e-06
+      },
+      "reference_max_abs": {
+        "observed": 15.408411026000977,
+        "projected_features": 10.038043975830078,
+        "probabilities": 0.9985485672950745,
+        "member_gradient_0": 1.2031656503677368,
+        "member_gradient_11": 0.8367167711257935,
+        "ensemble_gradient_0": 0.8204336166381836,
+        "ensemble_gradient_11": 0.5340689420700073
+      },
+      "state_anchor_parameters_unchanged": true
+    },
+    {
+      "path": "A",
+      "purpose": "development",
+      "sources": 95,
+      "status": "reported_differences",
+      "all_bit_exact": false,
+      "all_finite": true,
+      "new_tolerance_introduced": false,
+      "production_path": "canonical singleton source; two slots [a0,candidate]",
+      "max_abs_difference": {
+        "observed": 0.0,
+        "projected_features": 0.00013411045802058652,
+        "probabilities": 1.3709068298339844e-05,
+        "member_gradient_0": 1.52587890625e-05,
+        "member_gradient_11": 1.1861324310302734e-05,
+        "ensemble_gradient_0": 8.52346420288086e-06,
+        "ensemble_gradient_11": 6.467103958129883e-06
+      },
+      "reference_max_abs": {
+        "observed": 15.408411026000977,
+        "projected_features": 9.434501647949219,
+        "probabilities": 0.9983865022659302,
+        "member_gradient_0": 1.191228985786438,
+        "member_gradient_11": 0.6998323202133179,
+        "ensemble_gradient_0": 0.8137893676757812,
+        "ensemble_gradient_11": 0.48057496547698975
+      },
+      "state_anchor_parameters_unchanged": true
+    },
+    {
+      "path": "B",
+      "purpose": "train",
+      "sources": 600,
+      "status": "reported_differences",
+      "all_bit_exact": false,
+      "all_finite": true,
+      "new_tolerance_introduced": false,
+      "production_path": "canonical singleton source; two slots [a0,candidate]",
+      "max_abs_difference": {
+        "observed": 0.0,
+        "projected_features": 0.00028475187718868256,
+        "probabilities": 3.5762786865234375e-07,
+        "member_gradient_0": 1.0943040251731873e-08,
+        "member_gradient_11": 1.1641532182693481e-08,
+        "ensemble_gradient_0": 4.6566128730773926e-09,
+        "ensemble_gradient_11": 4.423782229423523e-09
+      },
+      "reference_max_abs": {
+        "observed": 15.408411026000977,
+        "projected_features": 10.038043975830078,
+        "probabilities": 0.5270702838897705,
+        "member_gradient_0": 0.008660531602799892,
+        "member_gradient_11": 0.00964856706559658,
+        "ensemble_gradient_0": 0.003259328193962574,
+        "ensemble_gradient_11": 0.0038701724261045456
+      },
+      "state_anchor_parameters_unchanged": true
+    },
+    {
+      "path": "B",
+      "purpose": "development",
+      "sources": 95,
+      "status": "reported_differences",
+      "all_bit_exact": false,
+      "all_finite": true,
+      "new_tolerance_introduced": false,
+      "production_path": "canonical singleton source; two slots [a0,candidate]",
+      "max_abs_difference": {
+        "observed": 0.0,
+        "projected_features": 0.0002384185791015625,
+        "probabilities": 2.980232238769531e-07,
+        "member_gradient_0": 9.778887033462524e-09,
+        "member_gradient_11": 1.0943040251731873e-08,
+        "ensemble_gradient_0": 3.4924596548080444e-09,
+        "ensemble_gradient_11": 3.7834979593753815e-09
+      },
+      "reference_max_abs": {
+        "observed": 15.408411026000977,
+        "projected_features": 9.434501647949219,
+        "probabilities": 0.5251539349555969,
+        "member_gradient_0": 0.008453622460365295,
+        "member_gradient_11": 0.00943830143660307,
+        "ensemble_gradient_0": 0.003254312789067626,
+        "ensemble_gradient_11": 0.003819293575361371
+      },
+      "state_anchor_parameters_unchanged": true
+    }
+  ],
+  "numeric_runtime": {
+    "torch": "2.7.1+cu126",
+    "numpy": "2.2.6",
+    "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+    "executable": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python3.12",
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 2,
+    "torch_distribution": "2.7.1",
+    "numpy_distribution": "2.2.6",
+    "torch_version_file": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/lib/python3.12/site-packages/torch/version.py",
+      "sha256": "6ed9ff03113f2ceba7ad0f77cf4b160ea03f918ef010b5f662ce74786d182974"
+    }
+  },
+  "numeric_contract": "canonical_strict_passed_dense_reported",
+  "numerical_decision_sha256": "3e556bad66cff0105c243b841cd24b619efdcc1c681bbf38b41bb0b71888cb1a",
+  "old_import": {
+    "ranking_sha256": "fa8e2b4b0ee166372a036e1656036812be8d34335a1f287240a80f34a3d3436c",
+    "members": [
+      {
+        "member": "1041",
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/assets/critic/models/refit/member_1041/selected.pt",
+        "sha256": "9f5b8c8be268b507c612701069f3b835274fe8460d82b790f7d6a710c04c976c"
+      },
+      {
+        "member": "1042",
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/assets/critic/models/refit/member_1042/selected.pt",
+        "sha256": "3cb9551ff3e3f05c8bb5adaffa6fd00543d84aac8b8de57b6905aa39d30a272b"
+      },
+      {
+        "member": "1043",
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/assets/critic/models/refit/member_1043/selected.pt",
+        "sha256": "18ccbc5ca557fe40468d61d530a2e99f1498dda6dcd6af84ac910ec422c96777"
+      },
+      {
+        "member": "1044",
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/assets/critic/models/refit/member_1044/selected.pt",
+        "sha256": "a7d053daffc6f909e5acaad977c87292bd394bc5e9b7670ace3bbdba54e61def"
+      }
+    ],
+    "read_only": true
+  },
+  "resource_check": {
+    "before_after_ledger_sha256": "189cdf5c04a3782b5e540c3761fa682481dedad6ea91e703e705713e2d076973",
+    "ledger_unchanged": true,
+    "ledger_records": 62074,
+    "totals": {
+      "simulator_attempts": 42874,
+      "training_updates": 19200
+    },
+    "new_simulator_attempts": 0,
+    "new_optimizer_updates": 0,
+    "final_training_updates_so_far": 0,
+    "stage_release_only": "final_fit_preflight",
+    "training_final_released_by_this_config": false
+  },
+  "recorded_execution_cost": {
+    "receipt_wall_seconds": 426.2158675920218,
+    "pipeline_wall_seconds": 419.4460710994899,
+    "pipeline_cpu_seconds": 260.800400338,
+    "peak_rss_kib": 1762424,
+    "pipeline_stages": {
+      "input_audit_seconds": 263.5074464287609,
+      "old_import_and_train_pca_seconds": 2.307057136669755,
+      "A_initialization_export_checks_seconds": 76.42434882372618,
+      "B_initialization_export_checks_seconds": 76.33141504973173
+    }
+  },
+  "check_scope": {
+    "metadata_and_json_checked": true,
+    "small_artifact_bytes_and_seals_hashed": true,
+    "integer_bootstrap_and_minibatch_plans_reconstructed": true,
+    "model_checkpoints_deserialized": false,
+    "preprocessing_tensors_deserialized": false,
+    "train_or_development_arrays_reloaded": false,
+    "new_model_forwards": 0,
+    "new_pca_fits": 0,
+    "new_optimizer_updates": 0,
+    "new_simulator_attempts": 0
+  },
+  "limitations": [
+    "This is an independent metadata/SHA/sampling-plan audit of the recorded canonical model checks; it does not rerun model forward/gradients or compare raw checkpoint tensors.",
+    "A original-weight preservation and B shared train-only preprocessing are supported here by the sealed executed-code assertions/provenance, not newly repeated tensor comparisons.",
+    "Dense-vs-singleton non-bitexact differences are explicitly reported with finite/reference scales under the bound numerical decision; no tolerance or canonical export/reload check was relaxed.",
+    "The preflight is a zero-update technical prerequisite, not a trained model, policy gain, or independent effectiveness result.",
+    "A later analysis READY must inspect and explicitly bind this actual preflight before training_final; this check does not release any future stage."
+  ]
+}

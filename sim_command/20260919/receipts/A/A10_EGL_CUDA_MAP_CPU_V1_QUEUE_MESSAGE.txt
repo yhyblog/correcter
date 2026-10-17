@@ -1,0 +1,18 @@
+A新CPU任务 A10_EGL_CUDA_MAP_CPU_V1 已完成，仅交本任务，不重投已验收graphics v1。请分析端审阅新的单次graphics提案；未执行任何实际探针。
+ACK: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_EGL_CUDA_MAP_CPU_V1_ACK.json
+REPORT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_EGL_CUDA_MAP_CPU_V1_REPORT.md
+RESULT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_EGL_CUDA_MAP_CPU_V1_RESULT.json
+RESULT SHA256: 7d3c5ead6143ea49167ac22796a7a031b77fcdbd3f88496124f1abb1815c1a6f
+PROPOSAL: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/proposal/PROPOSAL.json
+PROPOSAL SHA256: afb08b914bc746e8b570b670c90a40e681a98dc6528f6ec1cedba53468da3a7b
+BUNDLE: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/BUNDLE_MANIFEST.json
+BUNDLE SHA256: c60bdc602ea96962f794f1b21fce4d57a9d0f6c03b681bc8a78904af259f47fe
+CONTROL/TASK_BOARD要求: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_EGL_CUDA_MAP_CPU_V1/proposal/CONTROL_REQUIRED.json
+1. 单一路径 EGL_CUDA_DEVICE_NV → 未改写handle → cuDeviceGetPCIBusId → 内核PCI/UUID→固定NVML目标；唯一匹配前0display/context。不实现DRM/persistent UUID/大小端猜测。
+2. 冻结现有535.161.08 libcuda来源/SHA/ELF/依赖，隔离绝对加载、排除550 compat优先项；原8个EGL/GLVND库字节一致。
+3. 冻结既有8卡完整UUID可见性与PCI_BUS_ID顺序；无EGL/CUDA/NVML索引等价假设，属性handle0合法，拒绝ABI/范围/身份不一致。
+4. raw NULL/空bytes、属性值/返回码、PCI原始buffer及实际EGL错误按调用点保存；未查询错误状态不推断。
+5. 31项新CPU fake测试通过，3项纯CPU拒绝验证通过，7 AST/2 shell检查通过；fake进程audit hook禁止ctypes加载/查符号。只复查本次改动。
+6. 新提案task_id=A10_EGL_CUDA_MAP_GRAPHICS_PROBE_V1：1attempt/1枚举/1cuInit，扩展/属性/PCI各<=8，getProcAddress<=5、eglGetError<=35、核心EGL/CUDA符号11/2、驱动库加载2；保留1context/64x64/1frame。辅助caps推导已写，0VLA/MT1/reset/物理推进/训练/重试。
+7. 真命令和新release模板已冻结，状态proposed_not_released；CONTROL仍prepare/全计算0。实际GPU库dlopen/CUDA/EGL/模型/仿真均0；driver内部资源待未来实测，不冒充0，120+10s仅子进程、全A holder生命周期保留。
+8. 15个RESULT产物引用及完整manifest155文件SHA/大小复核一致，发布bundle33文件；旧bundle/失败记录/native v4/v5保持。所有新增证据保留，无删除/共享驱动/容器改动。guard自报8holder，CPU任务未停卡。

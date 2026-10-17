@@ -1,0 +1,30 @@
+{
+  "at_utc": "2026-09-22T04:10:27.852675+00:00",
+  "status": "prepared_not_yet_launched",
+  "authorization_sha256": "3e6a0aab7abe79365192c953d45b4e13b44139ab26ffadb6f7c3f82547107d8b",
+  "parent_authorization_sha256": "d87a62fe7e335ae84cc9b7d3edc82c5a6f0395ff895fb725e31b16c731238f80",
+  "source_count_per_model": 500,
+  "planned_physical_attempts": 1000,
+  "useful_GPU_workers": 8,
+  "checks": [
+    "native4D state/action; existing frozen weights",
+    "same original500sources and seeds for both baselines",
+    "no valid N replay",
+    "original pi05 feature extractor in separate supported environment",
+    "native full chunk generation uses existing select_action implementation pathway",
+    "actual RGB validity guard and once-only true G0/C10 Post",
+    "no base/test fitting"
+  ],
+  "budget": {
+    "prior_B_conservative_physical_attempts": 3727,
+    "new_Post_attempts": 1000,
+    "B_after_this_wave_upper_bound": 4727,
+    "parent_B_cap": 16000,
+    "continuation_cap": 6000,
+    "new_optimizer_updates": 0,
+    "new_development_attempts": 0
+  },
+  "libraries_note": "Existing base and corrector environments isolated by local authenticated IPC",
+  "resource_basis": "Prior same-node8resident pi05 succeeded; each80GB GPU adds one existing small base; ordinary host snapshot recorded at launch",
+  "runtime_limits": "No claim of bitwise identity to N without actual trajectory observation; matched source/seed/native protocol; diagnostic costs included"
+}

@@ -1,0 +1,564 @@
+{
+  "schema": "common-raw-pool-design-draft/1",
+  "status": "QUOTATION_NOT_EXECUTABLE",
+  "task_id": "A11_COMMON_POOL_DESIGN_CPU_V1",
+  "pool_namespaces": {
+    "new": "MT50_H10_COMMON_RAW_PENDING",
+    "demo": "EXISTING_MT50_DEMOS_REFERENCE_VIEW_PENDING",
+    "historical_E1": "HISTORICAL_FIVE_TASK_TRAIN600_SEALED",
+    "history_index": "HISTORICAL_TRAIN_DEV_ACCESS_V1"
+  },
+  "fixed": {
+    "backbone": "pi05-MT50-SFT030000",
+    "environments": 50,
+    "H": 10,
+    "generated_length": 50,
+    "C_Q": 10,
+    "D_horizon": 5,
+    "G0_label_commitment": 5,
+    "G0_followup_H": 10,
+    "monitor_stride": 5,
+    "native_suffix_H": 10,
+    "common_protocol_step_horizon": 300,
+    "E8_included": false,
+    "real_robot_included": false
+  },
+  "frozen_execution": {
+    "train_parents_per_task": null,
+    "development_parents_per_task": null,
+    "cuts_per_parent": null,
+    "candidate_families": null,
+    "repeats": null,
+    "source_seeds": null,
+    "shards": null,
+    "collector_code": null,
+    "restore_implementation": null,
+    "release": null
+  },
+  "recommendation_not_frozen": {
+    "train_parents_per_task": 8,
+    "development_parents_per_task": 2,
+    "total_parents": 500,
+    "cuts_per_parent": 1,
+    "cut_schedule": "alternate preassigned 5 and 55 by ordinal within each task/split; 4+4 train and1+1 development; no outcome/G0 selection",
+    "Q_candidates": 2,
+    "repeat_count_Q": 2,
+    "repeat_count_G0": 2,
+    "rationale": "minimal coverage/field-closure tranche with both target windows and two independent suffix seeds; no claim of statistical power or sufficient final learning",
+    "selected_demo_parents_train_per_task": 40,
+    "selected_demo_parents_dev_per_task": 10,
+    "effective_legal_cut_or_complete_label_count": null,
+    "scarcity_action": "keep no-cut/no-alarm/early-end/failure entries and report coverage; no refill or seed substitution"
+  },
+  "parent_split": {
+    "unit": "parent episode",
+    "rule": "analysis freezes task-balanced parent manifest and seeds before any outcomes; all cuts/candidates/repeats/features inherit split",
+    "demo_rule": "separate original episode IDs; propose40/10 per actual task by precommitted salted ordering, salt/IDs pending; never frame-pair random split",
+    "demo_dev_limit": "base pi05 already trained on all2500 demos; this is component development, not unseen-to-backbone test",
+    "historical_held_policy": "never load or route to new train/new independent test",
+    "future_test": "new independent namespace only after analysis locks methods; not created now"
+  },
+  "candidate_families": [
+    {
+      "id": "a0",
+      "recommended_count": 1,
+      "label_window": 10,
+      "generation": "one fresh unguided pi05 raw50 at cut",
+      "necessary_for": "Q detached anchor and R-like fresh action; may also supply first5 action data for separate G0 fresh target",
+      "incremental_generation": {
+        "VLA": 1,
+        "flow": 10,
+        "Q": 0,
+        "D": 0,
+        "G0": 0,
+        "gradient": 0
+      }
+    },
+    {
+      "id": "independent_native",
+      "recommended_count": 1,
+      "label_window": 10,
+      "generation": "one independent frozen-seed unguided pi05 raw50 at same cut",
+      "necessary_for": "minimal same-policy action variation for gain/pair; does not claim broad guided-action coverage",
+      "incremental_generation": {
+        "VLA": 1,
+        "flow": 10,
+        "Q": 0,
+        "D": 0,
+        "G0": 0,
+        "gradient": 0
+      }
+    },
+    {
+      "id": "G0_old5",
+      "recommended_count": 1,
+      "label_window": 5,
+      "generation": "already recorded old queue next5; not a fresh candidate",
+      "necessary_for": "unchanged execute5_then_fixed10 counterfactual target",
+      "incremental_generation": {
+        "VLA": 0,
+        "flow": 0,
+        "Q": 0,
+        "D": 0,
+        "G0": 0,
+        "gradient": 0
+      }
+    },
+    {
+      "id": "G0_fresh5",
+      "recommended_count": 1,
+      "label_window": 5,
+      "generation": "reference a0 first5; different commitment from Q a0",
+      "necessary_for": "fresh minus old five-step target; no implicit label alias with C10",
+      "incremental_generation": {
+        "VLA": 0,
+        "flow": 0,
+        "Q": 0,
+        "D": 0,
+        "G0": 0,
+        "gradient": 0
+      }
+    },
+    {
+      "id": "normal",
+      "recommended_count": 1,
+      "label_window": null,
+      "generation": "source normal H10 trajectory continues old queue at cut",
+      "necessary_for": "unmodified parent baseline and normal trajectory provenance",
+      "incremental_generation": "included in full source generation, not an a0 slot or copied terminal label"
+    }
+  ],
+  "deferred_families": {
+    "Post": "0 selected; historical five-task Q cannot imply MT50 competence; any future native Post family requires separately priced frozen generation",
+    "Velocity": "0 selected; no diagnostic rerun or parameter change; optional active-clean logging only in independently planned future guided call",
+    "random_perturbation": "not selected; amplitude/distribution would need a separate analysis decision; no new radius or sweep"
+  },
+  "field_view_matrix": [
+    {
+      "group": "causal_identity",
+      "fields": [
+        "dataset_revision",
+        "parent_episode_id",
+        "source_id",
+        "branch_id",
+        "suffix_id",
+        "split",
+        "task",
+        "instruction",
+        "source_seed",
+        "generation_seed",
+        "suffix_seed",
+        "repeat_id"
+      ],
+      "consumers": [
+        "D5",
+        "G0",
+        "Q",
+        "VLA-Corrector-adapted",
+        "GAF-v1-adapted"
+      ]
+    },
+    {
+      "group": "true_transition",
+      "fields": [
+        "obs_t RGB/state refs",
+        "actual raw/normalized action",
+        "obs_t+1 refs",
+        "reward",
+        "success",
+        "first_success_state_index",
+        "terminated",
+        "truncated",
+        "technical_status",
+        "outcome_complete"
+      ],
+      "consumers": [
+        "D5",
+        "G0",
+        "Q",
+        "VLA-Corrector-adapted",
+        "GAF-v1-adapted"
+      ]
+    },
+    {
+      "group": "plans",
+      "fields": [
+        "old raw50/queue age/remaining",
+        "fresh a0 raw50",
+        "candidate raw50",
+        "executed prefix C5/C10",
+        "discarded tail identity",
+        "noise bytes/ref/SHA and RNG stream identity"
+      ],
+      "consumers": [
+        "G0",
+        "Q",
+        "GAF-v1-adapted"
+      ]
+    },
+    {
+      "group": "core_features",
+      "fields": [
+        "observed history[5,4096] and masks",
+        "proprio[5,4] and masks",
+        "past_actions[4,4]",
+        "language[2048]",
+        "remaining",
+        "raw_normalizer",
+        "PCA train-parent fit identity"
+      ],
+      "consumers": [
+        "D5",
+        "G0",
+        "Q"
+      ]
+    },
+    {
+      "group": "token_features",
+      "fields": [
+        "frozen encoder signature",
+        "tokens[256,2048] at t and t+10",
+        "action_t[4]",
+        "normal-demo selection mask"
+      ],
+      "consumers": [
+        "VLA-Corrector-adapted"
+      ]
+    },
+    {
+      "group": "GAF_features",
+      "fields": [
+        "legal policy state[4]",
+        "language[2048]",
+        "actually executed action chunk[10,4]",
+        "first_success_state",
+        "discount .99 per actual control"
+      ],
+      "consumers": [
+        "GAF-v1-adapted"
+      ]
+    },
+    {
+      "group": "privileged_restore_only",
+      "fields": [
+        "sim/model/task state",
+        "wrapper timers",
+        "RNG states",
+        "policy queue/history state",
+        "verification hashes"
+      ],
+      "consumers": [
+        "restore/replay validator only; prohibited in policy/D/G0/Q/GAF inputs"
+      ]
+    }
+  ],
+  "method_views": [
+    {
+      "method": "D5",
+      "target": "next five arrived 4096D observation features conditional on current legal history and exact next5 executed commands",
+      "horizon": 5,
+      "input_groups": [
+        "causal_identity",
+        "core_features",
+        "true_transition"
+      ],
+      "selection": "contiguous five-step windows in same physical parent/branch; commands match recorded execution; early terminal missing future is masked, never invented",
+      "normal_only": false,
+      "labels_need_complete_terminal_suffix": false,
+      "initialization": "historical two D members 241/242, five-task lineage; MT50 training/init choice pending",
+      "missing": "new actual feature manifest and recipe; no D forwards needed merely to store D targets"
+    },
+    {
+      "method": "G0",
+      "target": "mean terminal success(fresh first5 then native10) minus mean terminal success(old queue next5 then native10)",
+      "historical_label_commitment": 5,
+      "deployment_commitment": 10,
+      "input_groups": [
+        "causal_identity",
+        "core_features",
+        "plans",
+        "true_transition"
+      ],
+      "selection": "same cut/parent; target5 branches only; complete valid suffix outcomes; restoration/comparability eligibility explicit",
+      "normal_only": false,
+      "labels_need_complete_terminal_suffix": true,
+      "input_semantics": "current context + known old next5 + D5 prediction; mature residual is separate diagnostic, not a new G0 input",
+      "initialization": "five-task gate341/342 with original regression semantics; no sigmoid or G10 relabel",
+      "missing": "MT50 component fit, D/G0 feature binding and comparable complete target5 pairs"
+    },
+    {
+      "method": "Q",
+      "target": "success under fixed candidate C10 then fresh native10 continuation; BCE plus unchanged gain/pair semantics",
+      "horizon": 10,
+      "input_groups": [
+        "causal_identity",
+        "core_features",
+        "plans",
+        "true_transition"
+      ],
+      "selection": "complete target10 suffix labels; candidate/a0 comparison only same parent/cut with admitted comparability; raw alias-aware weights",
+      "normal_only": false,
+      "labels_need_complete_terminal_suffix": true,
+      "initialization": "historical four-member A4000 uses five tasks/train600 and per-member PCA; MT50 init/fit/normalizer choices pending",
+      "missing": "new action bank with outcomes and parent-only PCA/normalizer fitting; no training now"
+    },
+    {
+      "method": "VLA-Corrector-adapted",
+      "target": "delta_z=z_(t+10)-z_t; original cosine loss flattening all token coordinates",
+      "horizon": 10,
+      "input_groups": [
+        "causal_identity",
+        "true_transition",
+        "token_features"
+      ],
+      "selection": "existing normal demonstration episode-internal (t,t+10); all 11 states/10 actual actions contiguous and policy-compatible; no branch splice or success-based replacement",
+      "normal_only": true,
+      "normal_definition": "demonstration collection role, not merely an a0 family or a successful corrected trajectory",
+      "initialization": "old best_cosine h1/k10 remains historical; original random frame-pair90/10 lineage disclosed; new component training choice pending",
+      "missing": "old token cache absent; new single shared extraction and parent-grouped view required; no token/PCA substitution"
+    },
+    {
+      "method": "GAF-v1-adapted",
+      "target": "discounted success-to-go / MSE",
+      "horizon": 10,
+      "input_groups": [
+        "causal_identity",
+        "true_transition",
+        "GAF_features"
+      ],
+      "selection": "complete contiguous true trajectories; actual ten-action windows only, exclude terminal-short chunks lacking declared padding/mask support; never pretend generated50 was executed50",
+      "normal_only": false,
+      "discount": 0.99,
+      "discount_unit": "one actual control action",
+      "target_formula": "gamma**(first_success_state-start_step-1) before success; 1 at/after success; 0 only for complete negative outcome; censored excluded",
+      "initialization": "three independent critics, original MSE/guidance mechanism per B10; no training performed",
+      "missing": "frozen legal state/language transform and real complete-view manifest; B live readiness not assumed"
+    }
+  ],
+  "B_frozen_contracts": {
+    "methods": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B10/B10_r1_trial-303225685-trialrun-303225685-worker-0_20260919T150956Z/configs/METHODS.json",
+      "sha256": "73446f8fcf978bf787964ce3312ab20e2dbba0ceace2a681711c56c5b152b2b3",
+      "size_bytes": 6218
+    },
+    "view_contract": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/B/B10/B10_r1_trial-303225685-trialrun-303225685-worker-0_20260919T150956Z/DERIVED_VIEW_CONTRACT.json",
+      "sha256": "064172ded1c2fa49e334fb3928fee81d23e95e730299cdc595abd59c866056e0",
+      "size_bytes": 1386
+    },
+    "no_official_GAF_repository_claim": true,
+    "public_interface": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/PUBLIC_INTERFACE_V1.json",
+      "sha256": "15761cf5b06b8964a6a23b7c9c39d80775db98443606c0edbf5479c586f3bcb7",
+      "size_bytes": 1670
+    }
+  },
+  "shared_features": {
+    "key": "observation content SHA + encoder/checkpoint/input preprocessing/layer/dtype signature",
+    "cache": "one physical extraction per identical signature; consumers reference immutable arrays; do not count two logical readers as two forwards",
+    "tokens_not_PCA": true,
+    "signature_equivalence_must_be_verified": true,
+    "policy_internal_encoder_reuse": "not assumed; conservative quote counts explicit extraction plus sampling encoders",
+    "fitting": "PCA/normalizer statistics fit on train parent IDs only; fixed pretrained action normalizer remains distinct",
+    "future_extraction_authorized": false
+  },
+  "interface_v1": {
+    "immutable": true,
+    "schema": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10/interface_v1/interface.schema.json",
+      "sha256": "7d52f22e9d2e622a18a9a71fdac822ed50413aa3838aa3ad40d98e0bee10500f"
+    },
+    "existing_wire_fields": [
+      "interface_version",
+      "synthetic",
+      "missing_reasons",
+      "record_type",
+      "identity",
+      "dataset_revision",
+      "split",
+      "environment",
+      "source",
+      "collection_policy",
+      "seed",
+      "step",
+      "H",
+      "generated_length",
+      "executed_prefix_length",
+      "observation_ref",
+      "proprioception",
+      "next_observation_ref",
+      "next_step",
+      "raw_actions",
+      "normalized_actions",
+      "normalizer_ref",
+      "generated_chunk_ref",
+      "executed_actions_ref",
+      "rewards",
+      "successes",
+      "first_success_step",
+      "terminated",
+      "truncated",
+      "cut_reason",
+      "anchor_id",
+      "a0_ref",
+      "candidate_family",
+      "raw_alias_group",
+      "suffix_seed",
+      "terminal_success",
+      "data_origin"
+    ],
+    "sidecar_design": "raw_data_manifest indexes SHA-bound wire record files plus a separate keyed collection_evidence index; existing observation/context refs may point at versioned bundles",
+    "sidecar_fields": [
+      "repeat_id",
+      "target_id/commitment/followup policy",
+      "logical vs physical alias IDs",
+      "outcome completeness/censor mask",
+      "snapshot/replay proof and RNG refs",
+      "per-step termination arrays",
+      "feature signatures/token refs",
+      "candidate/generation/cost-event lineage"
+    ],
+    "no_extra_wire_keys": "v1 additionalProperties=false; sidecars use separate schema/manifest and adapter opt-in, not unrecognized transition keys",
+    "real_ref_identity": "path+SHA+format must exist before publication; draft nulls are not real wire records",
+    "B_sidecar_consumer_ready": false,
+    "requires_new_schema_v2_now": false
+  },
+  "initialization_lineage": [
+    "pi05 SFT030000: all50 tasks/2500 demonstrations/30k updates inherited",
+    "D/G0/Q: historical five-task fitting and train600 lineage; not labeled MT50 adapted",
+    "VLA-Corrector old h1/k10 and random-pair split remain separate; no equal-total-training-data claim",
+    "GAF independent MSE ensemble adapted as B10; no completed training asset claimed"
+  ],
+  "actual_counts": {
+    "D_forward_calls": 0,
+    "D_model_initializations": 0,
+    "D_model_loads": 0,
+    "G0_forward_calls": 0,
+    "G0_model_initializations": 0,
+    "G0_model_loads": 0,
+    "action_expert_forwards": 0,
+    "action_gradient_calls": 0,
+    "baseline_rollouts": 0,
+    "baseline_sampling_calls": 0,
+    "completed_rollouts": 0,
+    "compute_release_claims": 0,
+    "context_builds": 0,
+    "control_observation_calls": 0,
+    "critic_backward_calls": 0,
+    "critic_feature_transforms": 0,
+    "critic_forward_calls": 0,
+    "critic_model_loads": 0,
+    "critic_parameter_updates": 0,
+    "cuda_device_count_queries": 0,
+    "cuda_device_pci_queries": 0,
+    "cuda_driver_initializations": 0,
+    "cuda_error_string_queries": 0,
+    "cuda_uuid_queries": 0,
+    "daemon_restarts": 0,
+    "deletions": 0,
+    "diagnostic_reset_calls": 0,
+    "driver_library_dlopen": 0,
+    "egl_bind_api_calls": 0,
+    "egl_choose_config_calls": 0,
+    "egl_destroy_context_calls": 0,
+    "egl_device_attribute_queries": 0,
+    "egl_device_binary_queries": 0,
+    "egl_device_enumerations": 0,
+    "egl_device_string_queries": 0,
+    "egl_drm_string_queries": 0,
+    "egl_error_queries": 0,
+    "egl_initialize_calls": 0,
+    "egl_make_current_calls": 0,
+    "egl_platform_display_calls": 0,
+    "egl_query_string_calls": 0,
+    "egl_release_thread_calls": 0,
+    "egl_terminate_calls": 0,
+    "encoder_forward_calls": 0,
+    "env_steps": 0,
+    "environment_instances": 0,
+    "environment_reset_calls": 0,
+    "environment_state_restores": 0,
+    "explicit_CUDA_driver_calls": 0,
+    "explicit_EGL_calls": 0,
+    "explicit_driver_dlopen_calls": 0,
+    "explicit_mj_forward_calls": 0,
+    "flow_forward_calls": 0,
+    "graphics_context_creations": 0,
+    "guard_start_status_calls": 0,
+    "holder_queries_stops": 0,
+    "image_preprocessing_calls": 0,
+    "initialization_do_simulation_calls": 0,
+    "initialization_mj_forward_calls": 0,
+    "initialization_physics_substeps": 0,
+    "initialization_reset_calls": 0,
+    "language_embedding_forwards": 0,
+    "large_weight_rehashes": 0,
+    "live_process_signals": 0,
+    "metaworld_environment_instances": 0,
+    "model_backward_calls": 0,
+    "model_forward_calls": 0,
+    "model_gpu_inference_calls": 0,
+    "model_initializations": 0,
+    "monitor_calls": 0,
+    "mujoco_render_context_creations": 0,
+    "mujoco_render_context_frees": 0,
+    "mujoco_scene_updates": 0,
+    "mujoco_set_buffer_calls": 0,
+    "native_mj_forward_calls": 0,
+    "native_nvml_identity_queries": 0,
+    "noise_draws": 0,
+    "normalizer_transform_loads": 0,
+    "objective_forward_calls": 0,
+    "observation_calls": 0,
+    "offline_attempts": 0,
+    "offscreen_viewer_creations": 0,
+    "optimizer_updates": 0,
+    "own_projection_calls": 0,
+    "physics_steps": 0,
+    "policy_device_property_queries": 0,
+    "policy_device_selections": 0,
+    "policy_do_simulation_calls": 0,
+    "policy_mj_forward_calls": 0,
+    "policy_model_loads": 0,
+    "policy_physics_substeps": 0,
+    "policy_state_dict_loads": 0,
+    "policy_state_file_loads": 0,
+    "post_action_gradient_calls": 0,
+    "postprocessor_calls": 0,
+    "postprocessor_loads": 0,
+    "prefix_transformer_forwards": 0,
+    "preprocessor_calls": 0,
+    "preprocessor_loads": 0,
+    "probe_explicit_cuda_symbol_lookups": 0,
+    "probe_explicit_driver_library_loads": 0,
+    "probe_explicit_egl_core_symbol_lookups": 0,
+    "probe_explicit_egl_get_proc_address_calls": 0,
+    "probe_explicit_gl_string_queries": 0,
+    "projection_loads": 0,
+    "raw_constraint_audits": 0,
+    "real_launcher_invocations": 0,
+    "render_calls": 0,
+    "reset_model_calls": 0,
+    "reset_observation_calls": 0,
+    "retries": 0,
+    "rgb_readback_calls": 0,
+    "shared_file_installations": 0,
+    "simulator_attempts": 0,
+    "spatial_projection_calls": 0,
+    "static_scene_constructions": 0,
+    "static_scene_data_constructions": 0,
+    "taskset_constructions": 0,
+    "taskset_reset_calls": 0,
+    "tokenizer_calls": 0,
+    "tokenizer_loads": 0,
+    "torch_imports": 0,
+    "training_updates": 0,
+    "velocity_action_gradient_calls": 0,
+    "visual_encoder_forwards": 0,
+    "vla_backward_calls": 0,
+    "vla_parameter_backward_calls": 0,
+    "vla_sampling_calls": 0,
+    "wrapper_initialization_reset_calls": 0,
+    "wrapper_instances": 0
+  }
+}

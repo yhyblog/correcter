@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "task_id": "A11_COMMON_POOL_BATCH1_V1",
+  "review_type": "CPU-only arithmetic over three explicitly selected saved JSON evidence files; no authoritative files changed",
+  "sources": {
+    "timing": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH1_V1/SAVED_TIMING_AUDIT.json",
+      "sha256": "4fb8265ecb1609dbea48e644030d5d4ffbc3e09c5e582af0776f200abce5d571",
+      "size_bytes": 361259
+    },
+    "storage": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH1_V1/SAVED_STORAGE_AUDIT.json",
+      "sha256": "bfa9638bf6f64009964b0c0a892afd492de9289309d32b3a9b7a4b5304150b6c",
+      "size_bytes": 56455
+    },
+    "result": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A11_COMMON_POOL_BATCH1_V1_RESULT.json",
+      "sha256": "8510bfe67f6885f1a3cbbbf4210e5a5862b537707c6776f0cc5492a341d1de4d",
+      "size_bytes": 35930
+    }
+  },
+  "source_checks": {
+    "timing_and_storage_digest_and_size_match_RESULT_artifact_refs": true,
+    "branch_counts_match_RESULT": true,
+    "all_child_elapsed_fields_present": true,
+    "parent_branch_counts_match_RESULT": true
+  },
+  "timing": {
+    "outer_elapsed_seconds": 16143.590551090892,
+    "outer_elapsed_hours": 4.484330708636359,
+    "parent_starts": 8,
+    "branch_starts": 106,
+    "complete_outcomes": 106,
+    "actual_started_cold_loads": 106,
+    "coverage_shape": "Seven parents started all 15 branches; p04 started only normal, succeeded at absolute step 48 before cut55, and its remaining 14 branches were not started under the contract. No replacement/retry.",
+    "all15_and14states_and4paired_targets": 7,
+    "technical_failures_in_saved_evidence": false,
+    "parents": [
+      {
+        "branches_started": 15,
+        "clock_scope": "scheduler admission to final branch exit; excludes final whole-wave publication",
+        "elapsed_seconds": 4198.357167332899,
+        "parent_key": "p00_disassemble_train0000_cut5",
+        "status": "complete",
+        "elapsed_minutes": 69.97261945554831,
+        "elapsed_hours": 1.1662103242591386,
+        "summed_child_elapsed_seconds": 4195.2102471916005,
+        "summed_load_PI05_SFT030000_host_seconds": 1877.2349519031122,
+        "coverage_note": "all15_started; inspect every outcome/state/target mask",
+        "candidate_qualified_for_analysis": true
+      },
+      {
+        "branches_started": 15,
+        "clock_scope": "scheduler admission to final branch exit; excludes final whole-wave publication",
+        "elapsed_seconds": 3664.7981180897914,
+        "parent_key": "p01_pick_place_wall_train0000_cut5",
+        "status": "complete",
+        "elapsed_minutes": 61.079968634829854,
+        "elapsed_hours": 1.0179994772471643,
+        "summed_child_elapsed_seconds": 3661.6414727736264,
+        "summed_load_PI05_SFT030000_host_seconds": 1869.3702291599475,
+        "coverage_note": "all15_started; inspect every outcome/state/target mask",
+        "candidate_qualified_for_analysis": true
+      },
+      {
+        "branches_started": 15,
+        "clock_scope": "scheduler admission to final branch exit; excludes final whole-wave publication",
+        "elapsed_seconds": 4408.144607956056,
+        "parent_key": "p02_stick_pull_train0000_cut5",
+        "status": "complete",
+        "elapsed_minutes": 73.4690767992676,
+        "elapsed_hours": 1.2244846133211265,
+        "summed_child_elapsed_seconds": 4404.998097296804,
+        "summed_load_PI05_SFT030000_host_seconds": 1874.2072929972783,
+        "coverage_note": "all15_started; inspect every outcome/state/target mask",
+        "candidate_qualified_for_analysis": true
+      },
+      {
+        "branches_started": 15,
+        "clock_scope": "scheduler admission to final branch exit; excludes final whole-wave publication",
+        "elapsed_seconds": 3668.344706728123,
+        "parent_key": "p03_stick_push_train0000_cut5",
+        "status": "complete",
+        "elapsed_minutes": 61.13907844546872,
+        "elapsed_hours": 1.018984640757812,
+        "summed_child_elapsed_seconds": 3665.214079823345,
+        "summed_load_PI05_SFT030000_host_seconds": 1871.536820853129,
+        "coverage_note": "all15_started; inspect every outcome/state/target mask",
+        "candidate_qualified_for_analysis": true
+      },
+      {
+        "branches_started": 1,
+        "clock_scope": "scheduler admission to final branch exit; excludes final whole-wave publication",
+        "elapsed_seconds": 241.5021498389542,
+        "parent_key": "p04_disassemble_train0001_cut55",
+        "status": "parent_stopped",
+        "elapsed_minutes": 4.025035830649236,
+        "elapsed_hours": 0.06708393051082061,
+        "summed_child_elapsed_seconds": 241.48257273901254,
+        "summed_load_PI05_SFT030000_host_seconds": 125.14086514012888,
+        "coverage_note": "normal_complete_before_legal_cut; no paired sample; no replacement",
+        "candidate_qualified_for_analysis": false
+      },
+      {
+        "branches_started": 15,
+        "clock_scope": "scheduler admission to final branch exit; excludes final whole-wave publication",
+        "elapsed_seconds": 4348.755506004207,
+        "parent_key": "p05_pick_place_wall_train0001_cut55",
+        "status": "complete",
+        "elapsed_minutes": 72.47925843340344,
+        "elapsed_hours": 1.207987640556724,
+        "summed_child_elapsed_seconds": 4345.6342411777005,
+        "summed_load_PI05_SFT030000_host_seconds": 1871.10817003157,
+        "coverage_note": "all15_started; inspect every outcome/state/target mask",
+        "candidate_qualified_for_analysis": true
+      },
+      {
+        "branches_started": 15,
+        "clock_scope": "scheduler admission to final branch exit; excludes final whole-wave publication",
+        "elapsed_seconds": 4276.397793827578,
+        "parent_key": "p06_shelf_train0001_cut55",
+        "status": "complete",
+        "elapsed_minutes": 71.27329656379297,
+        "elapsed_hours": 1.1878882760632161,
+        "summed_child_elapsed_seconds": 4273.270902189426,
+        "summed_load_PI05_SFT030000_host_seconds": 1869.6133955391124,
+        "coverage_note": "all15_started; inspect every outcome/state/target mask",
+        "candidate_qualified_for_analysis": true
+      },
+      {
+        "branches_started": 15,
+        "clock_scope": "scheduler admission to final branch exit; excludes final whole-wave publication",
+        "elapsed_seconds": 3697.69922050694,
+        "parent_key": "p07_stick_pull_train0001_cut55",
+        "status": "complete",
+        "elapsed_minutes": 61.628320341782334,
+        "elapsed_hours": 1.027138672363039,
+        "summed_child_elapsed_seconds": 3694.5392810027115,
+        "summed_load_PI05_SFT030000_host_seconds": 1870.4056314448826,
+        "coverage_note": "all15_started; inspect every outcome/state/target mask",
+        "candidate_qualified_for_analysis": true
+      }
+    ],
+    "parallelism": {
+      "maximum_parent_concurrency_by_saved_event_order": 2,
+      "numeric_host_windows": {
+        "at_least_two_seconds": 10881.801563091576,
+        "maximum_simultaneous": 2,
+        "scope": "first-to-last numeric event host windows; excludes pre-ledger hash/startup and unmetered cleanup tails; not GPU activity",
+        "union_seconds": 15805.534120472614
+      },
+      "two_numeric_windows_fraction_of_outer_wall": 0.6740632778472101,
+      "two_numeric_windows_fraction_of_any_numeric_window": 0.6884804702042041,
+      "one_numeric_window_seconds": 4923.732557381038,
+      "outer_seconds_outside_numeric_window_union": 338.0564306182787,
+      "summed_child_host_elapsed_seconds": 28481.990894194227,
+      "summed_child_host_elapsed_divided_by_outer_elapsed": 1.7642909614224311,
+      "ratio_interpretation": "Aggregate child wall-time per outer wall-time, approximately 1.7643 concurrent child-equivalents; not a matched serial-baseline speedup and not GPU utilization.",
+      "scope": "Saved host event-order and monotonic time only. Numeric windows exclude pre-ledger hashing/startup and unmetered cleanup tails. Precise Popen timestamps were not serialized."
+    },
+    "cold_load_host_intervals": {
+      "interval_name": "load_PI05_SFT030000",
+      "entered": 106,
+      "returned": 106,
+      "failed": 0,
+      "summed_host_seconds": 13228.61735706916,
+      "mean_seconds": 124.79827695348266,
+      "median_seconds": 124.64081082725897,
+      "minimum_seconds": 123.7236707941629,
+      "maximum_seconds": 128.07927001127973,
+      "fraction_of_summed_child_host_elapsed": 0.46445550123975654,
+      "fraction_of_summed_ledger_elapsed": 0.49519445222881864,
+      "summed_ledger_elapsed_seconds": 26713.985379942227,
+      "interpretation": "106 saved model-load wrapper host intervals total 13228.62 seconds, 46.45% of summed child elapsed or 49.52% of summed ledger elapsed. Summation includes simultaneous children and cannot be subtracted directly from outer wall-time.",
+      "nested_intervals_not_additive": true,
+      "not_proven": "These intervals do not identify GPU execution time, physical disk/cache reads, or a uniquely isolated loading bottleneck."
+    }
+  },
+  "storage": {
+    "final_output_unique_inode_bytes": 17141869982,
+    "final_output_unique_inode_GiB": 15.964610485360026,
+    "final_output_unique_inode_reported_blocks_bytes": 17318412288,
+    "final_output_unique_inode_reported_blocks_GiB": 16.1290283203125,
+    "final_output_logical_path_bytes": 33828656808,
+    "final_output_logical_path_GiB": 31.505391754209995,
+    "final_output_unique_inodes": 87100,
+    "final_output_paths": 173453,
+    "final_cache_unique_inode_bytes": 331414,
+    "saved_monitor_polls": 3202,
+    "saved_monitor_errors": [],
+    "saved_admission_status": "admitted_observation_only",
+    "interpretation": "15.9646 GiB is final output file sizes deduplicated by inode. 31.5054 GiB counts logical paths including aliases. Filesystem-reported allocated blocks total 16.1290 GiB. None is an exact global peak or actual physical I/O measurement.",
+    "quoted_IO_scope": "about1.148TB known-size logical checksum subtotal only;116 unknown-size files; not strict upper",
+    "remaining_storage_guaranteed": false
+  },
+  "usable_conclusions": [
+    "This saved wave took 4.4843 hours and started 8 parents / 106 branches. Coverage was seven full 15-branch parents plus one normal-only parent; elapsed time is not an all-120-branch benchmark.",
+    "Saved evidence supports maximum parent concurrency 2. Numeric host windows overlapped for 10881.80 seconds; the saved parallelism summaries do not measure GPU utilization.",
+    "Every started branch performed a model cold load. The saved load wrapper accounts for 46.45% of summed child host elapsed, so any future throughput preparation should quantify this recurring cost without changing rollout semantics.",
+    "Final deduplicated output is about 15.96 GiB. Saved monitoring completed 3202 polls with no recorded monitor errors, but available filesystem samples do not establish project quota, a storage reservation, or future capacity."
+  ],
+  "recommendation": {
+    "next_batch_concurrency": 2,
+    "reason": "This wave provides operational evidence at concurrency 2 only. It does not supply a matched concurrency-1 baseline, resource peaks, or evidence for scaling above 2.",
+    "next_compute_authorized_by_this_review": false,
+    "next_batch_requires": "A new bounded release and scope/coverage accounting; consumed Batch1 release and unused caps must not be reused.",
+    "CPU_only_preparation_if_throughput_changes_are_desired": [
+      "Use saved timing fields to separate model-load wrapper, other startup, rollout and publication costs, with explicit clock scope and missing intervals.",
+      "Before proposing model reuse or reduced repeated loading, prepare a CPU-only semantic and accounting review covering per-branch state/RNG isolation, immutable checkpoint identity, reset behavior, resource caps and publication/cleanup.",
+      "Keep fixed source/seed selection and early-success eligibility unchanged; do not replace the normal-only parent to improve apparent yield.",
+      "Any concurrency increase or loader change needs a separately reviewed proposal; this review launches no added GPU experiment."
+    ]
+  },
+  "unknowns": {
+    "matched_serial_baseline_for_this_workload": null,
+    "linear_speedup": null,
+    "GPU_compute_seconds": null,
+    "GPU_utilization": null,
+    "GPU_peak_memory_bytes": null,
+    "process_RSS_peak_bytes": null,
+    "precise_Popen_timestamps": null,
+    "outer_wall_time_savings_if_cold_loading_removed": null,
+    "actual_logical_input_read_bytes": null,
+    "logical_IO_actual_bytes": null,
+    "physical_IO_actual_bytes": null,
+    "strict_total_IO_upper_bytes": null,
+    "exact_global_peak_bytes": null,
+    "between_monitor_overshoot_bytes": null,
+    "outside_root_temporary_bytes": null,
+    "unlinked_bytes": null,
+    "project_quota_bytes": null,
+    "full_500_parent_runtime_or_storage_guarantee": null,
+    "unmeasured_residual_phase_attribution": null
+  },
+  "review_limits": [
+    "Read only the three source files listed above. Did not scan experiment trees, read/hash weights, inspect hardware/processes, load models or run experiments.",
+    "First-parent V4 was not reopened because this review does not make a cross-workload or speedup comparison.",
+    "RESULT states analysis_acceptance_pending=true, new_accepted_parent_count=0 and technical_failures_in_saved_evidence=false. Throughput review does not independently grant scientific acceptance."
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "node": "A",
+  "target_role": "A",
+  "task_id": "A_D24_FULL_Q_AUTORUN_HANDOFF_V2",
+  "priority_task": "A_D24_FULL_Q_AUTORUN_HANDOFF_V2",
+  "task_revision": 1,
+  "task": "tasks/A_D24_FULL_Q_AUTORUN_HANDOFF_V2.md",
+  "authorization": {
+    "path": "deadline_20260924/FULL_Q_AUTORUN_AUTHORIZATION_V2.json",
+    "sha256": "fb15e23ad4ed75eaa1b9490784d58dc9dc925e440194e99cab066ae11af6414f"
+  },
+  "target_hostname": "trial-303224955-trialrun-303224955-worker-0",
+  "target_session": "01a0b91f-7443-71b1-915d-6cdb6d6a1a13",
+  "status": "published_auto_chain_handoff",
+  "ACK_received": false,
+  "scientific_launch_observed": false,
+  "updated_at_utc": "2026-09-22T17:24:44.988414+00:00",
+  "instruction": "User requires selection first then serial automatic remaining jobs. Prepare own task now, preserve live DEV/native waiters, no duplicate launch. Read V2 exact ownership and24worker protocol.",
+  "previous_dispatch_archive": "deadline_20260924/archive/DISPATCH_A_before_trigger_modes_20260922.json",
+  "acknowledgement_path": "receipts/A/A_D24_FULL_Q_AUTORUN_HANDOFF_V2_ACK.json",
+  "recovery_directive": null,
+  "scientific_background_running": false,
+  "desired_action": "prepare_and_deploy_finite_autorun_chain_with_selection_gate",
+  "urgent_user_override": {
+    "path": "deadline_20260924/Q_LOSS_PRIORITY_OVERRIDE_V1.json",
+    "sha256": "7e7c84f47284a71dee130bae1239ee3d18f04b176bbea7ad5a66e06da792b5a7"
+  },
+  "previous_primary_task": "A_D24_FULL_Q_LOSS_SELECTION_V1",
+  "admission_override": {
+    "path": "deadline_20260924/Q_LOSS_PRIORITY_OVERRIDE_V1.json",
+    "sha256": "7e7c84f47284a71dee130bae1239ee3d18f04b176bbea7ad5a66e06da792b5a7"
+  },
+  "evaluation_concurrency_policy": {
+    "path": "deadline_20260924/EVALUATION_CONCURRENCY_24_V1.md",
+    "sha256": "8b13ba1b96d286b1be68f6d96c300017af95ae637120bb7c34c69ac943e33b29"
+  },
+  "authorized_followups": [
+    {
+      "task_id": "A_D24_FULL_Q_LOSS_SELECTION_V1",
+      "task_revision": 1,
+      "task": "tasks/A_D24_FULL_Q_LOSS_SELECTION_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/FULL_Q_LOSS_SELECTION_AUTHORIZATION_V1.json",
+        "sha256": "8fc0bf2c7c0c761d9fba424fb7fb127af8a9c505668fccd7231126535c6422c1"
+      },
+      "admission_override": {
+        "path": "deadline_20260924/Q_LOSS_PRIORITY_OVERRIDE_V1.json",
+        "sha256": "7e7c84f47284a71dee130bae1239ee3d18f04b176bbea7ad5a66e06da792b5a7"
+      },
+      "priority": "P0_current_user_request"
+    },
+    {
+      "task_id": "A_D24_FULL_Q_AUTORUN_HANDOFF_V2",
+      "task_revision": 1,
+      "task": "tasks/A_D24_FULL_Q_AUTORUN_HANDOFF_V2.md",
+      "authorization": {
+        "path": "deadline_20260924/FULL_Q_AUTORUN_AUTHORIZATION_V2.json",
+        "sha256": "fb15e23ad4ed75eaa1b9490784d58dc9dc925e440194e99cab066ae11af6414f"
+      },
+      "priority": "P0_current_user_autorun"
+    }
+  ],
+  "selection_rule_override": {
+    "path": "deadline_20260924/POST_LED_SELECTION_OVERRIDE_V1.json",
+    "sha256": "fa907477112320e7f8356282c5ba64742452172dee998e9efc20a82b92b9c4b1"
+  },
+  "urgent_instruction": "Latest user: select only by Post complete dev; Velocity inherits and still runs, but separate from current paper. Patch private selector/admission gate before any selected tests; preserve completed fits/dev.",
+  "runtime_compatibility_directive": {
+    "path": "deadline_20260924/AUTORUN_LIVE_CHAIN_COMPATIBILITY_V1.json",
+    "sha256": "2ae5a001cec168399a9733d038ed56d1ebeefd311081999f45429dc75e24ac16"
+  },
+  "autonomous_recovery_policy": {
+    "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V1.json",
+    "sha256": "87878b0e2019048935904d639d1d15a1af9f0778047171a508054fecaadd4ab0"
+  },
+  "analysis_wait_timeout_seconds": 1800,
+  "control_plane_followups": [
+    {
+      "task_id": "A_D24_AUTORECOVERY_QUEUE_RULE_V1",
+      "task_revision": 1,
+      "revision": 1,
+      "task": "tasks/A_D24_AUTORECOVERY_QUEUE_RULE_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_AUTHORIZATION_V1.json",
+        "sha256": "87878b0e2019048935904d639d1d15a1af9f0778047171a508054fecaadd4ab0"
+      },
+      "scope": "CPU_only_operational_recovery_and_queue_progress",
+      "does_not_replace_primary_task": true
+    },
+    {
+      "task_id": "A_D24_QUOTA_INDEPENDENT_QUEUE_V1",
+      "task_revision": 1,
+      "revision": 1,
+      "task": "tasks/A_D24_QUOTA_INDEPENDENT_QUEUE_V1.md",
+      "authorization": {
+        "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+        "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+      },
+      "scope": "CPU_only_quota_independent_queue_deployment",
+      "does_not_replace_primary_task": true
+    }
+  ],
+  "quota_independent_autorun": {
+    "path": "deadline_20260924/QUOTA_INDEPENDENT_AUTORUN_AUTHORIZATION_V1.json",
+    "sha256": "651a1b85faf16e3d13e0a722f1253fc465f5fcbeeab99b692f51f674de30af98"
+  }
+}

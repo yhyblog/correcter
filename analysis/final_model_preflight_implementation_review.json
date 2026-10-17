@@ -1,0 +1,105 @@
+{
+  "schema": "final_model_preflight_implementation_independent_review_v1",
+  "status": "passed_engineering_synthetic_only",
+  "created_utc": "2026-09-16T23:04:23.275811+00:00",
+  "blockers_for_current_implementation": [],
+  "not_a_real_final_preflight_pass": true,
+  "not_a_training_release": true,
+  "new_simulator_attempts": 0,
+  "new_model_calls": 0,
+  "new_pca_fits": 0,
+  "new_optimizer_updates": 0,
+  "real_data_loader_called_by_this_review": false,
+  "in_progress_outcomes_read": false,
+  "evidence": {
+    "handoff": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/coordination/NATIVE10_FINAL_PREFLIGHT_IMPLEMENTATION_HANDOFF.md",
+      "sha256": "8c540d9f4d2439901c9c053709e19a0dc1e18dd6a0965da0e11963c696c0a1c0"
+    },
+    "implementation_seal": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/final_model_preflight_implementation_20260916_v1/complete.json",
+      "sha256": "485750615631a8f3a2630784869887c50afd2acc307b459980883747ec98694c"
+    },
+    "implementation_summary": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/final_model_preflight_implementation_20260916_v1/summary.json",
+      "sha256": "86373a416107f7ebf686084779ccbad91fde35b56639af1d80fd6b92d6f8a914"
+    },
+    "combined_cpu": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/final_model_preflight_interfaces_cpu_20260916_v1",
+      "seal_sha256": "37c81dd266d4d2cab3bff67a66980e169741bfa34da37961f29fc655f494d306",
+      "result_sha256": "27aa86a57a7611ab1735dc77b51032346e226fb9bba8926ec41c5f8bae3fb20a"
+    },
+    "formal_runtime_synthetic_numerical": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/final_numerical_contract_cpu_20260916_v2",
+      "seal_sha256": "38d320868db2f619d01886a1b4e1e1d1be0be81f60317941758a976055d75882",
+      "result_sha256": "b808875e02f7c2e9cc0b467c5a821f45236aa0186d8d6e8ef621f57517ccc233"
+    },
+    "numerical_decision_sha256": "3e556bad66cff0105c243b841cd24b619efdcc1c681bbf38b41bb0b71888cb1a",
+    "entrypoint_sha256": {
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/final_fit_protocol_v1.py": "e9cfb4282fa405e2c17fe0c3ef7fd9980688f9f418d49da96ef8e3b857d61a63",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/final_training_pipeline_v1.py": "9001691cec1f8e14de094787429ca35b9bba374da88d2ee5cae70b3451789dce",
+      "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/final_fit_runner_v1.py": "66048e27d0970da577ce81559cbe9cb617c62bc1e6264cb00c112f3a9b546e1c"
+    }
+  },
+  "verified_cpu": {
+    "combined_passed": 71,
+    "breakdown": {
+      "protocol": 28,
+      "pipeline": 24,
+      "runner": 15,
+      "cross_entry": 4
+    },
+    "exit_code": 0,
+    "combined_and_numerical_all_sealed_files_checked": true,
+    "bound_combined_code_count": 28,
+    "combined_code_before_after_current_equal": true,
+    "formal_runtime_synthetic_numerical_tests_passed": 8,
+    "runtime": {
+      "torch": "2.7.1+cu126",
+      "numpy": "2.2.6",
+      "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]",
+      "executable": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/bin/python3.12",
+      "device": "cpu",
+      "dtype": "float32",
+      "threads": 2,
+      "torch_distribution": "2.7.1",
+      "numpy_distribution": "2.2.6",
+      "torch_version_file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/.miniforge3/envs/lerobot/lib/python3.12/site-packages/torch/version.py",
+        "sha256": "6ed9ff03113f2ceba7ad0f77cf4b160ea03f918ef010b5f662ce74786d182974"
+      }
+    },
+    "raw_warning_preserved": true,
+    "real_model_operations_in_archives": {
+      "real_pca_fits": 0,
+      "real_initializations": 0,
+      "real_inference": 0,
+      "formal_optimizer_updates": 0,
+      "formal_simulator_attempts": 0
+    },
+    "no_full670_code_rescan_by_this_review": true
+  },
+  "checks": {
+    "all_single_protocol_boundaries_replaced": "New final_fit_protocol.validate_specification supplies bundle/two-collection/three-child identities. New final_training_pipeline._inputs calls new validator and bundle loader before scientific work. New load_preflight and run revalidate the same new identities; they do not route through old _specification/_require_preflight/load_preflight. Reused core.validate_phase_datasets is the planned/effective split validator, not the old single-protocol gate.",
+    "input_identity": "Metadata preview checks child audit seals, real collection config/freeze/protocol, original round1 dev protocol, distinct round2 protocol, generation-member files and common namespace. Full bundle loader then verifies canonical arrays and provenance before old weights/PCA.",
+    "zero_resource_permission": "final_fit_preflight scope/stage requires READY exact bundle/design/specification identity and limits0sim/0optimizer via _gate, without fake positive reservation. Runner verifies before importing model pipeline or creating execution output. training_final requires distinct final_critic_training scope, own preflight binding and32000 stage/51200 global optimizer cap.",
+    "canonical_hard_contract": "Existing core.audit_reload remains bit-exact for same singleton shape cache, all13 probabilities and slots0/11 member/ensemble action gradients. _audit_ok requires full ordered source coverage, all4members,a0zero and immutable state/anchor. No allclose tolerance substituted.",
+    "dense_diagnostic_contract": "reported_exact and reported_differences both allowed as diagnostics only. Source IDs/shape/model-input fingerprints/runtime/finite values/gradient sum semantics/detached a0/unchanged state-actions-model/a0zero/source-independent structure remain hard requirements. Production canonical path cannot be replaced by dense diagnostics. F64 is used for measuring differences, not changing model computation.",
+    "numerical_status_boundary": "Overall preflight can be passed with batch_singleton_bit_exact=false under numeric_contract canonical_strict_passed_dense_reported. This is not training authorization: dense_report_analysis_review_required_before_training=true and training_released_by_this_artifact=false; subsequent distinct training READY must bind the passed preflight.",
+    "initialization": "A copies the original four states/projections and checks tensor equality. B uses unique effective train-only PCA16/8 once before bootstrap and fresh four-member initialization; B preprocessing buffers must all equal the shared transform. Both paths audit full effective train and dev arrays before any optimization; PCA and source coverage are separately sealed.",
+    "load_and_fit_reuse": "New load_preflight validates exact preflight identity/config/READY/runtime and reloads eight SHA-bound initial checkpoints, preprocessing.npz, masks,sampling.json and all4000x32 minibatch plans. No fit-time old-weight import,PCA refit or independent new initialization. Masks and every preprocessing buffer must match.",
+    "sampling_reuse_implementation_detail": "Saved bootstrap/minibatch plans are loaded and compared with deterministic reconstruction under the same frozen seeds/implementation before fit. Existing fit_member regenerates the same draws from those fixed seeds; returned bootstrap,seed and full actual minibatch-plan SHA must equal the sealed plan. This is deterministic replay of the sealed schedule, not a new randomly selected schedule.",
+    "runtime": "Target executable is lerobot Python3.12.13 with Torch2.7.1+cu126/NumPy2.2.6,CPU float32/2threads. Preview binds executable/package versions and torch/version.py SHA; actual pipeline runtime must equal frozen specification. The original Torch2.6 synthetic evidence is not reused as the final runtime identity or an error bound.",
+    "unchanged_science": "A/B trainable scopes,loss1/1/.5,learning rates,4000/member,fixed checkpoints,canonical singleton inference,original dev100 denominator and actual effectiveN source sampling remain unchanged."
+  },
+  "remaining_before_real_execution": [
+    "Completed real round2 static audit and sealed combined inputs/pending specification must exist.",
+    "A new explicit final_fit_preflight READY and independent real execution config/code freeze must bind the actual bundle and runtime.",
+    "After real preflight, inspect actual PCA diagnostics,all8initial states/canonical audits,dense diagnostics and source/transform/sampling seals before any final training release."
+  ],
+  "limits": [
+    "This review read new entrypoint segments,small metadata and sealed synthetic CPU logs only; it did not run tests/model operations or inspect live labels.",
+    "71 synthetic checks and8 synthetic numerical checks do not prove real600-source coverage,real PCA stability or real-model reload behavior.",
+    "No claim that final preflight or final training has executed; current round2 collection freeze is unaffected."
+  ]
+}

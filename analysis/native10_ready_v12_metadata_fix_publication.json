@@ -1,0 +1,35 @@
+{
+  "status": "published_metadata_compatibility_fix",
+  "published_utc": "2026-09-17T02:36:53.585762+00:00",
+  "version_unchanged": 12,
+  "previous_ready_snapshot": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/analysis/native10_ready_v12_before_metadata_fix.json",
+  "previous_ready_sha256": "35600a62b81e4a131d56b880d6a89650fce3261822c662af46a73deb708ba521",
+  "new_ready_sha256": "5cec3558223d18ba9f2b160c478590b8d0ec9b161989f794e6dbcd7983f10138",
+  "exact_changes": [
+    {
+      "op": "add",
+      "path": "/draft_provenance/historical_mutable_reference_rebindings/0/path",
+      "value": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/policy5_independent_audits/round2_policy_v1_independent/budget_snapshot.jsonl"
+    },
+    {
+      "op": "add",
+      "path": "/draft_provenance/historical_mutable_reference_rebindings/1/path",
+      "value": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/scene_registry_before.jsonl"
+    }
+  ],
+  "only_two_path_keys_added": true,
+  "all_other_READY_content_unchanged": true,
+  "calibration_contract_changed": false,
+  "code_changed": false,
+  "cpu_checks_repeated": false,
+  "executor_in_memory_compatibility_evidence": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/execution_control/calibration_v1/ready_metadata_compatibility_review.json",
+    "sha256": "37e03774b4a5c7365e978750d93910e5ff0d02446aa9a718e17632834a80db32",
+    "authorization_reference_files_checked": 163,
+    "all_reference_sha_passed": true
+  },
+  "actual_ledger_sha256_unchanged": "8af52eeec7a34958d64205790010160cf04393f8db995c6b4707916c0f3dee2d",
+  "new_model_simulator_optimizer_calls": 0,
+  "execution_started_by_this_write": false,
+  "instruction": "Use this corrected exact READY SHA to retry the same zero-attempt freeze,then run the already-authorized single calibration wave after freeze checks pass;selection sealing and heldout remain locked."
+}

@@ -1,0 +1,1717 @@
+{
+  "checked_at_utc": "2026-09-19T14:53:54.745500+00:00",
+  "data": {
+    "input_bundles/final_train600_input_v1/manifest.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/input_bundles/final_train600_input_v1/manifest.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/input_bundles/final_train600_input_v1/manifest.json",
+        "expected_sha256": null,
+        "verified_sha256": "f32ddac963181f01db740817cf8bdc990d3a04ab131a8c90689c42c40941e496",
+        "kind": "file",
+        "bytes": 3320443,
+        "mtime_ns": 1789601884092890000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "schema": "native10_final_input_bundle_v1",
+        "version": "final_train600_input_v1",
+        "status": "complete",
+        "registered_manifest": {
+          "_length": 2720,
+          "_sample": [
+            {
+              "_keys": [
+                "episode_id",
+                "case_id",
+                "task",
+                "env_seed",
+                "split",
+                "round",
+                "source_horizon",
+                "cut_rule"
+              ],
+              "_length": 8
+            },
+            {
+              "_keys": [
+                "episode_id",
+                "case_id",
+                "task",
+                "env_seed",
+                "split",
+                "round",
+                "source_horizon",
+                "cut_rule"
+              ],
+              "_length": 8
+            },
+            {
+              "_keys": [
+                "episode_id",
+                "case_id",
+                "task",
+                "env_seed",
+                "split",
+                "round",
+                "source_horizon",
+                "cut_rule"
+              ],
+              "_length": 8
+            }
+          ]
+        },
+        "manifest_sha256": "51fd84cf569747ba703a3a9e12498e893a18bca459b6eb39b58a1445538bc473",
+        "sources": {
+          "round1_train": {
+            "_keys": [
+              "dataset_binding",
+              "collection",
+              "bank_version"
+            ],
+            "_length": 3
+          },
+          "round2_train": {
+            "_keys": [
+              "dataset_binding",
+              "collection",
+              "bank_version",
+              "completion_audit"
+            ],
+            "_length": 4
+          },
+          "development": {
+            "_keys": [
+              "dataset_binding",
+              "collection",
+              "bank_version"
+            ],
+            "_length": 3
+          }
+        },
+        "source_identities": {
+          "round1_train": {
+            "_keys": [
+              "pipeline_binding",
+              "collection",
+              "bank_version",
+              "bank_protocol_sha256",
+              "generation_round",
+              "generation_critic",
+              "completion_audit",
+              "referenced_attempts",
+              "planned_episode_ids"
+            ],
+            "_length": 9
+          },
+          "round2_train": {
+            "_keys": [
+              "pipeline_binding",
+              "collection",
+              "bank_version",
+              "bank_protocol_sha256",
+              "generation_round",
+              "generation_critic",
+              "completion_audit",
+              "referenced_attempts",
+              "planned_episode_ids"
+            ],
+            "_length": 9
+          },
+          "development": {
+            "_keys": [
+              "pipeline_binding",
+              "collection",
+              "bank_version",
+              "bank_protocol_sha256",
+              "generation_round",
+              "generation_critic",
+              "completion_audit",
+              "referenced_attempts",
+              "planned_episode_ids"
+            ],
+            "_length": 9
+          }
+        },
+        "feature_contract": {
+          "schema": "native10_canonical_features_actions_v1",
+          "canonical_space": "vision4096_language2048_before_critic_projection",
+          "state_shapes": {
+            "_keys": [
+              "history",
+              "history_mask",
+              "proprio",
+              "proprio_mask",
+              "past_actions",
+              "language",
+              "remaining"
+            ],
+            "_length": 7
+          },
+          "state_order": {
+            "_length": 7,
+            "_sample": [
+              "history",
+              "history_mask",
+              "proprio"
+            ]
+          },
+          "floating_dtype": "float32",
+          "masks_dtype": "bool",
+          "temporal_order": "frozen cpu_batch oldest_to_newest; mask identifies available history",
+          "remaining": "(300-cut_step)/300",
+          "feature_extractor": {
+            "_keys": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/src/ac_tmil/evaluation/metaworld_vla_features.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/src/ac_tmil/vla_features.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/src/ac_tmil/ogg/common.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/src/ac_tmil/ogg_research/experiment.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/engine.py"
+            ],
+            "_length": 5
+          },
+          "vla_sha256": "dff338a91dbe534ca3c4525ba82df9324662e3c87131f42ed6e3d1b7bf0e94d4",
+          "action_transform": {
+            "_keys": [
+              "files",
+              "config",
+              "action_order",
+              "raw_units",
+              "critic_mapping",
+              "clean_to_raw",
+              "prefix_horizon",
+              "a0_slot",
+              "normal_control_separate"
+            ],
+            "_length": 9
+          },
+          "execution": {
+            "_keys": [
+              "seed_namespace",
+              "source_horizon",
+              "prefix_horizon",
+              "suffix_horizon",
+              "control_budget",
+              "guidance",
+              "matching",
+              "command_semantics"
+            ],
+            "_length": 8
+          },
+          "candidate_order": {
+            "_length": 13,
+            "_sample": [
+              "a0",
+              "xyz_positive",
+              "xyz_negative"
+            ]
+          },
+          "repeats": 4,
+          "sampling": "uniform effective whole source; no round/teacher/Q/benefit weighting"
+        },
+        "planned_provenance": {
+          "_length": 700,
+          "_sample": [
+            {
+              "_keys": [
+                "planned_slot_id",
+                "episode_id",
+                "task",
+                "split",
+                "round",
+                "status",
+                "source",
+                "bank_version",
+                "bank_protocol_sha256",
+                "generation_round",
+                "generation_critic",
+                "source_seal_sha256",
+                "candidate_bank_sha256",
+                "scene_fingerprint",
+                "exact_state_sha256",
+                "source_attempt",
+                "physical_attempt_ids",
+                "resolution"
+              ],
+              "_length": 18
+            },
+            {
+              "_keys": [
+                "planned_slot_id",
+                "episode_id",
+                "task",
+                "split",
+                "round",
+                "status",
+                "source",
+                "bank_version",
+                "bank_protocol_sha256",
+                "generation_round",
+                "generation_critic",
+                "source_seal_sha256",
+                "candidate_bank_sha256",
+                "scene_fingerprint",
+                "exact_state_sha256",
+                "source_attempt",
+                "physical_attempt_ids",
+                "resolution"
+              ],
+              "_length": 18
+            },
+            {
+              "_keys": [
+                "planned_slot_id",
+                "episode_id",
+                "task",
+                "split",
+                "round",
+                "status",
+                "source",
+                "bank_version",
+                "bank_protocol_sha256",
+                "generation_round",
+                "generation_critic",
+                "source_seal_sha256",
+                "candidate_bank_sha256",
+                "scene_fingerprint",
+                "exact_state_sha256",
+                "source_attempt",
+                "physical_attempt_ids",
+                "resolution"
+              ],
+              "_length": 18
+            }
+          ]
+        },
+        "summary": {
+          "train_planned": 600,
+          "train_effective": 600,
+          "development_planned": 100,
+          "development_effective": 95,
+          "coverage": {
+            "_length": 15,
+            "_sample": [
+              {
+                "_keys": [
+                  "source",
+                  "task",
+                  "planned",
+                  "actual_initial_states",
+                  "effective_cut",
+                  "no_cut",
+                  "missing_reasons"
+                ],
+                "_length": 7
+              },
+              {
+                "_keys": [
+                  "source",
+                  "task",
+                  "planned",
+                  "actual_initial_states",
+                  "effective_cut",
+                  "no_cut",
+                  "missing_reasons"
+                ],
+                "_length": 7
+              },
+              {
+                "_keys": [
+                  "source",
+                  "task",
+                  "planned",
+                  "actual_initial_states",
+                  "effective_cut",
+                  "no_cut",
+                  "missing_reasons"
+                ],
+                "_length": 7
+              }
+            ]
+          },
+          "complete_planned_disposition": true,
+          "canonical_features_only": true,
+          "source_uniform": true,
+          "no_future_split_outcomes": true,
+          "model_calls": 0,
+          "simulator_calls": 0,
+          "optimizer_updates": 0,
+          "pca_fits": 0
+        },
+        "analysis_sources": {
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_TRAINING_TASK.md": "682c3aa13611afd21ee01ed1d934543aed45a8cad8714f660b5f171b9281d45a",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_MAIN_COLLECTION_REVIEW.md": "083a1ab397512936c3d13ae033310e6a23467faf72f387c040300b16b5d11857",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_P0_ANALYSIS_REVIEW.md": "ea73031e503b3661a8492477037d15b23555aaae04b6f2b38da1e1ce03b0b822",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_CONCURRENCY32_REVIEW.md": "50a2187aaf70085e321c700d6b367c4d549a7721c0e5c4073e63191ea52e2311",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ROUND1_ANALYSIS_DECISION.md": "5ce1d67fc8d8dcec8045f1d94cbf98e255530c65a6fd13e7b1bbaf4f0570bf75",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_TRAINING_ADDENDUM.md": "a0f499e388a3c09619cd5042901b8fcd919a670503e58835069f2a5fdab467df",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_RAW_BUDGET_AMENDMENT.md": "26dc21b69348e3ba90e5554b838efe9b6d610c2cef55ed0e0962fb99df89900d",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_RAW_COMMAND_REVIEW.md": "8789cb1b3b5f55ca4777e320eb7d60a84a5cc636f7b97c0ababb4c00a95e068d",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ANALYSIS_LEAD.md": "e39d35a046ab9058c9539cae876a3168d98fe2900b580ea0cc042eed1479e833",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_EVAL20_AMENDMENT.md": "a4e43217a062c1918e44984ef557bc17001df02e9e712dc9929fe11e31ce5076",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ROUND1_FIT_PREFLIGHT_DECISION.md": "7c3fc8a8f8bc0c13709205b9c9053a69a99e7c1a08e5f042972af5023c759960",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ROUND1_TRAINING_DECISION.md": "b125fb409d3698e7ed358a17cab42b039a83249fcd629091664a4616c9592ee4",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/analysis/round1_train300_20260916_review.md": "1d2cb6c079a574401c8b6af1670b488e7bfc8ad63813fa435e59c5f52d857fcc",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ROUND1_POLICY5_DECISION.md": "bcc9e799f12a69c5f6b12e8499c561eb51cb1729e228c944c69edad0517f831f",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ROUND2_COLLECTION_DECISION.md": "77bebf165cf6f4850dff7e411eef86300e10b4a8eb3f8ccd2eb2fc0c48bed11d",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ROUND1_POLICY5_ANALYSIS.md": "bc99fc5f1532cfc4ef6535fb892429c7222db881f49752497edee69095616faf",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_TRAINING_READINESS_REVIEW.md": "cd59280a23803bee7fbe25d969b20c5f0a4960ec0e3708e4a45cbf1b0b6ea587",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/round2_dataset_reviews/round2_train_full_v1/NATIVE10_FINAL_INPUT_CONTRACT.md": "bceeccecbe2f5a41a27f05e8245ee8b9e68c525e8cb3d653a3460f275fab54a0"
+        },
+        "implementation": {
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/final_input_bundle_v1.py": "0f0a2257510c2ce97d346c69391d8216ae48b3154948210e1f59cc4709ac9fe4",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/dataset.py": "46e9d820e96de446007613cd84411b92dc47616f9508fe6ae7f992193cd602a7",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/protocol.py": "2e2a34e5f66dbfb92bb41fdffa372442d9e7b3e2ab55d0de96380ee76350b5c9",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/storage.py": "af2582337032796638fb1b56681bd43ef4a6141254671bdd43c45bf981735a3a",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/candidates13.py": "8f461e4f18b22ea8941620fb70f247cc970e2e055fc9d5fd5b934009f990882e"
+        },
+        "derived_files": {
+          "train/arrays.npz": "9692a4917f274d8ba55f083627f6fea52e288ac7fd8e213211d0e06902435944",
+          "train/metadata.json": "eed0d00be51be621b2f6f35cddab9d0189c5094bf0342c8ec4aee4c67b3410bd",
+          "train/rows.json": "e0a37f054712a721e07324bb38e9275c6ab93377b637ea84c4d26f70a0b2e1f0",
+          "development/arrays.npz": "123ee50e8428a0e8ff429f0a0d70f5ec2296bcf1ebc5b33799faa8581e79f315",
+          "development/metadata.json": "ab947ff24e1ba1ad24cda9c1ad775209a361734449becc2b8e3cb7de56b9a0ed",
+          "development/rows.json": "0e3a63f80228605d4c8a8597893952ed5dd0f5fd06758abe59e2d4839a57a57e"
+        },
+        "child_protocols_preserved": true
+      }
+    },
+    "models/final/final_fit_v1/selected/config.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/config.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/final/final_fit_v1/selected/config.json",
+        "expected_sha256": null,
+        "verified_sha256": "cf85b5d033e3fb1dde64e5de4e0bdc5b00838a752f7e56bb3389137a4666ac0e",
+        "kind": "file",
+        "bytes": 1617482,
+        "mtime_ns": 1789605444994378000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "horizon": 10,
+        "members": 4,
+        "provenance": {
+          "schema": "native10_final_training_pipeline_v1",
+          "phase": "final",
+          "version": "final_fit_v1",
+          "identity": {
+            "_keys": [
+              "phase",
+              "input_bundle",
+              "source_bindings",
+              "manifest_sha256",
+              "feature_contract_sha256",
+              "design",
+              "documents",
+              "code_files",
+              "stop_after",
+              "numeric_runtime",
+              "seed_namespace"
+            ],
+            "_length": 11
+          },
+          "coverage": {
+            "_keys": [
+              "train_planned",
+              "train_reached",
+              "development_planned",
+              "development_reached",
+              "rounds",
+              "episode_split_checked"
+            ],
+            "_length": 6
+          },
+          "config_protocol_sha256": "6f05c2bd37b14c77ea67a783629cc44c074d068083e1f6f8a0a8583908a7b975",
+          "input_bundle": {
+            "_keys": [
+              "path",
+              "seal_sha256",
+              "input_bundle_sha256"
+            ],
+            "_length": 3
+          },
+          "source_bindings": {
+            "_keys": [
+              "round1_train",
+              "round2_train",
+              "development"
+            ],
+            "_length": 3
+          },
+          "preflight_binding": {
+            "_keys": [
+              "path",
+              "seal_sha256",
+              "result_sha256"
+            ],
+            "_length": 3
+          },
+          "preflight_protocol_sha256": "9fc2c0aa22fe6ea5eb497da656a41d6002ce1b4b7eed4436067f7af4a310f07d",
+          "old_import": {
+            "_keys": [
+              "ranking_sha256",
+              "members",
+              "read_only"
+            ],
+            "_length": 3
+          },
+          "source_sets": {
+            "_keys": [
+              "train",
+              "development"
+            ],
+            "_length": 2
+          },
+          "preprocessing_refitted": false,
+          "new_initialization_generated": false,
+          "real_policy_evaluation_performed": false,
+          "selection": {
+            "_keys": [
+              "path",
+              "step",
+              "phase",
+              "dataset_sha256",
+              "metrics"
+            ],
+            "_length": 5
+          }
+        },
+        "candidate_probability_path": "singleton source; two slots [a0,candidate]",
+        "offline_ensemble_summary": "float64 mean of member float32 probabilities"
+      }
+    },
+    "datasets/round1_train_full_v1/metadata.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_train_full_v1/metadata.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_train_full_v1/metadata.json",
+        "expected_sha256": null,
+        "verified_sha256": null,
+        "kind": "file",
+        "bytes": 104223195,
+        "mtime_ns": 1789588057500603000,
+        "identity_status": "exists_metadata_only"
+      },
+      "summary": {
+        "schema": "native10_dataset13_v1",
+        "purpose": "train",
+        "selected_rounds": {
+          "_length": 1,
+          "_sample": [
+            1
+          ]
+        },
+        "manifest_sha256": "51fd84cf569747ba703a3a9e12498e893a18bca459b6eb39b58a1445538bc473",
+        "registered_all_split_episode_count": 2720,
+        "registered_primary_episode_count": 920,
+        "planned_episode_count": 300,
+        "complete_critic_groups": 300,
+        "records": {
+          "_length": 300,
+          "_sample": [
+            {
+              "_keys": [
+                "episode_id",
+                "group_id",
+                "planned_slot_id",
+                "task",
+                "env_seed",
+                "split",
+                "round",
+                "planned_episode_retained",
+                "source_summary",
+                "critic_eligible",
+                "cut_selection",
+                "cut_step",
+                "provenance",
+                "candidate_order",
+                "aliases",
+                "raw_command_sha256",
+                "candidate_metadata",
+                "branch_records",
+                "physical_attempt_ids",
+                "audited_alias_reuse",
+                "missing_labels",
+                "control_complete",
+                "control_outcomes",
+                "no_outcome_imputation",
+                "group_unit",
+                "status",
+                "missing_reason"
+              ],
+              "_length": 27
+            },
+            {
+              "_keys": [
+                "episode_id",
+                "group_id",
+                "planned_slot_id",
+                "task",
+                "env_seed",
+                "split",
+                "round",
+                "planned_episode_retained",
+                "source_summary",
+                "critic_eligible",
+                "cut_selection",
+                "cut_step",
+                "provenance",
+                "candidate_order",
+                "aliases",
+                "raw_command_sha256",
+                "candidate_metadata",
+                "branch_records",
+                "physical_attempt_ids",
+                "audited_alias_reuse",
+                "missing_labels",
+                "control_complete",
+                "control_outcomes",
+                "no_outcome_imputation",
+                "group_unit",
+                "status",
+                "missing_reason"
+              ],
+              "_length": 27
+            },
+            {
+              "_keys": [
+                "episode_id",
+                "group_id",
+                "planned_slot_id",
+                "task",
+                "env_seed",
+                "split",
+                "round",
+                "planned_episode_retained",
+                "source_summary",
+                "critic_eligible",
+                "cut_selection",
+                "cut_step",
+                "provenance",
+                "candidate_order",
+                "aliases",
+                "raw_command_sha256",
+                "candidate_metadata",
+                "branch_records",
+                "physical_attempt_ids",
+                "audited_alias_reuse",
+                "missing_labels",
+                "control_complete",
+                "control_outcomes",
+                "no_outcome_imputation",
+                "group_unit",
+                "status",
+                "missing_reason"
+              ],
+              "_length": 27
+            }
+          ]
+        },
+        "status_counts": {
+          "complete": 300
+        },
+        "candidate_order": {
+          "_length": 13,
+          "_sample": [
+            "a0",
+            "xyz_positive",
+            "xyz_negative"
+          ]
+        },
+        "a0_slot": 0,
+        "repeats": 4,
+        "group_unit": "whole episode",
+        "normal_control_is_separate": true,
+        "analysis_sources": {
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_ANALYSIS_LEAD.md": "e39d35a046ab9058c9539cae876a3168d98fe2900b580ea0cc042eed1479e833",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_CONCURRENCY32_REVIEW.md": "50a2187aaf70085e321c700d6b367c4d549a7721c0e5c4073e63191ea52e2311",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_EVAL20_AMENDMENT.md": "a4e43217a062c1918e44984ef557bc17001df02e9e712dc9929fe11e31ce5076",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_EXECUTOR_REVIEW.md": "b5c192d0ee5ba058aa445591e39f9a2069e86a6ad887dd54dc67f5de2db2b251",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_MAIN_COLLECTION_REVIEW.md": "083a1ab397512936c3d13ae033310e6a23467faf72f387c040300b16b5d11857",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_MAIN_EXECUTOR_HANDOFF.md": "0b7ed9d138f372d5066fcf16bab0ed494d51c883322cdcc3b08eb36981d41561",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_P0_ANALYSIS_REVIEW.md": "ea73031e503b3661a8492477037d15b23555aaae04b6f2b38da1e1ce03b0b822",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_P0_EXECUTOR_HANDOFF.md": "b2890d3229460d6aefcb837574b19aa835437802219f64ddcb4de98204b17ac3",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_PROTOCOL_REVIEW.md": "e6b91aebcdb1526efc358b3e0613af7821071bebb3d0da7033c83d53b41efda6",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_RAW_BUDGET_AMENDMENT.md": "26dc21b69348e3ba90e5554b838efe9b6d610c2cef55ed0e0962fb99df89900d",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_RAW_COMMAND_REVIEW.md": "8789cb1b3b5f55ca4777e320eb7d60a84a5cc636f7b97c0ababb4c00a95e068d",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_ROUND1_ANALYSIS_DECISION.md": "5ce1d67fc8d8dcec8045f1d94cbf98e255530c65a6fd13e7b1bbaf4f0570bf75",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_TRAINING_ADDENDUM.md": "a0f499e388a3c09619cd5042901b8fcd919a670503e58835069f2a5fdab467df",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_TRAINING_DESIGN_REVIEW.md": "75f54448394638a4769dfae5f17eba00bff57a30c2aa54886e50d855dc813b64",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_TRAINING_READINESS_REVIEW.md": "cd59280a23803bee7fbe25d969b20c5f0a4960ec0e3708e4a45cbf1b0b6ea587",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_TRAINING_TASK.md": "682c3aa13611afd21ee01ed1d934543aed45a8cad8714f660b5f171b9281d45a"
+        },
+        "real_input_artifact_audit_required_before_fit": true,
+        "complete_planned_selection_evidence": true,
+        "incomplete_episodes_never_imputed": true,
+        "future_outcome_files_read": false,
+        "simulator_calls": 0,
+        "training_updates": 0,
+        "physical_attempts_referenced": 16800,
+        "logical_critic_labels": 15600
+      }
+    },
+    "datasets/round2_train_full_v1/metadata.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round2_train_full_v1/metadata.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round2_train_full_v1/metadata.json",
+        "expected_sha256": null,
+        "verified_sha256": null,
+        "kind": "file",
+        "bytes": 100936894,
+        "mtime_ns": 1789601609325719000,
+        "identity_status": "exists_metadata_only"
+      },
+      "summary": {
+        "schema": "native10_dataset13_v1",
+        "purpose": "train",
+        "selected_rounds": {
+          "_length": 1,
+          "_sample": [
+            2
+          ]
+        },
+        "manifest_sha256": "51fd84cf569747ba703a3a9e12498e893a18bca459b6eb39b58a1445538bc473",
+        "registered_all_split_episode_count": 2720,
+        "registered_primary_episode_count": 920,
+        "planned_episode_count": 300,
+        "complete_critic_groups": 300,
+        "records": {
+          "_length": 300,
+          "_sample": [
+            {
+              "_keys": [
+                "episode_id",
+                "group_id",
+                "planned_slot_id",
+                "task",
+                "env_seed",
+                "split",
+                "round",
+                "planned_episode_retained",
+                "source_summary",
+                "critic_eligible",
+                "cut_selection",
+                "cut_step",
+                "provenance",
+                "candidate_order",
+                "aliases",
+                "raw_command_sha256",
+                "candidate_metadata",
+                "branch_records",
+                "physical_attempt_ids",
+                "audited_alias_reuse",
+                "missing_labels",
+                "control_complete",
+                "control_outcomes",
+                "no_outcome_imputation",
+                "group_unit",
+                "status",
+                "missing_reason"
+              ],
+              "_length": 27
+            },
+            {
+              "_keys": [
+                "episode_id",
+                "group_id",
+                "planned_slot_id",
+                "task",
+                "env_seed",
+                "split",
+                "round",
+                "planned_episode_retained",
+                "source_summary",
+                "critic_eligible",
+                "cut_selection",
+                "cut_step",
+                "provenance",
+                "candidate_order",
+                "aliases",
+                "raw_command_sha256",
+                "candidate_metadata",
+                "branch_records",
+                "physical_attempt_ids",
+                "audited_alias_reuse",
+                "missing_labels",
+                "control_complete",
+                "control_outcomes",
+                "no_outcome_imputation",
+                "group_unit",
+                "status",
+                "missing_reason"
+              ],
+              "_length": 27
+            },
+            {
+              "_keys": [
+                "episode_id",
+                "group_id",
+                "planned_slot_id",
+                "task",
+                "env_seed",
+                "split",
+                "round",
+                "planned_episode_retained",
+                "source_summary",
+                "critic_eligible",
+                "cut_selection",
+                "cut_step",
+                "provenance",
+                "candidate_order",
+                "aliases",
+                "raw_command_sha256",
+                "candidate_metadata",
+                "branch_records",
+                "physical_attempt_ids",
+                "audited_alias_reuse",
+                "missing_labels",
+                "control_complete",
+                "control_outcomes",
+                "no_outcome_imputation",
+                "group_unit",
+                "status",
+                "missing_reason"
+              ],
+              "_length": 27
+            }
+          ]
+        },
+        "status_counts": {
+          "complete": 300
+        },
+        "candidate_order": {
+          "_length": 13,
+          "_sample": [
+            "a0",
+            "xyz_positive",
+            "xyz_negative"
+          ]
+        },
+        "a0_slot": 0,
+        "repeats": 4,
+        "group_unit": "whole episode",
+        "normal_control_is_separate": true,
+        "analysis_sources": {
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_TRAINING_TASK.md": "682c3aa13611afd21ee01ed1d934543aed45a8cad8714f660b5f171b9281d45a",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_MAIN_COLLECTION_REVIEW.md": "083a1ab397512936c3d13ae033310e6a23467faf72f387c040300b16b5d11857",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_P0_ANALYSIS_REVIEW.md": "ea73031e503b3661a8492477037d15b23555aaae04b6f2b38da1e1ce03b0b822",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_CONCURRENCY32_REVIEW.md": "50a2187aaf70085e321c700d6b367c4d549a7721c0e5c4073e63191ea52e2311",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ROUND1_ANALYSIS_DECISION.md": "5ce1d67fc8d8dcec8045f1d94cbf98e255530c65a6fd13e7b1bbaf4f0570bf75",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_TRAINING_ADDENDUM.md": "a0f499e388a3c09619cd5042901b8fcd919a670503e58835069f2a5fdab467df",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_RAW_BUDGET_AMENDMENT.md": "26dc21b69348e3ba90e5554b838efe9b6d610c2cef55ed0e0962fb99df89900d",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_RAW_COMMAND_REVIEW.md": "8789cb1b3b5f55ca4777e320eb7d60a84a5cc636f7b97c0ababb4c00a95e068d",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ANALYSIS_LEAD.md": "e39d35a046ab9058c9539cae876a3168d98fe2900b580ea0cc042eed1479e833",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_EVAL20_AMENDMENT.md": "a4e43217a062c1918e44984ef557bc17001df02e9e712dc9929fe11e31ce5076",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ROUND1_FIT_PREFLIGHT_DECISION.md": "7c3fc8a8f8bc0c13709205b9c9053a69a99e7c1a08e5f042972af5023c759960",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ROUND1_TRAINING_DECISION.md": "b125fb409d3698e7ed358a17cab42b039a83249fcd629091664a4616c9592ee4",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/analysis/round1_train300_20260916_review.md": "1d2cb6c079a574401c8b6af1670b488e7bfc8ad63813fa435e59c5f52d857fcc",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ROUND1_POLICY5_DECISION.md": "bcc9e799f12a69c5f6b12e8499c561eb51cb1729e228c944c69edad0517f831f",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ROUND2_COLLECTION_DECISION.md": "77bebf165cf6f4850dff7e411eef86300e10b4a8eb3f8ccd2eb2fc0c48bed11d",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ROUND1_POLICY5_ANALYSIS.md": "bc99fc5f1532cfc4ef6535fb892429c7222db881f49752497edee69095616faf",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_TRAINING_READINESS_REVIEW.md": "cd59280a23803bee7fbe25d969b20c5f0a4960ec0e3708e4a45cbf1b0b6ea587"
+        },
+        "real_input_artifact_audit_required_before_fit": true,
+        "complete_planned_selection_evidence": true,
+        "incomplete_episodes_never_imputed": true,
+        "future_outcome_files_read": false,
+        "simulator_calls": 0,
+        "training_updates": 0,
+        "physical_attempts_referenced": 16800,
+        "logical_critic_labels": 15600
+      }
+    },
+    "datasets/round1_development_full_v1/metadata.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_development_full_v1/metadata.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/datasets/round1_development_full_v1/metadata.json",
+        "expected_sha256": null,
+        "verified_sha256": null,
+        "kind": "file",
+        "bytes": 30269115,
+        "mtime_ns": 1789588061610728000,
+        "identity_status": "exists_metadata_only"
+      },
+      "summary": {
+        "schema": "native10_dataset13_v1",
+        "purpose": "development",
+        "selected_rounds": null,
+        "manifest_sha256": "51fd84cf569747ba703a3a9e12498e893a18bca459b6eb39b58a1445538bc473",
+        "registered_all_split_episode_count": 2720,
+        "registered_primary_episode_count": 920,
+        "planned_episode_count": 100,
+        "complete_critic_groups": 95,
+        "records": {
+          "_length": 100,
+          "_sample": [
+            {
+              "_keys": [
+                "episode_id",
+                "group_id",
+                "planned_slot_id",
+                "task",
+                "env_seed",
+                "split",
+                "round",
+                "planned_episode_retained",
+                "source_summary",
+                "critic_eligible",
+                "cut_selection",
+                "cut_step",
+                "provenance",
+                "candidate_order",
+                "aliases",
+                "raw_command_sha256",
+                "candidate_metadata",
+                "branch_records",
+                "physical_attempt_ids",
+                "audited_alias_reuse",
+                "missing_labels",
+                "control_complete",
+                "control_outcomes",
+                "no_outcome_imputation",
+                "group_unit",
+                "status",
+                "missing_reason"
+              ],
+              "_length": 27
+            },
+            {
+              "_keys": [
+                "episode_id",
+                "group_id",
+                "planned_slot_id",
+                "task",
+                "env_seed",
+                "split",
+                "round",
+                "planned_episode_retained",
+                "source_summary",
+                "critic_eligible",
+                "cut_selection",
+                "cut_step",
+                "provenance",
+                "candidate_order",
+                "aliases",
+                "raw_command_sha256",
+                "candidate_metadata",
+                "branch_records",
+                "physical_attempt_ids",
+                "audited_alias_reuse",
+                "missing_labels",
+                "control_complete",
+                "control_outcomes",
+                "no_outcome_imputation",
+                "group_unit",
+                "status",
+                "missing_reason"
+              ],
+              "_length": 27
+            },
+            {
+              "_keys": [
+                "episode_id",
+                "group_id",
+                "planned_slot_id",
+                "task",
+                "env_seed",
+                "split",
+                "round",
+                "planned_episode_retained",
+                "source_summary",
+                "critic_eligible",
+                "cut_selection",
+                "cut_step",
+                "provenance",
+                "candidate_order",
+                "aliases",
+                "raw_command_sha256",
+                "candidate_metadata",
+                "branch_records",
+                "physical_attempt_ids",
+                "audited_alias_reuse",
+                "missing_labels",
+                "control_complete",
+                "control_outcomes",
+                "no_outcome_imputation",
+                "group_unit",
+                "status",
+                "missing_reason"
+              ],
+              "_length": 27
+            }
+          ]
+        },
+        "status_counts": {
+          "complete": 95,
+          "no_cut": 5
+        },
+        "candidate_order": {
+          "_length": 13,
+          "_sample": [
+            "a0",
+            "xyz_positive",
+            "xyz_negative"
+          ]
+        },
+        "a0_slot": 0,
+        "repeats": 4,
+        "group_unit": "whole episode",
+        "normal_control_is_separate": true,
+        "analysis_sources": {
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_ANALYSIS_LEAD.md": "e39d35a046ab9058c9539cae876a3168d98fe2900b580ea0cc042eed1479e833",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_CONCURRENCY32_REVIEW.md": "50a2187aaf70085e321c700d6b367c4d549a7721c0e5c4073e63191ea52e2311",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_EVAL20_AMENDMENT.md": "a4e43217a062c1918e44984ef557bc17001df02e9e712dc9929fe11e31ce5076",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_EXECUTOR_REVIEW.md": "b5c192d0ee5ba058aa445591e39f9a2069e86a6ad887dd54dc67f5de2db2b251",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_MAIN_COLLECTION_REVIEW.md": "083a1ab397512936c3d13ae033310e6a23467faf72f387c040300b16b5d11857",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_MAIN_EXECUTOR_HANDOFF.md": "0b7ed9d138f372d5066fcf16bab0ed494d51c883322cdcc3b08eb36981d41561",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_P0_ANALYSIS_REVIEW.md": "ea73031e503b3661a8492477037d15b23555aaae04b6f2b38da1e1ce03b0b822",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_P0_EXECUTOR_HANDOFF.md": "b2890d3229460d6aefcb837574b19aa835437802219f64ddcb4de98204b17ac3",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_PROTOCOL_REVIEW.md": "e6b91aebcdb1526efc358b3e0613af7821071bebb3d0da7033c83d53b41efda6",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_RAW_BUDGET_AMENDMENT.md": "26dc21b69348e3ba90e5554b838efe9b6d610c2cef55ed0e0962fb99df89900d",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_RAW_COMMAND_REVIEW.md": "8789cb1b3b5f55ca4777e320eb7d60a84a5cc636f7b97c0ababb4c00a95e068d",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_ROUND1_ANALYSIS_DECISION.md": "5ce1d67fc8d8dcec8045f1d94cbf98e255530c65a6fd13e7b1bbaf4f0570bf75",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_TRAINING_ADDENDUM.md": "a0f499e388a3c09619cd5042901b8fcd919a670503e58835069f2a5fdab467df",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_TRAINING_DESIGN_REVIEW.md": "75f54448394638a4769dfae5f17eba00bff57a30c2aa54886e50d855dc813b64",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_TRAINING_READINESS_REVIEW.md": "cd59280a23803bee7fbe25d969b20c5f0a4960ec0e3708e4a45cbf1b0b6ea587",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_TRAINING_TASK.md": "682c3aa13611afd21ee01ed1d934543aed45a8cad8714f660b5f171b9281d45a"
+        },
+        "real_input_artifact_audit_required_before_fit": true,
+        "complete_planned_selection_evidence": true,
+        "incomplete_episodes_never_imputed": true,
+        "future_outcome_files_read": false,
+        "simulator_calls": 0,
+        "training_updates": 0,
+        "physical_attempts_referenced": 5320,
+        "logical_critic_labels": 4940
+      }
+    },
+    "main_protocols/round1_v1/config.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/config.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/config.json",
+        "expected_sha256": null,
+        "verified_sha256": "f68b59f279ae4d03094ebe70f0185e29d7a65a8ce20903aed92ac4392f1e4fd2",
+        "kind": "file",
+        "bytes": 1254357,
+        "mtime_ns": 1789577655527217000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "schema_version": 1,
+        "status": "frozen",
+        "tasks": {
+          "_length": 5,
+          "_sample": [
+            "disassemble-v3",
+            "pick-place-wall-v3",
+            "shelf-place-v3"
+          ]
+        },
+        "source_horizon": 10,
+        "prefix_horizon": 10,
+        "suffix_horizon": 10,
+        "episode_manifest": {
+          "_length": 2720,
+          "_sample": [
+            {
+              "_keys": [
+                "episode_id",
+                "case_id",
+                "task",
+                "env_seed",
+                "split",
+                "round",
+                "source_horizon",
+                "cut_rule"
+              ],
+              "_length": 8
+            },
+            {
+              "_keys": [
+                "episode_id",
+                "case_id",
+                "task",
+                "env_seed",
+                "split",
+                "round",
+                "source_horizon",
+                "cut_rule"
+              ],
+              "_length": 8
+            },
+            {
+              "_keys": [
+                "episode_id",
+                "case_id",
+                "task",
+                "env_seed",
+                "split",
+                "round",
+                "source_horizon",
+                "cut_rule"
+              ],
+              "_length": 8
+            }
+          ]
+        },
+        "retain_all_planned": true,
+        "no_outcome_filter": true,
+        "manifest_filters": {
+          "_length": 0,
+          "_sample": []
+        },
+        "seed_namespace": "corrector_native10_training_20260916_v1",
+        "replicates": 4,
+        "cpu": {
+          "worker_threads": 4,
+          "critic_threads": 2
+        },
+        "budget": {
+          "hard_total": 50000,
+          "training_update_total": 51200,
+          "count_failures": true,
+          "count_retries": true,
+          "stages": {
+            "_keys": [
+              "p0",
+              "round1_labels",
+              "round1_development_policy",
+              "round2_labels",
+              "round2_development_policy",
+              "calibration",
+              "heldout",
+              "technical_reserve",
+              "training_round1",
+              "training_final"
+            ],
+            "_length": 10
+          }
+        },
+        "analysis_approval": {
+          "status": "approved",
+          "approved_by": "analysis",
+          "document_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_TRAINING_TASK.md",
+          "document_sha256": "682c3aa13611afd21ee01ed1d934543aed45a8cad8714f660b5f171b9281d45a",
+          "protocol_sha256": "2456b73fd0728be1fe42f50c3421dddcf30e298d918c746290d3edadb13152d4"
+        },
+        "analysis_ready": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_ANALYSIS_READY.json",
+          "sha256": "4da46fbc09e2bf49c81a9cd43c3f9335399c9921a04c503eae265889cbd2bd32"
+        },
+        "stage_release_scopes": {
+          "p0": "p0_anchor_and_native10_diagnostics",
+          "round1_labels": "round1_native10_local_labels",
+          "round1_development_policy": "not_released_round1_development_policy",
+          "round2_labels": "not_released_round2_labels",
+          "round2_development_policy": "not_released_round2_development_policy",
+          "calibration": "not_released_calibration",
+          "heldout": "not_released_heldout",
+          "technical_reserve": "preregistered_initialization_replacements",
+          "training_round1": "not_released_training_round1",
+          "training_final": "not_released_training_final"
+        },
+        "task_id": "native10-training-20260916",
+        "control_budget": 300,
+        "gate_threshold": 0.05,
+        "minimum_intervention_remaining": 10,
+        "generated_horizon": 50,
+        "methods": {
+          "_length": 5,
+          "_sample": [
+            "continue_native10",
+            "alarm_replan10",
+            "velocity"
+          ]
+        },
+        "heldout_replicates": 4,
+        "guidance": {
+          "alpha": 10.0,
+          "times": {
+            "_length": 3,
+            "_sample": [
+              0.3,
+              0.2,
+              0.1
+            ]
+          },
+          "clip_derivative": "true clamp through same T",
+          "velocity": "v-alpha*tau*grad_u R(T(u))",
+          "direct": "v-alpha*grad_u R(T(u))",
+          "clean": "u=x_tau-tau*v; sampler Euler dt=-.1",
+          "no_step_backtracking": true
+        },
+        "matching": {
+          "xyz_rms": 0.05,
+          "gripper_rms": 0.1,
+          "xyz_linf": 0.15,
+          "gripper_linf": 0.4,
+          "boundary_clearance": 0.05,
+          "tolerance": 1e-06,
+          "zero_threshold": 1e-10,
+          "algorithm": "shared mask:1-abs(a0)>=.05; normalize each group direction to unit RMS; common radius=min(target, all direction feasible radii); bounds=min(group cap,1-abs(a0)); final float32 check",
+          "amplitude_can_expand_native": true,
+          "native_arms_separately_executed": false,
+          "post_metric": "environment grad times ((q99-q01)/2)^2, matching internal clean-action Euclidean gradient",
+          "random": "independent Gaussian three knots per action dimension, linear interpolation over ten steps",
+          "reverse": "negative of projected direct command delta",
+          "zero_group": "if any primary direction has zero norm, all matched arms use zero for that group; never drop source",
+          "shared_radius_dependencies": "Generate velocity/direct/post/reverse/random every source; reverse/random/native outputs are saved, not simulated."
+        },
+        "command_semantics": "raw native a0 + feasible matched delta; no replan-only clamp",
+        "analysis_documents": {
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_ANALYSIS_LEAD.md": "e39d35a046ab9058c9539cae876a3168d98fe2900b580ea0cc042eed1479e833",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_CONCURRENCY32_REVIEW.md": "50a2187aaf70085e321c700d6b367c4d549a7721c0e5c4073e63191ea52e2311",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_EVAL20_AMENDMENT.md": "a4e43217a062c1918e44984ef557bc17001df02e9e712dc9929fe11e31ce5076",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_EXECUTOR_REVIEW.md": "b5c192d0ee5ba058aa445591e39f9a2069e86a6ad887dd54dc67f5de2db2b251",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_MAIN_COLLECTION_REVIEW.md": "083a1ab397512936c3d13ae033310e6a23467faf72f387c040300b16b5d11857",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_MAIN_EXECUTOR_HANDOFF.md": "0b7ed9d138f372d5066fcf16bab0ed494d51c883322cdcc3b08eb36981d41561",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_P0_ANALYSIS_REVIEW.md": "ea73031e503b3661a8492477037d15b23555aaae04b6f2b38da1e1ce03b0b822",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_P0_EXECUTOR_HANDOFF.md": "b2890d3229460d6aefcb837574b19aa835437802219f64ddcb4de98204b17ac3",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_PROTOCOL_REVIEW.md": "e6b91aebcdb1526efc358b3e0613af7821071bebb3d0da7033c83d53b41efda6",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_RAW_BUDGET_AMENDMENT.md": "26dc21b69348e3ba90e5554b838efe9b6d610c2cef55ed0e0962fb99df89900d",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_RAW_COMMAND_REVIEW.md": "8789cb1b3b5f55ca4777e320eb7d60a84a5cc636f7b97c0ababb4c00a95e068d",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_ROUND1_ANALYSIS_DECISION.md": "5ce1d67fc8d8dcec8045f1d94cbf98e255530c65a6fd13e7b1bbaf4f0570bf75",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_TRAINING_ADDENDUM.md": "a0f499e388a3c09619cd5042901b8fcd919a670503e58835069f2a5fdab467df",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_TRAINING_DESIGN_REVIEW.md": "75f54448394638a4769dfae5f17eba00bff57a30c2aa54886e50d855dc813b64",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_TRAINING_READINESS_REVIEW.md": "cd59280a23803bee7fbe25d969b20c5f0a4960ec0e3708e4a45cbf1b0b6ea587",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round1_v1/coordination/NATIVE10_TRAINING_TASK.md": "682c3aa13611afd21ee01ed1d934543aed45a8cad8714f660b5f171b9281d45a"
+        },
+        "planned_attempts_upper_bound": 48800,
+        "split_replicates": {
+          "train": 4,
+          "development": 4,
+          "calibration": 2,
+          "heldout": 4
+        },
+        "critic_assets": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/assets/critic",
+        "scene_identity": {
+          "schema": "metaworld_physical_initial_scene_v1",
+          "precision": {
+            "_keys": [
+              "position_m",
+              "angle_rad",
+              "linear_velocity_m_per_s",
+              "angular_velocity_rad_per_s",
+              "unit_quaternion",
+              "activation"
+            ],
+            "_length": 6
+          },
+          "scope": "same task across all initialized main splits",
+          "duplicate_rule": "first accepted registry claim; before first policy action",
+          "historical_complete_scene_available": false
+        },
+        "main_manifest_reference": {
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/main_registration_v2/combined_manifest.json": "ffc9e62a38b37ac32d2dbd199eca113ef256a434dfb4cd87aa2f1dcabcde15c2",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/main_registration_v2/primary_manifest.json": "991e13f37117d3bc41b904554602be413e281a4ae1f80f6c05c00d70d6433886",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/main_registration_v2/registration.json": "8f3777af260bd1c386f7144147a2ed316c790d593b2d0beb70e2a81476dfc809",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/main_registration_v2/replacement_candidates.json": "f6e2f4d86abfb8d2b93bfebd8efec807c3b98f3d51c981344e1dcc765da5ab07",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/main_registration_v2/reserve_manifest.json": "f5ded06a0750f7c60e6ceaa3d3af7cc3cd3c49d129e127a746b4608912a68819"
+        },
+        "main_collection": {
+          "concurrency": {
+            "_keys": [
+              "workers_per_gpu",
+              "evidence"
+            ],
+            "_length": 2
+          },
+          "replacement_capture_stage": "technical_reserve",
+          "replacement_candidates": {
+            "_keys": [
+              "disassemble-v3__2026111000",
+              "pick-place-wall-v3__2026111001",
+              "shelf-place-v3__2026111002",
+              "stick-pull-v3__2026111003",
+              "stick-push-v3__2026111004",
+              "disassemble-v3__2026111005",
+              "pick-place-wall-v3__2026111006",
+              "shelf-place-v3__2026111007",
+              "stick-pull-v3__2026111008",
+              "stick-push-v3__2026111009",
+              "disassemble-v3__2026111010",
+              "pick-place-wall-v3__2026111011",
+              "shelf-place-v3__2026111012",
+              "stick-pull-v3__2026111013",
+              "stick-push-v3__2026111014",
+              "disassemble-v3__2026111015",
+              "pick-place-wall-v3__2026111016",
+              "shelf-place-v3__2026111017",
+              "stick-pull-v3__2026111018",
+              "stick-push-v3__2026111019",
+              "disassemble-v3__2026111020",
+              "pick-place-wall-v3__2026111021",
+              "shelf-place-v3__2026111022",
+              "stick-pull-v3__2026111023",
+              "stick-push-v3__2026111024",
+              "disassemble-v3__2026111025",
+              "pick-place-wall-v3__2026111026",
+              "shelf-place-v3__2026111027",
+              "stick-pull-v3__2026111028",
+              "stick-push-v3__2026111029",
+              "disassemble-v3__2026111030",
+              "pick-place-wall-v3__2026111031",
+              "shelf-place-v3__2026111032",
+              "stick-pull-v3__2026111033",
+              "stick-push-v3__2026111034"
+            ],
+            "_length": 900
+          },
+          "banks": {
+            "_keys": [
+              "round1_labels_v1"
+            ],
+            "_length": 1
+          }
+        },
+        "model_dependency_groups": {
+          "vla": "dff338a91dbe534ca3c4525ba82df9324662e3c87131f42ed6e3d1b7bf0e94d4",
+          "d": {
+            "_keys": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241/finetune_400.pt",
+              "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242/finetune_400.pt",
+              "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241/normalization.json",
+              "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241/complete.json",
+              "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242/normalization.json",
+              "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242/complete.json"
+            ],
+            "_length": 6
+          },
+          "g0": {
+            "_keys": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_341/selected.pt",
+              "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_342/selected.pt"
+            ],
+            "_length": 2
+          },
+          "critical_collection_code": {
+            "_keys": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/main_collection.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/main_runner.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/run_main_gpu.sh",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/scene_identity.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/adapter.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/engine.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/commands.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/bank_audit.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/candidates13.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/semantics.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/protocol.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/storage.py"
+            ],
+            "_length": 12
+          }
+        }
+      }
+    },
+    "main_protocols/round2_v1/config.json": {
+      "file": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/config.json",
+        "exists": true,
+        "is_symlink": false,
+        "resolved": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/config.json",
+        "expected_sha256": null,
+        "verified_sha256": "13ff72cbec4aa8fe92354d55e3a5e0ce0babc934d8cfeb72124af8eb4abc1944",
+        "kind": "file",
+        "bytes": 1249434,
+        "mtime_ns": 1789595149145453000,
+        "identity_status": "small_file_sha256_observed"
+      },
+      "summary": {
+        "schema_version": 1,
+        "status": "frozen",
+        "tasks": {
+          "_length": 5,
+          "_sample": [
+            "disassemble-v3",
+            "pick-place-wall-v3",
+            "shelf-place-v3"
+          ]
+        },
+        "source_horizon": 10,
+        "prefix_horizon": 10,
+        "suffix_horizon": 10,
+        "episode_manifest": {
+          "_length": 2720,
+          "_sample": [
+            {
+              "_keys": [
+                "episode_id",
+                "case_id",
+                "task",
+                "env_seed",
+                "split",
+                "round",
+                "source_horizon",
+                "cut_rule"
+              ],
+              "_length": 8
+            },
+            {
+              "_keys": [
+                "episode_id",
+                "case_id",
+                "task",
+                "env_seed",
+                "split",
+                "round",
+                "source_horizon",
+                "cut_rule"
+              ],
+              "_length": 8
+            },
+            {
+              "_keys": [
+                "episode_id",
+                "case_id",
+                "task",
+                "env_seed",
+                "split",
+                "round",
+                "source_horizon",
+                "cut_rule"
+              ],
+              "_length": 8
+            }
+          ]
+        },
+        "retain_all_planned": true,
+        "no_outcome_filter": true,
+        "manifest_filters": {
+          "_length": 0,
+          "_sample": []
+        },
+        "seed_namespace": "corrector_native10_training_20260916_v1",
+        "replicates": 4,
+        "cpu": {
+          "worker_threads": 4,
+          "critic_threads": 2
+        },
+        "budget": {
+          "hard_total": 50000,
+          "training_update_total": 51200,
+          "count_failures": true,
+          "count_retries": true,
+          "stages": {
+            "_keys": [
+              "p0",
+              "round1_labels",
+              "round1_development_policy",
+              "round2_labels",
+              "round2_development_policy",
+              "calibration",
+              "heldout",
+              "technical_reserve",
+              "training_round1",
+              "training_final"
+            ],
+            "_length": 10
+          }
+        },
+        "analysis_approval": {
+          "status": "approved",
+          "approved_by": "analysis",
+          "document_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_TRAINING_TASK.md",
+          "document_sha256": "682c3aa13611afd21ee01ed1d934543aed45a8cad8714f660b5f171b9281d45a",
+          "protocol_sha256": "a25c2e599a9fe656c02f253ee32add30c197eed8458a0afd491234ca68cfaaa2"
+        },
+        "analysis_ready": {
+          "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ANALYSIS_READY.json",
+          "sha256": "decbf30a364e1cc8e56bdc225bc99cce9fe1a5d810aaa1a869604bb3aeb89ec5"
+        },
+        "stage_release_scopes": {
+          "p0": "p0_anchor_and_native10_diagnostics",
+          "round1_labels": "not_released_round1_labels",
+          "round1_development_policy": "not_released_round1_development_policy",
+          "round2_labels": "round2_native10_local_labels",
+          "round2_development_policy": "not_released_round2_development_policy",
+          "calibration": "not_released_calibration",
+          "heldout": "not_released_heldout",
+          "technical_reserve": "preregistered_initialization_replacements",
+          "training_round1": "not_released_training_round1",
+          "training_final": "not_released_training_final"
+        },
+        "task_id": "native10-training-20260916",
+        "control_budget": 300,
+        "gate_threshold": 0.05,
+        "minimum_intervention_remaining": 10,
+        "generated_horizon": 50,
+        "methods": {
+          "_length": 5,
+          "_sample": [
+            "continue_native10",
+            "alarm_replan10",
+            "velocity"
+          ]
+        },
+        "heldout_replicates": 4,
+        "guidance": {
+          "alpha": 10.0,
+          "times": {
+            "_length": 3,
+            "_sample": [
+              0.3,
+              0.2,
+              0.1
+            ]
+          },
+          "clip_derivative": "true clamp through same T",
+          "velocity": "v-alpha*tau*grad_u R(T(u))",
+          "direct": "v-alpha*grad_u R(T(u))",
+          "clean": "u=x_tau-tau*v; sampler Euler dt=-.1",
+          "no_step_backtracking": true
+        },
+        "matching": {
+          "xyz_rms": 0.05,
+          "gripper_rms": 0.1,
+          "xyz_linf": 0.15,
+          "gripper_linf": 0.4,
+          "boundary_clearance": 0.05,
+          "tolerance": 1e-06,
+          "zero_threshold": 1e-10,
+          "algorithm": "shared mask:1-abs(a0)>=.05; normalize each group direction to unit RMS; common radius=min(target, all direction feasible radii); bounds=min(group cap,1-abs(a0)); final float32 check",
+          "amplitude_can_expand_native": true,
+          "native_arms_separately_executed": false,
+          "post_metric": "environment grad times ((q99-q01)/2)^2, matching internal clean-action Euclidean gradient",
+          "random": "independent Gaussian three knots per action dimension, linear interpolation over ten steps",
+          "reverse": "negative of projected direct command delta",
+          "zero_group": "if any primary direction has zero norm, all matched arms use zero for that group; never drop source",
+          "shared_radius_dependencies": "Generate velocity/direct/post/reverse/random every source; reverse/random/native outputs are saved, not simulated."
+        },
+        "command_semantics": "raw native a0 + feasible matched delta; no replan-only clamp",
+        "analysis_documents": {
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_TRAINING_TASK.md": "682c3aa13611afd21ee01ed1d934543aed45a8cad8714f660b5f171b9281d45a",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_MAIN_COLLECTION_REVIEW.md": "083a1ab397512936c3d13ae033310e6a23467faf72f387c040300b16b5d11857",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_P0_ANALYSIS_REVIEW.md": "ea73031e503b3661a8492477037d15b23555aaae04b6f2b38da1e1ce03b0b822",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_CONCURRENCY32_REVIEW.md": "50a2187aaf70085e321c700d6b367c4d549a7721c0e5c4073e63191ea52e2311",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ROUND1_ANALYSIS_DECISION.md": "5ce1d67fc8d8dcec8045f1d94cbf98e255530c65a6fd13e7b1bbaf4f0570bf75",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_TRAINING_ADDENDUM.md": "a0f499e388a3c09619cd5042901b8fcd919a670503e58835069f2a5fdab467df",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_RAW_BUDGET_AMENDMENT.md": "26dc21b69348e3ba90e5554b838efe9b6d610c2cef55ed0e0962fb99df89900d",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_RAW_COMMAND_REVIEW.md": "8789cb1b3b5f55ca4777e320eb7d60a84a5cc636f7b97c0ababb4c00a95e068d",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ANALYSIS_LEAD.md": "e39d35a046ab9058c9539cae876a3168d98fe2900b580ea0cc042eed1479e833",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_EVAL20_AMENDMENT.md": "a4e43217a062c1918e44984ef557bc17001df02e9e712dc9929fe11e31ce5076",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ROUND1_FIT_PREFLIGHT_DECISION.md": "7c3fc8a8f8bc0c13709205b9c9053a69a99e7c1a08e5f042972af5023c759960",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ROUND1_TRAINING_DECISION.md": "b125fb409d3698e7ed358a17cab42b039a83249fcd629091664a4616c9592ee4",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/analysis/round1_train300_20260916_review.md": "1d2cb6c079a574401c8b6af1670b488e7bfc8ad63813fa435e59c5f52d857fcc",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ROUND1_POLICY5_DECISION.md": "bcc9e799f12a69c5f6b12e8499c561eb51cb1729e228c944c69edad0517f831f",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ROUND2_COLLECTION_DECISION.md": "77bebf165cf6f4850dff7e411eef86300e10b4a8eb3f8ccd2eb2fc0c48bed11d",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ROUND1_POLICY5_ANALYSIS.md": "bc99fc5f1532cfc4ef6535fb892429c7222db881f49752497edee69095616faf"
+        },
+        "planned_attempts_upper_bound": 48800,
+        "split_replicates": {
+          "train": 4,
+          "development": 4,
+          "calibration": 2,
+          "heldout": 4
+        },
+        "critic_assets": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/models/round1/round1_fit_v1/selected",
+        "scene_identity": {
+          "schema": "metaworld_physical_initial_scene_v1",
+          "precision": {
+            "_keys": [
+              "position_m",
+              "angle_rad",
+              "linear_velocity_m_per_s",
+              "angular_velocity_rad_per_s",
+              "unit_quaternion",
+              "activation"
+            ],
+            "_length": 6
+          },
+          "scope": "same task across all initialized main splits",
+          "duplicate_rule": "first accepted registry claim; before first policy action",
+          "historical_complete_scene_available": false
+        },
+        "main_manifest_reference": {
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/main_registration_v2/combined_manifest.json": "ffc9e62a38b37ac32d2dbd199eca113ef256a434dfb4cd87aa2f1dcabcde15c2",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/main_registration_v2/primary_manifest.json": "991e13f37117d3bc41b904554602be413e281a4ae1f80f6c05c00d70d6433886",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/main_registration_v2/registration.json": "8f3777af260bd1c386f7144147a2ed316c790d593b2d0beb70e2a81476dfc809",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/main_registration_v2/replacement_candidates.json": "f6e2f4d86abfb8d2b93bfebd8efec807c3b98f3d51c981344e1dcc765da5ab07",
+          "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/preparation/main_registration_v2/reserve_manifest.json": "f5ded06a0750f7c60e6ceaa3d3af7cc3cd3c49d129e127a746b4608912a68819"
+        },
+        "main_collection": {
+          "concurrency": {
+            "_keys": [
+              "workers_per_gpu",
+              "evidence"
+            ],
+            "_length": 2
+          },
+          "replacement_capture_stage": "technical_reserve",
+          "replacement_candidates": {
+            "_keys": [
+              "disassemble-v3__2026111000",
+              "pick-place-wall-v3__2026111001",
+              "shelf-place-v3__2026111002",
+              "stick-pull-v3__2026111003",
+              "stick-push-v3__2026111004",
+              "disassemble-v3__2026111005",
+              "pick-place-wall-v3__2026111006",
+              "shelf-place-v3__2026111007",
+              "stick-pull-v3__2026111008",
+              "stick-push-v3__2026111009",
+              "disassemble-v3__2026111010",
+              "pick-place-wall-v3__2026111011",
+              "shelf-place-v3__2026111012",
+              "stick-pull-v3__2026111013",
+              "stick-push-v3__2026111014",
+              "disassemble-v3__2026111015",
+              "pick-place-wall-v3__2026111016",
+              "shelf-place-v3__2026111017",
+              "stick-pull-v3__2026111018",
+              "stick-push-v3__2026111019",
+              "disassemble-v3__2026111020",
+              "pick-place-wall-v3__2026111021",
+              "shelf-place-v3__2026111022",
+              "stick-pull-v3__2026111023",
+              "stick-push-v3__2026111024",
+              "disassemble-v3__2026111025",
+              "pick-place-wall-v3__2026111026",
+              "shelf-place-v3__2026111027",
+              "stick-pull-v3__2026111028",
+              "stick-push-v3__2026111029",
+              "disassemble-v3__2026111030",
+              "pick-place-wall-v3__2026111031",
+              "shelf-place-v3__2026111032",
+              "stick-pull-v3__2026111033",
+              "stick-push-v3__2026111034"
+            ],
+            "_length": 900
+          },
+          "banks": {
+            "_keys": [
+              "round2_labels_v1"
+            ],
+            "_length": 1
+          }
+        },
+        "model_dependency_groups": {
+          "vla": "dff338a91dbe534ca3c4525ba82df9324662e3c87131f42ed6e3d1b7bf0e94d4",
+          "d": {
+            "_keys": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241/finetune_400.pt",
+              "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242/finetune_400.pt",
+              "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241/normalization.json",
+              "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_241/complete.json",
+              "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242/normalization.json",
+              "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/models/spatial_pair_242/complete.json"
+            ],
+            "_length": 6
+          },
+          "g0": {
+            "_keys": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_341/selected.pt",
+              "/mnt/bn/arnold-recommend/yaohaoyang/ACT-RECAP/outputs/act_recap_future_aware_20260914/critics/gate_342/selected.pt"
+            ],
+            "_length": 2
+          },
+          "critical_collection_code": {
+            "_keys": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/main_collection.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/main_runner.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/run_main_gpu.sh",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/scene_identity.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/adapter.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/engine.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/commands.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/bank_audit.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/candidates13.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/semantics.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/protocol.py",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/experiments/native10_training_20260916/storage.py"
+            ],
+            "_length": 12
+          }
+        },
+        "round2_collection": {
+          "schema": "native10_round2_collection_v1",
+          "original_collection": {
+            "_keys": [
+              "config_path",
+              "config_sha256",
+              "freeze_path",
+              "freeze_sha256",
+              "bank_version"
+            ],
+            "_length": 5
+          },
+          "selected_training": {
+            "_keys": [
+              "path",
+              "seal_sha256",
+              "selected_seal_sha256"
+            ],
+            "_length": 3
+          },
+          "effective_cut_policy": {
+            "_keys": [
+              "policy",
+              "scheduled_priority",
+              "no_alarm_training_priority",
+              "eligible",
+              "original_request_fields_preserved"
+            ],
+            "_length": 5
+          },
+          "requested_cut_rules_sha256": "60b59e4bf8536bb266189b124656aa68bb45ceaeefc9d42a50e1b92a5cb94082"
+        },
+        "round2_preparation": {
+          "status": "frozen_round2_collection_only",
+          "original_primary_ids_canonical_sha256": "9c1891d17b8c438162c4c2ab4ba245864e743b42cd4aa8b813baf298c922f78a",
+          "primary_capture_planned": 300,
+          "independent_bank_restores_planned": 300,
+          "branch_upper_bound": 16800,
+          "simulator_attempts_upper_bound": 17400,
+          "optimizer_updates": 0,
+          "candidate_count": 13,
+          "normal_control_count": 1,
+          "paired_suffixes": 4,
+          "no_simulation_or_model_call_during_preparation": true,
+          "source_capture_allowed_after_stage_release": true,
+          "initialization_replacements": "original_pre_action_chain_only",
+          "original_registration_placeholder": "preserved in request; effective analysis_lead_v1 governs actual selection",
+          "decision_references": {
+            "_keys": [
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ROUND2_COLLECTION_DECISION.md",
+              "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/main_protocols/round2_v1/coordination/NATIVE10_ANALYSIS_LEAD.md"
+            ],
+            "_length": 2
+          },
+          "version": "round2_v1",
+          "scene_registry_before": {
+            "_keys": [
+              "live_path",
+              "snapshot_path",
+              "sha256",
+              "bytes",
+              "records"
+            ],
+            "_length": 5
+          },
+          "cpu_evidence": {
+            "_length": 1,
+            "_sample": [
+              {
+                "_keys": [
+                  "path",
+                  "seal_sha256"
+                ],
+                "_length": 2
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

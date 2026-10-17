@@ -1,0 +1,85 @@
+{
+  "observed_at_utc": "2026-09-22T17:01:39.656114+00:00",
+  "selection_rule": {
+    "path": "deadline_20260924/POST_LED_SELECTION_OVERRIDE_V1.json",
+    "sha256": "fa907477112320e7f8356282c5ba64742452172dee998e9efc20a82b92b9c4b1"
+  },
+  "followup_authorization": {
+    "path": "deadline_20260924/FULL_Q_AUTORUN_AUTHORIZATION_V2.json",
+    "sha256": "fb15e23ad4ed75eaa1b9490784d58dc9dc925e440194e99cab066ae11af6414f"
+  },
+  "runtime_compatibility": {
+    "path": "deadline_20260924/AUTORUN_LIVE_CHAIN_COMPATIBILITY_V1.json",
+    "sha256": "2ae5a001cec168399a9733d038ed56d1ebeefd311081999f45429dc75e24ac16"
+  },
+  "operational_recovery_rule": {
+    "path": "deadline_20260924/AUTONOMOUS_RECOVERY_AND_SKIP_V1.md",
+    "sha256": "f3ef2d8727e952d3ef58c7a9ebed40c07a79736e8198fd9978df169a46a2dbb7"
+  },
+  "nodes": {
+    "A": {
+      "task_id": "A_D24_FULL_Q_AUTORUN_HANDOFF_V2",
+      "task_ACK": {
+        "path": "receipts/A/A_D24_FULL_Q_AUTORUN_HANDOFF_V2_ACK.json",
+        "sha256": "4d1aee7dbb57514e7707e987e9c19566996dd75da67b815020200b039409ab8d"
+      },
+      "queue_ready": {
+        "path": "results/A/A_D24_FULL_Q_AUTORUN_HANDOFF_V2/QUEUE_READY.json",
+        "sha256": "24f385cbecf19df67b1aa479bf12943aba4e1bd25d631d00907c7468082b1559"
+      },
+      "queue_ready_is_not_model_ready_or_completed_episode": true,
+      "heartbeat_snapshot": {
+        "utc": "2026-09-22T17:01:36.579712+00:00",
+        "status": "formal_chain",
+        "progress": {
+          "active_jobs": {
+            "0": null,
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null
+          },
+          "holder_policy": "all8_off_entire_wave",
+          "living_workers": 8,
+          "loaded_workers": 0,
+          "manager": {
+            "boot_id": "9011c00c-6953-4cb3-a724-1a6f90d196d4",
+            "host": "trial-303224955-trialrun-303224955-worker-0",
+            "pgid": 2428478,
+            "pid": 2428478,
+            "ppid": 2427638,
+            "start_ticks": 413626488,
+            "state": "R"
+          },
+          "pending_jobs": 182,
+          "stage": "DEV",
+          "started_workers": 8,
+          "status": "running",
+          "utc": "2026-09-22T17:01:35.898823+00:00"
+        }
+      },
+      "new_recovery_rule_ACK": null
+    },
+    "B": {
+      "task_id": "B_D24_PI05_SELECTED_H20_H30_V1",
+      "task_ACK": null,
+      "queue_ready": null,
+      "queue_ready_is_not_model_ready_or_completed_episode": true,
+      "new_recovery_rule_ACK": null
+    },
+    "C": {
+      "task_id": "C_D24_PI05_SELECTED_H40_H50_V1",
+      "task_ACK": {
+        "path": "receipts/C/C_D24_PI05_SELECTED_H40_H50_V1_ACK.json",
+        "sha256": "50dd9217b3e24a1aa889fa85e710587315f4473d52f40382ba3fe99f76173573"
+      },
+      "queue_ready": null,
+      "queue_ready_is_not_model_ready_or_completed_episode": true,
+      "new_recovery_rule_ACK": null
+    }
+  },
+  "scientific_priority": "complete Post development then lock common loss; Velocity inherits; Post current paper only"
+}

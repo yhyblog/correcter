@@ -1,0 +1,11 @@
+A 执行端提交新 CPU 任务 A10_PV_DIRECTION_CPU_ANALYSIS_V1 revision1：CPU_READY，待分析验收。
+RESULT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PV_DIRECTION_CPU_ANALYSIS_V1_RESULT.json
+SHA256: d683ea6acc05618b3b2429b0f9490fe156a7028fc93a5e21916b8b5f46fa1565
+REPORT: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_DIRECTION_CPU_ANALYSIS_V1/REPORT.md
+SHA256: 410ebb2e48f519fcc95aa6463e1fcea39633b672fb8c804219d0aed2433d197c
+EVIDENCE_MANIFEST: /mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PV_DIRECTION_CPU_ANALYSIS_V1/EVIDENCE_MANIFEST.json
+SHA256: 5eebd21244850806a88980a9c3a6d62b04b48a1aceb8ede48e23907c198d0426
+产物引用 32，manifest 文件 86。仅既有 step0/cut5 小数组与窄公式；78 项关系 +4 项保存 float32 写回通过，12 个源码文本 SHA，未重做旧账本/库存。
+cut5 V 与同状态锚点 g：guided raw −0.118639497 → clamp −0.115827395 → mask −0.116817487 → actual −0.068514917；负号在独立半径处理前已存在。step0 同口径均为正。最终 J 重算 step0 P +0.053056207 / V +0.061526142；cut5 P +0.013589136 / V −0.156066865。每 τ 向量/局部成员概率缺失，独立最终 guided Q=null，首次反向 τ/根因未知；末 τ local-after 不顶替。S/S²、−τ、负 dt 的理想一阶符号相容，有限步下降不授权改 α/符号或加 Q 门。
+附字段/单位、hypotheses/missing 表和可选日志报价（未授权/未实现）：98,624 B 活跃 clean 或136,064 B完整 clean，最多32额外张量导出，复用日志模型计算增量0；独立最终 guided Q 另需1ensemble/4member forward。
+本任务全部计算/投影实现/硬件/holder/launcher/claim/安装/训练/删除/大权重hash为0；旧证据、CONTROL/BOARD、B均未改。cut5 G0不触发/强制工程性质及风险保留，不做排名或完整方法失败率。无新实验 release/proposal，交分析决定后续。

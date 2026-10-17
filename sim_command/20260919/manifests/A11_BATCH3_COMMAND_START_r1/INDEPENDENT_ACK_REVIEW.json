@@ -1,0 +1,375 @@
+{
+  "schema": "analysis_batch3_ack_command_entry_review_v1",
+  "at_utc": "2026-09-21T09:32:43.510832+00:00",
+  "task_id": "A11_COMMON_POOL_BATCH3_V1",
+  "verdict": "PASS_ACK_AND_ONE_COMMAND_ENTRY_ONLY",
+  "blocking": false,
+  "blockers": [],
+  "ACK_ref": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A11_COMMON_POOL_BATCH3_V1_ACK.json",
+    "sha256": "e9aeb88f1e09bfbf9c9d24c43d9d373cf654c7c058304655b4b167dff8eca9e8",
+    "size_bytes": 9779
+  },
+  "outer_command_entered_ref": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_COMMON_POOL_BATCH3_V1/OUTER_COMMAND_ENTERED.json",
+    "sha256": "a92c2e05851767bca63ecb6e4c30e8b768525ad2461670c5c8c069fe09f1d197",
+    "size_bytes": 613
+  },
+  "proposed_command_ref": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/PROPOSED_COMMAND.json",
+    "sha256": "5110c1ca530cb63aa30d1523dd1df9eb6e3ccbc87ef202314d6b924bd4659c7a",
+    "size_bytes": 1847
+  },
+  "command_script_ref": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/commands/run_proposed_batch3.sh",
+    "sha256": "c0f39aa405fd0387b61baa65b54a946315e6090f3c55151a28b859c26f7cb743",
+    "size_bytes": 493
+  },
+  "release_ref": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/P11_A_COMMON_POOL_BATCH3_V1.json",
+    "sha256": "ff7326818d5a232d5d2ad1ec8032ae6c37762f71f089087243096f7c06a589e3",
+    "size_bytes": 70141
+  },
+  "ack_at_utc": "2026-09-21T09:28:11.421592+00:00",
+  "command_entered_at_utc": "2026-09-21T09:29:21.049730+00:00",
+  "ack_precedes_entry_seconds": 69.628138,
+  "command": [
+    "bash",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1/commands/run_proposed_batch3.sh",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P11_A_COMMON_POOL_BATCH3_V1.json"
+  ],
+  "cwd": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A11_BATCH3_PREP_CPU_V1",
+  "authorization_refs": [
+    {
+      "published_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/CONTROL.json",
+        "sha256": "17e6ab9da64df6ecc2ab0e9a240c9484999974d2f0eef8fd3bbe37b29754c163",
+        "size_bytes": 111792
+      },
+      "saved_snapshot_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/CONTROL.json",
+        "sha256": "17e6ab9da64df6ecc2ab0e9a240c9484999974d2f0eef8fd3bbe37b29754c163",
+        "size_bytes": 111792
+      },
+      "matches_ACK": true,
+      "matches_published_at_review": true
+    },
+    {
+      "published_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/TASK_BOARD.json",
+        "sha256": "db8906c136d960dfa1ee1939b65ffea23b3414caf714715deb24f87104cd1083",
+        "size_bytes": 38726
+      },
+      "saved_snapshot_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/TASK_BOARD.json",
+        "sha256": "db8906c136d960dfa1ee1939b65ffea23b3414caf714715deb24f87104cd1083",
+        "size_bytes": 38726
+      },
+      "matches_ACK": true,
+      "matches_published_at_review": true
+    },
+    {
+      "published_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/DISPATCH_A.json",
+        "sha256": "20c3d42b148cb060b253f8edfb385615d0426ce871360e4fd5f16996a77eca3d",
+        "size_bytes": 32241
+      },
+      "saved_snapshot_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/DISPATCH_A.json",
+        "sha256": "20c3d42b148cb060b253f8edfb385615d0426ce871360e4fd5f16996a77eca3d",
+        "size_bytes": 32241
+      },
+      "matches_ACK": true,
+      "matches_published_at_review": true
+    },
+    {
+      "published_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/tasks/A11_COMMON_POOL_BATCH3_V1.md",
+        "sha256": "6c7667e280d6c8bc0b70bf9c4688591ee01c151475c9595b3727b9f34a2e0765",
+        "size_bytes": 4291
+      },
+      "saved_snapshot_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/A11_COMMON_POOL_BATCH3_V1.md",
+        "sha256": "6c7667e280d6c8bc0b70bf9c4688591ee01c151475c9595b3727b9f34a2e0765",
+        "size_bytes": 4291
+      },
+      "matches_ACK": true,
+      "matches_published_at_review": true
+    },
+    {
+      "published_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P11_A_COMMON_POOL_BATCH3_V1.json",
+        "sha256": "ff7326818d5a232d5d2ad1ec8032ae6c37762f71f089087243096f7c06a589e3",
+        "size_bytes": 70141
+      },
+      "saved_snapshot_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/P11_A_COMMON_POOL_BATCH3_V1.json",
+        "sha256": "ff7326818d5a232d5d2ad1ec8032ae6c37762f71f089087243096f7c06a589e3",
+        "size_bytes": 70141
+      },
+      "matches_ACK": true,
+      "matches_published_at_review": true
+    },
+    {
+      "published_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/contracts/BATCH3_RISK_AND_SCOPE_V1.md",
+        "sha256": "dc3177169ee2171385c7ba272f6b094fd75d40c52deaaec82629a7e3a238dd0a",
+        "size_bytes": 2360
+      },
+      "saved_snapshot_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/BATCH3_RISK_AND_SCOPE_V1.md",
+        "sha256": "dc3177169ee2171385c7ba272f6b094fd75d40c52deaaec82629a7e3a238dd0a",
+        "size_bytes": 2360
+      },
+      "matches_ACK": true,
+      "matches_published_at_review": true
+    },
+    {
+      "published_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/A11_BATCH3_PREP_CPU_V1_ACCEPTANCE.json",
+        "sha256": "0cf867d30e026fcf7a0dba52781ca4b6a4f71125f1ebf89194cd846bd8424942",
+        "size_bytes": 3375
+      },
+      "saved_snapshot_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/A11_BATCH3_PREP_CPU_V1_ACCEPTANCE.json",
+        "sha256": "0cf867d30e026fcf7a0dba52781ca4b6a4f71125f1ebf89194cd846bd8424942",
+        "size_bytes": 3375
+      },
+      "matches_ACK": true,
+      "matches_published_at_review": true
+    },
+    {
+      "published_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/A11_BATCH3_PUBLICATION/PUBLICATION_CHECK_RESULT.json",
+        "sha256": "6ae4b16ed27f5fa0f92dc651d5bc012cf31db67ce13ef46aea917534fa191f0d",
+        "size_bytes": 1066
+      },
+      "saved_snapshot_ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/PUBLICATION_CHECK_RESULT.json",
+        "sha256": "6ae4b16ed27f5fa0f92dc651d5bc012cf31db67ce13ef46aea917534fa191f0d",
+        "size_bytes": 1066
+      },
+      "matches_ACK": true,
+      "matches_published_at_review": true
+    }
+  ],
+  "publication_candidate_comparisons": [
+    {
+      "saved_snapshot": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/CONTROL.json",
+        "sha256": "17e6ab9da64df6ecc2ab0e9a240c9484999974d2f0eef8fd3bbe37b29754c163",
+        "size_bytes": 111792
+      },
+      "publication_candidate": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/A11_BATCH3_PUBLICATION/CANDIDATE_CONTROL.json",
+        "sha256": "17e6ab9da64df6ecc2ab0e9a240c9484999974d2f0eef8fd3bbe37b29754c163",
+        "size_bytes": 111792
+      },
+      "byte_equal": true
+    },
+    {
+      "saved_snapshot": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/TASK_BOARD.json",
+        "sha256": "db8906c136d960dfa1ee1939b65ffea23b3414caf714715deb24f87104cd1083",
+        "size_bytes": 38726
+      },
+      "publication_candidate": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/A11_BATCH3_PUBLICATION/CANDIDATE_BOARD.json",
+        "sha256": "db8906c136d960dfa1ee1939b65ffea23b3414caf714715deb24f87104cd1083",
+        "size_bytes": 38726
+      },
+      "byte_equal": true
+    },
+    {
+      "saved_snapshot": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/A/A11_COMMON_POOL_BATCH3_V1/authorization/P11_A_COMMON_POOL_BATCH3_V1.json",
+        "sha256": "ff7326818d5a232d5d2ad1ec8032ae6c37762f71f089087243096f7c06a589e3",
+        "size_bytes": 70141
+      },
+      "publication_candidate": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/manifests/A11_BATCH3_PUBLICATION/CANDIDATE_RELEASE.json",
+        "sha256": "ff7326818d5a232d5d2ad1ec8032ae6c37762f71f089087243096f7c06a589e3",
+        "size_bytes": 70141
+      },
+      "byte_equal": true
+    }
+  ],
+  "identity": {
+    "host": "trial-303224955-trialrun-303224955-worker-0",
+    "node_role": "A",
+    "CONTROL_revision": 50,
+    "TASK_BOARD_revision": 59,
+    "task_revision": 1,
+    "release_id": "P11_A_COMMON_POOL_BATCH3_V1"
+  },
+  "frozen_limits": {
+    "concurrency": 2,
+    "parents": 8,
+    "resource_cap_count": 116,
+    "all_caps_match_ACK_release_proposal_CONTROL": true,
+    "scheduler_caps_match": true,
+    "max_commands": 1,
+    "max_claims": 1,
+    "max_retries": 0
+  },
+  "old_closed_release_count": 14,
+  "old_closed_releases_reusable": false,
+  "old_closed_references": [
+    {
+      "release_id": "P10_A_NATIVE_PREFLIGHT_V1",
+      "ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_NATIVE_PREFLIGHT_V1_CLOSED.json",
+        "sha256": "7574117b24d27f7fc99b3212238d5027f545db8f8077dd77bae0732f4ef2ff02",
+        "size_bytes": 832
+      },
+      "status": "consumed_technical_failure_closed",
+      "reusable": null
+    },
+    {
+      "release_id": "P10_A_EGL_GRAPHICS_PROBE_V1",
+      "ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_EGL_GRAPHICS_PROBE_V1_CLOSED.json",
+        "sha256": "148a6f72e707574d88d245c3dff3e7142742125a7d7badaedc435a706bbfdc84",
+        "size_bytes": 829
+      },
+      "status": "consumed_technical_failure_closed",
+      "reusable": null
+    },
+    {
+      "release_id": "P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1",
+      "ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1_CLOSED.json",
+        "sha256": "b5d8ee18305cae68d6a1bb628216e4dd84e9dec92831c23e03ee6a405c140d1c",
+        "size_bytes": 858
+      },
+      "status": "consumed_success_closed",
+      "reusable": null
+    },
+    {
+      "release_id": "P10_A_NATIVE_PREFLIGHT_V2",
+      "ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_NATIVE_PREFLIGHT_V2_CLOSED.json",
+        "sha256": "285ba69de7f46bd4f111be461238788d781bee8e8fd9e805ffb36f9e6b70a894",
+        "size_bytes": 846
+      },
+      "status": "consumed_technical_failure_closed",
+      "reusable": null
+    },
+    {
+      "release_id": "P10_A_NATIVE_PREFLIGHT_V3",
+      "ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_NATIVE_PREFLIGHT_V3_CLOSED.json",
+        "sha256": "2e7be96d7a51afae64de98434e25e29682cdadc504525eaea8bacffec0d7434c",
+        "size_bytes": 833
+      },
+      "status": "consumed_success_closed",
+      "reusable": null
+    },
+    {
+      "release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V1",
+      "ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V1_CLOSED.json",
+        "sha256": "076a32373fc44932d5d65a7671e68e777335663685e80e8ab8ba049fee83bf65",
+        "size_bytes": 976
+      },
+      "status": "closed_preclaim_metadata_failure",
+      "reusable": null
+    },
+    {
+      "release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V2",
+      "ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V2_CLOSED.json",
+        "sha256": "3d5ea42f5ee514d2b5ec3e58ace51e3eb4f4e509bce5e962d9639d682f273b68",
+        "size_bytes": 950
+      },
+      "status": "consumed_failure_closed",
+      "reusable": null
+    },
+    {
+      "release_id": "P10_A_PV_OFFLINE_PREFLIGHT_V3",
+      "ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_PV_OFFLINE_PREFLIGHT_V3_CLOSED.json",
+        "sha256": "836a13af5ccfac259e9a4c56ab836e09d4bc0664e366c52315d4681f0463a0d0",
+        "size_bytes": 965
+      },
+      "status": "consumed_success_closed",
+      "reusable": null
+    },
+    {
+      "release_id": "P10_A_CAUSAL_C10_PREFLIGHT_V1",
+      "ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_CAUSAL_C10_PREFLIGHT_V1_CLOSED.json",
+        "sha256": "d7abd0b4f955a7481ac54d689742df0da16430ebcaa3e5a9d641e34b7db8e152",
+        "size_bytes": 1003
+      },
+      "status": "consumed_failure_closed",
+      "reusable": null
+    },
+    {
+      "release_id": "P10_A_CAUSAL_C10_PREFLIGHT_V2",
+      "ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P10_A_CAUSAL_C10_PREFLIGHT_V2_CLOSED.json",
+        "sha256": "43e0693033516fdef5c342211aa55656926e45a5f3d92c3c8d0a9e733c300d6f",
+        "size_bytes": 1031
+      },
+      "status": "consumed_success_closed",
+      "reusable": null
+    },
+    {
+      "release_id": "P11_A_COMMON_POOL_FIRST_PARENT_V3",
+      "ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P11_A_COMMON_POOL_FIRST_PARENT_V3_CLOSED.json",
+        "sha256": "4886d382094a1d50086fc1b85ad4055e7c3c51137b1f26efe51ec82dc33cd6e0",
+        "size_bytes": 955
+      },
+      "status": "consumed_technical_failure_closed",
+      "reusable": null
+    },
+    {
+      "release_id": "P11_A_COMMON_POOL_FIRST_PARENT_V4",
+      "ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P11_A_COMMON_POOL_FIRST_PARENT_V4_CLOSED.json",
+        "sha256": "8d58351bc4f20ec366e67a41c15df9c7a7956816bd5c4803ae35d3358fcd676c",
+        "size_bytes": 967
+      },
+      "status": "consumed_success_closed",
+      "reusable": null
+    },
+    {
+      "release_id": "P11_A_COMMON_POOL_BATCH1_V1",
+      "ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P11_A_COMMON_POOL_BATCH1_V1_CLOSED.json",
+        "sha256": "3c35abb44c362d66969e04b577e981f730e78706744995d48a003170a20b4e1b",
+        "size_bytes": 1259
+      },
+      "status": "consumed_closed_with_legal_pre_cut_exclusion",
+      "reusable": null
+    },
+    {
+      "release_id": "P11_A_COMMON_POOL_BATCH2_V1",
+      "ref": {
+        "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/releases/P11_A_COMMON_POOL_BATCH2_V1_CLOSED.json",
+        "sha256": "8049a2fff78474279755660502468b19fe8ffa898efcae4d86d9c92fd0f74c9c",
+        "size_bytes": 1134
+      },
+      "status": "consumed_success_closed",
+      "reusable": null
+    }
+  ],
+  "progress": {
+    "command_opportunities_consumed": 1,
+    "automatic_retry": false,
+    "claim_count": null,
+    "claim_observed": false,
+    "collector_or_model_entry": null,
+    "completed_parents": null,
+    "collection_success": null
+  },
+  "scope": {
+    "read_only_small_files": true,
+    "no_runtime_tree_or_hardware_reads": true,
+    "no_model_weight_hashes": true,
+    "authority_modified": false,
+    "note": "Evidence establishes ACK followed by the frozen outer command-entry record only. No claim, active compute, parent progress, outcome, exit, restoration, or successful collection is inferred."
+  }
+}

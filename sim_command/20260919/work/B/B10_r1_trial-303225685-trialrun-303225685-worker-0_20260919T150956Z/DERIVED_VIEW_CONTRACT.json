@@ -1,0 +1,52 @@
+{
+  "wire_schema": {
+    "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/work/B/B10_r1_trial-303225685-trialrun-303225685-worker-0_20260919T150956Z/a_interface_v1/interface.schema.json",
+    "sha256": "7d52f22e9d2e622a18a9a71fdac822ed50413aa3838aa3ad40d98e0bee10500f"
+  },
+  "trajectory_validator": "b10_adapters.validate_trajectory",
+  "wire_converter": "public_interface.public_to_trajectory",
+  "trajectory_invariants": [
+    "n contiguous control-step indices",
+    "n+1 true observation refs",
+    "same parent/source/branch/suffix and split",
+    "policy_state/actions/raw_actions [n,4]",
+    "n real success/reward/terminated/truncated entries",
+    "normalizer/state/task/model SHA",
+    "complete outcomes for discounted target",
+    "test/held excluded from train",
+    "synthetic_only explicit in derived tensors"
+  ],
+  "gaf_tensor_shapes": {
+    "obs_features": [
+      "N",
+      4
+    ],
+    "action_chunks": [
+      "N",
+      10,
+      4
+    ],
+    "task_features": [
+      "N",
+      2048
+    ],
+    "targets": [
+      "N"
+    ]
+  },
+  "lvm_pair_shape": {
+    "z_t": [
+      256,
+      2048
+    ],
+    "delta_z": [
+      256,
+      2048
+    ],
+    "action_t": [
+      4
+    ]
+  },
+  "real_sample_counts": null,
+  "missing_reason": "Common actual data/feature manifest not published; CPU synthetic examples are not effective real samples"
+}

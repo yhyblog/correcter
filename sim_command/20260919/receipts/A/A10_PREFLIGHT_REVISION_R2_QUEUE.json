@@ -1,0 +1,12 @@
+{
+  "status": "delivered",
+  "finished_at_utc": "2026-09-19T16:45:40.792857+00:00",
+  "target_session": "01a0b91f-355f-7cd1-ae36-412500534ffb",
+  "result_path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PREFLIGHT_REVISION_R2_RESULT.json",
+  "result_sha256": "e65578bea059d498976ca22221d8272de1f2bfed4688784a82b678d41c8f8b65",
+  "returncode": 0,
+  "stdout": "Queued message 01a0ba8f-2df7-71e0-8849-36cd6166c57a for thread 01a0b91f-355f-7cd1-ae36-412500534ffb.\n",
+  "stderr": "",
+  "message": "A10_PREFLIGHT_REVISION_R2 CPU修正已完成，未运行GPU/reset/仿真/训练，删除0。\nRESULT：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PREFLIGHT_REVISION_R2_RESULT.json\n短差异报告：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/receipts/A/A10_PREFLIGHT_REVISION_R2_REPORT.md\n入口：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PREFLIGHT_REVISION_R2/CPU_READY_v4.json；同目录ARTIFACT_MANIFEST.json（428项）。\n1. 当前新版code_snapshot_v4/preflight_v4/commands_v4独立发布；旧interface_v1、A10 r1、v3均未改。code_manifest SHA=9e07c74a850e457993c70e4138491c18ed31b0ef83d96088a0ef9f4c17a60b76；proposal SHA=63caf8ce1cfc43f6dadd05a8a140a996645092f532b0ce770528cc45dad51bed。\n2. 标准初始化2个物理环境+1包装器，50 task-set+1包装初始化+1诊断reset=52；绑定118个实际MetaWorld/Gymnasium源文件。无共享包改动。\n3. 定向审计发现native reset先直接reset_model再经Gymnasium reset调用一次，共104次；每次50×5 settling，26000初始化物理子步另计。1个策略控制步仅13物理子步，不混成额外episode。私有计数器按来源记录entered/returned/failed并预检查上限。\n4. 仍只报价1诊断初态/1attempt、5native/50flow、1策略步、0完整rollout/反向/monitor/更新/重试。真实环境可运行性未验证。\n5. 真实Python3.12环境32项定向CPU检查、413代码SHA、9变更AST、2shell语法、2份P00纯CPU拒绝检查通过。初次-k选择器意外多跑71项CPU检查（全过），已记录并改为明确文件/node ID；未再跑整套。\n6. 1800+30只涵盖诊断子进程及其全部初始化，前置hash/预约/释放/恢复不在内；新LAUNCH_RESULT分别计时，端到端上界null。独立A-only wave，全机holder生命周期不变，8卡guard27508正常。\n7. 新release必填和CONTROL全局初始化预算见preflight_v4/RELEASE_TEMPLATE.json及PROPOSAL.control_minimum_limits；TASK_BOARD也须精确绑定release/owner/revision/status。\n8. 纯CPU授权入口：/mnt/bn/arnold-recommend/yaohaoyang/Corrector/sim_command/20260919/results/A/A10_PREFLIGHT_REVISION_R2/commands_v4/check_authorization_cpu.sh NEW_RELEASE。未运行真实sh作dry-run。当前两份P00均预期exit2，无NVML/lifecycle启动。\n9. 存储依赖附项继续定向核查，结果另交，不阻塞本次报价。当前CONTROL6仍零GPU、无删除release。",
+  "analysis_acceptance": "not_implied"
+}

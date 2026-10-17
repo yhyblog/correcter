@@ -1,0 +1,35 @@
+{
+  "job_id": "lvm_gpu_probe_2",
+  "kind": "lvm_gpu_probe",
+  "proposal_only": true,
+  "timeout_seconds": 180,
+  "retry_cap": 0,
+  "inputs": {
+    "model": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/corrector_pi05_mt50/h1_k10/best_cosine_model.pt",
+      "sha256": "0efadcfdfde814fc4e929d007ed0b95894de33f0d51e3d3cae512605e223d168",
+      "bytes": 170051647
+    },
+    "model_config": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/vla-corrector/outputs/metaworld_very_hard/corrector_pi05_mt50/h1_k10/config.json",
+      "sha256": "4f7cc842b2e17bb5ff526dfcdfd7e94a680d1431bd9cf7af1b9f88373bc0b232",
+      "bytes": 981
+    }
+  },
+  "limits": {
+    "simulator_attempts": 0,
+    "completed_rollouts": 0,
+    "vla_sampling_calls": 0,
+    "model_gpu_inference_calls": 2,
+    "optimizer_updates": 0,
+    "optimizer_attempts": 0,
+    "model_initializations": 1,
+    "training_forward_calls": 0
+  },
+  "expected_peak_vram_GiB_estimate": 2,
+  "disk_peak_GiB_estimate": 0.1,
+  "gpu_seconds_upper_bound": 200,
+  "notes": "Synthetic-token shape/finiteness probe only; does not establish VLA feature, renderer or task performance validity.",
+  "termination_grace_seconds": 20,
+  "all_GPU_reservation_seconds_upper_bound": 1600
+}

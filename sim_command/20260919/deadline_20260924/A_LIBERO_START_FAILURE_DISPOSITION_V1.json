@@ -1,0 +1,31 @@
+{
+  "issued_at_utc": "2026-09-22T08:38:23.422752+00:00",
+  "task_id": "A_D24_LIBERO_FULL_NATIVE_V1",
+  "observed_receipt": {
+    "path": "receipts/A/A_D24_LIBERO_FULL_NATIVE_V1_RESULT_r2.json",
+    "sha256": "56a567be9adfa2168b0de08d0e2b4532d3b21714dc038b38c38bae8f1ef0071a"
+  },
+  "error_record": {
+    "path": "results/A/A_D24_LIBERO_FULL_NATIVE_V1/RUNNER_ERROR.json",
+    "sha256": "1708f1b36811769850cc922b9f246b102ffabfd93557318f6cc89f535909f88c"
+  },
+  "classification": "launcher output parent directory missing before worker creation; no scientific episode or model update entered",
+  "new_attempts": 0,
+  "new_updates": 0,
+  "action": "Executor diagnose and minimally repair own output-directory setup; one already-authorized corrected job retry if not yet used; if corrected chain already admitted, do not relaunch",
+  "prior_failed_claim_and_files": "preserve; use distinct corrected run identity",
+  "budget": "original remaining40dev /1000stage /32000updates and node caps unchanged",
+  "new_permission_required": false,
+  "new_scientific_scope": false,
+  "prohibited": [
+    "new GPU preflight",
+    "completed episode replay",
+    "new generic audit gate",
+    "test-based parameter changes"
+  ],
+  "delivery": {
+    "queue_message_id": "01a0c844-a362-73d3-8411-d28801eca50f",
+    "status": "queued_not_confirmation_of_repaired_launch",
+    "target": "A original executor thread"
+  }
+}

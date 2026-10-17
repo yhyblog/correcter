@@ -1,0 +1,60 @@
+{
+  "campaign_id": "corrector-sim-20260919",
+  "accepted_at_utc": "2026-09-19T18:39:42.896731+00:00",
+  "status": "CPU_mapping_preparation_accepted_for_one_graphics_probe",
+  "task_id": "A10_EGL_CUDA_MAP_CPU_V1",
+  "receipt": {
+    "path": "receipts/A/A10_EGL_CUDA_MAP_CPU_V1_RESULT.json",
+    "sha256": "7d3c5ead6143ea49167ac22796a7a031b77fcdbd3f88496124f1abb1815c1a6f"
+  },
+  "report": {
+    "path": "receipts/A/A10_EGL_CUDA_MAP_CPU_V1_REPORT.md",
+    "sha256": "45a83ccabff518c97d893f2ae4581a98ba32056572456acdacc46594655407cd"
+  },
+  "proposal": {
+    "path": "results/A/A10_EGL_CUDA_MAP_CPU_V1/proposal/PROPOSAL.json",
+    "sha256": "afb08b914bc746e8b570b670c90a40e681a98dc6528f6ec1cedba53468da3a7b"
+  },
+  "bundle": {
+    "path": "results/A/A10_EGL_CUDA_MAP_CPU_V1/BUNDLE_MANIFEST.json",
+    "sha256": "c60bdc602ea96962f794f1b21fce4d57a9d0f6c03b681bc8a78904af259f47fe"
+  },
+  "external_manifest": {
+    "path": "results/A/A10_EGL_CUDA_MAP_CPU_V1/EXTERNAL_SOURCE_MANIFEST.json",
+    "sha256": "cfc6929ab17ec41a5e5a07cfcea188df13ea385cb929467e24b1d53272e292b1"
+  },
+  "root_verification": {
+    "RESULT_artifact_references_SHA_and_size": 15,
+    "bundle_files_SHA_and_size": 33,
+    "runtime_probes": 0,
+    "tests_rerun": 0
+  },
+  "executor_CPU_evidence": {
+    "new_fake_tests_passed": 31,
+    "expected_authorization_denials": 3,
+    "AST_checks": 7,
+    "shell_checks": 2
+  },
+  "independent_review": {
+    "agent": "/root/cuda_map_graphics_review",
+    "recommendation": "release_one_A_only_attempt",
+    "blocking_findings": []
+  },
+  "reviewed": [
+    "Explicit EGL CUDA handle passed unchanged after ABI/range validation; handle0 allowed",
+    "PCI and current kernel UUID verified against fixed physical target; all candidates checked before one display",
+    "Frozen535 libcuda and all8 UUID visibility; no index equivalence or runtime fallback",
+    "Finite call caps and immediate raw/error evidence including cleanup",
+    "Existing A-only whole-wave occupancy lifecycle and identity-bound current release guard"
+  ],
+  "not_yet_validated": [
+    "Real CUDA initialization and device mapping",
+    "EGL context and static RGB readback",
+    "MetaWorld native observation chain",
+    "VLA/Post/Velocity or any task success-rate result"
+  ],
+  "success_acceptance_requirement": "Inspect saved RGB against frozen static scene; nonempty/nonconstant np.empty buffer and complete status alone do not prove correct readback. No additional render authorized.",
+  "new_release": "releases/P10_A_EGL_CUDA_MAP_GRAPHICS_PROBE_V1.json",
+  "old_releases_remain_closed": true,
+  "native_v5_authorized": false
+}

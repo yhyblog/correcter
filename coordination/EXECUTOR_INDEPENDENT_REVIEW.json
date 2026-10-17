@@ -1,0 +1,2078 @@
+{
+  "task_id": "corrector-small-20260916",
+  "status": "passed_independent_read_only_review",
+  "updated_at": "2026-09-16T14:42:39.957037+00:00",
+  "scope": "Read existing frozen results only; no simulation or parameter changes. This is the only file written by this reviewer.",
+  "inputs_sha256": {
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/config.json": "b9bad6420031267d45d2ed30862a49f0a06a049f6bf981ae302774e2987f8328",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/formal_freeze.json": "bc151464e5f3250f83e42a77eb480b9577375ee0052ec89a2dbde80c6377631b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/evaluation.json": "c1d9353113d4410d373bc586c7137f0e2303ab98d025bce15521b5af74e72ca0",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/report/per_source.csv": "74c29516c081bc89bd260fd67abca77fd40725a8643f9f4a321ed558ac5d7552",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/budget/attempts.jsonl": "9d25bca473b9246e0c0530b299c13396babfa8b547ff973f7398fed0fac94771",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/replan/replicate_0/summary.json": "4382d49b1f794533f2b3a038ba71a25b4b85595e9e1e53389218087584b236c4",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/replan/replicate_1/summary.json": "7f92a7fb15d94714a65b3eddc42b531553f265b9a39c6c98de9d33a7bddc9c27",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/replan/replicate_2/summary.json": "e81e460dfd883d1d63f8c667d1cb268309bbefaa332afc9119326af72db8616d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/replan/replicate_3/summary.json": "d215ddbe42ebb402ee48d91012d18f0068c98a1990c98f250d412c3103fc2ce7",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/replan/replicate_4/summary.json": "e0249a9789a006fd9e5053c9ae70cd7f5cdef83089831e13bf814e1121e0315a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/replan/replicate_5/summary.json": "8aea2ab369050400315bba4e7af0c08f12b0e9ec6e53dc3b6d08c7aa1134ed8a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/replan/replicate_6/summary.json": "2adb8a4562e8638f0db54490610db5fc2ccca7532e2fc8747b16c69b2552dd77",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/replan/replicate_7/summary.json": "92ef1ee34f47c149bf82c24b219e5a3f58bf256e9ff82906e567c62066970f3c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/velocity_matched/replicate_0/summary.json": "1f660fc316d86eaebac5228bf81dc1dcdfcbc87956eb9e8a4596d2a5fc316e55",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/velocity_matched/replicate_1/summary.json": "b324dc064f0d0244683eda59b46712c578b49552ab6ceb2699aa8a821a20c574",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/velocity_matched/replicate_2/summary.json": "eb9214340ff6e7b0d3ad6539ec23cce9c9dc24df1f3b111194d8e6f3a3f3b6c1",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/velocity_matched/replicate_3/summary.json": "954bb3e02b05c5923c4a2cf400e8d52de4ac66f279da6ee849c6d6baadae07cb",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/velocity_matched/replicate_4/summary.json": "e24b7a457a71a7d0d54ee60668d54e292f9fd98743892b7bef998f6290ec47be",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/velocity_matched/replicate_5/summary.json": "7472ee0ad78a2e8e7fa426514d2de02bae999e22c90e7efa00c5d0efb44b4fee",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/velocity_matched/replicate_6/summary.json": "1ca889125d2438583078e43bd4bb79ca4bee372841bab7674f9c112742222c03",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/velocity_matched/replicate_7/summary.json": "28f65ac86c0f3ed0579e63b94ef3ba31734195c4a60347b3b9995c07526f3cc7",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/direct_matched/replicate_0/summary.json": "5a5c40cb777fd7850e4107f66db8d80ece6a158ba164b4a6221265d96ee81f8c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/direct_matched/replicate_1/summary.json": "46b77b339b6f64d7a985c45b7a5a62be198bae95c608a48ef0e97d812b9897d8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/direct_matched/replicate_2/summary.json": "a0d43590389467a0a1344bf79fc414ff2d5e1ce5990864c5826cb4fe89ac0f0b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/direct_matched/replicate_3/summary.json": "9b320dccd134ab6b959ac2d24f6496730cbff4f6986543e814d74849aca20413",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/direct_matched/replicate_4/summary.json": "c6fdeb24b3377f7146bc92d791adcba19568775bdec7ba55455e49b2d2289084",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/direct_matched/replicate_5/summary.json": "048c49a89fc040e02a6d4797d8b7b54b65a0847167d6848f2801aca54c5037e4",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/direct_matched/replicate_6/summary.json": "7d602b0d87e6f841fc762803458096526ae04c1bf93f03330ce97d2eaf2fc3f7",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/direct_matched/replicate_7/summary.json": "b5fc4feb8494a0c0b2acc4fc5da6ef8a296e012fd29e8b415d2f7be9d3564152",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/post_matched/replicate_0/summary.json": "12e7fc2bd02611595b64c6e24fb691a742347ce0da844863c61a3ce982f7606a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/post_matched/replicate_1/summary.json": "3b52e77bf67ab9d51e6b558786bf288895e3cc3dc89d8e229e3acec14339ae23",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/post_matched/replicate_2/summary.json": "0750d40acfc8972dfb049288d5c13500bf42b4a9959cadc00fe370097f6e07af",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/post_matched/replicate_3/summary.json": "2d888b196a7b97a979fa3419ff4a9921a238a977d4c48a72838766dbb2e5a93a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/post_matched/replicate_4/summary.json": "de0589c1ad456488e9dcfc3316c6133b54acfa646e30fd26a2ec661a2428f7f4",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/post_matched/replicate_5/summary.json": "1810d54f54b7bfb6e533b434da41ffb9f2224adad49efcdbb8d2ba5693d9c2e6",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/post_matched/replicate_6/summary.json": "336ce49f69c972b80b0585c1e977deb48bb9b53867d3f07f9057f1db55016a86",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/post_matched/replicate_7/summary.json": "a8b80e940749328bfbc5fd6613f5f90a5aca725938458d04a3d54d8da5d84d89",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/continue_old/replicate_0/summary.json": "18258a27b8d4d0e97d925025e9b8a364a50605e7d54019769e611e72037cc376",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/continue_old/replicate_1/summary.json": "d09788ac1df2aa086a2ad67329a4cc4ed1194b85c15f7de6d59fff81e09e5340",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/continue_old/replicate_2/summary.json": "3be3763ac6295a8b9c2b0548e6ff84c65ace70936461ae6d5a42e96ad0555cbf",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/continue_old/replicate_3/summary.json": "555d27ab153a9127f00531661438ce9052a2d940d17609ec201cffcd937e6328",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/continue_old/replicate_4/summary.json": "55590ebfc764f8bbf40a3562fc6518d51ff283d9d24968b2f3c363b60dcd01ad",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/continue_old/replicate_5/summary.json": "2b4e6d7698f4ac6f1a077c89b36d6af771759b0c2578929bf40a0235f3954ee8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/continue_old/replicate_6/summary.json": "20b5172d63c804203495cc82304a69f03238e41c7fc626fc947bda0f57a526ea",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/continue_old/replicate_7/summary.json": "b23afdf18c108d4f429670d52be4be948aceb1d3923e1211a996c7f148e57359",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/candidates/generation.json": "59a43471611b2b3a0425d9858b0841c9bac5d586e79448edf20ab62386f203cb",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106000/cut010/candidates/plans.npz": "b0514322f468b89c8efa24c95752c346ef7d76bcf5c12a781237f67e81a71638",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/replan/replicate_0/summary.json": "c66437b6fba45a143d8c73570c45e4618d15319c0d1ed4c96cdc9b2484666781",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/replan/replicate_1/summary.json": "7b021b1b53e1bf0d49588b891448c026ae84a1ff86fe23d62775c256a6c7e5ce",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/replan/replicate_2/summary.json": "40ae07be1bef8b555ecf0b16421b7c38616aac81c6613a5778e20335b20fe2c9",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/replan/replicate_3/summary.json": "8e388e9d5a99ad999f22487aa83dd49a6c22b3efb3fbb129a1d7519bf59b9f90",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/replan/replicate_4/summary.json": "7d0de7223204b645d5a76f1247b806fbf6b615342f408632074ca23694305465",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/replan/replicate_5/summary.json": "f500f02366a866296e849d183b99f282f329f77315a8c260326a9c7a71363d14",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/replan/replicate_6/summary.json": "0f841dd4ea6a8dc4300695d355c6a007e11b775f1f749be0f5395444086c901a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/replan/replicate_7/summary.json": "aafaf536595b07726a6faafba0dffa160c8ff0d696c94bc9c5c86c0c38f95ce6",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/velocity_matched/replicate_0/summary.json": "463488a3aeed265dc94b4e2675a24c909dd4362f6c7d45f2e4e13f0acfa2f568",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/velocity_matched/replicate_1/summary.json": "decea2b5f496e7bf637c425e77f77a3cdea099304ef77f01e6fba5edeb9227e4",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/velocity_matched/replicate_2/summary.json": "c054a9e4d7541fc9f3f97a2c473775df342cd68af84291216877d25c44b29777",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/velocity_matched/replicate_3/summary.json": "02f1131df684138daee19a71f4d93c49da911a480b6ba8dcd944bdfb608fa78d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/velocity_matched/replicate_4/summary.json": "69eabb08bc232cfe8be613f14bffb8e108c5a52fb73f2bacc3efeb0e9c58d636",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/velocity_matched/replicate_5/summary.json": "1436607e3f9439d3712b6c2ca9a8b64136a12340ba3f5ff514d5013ec843a4aa",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/velocity_matched/replicate_6/summary.json": "05c7a01d10b468ff7922f14b998099a4a83e40ea3d224d7c2333a99a9a5443d8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/velocity_matched/replicate_7/summary.json": "4dfc8797c0943437feaec31faed1c27b20a862e69bb2b3db5d962e509e0005ab",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/direct_matched/replicate_0/summary.json": "a71422e009f5964597ad81bff2d04a4273265724976bb95f0d3a993eddd0894e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/direct_matched/replicate_1/summary.json": "34e09a4b5d69106c5ef833c2a259c609755aaec28b7d869edddac7141006cdb2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/direct_matched/replicate_2/summary.json": "d938a8dc9bab02bf59c265ad2565d6f6d5811da3b717932c453ed05eefd0798b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/direct_matched/replicate_3/summary.json": "2c9b838c110151e3093b2a6c6744f584ff2a003ce512cf4b8af18eea87eb1f8b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/direct_matched/replicate_4/summary.json": "71534ca242bb36151f6e8d3ee581738d28f96f221a0f535c5ea479c01ce54a0f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/direct_matched/replicate_5/summary.json": "f4a48be61b1c79394fc400f8e8ba23a51a504015f9fb368a0b7c72fd77e1633a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/direct_matched/replicate_6/summary.json": "d8a96ed08437ce7a12794d215a85d5570f0d2128960f9a300e70213c02d51a7f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/direct_matched/replicate_7/summary.json": "e3cbd8c2c7b922feffe027f877ef8e796e07daf1774b941f8f262ae9b582bba3",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/post_matched/replicate_0/summary.json": "c86e8fec4034f833419ba54e9aaf497c55c01d87901b7ab028b7eeca02d2e2bc",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/post_matched/replicate_1/summary.json": "18a4a8ff621ff8bf729d85fb3bed6fd6ac7203b12e07863f7e838dd9df0fc50d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/post_matched/replicate_2/summary.json": "21d1ab0bd39666dcc33e1cce89dbd6e90c4c58fc7a7f2cfc7a5c1a77439bd0e5",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/post_matched/replicate_3/summary.json": "26074a406b9b4ed3580c88e15b1e245400afd6ceead4c8ae9db93e0a2649a0d0",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/post_matched/replicate_4/summary.json": "407de3208f8ed380a3f3fe9f84b613e8433c240454033279f5b83ce436d4d58f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/post_matched/replicate_5/summary.json": "63dabdc028fa09020945927a37b700b905098eaab45cf318f7213e1b170433f9",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/post_matched/replicate_6/summary.json": "c948af629f0aac0c0a1a0e83449ace51cc4939e871d344b993a46e32d804bdb2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/post_matched/replicate_7/summary.json": "449827c2579bcd5d898aa22b7a8de949ddba671d44a7e82e62dcec225db9885f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/continue_old/replicate_0/summary.json": "9060c70ee6d62dba2a102e0756bee8742d22304e73586b1b2ee79a6acc3d78c9",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/continue_old/replicate_1/summary.json": "3494957b64deebc51fb5ce483d1cca3af36bb5fd5a330381c6751023226dab3b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/continue_old/replicate_2/summary.json": "fed8e1d67f22263f1561f30df7040491e5d73cfee56f5cb5d95e5a9560dc4d9b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/continue_old/replicate_3/summary.json": "59cd62a91d8061e90e05284cf470005f29eae347595819826fc8e4a95541f560",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/continue_old/replicate_4/summary.json": "b0a97370a51f056b79248f93bb434547002a4a3dad36ad893263f31b37963bd0",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/continue_old/replicate_5/summary.json": "ad754e6b29eebce7da5adcbc2bf89d38104179fd28d784933e710fcc3b9de140",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/continue_old/replicate_6/summary.json": "d2c127b9dbc3cb3624d9ce5020361ad9b833a49880992ee1f4b1f9eb292e4e93",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/continue_old/replicate_7/summary.json": "1747df57e1e2fc9d9cc0753c22b33ab04308d0d79a8c9893a4966eaa8cc233f5",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/candidates/generation.json": "fbd71209000c5f003003bb9d551a2b1e63b22210f995c2725e1facfe096ceca1",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106001/cut005/candidates/plans.npz": "5b1104c33ca5c6ca7079a8dd096f6a9f7429b0080cf6c0dd9d8c9f7238745593",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/replan/replicate_0/summary.json": "75023d0c36ac0fc55e38c330687a51e77299e152f939a6dbb7976458361cf25d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/replan/replicate_1/summary.json": "afcbdf7fc4e4541a2aff6db303aab3ff20174b9242f37b6bfedef9c97819234c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/replan/replicate_2/summary.json": "af200bbb569bdd83d56d30efd40a161b2dc7a177b37d655aeb9bd9fd80306e87",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/replan/replicate_3/summary.json": "11b615d972f8e8331d8e968a3582a6f44cb5ef4d9fefd3e9236ca1abb0d02640",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/replan/replicate_4/summary.json": "ce3db01c8dc1420ee8deb9789ff169d1f0aad661695e90ad92c7e7c8817f6b20",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/replan/replicate_5/summary.json": "419a63c1e2831b47567a7400bf5c4009bcc39bdf341c6c94ffaccdb87ca1936e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/replan/replicate_6/summary.json": "f038e022d6aa134b0a88c00ac375a3fad26f08cd1f98b3e5fb9e2ffce78c755c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/replan/replicate_7/summary.json": "de2a3b2cb8a9756b9a80bf4e418963de7aeb94a8e9093304f5c157dd727d8ad8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/velocity_matched/replicate_0/summary.json": "8ec17168da99bed3e1ec6c1352ca97f84eddafa34d82c59458083f0b9d6bbf7c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/velocity_matched/replicate_1/summary.json": "e9f0aead690eaaf6234c73544e476cb936cc7f7618d1549f5052bebb19eb8e90",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/velocity_matched/replicate_2/summary.json": "5f9bb9813e4f6d7a1b2fcb53a409f25eb1194eb467351b96ac9bbc95c2e24dfe",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/velocity_matched/replicate_3/summary.json": "1eca67a8cee9775b0b8902097dee409f72c6f36f03b7c2cd00ee8a54ff3c4305",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/velocity_matched/replicate_4/summary.json": "7cfdf1cc12506d92021582006c9cdc20553de52867f4dde2ba6a81faca23a529",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/velocity_matched/replicate_5/summary.json": "8aeb726bf743ef544d84fddac55b15403cd12d03ea0c4ee1a45e2690c1a77edc",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/velocity_matched/replicate_6/summary.json": "ee4a3aa44fd567ea02716c3236872af4c68c16f056adfc917c24d4166ac905dd",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/velocity_matched/replicate_7/summary.json": "4a109dac96b1224798cca635bce2a3fa6ae8bf5d1be5d1cc07a75ea35d5e940d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/direct_matched/replicate_0/summary.json": "0635b89b37952676564fb530604b86702fef42c57acf439e949b143747b5c143",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/direct_matched/replicate_1/summary.json": "135e99a8a4217832acd3509631405337a02931473da37f7ab9c94fb95b748192",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/direct_matched/replicate_2/summary.json": "ce4a9b5b69139acaa4a24da7fd1cb0259cc8ea22957c30c8cba040d1b2829f4d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/direct_matched/replicate_3/summary.json": "63ffc900112e188ae19eed43d92d86fce84a8ab5770aff9362e31ceb3d5f1a7d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/direct_matched/replicate_4/summary.json": "56117759678594b914b20860ba1bcb0a6386a3176d62feae592c537d3cf36c1f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/direct_matched/replicate_5/summary.json": "dfc62ceb5bf2ba2519f022212aa79d45ea639105cb18b75724acada062fc7150",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/direct_matched/replicate_6/summary.json": "94ac11154ac65addee5aecae0710aee5cd2829db5797a3ff7ed998fb35cce32a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/direct_matched/replicate_7/summary.json": "12cdd82bf172c2f71b69041271e847e0edebebe701cf728663b2530a1ecfb65e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/post_matched/replicate_0/summary.json": "50769dedf7d0f46f833d25511c9708a7f049c9d162eb06f0a26b28976ac07fd2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/post_matched/replicate_1/summary.json": "07f4abb9f1416689e4524f3edc485fa7b9a57128d92900361ad06483a77ffcd0",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/post_matched/replicate_2/summary.json": "1287ce11a29df35cc35470b20f36d9dd92d672811d1393e208daac99d736fc34",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/post_matched/replicate_3/summary.json": "a1c1398783499a1fa1cdbd4cd724411f6e91bf9df45f963227f3988510e3c08b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/post_matched/replicate_4/summary.json": "00c77937f9251cc56e7221ecda18fd9e7ec1e7f5876fb39de08febe2deac36a5",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/post_matched/replicate_5/summary.json": "b0694e371c9f9011050e7766b585f873daa219e5deb1a3b73a9cd83109859bf0",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/post_matched/replicate_6/summary.json": "49469695f33fed9c49bb3c0bf57a820d5b4acbbe536b89521c3819c758f8376e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/post_matched/replicate_7/summary.json": "0932379d66344861952396b85666c37e92000f4810b74c15e1fe9f0e866cfdeb",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/continue_old/replicate_0/summary.json": "b762989d63a65f68fb33e1949403467b85dfbc8fde6d69e5a7902f0176a6f70a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/continue_old/replicate_1/summary.json": "f167955320f2f646ee66930b16c2f7796f8f603bb2ad4f08f9ccd129874157cc",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/continue_old/replicate_2/summary.json": "912f0eb3b84b8fe1b874c0338b68bc4adec6012b2d3d42c48d2d7e34f732a73a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/continue_old/replicate_3/summary.json": "389f82f2a1212c05453cff2b4a8a3204a7155867efeb5bbb24061590c15a70a5",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/continue_old/replicate_4/summary.json": "b3c371c534f29470206adc653e29b291a9c18ab5f38a5544497880fd91960a74",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/continue_old/replicate_5/summary.json": "10250324438a55c01a2c60aeead85f3ecaa96adb70f47857b292dd894d12d504",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/continue_old/replicate_6/summary.json": "1746ab85348b64fe93934401e5b641d3a1e146ee95aaf1e004f6f11f6678eced",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/continue_old/replicate_7/summary.json": "5383278a67329d0d7bb254946a5af5f93b7a87eeb8fa8c4bd543355d3217932c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/candidates/generation.json": "25688595fa10e45eda77791f67ae72e3f2a0d3f70b774f531e4904642437c809",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106002/cut005/candidates/plans.npz": "5223a0e392e7e74fe95356a8e3be047432e6a9d28b25b98b76bc9b24519ef1c8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/replan/replicate_0/summary.json": "480653dbb79b43e212b587316c3f84509d473b5b8bdc6d70f712de3062079706",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/replan/replicate_1/summary.json": "915c5bc700220f0e97a70672295255ff28225ea4acc349946ab99a2c5cf0687e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/replan/replicate_2/summary.json": "602447c8ea657f678141bc0acfa4ed0ec96a23c0082c82f56365f80711a8f80a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/replan/replicate_3/summary.json": "869a0c91986f17917060f5018663aef3a8454f4964c0cc814cb9bdf18af2fe9e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/replan/replicate_4/summary.json": "df263dad85c7273500a806909542761c23511f3dd2fc8046b88b6bbb6121f946",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/replan/replicate_5/summary.json": "c1b63d3a2468f061e80833dcfe8d8ed1d165492c859f6b5c37f86a2ab5446efb",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/replan/replicate_6/summary.json": "ff513e5d1dd6ccd7c9d3dc1e4e81a944b69e7cf4205ebb9aa2ab90f788d97c23",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/replan/replicate_7/summary.json": "8e86d94ee3257352898b7c23ea5cf83202158827b70a3199b2ee2b110ef97d70",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/velocity_matched/replicate_0/summary.json": "4cd57906c16e8d99a32a1dfff0f2721e011b8f10f166f799c540faa2ef3961df",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/velocity_matched/replicate_1/summary.json": "27b1630ee55f3805e67dcb06f354fdc97376f6c5e7d3b61b7849505a6c4b6f06",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/velocity_matched/replicate_2/summary.json": "1a9ab94dfb76e6e91f0850a63e7029b243c2db5eef989ea97511fbdd0f566025",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/velocity_matched/replicate_3/summary.json": "0e235ea2b9f64f448e4529a0433c163d75d71b3d46861e673140e7ed6644f6f9",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/velocity_matched/replicate_4/summary.json": "4e837bccc49415e65bca3b19031795f6146af317bbc7cd6d33c534a67e5e8393",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/velocity_matched/replicate_5/summary.json": "3b13634cd099241b9363356643f70ead160e51916cbc6b03ca5c5bae7c980f10",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/velocity_matched/replicate_6/summary.json": "bac9bfd4bfa32e2fa861cb625ed7b4ca0df96bd68f0730b4b1288b41f65018ff",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/velocity_matched/replicate_7/summary.json": "40525f7dd17624ab19735d4f385db6815a73e8974bf930bafa501ef39635be3b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/direct_matched/replicate_0/summary.json": "c801a2e0c8bafd6c510debe454dca43ac74c2d27c35cf7945aa0474d54b6a14d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/direct_matched/replicate_1/summary.json": "feae07238b43a125c27d892c84848a0317d80a5b77209ed84411f973224384c2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/direct_matched/replicate_2/summary.json": "233e81251185ee30bce24c7b9b48160451d07a3fe918e535f33786b96228fd6d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/direct_matched/replicate_3/summary.json": "20beff71279ff90cd0b426cbcce7a31f2880e33601385a4be6c31838e2561c62",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/direct_matched/replicate_4/summary.json": "e4ba389e9ecdd0ed7bb53c68ab00657a352223374a48e437c15e2a29024be782",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/direct_matched/replicate_5/summary.json": "b28538a4a5577b020e932f457741365fe53f6319500dd3b338f278a899f017cb",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/direct_matched/replicate_6/summary.json": "b902e089f5522a57dc47d51b55a1864eef8330708f2ab0f7944304e77fc3f72d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/direct_matched/replicate_7/summary.json": "1fd1352489c1cc8d87cfdc4a838f0a2bc23084151d27c0133430cc69ace72f57",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/post_matched/replicate_0/summary.json": "fcc77eb77b35cae6cbc9098b4c33acbc6edaaaac44aea4927d555ddc1402992a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/post_matched/replicate_1/summary.json": "8f53010b404b1efcf35a129a9bb4aab17459ae563f9fa4a242fef9f2dbf00d24",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/post_matched/replicate_2/summary.json": "1c2b4f8637f75efeacbb7c11f1339a0f35604b0668414e8d5618f9b30b837254",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/post_matched/replicate_3/summary.json": "3bd73019f84ef64946fffe5598d17c5a7bffca5803093f6e66541399a96f6691",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/post_matched/replicate_4/summary.json": "e192301c752c2915fa0b9feca06bb7bebf5e641fee4c17bbf1cfaab31678ca08",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/post_matched/replicate_5/summary.json": "f82e2105f9b025cd991096988c0623dce8d6d4a20eef4a5367d6a6b3beea4751",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/post_matched/replicate_6/summary.json": "3a3112c3803aedfe3e5bedf404d21c39817c98642aecdfeb5e2c2f108130523a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/post_matched/replicate_7/summary.json": "7cdb9f3524d225a0e7c70764c132afcd3df146267d9f731da10f34471d0d26e8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/continue_old/replicate_0/summary.json": "ce43890f5acd78d794c38a90cfe4e2ce3c461857a1ea8ad7ab9ca41a7abdcc5d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/continue_old/replicate_1/summary.json": "59f7bdfb931ec4a3c6a9f09b47b1f9af6f06990f56361f3609458e4a28fe34a9",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/continue_old/replicate_2/summary.json": "d25ac1052c07e35f15a79df17bc79fde7200f0ab6975ccb0155a8a1dbdb6c418",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/continue_old/replicate_3/summary.json": "0cf934402973ceb986289598c8e783f50da4b14e48b55d399b83ff1e42e96aa8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/continue_old/replicate_4/summary.json": "573382241f60276a6908feb291ba825af9b3a34d21b2dad709a83f35b05782ea",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/continue_old/replicate_5/summary.json": "7fc317719daeae2503f94af2d4ed452da39928b73465947c8f5eba71c795dbcf",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/continue_old/replicate_6/summary.json": "2083fa014edbef549c19641e6437455b08550a80798ba96dbc8c4c626c43dd6f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/continue_old/replicate_7/summary.json": "1928144233ef3566e8e98dbc1c475b264814bae2ff205dadafb27137578b3770",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/candidates/generation.json": "e4ceec4f8984f8d96c167d6d534a4d5df453cbdb1d47e06026098bd6d73e1d16",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106003/cut005/candidates/plans.npz": "a61e555f2915ec4420f703a3c71883b142eba929dcf73fd79c53c1d9d3d0749f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/replan/replicate_0/summary.json": "26c5ac10ea47613a387539d0bf6373e48a3bbc75fb737617effd96ad95e19e81",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/replan/replicate_1/summary.json": "bcf0f4f1da4a6bf6595c2a2d06b0d43a543d799586e1bc3f7d8e40f861a6a645",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/replan/replicate_2/summary.json": "105fb18a8945cab3bb9b29da52db2c90ab85d0f13fa9cb93e2f5cc03b8c0301e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/replan/replicate_3/summary.json": "6e7628375f2640c12280f9b9658b59db65bf00e2b21d5a7eddb5a89ce7186e9d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/replan/replicate_4/summary.json": "ced2267265fee10d4d9fdc196d867bd6af3a95724b633414f1b5fef48cee0a77",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/replan/replicate_5/summary.json": "59590961e85c841ba3739593b0826c54301207bccbd2ddc697752fb59dfde7db",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/replan/replicate_6/summary.json": "3686cb01f472a90fe52213f39b4fbdab2a815c674565d4cfb19d380fd184d940",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/replan/replicate_7/summary.json": "811b63a32d4d2539b2e67463f0b7a043c9ca2215728a8c5ea3530e9e8927551c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/velocity_matched/replicate_0/summary.json": "eaee11ed9893b738349a65a1cf1692fe572b5eb8ef573133baefc955734e4cfd",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/velocity_matched/replicate_1/summary.json": "26e29ba043173cf047f082ef80c48d554468864b09db9fc31d306cad80f1a826",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/velocity_matched/replicate_2/summary.json": "c97a58edc9bd6cc7f4a58d16e879e3fff747c5937252b80414feb1b882c21e91",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/velocity_matched/replicate_3/summary.json": "b5a38d70bdf83978462fea6124f19ff7fb47564ed9642a77c8d46592893d2869",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/velocity_matched/replicate_4/summary.json": "8aa76fe65a36e0733560722e400a5923fc3fb34ffead0d71dba4b655635354a2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/velocity_matched/replicate_5/summary.json": "709d69e36e69cd7fcc78f7e37abb48b179cb0ffa6394e939cf027856c215c44d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/velocity_matched/replicate_6/summary.json": "7f1554a0bcfcb7c45ce421b6793bf1888cb3d2c4cdc80a78b651eb8eaff19492",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/velocity_matched/replicate_7/summary.json": "aada6ac7e3c5ac204f408ca91c23a21e7df053117faca5d7d00f59dd6e3245c8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/direct_matched/replicate_0/summary.json": "286cf8a5e05f7253a1e9ee6eb4005a90acd468efaef978fe7a9af88ee8b84345",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/direct_matched/replicate_1/summary.json": "5325b43ec4fe49659ecbc37018778fb301838fbc7653ffc2d9c0a6fb7ce37e40",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/direct_matched/replicate_2/summary.json": "07f6b0a9f044eefdb718a7bde9198b9fbfd43298a72d53cf1e4315ece28b8ccb",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/direct_matched/replicate_3/summary.json": "9f83e8c681a244c5fe67f9a95c98c93fd047e71444c4e63c64920cb6fca0ac9a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/direct_matched/replicate_4/summary.json": "8cb1f2aa8447aa9dc10e92cc621ffb09a720272acba8e4ab05cbfbd364d49f6b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/direct_matched/replicate_5/summary.json": "6101cac015df7413e7e1b35099ec72e1e3a298b10b9922c6728830c022683070",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/direct_matched/replicate_6/summary.json": "e90f5bb6a2b0f8d2eaa759bac367b6774516646a98680ad99cc38eb72708f9f2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/direct_matched/replicate_7/summary.json": "f24ab83f6096366a47f9ecaf41055d979e79c862bd85f66941d119200359c46b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/post_matched/replicate_0/summary.json": "69153ba22361c4ec4c0eaeba0f2114ef59799e771492490925658081cd6a902f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/post_matched/replicate_1/summary.json": "6cb6743805f68f49fc3fa1d8c57588e795012ad55caa41509648548484ad5c1e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/post_matched/replicate_2/summary.json": "01442e590608167e5f455abd3e6ace7fa17ad4d9c159e98c2a4ea1eab2bba0ce",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/post_matched/replicate_3/summary.json": "d1385b861491491037c00fa6f489870574be15e88f2cd17fb796a0471221606a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/post_matched/replicate_4/summary.json": "71521d1c74b29f807927b2c392ef38bc7c9884407c6ff7d69ea5f8a1408447f0",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/post_matched/replicate_5/summary.json": "dc0fb5ab06f3cb8db169dd29e89184be4e7e36cdf74a933017c8bd6d09cabe59",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/post_matched/replicate_6/summary.json": "0a6f8e8140e9ccc59e299409a038a21d91531e6cad2cb09ac39feab3edc8b5c5",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/post_matched/replicate_7/summary.json": "d67814deef692054bfa2db174c7246db06b26924fbcba5547c4b8260104a5c6c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/continue_old/replicate_0/summary.json": "8a30d86cb9092e1b8f9e3042cdede32f2b9c1cd8f43221683088413360cae674",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/continue_old/replicate_1/summary.json": "03b52646970b6722d0fcbeac30379648cc4bbf007ab970e99bcfa80a7ea2661a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/continue_old/replicate_2/summary.json": "2fad42462a690d29beef6e899dbd2a9d935f5c051469d8cfce1540a65c3f561d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/continue_old/replicate_3/summary.json": "2e9f2dbe724ec675bc8e14f11ddb46275f8b990d185859d30b362a4135fbf662",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/continue_old/replicate_4/summary.json": "f896a12ba05a3d63fe048ec213083691142ebe08c95b497f112cd5d3675caebb",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/continue_old/replicate_5/summary.json": "5ab123f52dbb9f686da773f8878f5c6da41fe0b8b5bb52cb415a9d95a753d21a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/continue_old/replicate_6/summary.json": "3946ed2a259a276885d67c50be6718dafdc011ce0a295b14191b5a5a676b32a9",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/continue_old/replicate_7/summary.json": "66140692e090639c201ba2eb7e8ce9308aed2ad410260facdf92d941894729fa",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/candidates/generation.json": "f47f6a5ed2e40fa096a933e7e2db6d446a74d11dfeb416d8129a6bc6e3c6a671",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106004/cut005/candidates/plans.npz": "7f5e7c14a4038e09547ce0bb19d15ca30811119abcfb8e2f30959ac3c3044f25",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/replan/replicate_0/summary.json": "6b9015af1b5d892e71878a0d935faec09f87fdfa8efe8b560b039af87ca1790c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/replan/replicate_1/summary.json": "9141cff90540ea91bdc6573e0cf0f64b1ebcfbbc0fbb899f6f45f1074e1d74f0",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/replan/replicate_2/summary.json": "23ebe3c7e19eeb050d6f689f642a4b9f3794155f3b5384f3b56fee02d2cfaeb2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/replan/replicate_3/summary.json": "7414741e223a3aa66b2e6f3223697d0d08946a3681e3dfd4b9082b0dc4e21025",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/replan/replicate_4/summary.json": "8681fd04c1a9a2fc4a99b8fa0c6d39bdbe47030ebf01a823ee3cd23e5902bf03",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/replan/replicate_5/summary.json": "c13dbfbd343222d1e7d72120663355bf82c16c2024c4f0561b0095a4c6d6de07",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/replan/replicate_6/summary.json": "39d3ae5deeff77f584a8d62463b2c98cd9f747dedf3f9dbc4bc900e9625d103e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/replan/replicate_7/summary.json": "3ddb19cfad2b2545d64c1f4862ec169f329709c0a044eb84f999a7eb67d05a98",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/velocity_matched/replicate_0/summary.json": "7bddc334bcbfe38e8da4e8c62a6d9e36a9c7766a5ab46f16d9a4abc3933165a1",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/velocity_matched/replicate_1/summary.json": "fdf62402d2ece98d27c8f2f8e59b8ea2277e21c31454da2a27148022df9ad728",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/velocity_matched/replicate_2/summary.json": "892fc4fc6aaeb2a76272a5c4a2d0cf548e5d7be3c920161e93cb90bb442cc1ac",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/velocity_matched/replicate_3/summary.json": "e14012443000d0ebb4cad96139ad3185161aeae85dc9c9843718bbd0f652c688",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/velocity_matched/replicate_4/summary.json": "e1909d6402436c1be46c2dba6a1569061a9527be0535714b7b09d2c74fe36f7a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/velocity_matched/replicate_5/summary.json": "026372f6e83a5303fd4904b89fcc4fe7300ad9fe0cbcbcd53a5552a9a1ab9962",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/velocity_matched/replicate_6/summary.json": "ca10f437ddcf65612932482500fb58d552c92ab39c072bb63760a54a4357ceb3",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/velocity_matched/replicate_7/summary.json": "ec778113ba5c37e7d3fd50f0feef1f0e3e8c7db39b772aa52bc5aea095cedd5e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/direct_matched/replicate_0/summary.json": "e853419f9b11e8845ab7e604a107a813270e646f61670bd0e3f5751b6765dab9",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/direct_matched/replicate_1/summary.json": "052eeaf2c291ce1a2db63345a1d7793f3ae05c96157e790ea52893f44702278c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/direct_matched/replicate_2/summary.json": "1279ba5c80136682128440db69ed5e6c5fa8cd338ae62816e733bb6f3f126bbf",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/direct_matched/replicate_3/summary.json": "62aae550b00f7270e3b4c03aa76296e394877fefb704b0371c9d70591844e75b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/direct_matched/replicate_4/summary.json": "935f455eaf75a2f774a90cf0a58c85d643a635ed2c1994c2a358055ef1bf3d4f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/direct_matched/replicate_5/summary.json": "9833ea3c54276b1ce85099da6432c0f5b73925503e420f323aca65db96d22d6f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/direct_matched/replicate_6/summary.json": "86ebed44cd92b49dc6de0d6fc145a8f0f87b88554a5733fe7249e66466edc38f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/direct_matched/replicate_7/summary.json": "2cf6033b59ae5173dbf3af556052f004b849d92c777a2170f1ad44d8c4991d28",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/post_matched/replicate_0/summary.json": "470c16ff6a5d759e7c1e3bce433caf50c9aef213dbe9eb912b26ba6fab9908d7",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/post_matched/replicate_1/summary.json": "9187d07411b80b9243765f993c8a0270097dfd243dbd853b502dd66495bf68e0",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/post_matched/replicate_2/summary.json": "302324b2bd673af39e8d8f672661b8f526afd443c3c511410dcd03a9ff663223",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/post_matched/replicate_3/summary.json": "021f83d4497a94fd163921cfa987ac96af6669879eae4459994db29c382500c6",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/post_matched/replicate_4/summary.json": "731c6ecf8ff9fbf58486580b9fd6c66ad918f7a943f6ee559f6acc1ae6d4849b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/post_matched/replicate_5/summary.json": "7c160a50e81faee7549cadd7f30f339362570a925e7155492d098c5265e09681",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/post_matched/replicate_6/summary.json": "beb911e0197b6b48a066edda0f3fd75e8c5f445768b2201b92e8f5c512f11e10",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/post_matched/replicate_7/summary.json": "a7248f400e548d654467f27105a5bf91e9bfb079499e020d211cd1f62c22e7d8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/continue_old/replicate_0/summary.json": "a652e79060d5a1ed841a250fd869ff9fa09e915dc99b54dc89ede805721cb386",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/continue_old/replicate_1/summary.json": "754137ed359e73c8ef8a84fec81e473229a72f3fd87bfe86c98d39f124feb0bc",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/continue_old/replicate_2/summary.json": "90b381917d57a9349a19ac9802d286f133f6a2ae6e1495c57e12bc43f464c9ed",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/continue_old/replicate_3/summary.json": "ee13f225638d8ac99ac372ac66ea7c79681d85b1317ba9096f9fc244e367a89d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/continue_old/replicate_4/summary.json": "72241f6eecbb4767900fa8c9f26c808de3438a3bba7fad05fdea2ca8dc594a1d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/continue_old/replicate_5/summary.json": "91fe0a153a312a904fe35e573f525f11e8614492396d3bc52920b35ec7f37142",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/continue_old/replicate_6/summary.json": "3cc3d7dc62c1f01cd613bd654fa9a22596e51fc70d9bf23afea536fa99df24b0",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/continue_old/replicate_7/summary.json": "7b4e864246b5bbf8c6f55ca781c94c10b1a557f5e9717168d107a3b69daf8aa8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/candidates/generation.json": "9ce161fdf74edc87cb365da5d6754b82f68e0a11045bdf4be4ca2144476e2576",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106005/cut010/candidates/plans.npz": "ee00389093d814c28e06a11c7dbb5826c9568e7acc97de53e3c1827dde8f2301",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/replan/replicate_0/summary.json": "39444c6735b53d992f0ab5dde1d19c8ef231a5ba9554c7d9e977a5ab8b76349f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/replan/replicate_1/summary.json": "e2669abf16b1d978b312799ff150bebff7c37e7743b5227e0f2cc2c49d92b478",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/replan/replicate_2/summary.json": "379e66f5fc6a893df99d7b98b220376a656891b6b898600c36bae2f90104d24b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/replan/replicate_3/summary.json": "47f17a85189b8839b46edfb663c172c4fd13812ebba493262eb335a36a52a71d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/replan/replicate_4/summary.json": "3af3fd2bc3637a3db1c57836db59d7d30fd91d8f87bae11f8a5a155b51bb0a17",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/replan/replicate_5/summary.json": "5094dffff96608cb64183ccb012dde6baa5dd9dbcffc772f0498c1a3ee47028d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/replan/replicate_6/summary.json": "788a64b44c7aefaf1726494ccd84cef329ca337ff03cd8a9a309bc2eba74e807",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/replan/replicate_7/summary.json": "304226ca56c43a4b5ed890ba7e283e09b6c36d940a07f88371eec5234eb48838",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/velocity_matched/replicate_0/summary.json": "b1e9bed57ffdd55952eb9ff941895a528caf75cb88971ad493b7c88bd9921b23",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/velocity_matched/replicate_1/summary.json": "063f426a6a14f678f543d14ef6e036fbfe86ab46d9313e40a080892109eba580",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/velocity_matched/replicate_2/summary.json": "8a25ba1d0e946da15d5438974ec316452cc3437bbdc5807e41abba44a3a6ac61",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/velocity_matched/replicate_3/summary.json": "d9cb8f94b6319f2e0b83f631c1470e46baa8088e7d5fd88a45decaa21df392a2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/velocity_matched/replicate_4/summary.json": "04339f0fa884c6fb38f410bfe48446ba6142a7e7168fcbc2138f709213cda020",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/velocity_matched/replicate_5/summary.json": "eec9fcc7c275e4f38337ad734caaed27615949638ad32ac6efaab45a3b69db5c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/velocity_matched/replicate_6/summary.json": "954728bd70481e14446f4083e4f5b3517ff2eba56df85841419670d774f28f1d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/velocity_matched/replicate_7/summary.json": "42b55c474db24b6bc3cf569ada3a28b44047d7b022dee17b143d29a479d34ee3",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/direct_matched/replicate_0/summary.json": "627bc9843bccde32bba5adadcced7cbfca3f2f43aa7671c52192048ba4e51543",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/direct_matched/replicate_1/summary.json": "9d231c9aee1d41dfa5a990ceb6f03009d667427b77ffaf83ad16e953f9b3cf4b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/direct_matched/replicate_2/summary.json": "c6bbe2154a885b0cdc05e584d3576ac452eec244a57f59701b835f1759375228",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/direct_matched/replicate_3/summary.json": "c6a74bcb0eebf03c58cedc26d4649251e8857f82a4eae50bf20283e31313dfc5",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/direct_matched/replicate_4/summary.json": "96f2155eac6b4ea5920ccb43e2eca61eb7844ba006c1bdd92bafe9044c0a782d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/direct_matched/replicate_5/summary.json": "5d61b872644c22ca918398595b5a1b1b5dda63d985085902f989658c1f133608",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/direct_matched/replicate_6/summary.json": "1664632b8cf2845de6b755d8637cdda10772b1c911232e0c92497b7433b80d61",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/direct_matched/replicate_7/summary.json": "1517dbdcbc05542de1d0256ac8d2fd4a68f4c901a7e091bf0e92df86b93c34f8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/post_matched/replicate_0/summary.json": "e89e63e7e3c7a544fbec18a8654bcf45aa8301cc775823e099620a3ca077979c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/post_matched/replicate_1/summary.json": "9420f31f8ae1ca56757b6dd28418bb501e95aa3e7aa1485b47877522bc4c7380",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/post_matched/replicate_2/summary.json": "c345d57f921e63e186af36bb73d0d9b7023a80615e0886bd1073dbda338b9b55",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/post_matched/replicate_3/summary.json": "87a06b75bb22cb0022f1e020814af556d1742b192bee199dd88c33cb8d5707c7",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/post_matched/replicate_4/summary.json": "25e30fe1de44c274729d222e63a1de0b1715a61e9b4e65095c6834daa0c9f892",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/post_matched/replicate_5/summary.json": "67c7b41a89460d143f0ffcff0112a629219320c7dc7d436af40fc362c36a226a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/post_matched/replicate_6/summary.json": "0099338aac0a65c52f28d49b098a1dd2120edf15d3de77c2dceb2c90bdfd3c9e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/post_matched/replicate_7/summary.json": "5556fda4f748fa841c58aa88920f8cee99406c7fc67f0d379e8e62fa1c8278ce",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/continue_old/replicate_0/summary.json": "b598b06ad9bf7e4f7083570b25c21002b1e42d126151905a0a8de14819cce2fe",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/continue_old/replicate_1/summary.json": "7914335e3ae403a664da12f0d2ba2088770704652d294e587a6ecf4f94a52fc3",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/continue_old/replicate_2/summary.json": "afca75d2e10252beab00f3e95f80dc892da835c8aece8737bceec01dbdd3150a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/continue_old/replicate_3/summary.json": "35722dfbd78f470121bd979d74d3d9d29a874dfb43ab582158f52a00b0f73235",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/continue_old/replicate_4/summary.json": "83536f804120647bc62c8919c0510e810c953984b85e319652fd58d2359422f5",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/continue_old/replicate_5/summary.json": "fede2b196db7f5c81bf9ab250fda6ed689ed4e1527d9f446447a40f790bfbf50",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/continue_old/replicate_6/summary.json": "e5abf52da8589e7c9994565fcc16c1d4bd776a383629e0acf37e0995cc881fde",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/continue_old/replicate_7/summary.json": "e52ea82bb628f1998f08b04c1fbb8486224a542d4e82e98124ed72fff70da88a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/candidates/generation.json": "eaa7980f3a37cbe1f2c18b6b17bb797263afc43ec9b9192aaab89cfd92b6d3ae",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106006/cut005/candidates/plans.npz": "7025025bf4467aba244d9287a14e4ffd6fa506c5ca34085d0b69a49a25ac9a27",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/replan/replicate_0/summary.json": "dbed7d9475e9b3d299e7282efc90eede2d50c64232996bc065efc5ebb39f9822",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/replan/replicate_1/summary.json": "7ef597ceaca9dcf04e112f9fd35d81d4329a14a297f8f75d768b4709b8632b4d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/replan/replicate_2/summary.json": "de984060266d3a1171d4259c5c97be8723ca5e908fc1ddd3ba7ad0ee78fb7a2c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/replan/replicate_3/summary.json": "aeabdc331ce92f861a664f12431a263c222cb8ba5f13ccaacc4800c04a229358",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/replan/replicate_4/summary.json": "09eb50ec58adfba6dec7080511934f82693c4e100e31359c224539e1c7c07930",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/replan/replicate_5/summary.json": "39977bb05c8739d3d610a26094547fdf66e42f3a619150aaebbb1fa6fbccb52a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/replan/replicate_6/summary.json": "d4f9dbfdc4e58b2019d3874768dc5dbbcedc0a09bca1189d87e2f2af096fa71e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/replan/replicate_7/summary.json": "cfdb1bfa889bfb0dc6c938a40b8669e0989c35163600707690a05f3b4e09f135",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/velocity_matched/replicate_0/summary.json": "453b6c5030fd55a1dd98d2fff2319ca69624bbeca15a4a612a34d53a113718d3",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/velocity_matched/replicate_1/summary.json": "5ba3f98e2c7f1cf8919a5e51ab7578b141e430cbe27d97f2a98a4b241156256d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/velocity_matched/replicate_2/summary.json": "62287418eefab9d5c3aaa5957d930f20a33db0a611ed229643c4a4e27ff980da",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/velocity_matched/replicate_3/summary.json": "4df0e6cb49869c21dd77be569c745ddaa503b30206218b98407e3814d1d4ddce",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/velocity_matched/replicate_4/summary.json": "fa8a9fb13d11c9324bdd0e76ad08e013ba451a1e07c2d2ef7c9fef7f53ed4b08",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/velocity_matched/replicate_5/summary.json": "da82296253db1a7977737cc481c042dba4473f58168092abb70d506befd11096",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/velocity_matched/replicate_6/summary.json": "539c6fe43f829301d8ee5d5ed3c54696ca4fe6ee24f7aae6b52494f1fda47a0c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/velocity_matched/replicate_7/summary.json": "bf0b481fd6975bdae39436ee191a532fbb12daabd931caf31d27ace7e2fb0754",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/direct_matched/replicate_0/summary.json": "a69b96605413af5ffa9bead743e6d5335efd3c72a7fe88796ecc483527c4c8e6",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/direct_matched/replicate_1/summary.json": "e2d4cfa9a872f8682f3f4c103f9911b17c0afa6652c3db59d06a9f2729fca844",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/direct_matched/replicate_2/summary.json": "fa92b8a851f55bc26a7a6b4bdb0e86230c1db48fb14002f9102e8e848b665040",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/direct_matched/replicate_3/summary.json": "908f951a2f978ebc3a7edd429843462e514a235975fb4edf3404d7d658b9e20b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/direct_matched/replicate_4/summary.json": "081445e447864e6a4c05d675d634cecbb8088c11b608690735970fd06c542367",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/direct_matched/replicate_5/summary.json": "4e89ef2ae3304005dcbad67433535eb57c16ae37810005104357b4a9344de464",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/direct_matched/replicate_6/summary.json": "e16f2804981aa2e1dcb8a185c951574e5f784b800184922cb08f885bf262b4ae",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/direct_matched/replicate_7/summary.json": "1265c147423725f6000ecdf0d8f84296dfb17dbda8cef1e2ade04c98147ade91",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/post_matched/replicate_0/summary.json": "9a9329cda82e106b753fa5616be1b5aab7e29aa2bc5fe218b009b93b652ac05f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/post_matched/replicate_1/summary.json": "0e62bdc16abee138afd65595e872f4f6e77898a59f3fe12d0f4f0697e2443074",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/post_matched/replicate_2/summary.json": "237bbb1ed99d978735967e54f391a362b327c10cb39efc22eadca915fecc3580",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/post_matched/replicate_3/summary.json": "9f9ad3862977bcdb32d4e733fff8dda25b2a45d1442e49b07d6d9e4abd9e97a9",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/post_matched/replicate_4/summary.json": "a0a730e977142b7a7046d7cfcf1498c8c0f4aad0782b9d9f35a2e9a0d489c555",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/post_matched/replicate_5/summary.json": "5d7b4ec5895da4b8bffacc2f26ec1b65b8782ddd6ad12b9f7c8a87ccea7f2393",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/post_matched/replicate_6/summary.json": "784b9b36064bae36ee002f82e5f35730e2fdaf6251f962e6219ffae751a8b0ad",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/post_matched/replicate_7/summary.json": "5cd55d4d16ffd4dc216a8e24c847b62bbe30a1a2eddb36e562f68b111b520705",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/continue_old/replicate_0/summary.json": "fdb9281e87f3054ea21d870c630fca5e54dae2be744b540dc9d1d6a34aea81fa",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/continue_old/replicate_1/summary.json": "f188054112ecb8ef91f47c92bff75f37ce67548ee23df206fee55b8a070a30b1",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/continue_old/replicate_2/summary.json": "0efc5ccbecc430cc946591d2b9023d85a4b68f411dee8466b042d602c667ecfa",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/continue_old/replicate_3/summary.json": "76f57bde2267caa7c150b0dbf2b61df31c9d2bb9b57329118a1352b11af16ace",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/continue_old/replicate_4/summary.json": "cc8e5c06b160c85785de569948d55b16596f74180a61ae7e52d17365184d1010",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/continue_old/replicate_5/summary.json": "5abdaa133b06ca540262cd35a38d50ac980c6f6aa4bd0e2e036f7084470bfea0",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/continue_old/replicate_6/summary.json": "047467dbd8dac8991fdb975cb4c2a6d9db17648c2774580cc460a71809402224",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/continue_old/replicate_7/summary.json": "87c3ee72a9f8fbd27fe35e223afcd3c427ce0208bd7e56f2a949593c819c09ee",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/candidates/generation.json": "55ac30f847733f521af683b4a5d31a8a625e0f1c1019a069c23117d6e0330250",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106007/cut005/candidates/plans.npz": "bd2800d8fcdd7591d412876605920b756c69fdf4bb62b99fa779e9f3e12309b4",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/replan/replicate_0/summary.json": "e868cb3d0e8b2a43e435897bfa52b81e7be0a834785a56c270b10c48f6ebf687",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/replan/replicate_1/summary.json": "6f448a9dd662fc5fca36650b2dd74ed6f17875ce474de0caaa3b23a4ec372710",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/replan/replicate_2/summary.json": "7733c7dcac124d18e48fdeb8aa67bf04ad7ad1cb1cdfb9e3775c23e2de894f35",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/replan/replicate_3/summary.json": "3c78437133f45560ae496401435fbd3dba8862e1a07ef16318aaeff03fa6ba2c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/replan/replicate_4/summary.json": "5a574d6066fa1565c89762df286f20c3469750468e4e23e5cc5489fa22c7f704",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/replan/replicate_5/summary.json": "773ab30b82c97f2ac389e50d13a5a0e4e6126370243d23e7c1569e0169002eed",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/replan/replicate_6/summary.json": "fc9debbe6899b74f88a1d5d85e86dac8d87d30cfd8d463d6cd502d04138250b0",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/replan/replicate_7/summary.json": "993a68ebb837da9bbfa12d92344c57c81f4e91c03f4d6ea072b33db91fd382cc",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/velocity_matched/replicate_0/summary.json": "e5a37180707958475f200a3fca059303428de93e54e40644d28748595e01d79f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/velocity_matched/replicate_1/summary.json": "5a8ea110997d139c5b085e045235f1e24fdc2fcfbd1d239dd7c9713d5b6329d2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/velocity_matched/replicate_2/summary.json": "d823dd755ebcb058dddc11753c3f2863633399abe8c3d8fd2e2060a96b1ff698",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/velocity_matched/replicate_3/summary.json": "47a505108330f8382f55dc42e1cce5e832b6930ac370294be6cb235e0c154653",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/velocity_matched/replicate_4/summary.json": "371f5c2437ed9eaf4d2600b92e2faa503821990072292db4784de532ad96b859",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/velocity_matched/replicate_5/summary.json": "7dddeb266f2655b249a5536026bb65cadb56258d84078999d130ef53308ff355",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/velocity_matched/replicate_6/summary.json": "e990ef384fa429dd6812c6a2bf86fe4554b92a7c1702a4b781ba03c9de2153e3",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/velocity_matched/replicate_7/summary.json": "fba7c207a5e2e55159c95f41966807675969003d1b7cd7ede551fde5fab6c157",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/direct_matched/replicate_0/summary.json": "f849caf43bbe8bb43e83d743395fe2eb1c76ebb75996e311cf851a82cc723b37",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/direct_matched/replicate_1/summary.json": "59215b0c71dcb236ee4abdfb5bf9847f23b7f2718c3fcb9670fb2684e8374b95",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/direct_matched/replicate_2/summary.json": "692fad556b84896ab40138c5cca7471fa93fd8b501e02c6d1bd4120acb83c69e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/direct_matched/replicate_3/summary.json": "379e001d9ec5c58c7dc75e01a151bdd667a1503a8bfc8b5db6255e84578c386c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/direct_matched/replicate_4/summary.json": "bea5d6a601431628b20fb0755d56627f24cd4593eb45458489ebc376f2cf6e9a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/direct_matched/replicate_5/summary.json": "dc8deba40636336f94f9ad27374cadfc5d10f956d436a1115106a21917b000d5",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/direct_matched/replicate_6/summary.json": "65bfc697cd2802e96b4d6301726fcdfeb8c4f43fd867f7580e033115bc10bad1",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/direct_matched/replicate_7/summary.json": "3b73dc04f8bdec56570abe0de7c04626fad9838b6b26b1d606440be5e83c9f1d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/post_matched/replicate_0/summary.json": "378ec95993a1cacc6805eaae4cd8fec971e2a86ffc6b04dcbef3d94e1edf1ea4",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/post_matched/replicate_1/summary.json": "5d050bf755244477961855f164ea8765a19343d44b2e2f1a3cdeb0f57deea0b2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/post_matched/replicate_2/summary.json": "56a884af597bd91a30aaf93f61a62eea3ccbfceb0cd218d1c981a6444ef65582",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/post_matched/replicate_3/summary.json": "67a8f31a70f2c11eab59c56c4dd0031e6caa126a314233f4c552e3b0026a3e9a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/post_matched/replicate_4/summary.json": "8c159f3dc580ec509fc6c48e039f1500ba5d9b6c9ce9119112c95dbb139f38f7",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/post_matched/replicate_5/summary.json": "dd4ea062976423b184d2d54b521e12af33059bada2b454f5177b0e015312b1e2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/post_matched/replicate_6/summary.json": "ef10761ba3f821f4c0975b76ea07fb3a772ecd26447f644359399e29aff3f85c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/post_matched/replicate_7/summary.json": "e4f61a4b30a86159732de94cd9e3401094ffa16fb06aa90a3687753e1b3e1b55",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/continue_old/replicate_0/summary.json": "fe860a233622bfecbe1fc6aed9279e4da56b2a3c8cbcee180805c96a621126e0",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/continue_old/replicate_1/summary.json": "3c0a39b99f30c8104bab732cdcf019569570f10aeee48a3fcc60103a244500f4",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/continue_old/replicate_2/summary.json": "fae3ac85fc9a2266cea6c19e2de29a5e89870f98ad38006ee5b9713115cccdbb",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/continue_old/replicate_3/summary.json": "06693bd37a0b6f9c16f67d80dab03f6582cade28533d0087844592679c559b3d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/continue_old/replicate_4/summary.json": "474aa1dca458d52883ad2e84da3f703ee9c57a156172d749d5aaa30f8350c736",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/continue_old/replicate_5/summary.json": "44855ab3f8bf16a5c8f3d5aa83bd56a3b22dac8ecc3caba4f438db5b5ce8fb3c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/continue_old/replicate_6/summary.json": "ea69d53ba0eb8fc234781a9db05e7ecf31083ef73dc2ba11254a2c291b53fdd1",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/continue_old/replicate_7/summary.json": "98e5dcc7b3d63c9f288b53c1d961aa5b6c894529af61446a41a5563c7bcc78a2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/candidates/generation.json": "04526777d64e9927d846e331c5ba9b7f9030f08e7d16df8027ead377f90ae150",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106008/cut005/candidates/plans.npz": "7af4f89fbd30a10ed8f3c9f2bdff4a076b97b9c4c2303046d1551b5025fd3098",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/replan/replicate_0/summary.json": "0ba17d0c3ae4e03ecb357b6c531fdf79bcdba8026fd08af8f0672eb6ab49967d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/replan/replicate_1/summary.json": "cd47508a3493c0cf72147b715e3c4077bc48f014a228d21b8d4aa1ddb94b97f7",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/replan/replicate_2/summary.json": "94be8e42b17054a563b5bff7200a3ce65331c26546781c3162a40f9de212f1eb",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/replan/replicate_3/summary.json": "9a6e96c0b15eb19c9f011f90dd0bdc8c43aac62e9da72a0f127b2f1ddbea4201",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/replan/replicate_4/summary.json": "5290d18ed3eb51401711ee1a251f2b26b29a0d1f21a4381b8c4fa1d6bcdc566d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/replan/replicate_5/summary.json": "7f6c21f2f40248b6438fb19e4d5fbc05227d91be5d59eaf50fa2ba6389445ba8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/replan/replicate_6/summary.json": "a9a086c55ad42b5879ecaa89c06d1a924d86b34c7317356dc3fadde201a6f978",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/replan/replicate_7/summary.json": "ae966660cc9795f70b1e28d39c639acc03eeec820b1e41156e6048212c4a9afe",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/velocity_matched/replicate_0/summary.json": "49207700345f9858c6e0460906a4f545aec9124a5c09c5ef00c046e499705a1f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/velocity_matched/replicate_1/summary.json": "82119dc0f13375a68f6c52fdc96e7f09217dbc15bb537f89112a323358c3d360",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/velocity_matched/replicate_2/summary.json": "5a69a8ebab08ec44276d891e2fe135fbbf9b0794c941e76ac2b349c9632b03d1",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/velocity_matched/replicate_3/summary.json": "b61ddc33394eb0b837e8939d357d5c2e543d7d7a5384c08ac25b7de52420d2eb",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/velocity_matched/replicate_4/summary.json": "c85f78a3646b8f4540b8ca6cedae946ef0554d8bb93ce50a9c43f9509a15f92b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/velocity_matched/replicate_5/summary.json": "258b3111b6ccdaf0e80de5488355542380d6e260d94969a65eb1bb61b57a7d5e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/velocity_matched/replicate_6/summary.json": "3f0207badcf50ee5c4332b33d2f6e4c15e2686a387d4bdcece4be269efd59426",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/velocity_matched/replicate_7/summary.json": "62426c4d9393fbeceda25541147efdf49b29b3e9fca5dc38156dccde38688648",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/direct_matched/replicate_0/summary.json": "f1b290d9fe5c70947746c571b9450c3ca2943b2d75c94ab5212e23c265a4288a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/direct_matched/replicate_1/summary.json": "8101d7fe75ba30ae603a3e6158281f9ad2aa27a3aeab10c12b167124547c6893",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/direct_matched/replicate_2/summary.json": "62bda0fb28035013cd9644bb48fba78c15661e3b5c70e8a100764933b4063a32",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/direct_matched/replicate_3/summary.json": "383922f946ac517cfca4d3ff484ccbc056e596b5cc3c6cd757ce356b7f05b95e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/direct_matched/replicate_4/summary.json": "d6ecbfbc085c85d6597828a270abe3b238386f60d09b6588638e335ec76ad955",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/direct_matched/replicate_5/summary.json": "381e7686eb899a994e802ff58ed75125fa4671e479d299daa9a8a02deea0548f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/direct_matched/replicate_6/summary.json": "659704be854cc97490596e71a38d3ff4d10105ef4bc8b96463258a4febc70d47",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/direct_matched/replicate_7/summary.json": "53c8d964705df94fc1bb41a0bd6ac906864cfbc7029172b62b860ed054f4e10b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/post_matched/replicate_0/summary.json": "caac30dc36d576982be8ae51a372189dea0b2ecd738eb93726a89aa0356c9819",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/post_matched/replicate_1/summary.json": "f5f77b8912ec8f4558cb1c4e2519af9e28a2d0084c2c7c9c392b45bbf4830289",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/post_matched/replicate_2/summary.json": "bd148c22a371ce1dd9a5927388f5d186c3f1f83428b2a2d5fe8733e0427f07a2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/post_matched/replicate_3/summary.json": "94ce9a63836708636858100003b7ecca292d1a422b3f76b9cf167290cadb0bdd",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/post_matched/replicate_4/summary.json": "41cd670b115a35c272ed4bf73746526c285d120759ca91a716cee9520c45baa1",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/post_matched/replicate_5/summary.json": "1d1cd7200ef72f0de548ff4bf7f82fdc81716973344d0d92731bec94c1999375",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/post_matched/replicate_6/summary.json": "f9aa25ef9659d942023cecd5bf3f9d6ee0092eb2419c8933ed262b5f0fbc1b97",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/post_matched/replicate_7/summary.json": "5d2ed6687789067e4871d0fd956140c7be19ed422bc25caab6818202910c7c23",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/continue_old/replicate_0/summary.json": "3fa88279f242c703ab622bce2fd16a48265148c574cd3bea21373af5ce4ebf66",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/continue_old/replicate_1/summary.json": "d439011bb0b5485b8c0b967fd3d914b5b222daaad258889e7850593c02812c77",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/continue_old/replicate_2/summary.json": "8149bd9225d9fdb8ed51f889e75ad0f55cdb62b4fd1b1c83d1654a245ef15a57",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/continue_old/replicate_3/summary.json": "8414186226c24f893d532d4baa26ceb1b734fcd08c6af4e7bc44e605c08e55f9",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/continue_old/replicate_4/summary.json": "245d9dd08a018dba3f51836e295dfa3875046e0d8f13e0a47804141ad2d5f900",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/continue_old/replicate_5/summary.json": "dccfaf871c227b8e8f3652b8ff0593320a08ccfb93d21b30a97d8b7df8156274",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/continue_old/replicate_6/summary.json": "7824b9a4eb1c757659d7fd859f1ae6a3931a2d6d6576023be43ab53025493ecf",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/continue_old/replicate_7/summary.json": "b0957acd08dfc04bed4b698708ef1b71732468e22f79b2ce6f2ff7ca5c442b69",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/candidates/generation.json": "de566f36ff1e82e1b22e8ddc9f00bce41e826fda69551fb34ec7738f5f4831ec",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106009/cut005/candidates/plans.npz": "4a1aa0bbf54ffa737aa83071c56f84eb69ab60c1862a61c026797735304b7693",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/replan/replicate_0/summary.json": "825543d787119c7d71e8af30991ebefaf4886140901d8ddc24f8892c1119fae2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/replan/replicate_1/summary.json": "5f140f5117ed29064cf356e52273fd1e5abe2a31dd63489d06d06542a9a6fdd6",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/replan/replicate_2/summary.json": "f6bbdf7d31a2abd690bd9b395b66cfee14fbd384325d73d6bb9ab11eafa8669b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/replan/replicate_3/summary.json": "d336c432ac58140dd5bf5d42a85dab7845b3b29ddf16029731a0a2f45589069e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/replan/replicate_4/summary.json": "832e5ca145a43b947aecda6bf8870a202b2909c63c4743589134f10fc272af98",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/replan/replicate_5/summary.json": "dbcad2131a33ad6f3cb36b1a658a949d069cf219db5ee755e58e9d3567532cf1",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/replan/replicate_6/summary.json": "686aa3084617c75e9378f23d2ff0a0340166199bcddb24b06bc2cbbbfeaddab6",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/replan/replicate_7/summary.json": "e171adf668db15b5bbadf26ed09386d6886e2b8e03c39b3b5a0eff5ce6848a5d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/velocity_matched/replicate_0/summary.json": "2f2f75320a576919ff26345e2404c678254447eede184d4db2eed548167c0e67",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/velocity_matched/replicate_1/summary.json": "fb27f03f1761f5fec4ef8f221104223300128bbb413f181e6e3eb68a4c76c8ab",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/velocity_matched/replicate_2/summary.json": "c7bcc8913fba902e92195c8e284888c252c9d3734d8274b32c4a8b9a63e99c35",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/velocity_matched/replicate_3/summary.json": "32c9941bc98783ec80ed0ee635c48a8cd497802df7c2bb228bad2d20c2b475cc",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/velocity_matched/replicate_4/summary.json": "028c285eaa87c296ed2358ed284fdcfba2f216061ae34ecf328768d0e1fa2170",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/velocity_matched/replicate_5/summary.json": "454ba749ba6ee51116b4181fbfe8aaae02aa94fd106277792596e0e8d97bb50b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/velocity_matched/replicate_6/summary.json": "a9166dd1d2a93b73ee3066e923e7a52a48ceb44172e0ab086fb8fbe53f2d1681",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/velocity_matched/replicate_7/summary.json": "7c58086a9f0e019def2b49018f8836d791c4db02e9b204b18e4e9330b2941cf2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/direct_matched/replicate_0/summary.json": "e391273bd87a9845db8b63bcf58d7a4eb134e306cd85eb7f3f441beace98fef8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/direct_matched/replicate_1/summary.json": "ae8efb5efd446c60383d3e3ce1b9d1bcbd4da2a0827db1a4fbd743d1251a1ae9",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/direct_matched/replicate_2/summary.json": "5612f1244476332387ddbf250d45e71a54bd62f4d77508ccd3876877fa64947d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/direct_matched/replicate_3/summary.json": "b5b94b8abe502d579fdb6b6240e7bee3f6235053cad65a488800c8bc693f1117",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/direct_matched/replicate_4/summary.json": "3a075226c46db5159db01e45a4304c02f9678155a30fcfbe6ca393c2db785ec0",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/direct_matched/replicate_5/summary.json": "6fffaaa4480e43f1b2abeeaeee82b383ce4d7ddcadae4eedbed932c110840953",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/direct_matched/replicate_6/summary.json": "a20e55427c5ff67f36f7a3289a9855cfd2516d9cd8db36ead9a4e98456a7b653",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/direct_matched/replicate_7/summary.json": "762690f4c68b2af0ba3f7672028ec51b94698d0b1dd1bbe8aa8a0455bfac8ee4",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/post_matched/replicate_0/summary.json": "469728c06eae3eac6ce96c34864696b2d3e2c1ab0306f0720c2d664242aa531a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/post_matched/replicate_1/summary.json": "11e7abc746d6c08866db82846eed1b37c3b6de8366f0d6aa9f80f17cd3ad7d78",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/post_matched/replicate_2/summary.json": "a7970c1eef0d00acac4f5be01a1286f20d329fef38075e0b73d04def2e3ec9ab",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/post_matched/replicate_3/summary.json": "29586186c372451640dea9a17c0444f56895aafe8bf129f426a0430e9f7ad2c8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/post_matched/replicate_4/summary.json": "3d8846244a0e507f27335031e4980acb18c9231d95298d883ed4b3fe4bf41034",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/post_matched/replicate_5/summary.json": "fb8a8ebfa3bbbf2a369d928602ccf4b47742ecaee80ce4ff0d9d7ded20b6f9a2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/post_matched/replicate_6/summary.json": "ec06ac88ee456f7607dd1b7a5d5dd6a982cefeeafb84bef654ebc0f53e6ac817",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/post_matched/replicate_7/summary.json": "8f30ff481398c6d4cf792d2fa6c41e8e89d9843d13b08506e8b015ca4f6cdab7",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/continue_old/replicate_0/summary.json": "cae774b907082b1576bb9fcc6eacc01a72f98a0c91f43756ebe76f0c2ab5dd5f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/continue_old/replicate_1/summary.json": "2097132f2bdcfdb9e3fa927ecc16838817e7969d07c9c83c4be6bd3c7b8f937e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/continue_old/replicate_2/summary.json": "28fb859cf9976bd9198f6e54ae294a8fa7bfea5cbe9a07f8bdf0fc71ba2a96f6",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/continue_old/replicate_3/summary.json": "0bdc947af1bdc31e0a743875b8475afab2f43aea7ff5e68411c5fdae25756117",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/continue_old/replicate_4/summary.json": "d0f57d1c69e7482f02c859f4ea03ed031f33cac33783e50335dd6aaf83f45017",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/continue_old/replicate_5/summary.json": "4d2b8d482747829e6ed9733685fcd9c6afd64818a13832af0c3cf565f7651192",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/continue_old/replicate_6/summary.json": "cc6582114852f6ff4bae9ae3938ed70abe467ecf391398b4bbdeb00cb20d2030",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/continue_old/replicate_7/summary.json": "f101a03406632d4d4ccc9463cbc779cf3dfa7cb58608bfc565945ce9433bc4c4",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/candidates/generation.json": "8cc85c1588ef905c294219d5c67c086d07e487f5fe4fb10112042fd50a09420e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/disassemble-v3__2026106010/cut010/candidates/plans.npz": "5c5abbac9eb88434dbfff090fad6ec04ef2beb459a2391e0f5b198039ab1dd96",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/replan/replicate_0/summary.json": "19bea9a6b305b916c7f50496b1e9f03341b702ebb0c235c0d376e14a98e30746",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/replan/replicate_1/summary.json": "f1d5ba1b2619266e3303a6d500015b1b495bf170462e97097faf753a27880c30",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/replan/replicate_2/summary.json": "0cae773190ea1839c2bd10ed444bde3ed61f913215616642bc325164c734ffbc",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/replan/replicate_3/summary.json": "ad97a71883d09412aece29c16e61e0102eda4733b5e51e8b167ed0c4e465d1ac",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/replan/replicate_4/summary.json": "494f6e798cd3b8d1a5a6a35d4f0799bc9af93a00aaed824ca6b91e0c1aa5b205",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/replan/replicate_5/summary.json": "0539b484b38d40f9722de258e0f7bf598929fcda7ab37ff5483e4328259e5f9c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/replan/replicate_6/summary.json": "e320f957d8c834094b43e0d53f846f61e6a81936fb61f795faaa878642d5c226",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/replan/replicate_7/summary.json": "b831acb75382fee3f272be3804c9944829281a6bdc3b0cd2f5d104055924f18a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/velocity_matched/replicate_0/summary.json": "f132d3130b4f49e4410bda7851df239cf4dc6c8bae464f221f0626137557a1fd",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/velocity_matched/replicate_1/summary.json": "3fd96bb473ddb1a8e0794ababf993dc2331db3e58a461c78f70112e6800e0f3b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/velocity_matched/replicate_2/summary.json": "cb1adad2358a79db171a51a7f756805944ad034da675e80fd26275e4b02b4cae",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/velocity_matched/replicate_3/summary.json": "9f9e8e8584d9c4d06e8402944f6a8d061f8c6c827c10b1e12106b9b1c682cc1b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/velocity_matched/replicate_4/summary.json": "c685ffc6b07436e1868a309c64ef603939be432cbf7b06520a8d1fc8dd8fea64",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/velocity_matched/replicate_5/summary.json": "71e2a2c7e8fd6c381dbbe3612b42722fa07910803fc00c118fb5e119a8303c9b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/velocity_matched/replicate_6/summary.json": "d7f59f599481bc6bd52ff52437aa615c0ea3867c33bdca8d144e15e53ecc8cfd",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/velocity_matched/replicate_7/summary.json": "e74c09dac208bb63184e55b5dc97046dae5f87a5d1297b313f4f77017eacc003",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/direct_matched/replicate_0/summary.json": "ec572547bda507dde86689c1027ed2b27362f6e381d20df5b0336c75146e05c8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/direct_matched/replicate_1/summary.json": "d51d80e711e2f2afc22b9550d1f40305b200d13b9e4101b874a2fd7fa16f3907",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/direct_matched/replicate_2/summary.json": "50fc70f4945ec5cdb3a3c89cfb32c209521689e8d169a74620ba38b493c4fd1d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/direct_matched/replicate_3/summary.json": "0b613b4bc603c53ca2619f17c98c9a418a0cf80ec35479dfac815a049e4880a9",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/direct_matched/replicate_4/summary.json": "b9b831992c3ad849ac76dcd14f117e2aac2a79dc3e1e940bf81806659ff1dc7a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/direct_matched/replicate_5/summary.json": "3ffb1b9d56fbecadaa167828a7a89ea194048b46687eb5e442c6c4845590beeb",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/direct_matched/replicate_6/summary.json": "8903ba708e469b489dc5491f936b320b51b574b24a5bcf5f39a2e37010bd33a2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/direct_matched/replicate_7/summary.json": "962ac2ba2184cb44599bbc885f948046b6cf618cbeacddf5609a70ca3bcd62a3",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/post_matched/replicate_0/summary.json": "88e9580dd5027941a884fe8cfb2c1c07719c19dd8942b73289f8aefa50bfd21c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/post_matched/replicate_1/summary.json": "cacc7e89e37d6986c89e7b8fe398cdbe8645041393da7dc5a374d9df8385a2bc",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/post_matched/replicate_2/summary.json": "f24d9d57e53dd9180bf1d3c9b31dda84872d73659b7e252fde7b41e2841bf3a2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/post_matched/replicate_3/summary.json": "27d67fe1ee187f234b23e55360a751c3384575192f75141afd1b470e20789698",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/post_matched/replicate_4/summary.json": "d21ab30b086d61297a8788aaa83247340d6d74607ad65c1f96676043890b28d9",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/post_matched/replicate_5/summary.json": "dc3f3dd41dd4ac23aff883bf3f776bd015d85c804adda43422e6e3b52a36ed4d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/post_matched/replicate_6/summary.json": "fb5450c00bb9a07843c5d684cad70090bcf15ad0ab228bf56f1640aa96d7823d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/post_matched/replicate_7/summary.json": "331ff985f5cfb644c8edeb2c69c5228a9b98a900ba83125cdcd43cf938f92f6d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/continue_old/replicate_0/summary.json": "efae6de6b2270c2598fe41f76aff843cebd7c8bbca4b6132c825cbec0c72a447",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/continue_old/replicate_1/summary.json": "6b978c8bf89976d8c63f1bad2acfcdc75f7623ce48c0576b39b992a5c8240ed6",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/continue_old/replicate_2/summary.json": "135a78fafdd834f5b1f994b41bcb09703f2b890596170d8495454ecbbb0c20fb",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/continue_old/replicate_3/summary.json": "95cd1c0c87abf8331b92166a0c8b8067c69ce44e7fe0a6cb08e098f92dc3a0f4",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/continue_old/replicate_4/summary.json": "c77549334d9cac3b4a5a9efbc3495273b8180e385b4732bb6876ff12f0e6cc6c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/continue_old/replicate_5/summary.json": "2cb316319d1307e21d11b7aa03c1e7bcf6d1fa2133e0b296fae7ae3cdf54f750",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/continue_old/replicate_6/summary.json": "c014ae99ac7c60ee575023ce318cc4c0d554c3a1bbbc479890f1a7486e12b8f0",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/continue_old/replicate_7/summary.json": "e4db36078ba4337bfaa262b228fd7ad644254475398ba121926c15a97c2b85dc",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/candidates/generation.json": "eaf1aa0ed099395ebcf142a5fc075f8327bf85249b550cbdaf46033ed82c324a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/pick-place-wall-v3__2026106011/cut005/candidates/plans.npz": "25b31bb77beb0ac1e1fab1f6fd9f6c22fa9db472fbee43b0af918e6398b30507",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/replan/replicate_0/summary.json": "13dff94587ca4a8ef6a578032b6c0ce5298c786123bda13782cc5dec8329bab2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/replan/replicate_1/summary.json": "6c26bdfc1ca7790083a2f62fd8e3e8d840aadb26b04b3f13baaf84c94941fbb9",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/replan/replicate_2/summary.json": "83d19dec37fba9f2671e529311ea619bec95a7e9a15731b9188a083bdd629dfd",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/replan/replicate_3/summary.json": "294b53ca2e020831ce778aac1366075841fc7d4bb398c1bf4e3b63864aaf3837",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/replan/replicate_4/summary.json": "c127cc16e1b7fb7a99a616f9faeb915d3dd57721a04c8dd167240dbe9a9cf348",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/replan/replicate_5/summary.json": "7b482ae3900fed9915598f506eb98b578c6ffeda2ac4e79216709ef3c13cd715",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/replan/replicate_6/summary.json": "0147a16cbc1098fdc2998e23b590f455d613e47091041776741083877d2ae16f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/replan/replicate_7/summary.json": "c54b248082e86b6f9434377cdfce8a2aaab80af7b39f07eb0655b3d6542951ee",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/velocity_matched/replicate_0/summary.json": "ce52de5afec804d1137bac0a98733bb59227f0d4168fa7f195a69f1b032e06b0",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/velocity_matched/replicate_1/summary.json": "03b1d969172320857bf038de7ad725a98b371328a127e5a0a2dff3277b8ad9b4",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/velocity_matched/replicate_2/summary.json": "0fc30dd16cb81a969fc92797cae918089123e6ee73dae7a319d4f7879d03bc5e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/velocity_matched/replicate_3/summary.json": "ea6f1f414c1dc637bc0d4a2a3551ba79ab785b006fb116c70fab612b9efa7898",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/velocity_matched/replicate_4/summary.json": "daec3b5e9859185d9deac892b43c030a3eb13da5d598d40359aa76bd254a48bb",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/velocity_matched/replicate_5/summary.json": "d9e508350a2402f3b0ad1219484681c0826549ce87a037cfc87f7a0dc1dd337b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/velocity_matched/replicate_6/summary.json": "4fa55c7ecec232eacb36506cd217759d648cab0c5b8107b0868633761b1af0fd",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/velocity_matched/replicate_7/summary.json": "51e48ba75d0d029b66bdb8b3a02a200c2fdf7c3e231fe86f84d8287f2afe524a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/direct_matched/replicate_0/summary.json": "d26ec1f41c4540c3084ba36bb8ba9e74327c2a45b2f3741586db38689b39c6b8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/direct_matched/replicate_1/summary.json": "4e34a952a7ddea2837853afae28e967f80189f1d9dbafc44eeece4646d2bb03b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/direct_matched/replicate_2/summary.json": "f0696ba2e0ea21e9d4993c9dfd522852b0f0dcd2991d50aff975a79165d3a12d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/direct_matched/replicate_3/summary.json": "8962b3a836541dae3d599ab3b1e7c526e41c338fe61faf618f0241a9f560bdf4",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/direct_matched/replicate_4/summary.json": "edbdedfbae978abb898c19c19c3b3424473624a4a70eb9d1f4a83c9f3818fa07",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/direct_matched/replicate_5/summary.json": "8482d43995dbe622dbd2629009cb11a061359c037588e235d4ecd75a35bcbc29",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/direct_matched/replicate_6/summary.json": "eb997eccdfd143e71ac5abf24ffaa52c32ae8d0ce62affd6092a769a2fb72c80",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/direct_matched/replicate_7/summary.json": "7937e2e86400df13ce6291cf157ae93b9a0b35b0435fa93bea0b9e88f922cfcb",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/post_matched/replicate_0/summary.json": "51e9efc7e24d070b1d3e37e0d4d557d1f4af1b80da37a3fca8523ae15f89e26d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/post_matched/replicate_1/summary.json": "81cfdb690cc458c1f48d13132872c4f86a62cc67d217cf375418340a00ac697a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/post_matched/replicate_2/summary.json": "dc391e3a6d07cc6ec83122e85b2c7e6c725ddcb1207b88c96161e48fc724e191",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/post_matched/replicate_3/summary.json": "b44a0f3264c2da5083c9473e93287b7c7f8f3c4f4f482c8a8408171560705c81",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/post_matched/replicate_4/summary.json": "7b8c5e8c94a3c5bc51f41c7b15816e55d87996a08c1e284174fd8962fe43b01d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/post_matched/replicate_5/summary.json": "ef92ea681cfd8cf4547ddc8d6f7ef1d8196d9841f103e5e4640ac8360b71af92",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/post_matched/replicate_6/summary.json": "ba0619be9e2ed2d7b25b35ae145d3474975fa9325af76e874024f88250bf0f74",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/post_matched/replicate_7/summary.json": "9dc8d0542119f089cd459adc4c2e9c33795987b426d91a4969ab6f45013cc124",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/continue_old/replicate_0/summary.json": "1004a7baed4924042da907762c950a6eebb56ddf15344ccdb247edca8aa9554e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/continue_old/replicate_1/summary.json": "9ed0adf0cc630db58f4550cd9928e609a11ca369b5097c79670a4217c6218d8f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/continue_old/replicate_2/summary.json": "e2ddc6874b0b802722222534e9c8b3646be02d2440549bbcce05eeed577db512",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/continue_old/replicate_3/summary.json": "f7e532f167132be2f59096c4a0cda29c4f34f4c580d1887aa058cb5ca4794a8a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/continue_old/replicate_4/summary.json": "a61154f4d26e34022847f01a100dfaf0e1a2b04b14c8b6767e746a55e7294bd2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/continue_old/replicate_5/summary.json": "844414d9812cea9af543e691f15b2c52a7ecc5aa68fa4fd400edd02cb96807cc",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/continue_old/replicate_6/summary.json": "2bcae9324d08af6ee6891cc719fa973de05a02134cb54439772c5dd53c3f8e32",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/continue_old/replicate_7/summary.json": "7d2bd912017af6ca057619aa1e0ec9e6a496b0e0df344252075cd479e42dd5e5",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/candidates/generation.json": "c646ce01af7427479cb1501fde46d83bf44729c337d315f223f9f62157200c74",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/shelf-place-v3__2026106012/cut040/candidates/plans.npz": "63b68fbaafad5d28dd12c225693f7a14b0e1599299b102e317a3b6a4642c2b1c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/replan/replicate_0/summary.json": "7f50212400ec3bd916ccb3b78408ab346e1bf492b05d4c0aaaf75625ecff3754",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/replan/replicate_1/summary.json": "5a96981082dcc0d22d0c6ce2496bb3bcc67a3047e05bb47a08ef9d3b0c0ebfb7",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/replan/replicate_2/summary.json": "6cd9a60e523665c5bec1b3bbef6080d99f1d79aa85ffbeb2eb979cc74bc21d0f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/replan/replicate_3/summary.json": "1582b1fa76f56bf4e39de8f957badcff41d03bc48ec84d5fc9ef60586cebd8f8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/replan/replicate_4/summary.json": "cb0df90ee41537f0e21c88547d7c709972f6e600507487c02d8df334be4e71fc",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/replan/replicate_5/summary.json": "ead527f1fa0c089f0ded115beb87a6d95c48a3f3d557816fbdd599e67de5b42c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/replan/replicate_6/summary.json": "a48eb687954cd719505f02b5d664e2a9438fcd26007fceaf5a0d207076f18a85",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/replan/replicate_7/summary.json": "bc4714d9a45d174ac57d1fb1420d6d63c13b19b48911bb89b2eaf3d75094ad2e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/velocity_matched/replicate_0/summary.json": "55db1d3838faec01a7130a1f003d0f31696d401615b0319d445cdaa3f8c4e995",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/velocity_matched/replicate_1/summary.json": "01a702c344710f61e43921dd1d3f2286232bbda7c40ae39f0858c5120fa2df38",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/velocity_matched/replicate_2/summary.json": "5aeb8d484b8535dc21ffac362a081dedf3131dba19c6f74d6ddbb0a2eb7d6947",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/velocity_matched/replicate_3/summary.json": "5159d290383d9ad1ac6d5257844922d21fe00ef4caf7ce048c89653e4922058c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/velocity_matched/replicate_4/summary.json": "7866c0e1747d07dfdd196e75b97ac01cc244489e8fff996c373245fdd722b1cc",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/velocity_matched/replicate_5/summary.json": "464c48ee7f4f7d5ab69a75a38efa165c3623c0d9fa5aeae8fff19039f09dc7bf",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/velocity_matched/replicate_6/summary.json": "36570f770f623f71d77e16e0496981c8edb07b24b90d55f421ed7e1a0d33b545",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/velocity_matched/replicate_7/summary.json": "c5752a98613341caab1fda08ce18fb33eacdabd26d5d3ac8b17f553618aefd04",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/direct_matched/replicate_0/summary.json": "d3d161c66053ed29484e6bad032cedbf0292ec59683d870ba404a8e8db1829d6",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/direct_matched/replicate_1/summary.json": "b1df900591f9eacf9c2969c302b618dccc2e3f7a140b87c80cdb462e6566fd5e",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/direct_matched/replicate_2/summary.json": "884e653ff9982b7cbbc4a149f23f6c73f3bd1ffc82789308293cfa05f462e281",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/direct_matched/replicate_3/summary.json": "8f0d92dcd00fcbcf6c03584b923abdcb361c9c64b305124d234d2059dfc8defe",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/direct_matched/replicate_4/summary.json": "c899738d10d3bea47ee6cd13768d7b20b9489f57fba89aec234c6c5b799c21ce",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/direct_matched/replicate_5/summary.json": "c5689d76f0d819c1cde690a80916e1ef0361d7836a657d74e940fdb499f93e3f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/direct_matched/replicate_6/summary.json": "0dbbc61ccaaafd63c30cb7ad4b4c7becdd3d48e15197976658872d8a95777c50",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/direct_matched/replicate_7/summary.json": "28c6ddb897f77c2b6e08b1597267df41b2ddf8749db3b6e84f00c433ee5a619f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/post_matched/replicate_0/summary.json": "05a62e37968613533589c252364cd965745d2d2b679558696d62aba52571dd5f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/post_matched/replicate_1/summary.json": "a2ce75f51f6efe30be37ba74a2c153a5397e08b81770b77b145b9c12e4c1b09d",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/post_matched/replicate_2/summary.json": "3c08056f07dec34e04a8aee14e5dd0aa24b68e902560594c13dc2491a39df415",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/post_matched/replicate_3/summary.json": "90529a000bde16df3f2661506cd4d072cbfa80c0979fe0c9d9555962faf1d9f4",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/post_matched/replicate_4/summary.json": "22dbb041731f052dc2e4eb878a66fab222fcf91707c06b2ae14afe6ab7ca5b82",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/post_matched/replicate_5/summary.json": "8f152453e17bdc0220786b8665cdf76231e2aba8ec448eb997ca612559d0e822",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/post_matched/replicate_6/summary.json": "bad24fe1d2305aa14fa7751d20dc6644f5eeb95bf16a150c6fffd3ee71473444",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/post_matched/replicate_7/summary.json": "59b1d0a570adcdd69aa0fed4070fef1ea78a1590d52c0509fb479b98f8da3f3c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/continue_old/replicate_0/summary.json": "52916b45595205fc10fc188b064871dce637b977071b9577b1ceac4b7657d82b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/continue_old/replicate_1/summary.json": "807a7cfbb34d3a035eb876dfb50f206293d30cea7555deff6c3b350eba8b5041",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/continue_old/replicate_2/summary.json": "668b319af5e5f23a4f334885d3bafd7c983e549515fd5cadb3bd2b99244107a6",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/continue_old/replicate_3/summary.json": "e54882565c40416d9d78e77c270cbb6ddccd7b712dbdebf7a566f4cfd686a293",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/continue_old/replicate_4/summary.json": "0da90807fe13542221dbcd2c77bed1c7fa28aa90cc1c9b3cd9b402770a28ea08",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/continue_old/replicate_5/summary.json": "5a677876f4db553585ce228e6671ff518ffc706f8ea5fcada9f6d1fcaa5d5b0a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/continue_old/replicate_6/summary.json": "63d339f3529cdba63baf7e47227c769cc0d57a8260053e2bc73f4d534ceb8ce9",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/continue_old/replicate_7/summary.json": "db5b1f24973c629778e1cf2d98548ac235b5b4a4b0bfdfc205a3ee3c167c883a",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/candidates/generation.json": "068d7f57dfc6bc9fbda745ef9728ade79e409685d032c86890c54b004dd16b1c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-pull-v3__2026106013/cut005/candidates/plans.npz": "a1101b93e11edada6e7ba69496ef042a7b989e30c2406c60887f8ae63afa61b3",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/replan/replicate_0/summary.json": "0740270c0be4ed36c6a017f90f3782ba513b29f486a63dd2a37ea1e394d34ae7",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/replan/replicate_1/summary.json": "464309717e3271b6310ef373b72ec5806268ef132725da324ba848091557e880",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/replan/replicate_2/summary.json": "eb2b00e39ea95051b587ed8d1afadd440827ef09b76e572062627830216a468f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/replan/replicate_3/summary.json": "3186e59fa4a481b8979b4a9cfb91ec55ab7ade40c17082c381d85998f525ed5f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/replan/replicate_4/summary.json": "2c17f067f9668d7b59499d5ef644c62c108678c7ce2b3c5b2a7ca62b95554e4c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/replan/replicate_5/summary.json": "ed5216598849b4e5c9cc68df24bc5e9939dd0dbade22a9b1d4e6a4b71ba736e2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/replan/replicate_6/summary.json": "355e16bbc6b60d66342ebb6800b94619530ee8df9269fd500cf5769ff80badd4",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/replan/replicate_7/summary.json": "c0ae95c236b67d1cfd49ba96bdfd55c39f13b1afea1404c952bb8cc0c54fa5f2",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/velocity_matched/replicate_0/summary.json": "caa8a89f6f4ca011008f88117e290cd0a247ef9a701903d3454390f3a4029e53",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/velocity_matched/replicate_1/summary.json": "e510fff4a2b16358ad113417571143a70c48fc74534f14c926a6385bdd580918",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/velocity_matched/replicate_2/summary.json": "63e7f5c1f89fee864b851ac0466d37afe139a371f4a89f704c6bfebbd20c9c80",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/velocity_matched/replicate_3/summary.json": "b656168706c59072465ee12a726407679f5bdeadbff43988dbc39e41fffc3973",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/velocity_matched/replicate_4/summary.json": "454fc317dc66f7136730f21822539c09f0b1e4948810f80a63a7dbcc0f630ab5",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/velocity_matched/replicate_5/summary.json": "6fa5581c423058e02fd66aa373eecc92d419f680ecfdb8f5deea753e7ae3cab8",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/velocity_matched/replicate_6/summary.json": "79f063004ab409d6ed27f346c3e54d427d98235067429d587638eeecd4b1b37c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/velocity_matched/replicate_7/summary.json": "b217c97b2b81218cb30b775bba6ee17bdfd0b903a13dca9793139e17c15c5227",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/direct_matched/replicate_0/summary.json": "ab63da68d55def06c8ebd62c5918913409f3c3af10d68f6189d75bb58252d779",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/direct_matched/replicate_1/summary.json": "eb4a340420db66f671b8964c25d7fe87974b0880d0ea20177bcaa94f878c3ee9",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/direct_matched/replicate_2/summary.json": "5c3ddc0c3bad4df4326c1fd09ee2401f6b8d54cf28dce8b002f7abd4cce6d81f",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/direct_matched/replicate_3/summary.json": "bb5c112f54fa750f6afa4d45d14c1e7db15aa7f8bbb59f3bc187cd2c1daf130c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/direct_matched/replicate_4/summary.json": "b5e7e902f1b08100684f0a14a1cda19df24098afc96fe9514da5211858fdb71c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/direct_matched/replicate_5/summary.json": "56d8c5d513f374e35c0a38e7ca31fc0bbc461e5f8d93f9bf39dcfaec62c2687c",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/direct_matched/replicate_6/summary.json": "7005d11b499cda3ad380db5bb07597159030413829f7809858a59f4741929152",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/direct_matched/replicate_7/summary.json": "4db18794bb55ec5ffa139572a662d15e273361829cf4886438d1b0a9667993d0",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/post_matched/replicate_0/summary.json": "d0e8c2a9bb749b50c32fa5205e0c784bfe25d1b0cabca59a987ef8caa28bf138",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/post_matched/replicate_1/summary.json": "2f543fc1d4b3c6f35d16db78bed0172a78671eb25ab78b5326cbf4ee5b78fe38",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/post_matched/replicate_2/summary.json": "baf51a534a44bdf720acbf18c18ce2614f2327ceb2402ab17a20cb3ab87d6bd5",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/post_matched/replicate_3/summary.json": "bb58efac6725824fee1b64f295ce5eb2a4a93eaa8f06261921c92627e532c01b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/post_matched/replicate_4/summary.json": "2090e0c7642fa171298fcbf96518a023f27f55785cfdfb7e6d2e3d677250d1fd",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/post_matched/replicate_5/summary.json": "c44aa4aaef9e10864485ea11b231b83300514039d77159df3b96b038fc17304b",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/post_matched/replicate_6/summary.json": "29ac4ffab629f1c0915ebb4296e5ddb07d74c5cb85aeb49d55c29305aba88607",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/post_matched/replicate_7/summary.json": "0552ba3fc2384c0ac33042be107fa07e08e6f4459b8d2cec0f43824529dde9fc",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/continue_old/replicate_0/summary.json": "b693c27910a7932608e9fc6fcddc06328a7e406a2c62446d39d1d583651ade57",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/continue_old/replicate_1/summary.json": "9ba9957f8f6c256e87a2b1831dff728438a9c34fb99e903f7659ccf3b7757006",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/continue_old/replicate_2/summary.json": "fe407bc63394159fa00efbe1cd2facee3db2787933e4244f430248ba97b480aa",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/continue_old/replicate_3/summary.json": "14c15f0bd93592939082e132befc9637f5f10aaee73cda33a3ed94931619cd03",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/continue_old/replicate_4/summary.json": "49b431f03497147fdbef2e22508bf7d79504abb021b4198b0d26657f3a7fbea4",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/continue_old/replicate_5/summary.json": "e0debcf7570524f44e10649766b85054a0f662a6559d2fa050fdeff3ad406f77",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/continue_old/replicate_6/summary.json": "fea30fbe5929c195467c450736e501136748f4e9834aafc41a87e5ebeb0ae175",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/continue_old/replicate_7/summary.json": "0ae82d50a542bbbf619fb6656748998178603c3aead22b3217f6b1bebb185c88",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/candidates/generation.json": "d4b276622dc8a686be7f16d224c18896d9d5ca39cfc825333ad1ec2c6c943d49",
+    "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/metaworld_small_20260916/rollouts/development/stick-push-v3__2026106014/cut005/candidates/plans.npz": "83e74ded7769624185f852d767c842772a8cdbfd6f7d95493956b0a24a6f9123"
+  },
+  "verification": {
+    "branch_summaries": 600,
+    "csv_rows": 75,
+    "formal_sources": 15,
+    "source_unit_not_suffix_unit": true,
+    "result_json_and_csv_exact": true,
+    "paired_gain_equals_rescues_minus_harms_over_120": true,
+    "registered_comparisons": 7,
+    "independent_bootstrap_matches_exactly": true,
+    "frozen_code_hashes_unchanged": true
+  },
+  "methods": {
+    "replan": {
+      "success_count": 66,
+      "denominator": 120,
+      "success_rate": 0.55,
+      "gain_vs_replan": 0.0,
+      "gain_ci95": [
+        0.0,
+        0.0
+      ],
+      "rescues_vs_replan": 0,
+      "harms_vs_replan": 0,
+      "positive_sources": 0,
+      "negative_sources": 0,
+      "net_zero_sources": 15,
+      "paired_changed_sources": 0
+    },
+    "velocity_matched": {
+      "success_count": 64,
+      "denominator": 120,
+      "success_rate": 0.5333333333333333,
+      "gain_vs_replan": -0.016666666666666666,
+      "gain_ci95": [
+        -0.025,
+        0.0
+      ],
+      "rescues_vs_replan": 0,
+      "harms_vs_replan": 2,
+      "positive_sources": 0,
+      "negative_sources": 2,
+      "net_zero_sources": 13,
+      "paired_changed_sources": 2
+    },
+    "direct_matched": {
+      "success_count": 67,
+      "denominator": 120,
+      "success_rate": 0.5583333333333333,
+      "gain_vs_replan": 0.008333333333333333,
+      "gain_ci95": [
+        0.0,
+        0.025
+      ],
+      "rescues_vs_replan": 3,
+      "harms_vs_replan": 2,
+      "positive_sources": 1,
+      "negative_sources": 0,
+      "net_zero_sources": 14,
+      "paired_changed_sources": 2
+    },
+    "post_matched": {
+      "success_count": 66,
+      "denominator": 120,
+      "success_rate": 0.55,
+      "gain_vs_replan": 0.0,
+      "gain_ci95": [
+        -0.025,
+        0.025
+      ],
+      "rescues_vs_replan": 2,
+      "harms_vs_replan": 2,
+      "positive_sources": 1,
+      "negative_sources": 1,
+      "net_zero_sources": 13,
+      "paired_changed_sources": 2
+    },
+    "continue_old": {
+      "success_count": 31,
+      "denominator": 120,
+      "success_rate": 0.25833333333333336,
+      "gain_vs_replan": -0.2916666666666667,
+      "gain_ci95": [
+        -0.45,
+        -0.16666666666666666
+      ],
+      "rescues_vs_replan": 3,
+      "harms_vs_replan": 38,
+      "positive_sources": 1,
+      "negative_sources": 7,
+      "net_zero_sources": 7,
+      "paired_changed_sources": 8
+    }
+  },
+  "registered_comparisons": [
+    {
+      "method": "velocity_matched",
+      "reference": "replan",
+      "gain": -0.016666666666666666,
+      "gain_ci95": [
+        -0.025,
+        0.0
+      ],
+      "rescues": 0,
+      "harms": 2
+    },
+    {
+      "method": "direct_matched",
+      "reference": "replan",
+      "gain": 0.008333333333333333,
+      "gain_ci95": [
+        0.0,
+        0.025
+      ],
+      "rescues": 3,
+      "harms": 2
+    },
+    {
+      "method": "post_matched",
+      "reference": "replan",
+      "gain": 0.0,
+      "gain_ci95": [
+        -0.025,
+        0.025
+      ],
+      "rescues": 2,
+      "harms": 2
+    },
+    {
+      "method": "direct_matched",
+      "reference": "velocity_matched",
+      "gain": 0.025,
+      "gain_ci95": [
+        0.0,
+        0.05
+      ],
+      "rescues": 3,
+      "harms": 0
+    },
+    {
+      "method": "post_matched",
+      "reference": "velocity_matched",
+      "gain": 0.016666666666666666,
+      "gain_ci95": [
+        0.0,
+        0.05
+      ],
+      "rescues": 2,
+      "harms": 0
+    },
+    {
+      "method": "post_matched",
+      "reference": "direct_matched",
+      "gain": -0.008333333333333333,
+      "gain_ci95": [
+        -0.025,
+        0.0
+      ],
+      "rescues": 1,
+      "harms": 2
+    },
+    {
+      "method": "replan",
+      "reference": "continue_old",
+      "gain": 0.2916666666666667,
+      "gain_ci95": [
+        0.16666666666666666,
+        0.45
+      ],
+      "rescues": 38,
+      "harms": 3
+    }
+  ],
+  "per_task": {
+    "disassemble-v3": {
+      "replan": {
+        "success_count": 24,
+        "denominator": 24,
+        "gain_vs_replan": 0.0
+      },
+      "velocity_matched": {
+        "success_count": 24,
+        "denominator": 24,
+        "gain_vs_replan": 0.0
+      },
+      "direct_matched": {
+        "success_count": 24,
+        "denominator": 24,
+        "gain_vs_replan": 0.0
+      },
+      "post_matched": {
+        "success_count": 24,
+        "denominator": 24,
+        "gain_vs_replan": 0.0
+      },
+      "continue_old": {
+        "success_count": 0,
+        "denominator": 24,
+        "gain_vs_replan": -1.0
+      }
+    },
+    "pick-place-wall-v3": {
+      "replan": {
+        "success_count": 8,
+        "denominator": 24,
+        "gain_vs_replan": 0.0
+      },
+      "velocity_matched": {
+        "success_count": 8,
+        "denominator": 24,
+        "gain_vs_replan": 0.0
+      },
+      "direct_matched": {
+        "success_count": 8,
+        "denominator": 24,
+        "gain_vs_replan": 0.0
+      },
+      "post_matched": {
+        "success_count": 8,
+        "denominator": 24,
+        "gain_vs_replan": 0.0
+      },
+      "continue_old": {
+        "success_count": 3,
+        "denominator": 24,
+        "gain_vs_replan": -0.20833333333333334
+      }
+    },
+    "shelf-place-v3": {
+      "replan": {
+        "success_count": 8,
+        "denominator": 24,
+        "gain_vs_replan": 0.0
+      },
+      "velocity_matched": {
+        "success_count": 8,
+        "denominator": 24,
+        "gain_vs_replan": 0.0
+      },
+      "direct_matched": {
+        "success_count": 8,
+        "denominator": 24,
+        "gain_vs_replan": 0.0
+      },
+      "post_matched": {
+        "success_count": 8,
+        "denominator": 24,
+        "gain_vs_replan": 0.0
+      },
+      "continue_old": {
+        "success_count": 4,
+        "denominator": 24,
+        "gain_vs_replan": -0.16666666666666666
+      }
+    },
+    "stick-pull-v3": {
+      "replan": {
+        "success_count": 2,
+        "denominator": 24,
+        "gain_vs_replan": 0.0
+      },
+      "velocity_matched": {
+        "success_count": 0,
+        "denominator": 24,
+        "gain_vs_replan": -0.08333333333333333
+      },
+      "direct_matched": {
+        "success_count": 3,
+        "denominator": 24,
+        "gain_vs_replan": 0.041666666666666664
+      },
+      "post_matched": {
+        "success_count": 2,
+        "denominator": 24,
+        "gain_vs_replan": 0.0
+      },
+      "continue_old": {
+        "success_count": 0,
+        "denominator": 24,
+        "gain_vs_replan": -0.08333333333333333
+      }
+    },
+    "stick-push-v3": {
+      "replan": {
+        "success_count": 24,
+        "denominator": 24,
+        "gain_vs_replan": 0.0
+      },
+      "velocity_matched": {
+        "success_count": 24,
+        "denominator": 24,
+        "gain_vs_replan": 0.0
+      },
+      "direct_matched": {
+        "success_count": 24,
+        "denominator": 24,
+        "gain_vs_replan": 0.0
+      },
+      "post_matched": {
+        "success_count": 24,
+        "denominator": 24,
+        "gain_vs_replan": 0.0
+      },
+      "continue_old": {
+        "success_count": 24,
+        "denominator": 24,
+        "gain_vs_replan": 0.0
+      }
+    }
+  },
+  "per_source": [
+    {
+      "case_id": "disassemble-v3__2026106000",
+      "task": "disassemble-v3",
+      "success_counts": {
+        "replan": 8,
+        "velocity_matched": 8,
+        "direct_matched": 8,
+        "post_matched": 8,
+        "continue_old": 0
+      },
+      "correction_contrasts": {
+        "velocity_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "direct_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "post_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        }
+      }
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026106001",
+      "task": "pick-place-wall-v3",
+      "success_counts": {
+        "replan": 0,
+        "velocity_matched": 0,
+        "direct_matched": 0,
+        "post_matched": 0,
+        "continue_old": 0
+      },
+      "correction_contrasts": {
+        "velocity_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "direct_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "post_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        }
+      }
+    },
+    {
+      "case_id": "shelf-place-v3__2026106002",
+      "task": "shelf-place-v3",
+      "success_counts": {
+        "replan": 0,
+        "velocity_matched": 0,
+        "direct_matched": 0,
+        "post_matched": 0,
+        "continue_old": 0
+      },
+      "correction_contrasts": {
+        "velocity_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "direct_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "post_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        }
+      }
+    },
+    {
+      "case_id": "stick-pull-v3__2026106003",
+      "task": "stick-pull-v3",
+      "success_counts": {
+        "replan": 1,
+        "velocity_matched": 0,
+        "direct_matched": 1,
+        "post_matched": 0,
+        "continue_old": 0
+      },
+      "correction_contrasts": {
+        "velocity_matched": {
+          "net_successes": -1,
+          "rescues": 0,
+          "harms": 1
+        },
+        "direct_matched": {
+          "net_successes": 0,
+          "rescues": 1,
+          "harms": 1
+        },
+        "post_matched": {
+          "net_successes": -1,
+          "rescues": 0,
+          "harms": 1
+        }
+      }
+    },
+    {
+      "case_id": "stick-push-v3__2026106004",
+      "task": "stick-push-v3",
+      "success_counts": {
+        "replan": 8,
+        "velocity_matched": 8,
+        "direct_matched": 8,
+        "post_matched": 8,
+        "continue_old": 8
+      },
+      "correction_contrasts": {
+        "velocity_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "direct_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "post_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        }
+      }
+    },
+    {
+      "case_id": "disassemble-v3__2026106005",
+      "task": "disassemble-v3",
+      "success_counts": {
+        "replan": 8,
+        "velocity_matched": 8,
+        "direct_matched": 8,
+        "post_matched": 8,
+        "continue_old": 0
+      },
+      "correction_contrasts": {
+        "velocity_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "direct_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "post_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        }
+      }
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026106006",
+      "task": "pick-place-wall-v3",
+      "success_counts": {
+        "replan": 8,
+        "velocity_matched": 8,
+        "direct_matched": 8,
+        "post_matched": 8,
+        "continue_old": 0
+      },
+      "correction_contrasts": {
+        "velocity_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "direct_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "post_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        }
+      }
+    },
+    {
+      "case_id": "shelf-place-v3__2026106007",
+      "task": "shelf-place-v3",
+      "success_counts": {
+        "replan": 0,
+        "velocity_matched": 0,
+        "direct_matched": 0,
+        "post_matched": 0,
+        "continue_old": 0
+      },
+      "correction_contrasts": {
+        "velocity_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "direct_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "post_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        }
+      }
+    },
+    {
+      "case_id": "stick-pull-v3__2026106008",
+      "task": "stick-pull-v3",
+      "success_counts": {
+        "replan": 0,
+        "velocity_matched": 0,
+        "direct_matched": 0,
+        "post_matched": 0,
+        "continue_old": 0
+      },
+      "correction_contrasts": {
+        "velocity_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "direct_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "post_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        }
+      }
+    },
+    {
+      "case_id": "stick-push-v3__2026106009",
+      "task": "stick-push-v3",
+      "success_counts": {
+        "replan": 8,
+        "velocity_matched": 8,
+        "direct_matched": 8,
+        "post_matched": 8,
+        "continue_old": 8
+      },
+      "correction_contrasts": {
+        "velocity_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "direct_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "post_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        }
+      }
+    },
+    {
+      "case_id": "disassemble-v3__2026106010",
+      "task": "disassemble-v3",
+      "success_counts": {
+        "replan": 8,
+        "velocity_matched": 8,
+        "direct_matched": 8,
+        "post_matched": 8,
+        "continue_old": 0
+      },
+      "correction_contrasts": {
+        "velocity_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "direct_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "post_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        }
+      }
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026106011",
+      "task": "pick-place-wall-v3",
+      "success_counts": {
+        "replan": 0,
+        "velocity_matched": 0,
+        "direct_matched": 0,
+        "post_matched": 0,
+        "continue_old": 3
+      },
+      "correction_contrasts": {
+        "velocity_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "direct_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "post_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        }
+      }
+    },
+    {
+      "case_id": "shelf-place-v3__2026106012",
+      "task": "shelf-place-v3",
+      "success_counts": {
+        "replan": 8,
+        "velocity_matched": 8,
+        "direct_matched": 8,
+        "post_matched": 8,
+        "continue_old": 4
+      },
+      "correction_contrasts": {
+        "velocity_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "direct_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "post_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        }
+      }
+    },
+    {
+      "case_id": "stick-pull-v3__2026106013",
+      "task": "stick-pull-v3",
+      "success_counts": {
+        "replan": 1,
+        "velocity_matched": 0,
+        "direct_matched": 2,
+        "post_matched": 2,
+        "continue_old": 0
+      },
+      "correction_contrasts": {
+        "velocity_matched": {
+          "net_successes": -1,
+          "rescues": 0,
+          "harms": 1
+        },
+        "direct_matched": {
+          "net_successes": 1,
+          "rescues": 2,
+          "harms": 1
+        },
+        "post_matched": {
+          "net_successes": 1,
+          "rescues": 2,
+          "harms": 1
+        }
+      }
+    },
+    {
+      "case_id": "stick-push-v3__2026106014",
+      "task": "stick-push-v3",
+      "success_counts": {
+        "replan": 8,
+        "velocity_matched": 8,
+        "direct_matched": 8,
+        "post_matched": 8,
+        "continue_old": 8
+      },
+      "correction_contrasts": {
+        "velocity_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "direct_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        },
+        "post_matched": {
+          "net_successes": 0,
+          "rescues": 0,
+          "harms": 0
+        }
+      }
+    }
+  ],
+  "critic_vs_actual": {
+    "replan": {
+      "mean_predicted_gain": 0.0,
+      "mean_actual_gain": 0.0,
+      "source_gain_correlation": null,
+      "source_gain_mse": 0.0,
+      "predicted_positive_actual_nonpositive": 0
+    },
+    "velocity_matched": {
+      "mean_predicted_gain": 0.10045194840058684,
+      "mean_actual_gain": -0.016666666666666666,
+      "source_gain_correlation": 0.45927876683463936,
+      "source_gain_mse": 0.01915844021834272,
+      "predicted_positive_actual_nonpositive": 15
+    },
+    "direct_matched": {
+      "mean_predicted_gain": 0.10130620201428732,
+      "mean_actual_gain": 0.008333333333333333,
+      "source_gain_correlation": -0.3109099839953348,
+      "source_gain_mse": 0.01763359843116134,
+      "predicted_positive_actual_nonpositive": 14
+    },
+    "post_matched": {
+      "mean_predicted_gain": 0.10873869645098845,
+      "mean_actual_gain": 0.0,
+      "source_gain_correlation": -0.007450332983064517,
+      "source_gain_mse": 0.02141241842247563,
+      "predicted_positive_actual_nonpositive": 14
+    }
+  },
+  "command_checks": [
+    {
+      "case_id": "disassemble-v3__2026106000",
+      "actual_command_radii": {
+        "velocity_matched": {
+          "xyz_rms": 0.037311800561099284,
+          "gripper_rms": 0.09999990060317315,
+          "xyz_linf": 0.09822970628738403,
+          "gripper_linf": 0.2146516516804695
+        },
+        "direct_matched": {
+          "xyz_rms": 0.03731179755820755,
+          "gripper_rms": 0.09999990033766328,
+          "xyz_linf": 0.09552693367004395,
+          "gripper_linf": 0.20930201560258865
+        },
+        "post_matched": {
+          "xyz_rms": 0.03731179630818818,
+          "gripper_rms": 0.09999990269378747,
+          "xyz_linf": 0.09538939595222473,
+          "gripper_linf": 0.16963029652833939
+        },
+        "reverse_matched": {
+          "xyz_rms": 0.03731179650387738,
+          "gripper_rms": 0.09999990035227954,
+          "xyz_linf": 0.09552693367004395,
+          "gripper_linf": 0.20930201560258865
+        },
+        "random_matched": {
+          "xyz_rms": 0.03731179140848426,
+          "gripper_rms": 0.09999989869144854,
+          "xyz_linf": 0.07403337955474854,
+          "gripper_linf": 0.1572798453271389
+        }
+      },
+      "masked_fraction": 0.075,
+      "zero_groups": {
+        "xyz": false,
+        "gripper": false
+      }
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026106001",
+      "actual_command_radii": {
+        "velocity_matched": {
+          "xyz_rms": 0.046444380055749815,
+          "gripper_rms": 0.09999989961902808,
+          "xyz_linf": 0.14191687107086182,
+          "gripper_linf": 0.16549263149499893
+        },
+        "direct_matched": {
+          "xyz_rms": 0.046444376110486185,
+          "gripper_rms": 0.09999990039377113,
+          "xyz_linf": 0.1069302186369896,
+          "gripper_linf": 0.1373993679881096
+        },
+        "post_matched": {
+          "xyz_rms": 0.04644437576175757,
+          "gripper_rms": 0.09999989910839795,
+          "xyz_linf": 0.11936485767364502,
+          "gripper_linf": 0.1711050048470497
+        },
+        "reverse_matched": {
+          "xyz_rms": 0.046444376846415926,
+          "gripper_rms": 0.09999989928147286,
+          "xyz_linf": 0.10693022608757019,
+          "gripper_linf": 0.1373993679881096
+        },
+        "random_matched": {
+          "xyz_rms": 0.046444378310206626,
+          "gripper_rms": 0.09999990136624924,
+          "xyz_linf": 0.14999985694885254,
+          "gripper_linf": 0.14846298843622208
+        }
+      },
+      "masked_fraction": 0.0,
+      "zero_groups": {
+        "xyz": false,
+        "gripper": false
+      }
+    },
+    {
+      "case_id": "shelf-place-v3__2026106002",
+      "actual_command_radii": {
+        "velocity_matched": {
+          "xyz_rms": 0.04631678138114613,
+          "gripper_rms": 0.0,
+          "xyz_linf": 0.14298156648874283,
+          "gripper_linf": 0.0
+        },
+        "direct_matched": {
+          "xyz_rms": 0.04631678006777938,
+          "gripper_rms": 0.0,
+          "xyz_linf": 0.12113508209586143,
+          "gripper_linf": 0.0
+        },
+        "post_matched": {
+          "xyz_rms": 0.04631677992831827,
+          "gripper_rms": 0.0,
+          "xyz_linf": 0.14999984949827194,
+          "gripper_linf": 0.0
+        },
+        "reverse_matched": {
+          "xyz_rms": 0.046316782075681656,
+          "gripper_rms": 0.0,
+          "xyz_linf": 0.12113508582115173,
+          "gripper_linf": 0.0
+        },
+        "random_matched": {
+          "xyz_rms": 0.04631678239624762,
+          "gripper_rms": 0.0,
+          "xyz_linf": 0.14989274740219116,
+          "gripper_linf": 0.0
+        }
+      },
+      "masked_fraction": 0.5,
+      "zero_groups": {
+        "xyz": false,
+        "gripper": true
+      }
+    },
+    {
+      "case_id": "stick-pull-v3__2026106003",
+      "actual_command_radii": {
+        "velocity_matched": {
+          "xyz_rms": 0.049207519995712705,
+          "gripper_rms": 0.09999989711354261,
+          "xyz_linf": 0.14337234944105148,
+          "gripper_linf": 0.18886268138885498
+        },
+        "direct_matched": {
+          "xyz_rms": 0.04920751945508777,
+          "gripper_rms": 0.0999999053535643,
+          "xyz_linf": 0.14297708868980408,
+          "gripper_linf": 0.19695410132408142
+        },
+        "post_matched": {
+          "xyz_rms": 0.04920752135994076,
+          "gripper_rms": 0.09999989907538863,
+          "xyz_linf": 0.14999985694885254,
+          "gripper_linf": 0.1712915301322937
+        },
+        "reverse_matched": {
+          "xyz_rms": 0.04920751902078824,
+          "gripper_rms": 0.09999989948386939,
+          "xyz_linf": 0.14297709614038467,
+          "gripper_linf": 0.19695407152175903
+        },
+        "random_matched": {
+          "xyz_rms": 0.0492075165601498,
+          "gripper_rms": 0.0999999043700279,
+          "xyz_linf": 0.1351204514503479,
+          "gripper_linf": 0.19936543703079224
+        }
+      },
+      "masked_fraction": 0.325,
+      "zero_groups": {
+        "xyz": false,
+        "gripper": false
+      }
+    },
+    {
+      "case_id": "stick-push-v3__2026106004",
+      "actual_command_radii": {
+        "velocity_matched": {
+          "xyz_rms": 0.028436788520667985,
+          "gripper_rms": 0.09999989903952217,
+          "xyz_linf": 0.07673293352127075,
+          "gripper_linf": 0.253930926322937
+        },
+        "direct_matched": {
+          "xyz_rms": 0.02843678551216757,
+          "gripper_rms": 0.09999990358720623,
+          "xyz_linf": 0.08335097879171371,
+          "gripper_linf": 0.26336491107940674
+        },
+        "post_matched": {
+          "xyz_rms": 0.02843678734095169,
+          "gripper_rms": 0.09999991088380833,
+          "xyz_linf": 0.07980078458786011,
+          "gripper_linf": 0.19528061151504517
+        },
+        "reverse_matched": {
+          "xyz_rms": 0.028436785991709478,
+          "gripper_rms": 0.09999990358720623,
+          "xyz_linf": 0.08335097879171371,
+          "gripper_linf": 0.26336491107940674
+        },
+        "random_matched": {
+          "xyz_rms": 0.02843678626445678,
+          "gripper_rms": 0.099999903840725,
+          "xyz_linf": 0.06339062750339508,
+          "gripper_linf": 0.25152578949928284
+        }
+      },
+      "masked_fraction": 0.275,
+      "zero_groups": {
+        "xyz": false,
+        "gripper": false
+      }
+    },
+    {
+      "case_id": "disassemble-v3__2026106005",
+      "actual_command_radii": {
+        "velocity_matched": {
+          "xyz_rms": 0.03959096868016237,
+          "gripper_rms": 0.09999990031479698,
+          "xyz_linf": 0.13079626858234406,
+          "gripper_linf": 0.1647769659757614
+        },
+        "direct_matched": {
+          "xyz_rms": 0.039590969867605456,
+          "gripper_rms": 0.0999999009366076,
+          "xyz_linf": 0.14999985694885254,
+          "gripper_linf": 0.16494767367839813
+        },
+        "post_matched": {
+          "xyz_rms": 0.039590968796886075,
+          "gripper_rms": 0.09999990063357832,
+          "xyz_linf": 0.129441499710083,
+          "gripper_linf": 0.16886241734027863
+        },
+        "reverse_matched": {
+          "xyz_rms": 0.039590970094905226,
+          "gripper_rms": 0.09999990066623203,
+          "xyz_linf": 0.14999985694885254,
+          "gripper_linf": 0.16494767367839813
+        },
+        "random_matched": {
+          "xyz_rms": 0.03959096881696921,
+          "gripper_rms": 0.09999989927960737,
+          "xyz_linf": 0.10792431113077328,
+          "gripper_linf": 0.1153724379837513
+        }
+      },
+      "masked_fraction": 0.25,
+      "zero_groups": {
+        "xyz": false,
+        "gripper": false
+      }
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026106006",
+      "actual_command_radii": {
+        "velocity_matched": {
+          "xyz_rms": 0.04999994836489126,
+          "gripper_rms": 0.07340132659161239,
+          "xyz_linf": 0.13885128498077393,
+          "gripper_linf": 0.13246911764144897
+        },
+        "direct_matched": {
+          "xyz_rms": 0.04999994975745546,
+          "gripper_rms": 0.07340132707360174,
+          "xyz_linf": 0.13639342784881592,
+          "gripper_linf": 0.1393655762076378
+        },
+        "post_matched": {
+          "xyz_rms": 0.049999949256344205,
+          "gripper_rms": 0.07340133173017549,
+          "xyz_linf": 0.1467144787311554,
+          "gripper_linf": 0.12670117616653442
+        },
+        "reverse_matched": {
+          "xyz_rms": 0.04999994982811221,
+          "gripper_rms": 0.07340132831911128,
+          "xyz_linf": 0.13639342784881592,
+          "gripper_linf": 0.1393655762076378
+        },
+        "random_matched": {
+          "xyz_rms": 0.04999995018669405,
+          "gripper_rms": 0.07340132829358527,
+          "xyz_linf": 0.11037075519561768,
+          "gripper_linf": 0.11844728142023087
+        }
+      },
+      "masked_fraction": 0.15,
+      "zero_groups": {
+        "xyz": false,
+        "gripper": false
+      }
+    },
+    {
+      "case_id": "shelf-place-v3__2026106007",
+      "actual_command_radii": {
+        "velocity_matched": {
+          "xyz_rms": 0.045405084474911636,
+          "gripper_rms": 0.0,
+          "xyz_linf": 0.1410345584154129,
+          "gripper_linf": 0.0
+        },
+        "direct_matched": {
+          "xyz_rms": 0.0454050853634401,
+          "gripper_rms": 0.0,
+          "xyz_linf": 0.1321324035525322,
+          "gripper_linf": 0.0
+        },
+        "post_matched": {
+          "xyz_rms": 0.045405085461813155,
+          "gripper_rms": 0.0,
+          "xyz_linf": 0.14999984949827194,
+          "gripper_linf": 0.0
+        },
+        "reverse_matched": {
+          "xyz_rms": 0.04540508535885327,
+          "gripper_rms": 0.0,
+          "xyz_linf": 0.1321324110031128,
+          "gripper_linf": 0.0
+        },
+        "random_matched": {
+          "xyz_rms": 0.0454050880174003,
+          "gripper_rms": 0.0,
+          "xyz_linf": 0.10003352165222168,
+          "gripper_linf": 0.0
+        }
+      },
+      "masked_fraction": 0.5,
+      "zero_groups": {
+        "xyz": false,
+        "gripper": true
+      }
+    },
+    {
+      "case_id": "stick-pull-v3__2026106008",
+      "actual_command_radii": {
+        "velocity_matched": {
+          "xyz_rms": 0.04999995125826783,
+          "gripper_rms": 0.09999990798243766,
+          "xyz_linf": 0.10575847886502743,
+          "gripper_linf": 0.26893752813339233
+        },
+        "direct_matched": {
+          "xyz_rms": 0.04999995124571654,
+          "gripper_rms": 0.09999989937120385,
+          "xyz_linf": 0.12883547693490982,
+          "gripper_linf": 0.285533607006073
+        },
+        "post_matched": {
+          "xyz_rms": 0.0499999501000533,
+          "gripper_rms": 0.09999990224612301,
+          "xyz_linf": 0.13601860404014587,
+          "gripper_linf": 0.17413026094436646
+        },
+        "reverse_matched": {
+          "xyz_rms": 0.049999951043062096,
+          "gripper_rms": 0.09999989937120385,
+          "xyz_linf": 0.12883546948432922,
+          "gripper_linf": 0.285533607006073
+        },
+        "random_matched": {
+          "xyz_rms": 0.049999950092672746,
+          "gripper_rms": 0.0999999090452387,
+          "xyz_linf": 0.11612880229949951,
+          "gripper_linf": 0.2223816215991974
+        }
+      },
+      "masked_fraction": 0.325,
+      "zero_groups": {
+        "xyz": false,
+        "gripper": false
+      }
+    },
+    {
+      "case_id": "stick-push-v3__2026106009",
+      "actual_command_radii": {
+        "velocity_matched": {
+          "xyz_rms": 0.049999949175424566,
+          "gripper_rms": 0.09674122408221417,
+          "xyz_linf": 0.13095904886722565,
+          "gripper_linf": 0.29825472831726074
+        },
+        "direct_matched": {
+          "xyz_rms": 0.04999995066202734,
+          "gripper_rms": 0.09674122758503796,
+          "xyz_linf": 0.1333319991827011,
+          "gripper_linf": 0.2978456914424896
+        },
+        "post_matched": {
+          "xyz_rms": 0.0499999504260047,
+          "gripper_rms": 0.0967412252133103,
+          "xyz_linf": 0.14209375530481339,
+          "gripper_linf": 0.24552300572395325
+        },
+        "reverse_matched": {
+          "xyz_rms": 0.04999994910585429,
+          "gripper_rms": 0.09674121840953594,
+          "xyz_linf": 0.13333199173212051,
+          "gripper_linf": 0.29784566164016724
+        },
+        "random_matched": {
+          "xyz_rms": 0.0499999501667518,
+          "gripper_rms": 0.0967412218314953,
+          "xyz_linf": 0.14854726195335388,
+          "gripper_linf": 0.2311544418334961
+        }
+      },
+      "masked_fraction": 0.375,
+      "zero_groups": {
+        "xyz": false,
+        "gripper": false
+      }
+    },
+    {
+      "case_id": "disassemble-v3__2026106010",
+      "actual_command_radii": {
+        "velocity_matched": {
+          "xyz_rms": 0.03763652070833448,
+          "gripper_rms": 0.0999998994808718,
+          "xyz_linf": 0.13372723758220673,
+          "gripper_linf": 0.20597123354673386
+        },
+        "direct_matched": {
+          "xyz_rms": 0.03763652137125102,
+          "gripper_rms": 0.09999989835959447,
+          "xyz_linf": 0.14999984949827194,
+          "gripper_linf": 0.19104578346014023
+        },
+        "post_matched": {
+          "xyz_rms": 0.03763652097437838,
+          "gripper_rms": 0.09999990226252498,
+          "xyz_linf": 0.12804725021123886,
+          "gripper_linf": 0.16746697574853897
+        },
+        "reverse_matched": {
+          "xyz_rms": 0.03763652208950731,
+          "gripper_rms": 0.09999989956080253,
+          "xyz_linf": 0.14999985694885254,
+          "gripper_linf": 0.19104578346014023
+        },
+        "random_matched": {
+          "xyz_rms": 0.03763652144553377,
+          "gripper_rms": 0.09999989918952767,
+          "xyz_linf": 0.07598374783992767,
+          "gripper_linf": 0.15139582380652428
+        }
+      },
+      "masked_fraction": 0.25,
+      "zero_groups": {
+        "xyz": false,
+        "gripper": false
+      }
+    },
+    {
+      "case_id": "pick-place-wall-v3__2026106011",
+      "actual_command_radii": {
+        "velocity_matched": {
+          "xyz_rms": 0.02411967510480654,
+          "gripper_rms": 0.09999989918891616,
+          "xyz_linf": 0.05901557207107544,
+          "gripper_linf": 0.14097345247864723
+        },
+        "direct_matched": {
+          "xyz_rms": 0.0241196750923938,
+          "gripper_rms": 0.09999990104249215,
+          "xyz_linf": 0.06011661887168884,
+          "gripper_linf": 0.13472852110862732
+        },
+        "post_matched": {
+          "xyz_rms": 0.0241196748520053,
+          "gripper_rms": 0.09999990160100444,
+          "xyz_linf": 0.06459707021713257,
+          "gripper_linf": 0.1706608533859253
+        },
+        "reverse_matched": {
+          "xyz_rms": 0.024119674819192898,
+          "gripper_rms": 0.09999990081330769,
+          "xyz_linf": 0.06011661887168884,
+          "gripper_linf": 0.13472852110862732
+        },
+        "random_matched": {
+          "xyz_rms": 0.02411967519186524,
+          "gripper_rms": 0.0999999005178135,
+          "xyz_linf": 0.05697503685951233,
+          "gripper_linf": 0.1988222524523735
+        }
+      },
+      "masked_fraction": 0.05,
+      "zero_groups": {
+        "xyz": false,
+        "gripper": false
+      }
+    },
+    {
+      "case_id": "shelf-place-v3__2026106012",
+      "actual_command_radii": {
+        "velocity_matched": {
+          "xyz_rms": 0.04011516447374299,
+          "gripper_rms": 0.09999991002242903,
+          "xyz_linf": 0.13931775093078613,
+          "gripper_linf": 0.17496508359909058
+        },
+        "direct_matched": {
+          "xyz_rms": 0.04011516478853886,
+          "gripper_rms": 0.09999990950138757,
+          "xyz_linf": 0.12084886059165001,
+          "gripper_linf": 0.1844351887702942
+        },
+        "post_matched": {
+          "xyz_rms": 0.04011516441276092,
+          "gripper_rms": 0.09999990229476503,
+          "xyz_linf": 0.13275154680013657,
+          "gripper_linf": 0.1688898801803589
+        },
+        "reverse_matched": {
+          "xyz_rms": 0.04011516456215586,
+          "gripper_rms": 0.09999990950138757,
+          "xyz_linf": 0.12084886431694031,
+          "gripper_linf": 0.1844351887702942
+        },
+        "random_matched": {
+          "xyz_rms": 0.04011516637385613,
+          "gripper_rms": 0.09999990244156863,
+          "xyz_linf": 0.14999985694885254,
+          "gripper_linf": 0.16910123825073242
+        }
+      },
+      "masked_fraction": 0.25,
+      "zero_groups": {
+        "xyz": false,
+        "gripper": false
+      }
+    },
+    {
+      "case_id": "stick-pull-v3__2026106013",
+      "actual_command_radii": {
+        "velocity_matched": {
+          "xyz_rms": 0.049999949852645255,
+          "gripper_rms": 0.09999990145677676,
+          "xyz_linf": 0.10861115326406434,
+          "gripper_linf": 0.2698429226875305
+        },
+        "direct_matched": {
+          "xyz_rms": 0.04999995036509505,
+          "gripper_rms": 0.0999999036089635,
+          "xyz_linf": 0.1368497610092163,
+          "gripper_linf": 0.2360483705997467
+        },
+        "post_matched": {
+          "xyz_rms": 0.04999994965810114,
+          "gripper_rms": 0.09999990229096008,
+          "xyz_linf": 0.13125872798264027,
+          "gripper_linf": 0.2251126766204834
+        },
+        "reverse_matched": {
+          "xyz_rms": 0.04999995061066694,
+          "gripper_rms": 0.09999989657416729,
+          "xyz_linf": 0.13684974610805511,
+          "gripper_linf": 0.23604834079742432
+        },
+        "random_matched": {
+          "xyz_rms": 0.04999995085113074,
+          "gripper_rms": 0.09999989983336263,
+          "xyz_linf": 0.10821639001369476,
+          "gripper_linf": 0.2692095637321472
+        }
+      },
+      "masked_fraction": 0.325,
+      "zero_groups": {
+        "xyz": false,
+        "gripper": false
+      }
+    },
+    {
+      "case_id": "stick-push-v3__2026106014",
+      "actual_command_radii": {
+        "velocity_matched": {
+          "xyz_rms": 0.04999995125418304,
+          "gripper_rms": 0.099999902463667,
+          "xyz_linf": 0.1474655419588089,
+          "gripper_linf": 0.23151561617851257
+        },
+        "direct_matched": {
+          "xyz_rms": 0.04999994748602321,
+          "gripper_rms": 0.09999989902286748,
+          "xyz_linf": 0.14354920387268066,
+          "gripper_linf": 0.21331724524497986
+        },
+        "post_matched": {
+          "xyz_rms": 0.04999994900726615,
+          "gripper_rms": 0.09999989759591814,
+          "xyz_linf": 0.148598775267601,
+          "gripper_linf": 0.19553762674331665
+        },
+        "reverse_matched": {
+          "xyz_rms": 0.04999994914042242,
+          "gripper_rms": 0.09999989266551199,
+          "xyz_linf": 0.14354921132326126,
+          "gripper_linf": 0.21331721544265747
+        },
+        "random_matched": {
+          "xyz_rms": 0.0499999504978635,
+          "gripper_rms": 0.09999989649147469,
+          "xyz_linf": 0.10211820155382156,
+          "gripper_linf": 0.2097196877002716
+        }
+      },
+      "masked_fraction": 0.3,
+      "zero_groups": {
+        "xyz": false,
+        "gripper": false
+      }
+    }
+  ],
+  "budget": {
+    "total_attempts": 653,
+    "hard_maximum": 700,
+    "remaining": 47,
+    "by_kind": {
+      "source_capture": 20,
+      "preflight": 25,
+      "concurrency_check": 8,
+      "development": 600
+    },
+    "contiguous_sequence": true,
+    "unique_identities": 653,
+    "repeated_identities": 0,
+    "all_development_summaries_match_reserved_attempt": true
+  },
+  "freeze": {
+    "unix": 1789568634.7883909,
+    "first_formal_capture_unix": 1789568866.133267,
+    "seconds_before_first_formal_capture": 231.3448760509491,
+    "formal_captures": 15,
+    "all_formal_captures_after_freeze": true,
+    "development_absent_at_freeze_record": true,
+    "config_sha_matches": true,
+    "code_files_verified": 290
+  },
+  "bootstrap": {
+    "independent_recalculation": "NumPy only, no project evaluation/statistics imports",
+    "seed": 29015,
+    "replicates": 10000,
+    "unit": "source with all eight paired suffixes retained",
+    "strata": "five tasks, three sources resampled per task",
+    "interval": "percentile 2.5%/97.5%; nominal and not corrected for seven comparisons"
+  },
+  "diagnostic_summary": {
+    "correction_changed_sources": [
+      "stick-pull-v3__2026106003",
+      "stick-pull-v3__2026106013"
+    ],
+    "fallback_velocity": 0,
+    "fallback_direct": 0,
+    "guided_updates": 90,
+    "xyz_rms_range": [
+      0.0241196750923938,
+      0.04999995124571654
+    ],
+    "gripper_rms_range": [
+      0.0,
+      0.09999990950138757
+    ],
+    "zero_gripper_sources": [
+      "shelf-place-v3__2026106002",
+      "shelf-place-v3__2026106007"
+    ],
+    "zero_xyz_sources": [],
+    "continue_old_horizon_and_first_natural_resample_metadata_checked": true,
+    "cost_separates_source_restore_and_candidate_bank": true
+  },
+  "conclusions": [
+    "The main negative result is no approximate +5 percentage point improvement over replan: velocity -1.666667 pp, direct +0.833333 pp, post 0 pp. Direct adds only one net success and is not an established stable winner.",
+    "Every correction-versus-a0 paired outcome change is concentrated in two stick-pull sources. Direct has one net-positive source and 14 net-zero sources, but net zero is not identical paired outcomes: its total 3 rescues coexist with 2 harms.",
+    "Replan improves over continue_old by +29.166667 pp (38 rescues, 3 harms), but this is a full policy contrast that jointly changes interruption, 50-to-10 cadence, and initial command postprocessing. It is not the incremental correction benefit.",
+    "All three correction objectives increase predicted success by about 10–11 pp on average, while true incremental gains are near zero or negative. This batch does not reproduce the prior development post gain. It does not by itself isolate scoring error from flow integration because reverse/random are generated but not rolled out here.",
+    "Guidance was active: no fallback, 90 finite nonzero updates, positive XYZ command changes on every source, and matched actual command radii verified. Near-zero gain cannot be labeled an implementation no-op from these data."
+  ],
+  "limitations": [
+    "Only 15 independent sources and three per task. Narrow empirical bootstrap intervals for correction differences arise from nearly all observed source differences being zero; do not interpret them as a guarantee against unobserved rare-source gains or harms.",
+    "Nominal intervals touch zero for the small direct advantage; seven registered comparisons have no multiplicity adjustment. Do not select a definitive winner from +0.833333 pp.",
+    "Eight sources have a0 8/8, five have a0 0/8, and two have 1/8. Success-count gains are highly concentrated; task aggregates cannot establish broad reliability.",
+    "Corrector matched post still requires the complete shared candidate bank, including generated reverse/random and flow directions; gradient-only time is not full deployment cost.",
+    "No reverse/random physical outcomes or new native-strength correction arms were collected in this five-arm batch; local directional superiority and native-versus-matched mechanism differences cannot be independently estimated here.",
+    "This small fresh-source batch is not the separate preregistered 100-source confirmation experiment. No extra simulation is authorized by this review."
+  ]
+}

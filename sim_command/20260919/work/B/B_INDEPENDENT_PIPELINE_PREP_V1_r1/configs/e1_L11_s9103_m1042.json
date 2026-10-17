@@ -1,0 +1,61 @@
+{
+  "job_id": "e1_L11_s9103_m1042",
+  "kind": "e1_fit",
+  "proposal_only": true,
+  "train_seed": 9103,
+  "member": 1042,
+  "loss_id": "L11",
+  "gain_enabled": 1,
+  "pair_enabled": 1,
+  "updates": 4000,
+  "learning_rate": 0.0001,
+  "timeout_seconds": 1800,
+  "retry_cap": 0,
+  "inputs": {
+    "train_arrays": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/input_bundles/final_train600_input_v1/train/arrays.npz",
+      "sha256": "9692a4917f274d8ba55f083627f6fea52e288ac7fd8e213211d0e06902435944",
+      "bytes": 33612902
+    },
+    "train_rows": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/input_bundles/final_train600_input_v1/train/rows.json",
+      "sha256": "e0a37f054712a721e07324bb38e9275c6ab93377b637ea84c4d26f70a0b2e1f0",
+      "bytes": 233763
+    },
+    "train_manifest": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/outputs/native10_training_20260916/input_bundles/final_train600_input_v1/manifest.json",
+      "sha256": "f32ddac963181f01db740817cf8bdc990d3a04ab131a8c90689c42c40941e496",
+      "bytes": 3320443
+    },
+    "initial_model": {
+      "path": "/mnt/bn/arnold-recommend/yaohaoyang/Corrector/assets/critic/models/refit/member_1042/selected.pt",
+      "sha256": "3cb9551ff3e3f05c8bb5adaffa6fd00543d84aac8b8de57b6905aa39d30a272b",
+      "bytes": 700783
+    }
+  },
+  "limits": {
+    "simulator_attempts": 0,
+    "completed_rollouts": 0,
+    "vla_sampling_calls": 0,
+    "model_gpu_inference_calls": 0,
+    "optimizer_updates": 4000,
+    "optimizer_attempts": 4000,
+    "model_initializations": 1,
+    "training_forward_calls": 4000,
+    "backward_calls": 4000,
+    "array_loads": 1,
+    "checkpoint_loads": 1,
+    "feature_transform_calls": 600
+  },
+  "device": "cpu",
+  "architecture_parameters": 7058,
+  "trainable_modules": [
+    "residual",
+    "advantage"
+  ],
+  "preprocessing": "Frozen in same member checkpoint across all losses and complete seeds",
+  "selection": "Final fixed update; no test-based selection",
+  "termination_grace_seconds": 20,
+  "authorization": "proposal_only_requires_once_frozen_stage",
+  "legacy_release_reusable": false
+}
